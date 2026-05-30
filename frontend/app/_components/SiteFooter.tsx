@@ -16,13 +16,13 @@ export function SiteFooter() {
       }}
     >
       <div>
-        <h4 style={{ color: 'var(--text)', fontSize: 13, margin: '0 0 8px' }}>SEO Auditor</h4>
+        <h3 style={{ color: 'var(--text)', fontSize: 13, margin: '0 0 8px' }}>SEO Auditor</h3>
         <p style={{ margin: 0, lineHeight: 1.6 }}>
           Free, comprehensive SEO + GEO audits. No signup, no paywall, ever.
         </p>
       </div>
       <div>
-        <h4 style={{ color: 'var(--text)', fontSize: 13, margin: '0 0 8px' }}>Product</h4>
+        <h3 style={{ color: 'var(--text)', fontSize: 13, margin: '0 0 8px' }}>Product</h3>
         <ul style={{ listStyle: 'none', padding: 0, margin: 0, lineHeight: 1.8 }}>
           <li><Link href="/">Audit a site</Link></li>
           <li><Link href="/check">All checks</Link></li>
@@ -30,7 +30,7 @@ export function SiteFooter() {
         </ul>
       </div>
       <div>
-        <h4 style={{ color: 'var(--text)', fontSize: 13, margin: '0 0 8px' }}>Learn</h4>
+        <h3 style={{ color: 'var(--text)', fontSize: 13, margin: '0 0 8px' }}>Learn</h3>
         <ul style={{ listStyle: 'none', padding: 0, margin: 0, lineHeight: 1.8 }}>
           <li><Link href="/blog">Blog</Link></li>
           <li><a href="https://llmstxt.org/" target="_blank" rel="noopener">llms.txt spec</a></li>
@@ -38,7 +38,7 @@ export function SiteFooter() {
         </ul>
       </div>
       <div>
-        <h4 style={{ color: 'var(--text)', fontSize: 13, margin: '0 0 8px' }}>Support</h4>
+        <h3 style={{ color: 'var(--text)', fontSize: 13, margin: '0 0 8px' }}>Support</h3>
         <ul style={{ listStyle: 'none', padding: 0, margin: 0, lineHeight: 1.8 }}>
           <li><a href="https://github.com/sponsors/ravigupta" target="_blank" rel="noopener">GitHub Sponsors</a></li>
           <li><a href="https://github.com/ravigupta/seo-auditor" target="_blank" rel="noopener">Source on GitHub</a></li>

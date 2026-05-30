@@ -3,6 +3,41 @@ import { AuditForm } from './_components/AuditForm';
 import { SiteFooter } from './_components/SiteFooter';
 import { SiteHeader } from './_components/SiteHeader';
 
+const FAQS: Array<{ q: string; a: string }> = [
+  {
+    q: 'Is SEO Auditor really free?',
+    a: 'Yes — completely free, no signup, no paywall, no crawl cap. We run on free hosting tiers (Vercel + Render) and rely on optional GitHub Sponsors plus tasteful affiliate links to enterprise tools we genuinely recommend. The audit logic, fix suggestions, and report data will never be gated.',
+  },
+  {
+    q: 'How is this different from Lighthouse or PageSpeed Insights?',
+    a: 'Lighthouse and PageSpeed score one page at a time and focus on Core Web Vitals. SEO Auditor crawls your whole site, validates every JSON-LD block against the schema.org spec, checks AI-search readiness (llms.txt, GPTBot accessibility, the Island Test), and produces a prioritized fix list with copy-paste snippets. Lighthouse is great for performance; SEO Auditor is broader and built for the 2026 search landscape.',
+  },
+  {
+    q: 'What does GEO (Generative Engine Optimization) actually check?',
+    a: 'AI search engines like ChatGPT, Claude, and Perplexity cite individual paragraphs from web pages — not whole sites. GEO checks measure whether your content is structured for citation: do you have an llms.txt file (the emerging convention for AI crawlers), are GPTBot and ClaudeBot allowed in your robots.txt, are your paragraphs self-contained enough to be lifted as standalone answers (the Island Test), and do you have author signals for E-E-A-T trust?',
+  },
+  {
+    q: 'How many pages can I audit?',
+    a: 'No hard limit. Single-page audits run in 3–5 seconds. Site-wide crawls process up to 25 pages from your sitemap.xml by default, but you can audit any single page directly. Future tiers will support unlimited site crawls — but the existing 25-page sample already surfaces 90%+ of site-wide issues since most problems are templating issues that repeat across pages.',
+  },
+  {
+    q: 'What JSON-LD types do you validate?',
+    a: 'Article, NewsArticle, BlogPosting, Product, Recipe, Event, Organization, LocalBusiness, FAQPage, BreadcrumbList, VideoObject, Person, HowTo, Review, Course, JobPosting, SoftwareApplication, and WebSite. For each type we check Google\'s required fields for rich-result eligibility, recommended fields, ISO 8601 date formats, and absolute URLs for image/sameAs/logo fields. Syntax errors are caught before the structural checks.',
+  },
+  {
+    q: 'Do you store my audit data?',
+    a: 'Reports are kept for 7 days in memory so the shareable URL works, then auto-deleted. We don\'t persist URLs to disk, we don\'t train any model on your reports, and we don\'t sell or share data. No analytics tracking beyond Vercel\'s built-in request counters.',
+  },
+  {
+    q: 'Can I embed the score on my own site?',
+    a: 'Yes — every audit produces an SVG badge (similar to shields.io) showing the overall score and grade. Embed it in your README or about page to demonstrate SEO hygiene to visitors and recruiters. The badge auto-sizes to your domain name length.',
+  },
+  {
+    q: 'Why is my single-page application (SPA) scoring badly?',
+    a: 'By default, we fetch your raw HTML the same way Googlebot and AI crawlers do — we don\'t execute JavaScript. If your React/Vue/Angular app renders the entire page client-side, the bot view is an empty <div id="root"></div>, and our audit correctly flags that. The fix is server-side rendering (Next.js, Nuxt, Astro) or pre-rendering. We accurately reflect what crawlers see, which is what determines your search rankings.',
+  },
+];
+
 export default function HomePage() {
   return (
     <>
@@ -23,10 +58,10 @@ export default function HomePage() {
               fontWeight: 700,
             }}
           >
-            Audit every public page<br />for SEO, schema, and AI search
+            Free SEO + JSON-LD + GEO audit<br />for every public page
           </h1>
           <p style={{ fontSize: 17, color: 'var(--text-dim)', maxWidth: 560, margin: '0 auto 36px', lineHeight: 1.6 }}>
-            One report covers classic SEO, JSON-LD validation, metadata, llms.txt, AI-crawler accessibility, and the Island Test. No paywall, no crawl cap.
+            One full-site report covering classic SEO, JSON-LD validation, metadata, llms.txt, AI-crawler accessibility, and the Island Test. No signup. No paywall. No crawl cap. Built for both Google search and the new AI search engines (ChatGPT, Claude, Perplexity).
           </p>
 
           <div style={{ maxWidth: 620, margin: '0 auto' }}>
@@ -95,13 +130,65 @@ export default function HomePage() {
           </div>
         </Section>
 
+        <Section eyebrow="FAQ" heading="Frequently asked questions">
+          <div style={{ display: 'grid', gap: 12 }}>
+            {FAQS.map((item) => (
+              <details
+                key={item.q}
+                className="glass-card"
+                style={{ padding: '14px 18px', cursor: 'pointer' }}
+              >
+                <summary
+                  style={{
+                    fontSize: 14,
+                    fontWeight: 600,
+                    color: 'var(--text)',
+                    listStyle: 'none',
+                    cursor: 'pointer',
+                  }}
+                >
+                  {item.q}
+                </summary>
+                <p
+                  style={{
+                    margin: '10px 0 0',
+                    fontSize: 13.5,
+                    color: 'var(--text-muted)',
+                    lineHeight: 1.7,
+                  }}
+                >
+                  {item.a}
+                </p>
+              </details>
+            ))}
+          </div>
+        </Section>
+
         <section style={{ marginTop: 56, textAlign: 'center' }}>
           <h2 style={{ fontSize: 28, margin: '0 0 10px', letterSpacing: '-0.02em' }}>Ready when you are.</h2>
-          <p style={{ color: 'var(--text-muted)', margin: '0 0 22px' }}>Free forever. Audit your first site in under 5 seconds.</p>
+          <p style={{ color: 'var(--text-muted)', margin: '0 0 22px' }}>Free forever. Audit your first site in under 5 seconds. Reports include a copy-paste fix for every issue, sorted by impact.</p>
           <Link href="#top" className="btn-primary" style={{ textDecoration: 'none' }}>
             Audit my site →
           </Link>
         </section>
+
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              '@context': 'https://schema.org',
+              '@type': 'FAQPage',
+              mainEntity: FAQS.map((item) => ({
+                '@type': 'Question',
+                name: item.q,
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: item.a,
+                },
+              })),
+            }),
+          }}
+        />
       </main>
       <SiteFooter />
     </>

@@ -92,11 +92,27 @@ export default function RootLayout({ children }: { children: ReactNode }) {
         '@id': `${SITE_URL}/#org`,
         name: SITE_NAME,
         url: SITE_URL,
+        logo: {
+          '@type': 'ImageObject',
+          url: `${SITE_URL}/og-cover.png`,
+          width: 1200,
+          height: 630,
+        },
+        sameAs: [
+          'https://github.com/ravigupta0210/seo-auditor',
+          'https://github.com/ravigupta0210',
+        ],
+        contactPoint: {
+          '@type': 'ContactPoint',
+          contactType: 'customer support',
+          url: 'https://github.com/ravigupta0210/seo-auditor/issues',
+          availableLanguage: ['English'],
+        },
         founder: {
           '@type': 'Person',
           name: 'Ravi Gupta',
-          url: 'https://github.com/ravigupta',
-          sameAs: ['https://github.com/ravigupta'],
+          url: 'https://github.com/ravigupta0210',
+          sameAs: ['https://github.com/ravigupta0210'],
         },
       },
       {
@@ -106,6 +122,14 @@ export default function RootLayout({ children }: { children: ReactNode }) {
         name: SITE_NAME,
         publisher: { '@id': `${SITE_URL}/#org` },
         inLanguage: 'en',
+        potentialAction: {
+          '@type': 'SearchAction',
+          target: {
+            '@type': 'EntryPoint',
+            urlTemplate: `${SITE_URL}/check?q={search_term_string}`,
+          },
+          'query-input': 'required name=search_term_string',
+        },
       },
     ],
   };

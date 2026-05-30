@@ -65,6 +65,9 @@ export const metadata: Metadata = {
     images: [`${SITE_URL}/og-cover.png`],
   },
   robots: { index: true, follow: true },
+  verification: {
+    google: 'VQViwr4Cn0GVinh7fd-l1kY7Mm_N3iTUtPxUVsuupck',
+  },
 };
 
 export const viewport: Viewport = {

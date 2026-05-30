@@ -5,8 +5,48 @@ import { SiteHeader } from '@/app/_components/SiteHeader';
 import { SiteFooter } from '@/app/_components/SiteFooter';
 
 export const metadata: Metadata = {
-  title: 'All SEO + JSON-LD + GEO checks we run',
-  description: 'Browse every check our auditor performs on your website: metadata, JSON-LD structured data, content quality, crawl & indexing, performance, GEO/AEO, accessibility, and security.',
+  title: 'All 40+ SEO + JSON-LD + GEO checks — reference catalog',
+  description:
+    'Browse every check our auditor performs on your website: metadata, JSON-LD structured data, content quality, ' +
+    'crawl & indexing, performance, GEO/AEO (llms.txt, Island Test), and security. Click any check for a deep-dive.',
+};
+
+const CATEGORY_META: Record<string, { icon: string; description: string; color: string }> = {
+  metadata: {
+    icon: '◆',
+    description: 'Title, meta description, canonical, Open Graph, Twitter Cards, lang, charset, robots.',
+    color: 'sky',
+  },
+  jsonld: {
+    icon: '✦',
+    description: 'Schema.org block validation, required + recommended fields per type, syntax errors.',
+    color: 'violet',
+  },
+  content: {
+    icon: '✎',
+    description: 'Heading hierarchy, H1/title alignment, image alt text, anchor text, word count, internal links.',
+    color: 'emerald',
+  },
+  security: {
+    icon: '⛨',
+    description: 'HTTPS, HSTS, CSP, X-Frame-Options, Referrer-Policy, X-Content-Type-Options.',
+    color: 'amber',
+  },
+  performance: {
+    icon: '⚡',
+    description: 'Response compression, Core Web Vitals signals, payload size, render-blocking resources.',
+    color: 'orange',
+  },
+  crawl: {
+    icon: '⤳',
+    description: 'robots.txt presence, sitemap.xml validity, hreflang, redirect chains, indexability.',
+    color: 'cyan',
+  },
+  geo: {
+    icon: '✸',
+    description: 'llms.txt presence, AI-crawler accessibility, Island Test, E-E-A-T signals, text extractability.',
+    color: 'pink',
+  },
 };
 
 export default function CheckIndex() {
@@ -16,37 +56,93 @@ export default function CheckIndex() {
     return acc;
   }, {});
 
+  const categoriesInOrder = ['metadata', 'jsonld', 'content', 'security', 'performance', 'crawl', 'geo']
+    .filter((c) => grouped[c]);
+
+  const totalChecks = CHECKS_CATALOG.length;
+
   return (
     <>
       <SiteHeader />
-      <main style={{ maxWidth: 820, margin: '0 auto', padding: '32px 24px 60px' }}>
-        <p style={{ fontSize: 11, color: 'var(--accent)', textTransform: 'uppercase', letterSpacing: '0.12em', margin: '0 0 8px', fontWeight: 600 }}>
-          Reference
-        </p>
-        <h1 className="hero-gradient-text" style={{ fontSize: 38, margin: '0 0 10px', letterSpacing: '-0.02em' }}>All checks</h1>
-        <p style={{ fontSize: 16, color: 'var(--text-dim)', margin: '0 0 36px', lineHeight: 1.65 }}>
-          Every factor we analyse on your website. Each links to a deep-dive explainer.
+      <main className="page-shell">
+        <p className="page-eyebrow">Reference</p>
+        <h1 className="page-title">All {totalChecks}+ checks we run</h1>
+        <p className="page-lede">
+          Every factor we analyse on your website, grouped by category. Each check links to a
+          deep-dive explainer with why it matters, how to fix it, and a copy-paste snippet.
         </p>
 
-        {Object.entries(grouped).map(([cat, checks]) => (
-          <section key={cat} style={{ marginBottom: 36 }}>
-            <h2 style={{ fontSize: 18, margin: '0 0 14px', textTransform: 'capitalize', letterSpacing: '-0.01em' }}>
-              {cat} <span style={{ color: 'var(--text-muted)', fontSize: 13, fontWeight: 400 }}>· {checks.length}</span>
-            </h2>
-            <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: 10 }}>
-              {checks.map((c) => (
-                <li key={c.id}>
-                  <Link href={`/check/${encodeURIComponent(c.id)}`} className="glass-card" style={{ display: 'block', padding: '12px 16px', color: 'inherit', textDecoration: 'none' }}>
-                    <div style={{ fontWeight: 600, fontSize: 14 }}>{c.title}</div>
-                    <p style={{ margin: '4px 0 0', fontSize: 13, color: 'var(--text-muted)', lineHeight: 1.55 }}>{c.summary}</p>
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </section>
-        ))}
+        {/* Category overview cards */}
+        <section className="chk-overview">
+          {categoriesInOrder.map((cat) => {
+            const meta = CATEGORY_META[cat];
+            if (!meta) return null;
+            return (
+              <a key={cat} href={`#${cat}`} className={`chk-cat-card chk-cat-card--${meta.color}`}>
+                <div className="chk-cat-card__icon">{meta.icon}</div>
+                <div className="chk-cat-card__body">
+                  <h2 className="chk-cat-card__title">
+                    <span className="chk-cat-card__name">{capitalize(cat)}</span>
+                    <span className="chk-cat-card__count">{grouped[cat]!.length} checks</span>
+                  </h2>
+                  <p className="chk-cat-card__desc">{meta.description}</p>
+                </div>
+              </a>
+            );
+          })}
+        </section>
+
+        {/* Detailed catalog */}
+        {categoriesInOrder.map((cat) => {
+          const meta = CATEGORY_META[cat];
+          const checks = grouped[cat]!;
+          return (
+            <section key={cat} id={cat} className="chk-section">
+              <header className="chk-section__head">
+                <span className={`chk-section__icon chk-section__icon--${meta?.color || 'sky'}`}>
+                  {meta?.icon || '•'}
+                </span>
+                <div>
+                  <h2 className="chk-section__title">{capitalize(cat)}</h2>
+                  <p className="chk-section__sub">{meta?.description}</p>
+                </div>
+                <span className="chk-section__count">{checks.length}</span>
+              </header>
+
+              <ul className="chk-list">
+                {checks.map((c) => (
+                  <li key={c.id}>
+                    <Link
+                      href={`/check/${encodeURIComponent(c.id)}`}
+                      className="chk-item glass-card"
+                    >
+                      <div className="chk-item__main">
+                        <div className="chk-item__title">{c.title}</div>
+                        <p className="chk-item__summary">{c.summary}</p>
+                      </div>
+                      <span className="chk-item__arrow" aria-hidden="true">→</span>
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </section>
+          );
+        })}
+
+        {/* CTA */}
+        <section className="cmp-cta">
+          <h2 className="cmp-cta__title">Run all these checks on your site</h2>
+          <p className="cmp-cta__sub">
+            Free, no signup. Audit a single page or your full site in under a minute.
+          </p>
+          <Link href="/" className="btn-primary">Audit my site →</Link>
+        </section>
       </main>
       <SiteFooter />
     </>
   );
+}
+
+function capitalize(s: string) {
+  return s.charAt(0).toUpperCase() + s.slice(1);
 }

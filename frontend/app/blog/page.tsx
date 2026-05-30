@@ -1,52 +1,81 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
+import { SiteHeader } from '@/app/_components/SiteHeader';
+import { SiteFooter } from '@/app/_components/SiteFooter';
+import { POSTS_INDEX } from './_posts';
 
 export const metadata: Metadata = {
-  title: 'Blog — SEO, JSON-LD, and AI-search optimization',
-  description: 'Practical guides on classic SEO, structured data, llms.txt, and ranking in AI search engines (ChatGPT, Claude, Perplexity).',
+  title: 'Blog — SEO, JSON-LD, and AI-search optimization guides',
+  description:
+    'Practical, hand-written guides on classic SEO, JSON-LD structured data, llms.txt, the Island Test, and ' +
+    'ranking in the new AI search engines (ChatGPT, Claude, Perplexity).',
 };
 
-const POSTS = [
-  {
-    slug: 'llms-txt-explained',
-    title: 'llms.txt: the new robots.txt for AI crawlers',
-    excerpt: 'llms.txt is an emerging convention for telling LLMs what your site is about. Here is why every site should ship one in 2026.',
-    date: '2026-05-01',
-  },
-  {
-    slug: 'island-test-geo',
-    title: 'The Island Test: how to write paragraphs AI engines will cite',
-    excerpt: 'AI engines lift individual paragraphs as citations. Paragraphs that stand alone get cited. Paragraphs that rely on context do not.',
-    date: '2026-04-15',
-  },
-  {
-    slug: 'json-ld-required-fields',
-    title: 'JSON-LD required fields: the 78% rule',
-    excerpt: 'Most structured-data errors are syntax. The other 22% are missing required fields. Here is the cheatsheet.',
-    date: '2026-03-30',
-  },
-];
+const TAGS = ['All', 'GEO', 'JSON-LD', 'Metadata', 'AI Search', 'Crawling'] as const;
 
 export default function BlogIndex() {
   return (
-    <main style={{ maxWidth: 720, margin: '0 auto', padding: '40px 24px 80px' }}>
-      <Link href="/" style={{ fontSize: 13, color: 'var(--text-muted)' }}>← Home</Link>
-      <h1 style={{ fontSize: 32, margin: '20px 0 8px' }}>Blog</h1>
-      <p style={{ fontSize: 15, color: 'var(--text-muted)', margin: '0 0 28px' }}>
-        Hand-written guides on what actually ranks in classic + AI search.
-      </p>
+    <>
+      <SiteHeader />
+      <main className="page-shell page-shell--narrow">
+        <p className="page-eyebrow">Blog</p>
+        <h1 className="page-title">SEO + GEO guides for 2026</h1>
+        <p className="page-lede">
+          Hand-written guides on what actually ranks in classic search and the new AI search engines.
+          No SEO buzzwords, no AI-generated filler, no &ldquo;ultimate&rdquo; lists. Just specific,
+          opinionated, tested advice you can act on today.
+        </p>
 
-      <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: 14 }}>
-        {POSTS.map((p) => (
-          <li key={p.slug} style={{ padding: '14px 18px', background: 'var(--bg-card)', border: '1px solid var(--border)', borderRadius: 8 }}>
-            <p style={{ margin: 0, fontSize: 12, color: 'var(--text-muted)' }}>{new Date(p.date).toLocaleDateString()}</p>
-            <Link href={`/blog/${p.slug}`} style={{ fontSize: 18, fontWeight: 600, color: 'var(--text)', textDecoration: 'none' }}>
-              {p.title}
-            </Link>
-            <p style={{ margin: '6px 0 0', fontSize: 14, color: 'var(--text-muted)' }}>{p.excerpt}</p>
-          </li>
-        ))}
-      </ul>
-    </main>
+        <div className="blog-tags" role="list" aria-label="Topic filters">
+          {TAGS.map((tag) => (
+            <span key={tag} className={`blog-tag${tag === 'All' ? ' is-active' : ''}`} role="listitem">
+              {tag}
+            </span>
+          ))}
+        </div>
+
+        <ul className="blog-list">
+          {POSTS_INDEX.map((p, i) => (
+            <li key={p.slug}>
+              <Link href={`/blog/${p.slug}`} className="blog-card glass-card">
+                <div className="blog-card__meta">
+                  <span className={`blog-card__tag blog-card__tag--${p.tag.toLowerCase().replace(/\s+/g, '-')}`}>
+                    {p.tag}
+                  </span>
+                  <time dateTime={p.date}>
+                    {new Date(p.date).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}
+                  </time>
+                  <span className="blog-card__read">{p.readTime} min read</span>
+                </div>
+                <h2 className="blog-card__title">{p.title}</h2>
+                <p className="blog-card__excerpt">{p.excerpt}</p>
+                <span className="blog-card__cta">
+                  Read article <span aria-hidden="true">→</span>
+                </span>
+                {i === 0 && <span className="blog-card__pin">Featured</span>}
+              </Link>
+            </li>
+          ))}
+        </ul>
+
+        <section className="blog-newsletter">
+          <div>
+            <h2 className="blog-newsletter__title">Want updates?</h2>
+            <p className="blog-newsletter__sub">
+              No newsletter yet — but starring the repo means you&apos;ll see new posts when we release them.
+            </p>
+          </div>
+          <a
+            href="https://github.com/ravigupta0210/seo-auditor"
+            target="_blank"
+            rel="noopener"
+            className="btn-secondary"
+          >
+            Star on GitHub ★
+          </a>
+        </section>
+      </main>
+      <SiteFooter />
+    </>
   );
 }

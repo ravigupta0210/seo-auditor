@@ -1,7 +1,10 @@
 import type { Metadata, Viewport } from 'next';
 import type { ReactNode } from 'react';
+import Script from 'next/script';
 import { Inter, JetBrains_Mono } from 'next/font/google';
 import './globals.css';
+
+const GA_ID = process.env.NEXT_PUBLIC_GA_ID || 'G-KPPL9ZCB3B';
 
 const inter = Inter({
   subsets: ['latin'],
@@ -147,6 +150,22 @@ export default function RootLayout({ children }: { children: ReactNode }) {
         />
       </head>
       <body style={{ fontFamily: 'var(--font-display-loaded), var(--font-body)' }}>
+        {GA_ID && (
+          <>
+            <Script
+              src={`https://www.googletagmanager.com/gtag/js?id=${GA_ID}`}
+              strategy="afterInteractive"
+            />
+            <Script id="ga-init" strategy="afterInteractive">
+              {`
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){dataLayer.push(arguments);}
+                gtag('js', new Date());
+                gtag('config', '${GA_ID}', { anonymize_ip: true });
+              `}
+            </Script>
+          </>
+        )}
         <noscript>
           <div style={{ maxWidth: 720, margin: '60px auto', padding: '0 24px', fontFamily: 'system-ui, sans-serif', color: '#e6edf3', lineHeight: 1.6 }}>
             <h1 style={{ fontSize: 32, margin: '0 0 14px' }}>{SITE_NAME} — Free SEO + GEO Audit</h1>

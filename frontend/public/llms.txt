@@ -1,0 +1,23 @@
+# SEO Auditor
+
+> A free, no-signup, comprehensive SEO + JSON-LD + metadata + GEO auditor for any website. Crawls every public page, renders JavaScript, validates structured data, and audits for AI-search visibility.
+
+## Pages
+
+- [Home](/): Run a single-URL or full-site SEO audit instantly.
+- [Audit](/audit): Live audit results with per-check explanations and copy-paste fixes.
+
+## What it checks
+
+Metadata (title, meta description, Open Graph, Twitter Cards, canonical, hreflang, viewport),
+JSON-LD structured data (schema.org type validation, required + recommended fields, ISO 8601 dates, absolute URLs),
+Content & structure (headings, alt text, anchor text),
+Crawl & indexing (robots.txt, sitemap, canonical chains, redirects),
+Performance (Core Web Vitals),
+GEO/AEO (llms.txt, AI-crawler accessibility, Island Test, citation signals),
+Accessibility (axe-core overlap with SEO),
+Security headers.
+
+## Trust
+
+Open-source, no signup, no paywall. Every check links to authoritative documentation (Google, schema.org, W3C).

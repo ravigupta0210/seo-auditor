@@ -13,4 +13,4 @@ Allow: /
 User-agent: Google-Extended
 Allow: /
 
-Sitemap: https://example.com/sitemap.xml
+Sitemap: https://seo-auditor.vercel.app/sitemap.xml

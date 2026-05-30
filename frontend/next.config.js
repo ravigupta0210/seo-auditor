@@ -13,7 +13,7 @@ const SECURITY_HEADERS = [
       "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com",
       "font-src 'self' https://fonts.gstatic.com data:",
       "img-src 'self' data: blob: https:",
-      "connect-src 'self' https: http://localhost:4000 ws://localhost:4000",
+      "connect-src 'self' https: wss: http://localhost:4000 ws://localhost:4000",
       "object-src 'none'",
       "base-uri 'self'",
       "frame-ancestors 'none'",

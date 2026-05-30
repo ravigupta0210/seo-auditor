@@ -1,0 +1,21 @@
+services:
+  - type: web
+    name: seo-auditor-api
+    runtime: node
+    plan: free
+    region: oregon
+    rootDir: backend
+    buildCommand: npm install && npm run build
+    startCommand: npm start
+    healthCheckPath: /health
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: LOG_LEVEL
+        value: info
+      - key: CORS_ORIGIN
+        sync: false
+      - key: PAGESPEED_API_KEY
+        sync: false
+      - key: RENDER_JS
+        value: "0"

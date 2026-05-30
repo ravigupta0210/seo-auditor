@@ -3,16 +3,13 @@
   "version": "0.1.0",
   "private": true,
   "description": "Free, comprehensive SEO + JSON-LD + metadata + GEO auditor for any website",
-  "workspaces": [
-    "backend",
-    "frontend"
-  ],
   "scripts": {
+    "install:all": "npm install && (cd backend && npm install) && (cd frontend && npm install)",
     "dev": "concurrently -n backend,frontend -c green,cyan \"npm:dev:backend\" \"npm:dev:frontend\"",
-    "dev:backend": "npm --workspace backend run dev",
-    "dev:frontend": "npm --workspace frontend run dev",
-    "build": "npm --workspace backend run build && npm --workspace frontend run build",
-    "lint": "npm --workspace backend run lint && npm --workspace frontend run lint"
+    "dev:backend": "cd backend && npm run dev",
+    "dev:frontend": "cd frontend && npm run dev",
+    "build": "(cd backend && npm run build) && (cd frontend && npm run build)",
+    "lint": "(cd backend && npm run lint) && (cd frontend && npm run lint)"
   },
   "devDependencies": {
     "concurrently": "^9.0.1"

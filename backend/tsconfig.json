@@ -15,12 +15,7 @@
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "noImplicitReturns": true,
-    "noFallthroughCasesInSwitch": true,
-    "types": ["node"],
-    "typeRoots": [
-      "./node_modules/@types",
-      "../node_modules/@types"
-    ]
+    "noFallthroughCasesInSwitch": true
   },
   "include": ["src/**/*"],
   "exclude": ["dist", "node_modules"]

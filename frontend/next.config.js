@@ -30,11 +30,17 @@ const nextConfig = {
   async headers() {
     return [{ source: '/(.*)', headers: SECURITY_HEADERS }];
   },
-  // Legacy browsers, RSS readers, and embed previewers ping /favicon.ico
-  // directly even when our HTML head points at /icon. Rewrite to avoid 404s.
+  // Rewrite every legacy asset path that third-party tools (browsers, RSS
+  // readers, social preview crawlers, old Google cache entries) might still
+  // probe to its Next.js file-convention equivalent. Keeps the network panel
+  // clean and ensures shares with old URLs still render a proper preview.
   async rewrites() {
     return [
-      { source: '/favicon.ico', destination: '/icon' },
+      { source: '/favicon.ico',         destination: '/icon' },
+      { source: '/icon.png',            destination: '/icon' },
+      { source: '/apple-touch-icon.png', destination: '/apple-icon' },
+      { source: '/og-cover.png',        destination: '/opengraph-image' },
+      { source: '/manifest.json',       destination: '/manifest.webmanifest' },
     ];
   },
 };

@@ -429,11 +429,41 @@ pre {
 .site-footer__list svg,
 .site-footer__ext { pointer-events: none; }
 
-/* Make every interactive surface feel responsive */
+/* Make every interactive surface feel responsive — explicit pointer cursor
+   on every clickable element + a global rule for native interactives. */
 button { font-family: inherit; }
+button:not(:disabled),
+a[href],
+[role="button"],
 .site-header__link,
 .site-header__theme,
-.brand-mark { cursor: pointer; }
+.brand-mark,
+.cmp-card,
+.cmp-card__cta,
+.chk-cat-card,
+.chk-item,
+.blog-card,
+.blog-card__cta,
+.post-related__card,
+.post-related__cta,
+.cmp-faq,
+.cmp-faq summary,
+details > summary,
+.site-footer__list a,
+.site-footer__author { cursor: pointer; }
+
+/* Belt-and-suspenders: never let a child element of a clickable card
+   intercept the click. Cards are full-surface targets. */
+.cmp-card *,
+.chk-cat-card *,
+.chk-item *,
+.blog-card *,
+.post-related__card * { pointer-events: none; }
+/* …except interactive sub-elements that need their own events */
+.cmp-card a[href],
+.chk-cat-card a[href],
+.blog-card a[href],
+.post-related__card a[href] { pointer-events: auto; }
 .site-header__link--ghub {
   border: 1px solid var(--border);
   margin-left: 6px;

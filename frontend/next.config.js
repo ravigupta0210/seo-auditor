@@ -9,11 +9,12 @@ const SECURITY_HEADERS = [
     key: 'Content-Security-Policy',
     value: [
       "default-src 'self'",
-      "script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com https://www.google-analytics.com",
+      "script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com https://www.google-analytics.com https://us-assets.i.posthog.com",
       "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com",
       "font-src 'self' https://fonts.gstatic.com data:",
       "img-src 'self' data: blob: https:",
-      "connect-src 'self' https: wss: http://localhost:4000 ws://localhost:4000",
+      "connect-src 'self' https: wss: http://localhost:4000 ws://localhost:4000 https://us.i.posthog.com https://us-assets.i.posthog.com",
+      "worker-src 'self' blob:",
       "object-src 'none'",
       "base-uri 'self'",
       "frame-ancestors 'none'",
@@ -36,13 +37,19 @@ const nextConfig = {
   // clean and ensures shares with old URLs still render a proper preview.
   async rewrites() {
     return [
-      { source: '/favicon.ico',         destination: '/icon' },
-      { source: '/icon.png',            destination: '/icon' },
+      { source: '/favicon.ico',          destination: '/icon' },
+      { source: '/icon.png',             destination: '/icon' },
       { source: '/apple-touch-icon.png', destination: '/apple-icon' },
-      { source: '/og-cover.png',        destination: '/opengraph-image' },
-      { source: '/manifest.json',       destination: '/manifest.webmanifest' },
+      { source: '/og-cover.png',         destination: '/opengraph-image' },
+      { source: '/manifest.json',        destination: '/manifest.webmanifest' },
+      // PostHog reverse proxy — bypasses ad-blockers that block posthog.com
+      // (uBlock, Brave Shields, AdGuard, etc.) so analytics still fire.
+      { source: '/ingest/static/:path*', destination: 'https://us-assets.i.posthog.com/static/:path*' },
+      { source: '/ingest/:path*',        destination: 'https://us.i.posthog.com/:path*' },
     ];
   },
+  // PostHog reverse-proxied path must include OPTIONS support
+  skipTrailingSlashRedirect: true,
 };
 
 module.exports = nextConfig;

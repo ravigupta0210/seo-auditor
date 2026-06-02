@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from 'next';
 import type { ReactNode } from 'react';
 import Script from 'next/script';
 import { Inter, JetBrains_Mono } from 'next/font/google';
+import { PostHogProvider } from './_components/PostHogProvider';
 import './globals.css';
 
 const GA_ID = process.env.NEXT_PUBLIC_GA_ID || 'G-KPPL9ZCB3B';
@@ -181,7 +182,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
             </p>
           </div>
         </noscript>
-        {children}
+        <PostHogProvider>{children}</PostHogProvider>
       </body>
     </html>
   );

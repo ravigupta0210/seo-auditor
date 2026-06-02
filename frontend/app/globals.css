@@ -245,7 +245,10 @@ pre {
   box-shadow: 0 6px 20px -8px var(--accent-glow);
   position: relative;
   overflow: hidden;
+  cursor: pointer;
+  font-family: inherit;
 }
+.btn-primary > * { position: relative; z-index: 1; }
 .btn-primary::before {
   content: '';
   position: absolute;
@@ -253,6 +256,7 @@ pre {
   background: linear-gradient(135deg, rgba(255,255,255,0.15), rgba(255,255,255,0));
   opacity: 0;
   transition: opacity var(--transition);
+  pointer-events: none;
 }
 .btn-primary:hover::before { opacity: 1; }
 .btn-primary:active { transform: translateY(1px); }
@@ -407,7 +411,29 @@ pre {
   height: 2px;
   border-radius: 2px;
   background: linear-gradient(90deg, var(--accent), var(--accent-2, var(--accent)));
+  pointer-events: none;
 }
+
+/* Icons inside interactive elements must never swallow clicks — the parent
+   button or link is the actual click target. */
+.site-header__link svg,
+.site-header__theme svg,
+.brand-mark svg,
+.btn-primary svg,
+.btn-secondary svg,
+.cmp-card svg,
+.chk-item svg,
+.blog-card svg,
+.post-related__card svg,
+.site-footer__author svg,
+.site-footer__list svg,
+.site-footer__ext { pointer-events: none; }
+
+/* Make every interactive surface feel responsive */
+button { font-family: inherit; }
+.site-header__link,
+.site-header__theme,
+.brand-mark { cursor: pointer; }
 .site-header__link--ghub {
   border: 1px solid var(--border);
   margin-left: 6px;

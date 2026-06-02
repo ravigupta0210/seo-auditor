@@ -141,9 +141,18 @@ export default function RootLayout({ children }: { children: ReactNode }) {
   };
 
   return (
-    <html lang="en" className={`${inter.variable} ${jetbrains.variable}`}>
+    <html lang="en" className={`${inter.variable} ${jetbrains.variable}`} suppressHydrationWarning>
       <head>
-        <link rel="icon" href="/favicon.ico" />
+        {/*
+          Apply persisted theme before paint to prevent a light-mode flash.
+          Runs synchronously in <head>, reads localStorage, and falls back to
+          the OS preference. The toggle button hydrates afterwards.
+        */}
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `(function(){try{var k='sa-theme';var s=localStorage.getItem(k);if(s!=='light'&&s!=='dark'){s=matchMedia('(prefers-color-scheme: light)').matches?'light':'dark';}document.documentElement.dataset.theme=s;}catch(e){document.documentElement.dataset.theme='dark';}})();`,
+          }}
+        />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}

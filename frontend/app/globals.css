@@ -44,6 +44,95 @@
   --mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, monospace;
 }
 
+/* ===== Light theme overrides =====
+   Inverts only colors that need contrast inversion. Accent gradient stays
+   the same so brand identity is consistent across themes. */
+[data-theme="light"] {
+  --bg: #ffffff;
+  --bg-elevated: #f8fafc;
+  --bg-card: #f7f8fb;
+  --bg-card-hover: #eef0f5;
+  --border: #e3e7ee;
+  --border-strong: #cbd2dd;
+
+  --text: #0c111c;
+  --text-dim: #2e3848;
+  --text-muted: #5b6675;
+  --text-faint: #97a1b1;
+
+  --accent: #5a6dff;
+  --accent-strong: #4338ca;
+  --accent-glow: rgba(90, 109, 255, 0.18);
+  --accent-grad-soft: linear-gradient(135deg, rgba(139, 92, 246, 0.10), rgba(90, 109, 255, 0.08), rgba(6, 182, 212, 0.06));
+
+  --error: #dc2626;
+  --error-glow: rgba(220, 38, 38, 0.18);
+  --warning: #d97706;
+  --warning-glow: rgba(217, 119, 6, 0.18);
+  --info: #0284c7;
+  --info-glow: rgba(2, 132, 199, 0.18);
+  --pass: #16a34a;
+  --pass-glow: rgba(22, 163, 74, 0.18);
+
+  --shadow-card: 0 1px 2px rgba(15, 23, 42, 0.04), 0 8px 24px -16px rgba(15, 23, 42, 0.15);
+}
+
+/* Smooth theme transitions on color-bearing properties */
+html, body, .glass-card, .site-header, .site-footer,
+.cmp-card, .cmp-price-col, .cmp-pros-card, .cmp-use-card, .cmp-rec, .cmp-faq, .cmp-cta,
+.chk-cat-card, .chk-item, .blog-card, .blog-tag, .post-related__card, .blog-newsletter,
+.btn-primary, .btn-secondary {
+  transition: background 220ms ease, border-color 220ms ease, color 220ms ease, box-shadow 220ms ease;
+}
+
+/* Header / footer accent in light mode use a lighter blur surface */
+[data-theme="light"] .site-header {
+  background: color-mix(in srgb, var(--bg) 86%, transparent);
+  border-bottom: 1px solid color-mix(in srgb, var(--border) 90%, transparent);
+}
+[data-theme="light"] .site-footer {
+  background:
+    radial-gradient(80% 60% at 50% 0%, color-mix(in srgb, var(--accent) 6%, transparent), transparent 70%),
+    var(--bg-elevated);
+}
+
+/* Hero gradient text stays vibrant in both themes */
+[data-theme="light"] .hero-gradient-text {
+  background-image: linear-gradient(135deg, #4338ca 0%, #5a6dff 45%, #06b6d4 100%);
+}
+
+/* Code blocks readable in light mode */
+[data-theme="light"] .post-code {
+  background: #0f172a;
+  color: #e2e8f0;
+  border-color: #1f2937;
+}
+[data-theme="light"] .post-inline-code {
+  background: color-mix(in srgb, var(--text) 8%, transparent);
+}
+
+/* Theme toggle button visuals */
+.site-header__theme {
+  cursor: pointer;
+  background: transparent;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  width: 36px;
+  height: 36px;
+  padding: 0 !important;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-dim);
+  margin-left: 6px;
+  font: inherit;
+}
+.site-header__theme:hover {
+  color: var(--text);
+  border-color: color-mix(in srgb, var(--accent) 40%, var(--border));
+  background: color-mix(in srgb, var(--accent) 10%, transparent);
+}
+
 * { box-sizing: border-box; }
 
 html, body {

@@ -17,11 +17,16 @@ function initOnce() {
     ui_host: POSTHOG_HOST,         // dashboard links point at us.posthog.com
     capture_pageview: false,        // we capture manually on route change
     capture_pageleave: true,
-    person_profiles: 'identified_only',
-    disable_session_recording: false,
     autocapture: true,
-    loaded: (ph) => {
-      if (process.env.NODE_ENV === 'development') ph.debug();
+    // Anonymous traffic (no signup) should still get full session profiles
+    // so replays work without identification.
+    person_profiles: 'always',
+    // Explicit replay opt-in (modern flag, replaces disable_session_recording)
+    enable_recording_console_log: true,
+    session_recording: {
+      maskAllInputs: false,
+      maskInputOptions: { password: true, email: false },
+      recordCrossOriginIframes: false,
     },
   });
   initialized = true;

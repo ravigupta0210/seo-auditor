@@ -206,21 +206,9 @@ pre {
   letter-spacing: -0.01em;
   color: var(--text);
 }
-.brand-mark__dot {
-  width: 22px;
-  height: 22px;
-  border-radius: 6px;
-  background: var(--accent-grad);
-  box-shadow: 0 4px 14px -4px var(--accent-glow);
-  position: relative;
-}
-.brand-mark__dot::after {
-  content: '';
-  position: absolute;
-  inset: 2px;
-  border-radius: 4px;
-  background: linear-gradient(135deg, transparent 40%, rgba(255,255,255,0.18) 100%);
-}
+/* BrandMark now uses inline SchemaNodeMark SVG — no dot styles needed.
+   Keeping selectors as no-ops in case any legacy refs exist. */
+.brand-mark__dot { display: none; }
 
 .hero-gradient-text {
   background: linear-gradient(135deg, #ffffff 0%, #cdd5ff 40%, #8b5cf6 100%);

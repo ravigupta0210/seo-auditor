@@ -23,18 +23,23 @@ export default function OpenGraphImage() {
           fontFamily: 'system-ui, -apple-system, "Segoe UI", sans-serif',
         }}
       >
-        {/* Brand row */}
-        <div style={{ display: 'flex', alignItems: 'center', gap: 18 }}>
-          <div
-            style={{
-              width: 56,
-              height: 56,
-              borderRadius: 14,
-              background: 'linear-gradient(135deg, #8b5cf6 0%, #5a6dff 50%, #06b6d4 100%)',
-              boxShadow: '0 12px 36px -10px rgba(124,140,255,0.6)',
-            }}
-          />
-          <div style={{ fontSize: 30, fontWeight: 700, letterSpacing: '-0.02em' }}>
+        {/* Brand row with new Schema Node mark */}
+        <div style={{ display: 'flex', alignItems: 'center', gap: 22 }}>
+          <svg width="64" height="64" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <linearGradient id="ogGrad" x1="2" y1="6" x2="30" y2="26" gradientUnits="userSpaceOnUse">
+                <stop offset="0" stopColor="#a78bfa" />
+                <stop offset="0.55" stopColor="#7c8cff" />
+                <stop offset="1" stopColor="#22d3ee" />
+              </linearGradient>
+            </defs>
+            <path d="M 6.5 12 L 25.5 7" stroke="url(#ogGrad)" strokeWidth="1.1" strokeOpacity="0.45" strokeLinecap="round" fill="none" />
+            <path d="M 6.5 12 L 14 24 L 25.5 7" stroke="url(#ogGrad)" strokeWidth="3.2" strokeLinecap="round" strokeLinejoin="round" fill="none" />
+            <circle cx="6.5" cy="12" r="2.6" fill="url(#ogGrad)" />
+            <circle cx="14" cy="24" r="2.6" fill="url(#ogGrad)" />
+            <circle cx="25.5" cy="7" r="3.2" fill="url(#ogGrad)" />
+          </svg>
+          <div style={{ fontSize: 32, fontWeight: 700, letterSpacing: '-0.02em' }}>
             SEO Auditor
           </div>
           <div

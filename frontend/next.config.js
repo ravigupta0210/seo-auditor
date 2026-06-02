@@ -30,6 +30,13 @@ const nextConfig = {
   async headers() {
     return [{ source: '/(.*)', headers: SECURITY_HEADERS }];
   },
+  // Legacy browsers, RSS readers, and embed previewers ping /favicon.ico
+  // directly even when our HTML head points at /icon. Rewrite to avoid 404s.
+  async rewrites() {
+    return [
+      { source: '/favicon.ico', destination: '/icon' },
+    ];
+  },
 };
 
 module.exports = nextConfig;

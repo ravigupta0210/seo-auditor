@@ -61,12 +61,21 @@ export async function getReport(id: string): Promise<AuditReport | null> {
 }
 
 export async function listRecentReports(limit = 20): Promise<RecentReport[]> {
+  // 3-second timeout — Render free-tier cold starts take 30s+ and we should
+  // never block server-side rendering on backend availability.
+  const ac = new AbortController();
+  const timer = setTimeout(() => ac.abort(), 3000);
   try {
-    const res = await fetch(`${BACKEND_URL}/api/audit/recent/list?limit=${limit}`, { cache: 'no-store' });
+    const res = await fetch(`${BACKEND_URL}/api/audit/recent/list?limit=${limit}`, {
+      cache: 'no-store',
+      signal: ac.signal,
+    });
     if (!res.ok) return [];
     return (await res.json()) as RecentReport[];
   } catch {
     return [];
+  } finally {
+    clearTimeout(timer);
   }
 }
 

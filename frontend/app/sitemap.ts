@@ -1,10 +1,15 @@
 import type { MetadataRoute } from 'next';
 import { CHECKS_CATALOG } from '@/lib/checks-catalog';
-import { listRecentReports } from '@/lib/api';
 
 const SITE = process.env.NEXT_PUBLIC_SITE_URL || 'https://example.com';
 
-export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
+// Regenerate the sitemap at most once per hour. The Render free-tier backend
+// cold-starts in ~30s, which previously caused Google's sitemap fetcher to
+// time out before this route responded. The sitemap is now purely static
+// so it never blocks on backend availability.
+export const revalidate = 3600;
+
+export default function sitemap(): MetadataRoute.Sitemap {
   const now = new Date();
   const staticEntries: MetadataRoute.Sitemap = [
     { url: `${SITE}/`, lastModified: now, changeFrequency: 'weekly', priority: 1.0 },
@@ -20,18 +25,8 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     priority: 0.6,
   }));
 
-  let reportEntries: MetadataRoute.Sitemap = [];
-  try {
-    const recent = await listRecentReports(50);
-    reportEntries = recent.map((r) => ({
-      url: `${SITE}/audit/${r.id}`,
-      lastModified: r.finishedAt ? new Date(r.finishedAt) : new Date(r.createdAt),
-      changeFrequency: 'yearly',
-      priority: 0.4,
-    }));
-  } catch {
-    // ignore — backend may not be up at build time
-  }
-
-  return [...staticEntries, ...checkEntries, ...reportEntries];
+  // Saved audit reports are deliberately omitted: they auto-expire after
+  // 7 days, have no organic-search value, and the backend call to enumerate
+  // them is what was blocking Google from fetching the sitemap.
+  return [...staticEntries, ...checkEntries];
 }

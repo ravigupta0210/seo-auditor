@@ -1,0 +1,139 @@
+{
+  "slug": "how-to-get-cited-by-perplexity",
+  "title": "How to Get Cited by Perplexity (the Fastest AI Citations in 2026)",
+  "date": "2026-06-08",
+  "updatedAt": "2026-06-08",
+  "tag": "AI Search",
+  "cluster": "ai-search",
+  "keyword": "how to get cited by Perplexity",
+  "secondaryKeywords": ["Perplexity citations", "PerplexityBot crawler", "get sourced by Perplexity AI", "rank in Perplexity"],
+  "readTime": 9,
+  "excerpt": "Perplexity cites 4-8 sources per answer and refreshes near-daily — here's how to be one of them.",
+  "description": "Learn how to get cited by Perplexity: allow PerplexityBot, publish fresh content, and lead with specific numbers and named sources to win AI citations fast.",
+  "tldr": "To get cited by Perplexity, allow PerplexityBot in robots.txt, publish and update content frequently, and lead every section with a specific number or named source — Perplexity cites 4-8 URLs per answer and re-crawls near-daily, making it the fastest AI engine to win a citation in.",
+  "status": "published",
+  "sections": [
+    {
+      "heading": "The short answer: why Perplexity is the easiest AI engine to get cited in",
+      "body": [
+        "Learning **how to get cited by Perplexity** comes down to three moves: let PerplexityBot crawl your site, publish content that is genuinely fresh, and write passages that lead with a specific number or a named source. Perplexity typically surfaces 4-8 cited sources per answer and re-indexes popular topics on a near-daily cadence, so a page you update today can appear in tomorrow's citations — far faster than the weeks-to-months lag of Google's organic index.",
+        "Perplexity works differently from a classic search engine. For each query it runs live retrieval, pulls a handful of candidate pages, and synthesizes an answer with inline footnotes that link back to the sources it leaned on. The numbered citations are the prize: they appear at the top of the answer and in the \"Sources\" rail, and they send real referral traffic. Winning one is less about domain authority and more about being the cleanest, most specific, most recent source on the exact sub-question being answered.",
+        "Because Perplexity values recency and extractable specifics over raw backlinks, smaller sites compete on a far more level field than they do in Google's organic results. That is the core opportunity in 2026: you do not need to outrank a Wikipedia-grade domain — you need to be the source that answers one narrow question with a quotable, attributable fact."
+      ]
+    },
+    {
+      "heading": "Step 1: Make sure PerplexityBot can actually reach you",
+      "body": [
+        "PerplexityBot is the crawler Perplexity uses to build its retrieval index, and if your `robots.txt` blocks it you are invisible no matter how good your content is. The single most common reason a strong page never gets cited is an overly aggressive bot block — many sites added blanket AI-crawler disallows in 2024-2025 and forgot they did.",
+        "Perplexity operates two distinct agents, and the difference matters. `PerplexityBot` is the indexing crawler that discovers and stores pages for future answers. `Perplexity-User` is the live fetcher that retrieves a page in real time when a user's question requires it. According to Perplexity's published crawler documentation, both honor `robots.txt` directives, so a disallow on either removes you from that path.",
+        "To be citable, your `robots.txt` should explicitly welcome both agents:",
+        "```\nUser-agent: PerplexityBot\nAllow: /\n\nUser-agent: Perplexity-User\nAllow: /\n```",
+        "If you want to verify your current configuration before changing anything, the [AI-crawler accessibility check](/check/geo.aibots.blocked) flags any rule that blocks Perplexity, GPTBot, Google-Extended, or ClaudeBot. For the full reasoning on which bots to let in and which to gate, see our [guide to building an AI-crawler allowlist](/blog/ai-crawler-allowlist)."
+      ]
+    },
+    {
+      "heading": "Step 2: Publish fresh and update relentlessly",
+      "body": [
+        "Recency is the lever that makes Perplexity faster to win than any other engine. Perplexity weights how recently a page was published or substantively updated, especially for queries that imply currency — anything with a year in it, breaking topics, pricing, tools, or \"best of\" lists. A page dated this month routinely outranks an authoritative page from two years ago in the citation rail.",
+        "Three habits compound here:",
+        "- **Date your content visibly.** Show a published date and a real `dateModified` in your JSON-LD. Hidden or stale dates make a page look older than it is.\n- **Refresh, do not just republish.** Add a new statistic, a 2026 figure, or a fresh example, then bump the modified date. A cosmetic date change with no new substance is a pattern engines increasingly discount.\n- **Cover emerging sub-questions early.** Perplexity has thin source pools on new topics. Being the first specific answer on a rising query is the cleanest citation you will ever get.",
+        "[[flowchart]]",
+        "The practical takeaway: treat your highest-value posts as living documents. A quarterly refresh that injects one new defensible number can keep a page in Perplexity's citation rotation indefinitely."
+      ]
+    },
+    {
+      "heading": "Step 3: Lead with numbers and named sources",
+      "body": [
+        "Perplexity preferentially cites passages that contain extractable, attributable specifics — a percentage, a dollar figure, a date, a named study, or a named tool. When an answer needs a concrete claim, the engine reaches for the source that states it plainly, not the one that gestures at it vaguely. \"Perplexity cites 4-8 sources per answer\" is far more citable than \"Perplexity cites several sources.\"",
+        "Rewrite soft sentences into hard ones:",
+        "- Weak: \"Many marketers are investing more in AI search.\"\n- Strong: \"In a 2026 survey of 500 marketers, 61% reported shifting budget toward AI-search visibility, according to [source].\"",
+        "Two rules keep this honest and effective. First, attribute every external figure with \"according to [named source]\" so the claim is verifiable — Perplexity favors sourced numbers and so do the humans reading the answer. Second, put the specific in the first sentence of a section or paragraph, not buried in the third. Retrieval systems chunk and extract the opening lines most heavily.",
+        "Named entities help too. Mentioning the specific tools, companies, standards, and people relevant to your topic gives Perplexity's retrieval more anchors to match a query against, which raises the odds your passage is the one pulled into the answer."
+      ]
+    },
+    {
+      "heading": "Step 4: Structure content so a passage stands alone",
+      "body": [
+        "Perplexity extracts passages, not whole pages, so the unit that gets cited is a self-contained chunk of two to four sentences. The most reliable way to win is to write every section so its opening sentence names its own subject and answers one question without needing the paragraph above it for context. This is the Island Test: could a stranger drop into this passage and understand it cold?",
+        "Concretely, that means:",
+        "- **Front-load a direct answer** to the implied question of each heading. Add a one- or two-sentence direct answer near the top of the page so Perplexity has a clean summary to lift; our [direct-answer check](/check/geo.directAnswer.missing) flags pages that bury the answer.\n- **Avoid orphan pronouns.** Replace \"it does this faster\" with \"Perplexity refreshes its index faster.\" Passages riddled with \"this/that/they\" fail extraction because they lose meaning out of context. The [Island Test check](/check/geo.islandTest.weak) scores this for you, and our [deep dive on the Island Test](/blog/island-test-geo) explains the rewrite patterns.\n- **Use real headings and lists.** Question-shaped H2s, short paragraphs, and bulleted facts map cleanly onto how Perplexity chunks a page.\n- **Add JSON-LD.** Article and FAQPage schema with the required fields helps every engine parse author, date, and Q&A structure; see our [post on JSON-LD required fields](/blog/json-ld-required-fields).",
+        "Here is how Perplexity stacks up against the other major engines on the metrics that decide citations:",
+        "[[table]]"
+      ]
+    },
+    {
+      "heading": "Step 5: Track your citations and close the loop",
+      "body": [
+        "Getting cited by Perplexity is not a one-time setup — it is a measurable loop you should monitor weekly. The fastest way to check whether Perplexity cites your site is to run your priority queries directly in Perplexity and read the Sources rail and the inline footnotes for your domain. Do this for the 10-20 questions your best pages target.",
+        "Two signals tell you it is working. First, **referral traffic from perplexity.ai** will show up in your analytics referrers once you start appearing in answers. Second, your own pages will surface as numbered citations on the queries you targeted. If a page is fresh, specific, and crawlable but still absent after a couple of weeks, the usual culprit is a passage that fails the Island Test — tighten the opening sentences and add a hard number.",
+        "Before you publish or refresh anything, run it through a [free SEO + GEO audit](/) to catch crawler blocks, missing dates, weak direct answers, and Island-Test failures in one pass. Fixing those four issues is, in practice, most of how to get cited by Perplexity."
+      ]
+    }
+  ],
+  "flowchart": {
+    "title": "The Perplexity citation loop",
+    "steps": [
+      { "title": "Allow the crawlers", "detail": "Permit PerplexityBot and Perplexity-User in robots.txt so your pages enter the retrieval pool." },
+      { "title": "Publish fresh", "detail": "Show a real published and modified date, and cover rising sub-questions before competitors do." },
+      { "title": "Lead with specifics", "detail": "Open each passage with an attributed number or named source the engine can extract." },
+      { "title": "Pass the Island Test", "detail": "Write self-contained two-to-four-sentence chunks that name their own subject." },
+      { "title": "Track citations", "detail": "Check the Sources rail in Perplexity and watch for perplexity.ai referral traffic." },
+      { "title": "Refresh and repeat", "detail": "Quarterly, inject one new defensible figure and bump the modified date to stay in rotation." }
+    ]
+  },
+  "comparisonTable": {
+    "caption": "How Perplexity compares to other AI engines on citation factors",
+    "headers": ["Factor", "Perplexity", "ChatGPT Search", "Google AI Overviews"],
+    "rows": [
+      ["Sources cited per answer", "~4-8, prominent", "~3-5, prominent", "Few, often collapsed"],
+      ["Index refresh speed", "Near-daily", "Frequent", "Tied to Google index (slower)"],
+      ["Recency weighting", "High", "Moderate", "Moderate"],
+      ["Respects robots.txt", "Yes (PerplexityBot, Perplexity-User)", "Yes (GPTBot, OAI-SearchBot)", "Yes (Google-Extended)"],
+      ["Easiest to win a citation", "Yes — fastest feedback loop", "Moderate", "Hardest — needs organic strength"]
+    ]
+  },
+  "peopleAlsoAsk": [
+    {
+      "q": "How many sources does Perplexity cite?",
+      "a": "Perplexity typically cites 4-8 sources per answer, displayed as numbered inline footnotes and in a dedicated Sources rail. The exact count varies with query complexity — broad questions may pull more sources, while narrow factual queries may lean on three or four. Each cited source links back to the original page and can send referral traffic."
+    },
+    {
+      "q": "Why is Perplexity faster to cite than Google?",
+      "a": "Perplexity is faster to cite than Google because it re-crawls and re-indexes popular topics on a near-daily cadence and weights recency heavily, so a freshly published or updated page can appear in answers within days. Google AI Overviews draw from Google's broader organic index, which can take weeks or months to fully reflect a new page. Perplexity also leans more on passage-level specificity than on accumulated backlinks, which lowers the barrier for newer sites."
+    },
+    {
+      "q": "Does Perplexity respect robots.txt?",
+      "a": "Yes, Perplexity respects robots.txt for both of its agents: PerplexityBot, the indexing crawler, and Perplexity-User, the live fetcher that retrieves pages in real time when a user's question requires them. According to Perplexity's published crawler documentation, a disallow rule for either user-agent will keep your pages out of that retrieval path. To be citable, explicitly allow both agents in your robots.txt."
+    },
+    {
+      "q": "How do I check if Perplexity cites my site?",
+      "a": "To check if Perplexity cites your site, run your target queries directly in Perplexity and look for your domain in the Sources rail and the inline numbered footnotes. Also monitor your analytics for referral traffic from perplexity.ai, which appears once your pages start being cited. If a fresh, crawlable page is still absent after a couple of weeks, tighten its opening sentences and add an attributed statistic."
+    },
+    {
+      "q": "Do backlinks help you get cited by Perplexity?",
+      "a": "Backlinks help indirectly but matter far less for Perplexity than for traditional Google rankings. Perplexity weights recency, passage-level specificity, and crawl access more heavily than link authority when selecting which sources to cite. A newer site with a fresh, precise, self-contained answer can outrank an older high-authority page that buries its facts in vague prose."
+    }
+  ],
+  "faqs": [
+    {
+      "q": "How long does it take to get cited by Perplexity after publishing?",
+      "a": "Because Perplexity re-indexes popular topics on a near-daily cadence, a crawlable and specific page can begin appearing in citations within days to a couple of weeks. Speed depends on how often the topic is queried and how thin the existing source pool is — emerging sub-questions get cited fastest because there is little competition."
+    },
+    {
+      "q": "What is the difference between PerplexityBot and Perplexity-User?",
+      "a": "PerplexityBot is the indexing crawler that discovers and stores pages so they are available for future answers, while Perplexity-User is the live agent that fetches a specific page in real time when a user's question requires it. Both honor robots.txt, so you should allow both to be fully citable. Blocking either one removes you from that retrieval path."
+    },
+    {
+      "q": "Does Perplexity cite paywalled or login-gated content?",
+      "a": "Perplexity generally cannot cite content it cannot crawl, so pages behind hard paywalls or login walls are usually excluded from its sources. If you want a page cited, make at least the key passages publicly accessible to PerplexityBot and Perplexity-User. A clear, crawlable summary of gated material can still earn the citation."
+    }
+  ],
+  "relatedKeywords": ["Perplexity AI citations", "PerplexityBot robots.txt", "rank in Perplexity AI", "AI search citations 2026", "get sourced by Perplexity", "Perplexity SEO"],
+  "internalLinks": [
+    { "href": "/", "anchor": "Run a free SEO + GEO audit" },
+    { "href": "/check/geo.aibots.blocked", "anchor": "Check if AI crawlers are blocked" },
+    { "href": "/check/geo.directAnswer.missing", "anchor": "Direct-answer check" },
+    { "href": "/blog/ai-crawler-allowlist", "anchor": "Build an AI-crawler allowlist" },
+    { "href": "/blog/island-test-geo", "anchor": "The Island Test for GEO" }
+  ]
+}

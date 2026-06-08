@@ -3,73 +3,82 @@ import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import { SiteHeader } from '@/app/_components/SiteHeader';
 import { SiteFooter } from '@/app/_components/SiteFooter';
-import { POSTS, POSTS_INDEX } from '../_posts';
-
-const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://example.com';
+import { Flowchart } from '@/app/_components/Flowchart';
+import { Faq } from '@/app/_components/Faq';
+import { ComparisonTable } from '@/app/_components/ComparisonTable';
+import { JsonLd } from '@/app/_components/JsonLd';
+import { getAllPosts, getPost, type BlogImage, type BlogPost } from '@/lib/blog';
+import { relatedPosts, peopleAlsoSearchFor } from '@/lib/internal-links';
+import { pageMetadata } from '@/lib/seo';
+import { blogPosting, breadcrumbList, faqPage } from '@/lib/schema';
 
 interface PageProps {
   params: Promise<{ slug: string }>;
 }
 
+// Only build known slugs; the fs-based loader then runs at build time only.
+export const dynamicParams = false;
+
 export function generateStaticParams() {
-  return Object.keys(POSTS).map((slug) => ({ slug }));
+  return getAllPosts().map((p) => ({ slug: p.slug }));
 }
 
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
   const { slug } = await params;
-  const post = POSTS[slug];
+  const post = getPost(slug);
   if (!post) return { title: 'Post not found', robots: { index: false } };
-  return {
+  return pageMetadata({
     title: post.title,
     description: post.description,
-    alternates: { canonical: `${SITE_URL}/blog/${slug}` },
-    openGraph: {
-      title: post.title,
-      description: post.description,
-      type: 'article',
-      publishedTime: post.date,
-      url: `${SITE_URL}/blog/${slug}`,
-    },
-  };
+    path: `/blog/${post.slug}`,
+    type: 'article',
+    publishedTime: post.date,
+    modifiedTime: post.updatedAt ?? post.date,
+    keywords: post.keyword ? [post.keyword, ...(post.secondaryKeywords ?? [])] : undefined,
+  });
 }
 
 export default async function BlogPostPage({ params }: PageProps) {
   const { slug } = await params;
-  const post = POSTS[slug];
+  const post = getPost(slug);
   if (!post) notFound();
 
-  const related = POSTS_INDEX.filter((p) => p.slug !== slug).slice(0, 3);
+  const related = relatedPosts(post.slug, 3);
+  const pasf = peopleAlsoSearchFor(post, 6);
+  const allFaqs = [...(post.peopleAlsoAsk ?? []), ...(post.faqs ?? [])];
 
-  const jsonLd = {
-    '@context': 'https://schema.org',
-    '@type': 'BlogPosting',
-    headline: post.title,
-    description: post.description,
-    datePublished: post.date,
-    dateModified: post.date,
-    author: {
-      '@type': 'Person',
-      name: 'Ravi Gupta',
-      url: 'https://github.com/ravigupta0210',
-    },
-    publisher: {
-      '@type': 'Organization',
-      name: 'SEO Auditor',
-      url: SITE_URL,
-      logo: { '@type': 'ImageObject', url: `${SITE_URL}/og-cover.png` },
-    },
-    mainEntityOfPage: { '@type': 'WebPage', '@id': `${SITE_URL}/blog/${slug}` },
-  };
+  // If the body positions a visual via a token, render it there; otherwise fall
+  // back to rendering it after the article body (so a visual always shows).
+  const bodyHasToken = (token: string) =>
+    post.sections.some((s) => s.body.some((b) => b.trim() === token));
+  const usedFlowchartToken = bodyHasToken('[[flowchart]]');
+  const usedTableToken = bodyHasToken('[[table]]');
+
+  const ld: unknown[] = [
+    blogPosting({
+      title: post.title,
+      description: post.description,
+      path: `/blog/${post.slug}`,
+      datePublished: post.date,
+      dateModified: post.updatedAt ?? post.date,
+    }),
+    breadcrumbList([
+      { name: 'Home', path: '/' },
+      { name: 'Blog', path: '/blog' },
+      { name: post.title, path: `/blog/${post.slug}` },
+    ]),
+  ];
+  if (allFaqs.length) ld.push(faqPage(allFaqs));
 
   return (
     <>
       <SiteHeader />
       <main className="page-shell page-shell--narrow">
-        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
+        <JsonLd data={ld} />
 
-        <p className="page-eyebrow">
+        <nav className="page-eyebrow" aria-label="Breadcrumb">
           <Link href="/blog">Blog</Link> &middot; {post.tag}
-        </p>
+        </nav>
         <h1 className="page-title">{post.title}</h1>
 
         <div className="post-meta">
@@ -91,28 +100,40 @@ export default async function BlogPostPage({ params }: PageProps) {
           </span>
         </div>
 
+        {post.tldr && (
+          <div className="post-tldr">
+            <span className="post-tldr__label">TL;DR</span>
+            <p className="post-tldr__text">{post.tldr}</p>
+          </div>
+        )}
+
         <article className="post-body">
           {post.sections.map((section, i) => (
             <section key={i}>
               {section.heading && <h2>{section.heading}</h2>}
               {section.body.map((para, j) => (
-                <Paragraph key={j} text={para} />
+                <Block key={j} text={para} post={post} />
               ))}
             </section>
           ))}
+
+          {post.flowchart && !usedFlowchartToken && <Flowchart data={post.flowchart} />}
+          {post.comparisonTable && !usedTableToken && <ComparisonTable data={post.comparisonTable} />}
         </article>
 
-        {/* CTA */}
+        {/* CTA — funnels every post into the actual tool */}
         <section className="cmp-cta">
           <h2 className="cmp-cta__title">Run a free audit on your site</h2>
           <p className="cmp-cta__sub">
-            See how your site scores across 40+ checks, including everything covered in this guide.
-            Free forever, no signup, no crawl cap.
+            See how your site scores across 40+ SEO, JSON-LD, and GEO/AI-search checks — including
+            everything covered in this guide. Free forever, no signup, no crawl cap.
           </p>
           <Link href="/" className="btn-primary">Audit my site →</Link>
         </section>
 
-        {/* Related */}
+        <Faq items={post.peopleAlsoAsk ?? []} title="People also ask" variant="paa" id={post.slug} />
+        <Faq items={post.faqs ?? []} title="Frequently asked questions" id={`faq-${post.slug}`} />
+
         {related.length > 0 && (
           <section className="post-related">
             <h2 className="page-subtitle">Keep reading</h2>
@@ -132,9 +153,53 @@ export default async function BlogPostPage({ params }: PageProps) {
             </ul>
           </section>
         )}
+
+        {pasf.length > 0 && (
+          <section className="pasf">
+            <h2 className="pasf__title">People also search for</h2>
+            <ul className="pasf__chips">
+              {pasf.map((p) => (
+                <li key={p.href}>
+                  <Link href={p.href} className="pasf__chip">{p.label}</Link>
+                </li>
+              ))}
+            </ul>
+          </section>
+        )}
       </main>
       <SiteFooter />
     </>
+  );
+}
+
+/**
+ * Block-level renderer. Handles special tokens first ([[flowchart]], [[table]],
+ * [[image:N]]), then falls through to the markdown-ish paragraph renderer.
+ */
+function Block({ text, post }: { text: string; post: BlogPost }) {
+  const t = text.trim();
+  if (t === '[[flowchart]]') return post.flowchart ? <Flowchart data={post.flowchart} /> : null;
+  if (t === '[[table]]') return post.comparisonTable ? <ComparisonTable data={post.comparisonTable} /> : null;
+  const imgMatch = t.match(/^\[\[image:(\d+)\]\]$/);
+  if (imgMatch) {
+    const img = post.images?.[Number(imgMatch[1])];
+    return img ? <Figure img={img} /> : null;
+  }
+  // Inline markdown image: ![alt](src)
+  const mdImg = t.match(/^!\[([^\]]*)\]\(([^)]+)\)$/);
+  if (mdImg) {
+    return <Figure img={{ src: mdImg[2]!, alt: mdImg[1] ?? '', caption: mdImg[1] || undefined }} />;
+  }
+  return <Paragraph text={text} />;
+}
+
+function Figure({ img }: { img: BlogImage }) {
+  return (
+    <figure className="post-figure">
+      {/* eslint-disable-next-line @next/next/no-img-element */}
+      <img src={img.src} alt={img.alt} loading="lazy" />
+      {img.caption && <figcaption>{img.caption}</figcaption>}
+    </figure>
   );
 }
 
@@ -163,19 +228,33 @@ function Paragraph({ text }: { text: string }) {
 }
 
 function renderInline(text: string): React.ReactNode {
-  // Process **bold** and `code` segments
+  // Process [text](href) links, **bold**, and `code` segments.
   const parts: React.ReactNode[] = [];
-  const re = /(\*\*[^*]+\*\*|`[^`]+`)/g;
+  const re = /(\[[^\]]+\]\([^)]+\)|\*\*[^*]+\*\*|`[^`]+`)/g;
   let last = 0;
-  let m;
+  let m: RegExpExecArray | null;
   let key = 0;
   while ((m = re.exec(text)) !== null) {
     if (m.index > last) parts.push(text.slice(last, m.index));
     const t = m[0];
     if (t.startsWith('**')) {
       parts.push(<strong key={key++}>{t.slice(2, -2)}</strong>);
-    } else {
+    } else if (t.startsWith('`')) {
       parts.push(<code key={key++} className="post-inline-code">{t.slice(1, -1)}</code>);
+    } else {
+      // markdown link
+      const lm = t.match(/^\[([^\]]+)\]\(([^)]+)\)$/);
+      if (lm) {
+        const href = lm[2]!;
+        const isInternal = href.startsWith('/');
+        parts.push(
+          isInternal
+            ? <Link key={key++} href={href}>{lm[1]}</Link>
+            : <a key={key++} href={href} target="_blank" rel="noopener">{lm[1]}</a>,
+        );
+      } else {
+        parts.push(t);
+      }
     }
     last = m.index + t.length;
   }

@@ -2,12 +2,14 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import { SiteHeader } from '@/app/_components/SiteHeader';
 import { SiteFooter } from '@/app/_components/SiteFooter';
+import { pageMetadata } from '@/lib/seo';
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMetadata({
   title: 'SEO Auditor vs. Screaming Frog, SEMrush, Ahrefs, Sitebulb — honest comparisons',
   description:
     'Side-by-side comparisons of SEO Auditor against Screaming Frog, SEMrush, Ahrefs, and Sitebulb. Pricing, features, GEO/AEO support, and honest recommendations on when each tool wins.',
-};
+  path: '/compare',
+});
 
 interface ComparisonCard {
   slug: string;

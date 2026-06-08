@@ -2,22 +2,28 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import { SiteHeader } from '@/app/_components/SiteHeader';
 import { SiteFooter } from '@/app/_components/SiteFooter';
-import { POSTS_INDEX } from './_posts';
+import { JsonLd } from '@/app/_components/JsonLd';
+import { getPostIndex, getTags } from '@/lib/blog';
+import { pageMetadata } from '@/lib/seo';
+import { breadcrumbList } from '@/lib/schema';
 
-export const metadata: Metadata = {
-  title: 'Blog — SEO, JSON-LD, and AI-search optimization guides',
+export const metadata: Metadata = pageMetadata({
+  title: 'Blog — SEO, JSON-LD, and AI-search (GEO) optimization guides',
   description:
-    'Practical, hand-written guides on classic SEO, JSON-LD structured data, llms.txt, the Island Test, and ' +
-    'ranking in the new AI search engines (ChatGPT, Claude, Perplexity).',
-};
-
-const TAGS = ['All', 'GEO', 'JSON-LD', 'Metadata', 'AI Search', 'Crawling'] as const;
+    'Practical, hand-written guides on classic SEO, JSON-LD structured data, llms.txt, the Island Test, ' +
+    'and ranking in the new AI search engines (ChatGPT, Claude, Perplexity, Google AI Overviews).',
+  path: '/blog',
+});
 
 export default function BlogIndex() {
+  const posts = getPostIndex();
+  const tags = ['All', ...getTags()];
+
   return (
     <>
       <SiteHeader />
       <main className="page-shell page-shell--narrow">
+        <JsonLd data={breadcrumbList([{ name: 'Home', path: '/' }, { name: 'Blog', path: '/blog' }])} />
         <p className="page-eyebrow">Blog</p>
         <h1 className="page-title">SEO + GEO guides for 2026</h1>
         <p className="page-lede">
@@ -27,7 +33,7 @@ export default function BlogIndex() {
         </p>
 
         <div className="blog-tags" role="list" aria-label="Topic filters">
-          {TAGS.map((tag) => (
+          {tags.map((tag) => (
             <span key={tag} className={`blog-tag${tag === 'All' ? ' is-active' : ''}`} role="listitem">
               {tag}
             </span>
@@ -35,7 +41,7 @@ export default function BlogIndex() {
         </div>
 
         <ul className="blog-list">
-          {POSTS_INDEX.map((p, i) => (
+          {posts.map((p, i) => (
             <li key={p.slug}>
               <Link href={`/blog/${p.slug}`} className="blog-card glass-card">
                 <div className="blog-card__meta">

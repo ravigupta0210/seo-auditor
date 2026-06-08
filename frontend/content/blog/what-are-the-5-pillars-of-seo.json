@@ -1,0 +1,141 @@
+{
+  "slug": "what-are-the-5-pillars-of-seo",
+  "title": "What Are the 5 Pillars of SEO? (2026 Explained)",
+  "date": "2026-06-08",
+  "updatedAt": "2026-06-08",
+  "tag": "SEO",
+  "cluster": "seo-basics",
+  "keyword": "5 pillars of SEO",
+  "secondaryKeywords": ["pillars of SEO explained", "core elements of SEO", "SEO fundamentals 2026"],
+  "readTime": 9,
+  "excerpt": "Technical, on-page, content, off-page, and UX — plus how GEO now sits on top of all five.",
+  "description": "The 5 pillars of SEO are technical, on-page, content, off-page authority, and UX/Core Web Vitals. Here's what each covers and why GEO now sits on top.",
+  "tldr": "The 5 pillars of SEO are technical SEO, on-page SEO, content, off-page authority, and UX/Core Web Vitals. In 2026 a sixth layer — GEO (generative engine optimization) — sits on top, because engines like ChatGPT, Perplexity, and Google AI Overviews now decide who gets cited.",
+  "status": "published",
+  "sections": [
+    {
+      "heading": "The 5 pillars of SEO at a glance",
+      "body": [
+        "The **5 pillars of SEO** are technical SEO, on-page SEO, content, off-page authority, and UX/Core Web Vitals. Each pillar answers a different question a search engine asks: *can I crawl and index this page* (technical), *does this page clearly target the query* (on-page), *is the answer actually good and complete* (content), *do other sites trust this source* (off-page), and *is the experience fast and usable* (UX). Skip any one pillar and the others lose leverage — a brilliant article on an un-crawlable page ranks for nothing.",
+        "The pillars are not a ranking checklist you do once. They are interlocking systems. Technical SEO makes content discoverable; content earns the links that become off-page authority; UX keeps visitors on the page long enough to send positive engagement signals back to search engines. Think of them as the foundation, walls, and roof of the same building rather than five separate boxes to tick.",
+        "What changed in 2026 is that a sixth layer — GEO, or generative engine optimization — now sits on top of the five. The same technical, content, and authority work that helps you rank in Google also determines whether ChatGPT, Perplexity, Google AI Overviews, and Bing Copilot quote you in their answers. The pillars still hold the building up; GEO decides whether the AI engines point at it.",
+        "[[flowchart]]"
+      ]
+    },
+    {
+      "heading": "Pillar 1: Technical SEO — can engines reach the page?",
+      "body": [
+        "Technical SEO is the pillar that makes a site crawlable, indexable, and renderable. It covers the plumbing search engines depend on before they ever judge your content: a clean site architecture, working internal links, an accurate XML sitemap, a sane `robots.txt`, canonical tags, HTTPS, structured data (JSON-LD), and server-rendered or pre-rendered HTML so crawlers see real content instead of an empty JavaScript shell.",
+        "The fastest way to lose rankings is a technical mistake that blocks indexing — a stray `noindex`, a broken canonical, or a `robots.txt` rule that quietly disallows a whole section. In 2026 technical SEO also means AI-crawler accessibility: bots like GPTBot, ClaudeBot, and PerplexityBot need to reach your pages, and many sites accidentally [block AI crawlers in robots.txt](/check/geo.aibots.blocked) while leaving Googlebot allowed.",
+        "Key actions: validate your sitemap and `robots.txt`, fix crawl errors, add valid JSON-LD with all required fields, and confirm important content renders without JavaScript. Our [JSON-LD required fields guide](/blog/json-ld-required-fields) covers the structured-data side in depth."
+      ]
+    },
+    {
+      "heading": "Pillar 2: On-page SEO — does the page match the query?",
+      "body": [
+        "On-page SEO is everything inside a single page that tells engines what it is about. It covers the title tag, meta description, heading hierarchy (one clear H1 followed by logical H2s), keyword placement in the first 100 words, descriptive image alt text, internal linking, and URL structure. On-page SEO turns a relevant page into an *obviously* relevant page.",
+        "Two on-page elements still carry outsized weight. The [title tag](/check/metadata.title.missing) is the strongest single on-page ranking signal and the headline most engines display in results. The [meta description](/check/metadata.description.missing) does not directly rank a page but heavily influences click-through rate, which feeds back into performance over time.",
+        "Key actions: write a unique, keyword-led title under ~60 characters, a compelling 120–160 character description, use one H1 per page, place the target phrase early, and link out to related pages with descriptive anchor text rather than \"click here.\""
+      ]
+    },
+    {
+      "heading": "Pillar 3: Content — is the answer actually good?",
+      "body": [
+        "Content is the pillar that decides whether a page deserves to rank at all. It covers topical depth, search-intent match, originality, freshness, and E-E-A-T (experience, expertise, authoritativeness, trustworthiness). Content is where you out-help the competition: answering the real question, covering the follow-ups, and showing first-hand experience rather than rephrasing the top three results.",
+        "E-E-A-T is the practical heart of this pillar in 2026. Named authors with credentials, clear dates, cited sources, and demonstrable first-hand experience separate content that engines and AI models trust from generic filler. A missing or anonymous [author byline](/check/geo.eeat.author.missing) is one of the most common trust gaps we see in audits.",
+        "Key actions: match intent before word count, lead with a direct answer, add original data or examples, attribute claims to named sources, keep a visible author and updated date, and refresh posts on a schedule. Strong content is also what AI engines lift verbatim — which is exactly where the GEO layer takes over."
+      ]
+    },
+    {
+      "heading": "Pillar 4 & 5: Off-page authority and UX/Core Web Vitals",
+      "body": [
+        "Off-page SEO is the pillar built outside your own site: it covers backlinks from relevant authoritative domains, brand mentions, digital PR, and the overall reputation signals that tell engines other sources trust you. Off-page authority is the closest thing SEO has to a vote of confidence, and it remains one of the hardest signals for competitors to fake or for you to fast-track.",
+        "UX and Core Web Vitals form the fifth pillar — the experience layer. It covers page speed, the three Core Web Vitals (Largest Contentful Paint, Interaction to Next Paint, and Cumulative Layout Shift), mobile-friendliness, and an absence of intrusive interstitials. Google measures these as real-user field data, and a slow, janky page suppresses rankings even when content and links are strong.",
+        "> A site can have flawless content and zero authority, or perfect Core Web Vitals and an un-crawlable architecture — and rank nowhere. The pillars compound; weak ones cap the strong ones.",
+        "Key actions for off-page: earn links with genuinely linkable assets, run digital PR, and monitor brand mentions. Key actions for UX: ship server-rendered HTML, lazy-load below-the-fold media, reserve space for images to stop layout shift, and target LCP under 2.5 seconds on mobile.",
+        "[[table]]"
+      ]
+    },
+    {
+      "heading": "The sixth layer: how GEO sits on top of all five",
+      "body": [
+        "GEO (generative engine optimization) is the 2026 layer that sits on top of the five SEO pillars. GEO is the practice of getting cited inside AI-generated answers from ChatGPT, Perplexity, Google AI Overviews, and Bing Copilot — surfaces where there is often no list of blue links to rank in. GEO does not replace the pillars; it reuses them and adds a few new signals on top.",
+        "The overlap is large but not total. Technical SEO becomes AI-crawler accessibility plus an [llms.txt file](/blog/llms-txt-explained). On-page and content work become the [Island Test](/blog/island-test-geo) — writing sentences and answers that stand alone when an engine lifts them out of context — and a direct, lead-with-the-answer structure. Off-page authority still matters, because AI engines preferentially cite sources they already consider trustworthy.",
+        "If you want to see where your own pages stand across all five pillars and the GEO layer, [run a free SEO + GEO audit](/) — it runs 40+ checks covering technical, on-page, content trust, and the AI-citation signals in one pass. For the bigger picture, our [GEO vs SEO comparison](/blog/geo-vs-seo) and the [generative engine optimization guide](/blog/what-is-generative-engine-optimization) explain how the layers fit together."
+      ]
+    }
+  ],
+  "flowchart": {
+    "title": "How the 5 pillars stack (and where GEO sits)",
+    "steps": [
+      { "title": "Technical SEO", "detail": "Make the page crawlable, indexable, and renderable before anything else matters." },
+      { "title": "On-page SEO", "detail": "Tell engines what the page is about with titles, headings, and keyword placement." },
+      { "title": "Content", "detail": "Earn the ranking with depth, intent match, and demonstrable E-E-A-T." },
+      { "title": "Off-page authority", "detail": "Collect links and mentions that signal other sources trust you." },
+      { "title": "UX / Core Web Vitals", "detail": "Keep the experience fast, stable, and mobile-friendly so engagement holds." },
+      { "title": "GEO (the 2026 layer)", "detail": "Reuse all five pillars to get cited inside AI answers, not just ranked." }
+    ]
+  },
+  "comparisonTable": {
+    "caption": "The 5 pillars of SEO — what each covers and the key actions",
+    "headers": ["Pillar", "What it covers", "Key actions"],
+    "rows": [
+      ["Technical SEO", "Crawlability, indexing, site architecture, sitemap, robots.txt, JSON-LD, rendering", "Fix crawl errors, validate sitemap/robots.txt, add valid structured data, allow AI crawlers"],
+      ["On-page SEO", "Title tags, meta descriptions, headings, keyword placement, internal links, URLs", "Write keyword-led titles, one H1, target phrase in first 100 words, descriptive anchors"],
+      ["Content", "Topical depth, intent match, originality, freshness, E-E-A-T", "Lead with the answer, add original data, name the author, cite sources, refresh regularly"],
+      ["Off-page authority", "Backlinks, brand mentions, digital PR, reputation signals", "Build linkable assets, run digital PR, monitor and earn mentions from trusted domains"],
+      ["UX / Core Web Vitals", "Page speed, LCP/INP/CLS, mobile-friendliness, no intrusive pop-ups", "Server-render HTML, lazy-load media, reserve image space, target LCP under 2.5s on mobile"]
+    ]
+  },
+  "peopleAlsoAsk": [
+    {
+      "q": "What are the main pillars of SEO?",
+      "a": "The main pillars of SEO are technical SEO, on-page SEO, content, off-page authority, and UX/Core Web Vitals. Technical SEO makes a page crawlable and indexable, on-page SEO signals what the page is about, content earns the ranking, off-page authority adds trust through backlinks and mentions, and UX/Core Web Vitals keep the experience fast and stable. The five pillars interlock — a weak pillar limits the strong ones."
+    },
+    {
+      "q": "Which SEO pillar matters most?",
+      "a": "No single SEO pillar matters most universally, because they compound. Technical SEO is the prerequisite — an un-crawlable page cannot rank no matter how good its content — so it is the floor everything else stands on. For most sites that are technically sound, content and off-page authority become the biggest differentiators against competitors."
+    },
+    {
+      "q": "Is GEO a sixth pillar of SEO?",
+      "a": "GEO (generative engine optimization) functions as a sixth layer that sits on top of the five SEO pillars rather than a fully separate pillar. GEO reuses technical, content, and authority signals to earn citations inside AI answers from ChatGPT, Perplexity, and Google AI Overviews. It adds a few new requirements — AI-crawler access, an llms.txt file, direct answers, and the Island Test — but depends on the original five to work."
+    },
+    {
+      "q": "How do the SEO pillars work together?",
+      "a": "The SEO pillars work together as a chain where each enables the next. Technical SEO makes content discoverable, on-page SEO clarifies relevance, strong content earns the backlinks that become off-page authority, and good UX keeps visitors engaged so positive signals flow back to search engines. Because they compound, the best strategy is to find your weakest pillar and fix that before optimizing an already-strong one."
+    },
+    {
+      "q": "How many pillars of SEO are there really?",
+      "a": "Most SEO frameworks describe four to five core pillars, and the five-pillar model — technical, on-page, content, off-page, and UX/Core Web Vitals — is the most complete common version. Some guides collapse content into on-page or fold UX into technical, producing three- or four-pillar models. In 2026 it is increasingly common to add GEO as a sixth layer on top."
+    }
+  ],
+  "faqs": [
+    {
+      "q": "Do small websites need all five pillars of SEO?",
+      "a": "Yes, small websites need all five pillars, but the effort is scaled down rather than skipped. A small site still needs to be crawlable and indexable (technical), have clear titles and headings (on-page), publish genuinely useful content, earn a few quality links (off-page), and load fast on mobile (UX). The difference is volume, not coverage — you do less of each pillar, not fewer pillars."
+    },
+    {
+      "q": "Can I check all five SEO pillars for free?",
+      "a": "Yes, you can check all five SEO pillars for free with an automated auditor. SEO Auditor runs 40+ checks across technical, on-page, content trust, and the GEO layer in a single scan and flags exactly which pillar each issue belongs to. You can run it on any URL without an account at the homepage."
+    },
+    {
+      "q": "Where does keyword research fit among the pillars?",
+      "a": "Keyword research is not a pillar itself — it is the input that feeds the on-page and content pillars. Keyword and intent research tells you which queries to target, which then shapes your titles, headings, and the topics your content covers. Treat it as the planning step that happens before you build the on-page and content pillars."
+    }
+  ],
+  "relatedKeywords": [
+    "what are the 4 types of SEO",
+    "SEO basics for beginners",
+    "technical SEO checklist",
+    "on-page SEO factors",
+    "off-page SEO backlinks",
+    "Core Web Vitals 2026"
+  ],
+  "internalLinks": [
+    { "href": "/", "anchor": "Run a free SEO + GEO audit" },
+    { "href": "/check", "anchor": "See all 40+ SEO and GEO checks" },
+    { "href": "/blog/what-are-the-4-types-of-seo", "anchor": "What are the 4 types of SEO?" },
+    { "href": "/blog/geo-vs-seo", "anchor": "GEO vs SEO compared" },
+    { "href": "/blog/how-to-seo-for-beginners", "anchor": "SEO for beginners guide" }
+  ]
+}

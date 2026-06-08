@@ -1,0 +1,138 @@
+{
+  "slug": "how-to-do-seo-for-free",
+  "title": "How to Do SEO for Free: A Complete 2026 Checklist",
+  "date": "2026-06-08",
+  "updatedAt": "2026-06-08",
+  "tag": "SEO",
+  "cluster": "seo-basics",
+  "keyword": "how to do SEO for free",
+  "secondaryKeywords": ["free SEO tools", "free SEO checklist", "DIY SEO", "free SEO audit"],
+  "readTime": 9,
+  "excerpt": "You can do real SEO with $0 in tools. Here's the free workflow and the checklist that actually moves rankings.",
+  "description": "How to do SEO for free in 2026 using Google Search Console, Bing Webmaster Tools, and a free auditor. A practical free-tools-only checklist that works.",
+  "tldr": "You can do SEO entirely for free in 2026 using Google Search Console, Bing Webmaster Tools, and a free SEO + GEO auditor. The free stack covers indexing, keyword data, technical fixes, and AI-citation readiness for Perplexity and ChatGPT, and it matches paid tools on every fundamental that actually moves rankings.",
+  "status": "published",
+  "sections": [
+    {
+      "heading": "How to do SEO for free: the short answer",
+      "body": [
+        "Learning **how to do SEO for free** comes down to four no-cost moves: submit your site to Google Search Console and Bing Webmaster Tools, run a free SEO audit to find broken metadata and AI-crawler blocks, fix what the audit flags, and publish content that answers a real query better than the current top results. Every tool you need to do SEO for free is available in 2026, and the data Google gives you in Search Console is the same data the paid tools resell.",
+        "The myth that SEO requires a $99-per-month subscription is sales positioning, not reality. Paid suites like Ahrefs and Semrush are faster and prettier for large sites, but they buy you convenience, not better fundamentals. A solo site owner can rank a page using only Google Search Console (free), Bing Webmaster Tools (free), Google's own keyword and PageSpeed tools (free), and a free [SEO + GEO auditor](/) to catch the technical and AI-readiness gaps.",
+        "The honest tradeoff: free SEO costs you time instead of money. You will copy data between a few tabs instead of seeing it in one dashboard, and you will not get a 10-million-keyword database. But for ranking your own pages, none of that changes the outcome. This checklist walks the exact free workflow, in order, with the tools named at each step."
+      ]
+    },
+    {
+      "heading": "The free SEO tool stack (and what each one does)",
+      "body": [
+        "The free SEO tool stack is small on purpose: five tools cover indexing, keyword data, technical health, and AI-citation readiness with zero spend. Each tool owns one job, and together they replace most of what a paid suite bundles.",
+        "- **Google Search Console** — your single most important free tool. It shows which queries you already rank for, your average position, click-through rate, indexing errors, and Core Web Vitals. The query data alone is what paid keyword tools estimate; Search Console gives you the real numbers for your own site.\n- **Bing Webmaster Tools** — free, fast to set up, and the source that feeds ChatGPT and Copilot search. It includes a free keyword research tool and a site scanner that Google's console does not offer.\n- **Google's free utilities** — PageSpeed Insights for Core Web Vitals, the Rich Results Test for structured data, and the URL Inspection tool inside Search Console for live crawl checks.\n- **A free SEO + GEO auditor** — paste any URL and get title, meta description, heading, structured-data, and AI-crawler checks in one pass. [Run a free audit at the homepage](/) to catch the technical gaps the consoles assume you already know about.\n- **Free AI assistants** — ChatGPT or Claude for drafting outlines, clustering keywords, and rewriting weak passages, used as an editor rather than an autopilot.",
+        "Notably, you do not need a paid backlink database to start. Most ranking gains for new and mid-size sites come from indexing fixes, query-matched content, and clean technical structure, all of which the free stack covers completely. Add a paid tool later only when manual data-gathering becomes the bottleneck, not before."
+      ]
+    },
+    {
+      "heading": "The free SEO checklist, in order",
+      "body": [
+        "The free SEO checklist runs in a deliberate order: get found, get measured, fix what's broken, then earn the click. Working out of order wastes effort, optimizing content that search engines cannot even crawl is the most common beginner mistake.",
+        "Step one is access and submission. Verify your site in both Google Search Console and Bing Webmaster Tools, submit your XML sitemap to each, and confirm your robots.txt is not accidentally blocking important pages. Then check whether AI crawlers can reach you, because a blocked [GPTBot or PerplexityBot](/check/geo.aibots.blocked) means zero visibility in AI answers no matter how good the page is.",
+        "Step two is the technical audit. Run a free audit on your top pages and fix anything flagged: a [missing or duplicate title tag](/check/metadata.title.missing), a [missing meta description](/check/metadata.description.missing), broken or missing structured data, slow Core Web Vitals, and pages excluded from the index. These are the cheapest wins in all of SEO because they are pure mechanics, no creativity required.",
+        "[[flowchart]]",
+        "Step three is content matched to intent. Pull your Search Console query report, find terms where you rank on page two (positions 11–20), and improve those pages first, they are the closest to a payoff. Write a direct answer in the first sentence, cover the topic with genuine depth, and add internal links to related pages. For a fuller walkthrough of the content side, see our [SEO for beginners guide](/blog/how-to-seo-for-beginners) and the [5 pillars of SEO](/blog/what-are-the-5-pillars-of-seo).",
+        "Step four is measure and repeat. Wait two to four weeks, reopen Search Console, and compare average position and clicks for the pages you changed. SEO is a feedback loop, not a one-time project, and the free tools give you every signal you need to run that loop indefinitely."
+      ]
+    },
+    {
+      "heading": "Free vs paid SEO: what you actually give up",
+      "body": [
+        "Free SEO gives up speed and breadth, not capability. The fundamentals that determine whether a page ranks, indexing, intent-matched content, technical health, and internal linking, are fully covered by free tools. What you pay for with a subscription is doing those checks faster across thousands of pages and pulling competitor data you can otherwise gather manually.",
+        "The table below lays out where free and paid actually diverge so you can decide whether the upgrade is worth it for your situation.",
+        "[[table]]",
+        "The practical read: if you run one site and publish a few pages a month, free SEO is not a compromise, it is the correct choice. The moment you manage many sites, or manually copying data eats more than an hour a week, a paid tool starts paying for itself. Until then, spend the money you saved on better content instead.",
+        "> Paid SEO tools sell convenience and scale. They do not sell rankings. A free workflow done consistently beats a paid suite used twice a month."
+      ]
+    },
+    {
+      "heading": "Don't skip the free GEO layer",
+      "body": [
+        "Free SEO in 2026 is incomplete without a generative engine optimization (GEO) pass, and the GEO basics cost nothing. AI engines like ChatGPT, Perplexity, and Google AI Overviews now answer a large share of informational queries directly, so being citable inside those answers is as important as ranking in blue links. The good news is that the same free auditor checks GEO readiness alongside classic SEO.",
+        "Three free GEO moves matter most. First, confirm AI crawlers are allowed, an audit flags a blocked GPTBot or PerplexityBot in seconds. Second, lead every page with a [direct answer](/check/geo.directAnswer.missing) in the first sentence so an engine can quote it cleanly. Third, make your passages pass the island test: each sentence names its subject and stands alone, with no \"this\" or \"as mentioned above\" that breaks when lifted out of context.",
+        "Two more free additions round it out: publish an llms.txt file to guide AI engines toward your best content, and add a named author for [E-E-A-T](/check/geo.eeat.author.missing). None of these require a paid tool. For the full picture of how AI citations work, read our [guide to generative engine optimization](/blog/what-is-generative-engine-optimization), and to verify your pages, browse the [full list of 40+ SEO and GEO checks](/check) the free auditor runs."
+      ]
+    },
+    {
+      "heading": "Put it together: a $0 SEO routine you can run forever",
+      "body": [
+        "A sustainable free SEO routine is a short weekly loop, not a heroic one-time effort. Set aside thirty minutes a week and the free stack will keep a small site healthy and growing without ever opening your wallet.",
+        "Here is the loop in practice:",
+        "- **Monday, 10 minutes:** open Google Search Console, scan for new indexing errors and Core Web Vitals warnings, and note any page-two queries worth chasing.\n- **Once per page:** [run a free SEO + GEO audit](/) on anything new or freshly edited, and fix every flagged title, description, structured-data, and AI-crawler issue before it goes live.\n- **Weekly, 15 minutes:** improve one existing page, sharpen the first-sentence answer, add depth, and link it to two related posts.\n- **Monthly, 5 minutes:** check Bing Webmaster Tools and re-prompt ChatGPT or Perplexity with your target questions to see whether you are getting cited.",
+        "This routine costs nothing but consistency, and consistency is exactly what wins at SEO. If you want to compare the free auditor against paid alternatives before you commit, our [comparison page](/compare) shows the tradeoffs side by side. Start by [auditing your homepage for free](/) today, fix the first three things it flags, and you will have done more real SEO than most sites pay hundreds a month to skip."
+      ]
+    }
+  ],
+  "flowchart": {
+    "title": "The free SEO checklist, step by step",
+    "steps": [
+      { "title": "Verify and submit", "detail": "Add your site to Google Search Console and Bing Webmaster Tools and submit your sitemap to both." },
+      { "title": "Check crawl access", "detail": "Confirm robots.txt isn't blocking key pages or AI crawlers like GPTBot and PerplexityBot." },
+      { "title": "Run a free audit", "detail": "Paste your top URLs into a free SEO + GEO auditor and fix every flagged title, description, and structured-data issue." },
+      { "title": "Match content to intent", "detail": "Use the Search Console query report to find page-two terms and improve those pages first." },
+      { "title": "Add the GEO layer", "detail": "Lead with a direct answer, pass the Island Test, and publish an llms.txt for AI citations." },
+      { "title": "Measure and repeat", "detail": "Wait two to four weeks, recheck position and clicks in Search Console, then loop." }
+    ]
+  },
+  "comparisonTable": {
+    "caption": "Free vs paid SEO across what actually matters",
+    "headers": ["Capability", "Free stack", "Paid suite"],
+    "rows": [
+      ["Your own query and ranking data", "Full, real numbers (Search Console)", "Same data, plus estimates for other sites"],
+      ["Technical and metadata audit", "Covered by a free auditor", "Covered, faster across many pages"],
+      ["Keyword research", "Search Console + Bing keyword tool", "Larger database with volume estimates"],
+      ["Backlink analysis", "Manual, limited", "Large crawled backlink index"],
+      ["AI-citation / GEO checks", "Covered by a free SEO + GEO auditor", "Often missing or add-on"],
+      ["Cost", "$0", "$99–$500+ per month"]
+    ]
+  },
+  "peopleAlsoAsk": [
+    {
+      "q": "Can you do SEO for free?",
+      "a": "Yes, you can do SEO entirely for free in 2026. Google Search Console gives you real query, ranking, and indexing data at no cost, Bing Webmaster Tools adds free keyword research, and a free SEO auditor catches technical and metadata gaps. The only thing free SEO costs is your time rather than a subscription fee, and the fundamentals it covers are the same ones that determine rankings."
+    },
+    {
+      "q": "What free SEO tools are best?",
+      "a": "The best free SEO tools in 2026 are Google Search Console for query and indexing data, Bing Webmaster Tools for keyword research and a free site scan, Google PageSpeed Insights for Core Web Vitals, and a free SEO + GEO auditor for technical and AI-citation checks. Together these four cover indexing, keyword data, technical health, and AI readiness. Most paid suites simply bundle and resell versions of this same data."
+    },
+    {
+      "q": "Is free SEO as good as paid?",
+      "a": "Free SEO is as good as paid SEO for the fundamentals that move rankings: indexing, intent-matched content, technical health, and internal linking are all fully covered by free tools. Paid suites add speed across thousands of pages and a large backlink database, which matters for agencies and big sites. For a solo owner or small business, free SEO is not a compromise but the correct, equal-outcome choice."
+    },
+    {
+      "q": "How do I check my SEO for free?",
+      "a": "You check your SEO for free by running a free SEO + GEO audit on your URL, which flags missing title tags, meta descriptions, structured-data errors, and blocked AI crawlers in one pass. You then confirm indexing and ranking in Google Search Console and run PageSpeed Insights for Core Web Vitals. These three free checks together cover the technical and content health of any page without any subscription."
+    },
+    {
+      "q": "Do I need to pay for backlinks to rank?",
+      "a": "No, you do not need to pay for backlinks to rank, and buying links violates Google's guidelines and risks a penalty. New and mid-size sites earn most of their ranking gains from indexing fixes, query-matched content, and clean technical structure, all of which are free to do. Backlinks earned naturally through good content still help, but a paid link database is a convenience for analysis, not a requirement for ranking."
+    }
+  ],
+  "faqs": [
+    {
+      "q": "How long does free SEO take to show results?",
+      "a": "Free SEO typically shows the first results in two to eight weeks, though competitive terms take longer. Technical fixes like adding a missing title tag or unblocking a crawler can register within days because they are mechanical, while content and ranking improvements build over weeks as search engines re-crawl and re-evaluate the page. The timeline is the same whether you use free or paid tools, because the tools do not change how fast search engines work."
+    },
+    {
+      "q": "Is Google Search Console really free, and is it enough?",
+      "a": "Google Search Console is completely free with no paid tier, and for a single site it is genuinely enough to run SEO on its own. It provides real query data, average position, click-through rate, indexing status, and Core Web Vitals straight from Google. Pairing it with a free auditor for metadata and structured-data checks closes the only meaningful gap, which is the technical health of individual pages."
+    },
+    {
+      "q": "Can ChatGPT do my SEO for free?",
+      "a": "ChatGPT can assist with free SEO as an editor but cannot run it on its own. It is strong at drafting outlines, clustering keywords, and rewriting weak passages, yet it cannot crawl your live site, read your real Search Console data, or verify your structured data. Use it alongside Google Search Console and a free auditor rather than as a replacement, our post on whether ChatGPT can do an SEO audit covers exactly where it falls short."
+    }
+  ],
+  "relatedKeywords": ["free SEO tools 2026", "free SEO checklist", "DIY SEO for beginners", "Google Search Console SEO", "free SEO audit tool", "SEO without paying"],
+  "internalLinks": [
+    { "href": "/", "anchor": "Run a free SEO + GEO audit" },
+    { "href": "/check", "anchor": "All 40+ SEO and GEO checks" },
+    { "href": "/blog/how-to-seo-for-beginners", "anchor": "SEO for beginners: step-by-step guide" },
+    { "href": "/check/metadata.title.missing", "anchor": "Check for missing title tags" },
+    { "href": "/blog/what-is-generative-engine-optimization", "anchor": "What is generative engine optimization?" }
+  ]
+}

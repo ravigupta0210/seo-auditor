@@ -1,0 +1,137 @@
+{
+  "slug": "what-is-seo-and-how-it-works",
+  "title": "What Is SEO and How It Works: A Plain-English 2026 Guide",
+  "date": "2026-06-08",
+  "updatedAt": "2026-06-08",
+  "tag": "SEO",
+  "cluster": "seo-basics",
+  "keyword": "what is SEO and how it works",
+  "secondaryKeywords": ["how search engines work", "crawling indexing ranking", "how does Google rank pages", "SEO basics 2026"],
+  "readTime": 9,
+  "excerpt": "SEO in plain English: how Google crawls, indexes, and ranks pages, and how AI search changes it.",
+  "description": "What is SEO and how it works, explained simply: crawling, indexing, and ranking, plus how AI search like Google AI Overviews changes the rules in 2026.",
+  "tldr": "SEO (search engine optimization) is the practice of structuring a website so search engines can crawl it, index it, and rank it highly for relevant queries. It works in three stages — crawl, index, rank — and in 2026 a fourth layer matters: getting cited inside AI answers from Google AI Overviews, ChatGPT, and Perplexity.",
+  "status": "published",
+  "sections": [
+    {
+      "heading": "What is SEO and how it works, in one minute",
+      "body": [
+        "**What is SEO and how it works** comes down to one sentence: SEO (search engine optimization) is the practice of structuring your website and content so a search engine can find it, understand it, and show it near the top when someone searches for something you cover. It works through three mechanical stages a search engine runs for every page on the web: it **crawls** (discovers and fetches the page), **indexes** (stores and understands what the page is about), and **ranks** (orders it against competing pages for a given query).",
+        "Think of it like a librarian for the entire internet. A crawler walks the shelves and notes every book, the index is the card catalog recording what each book is about, and ranking is the librarian deciding which three books to hand you first. SEO is the work of making your book easy to find, easy to catalog correctly, and obviously the best answer to the question.",
+        "Most beginners get this wrong by treating SEO as keyword tricks. Modern SEO in 2026 is mostly about being genuinely useful, technically reachable, and clearly structured. The rest of this guide walks through each stage, shows the full pipeline as a flowchart, and then covers the layer classic explanations miss: how AI search changes what \"ranking\" even means."
+      ]
+    },
+    {
+      "heading": "The three stages: crawling, indexing, and ranking",
+      "body": [
+        "Crawling, indexing, and ranking are three distinct jobs a search engine does in sequence, and a page can fail at any one of them. Knowing which stage you are stuck at is the single most useful diagnostic skill in SEO.",
+        "**Crawling** is discovery. A bot like Googlebot follows links from pages it already knows and reads your sitemap to find new URLs, then fetches the HTML. If a page has no links pointing to it, is blocked in `robots.txt`, or sits behind a login, the crawler never sees it — and a page that is never crawled can never rank. This is also where [AI-crawler access](/check/geo.aibots.blocked) lives: GPTBot, PerplexityBot, and Google-Extended are separate crawlers with their own rules.",
+        "**Indexing** is understanding and storage. After fetching a page, the search engine renders it, reads the text, images, and structured data, figures out what it is about, and decides whether to store it in the index. Pages can be crawled but not indexed — duplicate content, thin pages, `noindex` tags, or low perceived value all cause a page to be dropped. Clean [title tags](/check/metadata.title.missing) and [meta descriptions](/check/metadata.description.missing), valid JSON-LD, and a clear heading structure all help the engine index you correctly.",
+        "**Ranking** is the competition. When someone searches, the engine pulls every relevant indexed page and orders them using hundreds of signals — relevance, content quality, links from other sites, page speed, and user-behavior signals among them. Your page is not ranked in a vacuum; it is ranked against everyone else answering the same question. That is why ranking is the slowest stage to win and the easiest to lose."
+      ]
+    },
+    {
+      "heading": "How a search engine goes from crawl to ranking",
+      "body": [
+        "The path from a brand-new URL to a ranked result is a pipeline, not a single event, and SEO work targets specific steps in it. The flowchart below traces a page through the whole journey.",
+        "[[flowchart]]",
+        "The most common place pages die is between **indexed** and **ranked**. Site owners confirm a page is in Google's index, see it sitting there, and assume the job is done — but being indexed only means you are eligible to compete. Ranking requires that your page is the genuinely better answer for the query, with the relevance, depth, and trust signals to prove it.",
+        "Each stage has its own failure mode and its own fix, plus the new AI layer on top. The table lines them up.",
+        "[[table]]",
+        "> A page that is crawled, indexed, and still invisible almost always has a ranking problem, not a technical one. The fix is better content and stronger relevance signals, not more meta tags."
+      ]
+    },
+    {
+      "heading": "How does Google rank pages? The signals that matter",
+      "body": [
+        "Google ranks pages by scoring each indexed result against the specific query using a large set of signals, then ordering them from most to least likely to satisfy the searcher. No single factor wins; ranking is the combined weight of relevance, quality, authority, and experience signals.",
+        "The signals that consistently move rankings in 2026 group into a few buckets:",
+        "- **Relevance and intent match.** Does the page answer the actual question behind the search, not just contain the keywords? Matching search intent is the biggest lever.\n- **Content quality and depth.** Original, accurate, genuinely helpful content that covers the topic better than competing pages.\n- **Authority and links.** Links from other reputable sites act as votes; a page on a trusted domain with relevant backlinks ranks more easily.\n- **Experience and trust (E-E-A-T).** Demonstrated first-hand experience, [named authorship](/check/geo.eeat.author.missing), and credible sourcing matter, especially for health, finance, and other high-stakes topics.\n- **Technical health.** Fast load times, mobile-friendliness, crawlability, and clean structure remove friction that can suppress an otherwise good page.",
+        "For the structural view of these buckets, our [5 pillars of SEO](/blog/what-are-the-5-pillars-of-seo) breaks them down, and the [4 types of SEO](/blog/what-are-the-4-types-of-seo) guide separates on-page, off-page, technical, and local work. The honest summary: there is no secret ranking hack in 2026. The pages that win most clearly and completely answer the query on a site the engine trusts."
+      ]
+    },
+    {
+      "heading": "How long SEO takes (and why)",
+      "body": [
+        "SEO typically takes three to six months to show meaningful movement for a new page or site, and competitive terms can take a year or more. The delay is not arbitrary — it reflects how the crawl-index-rank pipeline actually behaves over time.",
+        "A new page has to be discovered and crawled, assessed and indexed, and then accumulate the engagement and link signals that prove it deserves a top position. Search engines are deliberately conservative about promoting unproven pages, because ranking something untested at #1 risks a bad result. The payoff for that patience is durability: a page that earns rankings tends to hold them and compound, unlike paid ads that stop the moment you stop paying.",
+        "Two factors swing the timeline. Established, trusted domains rank new pages faster because the trust signal already exists, and low-competition long-tail queries rank far faster than broad head terms. If you are starting out, our [SEO for beginners guide](/blog/how-to-seo-for-beginners) and the [free-SEO checklist](/blog/how-to-do-seo-for-free) lay out what to do in the first weeks while you wait for rankings to mature."
+      ]
+    },
+    {
+      "heading": "How AI search changes the picture in 2026",
+      "body": [
+        "AI search adds a fourth stage on top of crawl, index, and rank: getting your content **cited** inside an AI-generated answer. Engines like Google AI Overviews, ChatGPT search, Perplexity, and Bing Copilot increasingly answer the question directly at the top of the page, summarizing a handful of sources, so a user may read the answer and never click any blue link at all.",
+        "This shift means ranking #1 no longer guarantees the click. On information-seeking queries, the classic top 10 and the pages cited by AI engines now overlap by less than 20% on many topics, based on practitioner analyses of AI Overview and Perplexity citations across 2025. Optimizing to be one of those cited sources is a distinct discipline called [generative engine optimization (GEO)](/blog/what-is-generative-engine-optimization).",
+        "The good news is that classic SEO and GEO share a foundation. The work that wins citations is what AI engines can quote cleanly:",
+        "- **Lead with a direct answer.** Put a complete, standalone answer in the first sentence so an engine can lift it. (Check yours against the [direct-answer test](/check/geo.directAnswer.missing).)\n- **Pass the Island Test.** Write passages that stand alone and name their subject, so a model can quote them without the surrounding context — run the [Island Test check](/check/geo.islandTest.weak) to find weak passages.\n- **Open the doors to AI crawlers.** Confirm GPTBot, PerplexityBot, and Google-Extended are allowed in `robots.txt` and publish an [llms.txt file](/check/geo.llmsTxt.missing).",
+        "You can check all of this in one pass. [Run a free SEO + GEO audit](/) on any URL and it flags crawl and index blockers, missing titles and descriptions, blocked AI crawlers, weak direct answers, and Island-Test issues together — see the [full list of 40+ checks](/check). The takeaway for 2026: SEO still works and the crawl-index-rank pipeline still runs, but \"ranking\" now includes being the source an AI answer chooses to cite."
+      ]
+    }
+  ],
+  "flowchart": {
+    "title": "How a search engine goes from crawl to ranking",
+    "steps": [
+      { "title": "Discover the URL", "detail": "The engine finds the page through links from known pages or your XML sitemap." },
+      { "title": "Crawl the page", "detail": "A bot like Googlebot fetches the HTML, as long as robots.txt and links allow access." },
+      { "title": "Render and understand", "detail": "The engine runs the page, reads text, images, and structured data, and works out the topic." },
+      { "title": "Index the page", "detail": "If the content is unique and valuable, it is stored in the index and becomes eligible to rank." },
+      { "title": "Match to a query", "detail": "When someone searches, the engine pulls relevant indexed pages and scores each against the query." },
+      { "title": "Rank and (maybe) cite", "detail": "Pages are ordered by hundreds of signals, and the best may also be cited inside an AI answer." }
+    ]
+  },
+  "comparisonTable": {
+    "caption": "The three classic SEO stages, plus the new AI layer",
+    "headers": ["Stage", "What happens", "What can break it", "How to help it"],
+    "rows": [
+      ["Crawling", "A bot discovers and fetches the page", "Blocked in robots.txt, no inbound links, login wall", "Internal links, XML sitemap, allow crawlers"],
+      ["Indexing", "The engine understands and stores the page", "Thin or duplicate content, noindex tag, low value", "Unique content, clean titles and JSON-LD"],
+      ["Ranking", "The page is scored against competitors per query", "Weak relevance, low authority, poor experience", "Match intent, earn links, improve quality"],
+      ["AI citation", "An AI answer quotes the page as a source", "Blocked AI crawlers, no direct answer, weak passages", "Direct answers, Island-Test passages, llms.txt"]
+    ]
+  },
+  "peopleAlsoAsk": [
+    {
+      "q": "How does Google rank pages?",
+      "a": "Google ranks pages by scoring every relevant indexed page against the specific search query using hundreds of signals, then ordering them from most to least likely to satisfy the searcher. The heaviest signals are relevance to the query intent, content quality and depth, authority from backlinks, demonstrated experience and trust (E-E-A-T), and technical health like speed and crawlability. No single factor decides ranking; it is the combined weight of these signals on a given query."
+    },
+    {
+      "q": "What is crawling and indexing?",
+      "a": "Crawling is the stage where a search engine bot discovers a page by following links or reading a sitemap and then fetches its HTML. Indexing is the next stage, where the engine renders the page, understands what it is about, and stores it in its searchable index. A page must be crawled before it can be indexed, and it must be indexed before it can ever rank."
+    },
+    {
+      "q": "How long does SEO take?",
+      "a": "SEO typically takes three to six months to produce meaningful ranking movement for a new page, and competitive head terms can take a year or more. The delay reflects the pipeline: a page must be discovered, crawled, indexed, and then accumulate the engagement and link signals that prove it deserves a top position. Established trusted domains and low-competition long-tail queries rank noticeably faster than new sites chasing broad terms."
+    },
+    {
+      "q": "Does SEO still work in 2026?",
+      "a": "SEO still works in 2026 because search engines continue to crawl, index, and rank pages, and classic search remains the largest discovery channel for most websites. What has changed is that AI answers from Google AI Overviews, ChatGPT, and Perplexity now sit above the blue links and can satisfy a query without a click. The result is that SEO still works but now includes a fourth goal — being the source an AI answer cites — which the discipline of GEO addresses."
+    },
+    {
+      "q": "What is the difference between SEO and GEO?",
+      "a": "SEO (search engine optimization) earns a page a high position in the ranked list of blue links so a human clicks through. GEO (generative engine optimization) earns content a citation inside an AI-generated answer from engines like ChatGPT, Perplexity, and Google AI Overviews. They share a foundation of useful, well-structured content, but they are measured differently and in 2026 most sites need both."
+    }
+  ],
+  "faqs": [
+    {
+      "q": "What does SEO actually stand for?",
+      "a": "SEO stands for search engine optimization, the practice of structuring a website and its content so search engines can crawl, index, and rank it for relevant queries. The goal is to appear near the top of search results, and increasingly to be cited in AI answers, for the searches your audience makes."
+    },
+    {
+      "q": "Can I do SEO myself without paying for tools?",
+      "a": "You can do effective SEO yourself without paid tools, especially for a small site. Google Search Console is free and shows crawling, indexing, and ranking data, and a free SEO and GEO audit can flag technical issues, missing metadata, and AI-crawler access in one pass. The free-SEO checklist on this site walks through the steps in order so you can start without a budget."
+    },
+    {
+      "q": "Is keyword stuffing still an SEO strategy?",
+      "a": "Keyword stuffing is not a working SEO strategy in 2026 and can actively hurt rankings. Modern search engines understand topics and intent rather than counting exact-match keywords, and they penalize content that repeats phrases unnaturally. The reliable approach is to answer the searcher's real question clearly and completely, using natural language."
+    }
+  ],
+  "relatedKeywords": ["how search engines work", "crawling indexing ranking", "how does Google rank pages", "SEO basics for beginners", "does SEO still work", "what is generative engine optimization"],
+  "internalLinks": [
+    { "href": "/", "anchor": "Run a free SEO + GEO audit" },
+    { "href": "/blog/how-to-seo-for-beginners", "anchor": "SEO for beginners: step-by-step guide" },
+    { "href": "/blog/what-are-the-5-pillars-of-seo", "anchor": "The 5 pillars of SEO" },
+    { "href": "/blog/what-is-generative-engine-optimization", "anchor": "What is generative engine optimization (GEO)?" },
+    { "href": "/check", "anchor": "All 40+ SEO and GEO checks" }
+  ]
+}

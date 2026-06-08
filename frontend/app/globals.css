@@ -1043,7 +1043,10 @@ details > summary,
 .blog-card__tag--geo, .blog-card__tag--ai-search { background: color-mix(in srgb, #ec4899 18%, transparent); color: #ec4899; }
 .blog-card__tag--json-ld { background: color-mix(in srgb, #8b5cf6 18%, transparent); color: #8b5cf6; }
 .blog-card__tag--metadata { background: color-mix(in srgb, #38bdf8 18%, transparent); color: #38bdf8; }
-.blog-card__tag--crawling { background: color-mix(in srgb, #22d3ee 18%, transparent); color: #22d3ee; }
+.blog-card__tag--crawling, .blog-card__tag--technical-seo { background: color-mix(in srgb, #22d3ee 18%, transparent); color: #22d3ee; }
+.blog-card__tag--seo { background: color-mix(in srgb, #7c8cff 18%, transparent); color: #7c8cff; }
+.blog-card__tag--content { background: color-mix(in srgb, #4ade80 18%, transparent); color: #4ade80; }
+.blog-card__tag--careers { background: color-mix(in srgb, #ffb347 18%, transparent); color: #ffb347; }
 
 .blog-newsletter {
   display: flex;
@@ -1156,3 +1159,172 @@ details > summary,
   .cmp-price-grid, .cmp-pros-grid, .cmp-use-grid { grid-template-columns: 1fr; }
   .chk-overview { grid-template-columns: 1fr; }
 }
+
+/* ============================================================
+   Blog engagement components: TL;DR, flowchart, FAQ/PAA,
+   comparison table, inline images, "people also search for".
+   All theme-aware via the design tokens above.
+   ============================================================ */
+
+/* Answer-first TL;DR box — the LLM-citation extraction zone */
+.post-tldr {
+  display: flex;
+  gap: 14px;
+  align-items: flex-start;
+  padding: 16px 20px;
+  margin: 0 0 28px;
+  border: 1px solid color-mix(in srgb, var(--accent) 30%, var(--border));
+  border-left: 3px solid var(--accent);
+  border-radius: var(--radius);
+  background: var(--accent-grad-soft);
+}
+.post-tldr__label {
+  flex-shrink: 0;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--accent);
+  padding-top: 2px;
+}
+.post-tldr__text { margin: 0; color: var(--text); font-size: 16px; line-height: 1.6; font-weight: 500; }
+
+/* Inline post images */
+.post-figure { margin: 28px 0; }
+.post-figure img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+}
+.post-figure figcaption {
+  margin-top: 8px;
+  font-size: 13px;
+  color: var(--text-muted);
+  text-align: center;
+}
+
+/* Flowchart — connected numbered nodes */
+.flowchart {
+  margin: 28px 0;
+  padding: 22px 24px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  background: var(--bg-card);
+}
+.flowchart__title {
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin-bottom: 18px;
+}
+.flowchart__steps { list-style: none; margin: 0; padding: 0; }
+.flowchart__step {
+  position: relative;
+  display: flex;
+  gap: 16px;
+  padding-bottom: 22px;
+}
+.flowchart__step:last-child { padding-bottom: 0; }
+/* connector line between nodes */
+.flowchart__step:not(:last-child)::before {
+  content: '';
+  position: absolute;
+  left: 15px;
+  top: 34px;
+  bottom: 0;
+  width: 2px;
+  background: linear-gradient(var(--accent), color-mix(in srgb, var(--accent) 20%, transparent));
+}
+.flowchart__badge {
+  position: relative;
+  z-index: 1;
+  flex-shrink: 0;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  font-weight: 700;
+  color: #fff;
+  background: var(--accent-grad);
+  box-shadow: 0 0 0 4px var(--bg-card);
+}
+.flowchart__body { display: flex; flex-direction: column; gap: 3px; padding-top: 4px; }
+.flowchart__step-title { font-size: 15px; font-weight: 600; color: var(--text); letter-spacing: -0.01em; }
+.flowchart__step-detail { font-size: 14px; color: var(--text-dim); line-height: 1.55; }
+
+/* FAQ / People-also-ask accordion */
+.faq { margin: 40px 0 0; }
+.faq__title { font-size: 22px; font-weight: 700; letter-spacing: -0.02em; margin: 0 0 16px; }
+.faq__list { display: flex; flex-direction: column; gap: 10px; }
+.faq__item {
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--bg-card);
+  overflow: hidden;
+}
+.faq__item[open] { border-color: color-mix(in srgb, var(--accent) 35%, var(--border)); }
+.faq__q {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  cursor: pointer;
+  padding: 15px 18px;
+  font-size: 15.5px;
+  font-weight: 600;
+  color: var(--text);
+  list-style: none;
+}
+.faq__q::-webkit-details-marker { display: none; }
+.faq__chev { color: var(--accent); font-size: 20px; font-weight: 400; transition: transform var(--transition); flex-shrink: 0; }
+.faq__item[open] .faq__chev { transform: rotate(45deg); }
+.faq__a { padding: 0 18px 16px; }
+.faq__a p { margin: 0; color: var(--text-dim); line-height: 1.65; font-size: 15px; }
+
+/* Comparison table */
+.cmp-table-wrap { margin: 28px 0; overflow-x: auto; }
+.cmp-table { width: 100%; border-collapse: collapse; font-size: 14.5px; }
+.cmp-table caption { caption-side: top; text-align: left; font-size: 13px; color: var(--text-muted); margin-bottom: 10px; }
+.cmp-table th, .cmp-table td {
+  text-align: left;
+  padding: 11px 14px;
+  border-bottom: 1px solid var(--border);
+  vertical-align: top;
+}
+.cmp-table thead th {
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--text-muted);
+  border-bottom: 1px solid var(--border-strong);
+}
+.cmp-table tbody th[scope="row"] { font-weight: 600; color: var(--text); }
+.cmp-table tbody td { color: var(--text-dim); }
+.cmp-table tbody tr:hover { background: var(--bg-card); }
+
+/* People also search for — internal-link chips */
+.pasf { margin: 40px 0 0; }
+.pasf__title { font-size: 15px; font-weight: 600; color: var(--text-muted); margin: 0 0 12px; }
+.pasf__chips { display: flex; flex-wrap: wrap; gap: 10px; list-style: none; padding: 0; margin: 0; }
+.pasf__chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 14px;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  background: var(--bg-card);
+  color: var(--text-dim);
+  font-size: 13.5px;
+  text-decoration: none;
+  transition: border-color var(--transition), color var(--transition);
+}
+.pasf__chip:hover { border-color: color-mix(in srgb, var(--accent) 45%, var(--border)); color: var(--text); }
+.pasf__chip::before { content: '🔎'; font-size: 12px; }

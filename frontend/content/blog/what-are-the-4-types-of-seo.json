@@ -1,0 +1,138 @@
+{
+  "slug": "what-are-the-4-types-of-seo",
+  "title": "What Are the 4 Types of SEO? (With Examples, 2026)",
+  "date": "2026-06-08",
+  "updatedAt": "2026-06-08",
+  "tag": "SEO",
+  "cluster": "seo-basics",
+  "keyword": "4 types of SEO",
+  "secondaryKeywords": ["on-page vs off-page SEO", "technical SEO examples", "local SEO basics", "types of SEO explained"],
+  "readTime": 9,
+  "excerpt": "On-page, off-page, technical, and local SEO explained with concrete tasks for each, plus the fifth type emerging in 2026.",
+  "description": "The 4 types of SEO are on-page, off-page, technical, and local. Learn what each one does, see example tasks, and meet the emerging fifth type: GEO/AEO.",
+  "tldr": "The 4 types of SEO are on-page (content and HTML you control), off-page (backlinks and reputation), technical (crawlability, speed, and structured data), and local (Google Business Profile and map-pack visibility). A fast-growing fifth type, GEO/AEO, optimizes to be cited by AI engines like Perplexity and Google AI Overviews.",
+  "status": "published",
+  "sections": [
+    {
+      "heading": "The 4 types of SEO at a glance",
+      "body": [
+        "The **4 types of SEO** are on-page SEO, off-page SEO, technical SEO, and local SEO. On-page SEO covers the content and HTML elements you directly control on a page. Off-page SEO covers everything that happens away from your site, mostly backlinks and brand reputation. Technical SEO makes sure search engines can crawl, render, and index your pages quickly. Local SEO optimizes for searches with geographic intent, such as \"plumber near me,\" by managing your Google Business Profile and map-pack presence.",
+        "Most teams treat these four as separate workstreams because each needs different skills and tools, but they reinforce each other. A page with excellent on-page content (type one) still loses if the site is too slow to index (a technical problem, type three) or has no links pointing to it (an off-page gap, type two). For a local business, all three feed into the fourth: a fast, well-written, well-linked page is what powers a strong local presence.",
+        "In 2026 a fifth type is rising fast, generative engine optimization (GEO), also called answer engine optimization (AEO). GEO optimizes content to be cited inside AI-generated answers from engines like ChatGPT, Perplexity, and Google AI Overviews. The four classic types are still the foundation, so we cover them first and then explain where GEO fits."
+      ]
+    },
+    {
+      "heading": "Type 1: On-page SEO (content and HTML you control)",
+      "body": [
+        "On-page SEO is the practice of optimizing the content and HTML of an individual page so it matches what searchers want and what engines can parse. On-page SEO is the type you have the most direct control over, because every element lives inside your own pages rather than depending on other sites or infrastructure.",
+        "Concrete on-page tasks include:",
+        "- Writing content that matches the searcher's intent for the target keyword, with genuine depth rather than thin filler.\n- Setting a unique, descriptive [title tag](/check/metadata.title.missing) and a compelling [meta description](/check/metadata.description.missing) for every page.\n- Using one clear `<h1>` and a logical heading hierarchy (`<h2>`, `<h3>`) that maps to subtopics.\n- Adding descriptive `alt` text to images and using internal links with meaningful anchor text.\n- Placing the answer to the page's main question high on the page, in plain language.",
+        "Example: a bakery's page targeting \"gluten-free sourdough recipe\" earns on-page wins by leading with the recipe summary, using a keyword-aligned title and H1, structuring the steps with subheadings, and linking internally to a related \"how to feed a sourdough starter\" post. None of that depends on another website, which is what makes on-page the most actionable place to start. Our [SEO for beginners guide](/blog/how-to-seo-for-beginners) walks through these basics step by step."
+      ]
+    },
+    {
+      "heading": "Type 2: Off-page SEO (links and reputation)",
+      "body": [
+        "Off-page SEO is the practice of building your site's authority and reputation through signals that originate outside your own pages. The dominant off-page signal is the backlink: a link from another website that acts as a vote of confidence, and the quality and relevance of the linking site matters far more than the raw count.",
+        "Concrete off-page tasks include:",
+        "- Earning editorial backlinks by publishing original research, tools, or data that others want to cite.\n- Digital PR and guest contributions on relevant, reputable publications in your industry.\n- Building unlinked brand mentions into linked ones, and cleaning up toxic or spammy links.\n- Getting listed in legitimate industry directories and being mentioned in roundups and podcasts.",
+        "Example: a B2B software company publishes an annual benchmark report; dozens of journalists and bloggers link to it as the source statistic, and each of those links passes authority to the domain. Off-page SEO is the slowest and least controllable of the four types because you cannot force another site to link to you, which is exactly why earned links carry so much weight with search engines."
+      ]
+    },
+    {
+      "heading": "Type 3: Technical SEO (crawl, render, index, speed)",
+      "body": [
+        "Technical SEO is the practice of making sure search engines can crawl, render, index, and understand your site without obstacles. Technical SEO does not change what your content says; it makes sure that content is reachable and structured so engines can use it.",
+        "Concrete technical tasks include:",
+        "- Maintaining a clean `robots.txt` and an accurate XML sitemap so crawlers know what to fetch.\n- Improving page speed and Core Web Vitals (loading, interactivity, layout stability).\n- Ensuring mobile responsiveness, HTTPS, and crawlable JavaScript rendering.\n- Adding valid [JSON-LD structured data](/blog/json-ld-required-fields) so engines understand entities like articles, products, and FAQs.\n- Fixing duplicate content with canonical tags and resolving broken links and redirect chains.",
+        "Is technical SEO hard? It is more specialized than on-page work but most common issues are diagnosable with free tools and fixable without deep engineering. Example: an e-commerce site discovers via a crawl that 4,000 product pages return a slow time-to-first-byte and lack structured data; fixing the server response and adding `Product` JSON-LD lets those pages index faster and qualify for rich results. You can surface many technical issues in one pass by [running a free SEO + GEO audit](/) on any URL."
+      ]
+    },
+    {
+      "heading": "Type 4: Local SEO (maps, GBP, and 'near me')",
+      "body": [
+        "Local SEO is the practice of optimizing a business to appear in geographically relevant searches, especially the map pack and \"near me\" queries. Local SEO matters most for businesses with a physical location or a defined service area, such as restaurants, clinics, law firms, and tradespeople.",
+        "Concrete local tasks include:",
+        "- Claiming and fully completing your Google Business Profile (hours, category, photos, services).\n- Keeping your name, address, and phone number (NAP) consistent across the web.\n- Earning and responding to customer reviews, which influence both ranking and conversion.\n- Building local citations in directories and creating location-specific landing pages.",
+        "Example: a dentist in Austin completes their Google Business Profile, gathers 40 genuine reviews, and publishes an \"Austin teeth whitening\" page; they begin appearing in the local three-pack for nearby searchers. Local SEO sits on top of the other three types, since a fast, well-written, well-linked site is what makes a local listing competitive in the first place."
+      ]
+    },
+    {
+      "heading": "How the types fit together (and the emerging fifth)",
+      "body": [
+        "The four types of SEO are layers of one system, not competing strategies. Technical SEO gets your pages indexable, on-page SEO makes them relevant, off-page SEO makes them authoritative, and local SEO points that authority at a geographic audience when relevant. The flow below shows a sensible order to work through them.",
+        "[[flowchart]]",
+        "The comparison table lines up all four (plus the emerging type) by focus and example tasks, so you can see at a glance which work belongs where.",
+        "[[table]]",
+        "The emerging fifth type is generative engine optimization (GEO), sometimes called answer engine optimization (AEO). GEO optimizes content to be selected and quoted by AI engines rather than ranked in blue links. The moves include leading with a [direct answer](/check/geo.directAnswer.missing), writing passages that pass the [Island Test](/blog/island-test-geo), confirming AI crawlers are not [blocked in robots.txt](/check/geo.aibots.blocked), and publishing an [llms.txt file](/blog/llms-txt-explained). For the full picture, see [GEO vs SEO](/blog/geo-vs-seo) and our [guide to generative engine optimization](/blog/what-is-generative-engine-optimization).",
+        "> You do not pick one of the four types. You build technical and on-page foundations, layer off-page authority and local presence where they apply, then add a GEO finishing pass so AI engines cite you too."
+      ]
+    }
+  ],
+  "flowchart": {
+    "title": "How to work through the types of SEO in order",
+    "steps": [
+      { "title": "Start with technical SEO", "detail": "Make sure engines can crawl, render, and index your pages, and that they load fast." },
+      { "title": "Optimize on-page SEO", "detail": "Match search intent with strong content, titles, headings, and internal links." },
+      { "title": "Build off-page SEO", "detail": "Earn relevant backlinks and grow brand mentions to raise domain authority." },
+      { "title": "Add local SEO if relevant", "detail": "Complete your Google Business Profile, keep NAP consistent, and gather reviews." },
+      { "title": "Layer GEO/AEO on top", "detail": "Add direct answers, Island-Test passages, and AI-crawler access to earn AI citations." },
+      { "title": "Measure and iterate", "detail": "Track rankings, links, local visibility, and AI citations, then fix the weakest layer." }
+    ]
+  },
+  "comparisonTable": {
+    "caption": "The 4 types of SEO (plus the emerging fifth) by focus and example tasks",
+    "headers": ["Type", "Focus", "Example tasks"],
+    "rows": [
+      ["On-page SEO", "Content and HTML you control on each page", "Intent-matched content, title tags, meta descriptions, heading structure, internal links"],
+      ["Off-page SEO", "Authority and reputation earned away from your site", "Editorial backlinks, digital PR, brand mentions, directory listings"],
+      ["Technical SEO", "Crawlability, rendering, indexing, and speed", "robots.txt, XML sitemap, Core Web Vitals, HTTPS, JSON-LD structured data"],
+      ["Local SEO", "Geographic and 'near me' search visibility", "Google Business Profile, NAP consistency, reviews, local landing pages"],
+      ["GEO / AEO (emerging)", "Being cited inside AI-generated answers", "Direct answers, Island-Test passages, AI-crawler access, llms.txt"]
+    ]
+  },
+  "peopleAlsoAsk": [
+    {
+      "q": "What is on-page vs off-page SEO?",
+      "a": "On-page SEO optimizes the content and HTML that live on your own pages, such as the body copy, title tags, headings, and internal links, all of which you control directly. Off-page SEO builds authority through signals that originate elsewhere, primarily backlinks and brand mentions from other websites. The simplest distinction is that on-page is what you publish, while off-page is what others say and link to about you."
+    },
+    {
+      "q": "Is technical SEO hard?",
+      "a": "Technical SEO is more specialized than on-page work, but most common problems are diagnosable and fixable without deep engineering. Issues like a misconfigured robots.txt, slow page speed, missing structured data, or duplicate content can be found with free audit tools and corrected with focused changes. The harder territory, such as JavaScript rendering and large-scale crawl-budget tuning, usually only matters for very big or complex sites."
+    },
+    {
+      "q": "What is local SEO?",
+      "a": "Local SEO is the practice of optimizing a business to appear in geographically relevant searches, especially Google's map pack and 'near me' queries. The core tasks are claiming and completing a Google Business Profile, keeping the business name, address, and phone number consistent everywhere, and earning genuine customer reviews. Local SEO matters most for businesses with a physical location or a defined service area, like restaurants, clinics, and tradespeople."
+    },
+    {
+      "q": "How many types of SEO are there really?",
+      "a": "There are four core types of SEO that nearly everyone agrees on: on-page, off-page, technical, and local. Some practitioners split these further into subcategories like content SEO, mobile SEO, or international SEO, and in 2026 a fifth type, GEO or answer engine optimization, is widely recognized for AI-driven search. The four-type model remains the standard foundation, with GEO layered on top for AI visibility."
+    },
+    {
+      "q": "Which type of SEO should I start with?",
+      "a": "Most sites should start with technical SEO so search engines can actually crawl and index the pages, followed by on-page SEO to match search intent. Off-page link building and local SEO come next, since they amplify pages that are already technically sound and relevant. Starting with backlinks before fixing crawlability or content is a common mistake that wastes effort on pages engines cannot properly use."
+    }
+  ],
+  "faqs": [
+    {
+      "q": "Is GEO a fifth type of SEO or something separate?",
+      "a": "GEO (generative engine optimization) is best understood as an emerging fifth type of search optimization that builds on the classic four rather than replacing them. GEO targets citations inside AI answers from engines like Perplexity and Google AI Overviews, while the four classic types still earn rankings and feed the index those engines draw from. In practice you do classic SEO first and add a GEO finishing pass on the same content."
+    },
+    {
+      "q": "Do small businesses need all four types of SEO?",
+      "a": "Small businesses benefit from all four types, but the priority depends on the business model. A local service business should weight technical, on-page, and local SEO heavily, since map-pack visibility drives the most leads. A purely online business can skip dedicated local SEO and focus on technical, on-page, and off-page work instead."
+    },
+    {
+      "q": "Can one tool check all the types of SEO?",
+      "a": "One audit pass can surface issues across several types at once, including on-page and technical problems plus the newer GEO checks. Running a free SEO + GEO audit on a URL flags missing titles and descriptions, structured-data gaps, blocked AI crawlers, and weak direct answers in a single report. Off-page link analysis and local listing audits typically need their own specialized tools."
+    }
+  ],
+  "relatedKeywords": ["on-page SEO examples", "off-page SEO techniques", "technical SEO checklist", "local SEO tips", "GEO vs SEO", "answer engine optimization"],
+  "internalLinks": [
+    { "href": "/", "anchor": "Run a free SEO + GEO audit" },
+    { "href": "/blog/how-to-seo-for-beginners", "anchor": "SEO for beginners: a step-by-step guide" },
+    { "href": "/blog/geo-vs-seo", "anchor": "GEO vs SEO: what's the difference?" },
+    { "href": "/check/metadata.title.missing", "anchor": "Check your title tags" },
+    { "href": "/check", "anchor": "All 40+ SEO and GEO checks" }
+  ]
+}

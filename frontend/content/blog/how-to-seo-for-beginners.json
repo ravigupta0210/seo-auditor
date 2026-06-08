@@ -1,0 +1,139 @@
+{
+  "slug": "how-to-seo-for-beginners",
+  "title": "How to SEO for Beginners: A Step-by-Step 2026 Guide",
+  "date": "2026-06-08",
+  "updatedAt": "2026-06-08",
+  "tag": "SEO",
+  "cluster": "seo-basics",
+  "keyword": "how to SEO for beginners",
+  "secondaryKeywords": ["SEO for beginners step by step", "learn SEO basics", "beginner SEO guide 2026", "how to start SEO"],
+  "readTime": 9,
+  "excerpt": "A no-fluff beginner roadmap: keywords, on-page, technical basics, content, links, and the new GEO layer.",
+  "description": "How to SEO for beginners in 2026: a six-step roadmap covering keywords, on-page, technical basics, content, links, measurement, plus the new GEO layer.",
+  "tldr": "To learn how to SEO for beginners, work through six steps in order: keyword research, on-page optimization, technical basics, helpful content, links, and measurement in Google Search Console. Add one new layer in 2026, GEO, so AI engines like Perplexity and Google AI Overviews can cite you. You can do every step without writing code.",
+  "status": "published",
+  "sections": [
+    {
+      "heading": "How to SEO for beginners: the short answer",
+      "body": [
+        "If you are learning **how to SEO for beginners**, it comes down to six steps done in order: research the keywords your audience actually types, optimize each page on-page (title, headings, content), fix the technical basics so search engines can crawl and index you, publish genuinely helpful content, earn a few quality links, and measure results in Google Search Console. None of these steps require code, and you can start the first one today with a free tool and a spreadsheet.",
+        "SEO (search engine optimization) is the practice of making your website easier for search engines to understand and more likely to rank for the searches your audience makes. The goal is free, recurring traffic from people already looking for what you offer, which compounds over time instead of stopping the moment you stop paying, the way ads do.",
+        "There is one new thing beginners in 2026 must add: GEO (generative engine optimization), the layer that gets you cited inside AI answers from ChatGPT, Perplexity, and Google AI Overviews. The rest of this guide walks the six classic steps and shows where GEO fits, because the same content can both rank in Google and get quoted by an AI engine if you build it right."
+      ]
+    },
+    {
+      "heading": "The 6-step beginner roadmap",
+      "body": [
+        "The beginner roadmap is a fixed sequence because each step depends on the one before it. There is no point chasing links to a page that search engines cannot crawl, and no point optimizing a page for a keyword nobody searches. Work top to bottom, and revisit the whole loop every few months.",
+        "[[flowchart]]",
+        "The single most important rule for a beginner: do the steps in order and do not skip the boring ones. Technical basics and measurement feel less exciting than writing content, but a fast, crawlable site you actually track will out-rank a beautiful site Google cannot index.",
+        "> Most beginner SEO failures are not bad content. They are good content on a page that was never indexed, never measured, or built around a keyword nobody searches."
+      ]
+    },
+    {
+      "heading": "Steps 1-3: keywords, on-page, and technical basics",
+      "body": [
+        "Keyword research is step one because it decides what every other step aims at. Open a free keyword tool (Google Keyword Planner, or just Google's own autocomplete and \"People also ask\" boxes) and list the phrases your audience types when they have the problem you solve. Favor specific, lower-competition phrases over broad head terms: a new site ranks far faster for \"how to clean a cast iron skillet\" than for \"cooking.\" Note the *intent* behind each phrase, whether the searcher wants to learn, compare, or buy, because that dictates the kind of page you build.",
+        "On-page optimization, step two, is where you map one keyword to one page and make that match obvious. Put the keyword in the [page title tag](/check/metadata.title.missing), the main `<h1>` heading, and the first paragraph. Write a compelling [meta description](/check/metadata.description.missing) (it does not affect rankings directly but drives clicks), use descriptive subheadings, and add internal links to related pages on your own site. Keep the writing for humans first; stuffing the keyword fifty times hurts more than it helps in 2026.",
+        "Technical basics, step three, make sure search engines can actually reach and read your work. The non-negotiables for beginners are short: load reasonably fast on mobile, use HTTPS, keep a `robots.txt` that does not accidentally block important pages, submit an XML sitemap in Google Search Console, and avoid duplicate or thin pages. You do not need to code any of this on most platforms like WordPress, Shopify, or Webflow, where these are toggles and built-in features. For how these fundamentals fit together, see [what is SEO and how it works](/blog/what-is-seo-and-how-it-works) and the [5 pillars of SEO](/blog/what-are-the-5-pillars-of-seo)."
+      ]
+    },
+    {
+      "heading": "Steps 4-6: content, links, and measurement",
+      "body": [
+        "Helpful content, step four, is the part that actually wins rankings in 2026. Google's systems reward content written to help a person, demonstrating real experience, over content written to game a keyword. For each target phrase, build the most genuinely useful page on that topic: answer the question directly in the first lines, cover the follow-up questions a reader would have, and add specifics (numbers, examples, screenshots) that prove you know the subject. This is also where E-E-A-T (experience, expertise, authoritativeness, trust) matters; a named, credible [author byline](/check/geo.eeat.author.missing) helps both Google and AI engines trust the page.",
+        "Links, step five, are the trickiest part for beginners and the easiest to overdo. Backlinks (links from other sites to yours) remain a real ranking signal, but you cannot fake good ones. Skip link-buying schemes, which risk penalties, and earn links the slow way: publish something worth citing, collaborate with others in your niche, list your business in legitimate directories, and get internal links right so authority flows between your own related pages. For a brand-new site, getting indexed and producing strong content beats chasing links.",
+        "Measurement, step six, closes the loop, and skipping it is the most common beginner mistake. Install free [Google Search Console](https://search.google.com/search-console) and Google Analytics, then check monthly: which queries show your pages, your average position, click-through rate, and which pages are indexed versus excluded. Search Console tells you what is working so you can do more of it and what is broken so you can fix it. Without measurement you are guessing, and guessing rarely improves rankings."
+      ]
+    },
+    {
+      "heading": "The new layer in 2026: add GEO",
+      "body": [
+        "GEO is the beginner-relevant layer that the classic six steps do not cover, and in 2026 you should build it in from the start rather than bolting it on later. Generative engine optimization is the practice of structuring content so AI engines (ChatGPT, Perplexity, Google AI Overviews, Bing Copilot) will quote it as a source inside their answers. A growing share of searches now end inside an AI answer where the user never scrolls to the blue links, so being the cited source matters as much as ranking.",
+        "The good news for beginners is that GEO is not a separate content library; it is a finishing pass on the same helpful pages you already write. The core GEO moves are simple: lead with a direct answer in the first sentence, pass the Island Test (write every key sentence so it makes sense out of context, naming its subject instead of saying \"this\" or \"it\"), use a named author, and make sure AI crawlers can reach your site. That last one is easy to get wrong: if your `robots.txt` [blocks AI crawlers](/check/geo.aibots.blocked) like GPTBot or PerplexityBot, you are invisible to those engines no matter how good the writing is.",
+        "Beginners weighing classic SEO against GEO should not pick one. The two reinforce each other, and the comparison below shows how the same six-step base supports both. For the full breakdown, read [GEO vs SEO](/blog/geo-vs-seo) and the [guide to generative engine optimization](/blog/what-is-generative-engine-optimization).",
+        "[[table]]",
+        "The practical takeaway: a beginner who writes one clear, helpful, well-structured page can rank in Google *and* get cited by Perplexity. You are making one page legible to both the engines that rank and the engines that quote."
+      ]
+    },
+    {
+      "heading": "Your first week of SEO (and how to check your work)",
+      "body": [
+        "Your realistic first week as a beginner is not \"learn everything\"; it is a short checklist that gets the foundation right. Spend it like this:",
+        "- **Day 1-2:** Pick one page and one specific keyword. Set the title tag, `<h1>`, and first paragraph to match it.\n- **Day 3:** Connect Google Search Console, submit your sitemap, and confirm your key pages are indexed.\n- **Day 4-5:** Rewrite the page so it answers the question in the first sentence and covers the obvious follow-ups.\n- **Day 6:** Add a named author byline and internal links to two related pages.\n- **Day 7:** Run a free audit to catch what you missed, then fix the flagged issues.",
+        "You do not need expensive software to check your work as a beginner. [Run a free SEO + GEO audit](/) on any URL and it flags the classic SEO gaps (missing title tags, weak meta descriptions, technical issues) and the new GEO gaps (no [direct answer](/check/geo.directAnswer.missing), [weak Island-Test passages](/check/geo.islandTest.weak), blocked AI crawlers, missing llms.txt) in one pass. Browse the [full list of 40+ checks](/check) to see everything it inspects.",
+        "Be patient with results. SEO is a compounding game, not an instant one: most new pages take weeks to months to settle into a stable position, while GEO citations can appear within days for a well-structured page. Do the six steps in order, add the GEO layer, measure monthly, and keep improving the pages that show promise."
+      ]
+    }
+  ],
+  "flowchart": {
+    "title": "The beginner SEO roadmap (do these in order)",
+    "steps": [
+      { "title": "1. Keyword research", "detail": "List the specific phrases your audience searches, and note whether they want to learn, compare, or buy." },
+      { "title": "2. On-page optimization", "detail": "Map one keyword per page into the title, the H1, and the first paragraph." },
+      { "title": "3. Technical basics", "detail": "Ensure the site is fast on mobile, uses HTTPS, is crawlable, and has a submitted sitemap." },
+      { "title": "4. Helpful content", "detail": "Write the most genuinely useful page on the topic, answering the question directly up top." },
+      { "title": "5. Earn links", "detail": "Link your own pages internally and earn a few quality backlinks the slow, legitimate way." },
+      { "title": "6. Measure + add GEO", "detail": "Track results in Search Console, then add a GEO finishing pass so AI engines can cite you." }
+    ]
+  },
+  "comparisonTable": {
+    "caption": "Classic SEO vs the GEO layer for beginners",
+    "headers": ["Aspect", "Classic SEO", "GEO (new layer)"],
+    "rows": [
+      ["Goal", "Rank in Google's blue-link results so users click through", "Get cited as a source inside an AI answer"],
+      ["What you tune", "Keywords, title tags, links, site speed, crawlability", "Direct answers, Island-Test passages, named author, AI-crawler access"],
+      ["How you measure", "Position, clicks, and impressions in Google Search Console", "Prompt monitoring and referral traffic from AI engines"],
+      ["How long it takes", "Weeks to months, but durable once earned", "Days to weeks, but citations can shift between prompts"],
+      ["Coding needed", "No, platform settings cover the basics", "No, it is a writing-and-structure pass on existing pages"]
+    ]
+  },
+  "peopleAlsoAsk": [
+    {
+      "q": "How do I start SEO as a beginner?",
+      "a": "Start SEO as a beginner by picking one page and one specific keyword your audience actually searches, then setting that keyword in the page title, the H1 heading, and the first paragraph. Next, connect free Google Search Console, submit your sitemap, and confirm the page is indexed. From there, work through the six-step roadmap in order: keywords, on-page, technical basics, content, links, and measurement."
+    },
+    {
+      "q": "How long does SEO take to work?",
+      "a": "SEO typically takes weeks to months to show results for a new page, because search engines need time to crawl, index, and trust your content as it gathers links and engagement signals. Competitive head terms can take longer, while specific, low-competition phrases can rank faster. GEO is the exception: a well-structured page can get cited by AI engines like Perplexity within days, even before it ranks in classic search."
+    },
+    {
+      "q": "Do I need to code to do SEO?",
+      "a": "No, you do not need to code to do SEO as a beginner. On common platforms like WordPress, Shopify, Squarespace, and Webflow, the technical basics (HTTPS, sitemaps, page titles, meta descriptions) are built-in settings or simple toggles rather than code. The work that actually drives rankings, keyword research and writing genuinely helpful content, requires no programming at all."
+    },
+    {
+      "q": "What is the first SEO step?",
+      "a": "The first SEO step is keyword research: identifying the specific phrases your audience types into search when they have the problem you solve. This step comes first because it decides what every later step aims at, from which pages you build to how you write them. Beginners should favor specific, lower-competition phrases over broad head terms and note the intent (learn, compare, or buy) behind each one."
+    },
+    {
+      "q": "Is SEO still worth it in 2026?",
+      "a": "SEO is still worth it in 2026 because classic search remains the largest discovery channel for most sites and feeds the index that AI engines draw their citations from. What has changed is that beginners now add a GEO layer on top, structuring content so AI engines like ChatGPT and Google AI Overviews will cite it. The same content can both rank in Google and get quoted in an AI answer, so the work compounds across two channels."
+    },
+    {
+      "q": "How much does beginner SEO cost?",
+      "a": "Beginner SEO can cost nothing but your time, because the essential tools are free: Google Search Console, Google Analytics, Google's autocomplete for keyword ideas, and free audit tools to check your work. Paid software helps at scale but is not required to learn or to rank a small site. The real investment for a beginner is consistent effort writing helpful content and measuring results, not a software budget."
+    }
+  ],
+  "faqs": [
+    {
+      "q": "Should a beginner learn SEO or hire someone?",
+      "a": "A beginner running a small site or blog should learn the basics first, because the six-step roadmap is approachable and learning it makes you a far better client if you ever hire help. Doing the keyword research, on-page setup, and measurement yourself costs only time and teaches you what good work looks like. Hiring makes sense once SEO becomes a meaningful revenue channel and the workload outgrows what you can do alone."
+    },
+    {
+      "q": "What are the most common beginner SEO mistakes?",
+      "a": "The most common beginner SEO mistakes are skipping the boring steps: publishing good content on a page that was never indexed, never measuring results in Search Console, and targeting broad keywords nobody specific is searching. Two others are keyword-stuffing (which hurts in 2026) and chasing low-quality backlinks that risk penalties. Doing the six steps in order and tracking results monthly avoids almost all of them."
+    },
+    {
+      "q": "Do beginners need to worry about GEO yet?",
+      "a": "Yes, beginners should build GEO in from the start in 2026 rather than treating it as advanced or optional. A growing share of searches now end inside an AI answer where the user never clicks a blue link, so being the cited source matters. The GEO moves are beginner-friendly: lead with a direct answer, write standalone sentences, add a named author, and make sure your robots.txt does not block AI crawlers."
+    }
+  ],
+  "relatedKeywords": ["SEO basics for beginners", "how to start SEO", "learn SEO step by step", "beginner SEO checklist", "what is SEO", "free SEO tools"],
+  "internalLinks": [
+    { "href": "/", "anchor": "Run a free SEO + GEO audit" },
+    { "href": "/blog/what-is-seo-and-how-it-works", "anchor": "What is SEO and how it works" },
+    { "href": "/blog/what-are-the-5-pillars-of-seo", "anchor": "The 5 pillars of SEO" },
+    { "href": "/blog/geo-vs-seo", "anchor": "GEO vs SEO explained" },
+    { "href": "/check", "anchor": "All 40+ SEO and GEO checks" }
+  ]
+}

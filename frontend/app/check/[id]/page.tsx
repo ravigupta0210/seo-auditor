@@ -4,6 +4,9 @@ import { notFound } from 'next/navigation';
 import { CHECKS_CATALOG, findCheck } from '@/lib/checks-catalog';
 import { SiteHeader } from '@/app/_components/SiteHeader';
 import { SiteFooter } from '@/app/_components/SiteFooter';
+import { JsonLd } from '@/app/_components/JsonLd';
+import { pageMetadata } from '@/lib/seo';
+import { techArticle, breadcrumbList } from '@/lib/schema';
 
 interface PageProps {
   params: Promise<{ id: string }>;
@@ -17,11 +20,12 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   const { id } = await params;
   const check = findCheck(decodeURIComponent(id));
   if (!check) return { title: 'Check not found', robots: { index: false } };
-  return {
+  return pageMetadata({
     title: `${check.title} — what it means and how to fix it`,
     description: check.summary,
-    openGraph: { title: check.title, description: check.summary, type: 'article' },
-  };
+    path: `/check/${encodeURIComponent(check.id)}`,
+    type: 'article',
+  });
 }
 
 export default async function CheckPage({ params }: PageProps) {
@@ -31,19 +35,20 @@ export default async function CheckPage({ params }: PageProps) {
 
   const related = CHECKS_CATALOG.filter((c) => c.category === check.category && c.id !== check.id).slice(0, 4);
 
-  const jsonLd = {
-    '@context': 'https://schema.org',
-    '@type': 'TechArticle',
-    headline: check.title,
-    description: check.summary,
-    author: { '@type': 'Organization', name: 'SEO Auditor' },
-  };
+  const ld = [
+    techArticle({ title: check.title, description: check.summary, path: `/check/${encodeURIComponent(check.id)}` }),
+    breadcrumbList([
+      { name: 'Home', path: '/' },
+      { name: 'Checks', path: '/check' },
+      { name: check.title, path: `/check/${encodeURIComponent(check.id)}` },
+    ]),
+  ];
 
   return (
     <>
       <SiteHeader />
       <main style={{ maxWidth: 720, margin: '0 auto', padding: '32px 24px 60px' }}>
-        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
+        <JsonLd data={ld} />
         <Link href="/check" style={{ fontSize: 13, color: 'var(--text-muted)' }}>← All checks</Link>
         <p style={{ fontSize: 11, color: 'var(--accent)', textTransform: 'uppercase', letterSpacing: '0.12em', margin: '20px 0 8px', fontWeight: 600 }}>
           {check.category} · {check.id}

@@ -3,6 +3,9 @@ import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import { SiteHeader } from '@/app/_components/SiteHeader';
 import { SiteFooter } from '@/app/_components/SiteFooter';
+import { JsonLd } from '@/app/_components/JsonLd';
+import { pageMetadata } from '@/lib/seo';
+import { breadcrumbList, faqPage } from '@/lib/schema';
 
 interface PricingPlan {
   name: string;
@@ -291,17 +294,14 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   const { slug } = await params;
   const c = COMPARISONS[slug];
   if (!c) return { title: 'Not found', robots: { index: false } };
-  return {
+  return pageMetadata({
     title: `SEO Auditor vs. ${c.tool} — pricing, features, honest comparison`,
     description:
       `Side-by-side comparison of SEO Auditor and ${c.tool}: pricing breakdown, feature matrix, ` +
       `where each wins, and honest recommendations.`,
-    openGraph: {
-      title: `SEO Auditor vs. ${c.tool}`,
-      description: c.intro.slice(0, 160),
-      type: 'article',
-    },
-  };
+    path: `/compare/${slug}`,
+    type: 'article',
+  });
 }
 
 export default async function ComparePage({ params }: PageProps) {
@@ -309,10 +309,20 @@ export default async function ComparePage({ params }: PageProps) {
   const c = COMPARISONS[slug];
   if (!c) notFound();
 
+  const ld: unknown[] = [
+    breadcrumbList([
+      { name: 'Home', path: '/' },
+      { name: 'Compare', path: '/compare' },
+      { name: `vs. ${c.tool}`, path: `/compare/${slug}` },
+    ]),
+  ];
+  if (c.faqs?.length) ld.push(faqPage(c.faqs));
+
   return (
     <>
       <SiteHeader />
       <main className="page-shell page-shell--narrow">
+        <JsonLd data={ld} />
         <p className="page-eyebrow"><Link href="/compare">Comparisons</Link> &middot; {c.tool}</p>
         <h1 className="page-title">SEO Auditor vs. {c.tool}</h1>
         <p className="page-lede">{c.intro}</p>

@@ -1,0 +1,138 @@
+{
+  "slug": "can-chatgpt-do-an-seo-audit",
+  "title": "Can ChatGPT Do an SEO Audit? Limits and a Better Free Option",
+  "date": "2026-06-08",
+  "updatedAt": "2026-06-08",
+  "tag": "AI Search",
+  "cluster": "ai-search",
+  "keyword": "can ChatGPT do an SEO audit",
+  "secondaryKeywords": ["ChatGPT SEO audit limitations", "free SEO audit tool", "AI SEO audit accuracy", "ChatGPT crawl website"],
+  "readTime": 9,
+  "excerpt": "ChatGPT can talk about SEO audits, but it can't fetch your live site, check status codes, or validate JSON-LD.",
+  "description": "Can ChatGPT do an SEO audit? Not a real one — it can't crawl your site, read status codes, or validate JSON-LD. Here are the limits and a free crawler that can.",
+  "tldr": "ChatGPT cannot do a real SEO audit: it cannot reliably crawl your site, read HTTP status codes, or validate JSON-LD against live HTML, and with browsing it fetches only a page or two on demand. A real audit needs a crawler — SEO Auditor runs 40+ checks free.",
+  "status": "published",
+  "sections": [
+    {
+      "heading": "Can ChatGPT do an SEO audit? The short answer",
+      "body": [
+        "Can ChatGPT do an SEO audit? No — not a real one. ChatGPT can explain what an audit should cover and critique HTML you paste in, but it cannot crawl your live website, read your actual HTTP status codes, follow your internal links, render JavaScript reliably, or validate your JSON-LD against the page a search engine truly sees. Even with browsing turned on, ChatGPT fetches one or two URLs on demand — it does not systematically crawl every page, check redirects, or measure anything. The result reads like an audit but is built on guesses.",
+        "An SEO audit is fundamentally a **measurement task**: a tool fetches each URL, records the response code, parses the rendered HTML, checks the structured data, and reports facts about what exists. ChatGPT is a **language model** — it predicts plausible text. When you ask it to \"audit my site,\" it produces a confident, well-formatted checklist that may have nothing to do with your real pages, because it never actually fetched them.",
+        "> The danger isn't that ChatGPT refuses — it's that it answers anyway. Ask \"is my title tag too long?\" without pasting the HTML and it will invent a verdict. A crawler reads the real `<title>` and counts the characters.",
+        "If you want the measurement done correctly right now, you can [run a free SEO + GEO audit](/) and let a real crawler check the status codes, metadata, and schema validity that ChatGPT can only describe in the abstract."
+      ]
+    },
+    {
+      "heading": "What ChatGPT genuinely can do with audits",
+      "body": [
+        "ChatGPT is useful around an SEO audit even though it cannot perform one, and being clear about the boundary keeps you from trusting fabricated findings. The honest framing: ChatGPT explains and drafts, a crawler measures.",
+        "- **Explain what to check.** Ask \"what should a technical SEO audit cover?\" and ChatGPT gives a solid, well-organized checklist — indexability, metadata, status codes, schema, internal links, Core Web Vitals.\n- **Critique HTML you paste in.** Paste a single page's `<head>` and ChatGPT will flag an over-long title or a missing meta description in that snippet. It reviews the text you provide, not your live site.\n- **Interpret a report you already have.** Give it the output from a real crawler and ChatGPT will prioritize the issues and explain each one in plain English.\n- **Draft the fixes.** A rewritten title to a character budget, a starter JSON-LD block, an answer-first opening paragraph — ChatGPT is genuinely fast at producing these.\n- **Translate jargon.** \"What does `noindex` in meta-robots mean and why might it hurt me?\" gets a clear, accurate answer.",
+        "Used this way, ChatGPT is a strong analyst and writer sitting next to your audit. What it cannot be is the auditor itself. For the difference between drafting and measuring across all of SEO, see [Can ChatGPT do SEO?](/blog/can-chatgpt-do-seo)."
+      ]
+    },
+    {
+      "heading": "Why ChatGPT can't run a real audit",
+      "body": [
+        "ChatGPT cannot run a real SEO audit because the core audit operations require live, verifiable access to your pages and the open web — access a language model does not have. Each limit below is structural, not a temporary gap that a better prompt fixes.",
+        "- **It can't crawl your whole site.** A crawler starts at a URL, follows every internal link, and inventories the site. ChatGPT, even with browsing, grabs a page or two on request and stops. It never sees the orphan pages, the broken links three levels deep, or the 200 URLs in your sitemap.\n- **It can't read HTTP status codes.** Knowing a page returns `200`, `301`, `404`, or `500` is foundational to an audit. ChatGPT does not make the request and record the header, so it cannot tell you which URLs are broken or wrongly redirected.\n- **It can't validate JSON-LD on the live page.** ChatGPT can check the shape of schema you paste, but it cannot fetch your live HTML, find the actual `<script type=\"application/ld+json\">` block, and confirm the required fields are present and valid against what search engines and AI answer engines expect.\n- **It can't render JavaScript reliably.** Much of the modern web injects content and metadata via JS. A crawler can render the DOM; ChatGPT's browsing does this inconsistently, so it misjudges what's really in the rendered page.\n- **It can't measure performance or check robots rules at scale.** Core Web Vitals, your live `robots.txt`, whether you [block AI crawlers](/check/geo.aibots.blocked) — these need real requests against your origin, not text prediction.\n- **It hallucinates findings.** Asked to audit without data, ChatGPT fills the gap with plausible invented issues. A fabricated \"your H1 is missing\" verdict is worse than no audit at all.",
+        "[[flowchart]]",
+        "The pattern above is the safe one: let ChatGPT explain and draft, but route every finding that depends on your real pages to a tool that actually fetches them."
+      ]
+    },
+    {
+      "heading": "ChatGPT vs a real SEO audit, check by check",
+      "body": [
+        "The table below maps the standard audit checks to what ChatGPT can attempt versus what a real crawler does. The pattern is consistent: anything requiring a live fetch belongs to the crawler.",
+        "[[table]]",
+        "The \"requires a live fetch\" rows are the entire job of an audit, and they are exactly where ChatGPT has nothing to work with. A crawler behind [all 40+ SEO/GEO checks](/check) makes the request, records the status code, parses the rendered HTML, and validates your structured data on the page Google and AI engines actually see — no pasting, no guessing."
+      ]
+    },
+    {
+      "heading": "A free alternative that actually audits your site",
+      "body": [
+        "The better free option is a real crawler-based auditor: paste your URL, and it fetches the live page, checks the technical and on-page basics, and adds GEO checks for AI search — the work ChatGPT structurally cannot do. SEO Auditor does this free, with no signup, and returns specific, verifiable findings instead of generic advice.",
+        "A real audit checks the things ChatGPT only describes:",
+        "1. **Status & indexability** — the live HTTP code, `robots.txt` rules, and meta-robots directives that decide whether you're even in the index.\n2. **Metadata** — the actual `<title>` and `<meta name=\"description\">`, with real character counts, so you catch a [missing title](/check/metadata.title.missing) or a [missing description](/check/metadata.description.missing).\n3. **Structured data** — your live JSON-LD parsed and validated for required fields, not just shape-checked.\n4. **GEO readiness** — whether AI crawlers can reach you, whether you have an [llms.txt file](/check/geo.llmsTxt.missing), and whether your content passes the [Island Test](/check/geo.islandTest.weak) for AI-citable answers.\n5. **A prioritized fix list** — the issues that matter, ordered, so you fix the high-impact ones first.",
+        "The smart workflow pairs both tools: audit the live page with a crawler, then hand the report to ChatGPT to explain and draft fixes. Run the [free SEO + GEO audit](/) on a real URL, then paste the results into ChatGPT and ask it to rewrite the flagged title or generate the missing schema. You get ground truth from the crawler and fast drafting from the model — each doing the job it's actually good at. New to all this? The [free SEO checklist](/blog/how-to-do-seo-for-free) and the [GEO vs SEO comparison](/blog/geo-vs-seo) cover the wider picture."
+      ]
+    },
+    {
+      "heading": "So, should you ask ChatGPT to audit your site?",
+      "body": [
+        "Do not ask ChatGPT to audit your site as if it were a crawler — ask it to explain audit concepts, critique HTML you paste, and draft fixes for issues a real tool already found. Treating ChatGPT's invented \"audit\" as fact is how teams end up chasing problems that don't exist while missing the broken redirects and invalid schema that do.",
+        "The single rule that keeps you safe: any audit finding about your live site must come from a fetch, not from a prompt. Status codes, indexability, schema validity, metadata length, AI-crawler access — all of these get confirmed by a crawler. ChatGPT then earns its keep by explaining the report and drafting the fixes faster than you could by hand.",
+        "Want to see the gap for yourself? Ask ChatGPT to \"audit\" one of your pages from memory, then [run a free SEO + GEO audit](/) on that same URL. You'll watch the crawler surface real status codes, real metadata counts, and real schema errors that ChatGPT had no way of knowing — and you'll never confuse the two jobs again."
+      ]
+    }
+  ],
+  "flowchart": {
+    "title": "Can ChatGPT audit this for you?",
+    "steps": [
+      { "title": "Does the check need a live fetch?", "detail": "Status codes, crawling, rendered HTML, schema on the page — ChatGPT cannot; use a crawler." },
+      { "title": "Did you paste the actual HTML?", "detail": "ChatGPT can critique a snippet you provide, but only that snippet — not your whole site." },
+      { "title": "Is it explaining or interpreting?", "detail": "ChatGPT explains checks and prioritizes a real report well." },
+      { "title": "Is it drafting a fix?", "detail": "ChatGPT writes titles, descriptions, and starter JSON-LD fast." },
+      { "title": "Audit with a crawler, then draft with ChatGPT", "detail": "Fetch the truth with a tool, then let the model explain and fix it." }
+    ]
+  },
+  "comparisonTable": {
+    "caption": "Audit checks: ChatGPT vs a real crawler",
+    "headers": ["Audit check", "ChatGPT", "Real crawler / auditor"],
+    "rows": [
+      ["Crawl every page on the site", "Cannot — fetches 1-2 on demand", "Yes — follows internal links"],
+      ["Read HTTP status codes (200/301/404)", "Cannot — never makes the request", "Yes — records each response"],
+      ["Find broken links & bad redirects", "Cannot at scale", "Yes"],
+      ["Check title & description length", "Only if you paste the HTML", "Yes — reads live, counts chars"],
+      ["Validate JSON-LD required fields", "Shape-check on pasted text only", "Yes — on the live page"],
+      ["Render JavaScript content", "Unreliable", "Yes — renders the DOM"],
+      ["Check robots.txt & AI-crawler access", "Cannot fetch reliably", "Yes"],
+      ["Measure Core Web Vitals", "Cannot measure your page", "Lighthouse / PageSpeed"],
+      ["Explain a finding in plain English", "Excellent", "Limited"],
+      ["Draft fixes (titles, schema, copy)", "Excellent", "Not its job"]
+    ]
+  },
+  "peopleAlsoAsk": [
+    {
+      "q": "Can ChatGPT crawl a website?",
+      "a": "No, ChatGPT cannot crawl a website the way an SEO tool does. Even with browsing enabled, ChatGPT fetches only one or two URLs on demand and does not follow every internal link, inventory the full site, or reliably render JavaScript. A real crawl starts at a URL, follows links across the whole site, and records each page — work that requires a dedicated crawler, not a language model."
+    },
+    {
+      "q": "Will ChatGPT check my structured data?",
+      "a": "ChatGPT will only check structured data you paste into the chat, and even then it checks the shape, not validity against your live page. It cannot fetch your URL, locate the real JSON-LD block in the rendered HTML, and confirm the required fields are present. To validate structured data on the page search engines actually see, use a crawler or a schema validator that fetches the live page."
+    },
+    {
+      "q": "Is an AI SEO audit accurate?",
+      "a": "An AI SEO audit from a chatbot like ChatGPT is not accurate about your live site, because the model does not fetch your pages and instead predicts plausible findings. It may report a missing H1 or a long title that don't exist, and miss broken links and invalid schema that do. AI-powered audits are only accurate when a real crawler supplies the data and the AI merely explains it."
+    },
+    {
+      "q": "What is a free alternative to a ChatGPT SEO audit?",
+      "a": "A free alternative to a ChatGPT SEO audit is a crawler-based tool that fetches your live page and reports real findings. SEO Auditor is one such free option: paste a URL and it runs 40+ checks for status codes, metadata, JSON-LD validity, and GEO readiness with no signup. Pair it with ChatGPT for explaining the report and drafting fixes."
+    },
+    {
+      "q": "Can ChatGPT check HTTP status codes or broken links?",
+      "a": "No, ChatGPT cannot check HTTP status codes or find broken links across your site. Reading a 200, 301, 404, or 500 response requires making the request and recording the header, which ChatGPT does not do. A crawler makes each request and reports the status, so broken pages and bad redirects must be found with an auditor rather than asked of ChatGPT."
+    }
+  ],
+  "faqs": [
+    {
+      "q": "Why does ChatGPT give me an audit even though it can't crawl my site?",
+      "a": "ChatGPT gives you an audit-shaped answer because it is built to produce plausible text, not to refuse uncertain requests. Without your real page data it fills the gaps with invented findings that look credible. Treat any audit ChatGPT produces from memory as a generic checklist, and confirm every site-specific claim with a tool that actually fetches your pages."
+    },
+    {
+      "q": "Can I paste my page into ChatGPT for a one-page audit?",
+      "a": "You can paste a single page's HTML into ChatGPT for a limited review, and it will flag obvious issues in that snippet like a long title or missing description. It still cannot tell you the page's live status code, whether JavaScript injects different content, or how it renders for a crawler. For a reliable one-page audit, fetch the live URL with a crawler and use ChatGPT to interpret the results."
+    },
+    {
+      "q": "Should I use ChatGPT or a free SEO auditor?",
+      "a": "Use both, but for different jobs: a free SEO auditor crawls your live page and reports verifiable facts, while ChatGPT explains those findings and drafts fixes. Relying on ChatGPT alone risks acting on invented issues, and relying on a crawler alone leaves you without help interpreting the report. The strongest workflow audits with the crawler first, then drafts with ChatGPT."
+    }
+  ],
+  "relatedKeywords": ["free SEO audit tool", "ChatGPT SEO audit", "AI SEO audit", "ChatGPT crawl website", "ChatGPT check structured data", "ChatGPT vs SEO tool"],
+  "internalLinks": [
+    { "href": "/", "anchor": "Run a free SEO + GEO audit" },
+    { "href": "/check", "anchor": "All 40+ SEO & GEO checks" },
+    { "href": "/blog/can-chatgpt-do-seo", "anchor": "Can ChatGPT do SEO?" },
+    { "href": "/blog/what-is-generative-engine-optimization", "anchor": "What is Generative Engine Optimization?" },
+    { "href": "/check/geo.aibots.blocked", "anchor": "AI-crawler accessibility check" }
+  ]
+}

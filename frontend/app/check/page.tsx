@@ -3,13 +3,15 @@ import Link from 'next/link';
 import { CHECKS_CATALOG } from '@/lib/checks-catalog';
 import { SiteHeader } from '@/app/_components/SiteHeader';
 import { SiteFooter } from '@/app/_components/SiteFooter';
+import { pageMetadata } from '@/lib/seo';
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMetadata({
   title: 'All 40+ SEO + JSON-LD + GEO checks — reference catalog',
   description:
     'Browse every check our auditor performs on your website: metadata, JSON-LD structured data, content quality, ' +
     'crawl & indexing, performance, GEO/AEO (llms.txt, Island Test), and security. Click any check for a deep-dive.',
-};
+  path: '/check',
+});
 
 const CATEGORY_META: Record<string, { icon: string; description: string; color: string }> = {
   metadata: {

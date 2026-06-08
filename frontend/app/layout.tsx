@@ -3,6 +3,7 @@ import type { ReactNode } from 'react';
 import Script from 'next/script';
 import { Inter, JetBrains_Mono } from 'next/font/google';
 import { PostHogProvider } from './_components/PostHogProvider';
+import { SITE_URL, SITE_NAME } from '@/lib/seo';
 import './globals.css';
 
 const GA_ID = process.env.NEXT_PUBLIC_GA_ID || 'G-KPPL9ZCB3B';
@@ -18,12 +19,9 @@ const jetbrains = JetBrains_Mono({
   variable: '--font-mono-loaded',
 });
 
-const SITE_NAME = 'SEO Auditor';
 const SITE_DESCRIPTION =
   'Free, comprehensive SEO + JSON-LD + metadata + GEO audit for any website. No signup, no paywall, no crawl limits.';
-// Honors NEXT_PUBLIC_SITE_URL in production; falls back to a sentinel placeholder
-// for local dev (and which we never want to hard-code as the canonical domain).
-const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000';
+// SITE_URL / SITE_NAME are centralized in lib/seo.ts (single source of truth).
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
@@ -94,7 +92,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
         url: SITE_URL,
         logo: {
           '@type': 'ImageObject',
-          url: `${SITE_URL}/og-cover.png`,
+          url: `${SITE_URL}/opengraph-image`,
           width: 1200,
           height: 630,
         },

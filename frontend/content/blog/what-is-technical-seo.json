@@ -1,0 +1,107 @@
+{
+  "slug": "what-is-technical-seo",
+  "title": "What Is Technical SEO? A Plain-English 2026 Guide",
+  "date": "2026-06-09",
+  "updatedAt": "2026-06-09",
+  "tag": "Technical SEO",
+  "cluster": "technical-seo",
+  "keyword": "technical SEO",
+  "secondaryKeywords": ["crawlability", "indexing", "Core Web Vitals", "structured data"],
+  "readTime": 9,
+  "excerpt": "Technical SEO in plain English: crawlability, indexing, sitemaps, Core Web Vitals, and structured data, explained.",
+  "description": "Technical SEO is the work that lets search engines crawl, index, and trust your site. A plain-English 2026 guide to the areas that actually move rankings.",
+  "tldr": "Technical SEO is the set of behind-the-scenes fixes (crawlability, indexing, sitemaps, robots.txt, canonicals, HTTPS, Core Web Vitals, and structured data) that let Google and AI engines reach and understand your pages. There are 8 core areas, and most sites fail on 2 or 3.",
+  "status": "published",
+  "sections": [
+    {
+      "heading": "What technical SEO actually means",
+      "body": [
+        "Technical SEO is the practice of making a website easy for search engines and AI answer engines to crawl, index, render, and trust. It is not about the words on the page or the links pointing at it; it is about the plumbing underneath, the parts an end user never sees but a crawler hits on every visit.",
+        "Think of it in three jobs. First, **can a bot reach the page?** That is crawlability, controlled by robots.txt, server health, and internal links. Second, **will the engine keep the page?** That is indexing, shaped by canonicals, `noindex` tags, and duplicate content. Third, **can the engine understand and rank it?** That is rendering, speed (Core Web Vitals), HTTPS, and structured data.",
+        "If on-page SEO is the article you wrote and off-page SEO is the reputation that article earns, technical SEO is the road the delivery truck drives on. A brilliant page that returns a 500 error, blocks Googlebot, or takes nine seconds to render simply never competes.",
+        "The reason technical SEO gets neglected is that it is invisible to humans. Your page looks fine in a browser, your traffic chart is flat, and nothing screams that the problem is a stray `Disallow:` line or a canonical pointing at the wrong URL. Engines see a different page than people do, which is why the fixes feel counterintuitive until you learn to read a site the way a crawler does."
+      ]
+    },
+    {
+      "heading": "The 8 areas of technical SEO and what each one fixes",
+      "body": [
+        "Technical SEO breaks into eight areas, and each maps to a specific failure mode. You rarely need all eight perfect at once; you need the two or three that are currently broken on your site.",
+        "[[table]]",
+        "The pattern worth internalizing: the top of the table (crawling, indexing) decides whether you are in the race at all, and the bottom (speed, structured data) decides how well you place. Fix top-down. There is no point optimizing Core Web Vitals on a page Google is forbidden from crawling.",
+        "Most small sites lose on canonicals and indexing, not speed. A store with the same product reachable at four URLs, or a blog auto-generating tag pages Google treats as thin duplicates, leaks crawl budget and dilutes ranking signals long before page load ever matters.",
+        "Two of these areas are easy to misjudge. **robots.txt** feels safe to edit but is the single most common way teams accidentally deindex a whole section — one wildcard rule can hide thousands of pages. **Sitemaps** feel optional but are how you tell Google which URLs are canonical and worth crawling first, which matters enormously on sites with deep or slow-to-discover content."
+      ]
+    },
+    {
+      "heading": "How to run a technical SEO audit",
+      "body": [
+        "A technical SEO audit is a top-down sweep that starts with access and ends with enhancement, so you never waste effort polishing pages the engine cannot keep. Run the steps in order; an early failure usually explains the symptoms further down.",
+        "[[flowchart]]",
+        "You can do every step by hand with Google Search Console, a browser, and view-source, but the slow part is checking dozens of URLs consistently. Our [free SEO + GEO audit](/) crawls a page and flags the metadata, canonical, HTTPS, and structured-data issues in one pass, then links each finding to a fix. Start with the homepage tool at [/](/), then drill into specific checks under [/check](/check).",
+        "Two checks fail more than any others in 2026. The first is **missing or duplicated title tags** — see [/check/metadata.title.missing](/check/metadata.title.missing) — and the second is **missing meta descriptions**, covered at [/check/metadata.description.missing](/check/metadata.description.missing). Both are cheap to fix and disproportionately affect click-through."
+      ]
+    },
+    {
+      "heading": "Core Web Vitals and structured data: the 2026 weighting",
+      "body": [
+        "Core Web Vitals and structured data are the two technical areas that changed most heading into 2026, because both now feed AI answer engines as well as classic search. Core Web Vitals measure loading (LCP), interactivity (INP, which replaced FID in 2024), and visual stability (CLS), and Google still uses them as a tie-breaker between otherwise comparable pages.",
+        "Structured data — JSON-LD markup describing your content as an Article, Product, FAQ, or Organization — does double duty now. It powers Google rich results, and it gives ChatGPT, Perplexity, and Google AI Overviews a clean, machine-readable summary of what your page asserts. Missing required fields silently disqualify you from both. You can validate your markup directly at [/check/structured-data.jsonld.missing](/check/structured-data.jsonld.missing) to confirm each type has what it needs.",
+        "For the speed side, the short version is: aim for LCP under 2.5s, INP under 200ms, and CLS under 0.1, measured on real mobile field data, not a one-off lab score on your fast laptop. If you want to see how this fits the bigger picture, [How to do AI search optimization](/blog/how-to-do-ai-search-optimization) covers where speed and markup meet answer engines.",
+        "There is a newer technical surface too: AI-crawler accessibility. If your robots.txt or firewall blocks GPTBot, ClaudeBot, or PerplexityBot, you opt out of citations in those answer engines. Check it at [/check/geo.aibots.blocked](/check/geo.aibots.blocked) and see [How to get cited by Perplexity](/blog/how-to-get-cited-by-perplexity) for why crawler access matters."
+      ]
+    },
+    {
+      "heading": "Is technical SEO hard, and how it differs from on-page",
+      "body": [
+        "Technical SEO is less hard than it sounds because the core checks are finite and rule-based, not creative. There is a right answer for whether a page returns 200, whether the canonical is self-referential, and whether the title tag exists — unlike content quality, which is judgment all the way down.",
+        "The difficulty is operational, not conceptual. The concepts fit on one page; the work is finding which of your hundreds of URLs are broken and getting an engineer to ship the fix. That is exactly why automated checks beat memorized theory here.",
+        "Technical SEO differs from on-page SEO in scope: technical SEO governs site-wide infrastructure (crawling, speed, security, markup) while on-page SEO governs per-page content (titles, headings, keywords, internal links, readability). The two overlap on title tags and structured data, which is why a real audit covers both. If you are starting from zero, pair this with [How to SEO for Beginners](/blog/how-to-seo-for-beginners) and the broader [What Is On-Page SEO](/blog/what-is-on-page-seo) checklist."
+      ]
+    }
+  ],
+  "flowchart": {
+    "title": "A technical SEO audit, in order",
+    "steps": [
+      { "title": "Check crawl access", "detail": "Confirm robots.txt and your server let Googlebot and AI crawlers reach key pages." },
+      { "title": "Verify indexing", "detail": "Use Search Console coverage to find pages excluded by noindex, canonicals, or duplicates." },
+      { "title": "Submit a clean sitemap", "detail": "Ensure your XML sitemap lists only canonical, indexable, 200-status URLs." },
+      { "title": "Audit canonicals and HTTPS", "detail": "Make every page self-canonical, served over HTTPS, with one preferred URL version." },
+      { "title": "Measure Core Web Vitals", "detail": "Pull real mobile field data for LCP, INP, and CLS, and fix the worst templates first." },
+      { "title": "Validate structured data", "detail": "Confirm JSON-LD has required fields so search and AI engines can parse your content." }
+    ]
+  },
+  "comparisonTable": {
+    "caption": "The 8 technical SEO areas and what each one fixes",
+    "headers": ["Area", "What it controls", "What it fixes when broken"],
+    "rows": [
+      ["Crawlability", "robots.txt, server health, internal links", "Pages bots can't reach or that error out"],
+      ["Indexing", "noindex tags, coverage, duplicates", "Pages Google reaches but refuses to keep"],
+      ["XML sitemaps", "the URL list you submit", "Important pages getting discovered slowly or never"],
+      ["robots.txt", "crawler allow/disallow rules", "Accidentally blocking Googlebot or AI crawlers"],
+      ["Canonicals", "the one preferred URL per page", "Duplicate URLs splitting ranking signals"],
+      ["HTTPS", "secure connection", "Trust loss and mixed-content warnings"],
+      ["Core Web Vitals", "LCP, INP, CLS load metrics", "Slow, janky pages losing ranking tie-breakers"],
+      ["Structured data", "JSON-LD markup", "Missing rich results and AI-engine citations"]
+    ]
+  },
+  "peopleAlsoAsk": [
+    { "q": "What does technical SEO include?", "a": "Technical SEO includes crawlability, indexing, XML sitemaps, robots.txt rules, canonical tags, HTTPS, Core Web Vitals, and structured data. These eight areas govern whether search engines and AI answer engines can reach, keep, understand, and trust your pages. It excludes content writing and link building, which fall under on-page and off-page SEO." },
+    { "q": "Is technical SEO hard?", "a": "Technical SEO is conceptually simple because most checks are rule-based and have a definite right answer, like whether a page returns a 200 status or has a self-referential canonical. The hard part is operational: finding which URLs are broken across a large site and getting fixes shipped. Automated audit tools remove most of that difficulty by flagging issues in one pass." },
+    { "q": "How do I do a technical SEO audit?", "a": "Run a technical SEO audit top-down: confirm crawl access, verify indexing in Search Console, submit a clean XML sitemap, audit canonicals and HTTPS, measure Core Web Vitals on real mobile data, then validate structured data. An early failure usually explains later symptoms, so fix in that order. A free crawler can automate the metadata, canonical, and markup checks." },
+    { "q": "How is technical SEO different from on-page SEO?", "a": "Technical SEO governs site-wide infrastructure like crawling, speed, security, and markup, while on-page SEO governs per-page content like titles, headings, keywords, and internal links. The two overlap on title tags and structured data. Technical SEO decides whether a page can compete at all; on-page SEO decides how relevant it looks once it does." },
+    { "q": "Does technical SEO matter for AI search?", "a": "Technical SEO matters more for AI search than for classic search because answer engines like ChatGPT and Perplexity need to crawl and parse a page before they can cite it. If your robots.txt blocks AI crawlers or your structured data is missing required fields, you opt out of AI citations entirely. Crawl access and clean JSON-LD are now first-class ranking factors." }
+  ],
+  "faqs": [
+    { "q": "How often should I run a technical SEO audit?", "a": "Run a full technical SEO audit quarterly, and a quick crawl-access and indexing check after any major site change, redesign, or migration. Migrations are the single most common cause of sudden traffic loss because they frequently break canonicals, redirects, and sitemaps at once." },
+    { "q": "Can I do technical SEO for free?", "a": "Yes. Google Search Console, a browser's view-source, and a free audit tool cover the vast majority of technical SEO checks at no cost. Paid crawlers add scale for very large sites, but a small or medium site can stay healthy on free tools alone." },
+    { "q": "Which technical SEO issue should I fix first?", "a": "Fix crawl and indexing issues before anything else, because they determine whether a page is eligible to rank at all. Optimizing Core Web Vitals or structured data on a page Google cannot crawl or index is wasted effort. Work strictly top-down from access to enhancement." }
+  ],
+  "relatedKeywords": ["technical SEO audit", "crawlability and indexing", "Core Web Vitals 2026", "XML sitemap SEO", "structured data JSON-LD"],
+  "internalLinks": [
+    { "href": "/", "anchor": "Run a free SEO + GEO audit" },
+    { "href": "/check", "anchor": "Browse all 40+ SEO checks" },
+    { "href": "/blog/how-to-do-ai-search-optimization", "anchor": "How to do AI search optimization" },
+    { "href": "/blog/how-to-get-cited-by-perplexity", "anchor": "How to get cited by Perplexity" },
+    { "href": "/blog/what-is-on-page-seo", "anchor": "What Is On-Page SEO?" }
+  ]
+}

@@ -1,0 +1,131 @@
+{
+  "slug": "how-to-do-keyword-research-for-free",
+  "title": "How to Do Keyword Research for Free (2026 Guide)",
+  "date": "2026-06-09",
+  "updatedAt": "2026-06-09",
+  "tag": "SEO",
+  "cluster": "content-links",
+  "keyword": "keyword research",
+  "secondaryKeywords": ["free keyword research tools", "search intent", "keyword clustering", "Google Search Console keywords"],
+  "readTime": 9,
+  "excerpt": "A free-only keyword research workflow using Search Console, autocomplete, and People Also Ask.",
+  "description": "Do keyword research for free with Google Search Console, autocomplete, and People Also Ask. A 2026 workflow to find, judge, and cluster keywords without paid tools.",
+  "tldr": "You can do complete keyword research for free using Google Search Console for proven queries, Google autocomplete and People Also Ask for expansion, and a simple intent-and-cluster step to group terms into pages — no paid tool required.",
+  "status": "published",
+  "sections": [
+    {
+      "heading": "The free keyword research workflow in one pass",
+      "body": [
+        "Keyword research for free is entirely doable in 2026 using four Google-native sources: Google Search Console for queries you already rank for, Google autocomplete for variations, People Also Ask for question intent, and your own intent-and-cluster step to turn raw phrases into page topics. No paid subscription is required to find what people search, judge whether a term is worth targeting, and group terms into content.",
+        "The mistake most beginners make is starting with a paid tool's keyword volume number and treating it as truth. Volume estimates are modeled, not measured, and they hide the thing that actually wins rankings: search intent. A free workflow forces you to read the SERP and the questions directly, which is a better signal than a guessed monthly-volume figure.",
+        "Here is the full process. Each step uses a free source and feeds the next, so by the end you have a short list of pages to write rather than a spreadsheet of disconnected words.",
+        "[[flowchart]]",
+        "If you are brand new to the discipline, pair this with our [free SEO walkthrough](/blog/how-to-do-seo-for-free) — keyword research is step one, and that post covers what comes after you have your list."
+      ]
+    },
+    {
+      "heading": "Start with Google Search Console (your strongest free source)",
+      "body": [
+        "Google Search Console is the single best free keyword research tool because it reports the exact queries your site already appears for, with real impressions, clicks, and average position. Every other method is a guess; Search Console is measured data from Google itself.",
+        "Open the **Performance** report, set the date range to the last 3 months, and look at the **Queries** tab. Sort by impressions. You are hunting for two patterns:",
+        "- **High impressions, low clicks, position 5-20** — Google already thinks you are relevant, but you are not ranking high enough to earn clicks. These are your fastest wins; a stronger page can lift you onto page one.\n- **Queries you never intended to target** — phrases where you accidentally rank. They reveal demand you can serve deliberately with a dedicated page.",
+        "Export the query list. Filter out branded terms and one-off noise, and you have a seed list grounded in proven demand. If your site is new and has little data yet, skip ahead to autocomplete — but revisit Search Console monthly, because it gets more valuable as you publish.",
+        "> Rule of thumb: a query sitting at position 8-15 with hundreds of impressions is worth more attention than a high-volume term you have zero presence for."
+      ]
+    },
+    {
+      "heading": "Expand with autocomplete and People Also Ask",
+      "body": [
+        "Google autocomplete and People Also Ask turn one seed keyword into dozens of free, intent-rich variations straight from real search behavior. Autocomplete shows what people commonly type; People Also Ask shows the follow-up questions Google associates with the topic.",
+        "For autocomplete, type your seed term into Google and read the dropdown suggestions. Then try modifier prefixes to surface long-tail variants: `how`, `why`, `best`, `vs`, `for`, and the alphabet trick (type your term plus `a`, then `b`, and so on). Each suggestion is a phrase real users enter, weighted by frequency.",
+        "For **People Also Ask (PAA)**, search your seed term and expand the question boxes. Every box you open loads more questions, so a single search can yield 15-30 questions. These are gold for two reasons: they map the questions your content must answer, and they are the literal phrasing that wins featured snippets and AI Overviews. Capturing PAA questions verbatim also feeds answer-engine optimization — see [how to rank in Google AI Overviews](/blog/how-to-rank-in-google-ai-overviews) for why exact-question phrasing matters.",
+        "Other free expansion sources worth a pass: Google's **related searches** at the bottom of the SERP, Reddit and forum threads for the words your audience actually uses, and YouTube's search suggestions for video-intent variations."
+      ]
+    },
+    {
+      "heading": "Classify search intent before you write anything",
+      "body": [
+        "Search intent is the goal behind a query, and classifying it is the step that decides whether a keyword is worth targeting at all. Two phrases with identical wording can demand completely different pages, and ranking requires matching the intent Google already rewards on that SERP.",
+        "There are four standard intent types. Tag every keyword on your list with one:",
+        "[[table]]",
+        "The fastest way to confirm intent is to search the term and read the top 10 results. If the page-one results are all product listings and you planned a blog post, the intent is transactional and your article will not rank — pick a different term or a different format. This SERP check is free and more reliable than any intent label a tool assigns automatically.",
+        "Intent also tells you whether a keyword is worth your effort. An informational query with weak, thin competitors is a realistic target for a new site; a transactional query dominated by major brands and ads usually is not."
+      ]
+    },
+    {
+      "heading": "Cluster keywords into pages (one page, many terms)",
+      "body": [
+        "Keyword clustering groups terms that share the same intent into a single page, so you build one strong article per topic instead of thin, cannibalizing pages for every variation. Google ranks a well-clustered page for dozens of related queries at once, which is how free keyword research compounds.",
+        "Do it manually and free. Sort your seed list, then group phrases that a single page could satisfy. `keyword research`, `how to do keyword research`, and `keyword research for free` all belong on one page — they share informational intent and the same answer. But `keyword research tool` may deserve its own page if the intent leans toward comparing or choosing tools.",
+        "A quick free test for whether two keywords belong together: search both and compare the top results. If the same URLs rank for both queries, Google treats them as one topic — cluster them. If the results barely overlap, they need separate pages.",
+        "For each cluster, pick one primary keyword (the clearest, highest-demand phrase), list the secondary terms it should also cover, and note the PAA questions to answer in the body. That bundle becomes your content brief.",
+        "Once a draft exists, validate it against the on-page and structured-data signals search and AI engines read — run a [free SEO and GEO audit](/) to check titles, headings, the direct-answer test, and JSON-LD before you publish."
+      ]
+    }
+  ],
+  "flowchart": {
+    "title": "Free keyword research process",
+    "steps": [
+      { "title": "Pull Search Console queries", "detail": "Export the queries you already rank for and flag position 5-20 opportunities." },
+      { "title": "Expand with autocomplete", "detail": "Use Google suggestions and modifier prefixes to surface long-tail variants." },
+      { "title": "Mine People Also Ask", "detail": "Expand the question boxes to capture the exact questions your content must answer." },
+      { "title": "Classify intent", "detail": "Tag each keyword informational, navigational, commercial, or transactional and verify against the live SERP." },
+      { "title": "Cluster into pages", "detail": "Group same-intent terms so one strong page targets many related queries." },
+      { "title": "Audit before publishing", "detail": "Check titles, headings, and structured data with a free SEO + GEO audit." }
+    ]
+  },
+  "comparisonTable": {
+    "caption": "The four search intent types and the content each one needs",
+    "headers": ["Intent type", "What the searcher wants", "Example query", "Page format to build"],
+    "rows": [
+      ["Informational", "An answer or how-to", "how to do keyword research", "Blog post or guide"],
+      ["Navigational", "A specific site or brand", "google search console login", "Brand or product page (rarely worth targeting)"],
+      ["Commercial", "To compare before buying", "best free keyword research tool", "Comparison or roundup post"],
+      ["Transactional", "To buy or convert now", "keyword research tool pricing", "Product, pricing, or signup page"]
+    ]
+  },
+  "peopleAlsoAsk": [
+    {
+      "q": "How do I find keywords for free?",
+      "a": "Find keywords for free using Google Search Console to see queries your site already ranks for, then Google autocomplete and People Also Ask to expand each seed into long-tail variations. Google's related searches and forums like Reddit add the real phrasing your audience uses. None of these require a paid subscription, and Search Console gives you measured data rather than estimated volume."
+    },
+    {
+      "q": "What is the best free keyword research tool?",
+      "a": "Google Search Console is the best free keyword research tool because it reports the exact queries your site appears for with real impressions, clicks, and average position. Unlike free tiers of paid tools, it shows measured demand specific to your site rather than modeled estimates. For a new site with little data, Google autocomplete and People Also Ask are the strongest free starting points."
+    },
+    {
+      "q": "How do I know if a keyword is worth targeting?",
+      "a": "A keyword is worth targeting when its search intent matches a page you can realistically build and the current page-one results are beatable. Search the term and read the top 10 results: if they are thin, outdated, or off-intent, you have an opening. If the SERP is dominated by major brands, ads, and comprehensive pages, the keyword is likely too competitive for a new site to win quickly."
+    },
+    {
+      "q": "What is search intent in SEO?",
+      "a": "Search intent in SEO is the goal behind a query — what the searcher actually wants to find or do. The four standard types are informational (learn something), navigational (reach a specific site), commercial (compare before buying), and transactional (buy or convert now). Matching your page format to the dominant intent on a SERP is the single biggest factor in whether that page ranks."
+    },
+    {
+      "q": "Do free keyword tools show search volume?",
+      "a": "Most free keyword sources do not show reliable search volume, and that is acceptable for a free workflow. Google Search Console shows impressions, which is real demand for queries you already rank for, while autocomplete and People Also Ask show frequency-weighted phrasing without exact numbers. Reading the live SERP for intent and competition is a more dependable signal than the modeled volume figures paid tools display."
+    }
+  ],
+  "faqs": [
+    {
+      "q": "How long does free keyword research take?",
+      "a": "Free keyword research for a single topic takes about 30-60 minutes once you know the workflow: a few minutes in Search Console, ten on autocomplete and People Also Ask, and the rest on intent classification and clustering. The clustering step saves far more time later by preventing thin, overlapping pages that compete with each other."
+    },
+    {
+      "q": "Can I do keyword research without any traffic yet?",
+      "a": "Yes, you can do keyword research with zero traffic by leaning on Google autocomplete, People Also Ask, related searches, and competitor SERP analysis instead of Search Console. Search Console only reports queries your site already appears for, so a brand-new site has little data there. Revisit Search Console monthly, because it becomes your strongest free source as soon as you start publishing and ranking."
+    },
+    {
+      "q": "Is paid keyword research ever necessary?",
+      "a": "Paid keyword research tools are a convenience, not a necessity, especially for small sites and solo creators. They speed up volume estimation and competitor analysis at scale, but the free Google-native workflow finds the same opportunities and forces you to read intent directly. Most sites should exhaust the free workflow first and only pay once research volume justifies the subscription."
+    }
+  ],
+  "relatedKeywords": ["free keyword research tools", "keyword research for beginners", "search intent types", "keyword clustering", "long tail keywords", "google autocomplete keywords"],
+  "internalLinks": [
+    { "href": "/", "anchor": "Run a free SEO + GEO audit" },
+    { "href": "/blog/how-to-do-seo-for-free", "anchor": "How to Do SEO for Free" },
+    { "href": "/blog/what-is-on-page-seo", "anchor": "What Is On-Page SEO?" },
+    { "href": "/blog/how-to-rank-in-google-ai-overviews", "anchor": "How to Rank in Google AI Overviews" },
+    { "href": "/blog/how-to-seo-for-beginners", "anchor": "How to SEO for Beginners" }
+  ]
+}

@@ -1,0 +1,130 @@
+{
+  "slug": "what-is-on-page-seo",
+  "title": "What Is On-Page SEO? The 2026 Checklist",
+  "date": "2026-06-09",
+  "updatedAt": "2026-06-09",
+  "tag": "SEO",
+  "cluster": "seo-basics",
+  "keyword": "on-page SEO",
+  "secondaryKeywords": ["on-page SEO checklist", "title tag optimization", "meta description", "internal linking"],
+  "readTime": 9,
+  "excerpt": "On-page SEO is everything you control on the page itself — here's the exact 2026 checklist.",
+  "description": "On-page SEO covers titles, meta descriptions, headings, content, internal links, image alt, and schema. Use this concrete 2026 checklist to optimize any page.",
+  "tldr": "On-page SEO is the practice of optimizing elements you control on a single page — title tag, meta description, headings, content quality, internal links, image alt text, and on-page schema — so search engines and AI answer engines can understand and rank it. There are 7 core levers in the 2026 checklist below.",
+  "status": "published",
+  "sections": [
+    {
+      "heading": "What is on-page SEO?",
+      "body": [
+        "On-page SEO is the practice of optimizing the parts of a web page that you directly control — the title tag, meta description, heading structure, body content, internal links, image alt text, and on-page schema — so both search engines and AI answer engines can understand what the page is about and rank it for the right queries. Unlike off-page signals (backlinks, brand mentions) or server-level technical work, on-page SEO lives inside the HTML of the page itself.",
+        "The simplest mental model: if you can edit it in your CMS or your page's `<head>` and `<body>`, it's on-page. That makes on-page SEO the highest-leverage place to start, because you don't need anyone else's permission — no link outreach, no DNS changes, just a better page. A beginner can ship meaningful on-page improvements in an afternoon, whereas off-page authority can take months to earn.",
+        "On-page SEO also compounds. Every page you optimize teaches search engines and AI models more about your site's topical focus, so a well-structured tenth article ranks faster than a lonely first one. The discipline is repeatable: the same checklist applies whether the page is a product listing, a blog post, or a support doc.",
+        "In 2026 the stakes are higher because the same on-page signals now feed two audiences at once: Google's classic blue links and the AI systems (ChatGPT, Perplexity, Google AI Overviews) that summarize answers. A clear title, a direct first paragraph, and clean schema help you in both. For the broader picture of where on-page sits among the disciplines, see [the 4 types of SEO](/blog/what-are-the-4-types-of-seo)."
+      ]
+    },
+    {
+      "heading": "On-page vs off-page vs technical SEO",
+      "body": [
+        "On-page SEO is one of three buckets, and people constantly blur the lines. On-page SEO is content and HTML you edit per page. Off-page SEO is reputation you earn elsewhere — backlinks, citations, reviews. Technical SEO is the site-wide plumbing — crawlability, speed, indexing, structured-data validity.",
+        "Why the distinction is worth keeping straight: each bucket has a different feedback loop and a different owner. On-page changes show results in days to weeks and are owned by the content team. Off-page is a slow, relationship-driven game owned by PR and outreach. Technical is owned by engineering and tends to fix systemic problems rather than move a single keyword. Knowing which bucket a problem belongs to tells you who should fix it and how fast to expect movement.",
+        "Here's the cleanest way to tell them apart at a glance:",
+        "[[table]]",
+        "The boundary blurs at schema and Core Web Vitals — both touch on-page and technical work. If a fix lives in one specific page's markup, treat it as on-page; if it's a site-wide configuration, it's technical. For the plumbing side, read [What Is Technical SEO?](/blog/what-is-technical-seo)."
+      ]
+    },
+    {
+      "heading": "The 7 on-page SEO factors that matter in 2026",
+      "body": [
+        "On-page SEO in 2026 comes down to seven concrete levers. Run every important page through this list:",
+        "**1. Title tag.** The single strongest on-page signal. Keep it under ~60 characters, lead with the primary keyword, and write it for a human deciding whether to click. A missing or duplicate title is a common, costly bug — verify yours with the [title tag check](/check/metadata.title.missing).",
+        "**2. Meta description.** Doesn't directly rank you, but it controls your click-through rate from the SERP and often becomes the snippet AI tools quote. Aim for 120–160 characters, include the keyword naturally, and make a promise the page keeps. Audit it via the [meta description check](/check/metadata.description.missing).",
+        "**3. Heading structure (H1–H3).** One H1 per page that matches search intent, then H2s that mirror the questions users actually ask. Well-structured headings double as the table of contents that AI answer engines parse to extract sections.",
+        "**4. Content quality and depth.** Cover the topic fully, answer the query in the first paragraph, and add specifics — numbers, named entities, examples — that thin competitors lack. Quality is the factor algorithms keep getting better at measuring.",
+        "**5. Internal links.** Links between your own pages pass relevance and authority, and they tell crawlers which pages matter. Three to five contextual internal links per article is a healthy baseline.",
+        "**6. Image alt text.** Describe each meaningful image in plain language. Alt text serves accessibility, ranks images in search, and gives multimodal AI models a caption to reason over.",
+        "**7. On-page schema (JSON-LD).** Structured data like Article, FAQPage, or Product helps engines classify your content and qualifies you for rich results. Get the required fields right — see [what is technical SEO](/blog/what-is-technical-seo)."
+      ]
+    },
+    {
+      "heading": "How to optimize a single page: the workflow",
+      "body": [
+        "Optimizing one page is a repeatable sequence, not guesswork. Follow these steps in order so each layer builds on the last.",
+        "[[flowchart]]",
+        "The order matters: intent and keyword first, because they determine your title and headings; content next, because links and schema describe content that already exists. Skipping straight to schema on a page that doesn't answer the query is polishing a car with no engine.",
+        "After you ship changes, validate them. Run the page through a [free SEO + GEO audit](/) to catch a missing title, a too-long description, an unparseable schema block, or a weak opening paragraph before search engines do."
+      ]
+    },
+    {
+      "heading": "Is on-page SEO still worth it in 2026?",
+      "body": [
+        "On-page SEO is more important in 2026 than it was five years ago, not less — because AI answer engines depend on the exact same clean signals to extract and cite content. When Perplexity or Google AI Overviews build an answer, they parse your title, headings, first paragraph, and schema. A page that's well-structured for classic SEO is already well-structured for generative engines.",
+        "The one shift: the first paragraph now does double duty. It has to satisfy a human skimmer AND give an AI model a self-contained, quotable answer. That's the self-contained-snippet test — can a section stand alone if an AI lifts it out of context? Pages that pass get cited more often. Learn the technique in [how to get cited by Perplexity](/blog/how-to-get-cited-by-perplexity).",
+        "Bottom line: on-page SEO is the foundation everything else rests on. Backlinks can't rescue a page with a vague title and a buried answer, and no amount of technical tuning makes thin content rank. Fix the page first."
+      ]
+    }
+  ],
+  "flowchart": {
+    "title": "Optimize one page in 6 steps",
+    "steps": [
+      { "title": "Pick the query and intent", "detail": "Decide the one primary keyword and what the searcher actually wants from the page." },
+      { "title": "Write the title and meta description", "detail": "Lead with the keyword, stay under 60 chars for the title and 160 for the description." },
+      { "title": "Structure with headings", "detail": "One H1 matching intent, then H2s that mirror the real questions users ask." },
+      { "title": "Answer in the first paragraph", "detail": "Give a direct, self-contained answer up top before adding depth and examples." },
+      { "title": "Add internal links and alt text", "detail": "Link 3–5 related pages contextually and describe every meaningful image." },
+      { "title": "Add schema, then audit", "detail": "Drop in valid JSON-LD and run a free audit to catch errors before publishing." }
+    ]
+  },
+  "comparisonTable": {
+    "caption": "On-page vs off-page vs technical SEO at a glance",
+    "headers": ["Type", "Where it lives", "Examples", "Who controls it"],
+    "rows": [
+      ["On-page", "Inside a single page's HTML", "Title, meta, headings, content, internal links, alt, schema", "You — edit it directly"],
+      ["Off-page", "Other websites and platforms", "Backlinks, brand mentions, reviews, citations", "Earned, not directly editable"],
+      ["Technical", "Site-wide configuration", "Crawlability, speed, sitemaps, indexing, HTTPS", "You — but at the infrastructure level"]
+    ]
+  },
+  "peopleAlsoAsk": [
+    {
+      "q": "What is the difference between on-page and off-page SEO?",
+      "a": "On-page SEO is everything you optimize inside a single page's HTML — title tag, meta description, headings, content, internal links, image alt text, and schema. Off-page SEO is reputation you earn on other sites, mainly backlinks, brand mentions, and citations. On-page is fully under your control and edited directly; off-page is influenced but not directly editable."
+    },
+    {
+      "q": "What are the main on-page SEO factors?",
+      "a": "The seven core on-page SEO factors are the title tag, meta description, heading structure (H1–H3), content quality and depth, internal links, image alt text, and on-page schema (JSON-LD). The title tag carries the most ranking weight, while the first paragraph and headings matter most for AI answer engines that extract snippets. Optimizing all seven gives a page its strongest possible foundation."
+    },
+    {
+      "q": "Is on-page SEO still important in 2026?",
+      "a": "On-page SEO is arguably more important in 2026 because AI answer engines like ChatGPT, Perplexity, and Google AI Overviews rely on the same clean signals — titles, headings, first paragraphs, and schema — to extract and cite content. A page optimized for classic search is already well-structured for generative engines. On-page work is the foundation that backlinks and technical tuning cannot replace."
+    },
+    {
+      "q": "How do I optimize a single page for SEO?",
+      "a": "Optimize a single page by working in order: pick the primary keyword and intent, write a keyword-led title and meta description, structure the page with one H1 and clear H2s, answer the query directly in the first paragraph, add 3–5 internal links plus image alt text, then add valid JSON-LD schema. Finish by running the page through an SEO audit to catch missing or broken elements before publishing."
+    },
+    {
+      "q": "How long should a title tag be for on-page SEO?",
+      "a": "A title tag should stay under roughly 60 characters so it doesn't get truncated in search results, and it should lead with the primary keyword. Writing it for a human deciding whether to click matters as much as keyword placement, since click-through rate influences rankings. Missing or duplicate titles are a frequent and costly on-page bug worth checking on every page."
+    }
+  ],
+  "faqs": [
+    {
+      "q": "Does on-page SEO include schema markup?",
+      "a": "Yes — on-page schema, usually written as JSON-LD, is one of the seven core on-page SEO factors. It helps search engines and AI models classify content correctly and can qualify a page for rich results. Getting the required fields right is what separates valid schema from markup that engines ignore."
+    },
+    {
+      "q": "How many internal links should a page have?",
+      "a": "Three to five contextual internal links per article is a healthy baseline for most pages. The goal is relevance, not volume — each link should point to a genuinely related page and use descriptive anchor text. Internal links pass authority and help crawlers and AI engines understand which pages on your site matter most."
+    },
+    {
+      "q": "Can I do on-page SEO for free?",
+      "a": "Yes — on-page SEO is the most accessible discipline because every lever lives in content and HTML you already edit. You need no paid tools to write a strong title, structure headings, or add schema. A free audit tool can validate your work and flag missing or broken elements before you publish."
+    }
+  ],
+  "relatedKeywords": ["on-page SEO checklist", "title tag length", "meta description best practices", "internal linking strategy", "image alt text SEO", "on-page schema JSON-LD"],
+  "internalLinks": [
+    { "href": "/", "anchor": "Run a free SEO + GEO audit" },
+    { "href": "/check/metadata.title.missing", "anchor": "Title tag check" },
+    { "href": "/check/metadata.description.missing", "anchor": "Meta description check" },
+    { "href": "/blog/what-are-the-4-types-of-seo", "anchor": "The 4 types of SEO" },
+    { "href": "/blog/what-is-technical-seo", "anchor": "What Is Technical SEO?" }
+  ]
+}

@@ -1,0 +1,133 @@
+{
+  "slug": "which-type-of-seo-is-best",
+  "title": "Which Type of SEO Is Best? (It Depends — Here's How to Choose)",
+  "date": "2026-06-09",
+  "updatedAt": "2026-06-09",
+  "tag": "SEO",
+  "cluster": "seo-basics",
+  "keyword": "which type of SEO is best",
+  "secondaryKeywords": ["best type of SEO", "types of SEO compared", "on-page vs technical SEO", "local SEO vs GEO"],
+  "readTime": 9,
+  "excerpt": "No single SEO type wins — the best one depends on your site type, goals, and what's broken right now.",
+  "description": "Wondering which type of SEO is best? It depends on your site and goals. Compare on-page, technical, off-page, local, and GEO — and learn which to prioritize first.",
+  "tldr": "There is no single best type of SEO — the right one depends on your site and goals. A local service business should prioritize local SEO; a content publisher leans on-page and GEO; a large or slow site fixes technical SEO first. Most sites should fix technical foundations, then on-page, before chasing off-page links.",
+  "status": "published",
+  "sections": [
+    {
+      "heading": "The Honest Answer: It Depends on Your Site and Goal",
+      "body": [
+        "The honest answer to which type of SEO is best is that it depends entirely on your site type and goal — there is no universal winner. A local plumber should pour effort into local SEO and Google Business Profile, while a SaaS blog wins with on-page SEO and generative engine optimization (GEO). The same playbook that ranks a recipe site can sink an e-commerce store, which is exactly why \"best\" only means anything once you name your situation.",
+        "The five types worth ranking are **on-page SEO** (content, keywords, structure), **technical SEO** (crawlability, speed, indexing), **off-page SEO** (links and authority), **local SEO** (maps and proximity), and **GEO/AEO** (getting cited by ChatGPT, Perplexity, and Google AI Overviews). Each one moves a different lever.",
+        "Instead of asking which is best in the abstract, ask two questions: *What kind of site do I run?* and *What's broken or missing right now?* The intersection of those answers is your best type of SEO. If you want the full taxonomy first, read [what are the 4 types of SEO](/blog/what-are-the-4-types-of-seo), then come back to prioritize."
+      ]
+    },
+    {
+      "heading": "Match the SEO Type to Your Site and Goal",
+      "body": [
+        "Matching the SEO type to your situation is the whole game. A site with great content but a 6-second load time doesn't need more blog posts — it needs technical SEO. A business with a perfect website that nobody links to needs off-page work. The table below maps common site types and goals to the SEO type you should prioritize first.",
+        "[[table]]",
+        "Read each row as \"start here,\" not \"only do this.\" Mature sites eventually need all five types, but sequencing matters: fixing the wrong lever first wastes months. A new local business chasing backlinks before claiming its Google Business Profile is optimizing the slowest path to results, while a content site obsessing over page speed while ignoring search intent polishes a fast page nobody searches for. The point of the table is to stop you from spending effort on the type of SEO that won't move your specific bottleneck.",
+        "One more nuance: your goal can override your site type. A local restaurant that wants national press coverage leans into off-page SEO and digital PR, not just local listings. A blog that wants to be quoted in AI answers prioritizes GEO over chasing one more keyword. Always pick the type that serves the outcome you actually care about this quarter."
+      ]
+    },
+    {
+      "heading": "Is Technical or On-Page SEO More Important?",
+      "body": [
+        "Technical SEO is more important when something is broken, and on-page SEO is more important when nothing is. The rule of thumb: technical SEO is a gate, on-page SEO is a lever. If Google can't crawl, render, or index your pages, no amount of great content will rank — so you clear technical blockers first.",
+        "For most small, well-built sites on modern platforms (Webflow, Shopify, WordPress with a decent theme), the technical basics are already handled. In that case, on-page SEO — matching content to search intent, writing strong titles, and structuring pages clearly — delivers more ranking gains per hour. Check your [title tags](/check/metadata.title.missing) and [meta descriptions](/check/metadata.description.missing) before you assume the problem is technical.",
+        "The decision tree below shows how to sequence the work so you never polish content on a page Google can't even index."
+      ]
+    },
+    {
+      "heading": "How to Decide Which SEO Type to Prioritize",
+      "body": [
+        "Deciding which SEO type to prioritize follows a short diagnostic sequence, not a coin flip. Run an audit, fix anything that blocks crawling or indexing, then layer on-page, local, off-page, and GEO based on your goals. The flow below turns \"which type of SEO is best\" into a concrete first action.",
+        "[[flowchart]]",
+        "Run a free [SEO + GEO audit on the homepage](/) to find your starting point in under a minute — it surfaces technical blockers, missing metadata, and GEO gaps in one pass. From there, the flowchart tells you which type of SEO to spend the next month on.",
+        "> The best type of SEO is the one that fixes your biggest current bottleneck — audit first, then commit."
+      ]
+    },
+    {
+      "heading": "Don't Skip GEO — The Newest Type That's Now Mandatory",
+      "body": [
+        "GEO (generative engine optimization) is the newest type of SEO, and in 2026 it's no longer optional for most sites. A growing share of searches now end inside ChatGPT, Perplexity, Claude, or Google AI Overviews — answers users never click through to your site to read. Showing up there requires different signals than blue-link ranking.",
+        "GEO and on-page SEO overlap but aren't identical. Clear, self-contained answers, structured data, an `llms.txt` file, and unblocked AI crawlers help models cite you. Estimates from across the industry suggest AI-driven referral traffic is climbing fast, so even content-strong sites should add GEO to the mix. Start with [what is generative engine optimization](/blog/what-is-generative-engine-optimization) and [what is answer engine optimization](/blog/what-is-answer-engine-optimization).",
+        "Two quick GEO wins: confirm you're not [blocking AI crawlers](/check/geo.aibots.blocked) in robots.txt, and add a [direct-answer summary](/check/geo.directAnswer.missing) near the top of key pages so models can lift a clean answer."
+      ]
+    },
+    {
+      "heading": "The Bottom Line: Sequence, Don't Pick",
+      "body": [
+        "The best type of SEO is a sequence, not a single choice. Technical SEO clears the path, on-page SEO earns the rankings, local SEO captures nearby intent, off-page SEO builds lasting authority, and GEO wins the AI-answer surface. Skipping any one of these leaves traffic on the table once your site matures.",
+        "For a brand-new site, the highest-leverage order is usually: fix technical foundations, nail on-page basics, add GEO essentials, then earn links over time. Local businesses bump local SEO to the top. If you're just starting, [how to SEO for beginners](/blog/how-to-seo-for-beginners) walks the first 30 days, and [what is technical SEO](/blog/what-is-technical-seo) covers the foundation you should never skip."
+      ]
+    }
+  ],
+  "flowchart": {
+    "title": "How to choose your best type of SEO",
+    "steps": [
+      { "title": "Run an audit", "detail": "Scan your site for technical, on-page, and GEO issues to see what's actually broken." },
+      { "title": "Fix technical blockers first", "detail": "Resolve crawl, index, and speed problems before any content work — they gate everything else." },
+      { "title": "Match content to intent (on-page)", "detail": "Optimize titles, headings, and copy so pages answer the exact queries you target." },
+      { "title": "Add local SEO if you serve an area", "detail": "Claim and optimize Google Business Profile when proximity drives your customers." },
+      { "title": "Layer in GEO", "detail": "Add direct answers, structured data, and llms.txt so AI engines cite you." },
+      { "title": "Build off-page authority last", "detail": "Earn links and mentions once the foundation, content, and AI surfaces are solid." }
+    ]
+  },
+  "comparisonTable": {
+    "caption": "Which SEO type to prioritize by site type and goal",
+    "headers": ["Your site / goal", "Prioritize first", "Why", "Add next"],
+    "rows": [
+      ["Local service business (plumber, dentist)", "Local SEO", "Proximity and map rankings drive most calls and bookings", "On-page + GEO"],
+      ["Content site / blog / publisher", "On-page SEO", "Intent-matched content is the core ranking lever", "GEO + off-page"],
+      ["E-commerce store", "Technical SEO", "Large catalogs create crawl, index, and speed issues fast", "On-page + off-page"],
+      ["New site with no traffic", "Technical SEO", "Indexing and foundations gate every other improvement", "On-page"],
+      ["Site with strong content but flat rankings", "Off-page SEO", "Authority and links are the missing trust signal", "GEO"],
+      ["Brand losing clicks to AI answers", "GEO / AEO", "Citations in ChatGPT and AI Overviews recover lost reach", "On-page"]
+    ]
+  },
+  "peopleAlsoAsk": [
+    {
+      "q": "What are the main types of SEO?",
+      "a": "The main types of SEO are on-page SEO, technical SEO, off-page SEO, and local SEO, with GEO (generative engine optimization) now treated as a fifth type. On-page covers content and structure, technical covers crawlability and speed, off-page covers links and authority, local covers map and proximity rankings, and GEO covers citations in AI answer engines. Most mature sites use all five, sequenced by what's broken first."
+    },
+    {
+      "q": "Is technical or on-page SEO more important?",
+      "a": "Technical SEO is more important when something blocks crawling or indexing, because no content can rank on a page Google can't access. On-page SEO becomes more important once the technical foundation is solid, since intent-matched content is the lever that earns rankings. For most sites on modern platforms the technical basics are handled, so on-page work delivers more gains per hour."
+    },
+    {
+      "q": "Which type of SEO gives the fastest results?",
+      "a": "Technical SEO often gives the fastest results because fixing an indexing block, a broken canonical, or a slow page can recover rankings within days. On-page changes to titles and intent-matching can also move pages within weeks. Off-page SEO is the slowest type, since earning authority through links takes months to compound."
+    },
+    {
+      "q": "Do small businesses need local SEO?",
+      "a": "Small businesses that serve customers in a specific geographic area need local SEO as their top priority. Claiming and optimizing a Google Business Profile, gathering reviews, and keeping name-address-phone details consistent drive most calls and visits for local services. Online-only businesses without a service area should prioritize on-page and technical SEO instead."
+    },
+    {
+      "q": "Can you do all types of SEO at once?",
+      "a": "You can work on all types of SEO at once on a large team, but solo operators and small sites get better results by sequencing them. Fixing technical foundations first prevents wasted effort on content that can't be indexed. Once the gate is clear, on-page, local, GEO, and off-page work can run in parallel as resources allow."
+    }
+  ],
+  "faqs": [
+    {
+      "q": "Is GEO replacing traditional SEO?",
+      "a": "GEO is not replacing traditional SEO — it's an additional layer for AI answer engines like ChatGPT and Google AI Overviews. Traditional ranking signals still drive most discovery, and the same quality content that ranks in Google often gets cited by AI models. Treat GEO as a complement that captures the growing share of searches answered inside AI tools."
+    },
+    {
+      "q": "Which type of SEO is best for a brand-new website?",
+      "a": "Technical SEO is the best starting type for a brand-new website because indexing and crawlability gate every other improvement. After confirming pages can be crawled and indexed, on-page SEO and GEO essentials deliver the next gains. Off-page link building should come last, once the site has content worth linking to."
+    },
+    {
+      "q": "How do I know which SEO type my site needs?",
+      "a": "Running an SEO and GEO audit is the fastest way to know which type your site needs, since it surfaces technical blockers, on-page gaps, and missing AI-readiness in one pass. The biggest issue it flags is usually where you should start. A free audit on the homepage gives you a prioritized starting point in under a minute."
+    }
+  ],
+  "relatedKeywords": ["types of SEO explained", "on-page vs technical SEO", "what type of SEO should I do", "local SEO for small business", "GEO vs SEO", "best SEO strategy for new site"],
+  "internalLinks": [
+    { "href": "/", "anchor": "Run a free SEO + GEO audit" },
+    { "href": "/blog/what-are-the-4-types-of-seo", "anchor": "What are the 4 types of SEO?" },
+    { "href": "/blog/what-is-on-page-seo", "anchor": "What is on-page SEO?" },
+    { "href": "/blog/what-is-technical-seo", "anchor": "What is technical SEO?" },
+    { "href": "/blog/what-is-generative-engine-optimization", "anchor": "What is generative engine optimization (GEO)?" }
+  ]
+}

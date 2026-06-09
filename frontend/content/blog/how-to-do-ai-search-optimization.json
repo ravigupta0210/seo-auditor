@@ -1,0 +1,128 @@
+{
+  "slug": "how-to-do-ai-search-optimization",
+  "title": "How to Do AI Search Optimization in 2026",
+  "date": "2026-06-09",
+  "updatedAt": "2026-06-09",
+  "tag": "AI Search",
+  "cluster": "ai-search",
+  "keyword": "AI search optimization",
+  "secondaryKeywords": ["optimize for AI search", "AI search engines", "rank in AI Overviews", "answer-first content"],
+  "readTime": 9,
+  "excerpt": "A practical 2026 playbook to optimize for ChatGPT, Perplexity, and Google AI Overviews — answer-first content, schema, and crawler access.",
+  "description": "AI search optimization in 2026: a step-by-step playbook for ChatGPT, Perplexity, and AI Overviews — answer-first content, FAQ schema, AI crawlers, and IndexNow.",
+  "tldr": "AI search optimization means structuring content so ChatGPT, Perplexity, and Google AI Overviews can extract and cite it: lead with a direct answer, add FAQ/Article schema, allow AI crawlers like GPTBot and PerplexityBot, and submit changes via Bing Webmaster + IndexNow for fast indexing.",
+  "status": "published",
+  "sections": [
+    {
+      "heading": "What AI search optimization actually is",
+      "body": [
+        "AI search optimization is the practice of structuring your content and site so that generative engines — ChatGPT, Perplexity, Google AI Overviews, and Microsoft Copilot — can crawl it, understand it, and quote it as a source in their answers. Unlike classic SEO, which competes for blue-link rankings, AI search optimization competes to be the sentence an AI lifts verbatim and the link it cites underneath.",
+        "The mechanics are different because the consumer is different. A search engine ranks ten results and lets a human choose; an AI engine reads many sources, synthesizes one answer, and names a handful of citations. To win, your page has to be the cleanest, most extractable answer to a specific question — not the longest article on the topic.",
+        "Three behaviors drive almost all visibility gains: answering the question in the first two sentences, marking up that answer with structured data so machines parse it unambiguously, and making sure AI crawlers are allowed to fetch the page in the first place. Miss any one and you become invisible to the model regardless of how good the writing is.",
+        "If you want the conceptual foundation behind this discipline, read [What Is Generative Engine Optimization (GEO)?](/blog/what-is-generative-engine-optimization) — AI search optimization is the hands-on execution of GEO principles across the major engines."
+      ]
+    },
+    {
+      "heading": "The workflow: from page to AI citation",
+      "body": [
+        "AI search optimization follows a repeatable loop you can run on any page. The goal is to take an existing URL and make it both fetchable by AI crawlers and quotable by the model, then verify the change landed.",
+        "[[flowchart]]",
+        "Each step maps to a concrete artifact: a robots.txt that allows GPTBot and PerplexityBot, a top-of-page answer block, JSON-LD `FAQPage` or `Article` schema, an IndexNow ping after publishing, and a monthly check of which prompts surface your brand. Skip the verification step and you are optimizing blind.",
+        "The order matters. Crawler access comes first because no amount of clever schema helps a page the bot is blocked from reading. Run a free [AI-crawler accessibility check](/check/geo.aibots.blocked) before anything else to confirm GPTBot, ClaudeBot, and PerplexityBot aren't accidentally disallowed."
+      ]
+    },
+    {
+      "heading": "Write answer-first content and mark it up",
+      "body": [
+        "Answer-first content puts the direct answer to a page's core question in the first 40-60 words, before any preamble. AI engines extract the opening of a passage far more often than buried conclusions, so a page that opens with 'AI search optimization is...' will out-cite a page that warms up with three paragraphs of context.",
+        "Pair every answer with structured data. A `FAQPage` schema turns each question-answer pair into a machine-readable unit, and `Article` schema with a named `author` and `datePublished` gives engines the E-E-A-T signals they weight. Pages that pass the [direct-answer check](/check/geo.directAnswer.missing) and ship valid FAQ JSON-LD are dramatically easier for models to quote cleanly.",
+        "Write so each section survives the Island Test: a section pulled out of context still names its subject and makes sense alone. AI engines rarely quote a full page — they lift one passage — so a paragraph that opens with 'This means...' or 'As mentioned above' is unquotable. Run the [Island Test check](/check/geo.islandTest.weak) on a live URL to find passages that fail this standard.",
+        "> Rule of thumb: if you can copy a single paragraph into a blank document and it still answers a real question, an AI engine can cite it."
+      ]
+    },
+    {
+      "heading": "Optimize for each engine: ChatGPT, Perplexity, AI Overviews",
+      "body": [
+        "The major AI search engines reward overlapping but distinct signals, so AI search optimization is not one-size-fits-all. ChatGPT's web tool and Perplexity both crawl live and cite sources, while Google AI Overviews draws heavily on pages already ranking in classic search.",
+        "[[table]]",
+        "ChatGPT visibility comes from being crawlable by OAI-SearchBot and being mentioned across the wider web — see [How to Rank in ChatGPT](/blog/how-to-rank-in-chatgpt). Perplexity rewards fresh, well-sourced pages and quotes them aggressively; [How to Get Cited by Perplexity](/blog/how-to-get-cited-by-perplexity) breaks down its citation behavior. AI Overviews still rests on a strong classic-SEO foundation, so [How to Rank in Google AI Overviews](/blog/how-to-rank-in-google-ai-overviews) ties the two worlds together.",
+        "Across all three, content freshness is a multiplier. Engines favor pages with recent `dateModified` timestamps and visibly updated facts, so revisit your top AI-target pages on a schedule and update the date when the content genuinely changes.",
+        "A practical tactic for all four engines is to mirror the exact phrasing of the questions people ask the model. If users prompt 'how do I do AI search optimization', a heading and answer block using that wording gives the engine a near-perfect passage to lift, which is why the workflow above ends with logging real prompts rather than guessing at keywords."
+      ]
+    },
+    {
+      "heading": "Get indexed fast: Bing Webmaster, IndexNow, and crawlers",
+      "body": [
+        "Fast indexing is the unsung half of AI search optimization, because Microsoft Copilot, ChatGPT, and parts of Perplexity lean on Bing's index. Submitting your site to Bing Webmaster Tools and enabling IndexNow tells those engines about new and changed URLs within minutes instead of waiting days for an organic recrawl.",
+        "IndexNow is a free protocol: you generate an API key, host it as a text file at your domain root, and ping the IndexNow endpoint every time you publish or update a page. Bing, Yandex, and several others consume the same ping, so one integration covers multiple engines.",
+        "On the crawler side, your `robots.txt` must explicitly allow the AI agents you want citations from — GPTBot, OAI-SearchBot, ClaudeBot, PerplexityBot, and Google-Extended. Many sites silently block these via an overzealous CDN rule or a copied robots template — the crawler-access basics live in [What Is Technical SEO?](/blog/what-is-technical-seo). Run the free [AI-crawler accessibility check](/check/geo.aibots.blocked) to confirm none of these user-agents are accidentally disallowed, and consider adding an llms.txt file that gives compliant engines a curated map of your best pages.",
+        "Verify the whole stack with a free [SEO + GEO audit on the homepage](/) — it checks crawler access, direct answers, schema, and freshness in one pass so you're not guessing which signal is missing."
+      ]
+    }
+  ],
+  "flowchart": {
+    "title": "AI search optimization workflow",
+    "steps": [
+      { "title": "Allow AI crawlers", "detail": "Confirm robots.txt permits GPTBot, OAI-SearchBot, ClaudeBot, and PerplexityBot before optimizing anything." },
+      { "title": "Lead with the answer", "detail": "Open each page with a 40-60 word direct answer to its core question." },
+      { "title": "Add structured data", "detail": "Ship FAQPage or Article JSON-LD with author and dates so engines parse the answer cleanly." },
+      { "title": "Pass the Island Test", "detail": "Make every section quotable on its own — name the subject, drop 'this/it/as mentioned'." },
+      { "title": "Submit via IndexNow", "detail": "Ping Bing Webmaster + IndexNow on publish so Copilot and ChatGPT see the change fast." },
+      { "title": "Track AI visibility", "detail": "Monthly, prompt each engine and log whether your brand and URL are cited." }
+    ]
+  },
+  "comparisonTable": {
+    "caption": "How the major AI search engines reward optimization",
+    "headers": ["Engine", "Primary crawler", "Strongest signal", "Cites sources?"],
+    "rows": [
+      ["ChatGPT search", "OAI-SearchBot / GPTBot", "Wide web mentions + crawlability", "Yes"],
+      ["Perplexity", "PerplexityBot", "Freshness + well-sourced answers", "Yes, aggressively"],
+      ["Google AI Overviews", "Googlebot / Google-Extended", "Classic ranking + structured data", "Yes, as links"],
+      ["Microsoft Copilot", "Bingbot", "Bing index + IndexNow speed", "Yes"]
+    ]
+  },
+  "peopleAlsoAsk": [
+    {
+      "q": "What is AI search optimization?",
+      "a": "AI search optimization is the practice of structuring content and site infrastructure so generative engines like ChatGPT, Perplexity, and Google AI Overviews can crawl, understand, and cite it. It differs from classic SEO by competing to be the answer an AI quotes rather than a blue link a human clicks. The core levers are answer-first writing, structured data, AI-crawler access, and fast indexing."
+    },
+    {
+      "q": "Which AI search engines matter most?",
+      "a": "ChatGPT search, Perplexity, Google AI Overviews, and Microsoft Copilot drive the majority of AI-mediated discovery in 2026. ChatGPT and Perplexity crawl live and cite sources directly, while AI Overviews leans on pages already ranking in Google. Copilot and parts of ChatGPT depend on Bing's index, which is why Bing Webmaster and IndexNow matter even if you ignore Bing's blue links."
+    },
+    {
+      "q": "Do I need different content for AI search?",
+      "a": "You don't need separate content, but you do need to restructure existing content. Lead with a direct 40-60 word answer, break topics into self-contained passages that pass the Island Test, and add FAQ or Article schema. The same page can rank in classic search and get cited by AI when written answer-first instead of as a slow-building narrative."
+    },
+    {
+      "q": "How do I track AI search visibility?",
+      "a": "Track AI search visibility by prompting each engine with your target questions on a schedule and logging whether your brand and URL appear in the answer or citations. Pair that with server-log monitoring of AI crawler hits from GPTBot and PerplexityBot to confirm pages are fetched. Dedicated AI-visibility trackers exist, but manual prompt-checking remains the most reliable ground truth."
+    },
+    {
+      "q": "How is AI search optimization different from SEO?",
+      "a": "AI search optimization targets being cited inside a synthesized answer, while SEO targets ranking a clickable result. SEO optimizes for crawlability, links, and keyword relevance to win a position; AI optimization adds answer-first structure, passage-level quotability, and explicit AI-crawler access. The disciplines overlap heavily, so strong technical SEO is a prerequisite."
+    }
+  ],
+  "faqs": [
+    {
+      "q": "Does answer-first content hurt my classic Google rankings?",
+      "a": "No — answer-first content tends to help both. Google's featured snippets and AI Overviews both reward a concise, near-the-top answer, so leading with the answer improves classic visibility while making the page quotable for AI engines. The key is to follow the short answer with depth, not to truncate it."
+    },
+    {
+      "q": "How long until AI engines start citing an optimized page?",
+      "a": "After allowing crawlers and pinging IndexNow, Bing-backed engines like Copilot can surface a page within days, while ChatGPT and Perplexity often pick it up over a few weeks as they recrawl. Pages that already rank in classic search appear in AI Overviews fastest. Treat AI citation timelines like SEO — weeks, not hours."
+    },
+    {
+      "q": "Do I need an llms.txt file for AI search optimization?",
+      "a": "An llms.txt file is optional but low-cost and increasingly useful. It gives compliant engines a curated map of your most important pages, which can improve how accurately they represent your site. It does not replace correct robots.txt rules or schema, so treat it as a complement."
+    }
+  ],
+  "relatedKeywords": ["optimize for AI search", "rank in ChatGPT", "get cited by Perplexity", "Google AI Overviews", "generative engine optimization", "IndexNow Bing"],
+  "internalLinks": [
+    { "href": "/", "anchor": "Run a free SEO + GEO audit" },
+    { "href": "/blog/how-to-rank-in-chatgpt", "anchor": "How to Rank in ChatGPT" },
+    { "href": "/blog/how-to-get-cited-by-perplexity", "anchor": "How to Get Cited by Perplexity" },
+    { "href": "/blog/how-to-rank-in-google-ai-overviews", "anchor": "How to Rank in Google AI Overviews" },
+    { "href": "/check/geo.aibots.blocked", "anchor": "AI-crawler accessibility check" }
+  ]
+}

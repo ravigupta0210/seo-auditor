@@ -1,0 +1,130 @@
+{
+  "slug": "what-is-local-seo",
+  "title": "What Is Local SEO? A 2026 Guide for Small Businesses",
+  "date": "2026-06-10",
+  "updatedAt": "2026-06-10",
+  "tag": "SEO",
+  "cluster": "seo-basics",
+  "keyword": "local SEO",
+  "secondaryKeywords": ["Google Business Profile", "NAP consistency", "local citations", "Google reviews ranking"],
+  "readTime": 9,
+  "excerpt": "Local SEO is how small businesses rank in Google's map pack: Google Business Profile, NAP consistency, reviews, and citations.",
+  "description": "Local SEO is the practice of ranking in Google's map pack and 'near me' searches. Learn Google Business Profile, NAP, reviews, and citations in this 2026 guide.",
+  "tldr": "Local SEO is the practice of ranking a business in Google's local map pack and 'near me' searches. The five levers that move local rankings are a complete Google Business Profile, consistent NAP (name, address, phone) across the web, genuine customer reviews, local citations, and location-specific content.",
+  "status": "published",
+  "sections": [
+    {
+      "heading": "What local SEO actually is",
+      "body": [
+        "**Local SEO** is the practice of optimizing a business so it appears in geographically relevant search results, especially Google's local map pack (the three businesses shown with a map) and \"near me\" queries. Local SEO matters most for businesses with a physical location or a defined service area, such as restaurants, dentists, plumbers, law firms, and gyms. When someone searches \"coffee shop near me\" or \"emergency electrician Denver,\" the businesses that show up at the top are doing local SEO, whether they realize it or not.",
+        "Local SEO differs from regular organic SEO in one key way: it ranks businesses, not just web pages. Google pulls local results from a separate system built around your **Google Business Profile** and signals like proximity to the searcher, relevance to the query, and prominence (how well-known and trusted the business is). That means a tiny one-page website can outrank a national chain in the local pack if its profile, reviews, and citations are stronger for that specific area.",
+        "Local SEO is one of the [four core types of SEO](/blog/what-are-the-4-types-of-seo) alongside on-page, off-page, and technical SEO. It sits on top of the other three: a fast, well-written, well-linked site is what makes a local listing competitive. But local SEO adds its own playbook, and this guide walks through the five levers that actually move local rankings in 2026."
+      ]
+    },
+    {
+      "heading": "Google Business Profile: the foundation",
+      "body": [
+        "Google Business Profile (GBP) is the single most important asset in local SEO, because it is the listing Google ranks in the map pack and shows in the knowledge panel beside search results. An incomplete or unclaimed profile is the most common reason a real, deserving business is invisible for local searches. Claiming and fully completing the profile is the first move for any local business.",
+        "A profile that ranks well is filled out completely, not just claimed. The essentials:",
+        "- **Primary category** chosen precisely (\"Italian restaurant,\" not just \"restaurant\"), plus relevant secondary categories.\n- **Accurate hours**, including holiday hours, so Google trusts the listing and customers do not get burned.\n- **Real photos** of the storefront, interior, team, and products, refreshed regularly.\n- **Services or menu** entered as structured items, not buried in a description.\n- **A keyword-aware description** that reads naturally and names what you do and where.",
+        "Beyond setup, GBP rewards activity. Posting updates, answering the Q&A section, and replying to every review all signal an active, legitimate business. Google increasingly treats these engagement signals as a tie-breaker between similar listings, so a profile you touch weekly will tend to beat an identical one left static."
+      ]
+    },
+    {
+      "heading": "NAP consistency, citations, and reviews",
+      "body": [
+        "NAP consistency means your business **N**ame, **A**ddress, and **P**hone number appear identically everywhere they are listed online. NAP consistency matters because Google cross-references your details across directories, your website, and your Google Business Profile to confirm the business is real and to merge those mentions into one trusted entity. A phone number formatted three different ways or an old suite number on a stale directory creates doubt that can suppress local rankings.",
+        "Local citations are mentions of your business NAP on other websites, such as Yelp, Apple Maps, Bing Places, industry directories, and local chambers of commerce. Citations build the \"prominence\" signal Google uses for local ranking, and consistency across them reinforces NAP. The goal is breadth on reputable, relevant directories rather than spammy volume, plus cleaning up duplicate or wrong listings that contradict your real details.",
+        "Google reviews are arguably the strongest controllable local ranking and conversion factor. Review **quantity**, average **rating**, **recency**, and whether the owner **responds** all feed local rankings, and reviews are also what convinces a searcher to choose you over the listing above. A practical 2026 approach:",
+        "- Ask every happy customer for a review with a direct GBP review link.\n- Reply to **every** review, positive and negative, within a day or two.\n- Never buy or fake reviews; Google's filters and the FTC both penalize it.\n- Encourage reviewers to mention the specific service and city naturally."
+      ]
+    },
+    {
+      "heading": "Local content and on-site signals",
+      "body": [
+        "Local content is website content created to match the geographic and service-specific searches your customers make, and it is how your own site reinforces your Google Business Profile. Local content gives Google relevance signals it cannot get from the profile alone, and it captures organic \"near me\" and \"in [city]\" searches that lead to your map listing. A service business with three locations should have a dedicated, genuinely useful page for each, not one thin page stuffed with city names.",
+        "High-impact local content and on-site moves include:",
+        "- **Location landing pages** with unique copy, embedded map, local phone, and area-specific details, one per city or service area.\n- **`LocalBusiness` JSON-LD** structured data so engines parse your name, address, geo, hours, and rating; see our [guide to adding JSON-LD schema](/blog/how-to-add-faq-schema).\n- **Embedded NAP** in the site footer and contact page, matching your GBP exactly.\n- **Locally relevant blog posts** answering real customer questions for the area.\n- **Internal links** from those local pages to your core service and contact pages.",
+        "On-site technical health still matters underneath all of this. If your location pages are slow or not mobile-friendly, both local and organic rankings suffer, since most \"near me\" searches happen on phones. You can surface missing structured data, weak titles, and other gaps in one pass by [running a free SEO + GEO audit](/) on any location page."
+      ]
+    },
+    {
+      "heading": "A local SEO checklist (and what to do first)",
+      "body": [
+        "Local SEO is a sequence, not a one-time task. The order below front-loads the work that moves rankings fastest, your profile and reviews, before the slower-compounding work of citations and content. Follow it as a checklist and you will have a defensible local presence within a few months.",
+        "[[flowchart]]",
+        "The comparison table below maps each local SEO lever to the ranking signal it influences and how much control you have over it, so you can prioritize where your effort actually pays off.",
+        "[[table]]",
+        "One 2026 note: local search increasingly feeds AI answers too. When someone asks an AI assistant for \"the best taco place open now near me,\" the engine often pulls from the same Google Business Profile and review data. Keeping your profile accurate and your reviews strong is now a head start on AI visibility, which you can extend with the moves in our [generative engine optimization guide](/blog/what-is-generative-engine-optimization).",
+        "> Start with your Google Business Profile and reviews this week. Those two levers move local rankings faster than anything else and cost nothing but attention."
+      ]
+    }
+  ],
+  "flowchart": {
+    "title": "Local SEO checklist in priority order",
+    "steps": [
+      { "title": "Claim and complete your Google Business Profile", "detail": "Pick the precise primary category and fill in hours, photos, services, and a real description." },
+      { "title": "Fix your NAP everywhere", "detail": "Make your name, address, and phone identical on your site, GBP, and every directory." },
+      { "title": "Build and clean local citations", "detail": "Get listed on reputable directories like Yelp, Apple Maps, and Bing, and remove duplicates." },
+      { "title": "Earn and respond to reviews", "detail": "Ask happy customers with a direct review link and reply to every review within a day or two." },
+      { "title": "Publish local content", "detail": "Create a unique landing page per location and add LocalBusiness JSON-LD structured data." },
+      { "title": "Track and iterate", "detail": "Monitor map-pack rankings, review velocity, and traffic, then strengthen the weakest lever." }
+    ]
+  },
+  "comparisonTable": {
+    "caption": "Local SEO levers by ranking signal and how much you control",
+    "headers": ["Lever", "Ranking signal it feeds", "Your level of control"],
+    "rows": [
+      ["Google Business Profile", "Relevance and prominence", "High — you own and edit it directly"],
+      ["NAP consistency", "Trust and entity confidence", "High — you fix it across listings"],
+      ["Local citations", "Prominence", "Medium — depends on directories"],
+      ["Google reviews", "Prominence and conversion", "Medium — you ask, customers decide"],
+      ["Local content + JSON-LD", "Relevance", "High — published on your own site"],
+      ["Proximity to searcher", "Distance", "Low — set by your real location"]
+    ]
+  },
+  "peopleAlsoAsk": [
+    {
+      "q": "How is local SEO different from regular SEO?",
+      "a": "Local SEO ranks businesses in Google's map pack and 'near me' searches, while regular organic SEO ranks individual web pages in the standard blue-link results. Local SEO relies heavily on a Google Business Profile, NAP consistency, reviews, and proximity to the searcher, signals that do not apply to ordinary organic ranking. A business often needs both: organic SEO to rank its pages and local SEO to win the map pack."
+    },
+    {
+      "q": "Do I need local SEO for an online business?",
+      "a": "A purely online business with no physical location and no defined service area generally does not need local SEO, and should focus on on-page, technical, and off-page SEO instead. Local SEO and a Google Business Profile require a real address or service area that Google can verify. The exception is a hybrid business, such as an online store with a showroom or a remote service targeting specific cities, which can still benefit from local optimization."
+    },
+    {
+      "q": "How important are Google reviews for local SEO?",
+      "a": "Google reviews are one of the strongest controllable local ranking factors, influencing both where a business appears in the map pack and whether searchers click it. Review quantity, average rating, recency, and owner responses all feed Google's local ranking system. Reviews also drive conversion, since most searchers read them before choosing a business, so a steady stream of genuine reviews compounds in value over time."
+    },
+    {
+      "q": "How long does local SEO take?",
+      "a": "Local SEO typically shows meaningful movement in three to six months, faster than general organic SEO because the Google Business Profile and review signals respond relatively quickly. A freshly claimed and fully completed profile can start ranking within weeks in low-competition areas. Competitive cities and crowded categories take longer, and results compound as reviews and citations accumulate."
+    },
+    {
+      "q": "What is NAP consistency in local SEO?",
+      "a": "NAP consistency means a business's name, address, and phone number appear identically across its website, Google Business Profile, and every online directory. NAP consistency matters because Google cross-references these details to confirm the business is legitimate and to merge mentions into one trusted entity. Inconsistent formatting, old addresses, or duplicate listings create doubt that can suppress local rankings."
+    }
+  ],
+  "faqs": [
+    {
+      "q": "Is local SEO free to do myself?",
+      "a": "The core of local SEO is free: claiming a Google Business Profile, fixing NAP, asking customers for reviews, and writing location content all cost nothing but time. Paid tools can speed up citation building and rank tracking, but they are optional for a single-location business. Many small businesses get strong results doing the fundamentals themselves before ever spending on tools or an agency."
+    },
+    {
+      "q": "How do I rank in the Google map pack?",
+      "a": "Ranking in the Google map pack comes down to relevance, distance, and prominence, the three factors Google uses for local results. To improve, complete your Google Business Profile with a precise category, keep NAP consistent, earn genuine reviews, build citations, and publish location-specific content. Distance to the searcher is fixed by your real location, so the controllable work is relevance and prominence."
+    },
+    {
+      "q": "Does local SEO help with AI search results?",
+      "a": "Local SEO increasingly helps with AI search, because AI assistants answering 'near me' and 'open now' questions often pull from the same Google Business Profile and review data Google uses for the map pack. A complete, accurate profile with strong reviews gives a business a head start on being recommended by AI. Pairing local SEO with broader generative engine optimization extends that visibility further."
+    }
+  ],
+  "relatedKeywords": ["Google Business Profile optimization", "map pack ranking", "NAP consistency", "local citations", "Google reviews SEO", "near me search"],
+  "internalLinks": [
+    { "href": "/", "anchor": "Run a free SEO + GEO audit" },
+    { "href": "/blog/what-are-the-4-types-of-seo", "anchor": "The 4 types of SEO explained" },
+    { "href": "/blog/how-to-add-faq-schema", "anchor": "How to add JSON-LD schema for structured data" },
+    { "href": "/blog/what-is-generative-engine-optimization", "anchor": "Generative engine optimization guide" },
+    { "href": "/check", "anchor": "All 40+ SEO and GEO checks" }
+  ]
+}

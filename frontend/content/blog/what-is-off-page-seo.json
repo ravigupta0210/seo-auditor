@@ -1,0 +1,129 @@
+{
+  "slug": "what-is-off-page-seo",
+  "title": "What Is Off-Page SEO? The 2026 Guide to Authority",
+  "date": "2026-06-10",
+  "updatedAt": "2026-06-10",
+  "tag": "SEO",
+  "cluster": "content-links",
+  "keyword": "off-page SEO",
+  "secondaryKeywords": ["backlinks", "digital PR", "brand mentions", "domain authority"],
+  "readTime": 9,
+  "excerpt": "Off-page SEO is everything beyond your site that builds authority — backlinks, mentions, PR, and reviews.",
+  "description": "Off-page SEO is everything beyond your own site that builds authority — backlinks, brand mentions, digital PR, and reviews. Here is the 2026 playbook.",
+  "tldr": "Off-page SEO is the practice of building your site's authority through signals that live outside your own domain — backlinks, unlinked brand mentions, digital PR, and reviews. The 4 pillars below explain what counts, why it still matters in 2026, and how long it takes.",
+  "status": "published",
+  "sections": [
+    {
+      "heading": "What is off-page SEO?",
+      "body": [
+        "Off-page SEO is the practice of building your website's authority and reputation through signals that live outside your own domain — backlinks from other sites, unlinked brand mentions, digital PR coverage, third-party reviews, and the buzz around your brand name. Where on-page SEO is what you write on your page and technical SEO is your site's plumbing, off-page SEO is everything other people say and link about you across the rest of the web.",
+        "The core idea is votes. When a respected site links to you, cites your data, or mentions your brand, it is effectively vouching for you. Search engines and AI answer engines read those votes as evidence that your content is trustworthy and worth surfacing. You cannot edit those signals directly the way you edit a title tag — you have to earn them, which is exactly why they carry weight.",
+        "Off-page SEO is the slowest and least controllable of the three disciplines, and that is precisely its value. Anyone can rewrite a meta description in five minutes, but earning a link from a major industry publication takes real work, a real relationship, or a genuinely useful asset. That difficulty is what makes off-page signals hard to fake and therefore meaningful. For the full map of where off-page sits, see [the 4 types of SEO](/blog/what-are-the-4-types-of-seo)."
+      ]
+    },
+    {
+      "heading": "On-page vs off-page vs technical SEO",
+      "body": [
+        "Off-page SEO is one of three buckets, and beginners constantly confuse them. On-page SEO is the content and HTML you edit on each page. Technical SEO is the site-wide infrastructure — crawlability, speed, indexing. Off-page SEO is the reputation you earn everywhere else, and it is the only bucket you do not fully control.",
+        "Why keep the distinction straight? Each bucket has a different owner and a different feedback loop. On-page lives with your content team and pays off in days to weeks. Technical lives with engineering and fixes systemic problems. Off-page lives with PR, marketing, and outreach, and it pays off over months — but it is what separates a technically perfect page that nobody trusts from one that consistently outranks bigger competitors.",
+        "Here is the cleanest way to tell them apart at a glance:",
+        "[[table]]",
+        "The practical takeaway: do not start with off-page SEO. Fix your [on-page SEO](/blog/what-is-on-page-seo) and [technical SEO](/blog/what-is-technical-seo) first, because backlinks pointing at a slow, thin, or unindexable page waste their authority. Off-page is the amplifier — make sure there is something worth amplifying."
+      ]
+    },
+    {
+      "heading": "The 4 pillars of off-page SEO in 2026",
+      "body": [
+        "Off-page SEO in 2026 comes down to four pillars. Most teams over-index on the first and ignore the rest:",
+        "**1. Backlinks.** Links from other domains pointing to yours remain the single strongest off-page signal. Quality beats quantity by a wide margin — one editorial link from a relevant, authoritative site outweighs hundreds of directory or spam links. Relevance, the linking site's own authority, and the anchor text all factor in.",
+        "**2. Brand mentions.** Search engines and large language models increasingly track when your brand is named, even without a link. An unlinked mention in a respected article still builds entity authority and feeds the AI systems that decide which brands to cite. In 2026 a strong, consistently mentioned brand name is itself a ranking and citation signal.",
+        "**3. Digital PR.** Earning coverage through original research, expert commentary, data studies, or newsworthy launches is the most durable way to attract backlinks and mentions at scale. A single well-pitched data study can earn dozens of links from journalists who need a source to cite.",
+        "**4. Reviews and reputation.** Third-party reviews on Google, G2, Trustpilot, and industry sites shape both rankings (especially local) and the trust signals AI tools weigh when recommending a business. Reviews are off-page proof that real people, not just your marketing copy, endorse you.",
+        "> Rule of thumb for 2026: build assets worth linking to before you ask for a single link. PR-led, earned links survive algorithm updates; bought or swapped links do not."
+      ]
+    },
+    {
+      "heading": "How to build off-page authority: the workflow",
+      "body": [
+        "Off-page SEO works best as a repeatable loop, not a one-off link-buying spree. Follow these steps in order so every link points at something worth ranking:",
+        "[[flowchart]]",
+        "A few tactics that punch above their weight in 2026: publish one piece of original data per quarter and pitch it to journalists; claim and optimize every relevant business profile and review platform; turn customer wins into case studies others want to reference; and answer questions where your audience already is, so your brand name circulates. For a tactical, budget-free starting point, read our sibling guide on [how to get backlinks for free](/blog/how-to-get-backlinks-for-free).",
+        "Avoid the shortcuts that still tempt people: link farms, mass guest-post networks, and paid links that violate search guidelines. They can earn a manual penalty that undoes months of work. The safest off-page strategy is also the one AI answer engines reward — be genuinely cited because you are genuinely useful.",
+        "Want a starting baseline? Run your site through a [free SEO and GEO audit](/) to confirm your on-page and technical foundations are solid before you invest in off-page outreach. There is no point earning links to pages that fail the basics."
+      ]
+    },
+    {
+      "heading": "Off-page SEO and AI answer engines",
+      "body": [
+        "Off-page SEO matters more, not less, in the age of AI search. Tools like ChatGPT, Perplexity, and Google AI Overviews decide which brands to cite partly based on how often and how authoritatively those brands are referenced across the web. Strong off-page signals — frequent, high-quality mentions and links — make your brand a known entity that AI systems trust enough to name in an answer.",
+        "The mechanics differ slightly from classic SEO. Where Google counts links, large language models also absorb the surrounding context: who mentioned you, in what tone, and alongside which other entities. A mention in a respected roundup teaches the model that you belong in that category. This is why digital PR and consistent brand presence now feed both your backlink profile and your AI citation footprint at the same time.",
+        "To capture that benefit, pair off-page work with answer-ready on-page content. A direct first paragraph, clean schema, and self-contained passages make it easy for an AI to quote you once your authority gets you into the consideration set. Learn the technique in [generative engine optimization](/blog/what-is-generative-engine-optimization), and check whether your pages give a [direct answer](/check/geo.directAnswer.missing) that an AI can lift verbatim."
+      ]
+    }
+  ],
+  "flowchart": {
+    "title": "The off-page SEO loop",
+    "steps": [
+      { "title": "Fix the foundation", "detail": "Ensure on-page and technical SEO pass before earning any links." },
+      { "title": "Build linkable assets", "detail": "Create original data, tools, or guides other sites genuinely want to cite." },
+      { "title": "Earn coverage", "detail": "Pitch journalists, claim review profiles, and seed brand mentions through digital PR." },
+      { "title": "Attract backlinks", "detail": "Let the assets and coverage pull editorial links from relevant, authoritative domains." },
+      { "title": "Monitor and disavow", "detail": "Track new links and brand mentions, and disavow spammy or toxic backlinks." },
+      { "title": "Compound", "detail": "Repeat each quarter so authority and brand entity strength accumulate over time." }
+    ]
+  },
+  "comparisonTable": {
+    "caption": "On-page vs off-page vs technical SEO at a glance",
+    "headers": ["Dimension", "On-page SEO", "Off-page SEO", "Technical SEO"],
+    "rows": [
+      ["What it is", "Content and HTML on your page", "Authority earned off your site", "Site-wide infrastructure"],
+      ["Examples", "Titles, headings, internal links", "Backlinks, mentions, PR, reviews", "Speed, crawling, indexing"],
+      ["You control it?", "Fully", "Indirectly — you earn it", "Fully"],
+      ["Owner", "Content team", "PR and outreach", "Engineering"],
+      ["Time to results", "Days to weeks", "Months", "Days to weeks (systemic)"]
+    ]
+  },
+  "peopleAlsoAsk": [
+    {
+      "q": "What is the difference between on-page and off-page SEO?",
+      "a": "On-page SEO is the optimization of elements you control on your own page — title tags, headings, content, and internal links. Off-page SEO is the authority you earn outside your site through backlinks, brand mentions, digital PR, and reviews. On-page is fully in your hands and pays off in weeks, while off-page must be earned from others and typically takes months."
+    },
+    {
+      "q": "Are backlinks still important in 2026?",
+      "a": "Backlinks remain the single strongest off-page ranking signal in 2026. Quality and relevance matter far more than quantity, so one editorial link from an authoritative, on-topic site outweighs hundreds of low-quality ones. Backlinks also influence which brands AI answer engines like Perplexity and Google AI Overviews choose to cite."
+    },
+    {
+      "q": "What are examples of off-page SEO?",
+      "a": "Examples of off-page SEO include earning backlinks from other websites, getting unlinked brand mentions in articles, running digital PR campaigns built on original data, and collecting reviews on Google, G2, or Trustpilot. Each lives outside your own domain, which is what makes it off-page. Together these signals tell search engines and AI tools that other people vouch for your brand."
+    },
+    {
+      "q": "How long does off-page SEO take?",
+      "a": "Off-page SEO generally takes months rather than weeks because backlinks and brand authority must be earned, not edited. A single digital PR campaign can produce links within days, but the compounding authority that moves competitive rankings usually builds over three to six months or longer. The slowness is the point — signals that are hard to earn are hard for competitors to fake."
+    },
+    {
+      "q": "Is off-page SEO better than on-page SEO?",
+      "a": "Neither off-page nor on-page SEO is better — they solve different problems and work together. On-page SEO makes a page worth ranking, while off-page SEO builds the authority that helps it actually rank against strong competitors. The right order is on-page and technical first, then off-page, because links pointing at a weak page waste their authority."
+    }
+  ],
+  "faqs": [
+    {
+      "q": "Can I do off-page SEO for free?",
+      "a": "Yes, off-page SEO can be done for free through tactics like original research, expert commentary, claiming review profiles, and earning unlinked brand mentions. Free off-page work trades money for time and effort rather than ad spend. Our sibling guide on how to get backlinks for free walks through specific budget-free tactics that work in 2026."
+    },
+    {
+      "q": "What off-page SEO tactics should I avoid?",
+      "a": "Avoid link farms, paid link schemes, and mass automated guest-posting networks, all of which violate search engine guidelines and risk a manual penalty. These shortcuts can erase months of progress overnight. The durable approach is earning editorial links and mentions by being genuinely useful and cite-worthy."
+    },
+    {
+      "q": "Does off-page SEO help with AI search and GEO?",
+      "a": "Off-page SEO directly helps generative engine optimization because AI tools decide which brands to cite based partly on how often and how authoritatively those brands appear across the web. Frequent, high-quality mentions and links make your brand a trusted entity that ChatGPT, Perplexity, and Google AI Overviews are willing to name. Pair off-page authority with answer-ready content for the best results."
+    }
+  ],
+  "relatedKeywords": ["link building strategies", "what are backlinks", "digital PR for SEO", "brand mentions SEO", "domain authority explained", "off-page SEO techniques"],
+  "internalLinks": [
+    { "href": "/", "anchor": "Run a free SEO + GEO audit" },
+    { "href": "/blog/what-is-on-page-seo", "anchor": "What Is On-Page SEO?" },
+    { "href": "/blog/what-are-the-4-types-of-seo", "anchor": "The 4 types of SEO" },
+    { "href": "/blog/how-to-get-backlinks-for-free", "anchor": "How to get backlinks for free" }
+  ]
+}

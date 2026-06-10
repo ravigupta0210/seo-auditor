@@ -1,0 +1,131 @@
+{
+  "slug": "what-is-a-meta-description",
+  "title": "What Is a Meta Description? Length, Examples & 2026 Best Practices",
+  "date": "2026-06-10",
+  "updatedAt": "2026-06-10",
+  "tag": "Metadata",
+  "cluster": "metadata",
+  "keyword": "meta description",
+  "secondaryKeywords": ["meta description length", "meta description examples", "click-through rate", "SERP snippet"],
+  "readTime": 9,
+  "excerpt": "A meta description is the SERP snippet under your title — here's the ideal length and how to write click-worthy ones.",
+  "description": "A meta description is the HTML snippet that summarizes a page in search results. Learn the ideal length (~120-160 chars) and how to write click-worthy ones.",
+  "tldr": "A meta description is an HTML tag (`<meta name=\"description\">`) that summarizes a page in roughly 120-160 characters and appears as the snippet under your title in search results. It does not directly affect rankings, but a sharp one lifts click-through rate.",
+  "status": "published",
+  "sections": [
+    {
+      "heading": "What is a meta description?",
+      "body": [
+        "A meta description is a short HTML tag that summarizes the content of a web page, and search engines often display it as the snippet of text underneath your blue-link title in the results. It lives in the page `<head>` and is written for humans, not crawlers — its entire job is to convince a searcher that your page answers their question better than the nine others on the page.",
+        "Here is what the tag looks like in the source:",
+        "```html\n<meta name=\"description\" content=\"A meta description is the HTML snippet that summarizes a page in search results. Learn the ideal length and how to write click-worthy ones.\">\n```",
+        "Two things matter immediately. First, a meta description is **not a ranking factor** — Google confirmed years ago that the text itself does not push you up or down. Second, it is one of your highest-leverage levers for **click-through rate (CTR)**, because it is the sales pitch a searcher reads before deciding to click. A page can rank #1 and still lose traffic to #2 if the snippet underneath is vague or empty.",
+        "In 2026 the stakes widened: the same description now feeds two audiences. Classic Google search uses it as the snippet, and AI answer engines like Perplexity and ChatGPT frequently pull it as the one-line gloss when they cite your page. A crisp description is doing double duty. The meta description is one element of on-page SEO — for the full picture see [What Is On-Page SEO?](/blog/what-is-on-page-seo)."
+      ]
+    },
+    {
+      "heading": "How long should a meta description be?",
+      "body": [
+        "A meta description should be roughly **120 to 160 characters** — long enough to make a real promise, short enough that Google does not truncate it with an ellipsis. Google renders snippets by pixel width rather than a hard character count, but 120-160 characters is the safe range that displays in full on both desktop and mobile.",
+        "Mobile is the tighter constraint. Phones show fewer characters, so front-load the most important words and the keyword in the first ~120 characters. Anything past 160 risks being cut off mid-sentence, which looks sloppy and buries your call to action.",
+        "A few practical rules:",
+        "- **Don't pad to hit 160.** A tight 130-character description beats a waffly 160-character one.\n- **Write a unique description per page.** Duplicate descriptions across a site dilute relevance and confuse the snippet picker.\n- **Include the primary keyword once, naturally.** Google bolds query-matching words in the snippet, which draws the eye.\n- **End with a reason to click** — a benefit, a number, or a verb (\"Learn,\" \"Compare,\" \"Audit\").",
+        "Want to know which of your pages are missing a description or running too long? Run a [free SEO + GEO audit](/) — it flags every page-level metadata gap in one pass."
+      ]
+    },
+    {
+      "heading": "Why Google rewrites your meta description",
+      "body": [
+        "Google rewrites meta descriptions more often than most people expect — studies consistently show it replaces the author-written description well over half the time. Google does this when its algorithm decides a different snippet better matches the specific query the searcher typed, since a single static description cannot be perfectly relevant to every search that lands on the page.",
+        "The common triggers for a rewrite are predictable:",
+        "[[flowchart]]",
+        "- **The description doesn't mention the query terms.** If someone searches \"meta description length\" and your snippet never uses those words, Google may pull a sentence from the body that does.\n- **The description is missing entirely.** With nothing to show, Google generates a snippet from your visible content.\n- **The description is duplicated or boilerplate.** Generic site-wide descriptions get overridden in favor of page-specific text.\n- **The description is keyword-stuffed.** Spammy, unreadable descriptions are discarded.",
+        "> You cannot force Google to use your exact text — but you can make rewrites far less likely by writing a description that already contains the keywords your page targets and reads like a natural summary.",
+        "Treat rewrites as feedback, not failure. If Google consistently swaps in a sentence from your second paragraph, that sentence is probably a better summary than what you wrote — borrow it. Verify which pages lack a description with the [missing meta description check](/check/metadata.description.missing)."
+      ]
+    },
+    {
+      "heading": "Good vs bad meta descriptions: examples",
+      "body": [
+        "A good meta description makes a specific promise that matches search intent; a bad one is vague, duplicated, or stuffed with keywords. The difference between the two columns below is the difference between a 3% and a 6% click-through rate on the same ranking position.",
+        "[[table]]",
+        "Notice the pattern in the good examples: each one names the subject, includes a concrete detail (a number, a benefit, a verb), and reads like a sentence a human would say out loud. The bad examples either say nothing specific, repeat the title verbatim, or cram keywords until they stop being readable.",
+        "A reliable template for most pages:",
+        "```\n[What the page is/does] + [the specific value or number] + [a verb that invites a click].\n```",
+        "For example: \"A canonical tag tells Google which URL is the master copy. Learn the right way to use it and avoid duplicate-content penalties.\" It names the subject, states the value, and ends on an action — all inside 140 characters."
+      ]
+    },
+    {
+      "heading": "Meta description best practices for 2026",
+      "body": [
+        "The 2026 best practices for meta descriptions blend classic SERP optimization with the new reality that AI answer engines read the same tag. Follow these and your snippet works for both Google and the AI tools that increasingly summarize the web.",
+        "- **One unique description per indexable page.** Templated descriptions are fine for thin pages (e.g. product variants) but every important page deserves a hand-written one.\n- **Match the search intent, not just the keyword.** A buyer-intent page and an informational page about the same topic need different pitches.\n- **Front-load the keyword and the hook.** Mobile truncation and AI summarizers both favor the first sentence.\n- **Avoid quotation marks and special characters** that Google may cut the snippet at.\n- **Don't auto-generate descriptions from the first 160 characters of the body** — that is a fallback, not a strategy.\n- **Skip descriptions you don't have time to write well.** A blank description that Google fills from rich body content can outperform a lazy boilerplate one.",
+        "Where a meta description fits in the bigger workflow: the title tag wins the impression, the description wins the click, and the body wins the ranking. Optimize all three together. Pair the description check with the [title tag check](/check/metadata.title.missing) so no page ships with a half-built snippet.",
+        "The fastest way to enforce all of this across a real site is to audit it. Run your URL through the [free SEO + GEO audit tool](/) and it returns every missing, duplicate, or over-length meta description alongside 40+ other [page-level checks](/check)."
+      ]
+    }
+  ],
+  "flowchart": {
+    "title": "Why Google rewrites your meta description",
+    "steps": [
+      { "title": "User runs a query", "detail": "A searcher types a specific phrase that may not match your fixed description." },
+      { "title": "Google checks your description", "detail": "It evaluates whether your tag is present, unique, and relevant to that query." },
+      { "title": "Relevance test fails", "detail": "If the description is missing, duplicated, stuffed, or off-topic, Google looks elsewhere." },
+      { "title": "Google extracts a snippet", "detail": "It pulls a sentence from your visible body content that better matches the query." },
+      { "title": "Rewritten snippet displays", "detail": "The searcher sees Google's generated snippet instead of your written description." }
+    ]
+  },
+  "comparisonTable": {
+    "caption": "Good vs bad meta descriptions",
+    "headers": ["Scenario", "Bad example", "Good example"],
+    "rows": [
+      ["Blog post on meta descriptions", "Meta descriptions are important. Read our blog to learn more about SEO and meta descriptions today.", "A meta description is the SERP snippet under your title. See the ideal length (120-160 chars) and click-worthy examples."],
+      ["Product page (running shoes)", "Shoes, running shoes, best shoes, buy shoes, cheap shoes online, shoes shoes shoes.", "Lightweight trail shoes with a 5mm drop. Free returns and same-day shipping on orders before 2pm."],
+      ["Local service page", "Welcome to our website. We are the best in the business. Contact us for more information.", "Emergency plumbing in Austin, 24/7. Licensed techs, flat-rate pricing, 60-minute response. Call now."],
+      ["Length", "320-character wall of text that Google truncates mid-word with an ellipsis...", "Tight 138 characters that displays in full on desktop and mobile."]
+    ]
+  },
+  "peopleAlsoAsk": [
+    {
+      "q": "How long should a meta description be?",
+      "a": "A meta description should be roughly 120 to 160 characters so it displays in full without being truncated by Google. Google measures snippets by pixel width rather than exact characters, but 120-160 is the safe range across desktop and mobile. Front-load the keyword and the hook in the first 120 characters because mobile shows fewer."
+    },
+    {
+      "q": "Does the meta description affect ranking?",
+      "a": "A meta description does not directly affect ranking — Google has confirmed the text is not a ranking factor. It does, however, strongly influence click-through rate, because it is the snippet searchers read before deciding to click. Higher CTR can indirectly support performance, so a sharp description is still worth writing."
+    },
+    {
+      "q": "Why does Google rewrite my meta description?",
+      "a": "Google rewrites a meta description when its algorithm finds a snippet from your page that better matches the specific query a searcher typed. Common triggers are a missing, duplicated, or keyword-stuffed description, or one that does not mention the search terms. Google replaces author-written descriptions more than half the time, so treat it as normal and write descriptions that already contain your target keywords."
+    },
+    {
+      "q": "What happens if I have no meta description?",
+      "a": "If a page has no meta description, Google automatically generates a snippet by pulling text from the visible body content. This auto-generated snippet is often relevant but unpredictable and may not present your best pitch. For low-priority pages a blank description is acceptable, but every important page should have a hand-written one to control the message and CTR."
+    },
+    {
+      "q": "Should every page have a unique meta description?",
+      "a": "Every indexable, important page should have a unique meta description. Duplicate descriptions across many pages dilute relevance and prompt Google to override them with generated snippets. Thin or near-identical pages, such as product variants, can use a sensible template, but core landing pages and articles deserve hand-written descriptions."
+    }
+  ],
+  "faqs": [
+    {
+      "q": "Where do I add a meta description?",
+      "a": "A meta description goes inside the `<head>` of your HTML as a `<meta name=\"description\" content=\"...\">` tag. Most CMS platforms and SEO plugins expose a dedicated field so you do not edit raw HTML. After adding it, re-crawl the page or run an audit to confirm it is present and within the 120-160 character range."
+    },
+    {
+      "q": "Do AI search engines use my meta description?",
+      "a": "AI answer engines like Perplexity and ChatGPT frequently use the meta description as a short gloss when they cite or summarize your page. Because the same tag now serves both Google and AI tools, a clear, factual description is more valuable than ever. Avoid marketing fluff and write a sentence that accurately summarizes the page."
+    },
+    {
+      "q": "Can a meta description be too short?",
+      "a": "A meta description can be too short if it fails to make a compelling promise, but there is no strict minimum. A tight 110-character description that names the subject and gives a reason to click outperforms a padded 160-character one. Focus on clarity and intent rather than hitting a character target."
+    }
+  ],
+  "relatedKeywords": ["meta description length", "meta description examples", "how to write a meta description", "Google rewrites meta description", "SERP snippet optimization", "meta tags for SEO"],
+  "internalLinks": [
+    { "href": "/", "anchor": "Run a free SEO + GEO audit" },
+    { "href": "/check/metadata.description.missing", "anchor": "Missing meta description check" },
+    { "href": "/blog/what-is-on-page-seo", "anchor": "What Is On-Page SEO?" },
+    { "href": "/check/metadata.title.missing", "anchor": "Title tag check" }
+  ]
+}

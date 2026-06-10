@@ -1,0 +1,112 @@
+{
+  "slug": "how-to-create-an-xml-sitemap",
+  "title": "How to Create an XML Sitemap (2026 Guide)",
+  "date": "2026-06-10",
+  "updatedAt": "2026-06-10",
+  "tag": "Technical SEO",
+  "cluster": "technical-seo",
+  "keyword": "XML sitemap",
+  "secondaryKeywords": ["sitemap.xml", "submit sitemap to Google", "Search Console sitemap", "sitemap errors"],
+  "readTime": 9,
+  "excerpt": "How to create an XML sitemap, what to include or exclude, submit it to Google and Bing, and fix the \"Couldn't fetch\" error.",
+  "description": "An XML sitemap is a file listing the URLs you want indexed. Here's how to create one, what to include, submit it to Search Console and Bing, and fix common errors.",
+  "tldr": "An XML sitemap is a file (usually sitemap.xml) that lists the canonical URLs you want search engines to crawl and index. Create one in 3 steps: generate the file from your CMS or a crawler, host it at yourdomain.com/sitemap.xml, then submit it in Google Search Console and Bing Webmaster Tools.",
+  "status": "published",
+  "sections": [
+    {
+      "heading": "What an XML sitemap is",
+      "body": [
+        "An **XML sitemap** is a machine-readable file — almost always named `sitemap.xml` — that lists the canonical URLs on a site you want search engines to discover, crawl, and index. The keyword to anchor on is **XML sitemap**: it is not a ranking signal and it does not guarantee indexing. It is a discovery aid that tells Google and Bing *here are the pages that matter and when they last changed*.",
+        "Concretely, a sitemap is a list of `<url>` entries, each wrapping a `<loc>` (the absolute URL) and optionally a `<lastmod>` timestamp. Search engines read the file to find pages that internal links or crawl budget might otherwise miss — deep pages, newly published posts, or sections with weak internal linking.",
+        "A minimal valid sitemap looks like this:",
+        "```xml\n<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<urlset xmlns=\"http://www.sitemaps.org/schemas/sitemap/0.9\">\n  <url>\n    <loc>https://example.com/</loc>\n    <lastmod>2026-06-10</lastmod>\n  </url>\n  <url>\n    <loc>https://example.com/blog/how-to-create-an-xml-sitemap</loc>\n    <lastmod>2026-06-10</lastmod>\n  </url>\n</urlset>\n```",
+        "Two limits define the format. A single sitemap file can hold at most **50,000 URLs** and must be **under 50 MB uncompressed**. Past either limit, you split into multiple sitemaps and tie them together with a sitemap *index* file. A sitemap is one piece of [technical SEO](/blog/what-is-technical-seo) — the layer that governs how machines crawl and parse a site rather than how humans read it."
+      ]
+    },
+    {
+      "heading": "What to include and what to exclude",
+      "body": [
+        "An XML sitemap should list only the URLs you genuinely want indexed: one canonical, self-canonicalizing, `200 OK` version of each page. The fastest way to confuse a crawler — and to invite the \"Sitemap contains URLs which are blocked by robots.txt\" warning — is to include pages you are simultaneously telling Google not to index.",
+        "Include in a sitemap:",
+        "- **Canonical, indexable pages** that return `200 OK` and point their canonical tag at themselves.\n- **Important content** — published posts, products, category pages, key landing pages.\n- **Pages with weak internal linking** that crawlers might otherwise miss.",
+        "Exclude from a sitemap:",
+        "- **Noindexed pages, redirects, and 404s** — listing a `noindex` URL sends mixed signals.\n- **Non-canonical duplicates** — only the canonical URL belongs here. If you are unsure which version is canonical, see [what is a canonical tag](/blog/what-is-a-canonical-tag).\n- **robots.txt-blocked URLs**, paginated infinite-scroll junk, faceted-search parameter URLs, and login or admin pages.",
+        "The governing rule: **the sitemap is a statement of intent, not an inventory**. Every URL in it should be one you would be happy to see ranking tomorrow. Mixing in `noindex` URLs, redirect chains, or canonicalized duplicates is the most common reason Search Console reports a sitemap full of warnings."
+      ]
+    },
+    {
+      "heading": "How to generate, submit, and verify a sitemap",
+      "body": [
+        "Creating an XML sitemap is a four-step loop: generate the file, host it at a stable URL, submit it to search engines, then verify it processed cleanly. Most sites never reach the verify step, which is exactly where the silent failures hide.",
+        "[[flowchart]]",
+        "**Generating** the file depends on your stack. Most modern frameworks and CMS platforms produce one automatically: WordPress via Yoast or Rank Math, Next.js via a `sitemap.ts` route or `next-sitemap`, Shopify and Squarespace out of the box. For static or custom sites, a crawler like Screaming Frog can export a sitemap from a live crawl. Whatever the method, the output must be served at a stable, absolute URL — conventionally `https://yourdomain.com/sitemap.xml`.",
+        "**Submitting** means two things. First, reference the sitemap in `robots.txt` with a `Sitemap:` line so any crawler discovers it automatically:",
+        "```\nSitemap: https://example.com/sitemap.xml\n```",
+        "Second, submit the URL explicitly in [Google Search Console](#submit) and Bing Webmaster Tools (covered in the next section). **Verifying** is the step people skip — open Search Console a day later, confirm the status reads *Success*, and check that the discovered URL count matches what you expected. To confirm the file is even reachable and well-formed before you submit, run the live URL through our [free SEO + GEO audit](/) at [/](/), which checks the sitemap alongside 40+ other signals at [/check](/check)."
+      ]
+    },
+    {
+      "heading": "How to submit a sitemap to Google and Bing",
+      "body": [
+        "Submitting a sitemap to Google means pasting its URL into Google Search Console; submitting to Bing means doing the same in Bing Webmaster Tools. Both processes take under a minute and both require a verified property for the domain first.",
+        "**Google Search Console.** Open the property for your domain, click **Sitemaps** in the left navigation, enter the path (e.g. `sitemap.xml`) in the *Add a new sitemap* field, and click **Submit**. Google fetches the file, parses it, and within hours to a few days reports a status of *Success*, *Has errors*, or *Couldn't fetch*, along with the number of discovered URLs.",
+        "**Bing Webmaster Tools.** Open your verified site, go to **Sitemaps**, click **Submit sitemap**, paste the full absolute URL (`https://example.com/sitemap.xml`), and submit. Bing also imports sitemaps automatically if you connect a verified Search Console account, which is the fastest path if Google is already set up.",
+        "[[table]]",
+        "You do not need to resubmit a sitemap every time content changes. Once submitted, Google and Bing re-fetch it on their own schedule. Resubmit manually only after a major structural change — a domain migration, a new sitemap index, or a large batch of new pages you want crawled quickly. The `Sitemap:` line in `robots.txt` also keeps the file discoverable to crawlers that never touch your webmaster accounts."
+      ]
+    },
+    {
+      "heading": "Common sitemap errors and how to fix them",
+      "body": [
+        "Most sitemap problems reduce to a handful of repeatable errors, and the two that waste the most time are the **\"Couldn't fetch\" stale status** and **lastmod abuse**. Both look like the sitemap is broken when the real cause is elsewhere.",
+        "> \"Couldn't fetch\" rarely means the file is broken. It usually means Google could not reach it at the moment it tried.",
+        "**\"Couldn't fetch\" (the stale-status trap).** Search Console shows *Couldn't fetch* when Google's request for the file failed or timed out. The status is sticky — it can linger for days even after you fix the cause, which makes people re-edit a sitemap that was fine all along. Real culprits, in order of frequency: the sitemap URL returns a redirect or non-`200` status; a slow or cold-start server timed out the fetch (common on serverless and free-tier hosting that sleeps); a `robots.txt` rule blocks the sitemap path; or the file is served with the wrong content type. Fix the root cause, confirm the file loads instantly in a browser, then resubmit — and ignore the stale status for a day or two while it clears.",
+        "**lastmod abuse.** The `<lastmod>` tag should reflect the genuine last meaningful change to a page. Setting every URL's `lastmod` to today's date on every build — a default in some generators — trains Google to distrust the field entirely. Google has stated it ignores `lastmod` when the values are obviously unreliable. Either populate `lastmod` accurately or omit it; a wrong timestamp is worse than none.",
+        "Other frequent errors:",
+        "- **URLs blocked by robots.txt** — you listed pages you also disallowed; remove them from one place or the other.\n- **Non-200 / redirect / noindex URLs in the sitemap** — strip anything that is not a canonical, indexable `200`.\n- **Relative or wrong-protocol URLs** — every `<loc>` must be a full absolute URL on the canonical host and protocol.\n- **Over the 50,000-URL or 50 MB limit** — split into multiple files and reference them from a sitemap index.",
+        "When the file looks correct but pages still are not indexed, the issue is often crawl access rather than the sitemap itself. A blocked AI or search crawler never reads your perfect file — confirm crawler access at [/check/geo.aibots.blocked](/check/geo.aibots.blocked)."
+      ]
+    }
+  ],
+  "flowchart": {
+    "title": "Create, submit, and verify an XML sitemap",
+    "steps": [
+      { "title": "Generate the file", "detail": "Produce sitemap.xml from your CMS, framework, or a crawler, listing only canonical 200 OK URLs." },
+      { "title": "Host at a stable URL", "detail": "Serve it at https://yourdomain.com/sitemap.xml with the correct XML content type." },
+      { "title": "Reference in robots.txt", "detail": "Add a Sitemap: line so any crawler discovers the file automatically." },
+      { "title": "Submit to search engines", "detail": "Enter the sitemap path in Google Search Console and the full URL in Bing Webmaster Tools." },
+      { "title": "Verify processing", "detail": "Return a day later and confirm the status reads Success with the expected discovered-URL count." },
+      { "title": "Monitor and resubmit", "detail": "Re-check after structural changes; resubmit only after migrations or large batches of new pages." }
+    ]
+  },
+  "comparisonTable": {
+    "caption": "Submitting a sitemap: Google Search Console vs. Bing Webmaster Tools",
+    "headers": ["Step", "Google Search Console", "Bing Webmaster Tools"],
+    "rows": [
+      ["Where to go", "Sitemaps section in the left nav", "Sitemaps section, then Submit sitemap"],
+      ["What to enter", "The path, e.g. sitemap.xml", "The full absolute URL"],
+      ["Auto-import", "No native import from Bing", "Can import directly from a verified GSC account"],
+      ["Status reported", "Success / Has errors / Couldn't fetch", "Submitted with last-read date and URL count"]
+    ]
+  },
+  "peopleAlsoAsk": [
+    { "q": "What is an XML sitemap?", "a": "An XML sitemap is a machine-readable file, usually named sitemap.xml, that lists the canonical URLs a site wants search engines to crawl and index. Each entry contains the page URL in a loc tag and optionally a lastmod timestamp marking the last meaningful change. The file is a discovery aid, not a ranking signal, and a single sitemap can hold up to 50,000 URLs." },
+    { "q": "Do I need a sitemap for a small site?", "a": "A small site with clean internal linking does not strictly need an XML sitemap, because Google can crawl every page by following links. A sitemap still helps in three cases: when pages are deep or poorly linked, when content is brand new and not yet linked, or when you want clear indexing data in Search Console. Since most CMS platforms generate one automatically, the cost is near zero, so there is little reason to skip it." },
+    { "q": "How do I submit a sitemap to Google?", "a": "Submit a sitemap to Google by opening your verified property in Google Search Console, clicking Sitemaps in the left navigation, entering the sitemap path such as sitemap.xml, and clicking Submit. Google fetches and parses the file, then reports a status of Success, Has errors, or Couldn't fetch within hours to a few days. You should also add a Sitemap: line to robots.txt so crawlers discover the file without the manual submission." },
+    { "q": "Why does my sitemap say couldn't fetch?", "a": "A sitemap shows Couldn't fetch when Google's request for the file failed or timed out, not usually because the file is malformed. Common causes are a sitemap URL that returns a redirect or non-200 status, a slow or cold-start server that timed out, a robots.txt rule blocking the path, or the wrong content type. The status is sticky and can linger for days after you fix the root cause, so resolve the cause, confirm the file loads instantly in a browser, then wait for the status to clear." },
+    { "q": "How many URLs can an XML sitemap contain?", "a": "A single XML sitemap file can contain at most 50,000 URLs and must be under 50 MB uncompressed. Sites larger than that split their URLs across multiple sitemap files and tie them together with a sitemap index file, which itself can reference up to 50,000 sitemaps. Staying within these limits prevents truncation and processing errors in Search Console." }
+  ],
+  "faqs": [
+    { "q": "Should every URL in my sitemap be indexable?", "a": "Yes. Every URL in an XML sitemap should be a canonical, self-canonicalizing page that returns 200 OK and is not blocked by robots.txt or marked noindex. Listing redirects, 404s, noindexed pages, or non-canonical duplicates sends mixed signals and triggers warnings in Search Console. The sitemap is a statement of which pages you want indexed, not a full inventory of every URL on the site." },
+    { "q": "Do I need to resubmit my sitemap after every change?", "a": "No. Once a sitemap is submitted, Google and Bing re-fetch it on their own schedule, so routine content edits need no action. Resubmit manually only after a major structural change such as a domain migration, a new sitemap index, or a large batch of new pages you want crawled quickly. Keeping a Sitemap: line in robots.txt also ensures crawlers keep finding the file on their own." },
+    { "q": "Does a lastmod date affect rankings?", "a": "A lastmod date does not affect rankings directly; it only hints when a page last changed so crawlers can prioritize re-crawling. Setting every URL's lastmod to the build date on every deploy makes the field unreliable, and Google ignores lastmod values it cannot trust. Populate lastmod with the genuine last meaningful edit, or omit it entirely rather than faking it." }
+  ],
+  "relatedKeywords": ["sitemap.xml file", "submit sitemap to Search Console", "sitemap index file", "lastmod tag SEO", "couldn't fetch sitemap", "robots.txt sitemap"],
+  "internalLinks": [
+    { "href": "/", "anchor": "Run a free SEO + GEO audit" },
+    { "href": "/check", "anchor": "Browse all 40+ SEO + GEO checks" },
+    { "href": "/blog/what-is-technical-seo", "anchor": "What is technical SEO" },
+    { "href": "/blog/what-is-a-canonical-tag", "anchor": "What is a canonical tag" },
+    { "href": "/check/geo.aibots.blocked", "anchor": "Check whether AI crawlers are blocked" }
+  ]
+}

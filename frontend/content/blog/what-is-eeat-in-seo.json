@@ -1,0 +1,134 @@
+{
+  "slug": "what-is-eeat-in-seo",
+  "title": "What Is E-E-A-T in SEO? (And How to Show It in 2026)",
+  "date": "2026-06-10",
+  "updatedAt": "2026-06-10",
+  "tag": "SEO",
+  "cluster": "seo-basics",
+  "keyword": "E-E-A-T",
+  "secondaryKeywords": ["E-E-A-T SEO", "how to improve E-E-A-T", "E-E-A-T ranking factor", "experience expertise authoritativeness trust"],
+  "readTime": 9,
+  "excerpt": "E-E-A-T stands for Experience, Expertise, Authoritativeness, and Trust — here's how to prove each one.",
+  "description": "E-E-A-T (Experience, Expertise, Authoritativeness, Trust) is how Google and AI engines judge content quality. Learn what each part means and how to show it in 2026.",
+  "tldr": "E-E-A-T stands for Experience, Expertise, Authoritativeness, and Trust — the four quality signals Google's Search Quality Rater Guidelines use to judge content. You show E-E-A-T with named author bylines, Person schema, cited sources, and visible first-hand experience, and the same signals now help AI engines like ChatGPT and Perplexity decide who to cite.",
+  "status": "published",
+  "sections": [
+    {
+      "heading": "What E-E-A-T means in SEO",
+      "body": [
+        "**E-E-A-T** stands for Experience, Expertise, Authoritativeness, and Trust — the four signals Google's Search Quality Rater Guidelines use to judge how much a piece of content can be relied on. The framework began as E-A-T in 2014, and Google added the second E — Experience — in December 2022 to reward content from people who have actually *done* the thing they write about, not just read about it. Trust is the most important of the four: Google describes the other three as supporting it.",
+        "E-E-A-T is not a single score Google assigns to a page. It is a lens human quality raters use to evaluate search results, and the algorithm approximates it through measurable signals — who wrote the page, what sources it cites, whether other trusted sites reference it, and whether the claims match reality. The clearer those signals, the easier it is for both Google and AI engines to conclude the content deserves to rank or be cited.",
+        "The framework matters most for what Google calls *Your Money or Your Life* (YMYL) topics — health, finance, legal, safety — where bad information causes real harm. But in 2026 E-E-A-T effectively touches everything, because generative engines like ChatGPT, Perplexity, and Google AI Overviews lean on the same trust signals to decide which sources to quote in their answers.",
+        "[[flowchart]]"
+      ]
+    },
+    {
+      "heading": "The four components, broken down",
+      "body": [
+        "Each letter in E-E-A-T answers a different question a reader — or an algorithm — has about your content. **Experience** asks *did the author actually do or use this?* **Expertise** asks *does the author have the knowledge or credentials to be right?* **Authoritativeness** asks *is this person or site a recognized go-to source on the topic?* **Trust** asks *can I rely on this site, its claims, and its intentions?*",
+        "The two are easy to confuse, so the distinction is worth stating plainly. Experience is first-hand: a reviewer who has used a product for six months, a nurse describing a procedure she performs. Expertise is knowledge-based: formal training, a track record, demonstrable skill. A medical doctor writing about a drug has expertise; a patient describing what taking that drug felt like has experience. The best content for many queries combines both.",
+        "> Trust is the center of the diagram. Google's own documentation says experience, expertise, and authoritativeness all exist to support trust — a site can look expert and authoritative and still fail E-E-A-T if it hides who runs it, buries contact details, or makes claims it cannot back up.",
+        "The table below maps each component to the concrete, on-page ways you demonstrate it. None of these are tricks — they are simply how you make existing credibility legible to a crawler that cannot read your mind.",
+        "[[table]]"
+      ]
+    },
+    {
+      "heading": "Is E-E-A-T a ranking factor?",
+      "body": [
+        "E-E-A-T is not a direct ranking factor with its own score, and Google has said so repeatedly — there is no E-E-A-T number in the algorithm. Instead, Google builds many individual signals that, taken together, *approximate* what a human rater would call high E-E-A-T. So while you cannot optimize an E-E-A-T metric, you absolutely can optimize the signals that produce it.",
+        "Those signals are concrete and checkable: a named author with a real bio and credentials, `Person` and `Organization` structured data, outbound citations to primary sources, inbound links and brand mentions from trusted sites, accurate and updated information, and clear ownership and contact details. A missing or anonymous [author byline](/check/geo.eeat.author.missing) is one of the most common trust gaps we flag in audits, and it is also one of the easiest to fix.",
+        "Think of E-E-A-T less as a knob and more as a reputation. You do not turn it up; you earn it and then make it visible. The sites that win are the ones where every page makes it obvious *who* is talking, *why they're qualified*, and *what they're basing claims on*."
+      ]
+    },
+    {
+      "heading": "How to show E-E-A-T (the practical checklist)",
+      "body": [
+        "Showing E-E-A-T comes down to making your credibility machine-readable. Start with authorship: put a real, named author on every substantive page, link to an author page with a bio, credentials, and links to their professional profiles, and add `Person` schema so engines can connect the byline to a real entity. Anonymous or \"Admin\" bylines actively work against you on YMYL topics.",
+        "Next, prove experience and back claims. Add first-hand detail that a generic article cannot fake — original screenshots, your own test data, specific dates, what actually went wrong. Cite primary sources with descriptive links rather than vague references, and keep a visible \"last updated\" date so freshness is obvious. Here is the minimum `Person` markup that connects an author byline to a real entity:",
+        "```json\n{\n  \"@context\": \"https://schema.org\",\n  \"@type\": \"Person\",\n  \"name\": \"Jordan Lee\",\n  \"jobTitle\": \"Senior SEO Analyst\",\n  \"url\": \"https://example.com/authors/jordan-lee\",\n  \"sameAs\": [\n    \"https://www.linkedin.com/in/jordanlee\",\n    \"https://x.com/jordanlee\"\n  ]\n}\n```",
+        "Finally, shore up site-level trust. Publish clear About, Contact, and editorial-policy pages, use HTTPS, fix factual errors fast, and earn mentions from sources your audience already trusts. The structured-data side is covered in our [JSON-LD required fields guide](/blog/json-ld-required-fields), and you can scan a live URL for missing author and trust signals with a [free SEO + GEO audit](/) in one pass.",
+        "- **Author**: named byline + author page + `Person` schema + credentials\n- **Experience**: original screenshots, test data, specific first-hand detail\n- **Expertise**: credentials, relevant background, depth that matches the topic\n- **Authority**: links and mentions from recognized sources in your niche\n- **Trust**: HTTPS, About/Contact pages, editorial policy, visible update dates"
+      ]
+    },
+    {
+      "heading": "Does E-E-A-T matter for AI search?",
+      "body": [
+        "E-E-A-T matters as much for AI search as it does for Google's classic results, and arguably more. Generative engines like ChatGPT, Perplexity, Google AI Overviews, and Bing Copilot have to choose which handful of sources to quote in an answer, and they preferentially cite material that carries strong trust signals — clear authorship, citations, and a recognizable, reputable domain. Weak E-E-A-T means your content gets summarized away while a competitor gets named.",
+        "The overlap with [generative engine optimization](/blog/what-is-generative-engine-optimization) is large. The same named authors, citations, and `Person`/`Organization` schema that satisfy Google's quality raters also give an AI model the entity data it needs to attribute a claim to you confidently. Pair that with the [Island Test](/blog/island-test-geo) — writing answers that stand alone when an engine lifts them out of context — and you make your content both trustworthy and easy to quote.",
+        "To see where your pages stand on author signals, structured data, and the broader trust picture, run the [E-E-A-T author check](/check/geo.eeat.author.missing) or the full suite of [40+ SEO and GEO checks](/check). E-E-A-T is no longer just a Google concept — it is the shared currency of every engine deciding whether to trust you."
+      ]
+    }
+  ],
+  "flowchart": {
+    "title": "How to build and show E-E-A-T",
+    "steps": [
+      { "title": "Add a named author", "detail": "Put a real byline on every page, linked to an author bio with credentials." },
+      { "title": "Mark it up", "detail": "Add Person and Organization schema so engines connect the byline to a real entity." },
+      { "title": "Prove experience", "detail": "Include original screenshots, test data, and first-hand detail a generic article can't fake." },
+      { "title": "Cite sources", "detail": "Link claims to primary sources with descriptive anchor text." },
+      { "title": "Earn authority", "detail": "Collect links and mentions from sites your audience already trusts." },
+      { "title": "Lock in trust", "detail": "Use HTTPS, clear About/Contact pages, and visible last-updated dates." }
+    ]
+  },
+  "comparisonTable": {
+    "caption": "The four parts of E-E-A-T and how to show each",
+    "headers": ["Component", "Question it answers", "How to show it"],
+    "rows": [
+      ["Experience", "Did the author actually do or use this?", "Original screenshots, test data, specific first-hand detail, dates, what went wrong"],
+      ["Expertise", "Is the author qualified to be right?", "Stated credentials, relevant background, author bio, depth matching the topic"],
+      ["Authoritativeness", "Is this a recognized go-to source?", "Backlinks and brand mentions from trusted sites, Organization schema, consistent niche focus"],
+      ["Trust", "Can I rely on this site and its claims?", "HTTPS, About/Contact/editorial pages, cited sources, accurate info, named ownership"]
+    ]
+  },
+  "peopleAlsoAsk": [
+    {
+      "q": "What does E-E-A-T stand for?",
+      "a": "E-E-A-T stands for Experience, Expertise, Authoritativeness, and Trust. It is the framework in Google's Search Quality Rater Guidelines used to judge how reliable a piece of content is. Google added the first E, Experience, in December 2022 to reward first-hand knowledge, and it describes Trust as the most important of the four."
+    },
+    {
+      "q": "Is E-E-A-T a ranking factor?",
+      "a": "E-E-A-T is not a direct ranking factor with its own score, and Google has confirmed there is no single E-E-A-T number in the algorithm. Instead, Google uses many individual signals — authorship, citations, links, accuracy, and site ownership — that together approximate what a human rater would call high E-E-A-T. You cannot optimize an E-E-A-T metric, but you can and should optimize the concrete signals that produce it."
+    },
+    {
+      "q": "How do I improve E-E-A-T?",
+      "a": "Improve E-E-A-T by making your credibility visible and machine-readable. Add a named author with a bio, credentials, and Person schema to every substantive page, prove experience with original screenshots and test data, cite primary sources, and earn mentions from trusted sites. At the site level, use HTTPS, publish clear About and Contact pages, and show visible last-updated dates."
+    },
+    {
+      "q": "Does E-E-A-T matter for AI search?",
+      "a": "Yes, E-E-A-T matters for AI search and arguably more than for classic results. Generative engines like ChatGPT, Perplexity, and Google AI Overviews must choose a small set of sources to quote, and they favor content with clear authorship, citations, and a reputable domain. Weak E-E-A-T means an engine summarizes your content away while naming a competitor instead."
+    },
+    {
+      "q": "What is the difference between Experience and Expertise in E-E-A-T?",
+      "a": "Experience is first-hand — the author personally did or used the thing, such as a reviewer who used a product for months. Expertise is knowledge-based — formal training, credentials, or a demonstrable track record. A doctor writing about a drug has expertise, while a patient describing taking it has experience, and the strongest content for many queries combines both."
+    }
+  ],
+  "faqs": [
+    {
+      "q": "Is E-E-A-T only important for YMYL topics?",
+      "a": "E-E-A-T matters most for Your Money or Your Life (YMYL) topics like health, finance, and legal, where wrong information can cause real harm and Google holds content to the highest standard. But it applies to all content in 2026, because AI engines use the same trust signals to choose which sources to cite on any topic. Treat strong E-E-A-T as the baseline rather than a YMYL-only requirement."
+    },
+    {
+      "q": "Does adding Person schema improve E-E-A-T?",
+      "a": "Person schema does not directly raise an E-E-A-T score, because no such score exists, but it strengthens the underlying signals. Person schema connects a byline to a real entity with a name, job title, and professional profiles, which helps Google and AI engines verify who wrote the content. It works best when paired with a real author bio page rather than added in isolation."
+    },
+    {
+      "q": "Can AI-written content have good E-E-A-T?",
+      "a": "AI-written content can rank, but it struggles with E-E-A-T on its own because it cannot supply genuine Experience — it has not personally used the product or performed the procedure. The fix is human involvement: a named expert who reviews, fact-checks, and adds first-hand detail and original data. Google judges content by quality and trust signals, not how it was produced, so the experience and authorship layers are what separate trusted AI-assisted content from generic filler."
+    }
+  ],
+  "relatedKeywords": [
+    "what does E-E-A-T stand for",
+    "E-E-A-T vs E-A-T",
+    "author schema for SEO",
+    "Google quality rater guidelines",
+    "YMYL content SEO",
+    "trust signals for AI search"
+  ],
+  "internalLinks": [
+    { "href": "/", "anchor": "Run a free SEO + GEO audit" },
+    { "href": "/check/geo.eeat.author.missing", "anchor": "Check for a missing author byline" },
+    { "href": "/blog/what-is-generative-engine-optimization", "anchor": "Generative engine optimization explained" },
+    { "href": "/blog/json-ld-required-fields", "anchor": "JSON-LD required fields guide" },
+    { "href": "/blog/island-test-geo", "anchor": "The Island Test for GEO" }
+  ]
+}

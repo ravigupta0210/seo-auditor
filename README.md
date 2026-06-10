@@ -2,6 +2,8 @@
 
 Free, comprehensive SEO + JSON-LD + metadata + GEO/AEO auditor for any website. No signup, no paywall, no crawl cap. Built for the AI-search era.
 
+**🔗 Live: [freeseoaudit.vercel.app](https://freeseoaudit.vercel.app)** — run a free audit, or read the [GEO/SEO guides](https://freeseoaudit.vercel.app/blog) and browse [all 40+ checks](https://freeseoaudit.vercel.app/check).
+
 ## What it checks
 
 ### Classic SEO (Google starter guide coverage)

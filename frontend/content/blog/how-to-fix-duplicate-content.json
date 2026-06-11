@@ -1,0 +1,132 @@
+{
+  "slug": "how-to-fix-duplicate-content",
+  "title": "How to Fix Duplicate Content (2026 Guide)",
+  "date": "2026-06-11",
+  "updatedAt": "2026-06-11",
+  "tag": "Technical SEO",
+  "cluster": "technical-seo",
+  "keyword": "duplicate content",
+  "secondaryKeywords": ["canonical tag", "URL parameters", "301 redirect", "duplicate URLs"],
+  "readTime": 9,
+  "excerpt": "Diagnose and fix duplicate content with canonical tags, 301 redirects, and consistent internal linking.",
+  "description": "Learn how to fix duplicate content in 2026: causes like URL parameters and http/https, plus fixes using canonical tags, 301 redirects, and clean internal links.",
+  "tldr": "Fix duplicate content by picking one canonical URL per page, then enforcing it with a self-referencing canonical tag, 301 redirects from variants (http/https, www/non-www), and consistent internal links. Most duplicate content comes from URL parameters and protocol or domain inconsistencies, not copied text.",
+  "status": "published",
+  "sections": [
+    {
+      "heading": "What duplicate content actually is",
+      "body": [
+        "Duplicate content is the same or near-identical page reachable at more than one URL, which forces search engines to guess which version to index and rank. The fix is to choose one canonical URL per page and enforce it with a self-referencing canonical tag, 301 redirects from every variant, and internal links that always point to the chosen URL.",
+        "The biggest misconception is that duplicate content means plagiarism. In practice, most duplicate content is technical: your own site serving one page at `https://`, `http://`, `www`, and `non-www` addresses, or appending tracking parameters like `?utm_source=`. Google treats each distinct URL as a candidate page, so a single article can quietly fragment into a dozen indexable copies.",
+        "When that happens, ranking signals split across the duplicates. Backlinks point at three different URLs, crawl budget gets wasted re-fetching clones, and the version Google picks to show may not be the one you optimized. The goal is consolidation: one URL absorbs every signal."
+      ]
+    },
+    {
+      "heading": "What causes duplicate content",
+      "body": [
+        "Duplicate content is caused almost entirely by URLs that resolve to the same content but differ by protocol, host, parameters, or path. Identifying the source category is what tells you which fix to apply.",
+        "- **URL parameters**: `/shoes?color=red&sort=price` and `/shoes` serve the same products. Faceted navigation, session IDs, and `utm_` tracking are the usual culprits.",
+        "- **http vs https**: serving a page on both `http://` and `https://` doubles every URL on the site if redirects are missing.",
+        "- **www vs non-www**: `www.example.com` and `example.com` are different hosts to a crawler unless one redirects to the other.",
+        "- **Staging and deployment URLs**: preview domains from Vercel, Netlify, or a `staging.` subdomain that got indexed because `robots.txt` or `noindex` was never applied.",
+        "- **Trailing slashes and case**: `/About/` and `/about` can both resolve and both get crawled.",
+        "- **Pagination and printer views**: `/blog/page/2` or `?print=1` versions echoing the main page.",
+        "A surprising amount of duplication originates from deployment platforms. A staging build at `project-git-main.vercel.app` that returns a 200 and lacks `noindex` will get crawled and compete with production. Treat every non-canonical host as something to block or redirect, covered more in [what is technical SEO](/blog/what-is-technical-seo)."
+      ]
+    },
+    {
+      "heading": "How to diagnose duplicate content",
+      "body": [
+        "Diagnosing duplicate content means finding which URLs serve the same page before you decide on a fix. Run the flow below from broad discovery to a per-URL decision.",
+        "[[flowchart]]",
+        "Start with a `site:` search and Google Search Console's Pages report, where duplicates surface as **\"Duplicate, Google chose a different canonical\"** or **\"Alternate page with proper canonical tag.\"** The first message is a problem; the second usually is not. Then test your protocol and host handling directly:",
+        "```bash\n# Each of these should redirect (301) to ONE canonical URL\ncurl -sI http://example.com/page\ncurl -sI http://www.example.com/page\ncurl -sI https://www.example.com/page\n# Expect: HTTP/1.1 301 -> https://example.com/page\n```",
+        "Confirm each page declares a self-referencing canonical and that the URL it names matches the version you want indexed. A free audit can flag missing or conflicting canonicals across your whole site at once. **[Run a free SEO + GEO audit](/)** to see which URLs are competing and whether your canonical tags actually point where you think they do."
+      ]
+    },
+    {
+      "heading": "How to fix duplicate content",
+      "body": [
+        "Fixing duplicate content comes down to three tools applied in the right order: 301 redirects for variants that should never exist, canonical tags for variants that must exist, and consistent internal linking so you stop generating new duplicates.",
+        "[[table]]",
+        "**1. Redirect protocol and host variants.** Pick one canonical form, then 301 every other version to it. This is the single highest-impact fix because it collapses http/https and www/non-www at the server level:",
+        "```nginx\n# Force https + non-www\nserver {\n  listen 80;\n  server_name example.com www.example.com;\n  return 301 https://example.com$request_uri;\n}\nserver {\n  listen 443 ssl;\n  server_name www.example.com;\n  return 301 https://example.com$request_uri;\n}\n```",
+        "**2. Add self-referencing canonical tags.** Every page should declare the URL you want indexed, even pages with no known duplicates. For parameterized pages, point the canonical at the clean version:",
+        "```html\n<!-- On /shoes?color=red&sort=price -->\n<link rel=\"canonical\" href=\"https://example.com/shoes\" />\n```",
+        "A canonical tag is a hint, not a command, so it must be reinforced by consistent signals. See [what is a canonical tag](/blog/what-is-a-canonical-tag) for how Google weighs it against redirects, sitemaps, and internal links.",
+        "**3. Block staging and deployment URLs.** Add `noindex` headers on preview hosts and disallow them in `robots.txt` so they never enter the index in the first place.",
+        "**4. Link consistently.** Internal links are a ranking signal Google uses to choose canonicals, so always link to `https://example.com/page` and never to the `www`, `http`, or parameterized variant. One inconsistent nav link can undo a correct canonical tag."
+      ]
+    },
+    {
+      "heading": "Does duplicate content hurt rankings, and common mistakes",
+      "body": [
+        "Duplicate content does not trigger a penalty in 2026, but it does dilute rankings by splitting link equity and crawl signals across copies. The damage is indirect: the wrong URL ranks, backlinks scatter, and crawl budget burns on clones instead of new pages.",
+        "The most common mistakes that keep duplicates alive:",
+        "- **Canonical pointing to a redirecting or noindexed URL** — Google ignores conflicting signals and picks its own canonical.",
+        "- **302 instead of 301** — temporary redirects do not consolidate signals the way permanent ones do.",
+        "- **`rel=canonical` plus `noindex` on the same page** — contradictory instructions that confuse crawlers.",
+        "- **Relative canonical URLs** — always use absolute URLs to avoid resolving against the wrong host.",
+        "> A canonical tag and a 301 redirect serve different jobs: redirect when a URL should not exist at all, canonicalize when the variant must remain reachable by users.",
+        "After fixing, re-run a crawl and watch Search Console's Pages report consolidate over the following weeks. For a full structured pass across canonicals, redirects, metadata, and crawlability, work through [how to do an SEO audit](/blog/how-to-do-an-seo-audit)."
+      ]
+    }
+  ],
+  "flowchart": {
+    "title": "Diagnose to fix duplicate content",
+    "steps": [
+      { "title": "Discover duplicates", "detail": "Use site: search plus Search Console's Pages report to list URLs serving the same content." },
+      { "title": "Classify the cause", "detail": "Tag each variant as protocol, host, parameter, staging, or pagination duplication." },
+      { "title": "Pick one canonical URL", "detail": "Choose the single version every signal should point to, usually https + non-www + clean path." },
+      { "title": "Redirect dead variants", "detail": "301 http/https and www/non-www variants that should never resolve separately." },
+      { "title": "Canonicalize live variants", "detail": "Add self-referencing canonical tags and point parameter URLs at the clean version." },
+      { "title": "Enforce with internal links", "detail": "Link only to the canonical URL and re-crawl to confirm consolidation." }
+    ]
+  },
+  "comparisonTable": {
+    "caption": "Which fix for which duplicate",
+    "headers": ["Cause", "Best fix", "Why"],
+    "rows": [
+      ["http vs https / www vs non-www", "301 redirect", "Variant should never resolve; redirect consolidates all signals"],
+      ["URL parameters (utm, sort, filter)", "Self-referencing canonical to clean URL", "Page must stay reachable for users but indexes once"],
+      ["Staging / deployment URLs", "noindex + robots.txt disallow", "Keep preview hosts out of the index entirely"],
+      ["Pagination / printer view", "Canonical to main page", "Echoes primary content; consolidate without redirecting"],
+      ["Trailing slash / case variants", "301 redirect to one form", "Normalize at the server to a single canonical path"]
+    ]
+  },
+  "peopleAlsoAsk": [
+    {
+      "q": "What causes duplicate content?",
+      "a": "Duplicate content is caused by the same page being reachable at multiple URLs that differ by protocol, host, or parameters. Common sources include serving a page on both http and https, www and non-www versions, URL parameters like ?utm_source or ?sort=price, and indexable staging or deployment URLs. Most duplicate content is technical and self-inflicted rather than copied text."
+    },
+    {
+      "q": "Does duplicate content hurt SEO?",
+      "a": "Duplicate content hurts SEO indirectly by splitting ranking signals across multiple URLs instead of consolidating them on one. Backlinks and crawl budget scatter, and Google may index a different version than the one you optimized. There is no direct penalty for duplicate content, but the diluted signals can lower the rankings of all the copies."
+    },
+    {
+      "q": "How do I find duplicate content on my site?",
+      "a": "Find duplicate content using a site: search in Google plus the Pages report in Google Search Console, which flags 'Duplicate, Google chose a different canonical.' Then test redirects with curl to confirm http, https, www, and non-www all resolve to one URL. A site-wide SEO audit can list competing URLs and conflicting canonical tags in a single pass."
+    },
+    {
+      "q": "Does Google penalize duplicate content?",
+      "a": "Google does not apply a penalty for ordinary duplicate content as of 2026, and Google has repeatedly confirmed there is no duplicate content penalty. Instead, Google filters duplicates by choosing one canonical version to index and rank. The practical harm is dilution: scattered link equity and wasted crawl budget rather than a manual action."
+    }
+  ],
+  "faqs": [
+    {
+      "q": "Should I use a canonical tag or a 301 redirect?",
+      "a": "Use a 301 redirect when a URL variant should never exist for users, such as http or www versions you want fully consolidated. Use a self-referencing canonical tag when the variant must stay reachable, such as a parameterized filter or sort URL that you still want users to load. A redirect is binding; a canonical tag is a strong hint that Google can override if other signals conflict."
+    },
+    {
+      "q": "How long until duplicate content fixes take effect?",
+      "a": "Duplicate content fixes take effect as Google re-crawls the affected URLs, which typically ranges from a few days to several weeks depending on crawl frequency. You can speed it up by submitting the canonical URLs in an XML sitemap and using the URL Inspection tool in Search Console. Watch the Pages report consolidate over the following weeks to confirm the fix worked."
+    }
+  ],
+  "relatedKeywords": ["canonical tag", "301 redirect duplicate URLs", "URL parameters SEO", "http to https redirect", "duplicate content penalty", "www vs non-www"],
+  "internalLinks": [
+    { "href": "/", "anchor": "Run a free SEO + GEO audit" },
+    { "href": "/blog/what-is-a-canonical-tag", "anchor": "What is a canonical tag" },
+    { "href": "/blog/what-is-technical-seo", "anchor": "What is technical SEO" },
+    { "href": "/blog/how-to-do-an-seo-audit", "anchor": "How to do an SEO audit" }
+  ]
+}

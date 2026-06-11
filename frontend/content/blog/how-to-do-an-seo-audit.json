@@ -1,0 +1,105 @@
+{
+  "slug": "how-to-do-an-seo-audit",
+  "title": "How to Do an SEO Audit (Free Step-by-Step 2026 Guide)",
+  "date": "2026-06-11",
+  "updatedAt": "2026-06-11",
+  "tag": "SEO",
+  "cluster": "seo-basics",
+  "keyword": "how to do an SEO audit",
+  "secondaryKeywords": ["SEO audit checklist", "free SEO audit", "technical SEO audit", "GEO audit"],
+  "readTime": 9,
+  "excerpt": "How to do an SEO audit in 2026: a repeatable six-pass process covering crawl, on-page, technical, content, links, and GEO.",
+  "description": "Learn how to do an SEO audit in 2026 with a free, repeatable six-pass process: crawl, on-page, technical, content, links, and an AI-search GEO check.",
+  "tldr": "An SEO audit is a six-pass sweep of a site — crawl, on-page, technical, content, links, and a GEO/AI-search pass. The fastest way to start is a free crawler at the homepage that flags the metadata, canonical, structured-data, and AI-crawler issues in one scan, then you fix top-down.",
+  "status": "published",
+  "sections": [
+    {
+      "heading": "How to do an SEO audit: the six passes",
+      "body": [
+        "To learn how to do an SEO audit, run six passes over a site in order — crawl, on-page, technical, content, links, and a GEO (AI-search) pass — fixing access problems before polish problems. An SEO audit is a structured inspection that finds why a site under-ranks in Google and under-cites in AI engines, then turns each finding into a prioritized fix. The discipline is the ordering: there is no point rewriting a title tag on a page Google is forbidden from crawling.",
+        "The single fastest way to start an audit in 2026 is to crawl one URL and let a tool surface the obvious failures. Our [free SEO + GEO audit](/) at the homepage scans a page in one pass and flags missing titles, weak meta descriptions, broken canonicals, missing JSON-LD, and blocked AI crawlers — then links each finding to a fix. Run that first, read the results, and you will know which of the six passes actually needs your time.",
+        "Most audits fail not because the auditor missed a check but because they fixed the wrong layer first. A site can have a beautiful content strategy and still be invisible because one `Disallow:` line in robots.txt hides a whole section. Work top-down: access, then indexing, then everything you can see.",
+        "This guide gives you the repeatable version — the same six passes you can run monthly on your own site or in an afternoon on a client's. None of it requires paid software."
+      ]
+    },
+    {
+      "heading": "The audit flow, start to finish",
+      "body": [
+        "An SEO audit runs in a fixed order so that an early failure explains later symptoms instead of sending you on a wild goose chase. The flow below is the spine of the whole process: each pass either clears the site to compete or hands you a concrete fix list.",
+        "[[flowchart]]",
+        "The reason the order matters is dependency. Crawl access decides whether anything else is even measurable; indexing decides whether a page is eligible to rank; on-page and content decide how relevant it looks; links decide how much authority backs it; and the GEO pass decides whether AI answer engines can read and cite it. Skip ahead and you will optimize signals that never get counted.",
+        "A practical rule: do not move to the next pass until the current one is clean for your top 10 pages. Audits balloon when people try to fix every URL at once. Fix the templates and the money pages first; the long tail inherits most of those fixes for free."
+      ]
+    },
+    {
+      "heading": "Passes 1-3: crawl, on-page, and technical",
+      "body": [
+        "The first three passes — crawl, on-page, and technical — cover whether engines can reach your pages, whether each page is written to rank, and whether the underlying infrastructure holds up. These are where the highest-leverage, lowest-effort wins almost always hide.",
+        "**Pass 1, crawl.** Confirm Googlebot and AI crawlers can actually reach your important URLs. Check robots.txt for stray `Disallow:` rules, verify pages return a `200` status, and pull Search Console's coverage report to see what Google has and has not indexed. A blocked or erroring page is a zero, no matter how good its content.",
+        "**Pass 2, on-page.** Audit each money page for one clear title tag, a compelling meta description, a single `H1`, a logical heading hierarchy, and internal links to related pages. The two checks that fail most often are [missing or duplicated titles](/check/metadata.title.missing) and [missing meta descriptions](/check/metadata.description.missing) — both cheap to fix and disproportionately tied to click-through. The full per-page checklist lives in [What Is On-Page SEO?](/blog/what-is-on-page-seo).",
+        "**Pass 3, technical.** Inspect the plumbing: canonical tags (each page should point at itself), HTTPS everywhere, a clean XML sitemap listing only indexable URLs, and Core Web Vitals measured on real mobile data — aim for LCP under 2.5s, INP under 200ms, and CLS under 0.1. The complete breakdown is in [What Is Technical SEO?](/blog/what-is-technical-seo), and you can see every infrastructure check at [/check](/check)."
+      ]
+    },
+    {
+      "heading": "Passes 4-6: content, links, and the GEO pass",
+      "body": [
+        "Passes 4 through 6 — content, links, and GEO — move from fixing pages to growing authority and making your site legible to AI answer engines. These passes are slower and more judgment-driven, which is exactly why you only reach them once the first three are clean.",
+        "**Pass 4, content.** Review whether each page actually satisfies its query and whether you have thin, cannibalizing, or stale pages diluting the site. Look for two patterns: pages competing for the same keyword (consolidate them) and pages that rank but have not been updated in years (refresh and re-date). Strong content also demonstrates first-hand experience and credentials, which is what [E-E-A-T](/blog/what-is-eeat-in-seo) measures.",
+        "**Pass 5, links.** Audit internal links (every important page should be reachable in a few clicks and linked with descriptive anchor text) and external links pointing at you. You are checking for orphan pages, broken links, and a healthy, non-spammy backlink profile.",
+        "**Pass 6, GEO.** This is the 2026 addition most checklists still skip. A GEO pass asks whether ChatGPT, Claude, Perplexity, and Google AI Overviews can crawl and cite you. Confirm AI crawlers are not [blocked by robots.txt or your firewall](/check/geo.aibots.blocked), that key pages open with a [direct answer](/check/geo.directAnswer.missing), and that your JSON-LD has the required fields. Generative Engine Optimization is its own discipline now — [What Is Generative Engine Optimization?](/blog/what-is-generative-engine-optimization) covers it end to end."
+      ]
+    },
+    {
+      "heading": "Manual vs. tool-assisted: what to automate",
+      "body": [
+        "A tool-assisted SEO audit beats a fully manual one for everything rule-based — titles, canonicals, status codes, JSON-LD, AI-crawler access — while manual judgment still wins for content quality and link relevance. The smart move is to automate the deterministic checks and spend your human attention where there is no right answer in a spreadsheet.",
+        "[[table]]",
+        "The split is simple: anything with a definite right answer (does the canonical point at itself? does the title exist? is GPTBot allowed?) should be machine-checked across every URL, because consistency at scale is where humans fail. Anything requiring taste — is this content actually the best answer? is this backlink worth keeping? — stays manual.",
+        "You can run the automated half for free. Search Console, a browser's view-source, and a [free audit crawler](/) cover the vast majority of checks at no cost. Paid suites add scale for enterprise-sized sites, but a small or medium site stays healthy on free tools alone — see [How to Do SEO for Free](/blog/how-to-do-seo-for-free) for the full free stack."
+      ]
+    }
+  ],
+  "flowchart": {
+    "title": "An SEO audit, in order",
+    "steps": [
+      { "title": "Crawl access", "detail": "Confirm robots.txt and your server let Googlebot and AI crawlers reach key pages." },
+      { "title": "On-page", "detail": "Check each page for one title, a meta description, a single H1, and clean internal links." },
+      { "title": "Technical", "detail": "Audit canonicals, HTTPS, the XML sitemap, and Core Web Vitals on real mobile data." },
+      { "title": "Content", "detail": "Find thin, duplicate, or stale pages and confirm each one satisfies its query." },
+      { "title": "Links", "detail": "Review internal links for orphans and the backlink profile for relevance and spam." },
+      { "title": "GEO pass", "detail": "Verify AI crawlers aren't blocked and pages open with a direct, citable answer." }
+    ]
+  },
+  "comparisonTable": {
+    "caption": "Which audit checks to automate vs. judge by hand",
+    "headers": ["Audit area", "Best done by", "Why"],
+    "rows": [
+      ["Title and meta tags", "Tool", "Existence and length are rule-based and easy to miss at scale"],
+      ["Canonicals and status codes", "Tool", "There is a definite right answer for every URL"],
+      ["JSON-LD structured data", "Tool", "Required fields either exist or they don't"],
+      ["AI-crawler access", "Tool", "Blocked bots are a binary check across robots.txt"],
+      ["Content quality", "Human", "Whether a page is the best answer is judgment, not a rule"],
+      ["Backlink relevance", "Human", "Spam vs. legitimate links needs editorial taste"]
+    ]
+  },
+  "peopleAlsoAsk": [
+    { "q": "How do I do an SEO audit myself?", "a": "To do an SEO audit yourself, run six passes in order: crawl access, on-page elements, technical infrastructure, content quality, links, and a GEO/AI-search check. Start by crawling one URL with a free tool to surface obvious failures like missing titles or blocked crawlers, then fix top-down from access to polish. Google Search Console plus a browser's view-source cover most of what you need at no cost." },
+    { "q": "What is included in an SEO audit?", "a": "An SEO audit includes a crawl-access check, an on-page review (titles, meta descriptions, headings, internal links), a technical sweep (canonicals, HTTPS, sitemap, Core Web Vitals), a content review for thin or duplicate pages, a link audit, and a GEO pass for AI-search visibility. The crawl and indexing checks decide whether a page can compete at all, while content and links decide how well it ranks. The GEO pass is the 2026 addition that confirms AI engines can read and cite the page." },
+    { "q": "How often should I do an SEO audit?", "a": "Run a full SEO audit quarterly and a quick crawl-access and indexing check after any major change, redesign, or migration. Migrations are the single most common cause of sudden traffic loss because they often break canonicals, redirects, and sitemaps at the same time. A monthly five-minute crawl of your top pages catches regressions long before they cost rankings." },
+    { "q": "Can I do an SEO audit for free?", "a": "Yes, you can do a complete SEO audit for free using Google Search Console, a browser's view-source, and a free audit crawler. These cover crawlability, indexing, on-page tags, canonicals, structured data, and AI-crawler access at no cost. Paid suites add crawl scale for very large sites, but a small or medium site stays fully covered on free tools." },
+    { "q": "What should I fix first after an SEO audit?", "a": "Fix crawl and indexing issues first, because they determine whether a page is eligible to rank at all. Optimizing a title tag or Core Web Vitals on a page Google cannot crawl or index is wasted effort. Work strictly top-down: clear access, confirm indexing, then move to on-page, content, links, and the GEO pass." }
+  ],
+  "faqs": [
+    { "q": "How long does an SEO audit take?", "a": "A first-pass SEO audit of a small site takes an afternoon, while a thorough audit of a large site spreads across a few days. The automated, rule-based checks finish in minutes with a crawler; the slow part is the human judgment on content quality and link relevance. Running a tool first lets you spend your hours only where they matter." },
+    { "q": "Do I need an SEO audit if my traffic is fine?", "a": "Yes, a periodic SEO audit catches silent regressions before they show up in your traffic chart. A canonical pointing at the wrong URL, a newly blocked AI crawler, or a slow template can erode visibility for weeks before the numbers move. A quick monthly crawl of your top pages is cheap insurance against a slow leak." },
+    { "q": "What's the difference between an SEO audit and a GEO audit?", "a": "An SEO audit checks whether Google can crawl, index, and rank a site, while a GEO audit checks whether AI answer engines like ChatGPT and Perplexity can read and cite it. In 2026 the two overlap heavily, since both depend on crawl access and clean structured data. A complete modern audit treats the GEO pass as a required step, not an optional extra." }
+  ],
+  "relatedKeywords": ["SEO audit checklist", "free SEO audit tool", "technical SEO audit", "on-page SEO audit", "GEO audit AI search", "how to audit a website for SEO"],
+  "internalLinks": [
+    { "href": "/", "anchor": "Run a free SEO + GEO audit" },
+    { "href": "/check", "anchor": "Browse all 40+ SEO and GEO checks" },
+    { "href": "/blog/what-is-technical-seo", "anchor": "What Is Technical SEO?" },
+    { "href": "/blog/what-is-on-page-seo", "anchor": "What Is On-Page SEO?" },
+    { "href": "/blog/what-is-generative-engine-optimization", "anchor": "What Is Generative Engine Optimization?" }
+  ]
+}

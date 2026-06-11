@@ -1,0 +1,128 @@
+{
+  "slug": "what-is-robots-txt",
+  "title": "What Is Robots.txt? (And How to Use It Right in 2026)",
+  "date": "2026-06-11",
+  "updatedAt": "2026-06-11",
+  "tag": "Technical SEO",
+  "cluster": "technical-seo",
+  "keyword": "robots.txt",
+  "secondaryKeywords": ["robots.txt syntax", "block AI crawlers", "robots.txt disallow", "crawl directives"],
+  "readTime": 9,
+  "excerpt": "Robots.txt tells crawlers where they can and can't go. Here's the syntax, the traps, and how to test it.",
+  "description": "Robots.txt is a plain-text file that controls crawler access. Learn the syntax, AI-crawler directives, common mistakes, and how to test it in 2026.",
+  "tldr": "Robots.txt is a plain-text file at yoursite.com/robots.txt that tells crawlers like Googlebot and GPTBot which URLs they may request. It controls crawling, not indexing, and a single stray Disallow: / line can hide your entire site from Google.",
+  "status": "published",
+  "sections": [
+    {
+      "heading": "What Robots.txt Actually Does",
+      "body": [
+        "Robots.txt is a plain-text file placed at the root of a domain (`https://example.com/robots.txt`) that tells web crawlers which URLs they are allowed to request. The file follows the Robots Exclusion Protocol, a standard that Googlebot, Bingbot, and AI crawlers like GPTBot and ClaudeBot voluntarily obey. When a crawler arrives at a site, it reads robots.txt first and uses the rules to decide what to fetch.",
+        "The most important thing to understand: **robots.txt controls crawling, not indexing.** A blocked page can still appear in Google search results (as a bare URL with no snippet) if other pages link to it. To keep a page out of the index, use a `noindex` meta tag or HTTP header instead — and that page must stay crawlable for Google to see the noindex.",
+        "Robots.txt is also a public file. Anyone can read `yoursite.com/robots.txt`, so it is never a security tool. Listing `Disallow: /admin/` just advertises where your admin panel lives. Use authentication for anything sensitive, not crawl rules."
+      ]
+    },
+    {
+      "heading": "Robots.txt Syntax: The Core Directives",
+      "body": [
+        "Robots.txt syntax is built from a small set of directives grouped into blocks. Each block starts with a `User-agent` line naming the crawler, followed by `Allow` and `Disallow` rules. A typical file looks like this:",
+        "```\nUser-agent: *\nDisallow: /cart/\nDisallow: /search\nAllow: /search/help\n\nUser-agent: GPTBot\nDisallow: /\n\nSitemap: https://example.com/sitemap.xml\n```",
+        "Here is what each piece means:",
+        "- **`User-agent: *`** — the rules below apply to every crawler unless a more specific block overrides them.\n- **`Disallow: /cart/`** — crawlers should not request any URL starting with `/cart/`.\n- **`Allow: /search/help`** — carves an exception out of a broader Disallow.\n- **`User-agent: GPTBot` + `Disallow: /`** — blocks OpenAI's crawler from the entire site.\n- **`Sitemap:`** — points crawlers to your XML sitemap (an absolute URL, listed once, applies site-wide).",
+        "Two rules trip people up. First, **path matching is prefix-based and case-sensitive** — `Disallow: /Blog` does not block `/blog`. Second, **the most specific matching block wins**, not the first one. If you have both a `*` block and a `Googlebot` block, Googlebot reads only its own block and ignores the wildcard entirely. Repeat shared rules in each named block, or Google may crawl paths you thought were closed."
+      ]
+    },
+    {
+      "heading": "Common Mistakes (Including Blocking Google by Accident)",
+      "body": [
+        "The single most damaging robots.txt mistake is shipping `Disallow: /` to production. That one line tells every crawler to skip the entire site. It usually happens when a staging robots.txt — which legitimately blocks everything — gets deployed to the live domain. Traffic then quietly collapses over the following weeks as Google drops uncrawlable pages.",
+        "Other frequent errors:",
+        "- **Blocking CSS and JS** — rules like `Disallow: /assets/` can stop Google from rendering your pages, hurting rankings. Modern Googlebot needs those files.\n- **Using robots.txt to deindex** — blocking a URL does not remove it from the index. Use `noindex` instead, and leave the page crawlable.\n- **Wrong file location** — robots.txt only works at the domain root. `example.com/blog/robots.txt` is ignored.\n- **Trailing-slash confusion** — `Disallow: /news` blocks both `/news` and `/news/article`; `Disallow: /news/` blocks only paths under the folder.\n- **Trusting it as a wall** — well-behaved bots obey robots.txt; scrapers and malicious bots ignore it.",
+        "If your audit ever flags a site-wide block, treat it as a five-alarm fire. The [check tool](/check) surfaces this kind of crawl-blocking instantly, and it is the first thing to confirm during [technical SEO](/blog/what-is-technical-seo) work."
+      ]
+    },
+    {
+      "heading": "AI-Crawler Directives in 2026",
+      "body": [
+        "Robots.txt is now the front line for controlling AI crawlers, not just search engines. In 2026, the major AI bots respect the Robots Exclusion Protocol, so you can allow or block them by name. The key user-agents to know are `GPTBot` (OpenAI training), `OAI-SearchBot` (ChatGPT search), `ClaudeBot` (Anthropic), `PerplexityBot`, and `Google-Extended` (Gemini/AI training, separate from regular Googlebot).",
+        "The strategic question is which bots help you. **Blocking GPTBot or ClaudeBot can keep your content out of AI answers entirely** — and if you want citations in ChatGPT, Claude, or Perplexity, that is the opposite of your goal. Many sites block training crawlers (`GPTBot`, `Google-Extended`) but allow retrieval crawlers (`OAI-SearchBot`, `PerplexityBot`) so they can still be cited in real-time AI answers.",
+        "Decide deliberately rather than copy-pasting a block-everything snippet. If you want to be cited in AI answers, allow the retrieval bots and learn [how to rank in ChatGPT](/blog/how-to-rank-in-chatgpt). Getting this wrong is one of the most common GEO mistakes the [audit](/) catches."
+      ]
+    },
+    {
+      "heading": "How to Set Up and Test Your Robots.txt",
+      "body": [
+        "Setting up robots.txt is a five-step loop: write the file, place it at the root, fetch it in a browser, test specific URLs, and re-check after every deploy. The flowchart below maps the whole process — the testing step matters most, because the cost of a bad rule is your entire organic and AI-search footprint.",
+        "[[flowchart]]",
+        "After deploying, always do two manual checks. Open `https://yoursite.com/robots.txt` in a private browser window to confirm the live file matches what you wrote — not a cached staging version. Then use the URL inspection tool in Google Search Console to confirm Googlebot can actually fetch a key page. The directives differ by bot and by intent, so it helps to know which ones to use when:",
+        "[[table]]",
+        "Make robots.txt a release checklist item. The most expensive outages are silent — nothing errors, traffic just fades. A quick re-fetch after each deploy, plus an automated [audit](/check), turns a five-minute habit into cheap insurance."
+      ]
+    }
+  ],
+  "flowchart": {
+    "title": "Set up and test robots.txt",
+    "steps": [
+      { "title": "Write the rules", "detail": "Draft User-agent blocks with Disallow/Allow paths and add your Sitemap line." },
+      { "title": "Place it at the root", "detail": "Upload the file so it resolves at yoursite.com/robots.txt — subfolders are ignored." },
+      { "title": "Fetch it live", "detail": "Open the URL in a private window to confirm the production file matches your draft." },
+      { "title": "Test specific URLs", "detail": "Use Google Search Console URL inspection to verify key pages are crawlable and blocked pages are blocked." },
+      { "title": "Confirm AI bots", "detail": "Check that GPTBot, ClaudeBot, and PerplexityBot directives match your allow/block intent." },
+      { "title": "Re-check after deploys", "detail": "Re-fetch robots.txt after every release so a staging Disallow: / never reaches production." }
+    ]
+  },
+  "comparisonTable": {
+    "caption": "When to use each robots.txt directive",
+    "headers": ["Directive", "What it does", "Use it when"],
+    "rows": [
+      ["Disallow: /path", "Stops crawlers from requesting matching URLs", "Hiding low-value pages (cart, internal search) from crawl"],
+      ["Allow: /path", "Carves an exception inside a broader Disallow", "Re-opening one folder beneath a blocked parent"],
+      ["User-agent: GPTBot", "Targets a specific named crawler", "Allowing or blocking one AI or search bot precisely"],
+      ["Sitemap: URL", "Points crawlers to your XML sitemap", "Always — helps every crawler discover your URLs"],
+      ["noindex (meta tag, NOT robots.txt)", "Removes a crawlable page from the index", "Keeping a page out of results — leave it crawlable"]
+    ]
+  },
+  "peopleAlsoAsk": [
+    {
+      "q": "What is robots.txt used for?",
+      "a": "Robots.txt is used to tell web crawlers which URLs on a site they are allowed to request. Site owners use it to keep crawlers out of low-value areas like cart, checkout, and internal search pages, to point bots to the XML sitemap, and to allow or block specific AI crawlers. It manages crawl behavior, not indexing — blocked pages can still appear in search results."
+    },
+    {
+      "q": "Can robots.txt block Google?",
+      "a": "Yes, robots.txt can block Google from crawling pages, and a single `Disallow: /` line under `User-agent: *` or `User-agent: Googlebot` blocks the entire site. This is a common accidental outage, usually caused by deploying a staging robots.txt to production. Note that blocking crawling does not guarantee removal from the index — a blocked URL can still surface as a bare link if other pages point to it."
+    },
+    {
+      "q": "Should I block AI crawlers in robots.txt?",
+      "a": "Blocking AI crawlers in robots.txt is a deliberate trade-off, not a default best practice. Blocking bots like GPTBot, ClaudeBot, and PerplexityBot keeps your content out of AI-generated answers and citations, which hurts visibility if you want traffic from ChatGPT, Claude, or Perplexity. Many sites block training crawlers like Google-Extended while allowing retrieval crawlers so they can still be cited in live AI answers."
+    },
+    {
+      "q": "Where do I find my robots.txt file?",
+      "a": "Robots.txt always lives at the root of a domain, so you find it at `https://yoursite.com/robots.txt`. Type that URL into any browser to see the live file exactly as crawlers read it. If nothing loads, the site has no robots.txt, which means all crawlers are allowed to crawl everything by default."
+    },
+    {
+      "q": "Does robots.txt stop a page from being indexed?",
+      "a": "No, robots.txt does not reliably stop a page from being indexed — it only stops crawling. Google can still index a blocked URL if other pages link to it, showing it without a description. To remove a page from the index, use a `noindex` meta tag or HTTP header and keep the page crawlable so Google can read that directive."
+    }
+  ],
+  "faqs": [
+    {
+      "q": "Do I need a robots.txt file at all?",
+      "a": "A robots.txt file is optional, and a small site with nothing to hide works fine without one — by default, all crawlers are allowed everywhere. Most sites still add one to point crawlers to their sitemap, to block low-value paths like internal search, and to set explicit AI-crawler policy."
+    },
+    {
+      "q": "What is the difference between robots.txt and a noindex tag?",
+      "a": "Robots.txt controls crawling: it tells bots which URLs they may fetch. A noindex tag controls indexing: it tells search engines to keep a page out of results. They are not interchangeable — a page blocked by robots.txt can still be indexed, and a noindex page must stay crawlable for Google to see the tag."
+    },
+    {
+      "q": "Can I have different rules for different crawlers?",
+      "a": "Yes, robots.txt supports separate `User-agent` blocks for each crawler, so you can allow Googlebot while blocking GPTBot. Remember that a crawler obeys only its most specific matching block and ignores the others, so repeat any shared rules inside each named block to avoid surprises."
+    }
+  ],
+  "relatedKeywords": ["robots.txt disallow all", "block GPTBot robots.txt", "robots.txt vs noindex", "how to test robots.txt", "robots exclusion protocol", "crawl-delay directive"],
+  "internalLinks": [
+    { "href": "/", "anchor": "run a free SEO + GEO audit" },
+    { "href": "/check", "anchor": "all 40+ SEO/GEO checks" },
+    { "href": "/blog/how-to-rank-in-chatgpt", "anchor": "how to rank in ChatGPT" },
+    { "href": "/blog/what-is-technical-seo", "anchor": "What is technical SEO" },
+    { "href": "/blog/how-to-create-an-xml-sitemap", "anchor": "How to create an XML sitemap" }
+  ]
+}

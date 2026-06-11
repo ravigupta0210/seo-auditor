@@ -1,0 +1,131 @@
+{
+  "slug": "what-is-anchor-text",
+  "title": "What Is Anchor Text? (And How to Use It for SEO in 2026)",
+  "date": "2026-06-11",
+  "updatedAt": "2026-06-11",
+  "tag": "SEO",
+  "cluster": "content-links",
+  "keyword": "anchor text",
+  "secondaryKeywords": ["anchor text types", "exact-match anchor text", "internal link anchor text", "over-optimized anchor text"],
+  "readTime": 9,
+  "excerpt": "Anchor text is the clickable words in a link. Learn the 4 types, best practices, and how to avoid over-optimization.",
+  "description": "Anchor text is the clickable text in a hyperlink. Learn the types of anchor text, internal and external best practices, and over-optimization risks for SEO in 2026.",
+  "tldr": "Anchor text is the visible, clickable words inside a hyperlink (the highlighted part of `<a href>`). It gives search engines context about the destination page, and the 4 main types are exact-match, branded, generic, and naked URL.",
+  "status": "published",
+  "sections": [
+    {
+      "heading": "What Is Anchor Text in SEO?",
+      "body": [
+        "Anchor text is the visible, clickable words inside a hyperlink. In the HTML `<a href=\"/seo-audit\">free SEO audit</a>`, the phrase \"free SEO audit\" is the anchor text, and the URL is the destination. Both readers and search engines read anchor text to understand what the linked page is about before they ever click.",
+        "Search engines treat anchor text as a relevance signal. When dozens of sites link to a page using the words \"project management software,\" Google infers that the page is about project management software. That signal works for both **internal links** (links between pages on your own site) and **external links** (backlinks from other domains pointing at you).",
+        "Anchor text matters more than most beginners assume because it is one of the few signals you partly control on internal links and partly influence on external ones. Get it right and you reinforce topical relevance; over-optimize it and you trigger spam filters. The rest of this guide covers the four types, the rules for each link context, and the over-optimization trap that gets sites penalized."
+      ]
+    },
+    {
+      "heading": "The 4 Types of Anchor Text",
+      "body": [
+        "Anchor text falls into four practical categories, and a healthy link profile mixes all of them rather than leaning on a single type. The four types are exact-match, branded, generic, and naked URL. Each sends a different signal, and the ratio between them is what separates a natural profile from a manipulated one.",
+        "- **Exact-match** repeats the target keyword word-for-word, like \"anchor text guide\" linking to a page targeting *anchor text guide*. It is the strongest relevance signal and the easiest to abuse.",
+        "- **Branded** uses your brand or domain name, like \"SEO Auditor\" or \"Ahrefs.\" It is the safest external anchor and usually the most common type in a natural backlink profile.",
+        "- **Generic** uses non-descriptive calls to action like \"click here,\" \"read more,\" or \"this page.\" Generic anchors carry little relevance value but look natural in real-world linking.",
+        "- **Naked URL** is the raw link printed as text, like `https://example.com/blog`. Common in citations, forum posts, and references.",
+        "There are also two hybrids worth naming: **partial-match** anchors include the keyword plus extra words (\"this anchor text checklist\"), and **image anchors** where a linked image's `alt` attribute acts as the anchor text. The full comparison below shows when to use each.",
+        "[[table]]"
+      ]
+    },
+    {
+      "heading": "Best Practices for Internal Link Anchor Text",
+      "body": [
+        "Internal link anchor text is the text you use when linking between pages on your own site, and it is where you have the most control and the most room to be descriptive. Because you write both the link and the destination, you can use clear, keyword-relevant anchors without triggering the spam concerns that apply to backlinks.",
+        "Follow these rules for internal anchors:",
+        "- **Be descriptive, not generic.** Link with \"how to get backlinks for free\" instead of \"click here\" so both users and crawlers know what they will get.",
+        "- **Vary the wording.** Linking to the same page from ten articles with the identical exact-match phrase looks engineered even internally. Mix exact, partial, and branded variations.",
+        "- **Keep anchors concise.** Two to five words reads cleanly and stays scannable; a whole sentence as a link dilutes the signal.",
+        "- **Link to deep pages, not just the homepage.** Spread anchor text and link equity across your important cluster pages.",
+        "For example, this post links naturally to [how to get backlinks for free](/blog/how-to-get-backlinks-for-free) and to the broader topic of [off-page SEO](/blog/what-is-off-page-seo). Each anchor describes the destination accurately, which is exactly what a search engine wants to see. When you want to confirm your internal links resolve and use sensible anchors, run a [free SEO audit](/) and check the link section.",
+        "Internal anchor optimization compounds with strong [on-page SEO](/blog/what-is-on-page-seo): descriptive anchors plus a clean URL and a focused title tag all reinforce the same topic for the linked page."
+      ]
+    },
+    {
+      "heading": "Best Practices for External (Backlink) Anchor Text",
+      "body": [
+        "External anchor text is the wording other sites use when they link to you, and the key difference is that you only partly influence it. You can suggest anchors when you guest post, build resources, or do digital PR, but most natural backlinks will use your brand name or the page title, and that is healthy.",
+        "The goal for external anchors is to look earned, not manufactured. A profile dominated by exact-match keyword anchors is the single clearest fingerprint of a paid or manipulated link campaign.",
+        "> A natural backlink profile is mostly branded and naked-URL anchors, with exact-match anchors as the rare exception, not the rule.",
+        "When you do have influence over an external anchor, prefer branded or partial-match phrasing and let the surrounding sentence carry the keyword context. Off-page work like outreach and digital PR earns links faster when you stop obsessing over exact-match anchors and focus on placement and relevance instead. The full playbook lives in our guide on [off-page SEO](/blog/what-is-off-page-seo).",
+        "[[flowchart]]"
+      ]
+    },
+    {
+      "heading": "Over-Optimized Anchor Text: The Penalty Risk",
+      "body": [
+        "Over-optimized anchor text means an unnaturally high share of exact-match keyword anchors pointing at a page, and it is a recognized spam signal that can suppress rankings. Google's link-spam systems have flagged manipulative anchor patterns since the original Penguin update, and the detection has only gotten more sophisticated with each spam-update cycle.",
+        "The risk is concentrated on external links. If 40% of your backlinks use the identical phrase \"best running shoes,\" that ratio screams paid links, because real editors almost never coordinate on one phrase. Internal over-optimization is less dangerous but still wasteful: cramming the same keyword anchor everywhere confuses your own site architecture.",
+        "Use these guardrails to stay safe:",
+        "- Keep exact-match external anchors low as a share of your total profile, not as an absolute count.",
+        "- Let branded and naked-URL anchors dominate the external mix.",
+        "- Audit anchor distribution periodically with a backlink tool and pull back if exact-match creeps up.",
+        "- Never buy links with a fixed keyword anchor; it is the fastest path to a manual action.",
+        "If a page suddenly drops after a link campaign, over-optimized anchors are a prime suspect. The fix is dilution: earn more branded and contextual links so the manipulated ones shrink as a percentage. You can sanity-check your own internal anchor patterns and overall SEO health with a [free SEO + GEO audit](/)."
+      ]
+    }
+  ],
+  "flowchart": {
+    "title": "How to Choose Anchor Text",
+    "steps": [
+      { "title": "Identify the link type", "detail": "Decide whether the link is internal (your site) or external (another domain linking to you)." },
+      { "title": "Match anchor to context", "detail": "For internal links, use descriptive keyword-relevant anchors; for external, lean branded or natural." },
+      { "title": "Describe the destination", "detail": "Make the anchor clearly tell users and crawlers what the linked page is about." },
+      { "title": "Vary the wording", "detail": "Mix exact-match, partial, branded, and generic anchors so no single phrase dominates." },
+      { "title": "Check the ratio", "detail": "Keep exact-match a small share of external anchors to avoid over-optimization signals." },
+      { "title": "Audit and adjust", "detail": "Periodically review anchor distribution and dilute any phrase that is over-represented." }
+    ]
+  },
+  "comparisonTable": {
+    "caption": "The main types of anchor text and when to use each",
+    "headers": ["Anchor type", "Example", "Relevance signal", "Best use"],
+    "rows": [
+      ["Exact-match", "anchor text guide", "Very high", "Sparingly; safest on internal links"],
+      ["Partial-match", "this anchor text checklist", "Medium-high", "Internal links and natural backlinks"],
+      ["Branded", "SEO Auditor", "Low (but very safe)", "Most external backlinks"],
+      ["Generic", "click here, read more", "Very low", "When wording must stay neutral"],
+      ["Naked URL", "https://example.com", "Low", "Citations, references, forum posts"],
+      ["Image anchor", "alt text on a linked image", "Depends on alt", "Logos, infographics, banners"]
+    ]
+  },
+  "peopleAlsoAsk": [
+    {
+      "q": "What is anchor text in SEO?",
+      "a": "Anchor text in SEO is the visible, clickable words inside a hyperlink, like the phrase \"free SEO tool\" in a link pointing to a tool page. Search engines read anchor text as a relevance signal to understand what the destination page is about. It influences how both internal pages and external backlinks pass topical context."
+    },
+    {
+      "q": "What are the types of anchor text?",
+      "a": "The four main types of anchor text are exact-match (the keyword word-for-word), branded (your brand or domain name), generic (\"click here,\" \"read more\"), and naked URL (the raw link printed as text). Two common hybrids are partial-match anchors, which include the keyword plus extra words, and image anchors, where a linked image's alt attribute serves as the anchor. A natural link profile mixes all of these rather than relying on one type."
+    },
+    {
+      "q": "Is exact-match anchor text bad?",
+      "a": "Exact-match anchor text is not inherently bad, but a high proportion of it in your backlink profile is a strong spam signal that can suppress rankings. Google's link-spam systems flag pages where an unnatural share of external links use the identical keyword phrase. Exact-match is safest on internal links you control, and should stay a small share of external anchors."
+    },
+    {
+      "q": "How should I write good anchor text?",
+      "a": "Good anchor text is concise, descriptive, and accurately tells users and crawlers what the linked page covers. Use two to five words, vary the wording across links, and avoid generic phrases like \"click here\" when a descriptive anchor would help. For internal links be specific and keyword-relevant; for external links lean on branded and natural phrasing."
+    }
+  ],
+  "faqs": [
+    {
+      "q": "Does anchor text matter for internal links?",
+      "a": "Yes, anchor text matters for internal links because it helps search engines understand the topic of the linked page and how your pages relate. Internal anchors are the safest place to use descriptive, keyword-relevant wording since you control both ends of the link. Just vary the phrasing so no single page is linked with the identical exact-match anchor everywhere."
+    },
+    {
+      "q": "What is a healthy anchor text ratio?",
+      "a": "A healthy external anchor text ratio is dominated by branded and naked-URL anchors, with exact-match anchors kept as a small minority. There is no single official number, but profiles where exact-match anchors are a large share look manufactured and risk link-spam filtering. Audit your distribution periodically and dilute any phrase that becomes over-represented."
+    }
+  ],
+  "relatedKeywords": ["anchor text optimization", "internal linking strategy", "backlink anchor text ratio", "over-optimized anchors", "exact-match anchor risk", "descriptive link text"],
+  "internalLinks": [
+    { "href": "/", "anchor": "Run a free SEO + GEO audit" },
+    { "href": "/blog/how-to-get-backlinks-for-free", "anchor": "How to get backlinks for free" },
+    { "href": "/blog/what-is-off-page-seo", "anchor": "What is off-page SEO" },
+    { "href": "/blog/what-is-on-page-seo", "anchor": "What is on-page SEO" }
+  ]
+}

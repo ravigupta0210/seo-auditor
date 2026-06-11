@@ -1,0 +1,108 @@
+{
+  "slug": "what-is-schema-markup",
+  "title": "What Is Schema Markup? A Beginner's 2026 Guide",
+  "date": "2026-06-11",
+  "updatedAt": "2026-06-11",
+  "tag": "JSON-LD",
+  "cluster": "structured-data",
+  "keyword": "schema markup",
+  "secondaryKeywords": ["structured data", "Schema.org", "JSON-LD", "rich results"],
+  "readTime": 9,
+  "excerpt": "Schema markup explained for beginners: what structured data is, why it powers rich results and AI answers, and the most common types.",
+  "description": "Schema markup is Schema.org structured data that labels your page content for search and AI engines. Here's what it does, the common types, and how to add it in 2026.",
+  "tldr": "Schema markup is structured data from the Schema.org vocabulary, usually written as JSON-LD, that labels what each part of a page means so Google and AI engines like ChatGPT can read it precisely. The most common types are Article, Product, FAQPage, Organization, and BreadcrumbList.",
+  "status": "published",
+  "sections": [
+    {
+      "heading": "What schema markup is",
+      "body": [
+        "Schema markup is structured data — code from the shared **Schema.org** vocabulary, almost always written as **JSON-LD** — that labels the meaning of content on a page so search engines and AI answer engines can understand it precisely instead of guessing from raw HTML. Where a human reads \"$29\" and knows it is a price, a crawler sees four characters; schema markup is the layer that explicitly tells the machine *this is a price, this is a product name, this is an author, this is a rating*.",
+        "The vocabulary is **Schema.org**, a standard maintained jointly by Google, Microsoft, Yahoo, and Yandex since 2011. It defines hundreds of types — `Product`, `Article`, `Recipe`, `Organization`, `FAQPage` — and the properties each type can carry. The format is **JSON-LD** (JavaScript Object Notation for Linked Data), a block of JSON dropped into a `<script type=\"application/ld+json\">` tag. Two older formats, Microdata and RDFa, sprinkle attributes through your HTML, but Google explicitly recommends JSON-LD because it lives in one clean block and does not entangle with your markup.",
+        "A minimal example makes it concrete. This tells any engine that the page is an article with a specific headline, author, and publish date:",
+        "```json\n{\n  \"@context\": \"https://schema.org\",\n  \"@type\": \"Article\",\n  \"headline\": \"What Is Schema Markup?\",\n  \"author\": { \"@type\": \"Person\", \"name\": \"Jane Doe\" },\n  \"datePublished\": \"2026-06-11\"\n}\n```",
+        "Schema markup does not change how a page looks to humans — it changes how the page *parses* to machines. The right takeaway for a beginner: schema is packaging, not product. It will not rescue thin content, but it makes good content unambiguous to the systems deciding whether to surface or cite it."
+      ]
+    },
+    {
+      "heading": "What schema markup is used for",
+      "body": [
+        "Schema markup is used for three things: earning **rich results** in Google, helping **AI engines** understand and cite a page, and giving search engines a confident, structured model of a site's entities. Each is a different payoff, and conflating them is why beginners get confused about whether schema \"works.\"",
+        "The most visible use is **rich results**. When Google trusts your structured data, it can render enhanced listings — star ratings under a product, a recipe's cook time and calorie count, breadcrumb trails, event dates, sitelinks search boxes. These take up more space and earn more clicks than a plain blue link. Schema markup is the eligibility requirement: no markup, no rich result.",
+        "The fast-growing use in 2026 is **AI comprehension**. ChatGPT, Perplexity, Claude, and Google AI Overviews build answers by extracting clean, labeled facts. A `Product` block that states the price, brand, and rating as discrete fields is far easier to quote accurately than the same facts buried in prose. The principle is simple — self-contained, labeled facts get lifted; ambiguous ones get skipped — which is why schema sits squarely inside [generative engine optimization](/blog/what-is-generative-engine-optimization) and the broader practice of [answer engine optimization](/blog/what-is-answer-engine-optimization).",
+        "The quiet, foundational use is **entity clarity**. `Organization` and `Person` schema, with `sameAs` links to verified profiles, helps engines connect your brand to a real-world entity in their knowledge graph. That underpins E-E-A-T signals and disambiguates you from similarly named entities. More on that in [what E-E-A-T means in SEO](/blog/what-is-eeat-in-seo)."
+      ]
+    },
+    {
+      "heading": "The most common schema types",
+      "body": [
+        "Schema.org defines hundreds of types, but a handful cover the vast majority of real-world pages. Knowing which type maps to which page is the single most useful skill for a beginner — using the wrong type is the most common reason markup fails validation. The table below pairs each common type with the page it belongs on and what it unlocks.",
+        "[[table]]",
+        "Two rules cut through the noise. First, **one primary type per page, matched to the page's actual purpose**: a product page gets `Product`, a blog post gets `Article` or `BlogPosting`, a recipe gets `Recipe`. Do not stack five types hoping one sticks. Second, **nest supporting types inside the primary one** — an `Article` can contain a `Person` author and an `Organization` publisher; a `Product` can contain an `Offer` and an `AggregateRating`. Schema is composable by design.",
+        "Beyond the table, `Organization` (or `LocalBusiness` for a physical location) belongs on your homepage or a sitewide template to anchor your brand entity, and `BreadcrumbList` belongs on any page deep in a hierarchy. Beginners almost always need fewer types than they fear — pick the one that names what the page *is*, then add supporting types only where they describe real, visible content."
+      ]
+    },
+    {
+      "heading": "How to add schema markup to your site",
+      "body": [
+        "Adding schema markup is a five-step loop: choose the type, write the JSON-LD, embed it in the page, validate it, then confirm it renders for crawlers. Skipping validation is the number-one reason schema fails silently — the page looks fine, the JSON looks fine, but one missing required field disqualifies the whole block.",
+        "[[flowchart]]",
+        "Most beginners do not hand-write JSON-LD. A CMS plugin (Yoast, Rank Math, or a framework's SEO component) generates it from your existing content, and that is fine — but you still own validation. Every schema type has a small set of mandatory properties, and an `Article` missing `headline` or a `Product` missing `offers` is invalid even if the JSON parses perfectly. FAQ pages have their own required-field quirks, documented in [how to add FAQ schema](/blog/how-to-add-faq-schema), and the same labeled-facts discipline carries over to [answer engine optimization](/blog/what-is-answer-engine-optimization).",
+        "The non-negotiable step is **validation**. Google's Rich Results Test and the Schema.org validator parse your live URL or a pasted snippet and report, field by field, whether the type is eligible and error-free. Valid-looking JSON is not the same as valid schema — they are different things, and the validator is the only authority. Run it before you assume the markup works.",
+        "Once it passes, confirm the markup actually ships in the rendered HTML and survives in production. The fastest end-to-end check is to run the live URL through our [free SEO + GEO audit](/) at [/](/), which flags missing or malformed JSON-LD alongside 40+ other checks at [/check](/check) and confirms AI crawlers can reach the page to read it."
+      ]
+    },
+    {
+      "heading": "Does schema markup help SEO — and what it won't do",
+      "body": [
+        "Schema markup helps SEO indirectly, not as a ranking factor. Google has stated for years that structured data is **not a direct ranking signal** — adding `Product` schema will not push a page from position 8 to position 3 on its own. What schema does is make a page eligible for rich results and easier for engines to understand, and both of those tend to raise click-through and citation rates, which is where the real-world lift comes from.",
+        "The honest 2026 picture has two halves. On the **classic SEO** side, rich results still earn meaningfully more clicks, though Google has tightened eligibility for some types (FAQ snippets, for example, are now limited to authoritative government and health sites since 2023). On the **AI-search** side, schema's value is rising fast: labeled, machine-readable facts are exactly what answer engines extract to build and cite responses.",
+        "> Schema markup amplifies good content. It cannot manufacture it. Marking up a thin or inaccurate page just helps engines understand, faster, that the page is thin.",
+        "Two things schema will never do. It will not fix accuracy or mismatch problems — your markup must reflect content that is **actually visible on the page**, or Google treats it as a structured-data violation that can trigger a manual action. And it will not help if engines cannot reach the page at all: a robots.txt rule blocking GPTBot or PerplexityBot means your perfect JSON-LD is never read, which you can verify with the [AI-bots-blocked check](/check/geo.aibots.blocked).",
+        "For a beginner, the right mental model is simple. Write genuinely useful content, pick the schema type that names what the page is, fill its required fields with text that matches the page, validate, and ship. Schema is high-leverage hygiene — low cost, no downside, real upside in both Google rich results and AI citations."
+      ]
+    }
+  ],
+  "flowchart": {
+    "title": "Add schema markup the right way",
+    "steps": [
+      { "title": "Choose the type", "detail": "Pick the one Schema.org type that names what the page actually is, such as Product, Article, or FAQPage." },
+      { "title": "Write the JSON-LD", "detail": "Build the block with the type's required fields, using text that matches the visible page content." },
+      { "title": "Embed the script", "detail": "Paste the markup into a <script type=\"application/ld+json\"> tag, conventionally in the <head>." },
+      { "title": "Validate", "detail": "Run the URL through Google's Rich Results Test and the Schema.org validator until both pass with no errors." },
+      { "title": "Confirm it renders", "detail": "Check the server-rendered HTML so crawlers see the JSON-LD, not just client-side JavaScript." },
+      { "title": "Monitor", "detail": "Re-validate after any content edit and confirm AI crawlers can reach the page." }
+    ]
+  },
+  "comparisonTable": {
+    "caption": "Common schema markup types and what each is for",
+    "headers": ["Schema type", "Use it on", "What it unlocks"],
+    "rows": [
+      ["Article / BlogPosting", "Blog posts, news, guides", "Author, date, and headline labeling; AI citation clarity"],
+      ["Product", "Product and listing pages", "Price, availability, and star-rating rich results"],
+      ["FAQPage", "Pages with genuine Q&A pairs", "Clean labeled answers for AI engines; limited Google snippets"],
+      ["Organization / LocalBusiness", "Homepage, sitewide template", "Brand entity, logo, contact, and address in knowledge graph"],
+      ["BreadcrumbList", "Pages deep in a hierarchy", "Breadcrumb trail shown in search results"],
+      ["Recipe", "Recipe pages", "Cook time, calories, ratings, and recipe rich cards"]
+    ]
+  },
+  "peopleAlsoAsk": [
+    { "q": "What is schema markup used for?", "a": "Schema markup is used to label the meaning of page content so search and AI engines can read it precisely. Its three main uses are earning rich results in Google (star ratings, recipe cards, breadcrumbs), helping AI engines like ChatGPT and Perplexity understand and cite facts, and anchoring a brand as a clear entity in search knowledge graphs. Schema markup does this by adding Schema.org structured data, usually as JSON-LD, to a page." },
+    { "q": "Does schema markup help SEO?", "a": "Schema markup helps SEO indirectly rather than as a direct ranking factor. Google has stated that structured data is not a ranking signal on its own, but schema makes a page eligible for rich results and easier for engines to understand, which raises click-through and AI-citation rates. The practical effect is real, but schema amplifies good content and cannot rescue thin or inaccurate pages." },
+    { "q": "What are the most common schema types?", "a": "The most common schema types are Article (and BlogPosting), Product, FAQPage, Organization or LocalBusiness, BreadcrumbList, and Recipe. Each maps to a specific kind of page: Article to blog posts and news, Product to ecommerce listings, Organization to a homepage or sitewide template, and BreadcrumbList to pages deep in a hierarchy. Using the type that names what the page actually is, rather than stacking many types, is the key rule." },
+    { "q": "How do I add schema markup to my site?", "a": "To add schema markup, choose the Schema.org type that matches the page, write a JSON-LD block with that type's required fields, and paste it into a script tag of type application/ld+json. Most sites generate this automatically through a CMS plugin such as Yoast or Rank Math. After embedding it, validate the markup in Google's Rich Results Test and confirm it ships in the server-rendered HTML so crawlers can read it." },
+    { "q": "What is the difference between schema markup and structured data?", "a": "Structured data is the general concept of organizing page content into a machine-readable format, while schema markup specifically uses the Schema.org vocabulary to do it. In everyday SEO usage the two terms are used interchangeably. Schema markup is the most common way to implement structured data on the web, and it is usually written in the JSON-LD format that Google recommends." }
+  ],
+  "faqs": [
+    { "q": "Is JSON-LD the only way to write schema markup?", "a": "JSON-LD is not the only format, but it is the one Google recommends. The two older alternatives, Microdata and RDFa, embed attributes directly inside your HTML tags, which entangles the data with your layout. JSON-LD keeps everything in a single self-contained script block, making it cleaner to maintain and the default choice for new implementations in 2026." },
+    { "q": "Will schema markup guarantee a rich result in Google?", "a": "Schema markup makes a page eligible for rich results but does not guarantee one. Google decides whether to show enhanced listings based on quality, relevance, and type-specific eligibility rules, and it has tightened some types over time. Add schema for the eligibility, the AI-search upside, and the entity clarity, but treat any specific rich result as possible rather than promised." },
+    { "q": "How many schema types should one page have?", "a": "A page should have one primary schema type that names what the page is, plus any supporting types that describe real, visible content nested inside it. For example, an Article can contain a Person author and an Organization publisher. Stacking multiple unrelated primary types on a single page does not help and often causes validation errors." }
+  ],
+  "relatedKeywords": ["Schema.org structured data", "JSON-LD markup", "rich results SEO", "structured data for AI search", "common schema types", "validate schema markup"],
+  "internalLinks": [
+    { "href": "/", "anchor": "Run a free SEO + GEO audit" },
+    { "href": "/check", "anchor": "Browse all 40+ SEO + GEO checks" },
+    { "href": "/blog/what-is-answer-engine-optimization", "anchor": "What is answer engine optimization" },
+    { "href": "/blog/how-to-add-faq-schema", "anchor": "How to add FAQ schema" },
+    { "href": "/blog/what-is-generative-engine-optimization", "anchor": "What is generative engine optimization" }
+  ]
+}

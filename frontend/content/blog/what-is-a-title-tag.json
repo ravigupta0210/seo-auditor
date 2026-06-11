@@ -1,0 +1,127 @@
+{
+  "slug": "what-is-a-title-tag",
+  "title": "What Is a Title Tag? Length, Examples & 2026 Best Practices",
+  "date": "2026-06-11",
+  "updatedAt": "2026-06-11",
+  "tag": "Metadata",
+  "cluster": "metadata",
+  "keyword": "title tag",
+  "secondaryKeywords": ["title tag length", "title tag vs h1", "click-worthy titles", "SEO title best practices"],
+  "readTime": 9,
+  "excerpt": "A title tag is the HTML element that names your page in search results. Learn ideal length and how to write click-worthy titles.",
+  "description": "A title tag is the HTML element that titles your page in search and browser tabs. Learn ideal title tag length, examples, and 2026 best practices.",
+  "tldr": "A title tag is the HTML <title> element that names a page in search results, browser tabs, and social shares. Keep it roughly 50-60 characters (under ~580 pixels), lead with the primary keyword, and make every page's title unique.",
+  "status": "published",
+  "sections": [
+    {
+      "heading": "What is a title tag?",
+      "body": [
+        "A **title tag** is the HTML element that defines the title of a web page. It lives inside the `<head>` of the document, looks like `<title>Your Page Title</title>`, and is the single most visible piece of text Google shows for a page — it becomes the clickable blue headline in search results, the label on a browser tab, and the headline most platforms pull when your link is shared.",
+        "Search engines use the title tag as a primary signal for what a page is about, and users use it to decide whether to click. That dual role — machine signal plus human pitch — is why the title tag is one of the highest-leverage 50 characters on any page. Get it right and you earn clicks; get it wrong and a perfectly optimized page stays invisible.",
+        "Here is the exact markup:",
+        "```html\n<head>\n  <title>What Is a Title Tag? Length, Examples & Best Practices</title>\n</head>\n```",
+        "One caveat for 2026: Google rewrites title tags in roughly half of all results when it decides your title doesn't match the page or the query well. You don't fully control what's displayed — but a clear, accurate, well-formed title tag is still your best lever to keep Google from picking something worse."
+      ]
+    },
+    {
+      "heading": "How long should a title tag be?",
+      "body": [
+        "A title tag should be about **50 to 60 characters**, which is the safe zone before Google truncates the headline in search results. Google actually measures display width in pixels — roughly **580 pixels** on desktop — not raw characters, so a title packed with wide letters (W, M, capitals) gets cut sooner than one full of narrow letters (i, l, t).",
+        "The practical rules:",
+        "- **Front-load the important words.** If Google truncates with an ellipsis, your keyword and brand should already be visible.",
+        "- **Don't pad to hit 60.** A clear 42-character title beats a stuffed 60-character one.",
+        "- **Mind mobile.** Mobile results sometimes show more characters but wrap differently, so the first ~50 characters still carry the message.",
+        "> Rule of thumb: write the title for a glance, not for a word count. If a human can grasp the page in one second, the length is right.",
+        "Avoid the opposite failure too: a 4-word title like \"Home\" or \"Products\" wastes the slot and tells neither Google nor the user anything. Our [missing title tag check](/check/metadata.title.missing) flags pages with empty, missing, or duplicate titles so you can find the worst offenders fast."
+      ]
+    },
+    {
+      "heading": "Title tag vs. H1: what's the difference?",
+      "body": [
+        "A title tag and an H1 are two different elements that often get confused. The **title tag** is metadata in the `<head>` — it appears in search results, browser tabs, and social shares but is not visible on the page itself. The **H1** is the main on-page headline (`<h1>`) that a visitor reads after they land on the page.",
+        "They serve different audiences. The title tag is your pitch to someone scanning a search results page who hasn't clicked yet, so it can include your brand and a benefit. The H1 is your confirmation to someone who has already arrived, so it should match the promise the title made.",
+        "Key practical differences:",
+        "- **Visibility:** The title tag shows in the SERP and tab; the H1 shows on the page.",
+        "- **Count:** A page has exactly one title tag and should have exactly one H1.",
+        "- **Wording:** They can differ. The title can carry the brand and a hook (\"What Is a Title Tag? Length & Examples — SEO Auditor\") while the H1 stays cleaner (\"What is a title tag?\").",
+        "They don't have to be identical, but they shouldn't contradict each other. If your title promises \"2026 best practices\" and your H1 is about something else, you create a mismatch that hurts both ranking and trust. For how headings fit the bigger picture, see our guide to [on-page SEO](/blog/what-is-on-page-seo)."
+      ]
+    },
+    {
+      "heading": "How to write a click-worthy title tag",
+      "body": [
+        "Writing a strong title tag is a repeatable process, not a flash of inspiration. The goal is a title that is unique, keyword-led, honest, and tempting enough to out-click the nine other results on the page.",
+        "Follow these steps for every important page:",
+        "[[flowchart]]",
+        "A few patterns that consistently earn clicks in 2026:",
+        "- **Lead with the keyword:** \"Title Tag Length: The 50-60 Character Rule\" beats \"The Rule About How Long a Title Should Be.\"",
+        "- **Add a specific number or year:** numbers and \"2026\" signal freshness and concreteness.",
+        "- **Use a value modifier:** \"Free,\" \"Guide,\" \"Examples,\" \"Checklist\" — words that match search intent.",
+        "- **End with your brand:** \" — SEO Auditor\" builds recognition without eating much space.",
+        "- **Match the query:** if people search \"title tag length,\" use those words; don't make Google translate.",
+        "The example table below shows the difference between titles that work and titles that quietly leak clicks."
+      ]
+    },
+    {
+      "heading": "Good vs. bad title tags: examples",
+      "body": [
+        "The fastest way to learn title-tag writing is to compare strong titles against the common failure modes side by side. Each bad title below fails on a specific, fixable axis — length, vagueness, keyword stuffing, or missing intent.",
+        "[[table]]",
+        "Notice the pattern in the strong column: a clear primary keyword near the front, one specific hook (a number, a year, or a benefit), and a light brand tag at the end. The weak column repeats keywords, hides the topic behind the brand, or describes nothing at all.",
+        "Once your titles are sharp, do the same for your descriptions — the snippet beneath the headline. Our guide to [what a meta description is](/blog/what-is-a-meta-description) covers how the two work together to win the click, and you can run a [free SEO + GEO audit](/) to see both rendered exactly as Google would display them."
+      ]
+    },
+    {
+      "heading": "Common title tag mistakes to avoid",
+      "body": [
+        "Most title tag problems fall into a handful of repeat offenders, and every one is easy to find and fix once you know the pattern.",
+        "- **Duplicate titles across pages.** When two pages share a title, Google can't tell them apart and may rewrite or demote one. Every page needs a unique title.",
+        "- **Missing or empty titles.** A page with no `<title>` lets Google guess — usually badly, pulling the domain or a random heading.",
+        "- **Keyword stuffing.** \"Title Tag, SEO Title, Page Title, Meta Title\" reads as spam and invites a Google rewrite.",
+        "- **Boilerplate brand-first titles.** Starting all 200 pages with \"BrandName | \" buries the unique part below the truncation point.",
+        "- **Mismatched intent.** A title that promises a comparison but delivers a sales page erodes trust and click-through rate.",
+        "Fixing these is high-ROI work: title tags are cheap to edit and directly tied to clicks. Scan your whole site for missing, empty, and duplicate titles with the [metadata title check](/check/metadata.title.missing), then rewrite the worst pages first."
+      ]
+    }
+  ],
+  "flowchart": {
+    "title": "How to write a title tag",
+    "steps": [
+      { "title": "Identify the primary keyword", "detail": "Pick the one phrase the page should rank for and confirm real searchers use it." },
+      { "title": "Front-load the keyword", "detail": "Put the keyword near the start so it survives truncation in search results." },
+      { "title": "Add one specific hook", "detail": "Include a number, the year, or a value word like Free or Guide to spark a click." },
+      { "title": "Append the brand", "detail": "End with a short brand tag to build recognition without crowding the title." },
+      { "title": "Check length and uniqueness", "detail": "Keep it near 50-60 characters and make sure no other page shares the title." }
+    ]
+  },
+  "comparisonTable": {
+    "caption": "Good vs. bad title tags by failure mode",
+    "headers": ["Issue", "Bad title tag", "Strong title tag"],
+    "rows": [
+      ["Too vague", "Home | Acme Inc", "Project Management Software for Small Teams — Acme"],
+      ["Keyword stuffing", "SEO Title, Title Tag, Meta Title, Page Title Tips", "Title Tag Length: The 50-60 Character Rule (2026)"],
+      ["Brand-first padding", "Acme Inc | Acme Inc | Running Shoes", "Lightweight Running Shoes for Beginners — Acme"],
+      ["Too long (truncated)", "The Complete and Totally Comprehensive Ultimate Guide to Writing Title Tags for SEO in 2026", "How to Write Title Tags: A 2026 SEO Guide"],
+      ["No intent match", "Our Thoughts on Headlines", "What Is a Title Tag? Length & Examples (2026)"]
+    ]
+  },
+  "peopleAlsoAsk": [
+    { "q": "How long should a title tag be?", "a": "A title tag should be about 50 to 60 characters, which keeps it under Google's roughly 580-pixel display limit before truncation. Google measures pixel width, not character count, so titles full of wide letters get cut sooner. Front-load the keyword and brand so they stay visible even if Google trims the end." },
+    { "q": "Is the title tag a ranking factor?", "a": "Yes, the title tag is a confirmed Google ranking factor and one of the most important on-page signals. Google uses the title tag to understand what a page is about and to match it to a query. Beyond ranking, the title tag heavily influences click-through rate, which indirectly affects performance over time." },
+    { "q": "What is the difference between a title tag and an H1?", "a": "The title tag is metadata in the page's <head> that appears in search results, browser tabs, and social shares but is not visible on the page. The H1 is the main on-page headline a visitor reads after clicking. A page has one title tag and one H1; they can use different wording but should not contradict each other." },
+    { "q": "Does every page need a unique title tag?", "a": "Yes, every page should have a unique title tag. Duplicate titles make it hard for Google to distinguish pages and can cause one to be rewritten or demoted in search results. Unique titles also describe each page accurately to users, which improves click-through rate from the search results page." },
+    { "q": "Why does Google rewrite my title tags?", "a": "Google rewrites a title tag when it judges that the original does not match the page content or the user's query well, or when the title is too long, stuffed with keywords, or boilerplate. Google rewrites titles in roughly half of all results. Writing a clear, accurate, appropriately sized title is the best way to reduce unwanted rewrites." }
+  ],
+  "faqs": [
+    { "q": "Where does the title tag go in the HTML?", "a": "The title tag goes inside the <head> section of an HTML document, written as <title>Your Title</title>. It must appear once per page. Most CMS platforms and frameworks generate it from a page-title field, so you rarely edit the raw HTML directly." },
+    { "q": "Should the title tag include my brand name?", "a": "Including your brand name in the title tag is recommended, usually at the end after a dash or pipe, for example \"How to Write Title Tags — SEO Auditor.\" Putting the brand last keeps your unique keyword visible before any truncation. For your homepage, leading with the brand is fine since the brand is the topic." },
+    { "q": "Can two pages share the same title tag?", "a": "Two pages should not share the same title tag because duplicate titles confuse search engines and weaken click-through rate. Each page covers a different topic and deserves a title that reflects it. Run a site-wide check to surface duplicate and missing titles, then rewrite them to be distinct." }
+  ],
+  "relatedKeywords": ["title tag length", "title tag vs h1", "SEO title best practices", "click-worthy title examples", "duplicate title tags", "how to write a title tag"],
+  "internalLinks": [
+    { "href": "/", "anchor": "Run a free SEO + GEO audit" },
+    { "href": "/check/metadata.title.missing", "anchor": "Check for missing or duplicate title tags" },
+    { "href": "/blog/what-is-a-meta-description", "anchor": "What is a meta description?" },
+    { "href": "/blog/what-is-on-page-seo", "anchor": "On-page SEO guide" }
+  ]
+}

@@ -15,6 +15,9 @@ export function SiteFooter() {
             Free, comprehensive SEO + JSON-LD + GEO audits for every public page on your site.
             No signup. No paywall. No crawl cap. Ever.
           </p>
+          <p className="site-footer__tagline">
+            📧 Contact: <a href="mailto:gravi5964@gmail.com">gravi5964@gmail.com</a>
+          </p>
           <div className="site-footer__status">
             <span className="site-footer__status-dot" aria-hidden="true" />
             <span>All systems operational</span>

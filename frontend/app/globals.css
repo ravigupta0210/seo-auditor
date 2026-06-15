@@ -492,7 +492,7 @@ details > summary,
   margin: 0 auto;
   padding: 48px 24px 28px;
   display: grid;
-  grid-template-columns: 1.4fr repeat(3, 1fr);
+  grid-template-columns: 1.4fr repeat(2, 1fr);
   gap: 36px;
 }
 .site-footer__brand-row { display: flex; align-items: center; gap: 10px; margin-bottom: 12px; }
@@ -1029,6 +1029,9 @@ details > summary,
   text-transform: uppercase;
 }
 .blog-card__read { margin-left: auto; color: var(--text-faint); }
+/* The "Featured" pin is absolutely positioned top-right; reserve room in the
+   meta row (only on cards that have a pin) so it never overlaps the read-time. */
+.blog-card:has(.blog-card__pin) .blog-card__meta { padding-right: 78px; }
 .blog-card__tag {
   display: inline-flex;
   align-items: center;
@@ -1328,3 +1331,54 @@ details > summary,
 }
 .pasf__chip:hover { border-color: color-mix(in srgb, var(--accent) 45%, var(--border)); color: var(--text); }
 .pasf__chip::before { content: '🔎'; font-size: 12px; }
+
+/* ============================================================
+   Mobile responsive overrides. These ONLY apply on small
+   screens (≤600px / ≤480px / ≤400px) — desktop is untouched.
+   ============================================================ */
+
+/* Audit form: stack the input + button vertically on phones */
+@media (max-width: 480px) {
+  .audit-form { flex-direction: column; }
+  .audit-form .btn-primary { width: 100%; justify-content: center; }
+}
+
+@media (max-width: 600px) {
+  /* Tighter side padding so content isn't cramped */
+  .page-shell, .page-shell--narrow { padding: 28px 16px 48px; }
+  .page-title { font-size: clamp(26px, 8vw, 34px); }
+  .page-lede { font-size: 15px; }
+
+  /* Collapse multi-column grids to a single column */
+  .cmp-grid, .chk-overview, .post-related__list { grid-template-columns: 1fr; }
+
+  /* Wide data tables: shrink slightly, keep horizontal scroll inside the wrapper */
+  .cmp-matrix-wrap, .cmp-table-wrap { -webkit-overflow-scrolling: touch; }
+  .cmp-table { font-size: 13px; }
+  .cmp-table th, .cmp-table td { padding: 9px 10px; }
+
+  /* Blog reading experience */
+  .blog-card { padding: 18px 16px; }
+  .blog-card__title { font-size: 17px; }
+  .post-meta { flex-wrap: wrap; gap: 10px; }
+  .post-tldr { flex-direction: column; gap: 8px; }
+  .post-body { font-size: 16px; }
+  .post-code { font-size: 12.5px; }
+  .flowchart { padding: 16px 14px; }
+  .faq__q { padding: 14px 14px; }
+  .faq__a { padding: 0 14px 14px; }
+
+  /* Footer: single column, drop the tagline width cap */
+  .site-footer__inner { grid-template-columns: 1fr; gap: 24px; padding: 36px 16px 22px; }
+  .site-footer__tagline { max-width: none; }
+
+  /* Bigger tap targets for touch (interactive elements only) */
+  .site-header__link { padding: 10px 12px; }
+  .site-footer__list a { display: inline-block; padding: 6px 0; }
+  .btn-secondary { padding: 12px 18px; }
+}
+
+@media (max-width: 400px) {
+  .page-shell, .page-shell--narrow { padding: 24px 12px 40px; }
+  .blog-card { padding: 16px 13px; }
+}

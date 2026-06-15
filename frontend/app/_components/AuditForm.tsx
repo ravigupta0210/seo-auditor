@@ -22,6 +22,7 @@ export function AuditForm() {
     <div id="top">
       <form
         onSubmit={submit}
+        className="audit-form"
         style={{
           display: 'flex',
           gap: 8,
@@ -63,7 +64,7 @@ export function AuditForm() {
         </button>
       </form>
 
-      <div style={{ display: 'flex', gap: 6, marginTop: 12, justifyContent: 'center' }}>
+      <div style={{ display: 'flex', flexWrap: 'wrap', gap: 6, marginTop: 12, justifyContent: 'center' }}>
         <ScopeButton active={scope === 'single'} onClick={() => setScope('single')} label="Single page" hint="Deep analysis" />
         <ScopeButton active={scope === 'site'} onClick={() => setScope('site')} label="Full site" hint="Up to 25 pages" />
       </div>

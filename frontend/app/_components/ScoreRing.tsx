@@ -25,9 +25,12 @@ export function ScoreRing({ score, size = 130, showGrade = true }: ScoreRingProp
     safe >= 40 ? 'D' :
     'F';
 
+  // Fluid on small screens: scale down with the viewport, never above `size`.
+  const dim = `clamp(92px, 26vw, ${size}px)`;
+
   return (
-    <div style={{ position: 'relative', width: size, height: size, flexShrink: 0 }}>
-      <svg width={size} height={size} className="score-ring">
+    <div style={{ position: 'relative', width: dim, height: dim, flexShrink: 0 }}>
+      <svg width="100%" height="100%" viewBox={`0 0 ${size} ${size}`} className="score-ring">
         <defs>
           <linearGradient id={`ring-grad-${safe}`} x1="0%" y1="0%" x2="100%" y2="100%">
             <stop offset="0%" stopColor={color} stopOpacity="0.9" />
@@ -64,7 +67,7 @@ export function ScoreRing({ score, size = 130, showGrade = true }: ScoreRingProp
           textAlign: 'center',
         }}
       >
-        <div style={{ fontSize: size * 0.32, fontWeight: 700, color, lineHeight: 1, letterSpacing: '-0.02em' }}>
+        <div style={{ fontSize: `clamp(26px, 8vw, ${size * 0.32}px)`, fontWeight: 700, color, lineHeight: 1, letterSpacing: '-0.02em' }}>
           {safe}
         </div>
         <div style={{ fontSize: 10, color: 'var(--text-muted)', textTransform: 'uppercase', letterSpacing: '0.1em', marginTop: 4 }}>

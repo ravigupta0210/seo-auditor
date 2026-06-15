@@ -53,7 +53,7 @@ export default async function CheckPage({ params }: PageProps) {
         <p style={{ fontSize: 11, color: 'var(--accent)', textTransform: 'uppercase', letterSpacing: '0.12em', margin: '20px 0 8px', fontWeight: 600 }}>
           {check.category} · {check.id}
         </p>
-        <h1 style={{ fontSize: 34, margin: '0 0 16px', lineHeight: 1.15, letterSpacing: '-0.02em' }}>{check.title}</h1>
+        <h1 style={{ fontSize: 'clamp(24px, 6vw, 34px)', margin: '0 0 16px', lineHeight: 1.15, letterSpacing: '-0.02em' }}>{check.title}</h1>
         <p style={{ fontSize: 17, color: 'var(--text-dim)', lineHeight: 1.65, margin: '0 0 26px' }}>{check.summary}</p>
 
         <section className="glass-card" style={{ padding: '18px 22px', marginBottom: 18 }}>

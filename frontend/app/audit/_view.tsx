@@ -109,7 +109,7 @@ export function AuditView() {
             {phase.kind === 'running' && <span className="spinner" />}
             {scope === 'site' ? 'Full-site crawl' : 'Single-page audit'}
           </span>
-          <h1 style={{ fontSize: 30, margin: '0 0 6px', wordBreak: 'break-all', letterSpacing: '-0.02em' }}>{host}</h1>
+          <h1 style={{ fontSize: 'clamp(22px, 6vw, 30px)', margin: '0 0 6px', wordBreak: 'break-word', letterSpacing: '-0.02em' }}>{host}</h1>
           <a href={url} target="_blank" rel="noopener" style={{ fontSize: 13, color: 'var(--text-muted)' }}>{url} ↗</a>
         </header>
 

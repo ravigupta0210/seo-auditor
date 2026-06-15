@@ -165,7 +165,7 @@ export default function HomePage() {
         </Section>
 
         <section style={{ marginTop: 56, textAlign: 'center' }}>
-          <h2 style={{ fontSize: 28, margin: '0 0 10px', letterSpacing: '-0.02em' }}>Ready when you are.</h2>
+          <h2 style={{ fontSize: 'clamp(22px, 6vw, 28px)', margin: '0 0 10px', letterSpacing: '-0.02em' }}>Ready when you are.</h2>
           <p style={{ color: 'var(--text-muted)', margin: '0 0 22px' }}>Free forever. Audit your first site in under 5 seconds. Reports include a copy-paste fix for every issue, sorted by impact.</p>
           <Link href="#top" className="btn-primary" style={{ textDecoration: 'none' }}>
             Audit my site →

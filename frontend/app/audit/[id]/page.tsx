@@ -74,7 +74,7 @@ export default async function ReportPage({ params }: PageProps) {
             <span style={{ width: 6, height: 6, borderRadius: '50%', background: 'var(--pass)', boxShadow: '0 0 8px var(--pass-glow)' }} />
             {report.scope === 'site' ? `${report.meta.pagesAnalyzed} pages` : 'Single page'} · {new Date(report.createdAt).toLocaleDateString()}
           </span>
-          <h1 style={{ fontSize: 32, margin: '0 0 6px', wordBreak: 'break-all', letterSpacing: '-0.02em' }}>{host}</h1>
+          <h1 style={{ fontSize: 'clamp(22px, 6vw, 32px)', margin: '0 0 6px', wordBreak: 'break-word', letterSpacing: '-0.02em' }}>{host}</h1>
           <a href={report.url} target="_blank" rel="noopener" style={{ fontSize: 13, color: 'var(--text-muted)' }}>{report.url} ↗</a>
         </header>
 
@@ -91,7 +91,7 @@ export default async function ReportPage({ params }: PageProps) {
             {(['error', 'warning', 'info', 'pass'] as const).map((s) => (
               <div key={s}>
                 <div style={{ fontSize: 11, color: 'var(--text-muted)', textTransform: 'uppercase', letterSpacing: '0.08em', fontWeight: 600 }}>{s}</div>
-                <div style={{ fontSize: 28, fontWeight: 700, color: sevColor(s), lineHeight: 1.2, letterSpacing: '-0.01em' }}>
+                <div style={{ fontSize: 'clamp(22px, 5vw, 28px)', fontWeight: 700, color: sevColor(s), lineHeight: 1.2, letterSpacing: '-0.01em' }}>
                   {report.summary.totals[s]}
                 </div>
               </div>

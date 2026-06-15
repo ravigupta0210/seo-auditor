@@ -76,9 +76,6 @@ export function SiteFooter() {
         <p className="site-footer__copy">
           © {FOOTER_YEAR} SEO Auditor &middot; MIT licensed open source
         </p>
-        <p className="site-footer__credit">
-          <span className="site-footer__small">Hosted on Vercel + Render free tiers</span>
-        </p>
       </div>
     </footer>
   );

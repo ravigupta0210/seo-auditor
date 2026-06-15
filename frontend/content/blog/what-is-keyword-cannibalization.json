@@ -1,0 +1,114 @@
+{
+  "slug": "what-is-keyword-cannibalization",
+  "title": "What Is Keyword Cannibalization? (And How to Fix It)",
+  "date": "2026-06-15",
+  "updatedAt": "2026-06-15",
+  "tag": "Technical SEO",
+  "cluster": "technical-seo",
+  "keyword": "keyword cannibalization",
+  "secondaryKeywords": ["fix keyword cannibalization", "duplicate keyword pages", "search intent overlap", "consolidate competing pages"],
+  "readTime": 9,
+  "excerpt": "Keyword cannibalization is when two of your pages compete for one keyword and split rankings. Here's how to diagnose and fix it.",
+  "description": "Keyword cannibalization happens when multiple pages target the same keyword and split rankings. Learn how to diagnose and fix it in 2026.",
+  "tldr": "Keyword cannibalization is when two or more pages on the same site compete for one keyword, splitting clicks and rankings so neither page wins. Fix it by consolidating, canonicalizing, redirecting, or differentiating intent — usually one of these four moves.",
+  "status": "published",
+  "sections": [
+    {
+      "heading": "What is keyword cannibalization?",
+      "body": [
+        "Keyword cannibalization is when two or more pages on the same website target the same keyword and search intent, forcing Google to choose between them. Instead of ranking one strong page, the site splits its authority, links, and click signals across competing URLs — so both pages rank lower than a single consolidated page would.",
+        "The name is a metaphor: your own pages eat into each other's performance. A blog post titled \"best running shoes\" and a category page titled \"running shoes\" both chase the same query. Google flip-flops between them in the results, neither builds a clear topical signal, and your average position stalls around page two.",
+        "Cannibalization is **not** the same as having multiple pages on a topic. A cluster of pages that each target a *distinct* intent (\"running shoes for flat feet\" vs \"running shoes under $100\") is healthy. The problem only appears when the intent overlaps — when a searcher would be equally satisfied by either page."
+      ]
+    },
+    {
+      "heading": "What causes keyword cannibalization?",
+      "body": [
+        "Keyword cannibalization is usually caused by publishing multiple pages around overlapping queries without mapping each page to a unique intent. It rarely happens on purpose — it accumulates as a site grows.",
+        "The most common causes:",
+        "- **Topic drift in a content calendar** — you publish \"email marketing tips\" in 2023 and \"how to do email marketing\" in 2025, never noticing they target the same searcher.\n- **Tags and category archives** — CMS-generated tag pages (`/tag/seo`) often rank for the same terms as the articles they list.\n- **Product and variant pages** — e-commerce sites generate near-identical pages for color or size variants that all chase the brand-plus-product query.\n- **Location pages** — \"plumber in Austin\" and \"Austin plumber\" published as separate URLs.\n- **Reusing the same title tag and H1** across posts, which tells Google the pages are interchangeable.",
+        "The common thread is intent overlap. If you can't write one sentence explaining how two pages serve *different* searchers, they are cannibalizing each other. A quick [free SEO + GEO audit](/) will flag duplicate titles and thin overlapping pages before they snowball."
+      ]
+    },
+    {
+      "heading": "Does keyword cannibalization hurt SEO?",
+      "body": [
+        "Yes, keyword cannibalization hurts SEO when the competing pages serve identical intent, because ranking signals that should concentrate on one URL get diluted across several. The practical damage shows up in four ways:",
+        "- **Lower average position** — Google ranks both pages mid-pack instead of one page high.\n- **Wasted backlinks** — external links point to whichever page they found, splitting authority that a single canonical page would inherit.\n- **Unstable rankings** — the URL that ranks for a query swaps week to week, making performance impossible to forecast.\n- **Diluted click-through** — even if you hold two listings, the weaker one steals impressions from the stronger.",
+        "That said, the threat is overstated in a lot of SEO advice. Two pages appearing for the same keyword is not automatically a problem — Google routinely ranks multiple pages from one site for broad terms. Cannibalization only *hurts* when consolidating the pages would plausibly rank higher than keeping them separate. Diagnose before you delete."
+      ]
+    },
+    {
+      "heading": "How do I find keyword cannibalization?",
+      "body": [
+        "Find keyword cannibalization by checking which URLs rank for a single query in Google Search Console and confirming the overlap with a `site:` search. Two tools do almost all the work:",
+        "**1. Search Console — Performance report.** Open Search Console, go to Performance, and filter by a specific query. Then add the **Pages** dimension. If two or more URLs collect impressions and clicks for the *same* query, and their positions hover near each other, that query is being cannibalized. Sort by impressions and look for queries where the top page keeps changing date to date.",
+        "**2. The `site:` operator.** Run a query like `site:yourdomain.com running shoes` in Google. The order Google returns *your* pages reveals which it considers most relevant. If several near-identical pages appear, you have candidates to consolidate.",
+        "**3. A title/duplicate scan.** Duplicate or near-duplicate title tags are the loudest signal. Run your site through the [SEO Auditor](/check) to surface repeated titles, thin pages, and overlapping H1s across your URLs in one pass — far faster than checking pages by hand.",
+        "Build a simple spreadsheet: one row per cannibalized query, the competing URLs, each URL's clicks and position, and the winner you intend to keep. That map drives every fix below."
+      ]
+    },
+    {
+      "heading": "How do I fix keyword cannibalization?",
+      "body": [
+        "Fix keyword cannibalization with one of four moves — consolidate, canonicalize, redirect, or differentiate — chosen by how similar the pages are and whether each deserves to exist. Work through the flowchart, then apply the matching fix.",
+        "[[flowchart]]",
+        "The four fixes, in plain terms:",
+        "- **Consolidate** — merge the best content from both pages into one stronger URL, then redirect the loser. Best when two thin posts cover the same intent.\n- **Canonicalize** — keep both pages live but add a `<link rel=\"canonical\">` from the weaker page to the stronger one, telling Google which to index. Best when both pages must exist for users (e.g. product variants). See [what is a canonical tag](/blog/what-is-a-canonical-tag) for the exact syntax.\n- **Redirect (301)** — permanently send the weaker URL to the winner when the loser has no standalone value. This passes most of its link equity along.\n- **Differentiate intent** — rewrite the titles, H1s, and angle so each page targets a genuinely different searcher. Best when both pages *should* rank, just for different queries.",
+        "[[table]]",
+        "Pick the fix above using the comparison table, then re-crawl and re-check Search Console two to four weeks later to confirm the surviving page consolidated its rankings. Cannibalization overlaps heavily with [duplicate content](/blog/how-to-fix-duplicate-content) — fixing one often fixes the other."
+      ]
+    },
+    {
+      "heading": "How to prevent it going forward",
+      "body": [
+        "Prevent keyword cannibalization by maintaining a keyword-to-URL map: a single document where every target keyword is assigned to exactly one page before anything new is published. If a new article would target an already-claimed keyword, you either update the existing page or sharpen the new one's intent.",
+        "A few durable habits:",
+        "> One primary keyword, one URL. If you can't name the unique searcher a new page serves, don't publish it — fold the idea into the page that already ranks.",
+        "- Write distinct, descriptive title tags and H1s for every page.\n- Internally link from supporting articles up to the one \"money\" page for each keyword, reinforcing which URL should rank.\n- Audit quarterly — content libraries drift, and last year's safe pages become this year's competitors.\n- Use canonical tags proactively on faceted, paginated, and variant URLs.",
+        "Cannibalization is cheaper to prevent than to untangle. A recurring audit catches overlap while it's two pages, not twenty."
+      ]
+    }
+  ],
+  "flowchart": {
+    "title": "Diagnose then fix keyword cannibalization",
+    "steps": [
+      { "title": "Confirm the overlap", "detail": "In Search Console, filter one query and add the Pages dimension to see if two URLs split impressions." },
+      { "title": "Verify intent is identical", "detail": "Ask whether a searcher would be equally satisfied by either page; if yes, it's true cannibalization." },
+      { "title": "Decide if both pages must exist", "detail": "If users genuinely need both URLs, keep them; if not, plan to merge or remove the weaker one." },
+      { "title": "Consolidate or redirect when one should win", "detail": "Merge content into the stronger URL and 301-redirect the loser to pass its link equity." },
+      { "title": "Canonicalize when both must stay", "detail": "Add rel=canonical from the weaker page to the stronger so Google indexes the right URL." },
+      { "title": "Differentiate when both should rank", "detail": "Rewrite titles, H1s, and angles so each page targets a distinct keyword and intent." }
+    ]
+  },
+  "comparisonTable": {
+    "caption": "Which cannibalization fix to use",
+    "headers": ["Fix", "Use when", "What happens to the loser URL", "Link equity"],
+    "rows": [
+      ["Consolidate", "Two thin pages, same intent", "Merged into winner, then 301'd", "Passed to winner"],
+      ["Canonicalize", "Both pages needed for users", "Stays live, marked non-canonical", "Consolidated to winner"],
+      ["301 Redirect", "Loser has no standalone value", "Removed, redirected to winner", "Mostly passed to winner"],
+      ["Differentiate", "Both should rank separately", "Stays live, retargeted", "Stays with its own page"]
+    ]
+  },
+  "peopleAlsoAsk": [
+    { "q": "What causes keyword cannibalization?", "a": "Keyword cannibalization is caused by publishing multiple pages that target the same keyword and search intent without mapping each page to a unique purpose. Common culprits include topic drift in a content calendar, CMS-generated tag and category archives, near-identical product variant pages, and reusing the same title tag across posts. The shared trigger is intent overlap — when a searcher would be equally satisfied by either page." },
+    { "q": "Does keyword cannibalization hurt SEO?", "a": "Keyword cannibalization hurts SEO when competing pages serve identical intent, because ranking signals and backlinks that should concentrate on one URL get diluted across several. The result is lower average position, unstable rankings that swap week to week, and split click-through. It does not hurt, however, when two pages legitimately target different intents — Google routinely ranks multiple pages from one site." },
+    { "q": "How do I find keyword cannibalization?", "a": "Find keyword cannibalization by filtering a single query in Google Search Console's Performance report and adding the Pages dimension to see if two URLs split impressions for that query. Confirm the overlap with a site:yourdomain.com search to see which pages Google considers most relevant. A duplicate-title scan in an SEO audit tool surfaces the strongest signal of all — repeated title tags across competing URLs." },
+    { "q": "How do I fix keyword cannibalization?", "a": "Fix keyword cannibalization with one of four moves chosen by how the pages relate. Consolidate and 301-redirect when two thin pages share one intent; canonicalize when both pages must stay live for users; redirect outright when the weaker URL has no standalone value; and differentiate titles and intent when both pages should rank for different queries. Re-check Search Console two to four weeks after the fix to confirm the surviving page consolidated its rankings." },
+    { "q": "Is keyword cannibalization the same as duplicate content?", "a": "Keyword cannibalization and duplicate content are related but distinct. Duplicate content means the same or near-identical text appears on multiple URLs, while cannibalization means multiple pages compete for the same keyword even if their text differs. The two often overlap, and the same fixes — canonical tags, redirects, and consolidation — frequently resolve both at once." }
+  ],
+  "faqs": [
+    { "q": "How long does it take to recover after fixing cannibalization?", "a": "Recovery after fixing keyword cannibalization typically takes two to six weeks, the time Google needs to recrawl the affected URLs and re-evaluate rankings. Pages with more authority and crawl frequency consolidate faster. Monitor the surviving URL's average position in Search Console rather than checking rankings daily." },
+    { "q": "Should I delete or redirect a cannibalizing page?", "a": "Redirect rather than delete a cannibalizing page whenever the loser URL has earned any backlinks or traffic, because a 301 redirect passes most of its link equity to the surviving page. Only delete outright if the page has no inbound links, no traffic, and no value to users. A bare 404 throws away signals that a redirect would preserve." },
+    { "q": "Can internal linking cause keyword cannibalization?", "a": "Internal linking can worsen keyword cannibalization when supporting articles point to two competing pages with the same anchor text, splitting the signal about which URL should rank. The fix is to link all related anchors to a single chosen page for each keyword. Consistent internal anchor text reinforces which page Google should treat as canonical." }
+  ],
+  "relatedKeywords": ["fix keyword cannibalization", "duplicate content vs cannibalization", "canonical tag for cannibalization", "search intent mapping", "consolidate competing pages", "Search Console cannibalization"],
+  "internalLinks": [
+    { "href": "/", "anchor": "Run a free SEO + GEO audit" },
+    { "href": "/check", "anchor": "See all 40+ SEO and GEO checks" },
+    { "href": "/blog/what-is-a-canonical-tag", "anchor": "What is a canonical tag" },
+    { "href": "/blog/how-to-fix-duplicate-content", "anchor": "How to fix duplicate content" },
+    { "href": "/blog/what-is-technical-seo", "anchor": "What is technical SEO" }
+  ]
+}

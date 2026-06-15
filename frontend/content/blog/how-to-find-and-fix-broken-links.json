@@ -1,0 +1,140 @@
+{
+  "slug": "how-to-find-and-fix-broken-links",
+  "title": "How to Find and Fix Broken Links (2026)",
+  "date": "2026-06-15",
+  "updatedAt": "2026-06-15",
+  "tag": "Technical SEO",
+  "cluster": "technical-seo",
+  "keyword": "broken links",
+  "secondaryKeywords": ["404 error", "broken link checker", "redirect", "crawl errors"],
+  "readTime": 9,
+  "excerpt": "Find broken links with a crawler, Search Console, or a free audit, then fix each one by redirecting, updating, or removing it.",
+  "description": "Learn how to find and fix broken links (404s) in 2026 using crawlers, Google Search Console, and a free audit, plus when to redirect, update, or remove each one.",
+  "tldr": "Find broken links by crawling your site with a tool like Screaming Frog, checking Google Search Console's Pages report, or running a free audit, then fix each one of three ways: 301-redirect it to the best replacement, update the link to the correct URL, or remove it if no replacement exists.",
+  "status": "published",
+  "sections": [
+    {
+      "heading": "What broken links are and why they matter",
+      "body": [
+        "Broken links are links that point to a URL that no longer returns a working page, almost always producing a 404 (page not found) or a 5xx server error instead of content. Every broken link is a dead end for a visitor and a wasted request for a crawler, so the goal is to find each one and either redirect it, update it, or remove it.",
+        "There are two kinds, and they need different attention. **Internal broken links** point from your site to another page on your site that has moved or been deleted. **External broken links** point from your site out to a third-party page that has since vanished or changed. Internal ones are fully within your control and should be fixed first; external ones depend on someone else's site staying alive.",
+        "Why bother? Two reasons. First, **user experience**: a visitor who clicks a link expecting a guide and lands on a 404 is far more likely to bounce than to hunt for the right page. Second, **crawl efficiency**: search engines spend a finite budget fetching your URLs, and every dead link they follow is a fetch that returned nothing rankable. On a small site that waste is invisible, but as page count grows it starts to matter, which is the whole subject of [what is crawl budget](/blog/what-is-crawl-budget)."
+      ]
+    },
+    {
+      "heading": "What a 404 error actually is",
+      "body": [
+        "A **404 error** is an HTTP status code that means the server received the request, understood it, but has no page at that address. It is one of several status codes a crawler reads to decide what to do with a URL, and it is the single most common signal behind a broken link.",
+        "The status code is what matters, not the page you see. A few codes you will run into when chasing broken links:",
+        "- **404 Not Found**: the page does not exist. Normal for deleted content, but a problem when something still links to it.",
+        "- **410 Gone**: like 404, but explicitly permanent. Useful when you want a page de-indexed fast and never coming back.",
+        "- **301 Moved Permanently**: a redirect; the page moved and the link still works for users. This is the fix, not the problem.",
+        "- **5xx Server Error**: the server failed. Intermittent 5xx errors can look like broken links in a crawl even when the page exists.",
+        "- **Soft 404**: the page returns a `200 OK` status but the content is effectively empty or a \"not found\" message. Search engines flag these because the status lies about the content.",
+        "Soft 404s are the sneaky one. A custom \"Sorry, nothing here\" page that returns `200` instead of `404` tells crawlers the page is real and worth indexing. Check the status code directly rather than trusting how the page looks:",
+        "```bash\n# Returns the HTTP status without downloading the body\ncurl -sI https://example.com/old-page | head -1\n# Healthy redirect:  HTTP/2 301\n# Broken link:       HTTP/2 404\n```"
+      ]
+    },
+    {
+      "heading": "How to find broken links on your site",
+      "body": [
+        "Finding broken links means scanning every link on your site and recording which targets return an error status. Three methods cover almost every case, and the flow below shows how they fit together from a full crawl down to a per-link decision.",
+        "[[flowchart]]",
+        "**1. Run a site crawler.** A crawler like Screaming Frog, Sitebulb, or Ahrefs Site Audit follows every link on your site and reports the response code for each target. Filter for `404` and `5xx` to get your internal broken-link list, and check the \"inlinks\" for each so you know exactly which pages to edit. This is the most complete method because it tests links you have forgotten exist.",
+        "**2. Check Google Search Console.** The Pages report (under Indexing) groups URLs by status, including **\"Not found (404)\"** and **\"Soft 404.\"** This shows you the broken URLs Google has actually tried to crawl, often because something external still links to them. It is the best source for broken links you cannot see by crawling your own navigation.",
+        "**3. Run a free audit.** A quick [SEO audit](/blog/how-to-do-an-seo-audit) surfaces broken links alongside the other technical issues on a page so you fix them in one pass instead of opening four tools. **[Run a free SEO + GEO audit](/)** to see broken links, redirect chains, and status-code problems on any URL in seconds.",
+        "Whichever method you use, the deliverable is the same: a list of broken target URLs, each with the page that links to it. That list is what you take into the fix stage."
+      ]
+    },
+    {
+      "heading": "How to fix broken links: redirect, update, or remove",
+      "body": [
+        "Fixing a broken link always resolves to one of three actions, and which one you choose depends on whether the content moved, the link is wrong, or the destination is genuinely gone. Decide per link using the table below.",
+        "[[table]]",
+        "**Redirect** when a real page moved to a new URL. Add a `301 Moved Permanently` from the old address to the new one so existing links, bookmarks, and backlinks all keep working and pass their ranking signals along. Redirects are also how you handle a deleted page that has a clear successor, for example a discontinued product pointing to its category.",
+        "**Update** when the link target is simply wrong, the URL has a typo, or you control both pages and can just point the link at the correct address. This is the cleanest fix because it removes the broken link entirely rather than papering over it with a redirect. Always prefer updating an internal link over redirecting it.",
+        "**Remove** when there is no equivalent destination and no value in redirecting, common with external links to sites that no longer exist. Delete the link (or the surrounding sentence) so readers are not sent into a void. For an old page that should disappear from search with no replacement, return `410 Gone` rather than redirecting it somewhere irrelevant.",
+        "> A redirect to your homepage for a deleted deep page is treated by Google as a soft 404. If there is no good replacement, remove the link or return 410 — do not dump every dead URL on the homepage.",
+        "One trap to avoid: **redirect chains**. If `/a` redirects to `/b` and `/b` redirects to `/c`, fix the original link to point straight at `/c`. Chains slow crawlers and dilute the signal at each hop. After any batch of redirects, re-crawl to confirm each one lands on a live page in a single hop. Broken links are a recurring maintenance item, not a one-time cleanup, so a periodic crawl is part of healthy [technical SEO](/blog/what-is-technical-seo)."
+      ]
+    },
+    {
+      "heading": "Preventing broken links from coming back",
+      "body": [
+        "Preventing broken links is cheaper than chasing them, and it comes down to a few habits around how you change URLs and how often you scan. The single biggest cause of new broken links is changing a slug or deleting a page without adding a redirect.",
+        "- **Add a redirect the moment you change a URL.** Before you ship a slug change or delete a page, map the old URL to its new home in the same deploy.",
+        "- **Audit internal links after migrations.** Moving a CMS, restructuring URLs, or switching domains creates broken links in bulk; crawl immediately afterward.",
+        "- **Schedule a recurring crawl.** Monthly is plenty for most sites. Search Console's Pages report will also email you when 404 counts spike.",
+        "- **Keep your sitemap clean.** A sitemap that lists deleted URLs feeds crawlers broken targets directly, so regenerate it after changes — see [how to create an XML sitemap](/blog/how-to-create-an-xml-sitemap).",
+        "- **Use a 404 page that helps.** A custom 404 that returns the correct `404` status and offers search plus top links recovers visitors who hit an unavoidable dead end.",
+        "The payoff is steady. A site with no broken links spends its crawl budget on real pages, keeps backlink equity flowing to live URLs, and never sends a reader to a dead end. Run a crawl today, fix what you find with redirect/update/remove, and put one monthly scan on the calendar."
+      ]
+    }
+  ],
+  "flowchart": {
+    "title": "Find and fix a broken link",
+    "steps": [
+      { "title": "Crawl the site", "detail": "Run a crawler, check Search Console's Pages report, or run a free audit to list every URL returning 404 or 5xx." },
+      { "title": "Record the linking page", "detail": "For each broken target, note which page links to it so you know exactly where to make the fix." },
+      { "title": "Check the status code", "detail": "Confirm it is a true 404/410/5xx and not a soft 404 returning 200 with empty content." },
+      { "title": "Did the content move?", "detail": "If a real page moved or has a clear successor, 301-redirect the old URL to it." },
+      { "title": "Is the link just wrong?", "detail": "If you control the link and the target exists, update the link to the correct URL instead of redirecting." },
+      { "title": "No replacement? Remove it", "detail": "Delete the link or return 410 Gone, then re-crawl to confirm no chains or new 404s remain." }
+    ]
+  },
+  "comparisonTable": {
+    "caption": "Choosing the right fix for a broken link",
+    "headers": ["Situation", "Fix", "Method", "Best for"],
+    "rows": [
+      ["Page moved to a new URL", "Redirect", "301 from old URL to new URL", "Pages with backlinks or traffic"],
+      ["Link target is a typo or you control it", "Update", "Edit the link to the correct URL", "Internal links you can edit directly"],
+      ["Deleted page with a clear successor", "Redirect", "301 to the closest equivalent page", "Discontinued products or merged guides"],
+      ["Deleted page, no replacement", "Remove", "Return 410 Gone, drop the link", "Genuinely retired content"],
+      ["External link to a dead site", "Remove", "Delete the link or sentence", "Outbound references that vanished"]
+    ]
+  },
+  "peopleAlsoAsk": [
+    {
+      "q": "How do I find broken links on my site?",
+      "a": "Find broken links by crawling your site with a tool like Screaming Frog, Sitebulb, or Ahrefs Site Audit, which follows every link and reports each target's status code. Filter the results for 404 and 5xx responses to get your broken-link list. Cross-check with Google Search Console's Pages report, which flags 'Not found (404)' and 'Soft 404' URLs that Google has actually tried to crawl. A free SEO audit can also surface broken links on a given page alongside other technical issues."
+    },
+    {
+      "q": "Do broken links hurt SEO?",
+      "a": "Broken links hurt SEO indirectly rather than through a direct ranking penalty. Internal broken links waste crawl budget by sending search engines to dead 404 pages and they strand any ranking signal that pointed at the missing URL. They also damage user experience, raising bounce rates, which can weaken engagement signals over time. The largest hit is to a deleted page that had backlinks: without a 301 redirect, that link equity is lost entirely."
+    },
+    {
+      "q": "What is a 404 error?",
+      "a": "A 404 error is an HTTP status code meaning the server received the request but has no page at that address. It is the most common signal behind a broken link and appears whenever a page is deleted, a URL is mistyped, or a slug changes without a redirect. A normal 404 for content you intentionally removed is fine, but a 404 reached by a link that still exists is a broken link you should redirect, update, or remove. Watch for soft 404s, which return a 200 status with empty content and mislead crawlers."
+    },
+    {
+      "q": "Should I redirect or remove a broken link?",
+      "a": "Redirect a broken link when a real page moved or there is a clear successor page, using a 301 so existing links and backlinks keep working. Remove the link when the destination is genuinely gone and has no equivalent, which is common for external links to dead sites. For a deleted page with no replacement, return 410 Gone rather than redirecting it to an unrelated page. Avoid redirecting deep deleted pages to your homepage, because Google treats that as a soft 404."
+    },
+    {
+      "q": "What is the difference between an internal and external broken link?",
+      "a": "An internal broken link points from one page on your site to another page on your site that has moved or been deleted. An external broken link points from your site out to a third-party page that has since vanished or changed. Internal broken links are fully within your control and should be fixed first by updating or redirecting. External ones depend on someone else's site staying live, so the usual fix is to update the link or remove it."
+    }
+  ],
+  "faqs": [
+    {
+      "q": "How often should I check for broken links?",
+      "a": "Check for broken links monthly for most sites, and immediately after any URL change, CMS migration, or domain switch. Migrations are the single biggest cause of broken links appearing in bulk, so a crawl right after one catches problems before users and crawlers do. Google Search Console's Pages report will also surface a spike in 404s between your scheduled crawls."
+    },
+    {
+      "q": "Will a custom 404 page fix broken links?",
+      "a": "A custom 404 page improves the experience for visitors who hit a dead end, but it does not fix the underlying broken link. The link still points to a missing page, so you still need to redirect, update, or remove it at the source. Make sure the custom page returns a real 404 status code rather than a 200, since a 200 turns it into a soft 404 that misleads search engines."
+    },
+    {
+      "q": "Do redirect chains count as broken links?",
+      "a": "Redirect chains are not broken links because each hop still resolves to a live page, but they cause similar problems and should be cleaned up. A chain like /a to /b to /c slows crawlers and dilutes ranking signal at every hop. Fix the original link to point straight at the final destination, then re-crawl to confirm each redirect lands in a single hop."
+    }
+  ],
+  "relatedKeywords": ["404 error", "broken link checker", "301 redirect", "crawl errors", "dead links", "redirect chains"],
+  "internalLinks": [
+    { "href": "/", "anchor": "Run a free SEO + GEO audit" },
+    { "href": "/blog/what-is-technical-seo", "anchor": "What is technical SEO" },
+    { "href": "/blog/how-to-do-an-seo-audit", "anchor": "How to do an SEO audit" },
+    { "href": "/blog/what-is-crawl-budget", "anchor": "What is crawl budget" },
+    { "href": "/blog/how-to-create-an-xml-sitemap", "anchor": "How to create an XML sitemap" }
+  ]
+}

@@ -103,6 +103,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
         contactPoint: {
           '@type': 'ContactPoint',
           contactType: 'customer support',
+          email: 'gravi5964@gmail.com',
           url: 'https://github.com/ravigupta0210/seo-auditor/issues',
           availableLanguage: ['English'],
         },

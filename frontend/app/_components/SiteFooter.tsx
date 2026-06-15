@@ -69,6 +69,11 @@ export function SiteFooter() {
           <h3 className="site-footer__heading">Project</h3>
           <ul className="site-footer__list">
             <li>
+              <a href="mailto:gravi5964@gmail.com">
+                Contact &amp; feedback <span className="site-footer__ext">✉</span>
+              </a>
+            </li>
+            <li>
               <a
                 href="https://github.com/ravigupta0210/seo-auditor"
                 target="_blank"

@@ -1,0 +1,144 @@
+{
+  "slug": "nofollow-vs-dofollow-links",
+  "title": "Nofollow vs Dofollow Links: What's the Difference? (2026)",
+  "date": "2026-06-15",
+  "updatedAt": "2026-06-15",
+  "tag": "SEO",
+  "cluster": "content-links",
+  "keyword": "nofollow vs dofollow",
+  "secondaryKeywords": ["nofollow link", "dofollow link", "rel sponsored", "rel ugc"],
+  "readTime": 9,
+  "excerpt": "Dofollow links pass authority; nofollow links don't. Here's when each is used and why nofollow still matters.",
+  "description": "Nofollow vs dofollow links explained: what each does, when to use sponsored and ugc attributes, and why nofollow links still drive traffic and discovery in 2026.",
+  "tldr": "A dofollow link passes ranking authority (PageRank) to the page it points to; a nofollow link adds rel=\"nofollow\" and tells Google not to pass that authority. Both still send real human traffic, and Google treats nofollow as a hint since 2020 — so nofollow links are not worthless.",
+  "status": "published",
+  "sections": [
+    {
+      "heading": "Nofollow vs dofollow: the core difference",
+      "body": [
+        "The difference between nofollow vs dofollow comes down to one thing: whether a link passes ranking authority. A **dofollow link** is the default — when you write a plain `<a href>` with no special attribute, search engines follow it and pass a share of PageRank (link authority) to the destination, helping it rank. A **nofollow link** carries `rel=\"nofollow\"`, which tells Google and other crawlers not to count that link as an endorsement for ranking purposes.",
+        "There is no actual `rel=\"dofollow\"` attribute — \"dofollow\" is just the community name for a normal link with nothing blocking it. So every link is dofollow until someone explicitly marks it otherwise.",
+        "Here is the part people miss: **a nofollow link still works as a link.** A human can click it, land on your site, read your content, and convert. Google can still discover the URL through it. The only thing nofollow changes is the *ranking signal* — not the traffic, not the discovery, not the brand exposure.",
+        "> Quick rule: dofollow = \"I vouch for this page.\" nofollow = \"I'm linking, but I'm not vouching.\""
+      ]
+    },
+    {
+      "heading": "How to read a link in the HTML",
+      "body": [
+        "To tell whether a link is nofollow or dofollow, look at the `rel` attribute in the raw HTML. A dofollow link looks like this:",
+        "```html\n<a href=\"https://example.com\">anchor text</a>\n```",
+        "A nofollow link looks like this:",
+        "```html\n<a href=\"https://example.com\" rel=\"nofollow\">anchor text</a>\n```",
+        "Since 2019, Google added two more specific `rel` values, and in 2020 it began treating all of them as **hints** rather than strict directives:",
+        "- **`rel=\"sponsored\"`** — for paid or affiliate links (ads, sponsorships, affiliate links). Use this instead of plain nofollow when money changed hands.\n- **`rel=\"ugc\"`** — for user-generated content links: blog comments, forum posts, profile links. It says \"a user put this here, not the site owner.\"\n- **`rel=\"nofollow\"`** — the catch-all when you don't want to pass authority and the link isn't paid or UGC.",
+        "You can combine them, e.g. `rel=\"sponsored noopener\"`. To audit your own pages and spot links that are missing the right attributes, run a [free SEO + GEO audit](/) and check the link section."
+      ]
+    },
+    {
+      "heading": "Nofollow vs dofollow vs sponsored vs ugc",
+      "body": [
+        "Each link attribute exists for a specific situation. Picking the wrong one — like leaving a paid link as dofollow — is a classic way to draw a manual penalty. Here's how they compare.",
+        "[[table]]",
+        "The safe defaults are simple: links you place editorially to genuinely useful sources are **dofollow**. Anything you were paid for is **sponsored**. Anything a visitor posts is **ugc**. Everything else you don't want to endorse is **nofollow**."
+      ]
+    },
+    {
+      "heading": "Do nofollow links help SEO? (Yes — just not how you think)",
+      "body": [
+        "Nofollow links help SEO indirectly, even though they don't directly pass PageRank. Treating them as worthless is one of the most expensive mistakes in link building. Here is what a nofollow link actually does for you:",
+        "- **Referral traffic.** A nofollow link in a popular Reddit thread or a major news site can send thousands of real visitors. Those clicks don't care about `rel` attributes.\n- **Discovery and indexing.** Google still crawls most nofollow links, so they help bots find new pages on your site.\n- **A natural link profile.** Sites with *only* dofollow links look manipulated. A healthy profile has a realistic mix of nofollow and dofollow.\n- **Brand signals and citations.** Mentions of your brand across forums, social, and Q&A sites build the kind of entity recognition that increasingly feeds AI search engines.",
+        "Since March 2020, Google treats nofollow as a **hint** for ranking and crawling — meaning it *may* still use a nofollow link as a ranking signal if its systems decide to. So the old belief that nofollow links pass zero value is outdated. They pass less, and unpredictably more than zero.",
+        "If you want the bigger picture on earning links without paying, see our guide on [how to get backlinks for free](/blog/how-to-get-backlinks-for-free). And because the clickable text still matters for relevance and user trust, pair it with smart [anchor text](/blog/what-is-anchor-text)."
+      ]
+    },
+    {
+      "heading": "Why most social and forum links are nofollow",
+      "body": [
+        "Most social media and forum links are nofollow by design, and it's not a conspiracy against marketers — it's spam defense. Any site that lets the public post links (comments, profiles, posts) would get buried in PageRank-farming spam if those links were dofollow. So platforms strip the authority signal while still letting the links function for humans.",
+        "Here's where the big platforms stand in 2026:",
+        "- **Reddit** — outbound links in posts and comments are **nofollow** (often `ugc`).\n- **Facebook** — outbound links are **nofollow**.\n- **X / Twitter** — outbound links are **nofollow**.\n- **YouTube** — description links are **nofollow**.\n- **LinkedIn** — most outbound links are **nofollow**.\n- **Wikipedia** — external links are **nofollow**.\n- **Quora** — outbound links are **nofollow**.",
+        "Does that make them useless? No. These platforms drive enormous referral traffic and brand visibility, and they're heavily crawled by both Google and AI engines like Perplexity and ChatGPT. A nofollow Reddit citation can absolutely influence whether an AI tool mentions your brand — which is its own ranking game.",
+        "[[flowchart]]"
+      ]
+    },
+    {
+      "heading": "When should you use a nofollow link?",
+      "body": [
+        "You should use a nofollow (or sponsored/ugc) link whenever you're linking out but don't want to pass an endorsement. The decision is almost always about *trust and money*, not SEO trickery. Common cases:",
+        "- **Paid links** — ads, sponsorships, and affiliate links should use `rel=\"sponsored\"`. Passing authority on a paid link violates Google's guidelines.\n- **User-generated links** — comments, forum posts, and user profiles should use `rel=\"ugc\"`.\n- **Untrusted sources** — when you must cite a site you don't want to vouch for, use `rel=\"nofollow\"`.\n- **Low-priority pages** — login, cart, or terms pages where you don't need to spend crawl signal.",
+        "Conversely, keep links **dofollow** when you're editorially recommending a genuinely useful resource — that's how the web is supposed to work, and it's what Google's algorithm is built to reward. Don't nofollow your internal links or your trusted citations out of paranoia.",
+        "Want to confirm your pages are sending the right signals? Run a quick scan from the [homepage tool](/) or browse the full [SEO + GEO checks](/check) to see exactly which links pass authority and which don't."
+      ]
+    }
+  ],
+  "flowchart": {
+    "title": "Which rel attribute should this link use?",
+    "steps": [
+      { "title": "Did money change hands?", "detail": "If the link is an ad, sponsorship, or affiliate link, use rel=\"sponsored\"." },
+      { "title": "Did a user post it?", "detail": "If it's a comment, forum post, or profile link, use rel=\"ugc\"." },
+      { "title": "Do you not want to vouch for it?", "detail": "If you're citing an untrusted source, use rel=\"nofollow\"." },
+      { "title": "Is it an editorial recommendation?", "detail": "If you genuinely endorse the page, leave it dofollow (no rel)." },
+      { "title": "Audit the page", "detail": "Run the SEO Auditor to confirm each link carries the attribute you intended." }
+    ]
+  },
+  "comparisonTable": {
+    "caption": "Link attributes compared: what each does and when to use it",
+    "headers": ["Attribute", "Passes authority?", "Crawled?", "When to use", "Example"],
+    "rows": [
+      ["Dofollow (default)", "Yes", "Yes", "Editorial links you endorse", "<a href=\"...\">"],
+      ["rel=\"nofollow\"", "No (treated as a hint since 2020)", "Usually", "Untrusted or low-priority links", "<a rel=\"nofollow\">"],
+      ["rel=\"sponsored\"", "No", "Usually", "Ads, affiliate, paid links", "<a rel=\"sponsored\">"],
+      ["rel=\"ugc\"", "No", "Usually", "Comments, forums, user content", "<a rel=\"ugc\">"]
+    ]
+  },
+  "peopleAlsoAsk": [
+    {
+      "q": "What is the difference between nofollow and dofollow?",
+      "a": "A dofollow link passes ranking authority (PageRank) from the linking page to the destination, helping it rank in search. A nofollow link adds rel=\"nofollow\" and tells search engines not to pass that authority. Both still send human traffic and can be crawled — the only difference is whether the link counts as a ranking endorsement."
+    },
+    {
+      "q": "Do nofollow links help SEO?",
+      "a": "Nofollow links help SEO indirectly even though they don't directly pass PageRank. They drive referral traffic, help search engines discover new pages, and build a natural-looking link profile. Since March 2020, Google also treats nofollow as a hint, meaning it may still use the link as a ranking signal in some cases."
+    },
+    {
+      "q": "Are Reddit and Facebook links nofollow?",
+      "a": "Yes, outbound links on both Reddit and Facebook are nofollow. Reddit typically marks links as ugc and Facebook as nofollow, because both let the public post links and need to deter spam. The links still send real referral traffic and brand exposure, and both platforms are heavily crawled by Google and AI search engines."
+    },
+    {
+      "q": "When should I use a nofollow link?",
+      "a": "Use a nofollow link when you're linking out but don't want to pass an endorsement. Apply rel=\"sponsored\" to paid and affiliate links, rel=\"ugc\" to user-generated links like comments, and rel=\"nofollow\" to untrusted or low-priority pages. Keep links dofollow when you genuinely recommend the destination."
+    },
+    {
+      "q": "Is dofollow better than nofollow for backlinks?",
+      "a": "Dofollow backlinks are more valuable for rankings because they pass authority, but a profile of only dofollow links looks unnatural and can trigger scrutiny. A healthy backlink profile mixes both. Nofollow links from high-traffic sites can still be worth more in practice than dofollow links from low-quality pages."
+    }
+  ],
+  "faqs": [
+    {
+      "q": "Is there a rel=\"dofollow\" attribute?",
+      "a": "No, rel=\"dofollow\" does not exist as a real HTML attribute. \"Dofollow\" is just the informal name for a normal link that has no nofollow, sponsored, or ugc attribute. A plain <a href> link is dofollow by default."
+    },
+    {
+      "q": "Will nofollow links hurt my rankings?",
+      "a": "Nofollow links will not hurt your rankings. Marking outbound links as nofollow, sponsored, or ugc is exactly what Google recommends for paid and user-generated links. The risk runs the other way: leaving paid links as dofollow can trigger a manual penalty."
+    },
+    {
+      "q": "How do I check if a link is nofollow or dofollow?",
+      "a": "Check whether the link's HTML contains a rel attribute with nofollow, sponsored, or ugc. You can right-click the link and inspect the element, or run an SEO audit tool that flags each outbound link's attribute automatically. If there's no such rel value, the link is dofollow."
+    }
+  ],
+  "relatedKeywords": [
+    "nofollow link meaning",
+    "dofollow vs nofollow backlinks",
+    "rel sponsored vs nofollow",
+    "rel ugc attribute",
+    "are social media links nofollow",
+    "do nofollow links pass link juice"
+  ],
+  "internalLinks": [
+    { "href": "/", "anchor": "Run a free SEO + GEO audit" },
+    { "href": "/blog/how-to-get-backlinks-for-free", "anchor": "How to get backlinks for free" },
+    { "href": "/blog/what-is-anchor-text", "anchor": "What is anchor text" },
+    { "href": "/check", "anchor": "All 40+ SEO/GEO checks" }
+  ]
+}

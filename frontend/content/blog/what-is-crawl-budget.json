@@ -1,0 +1,131 @@
+{
+  "slug": "what-is-crawl-budget",
+  "title": "What Is Crawl Budget? (And When It Actually Matters)",
+  "date": "2026-06-15",
+  "updatedAt": "2026-06-15",
+  "tag": "Technical SEO",
+  "cluster": "technical-seo",
+  "keyword": "crawl budget",
+  "secondaryKeywords": ["crawl budget optimization", "crawl rate limit", "crawl demand", "googlebot crawling"],
+  "readTime": 9,
+  "excerpt": "Crawl budget is how many URLs Google will crawl on your site. Here's when it matters — and when it doesn't.",
+  "description": "Crawl budget is how many pages Google crawls on your site. Learn what it is, why it mostly matters for large sites, and how to optimize crawl budget in 2026.",
+  "tldr": "Crawl budget is the number of URLs Googlebot will crawl on your site in a given period, set by two factors: crawl rate limit (how fast Google can fetch without hurting your server) and crawl demand (how much Google wants your pages). It only matters for sites with roughly 10,000+ URLs — small sites get crawled fully and rarely need to worry.",
+  "status": "published",
+  "sections": [
+    {
+      "heading": "What Crawl Budget Actually Means",
+      "body": [
+        "Crawl budget is the number of URLs Googlebot is willing and able to crawl on a site over a given period. Google sets that number from two inputs working together: the **crawl rate limit** (how many simultaneous requests Googlebot can make without overloading your server) and **crawl demand** (how much Google actually wants to fetch and refresh your URLs based on popularity and staleness). The result is roughly how many of your pages get crawled per day.",
+        "Think of it as a faucet with two valves. The **rate limit** valve protects your server — if pages respond slowly or throw 5xx errors, Google turns the flow down to avoid hurting you. The **demand** valve reflects interest — a popular, frequently updated page gets revisited often, while a thin page Google has crawled a hundred times and never seen change gets ignored for weeks.",
+        "Crawl budget is about **crawling, not ranking**. Getting a page crawled is the price of admission to be indexed and ranked, but spending more crawl budget does not push a page higher in results. Crawl budget only becomes a problem when Google cannot get to your important pages because it is busy wasting fetches on junk URLs."
+      ]
+    },
+    {
+      "heading": "When Crawl Budget Actually Matters (and When It Doesn't)",
+      "body": [
+        "Crawl budget matters for a minority of sites, and Google has said so plainly: if a site has **fewer than a few thousand URLs**, it will usually be crawled efficiently without any intervention. The honest answer for most blogs, local businesses, and small e-commerce stores is that crawl budget is a non-issue — Google crawls every page it cares about and your time is better spent on content and links.",
+        "Crawl budget becomes a real concern in a few specific situations:",
+        "- **Large sites** — roughly 10,000+ unique URLs, especially e-commerce, marketplaces, and publishers.\n- **Sites with auto-generated URLs** — faceted navigation, filters, search-result pages, and session IDs that multiply one page into thousands of crawlable variants.\n- **Frequently updated sites** — news and large catalogs where fresh content needs to be discovered fast.\n- **Sites with lots of errors or slow responses** — where Google throttles itself and never finishes crawling.",
+        "If your site is small and healthy, you can stop reading and go write another article — seriously. If you run a large or messy site, the rest of this guide is where the wins are. Not sure which camp you're in? Run a [free SEO + GEO audit](/) to see how many URLs you're exposing and whether crawl waste is a problem before you spend a day fixing something that isn't broken."
+      ]
+    },
+    {
+      "heading": "What Wastes Crawl Budget",
+      "body": [
+        "Crawl budget is wasted whenever Googlebot spends a fetch on a URL that should not be crawled or indexed. On a large site, this waste compounds: every junk URL crawled is an important URL that didn't get crawled. The biggest offenders are remarkably consistent across sites.",
+        "- **Faceted navigation and filters** — `?color=red&size=m&sort=price` can spin one product listing into tens of thousands of near-identical URLs.\n- **Duplicate content** — the same page reachable via multiple URLs (trailing slashes, uppercase, tracking parameters, HTTP and HTTPS) splits crawl effort. See [how to fix duplicate content](/blog/how-to-fix-duplicate-content).\n- **Soft 404s and error pages** — pages that return 200 OK but show \"not found\" content burn crawls and confuse Google.\n- **Endless redirect chains** — each hop is a separate request; long chains waste budget and dilute signals.\n- **Low-value auto-generated pages** — internal search results, tag archives with one post, calendar pages stretching to the year 3000.\n- **Broken links** — pointing Googlebot at dead URLs wastes fetches; here's [how to find and fix broken links](/blog/how-to-find-and-fix-broken-links).",
+        "The pattern is clear: **crawl waste is almost always a URL-count problem, not a content problem.** A 500-page site that exposes 80,000 crawlable URL variants through filters and parameters has a crawl budget problem despite being small in content terms. Counting your real URLs versus your crawlable URLs is the single most useful diagnostic."
+      ]
+    },
+    {
+      "heading": "How to Optimize Crawl Budget: The Fix Order",
+      "body": [
+        "Optimizing crawl budget follows a clear priority order: stop the waste first, then guide Googlebot toward what matters. Tackling these in sequence prevents you from fine-tuning a sitemap while thousands of filter URLs are still draining your budget. The flowchart below lays out the whole loop.",
+        "[[flowchart]]",
+        "Work through the levers in order of impact. The first three eliminate waste; the last two improve discovery:",
+        "- **Block crawl traps in robots.txt** — disallow faceted-navigation parameters, internal search, and infinite-calendar paths so Googlebot never requests them. Crawl control is exactly what [robots.txt](/blog/what-is-robots-txt) is for. Remember it controls crawling, not indexing.\n- **Fix errors and slow responses** — clear 5xx errors, soft 404s, and redirect chains. A faster, error-free server raises your crawl rate limit automatically.\n- **Consolidate duplicates with canonicals** — use [canonical tags](/blog/what-is-a-canonical-tag) to point variant URLs at one preferred version so Google stops re-crawling near-duplicates.\n- **Clean your XML sitemap** — list only canonical, indexable, 200-status URLs and keep `lastmod` accurate. A clean sitemap is a direct signal of what to crawl; here's [how to create an XML sitemap](/blog/how-to-create-an-xml-sitemap).\n- **Strengthen internal linking** — Googlebot allocates crawl demand partly by internal links, so link to important pages prominently and prune links to junk. Flat, well-linked architecture gets crawled deeper.",
+        "Two directives that often get misused: **`noindex` does not save crawl budget** — Google still has to crawl a page to see the noindex tag, so it spends the fetch anyway. And **`nofollow` on internal links is not a crawl-control tool** — to truly keep Googlebot out of a URL pattern, disallow it in robots.txt. Knowing which tool does what prevents a lot of wasted effort."
+      ]
+    },
+    {
+      "heading": "How to Measure Crawl Budget in Search Console",
+      "body": [
+        "Crawl budget is measured in Google Search Console under **Settings → Crawl stats**, which reports total crawl requests, average response time, and a breakdown of what Googlebot fetched by response code, file type, and purpose. This report is the ground truth — it tells you whether Google is hitting errors, crawling junk, or struggling with slow responses on your actual site.",
+        "Three things to look for in the Crawl Stats report:",
+        "- **By response** — a high share of 404s, 5xx, or redirects means Googlebot is burning fetches on dead ends. Healthy sites are mostly 200s.\n- **By purpose** — a large \"Discovery\" share relative to \"Refresh\" can signal that crawl traps are generating endless new URLs.\n- **Average response time** — rising response times throttle your crawl rate limit. Speed is a crawl-budget lever, and heavy media is a common culprit, so [optimizing images for SEO](/blog/how-to-optimize-images-for-seo) directly helps here.",
+        "Compare two numbers to size the problem: how many URLs you *want* indexed versus how many Googlebot is *actually* crawling. Use the table below to map symptoms to fixes — and run an [audit](/check) to surface crawl-blocking issues, duplicate signals, and sitemap errors automatically before you dig through logs.",
+        "[[table]]"
+      ]
+    }
+  ],
+  "flowchart": {
+    "title": "Crawl budget optimization loop",
+    "steps": [
+      { "title": "Count your URLs", "detail": "Compare real pages to crawlable URL variants from filters, parameters, and tags to spot crawl waste." },
+      { "title": "Block crawl traps", "detail": "Disallow faceted-navigation parameters, internal search, and infinite paths in robots.txt." },
+      { "title": "Fix errors and speed", "detail": "Clear 5xx errors, soft 404s, and redirect chains so Google raises your crawl rate limit." },
+      { "title": "Consolidate duplicates", "detail": "Add canonical tags so Googlebot stops re-crawling near-identical variant URLs." },
+      { "title": "Clean the sitemap", "detail": "List only canonical, indexable, 200-status URLs with accurate lastmod dates." },
+      { "title": "Measure in Crawl Stats", "detail": "Recheck Search Console Crawl Stats to confirm fetches shifted toward important pages." }
+    ]
+  },
+  "comparisonTable": {
+    "caption": "Crawl budget symptoms and their fixes",
+    "headers": ["Symptom", "Likely cause", "Fix"],
+    "rows": [
+      ["Thousands of URLs crawled, few indexed", "Faceted navigation or parameter traps", "Disallow parameters in robots.txt; consolidate with canonicals"],
+      ["High 404 / 5xx share in Crawl Stats", "Broken links or unstable server", "Fix dead links and server errors to raise crawl rate"],
+      ["New pages take weeks to get indexed", "Crawl demand spread across junk URLs", "Clean sitemap and strengthen internal links to key pages"],
+      ["Same content on multiple URLs", "Tracking params, trailing slashes, HTTP/HTTPS", "Canonical tags and 301 redirects to one preferred URL"],
+      ["Rising average response time", "Slow server under crawl load", "Improve speed and Core Web Vitals to lift the rate limit"]
+    ]
+  },
+  "peopleAlsoAsk": [
+    {
+      "q": "What is crawl budget in SEO?",
+      "a": "Crawl budget in SEO is the number of URLs Googlebot will crawl on a site in a given period. It is determined by two factors: the crawl rate limit, which is how fast Google can fetch pages without overloading the server, and crawl demand, which is how much Google wants to crawl your pages based on popularity and freshness. Crawl budget affects how quickly pages get discovered and re-crawled, not how they rank."
+    },
+    {
+      "q": "Does my small site need to worry about crawl budget?",
+      "a": "Most small sites do not need to worry about crawl budget. Google has stated that sites with fewer than a few thousand URLs are usually crawled efficiently without any intervention, so blogs, local businesses, and small stores can safely ignore it. Crawl budget only becomes a concern once a site has roughly 10,000 or more URLs, or when filters and parameters generate thousands of crawlable variants."
+    },
+    {
+      "q": "How do I increase crawl budget?",
+      "a": "You increase crawl budget mainly by removing waste and improving server health rather than asking Google for more crawling. Fix 5xx errors and slow response times to raise the crawl rate limit, block crawl traps like faceted-navigation parameters in robots.txt, and consolidate duplicate URLs with canonical tags. Then strengthen internal linking and clean your XML sitemap so Google spends its crawl demand on your important pages."
+    },
+    {
+      "q": "What wastes crawl budget?",
+      "a": "Crawl budget is wasted whenever Googlebot fetches a URL that should not be crawled. The biggest offenders are faceted navigation and filter parameters that multiply one page into thousands of variants, duplicate content reachable through multiple URLs, soft 404s, long redirect chains, and broken links. On large sites this waste means Google never reaches the pages that actually matter."
+    },
+    {
+      "q": "Does crawl budget affect rankings?",
+      "a": "Crawl budget does not directly affect rankings. Crawling is the step before indexing and ranking, so getting a page crawled is necessary to rank, but spending more crawl budget on a page does not push it higher in results. Crawl budget only hurts rankings indirectly, when Google cannot crawl your important pages because it is busy fetching junk URLs."
+    }
+  ],
+  "faqs": [
+    {
+      "q": "Does noindex save crawl budget?",
+      "a": "No, a noindex tag does not save crawl budget. Google still has to crawl a page to read the noindex directive, so it spends the fetch anyway. To genuinely stop Googlebot from requesting a URL pattern, disallow it in robots.txt instead, which prevents the crawl entirely."
+    },
+    {
+      "q": "How many URLs is too many for crawl budget to matter?",
+      "a": "Crawl budget starts to matter at roughly 10,000 or more unique URLs, according to Google's guidance. Below a few thousand URLs, sites are generally crawled completely without intervention. The number that matters is crawlable URLs, not content pages, so a small site that exposes tens of thousands of filter variants can have a crawl budget problem despite having little real content."
+    },
+    {
+      "q": "Where do I check crawl budget?",
+      "a": "You check crawl budget in Google Search Console under Settings, then Crawl stats. The report shows total crawl requests, average response time, and a breakdown of fetches by response code, file type, and purpose. Comparing how many URLs you want indexed against how many Googlebot actually crawls is the fastest way to size the problem."
+    }
+  ],
+  "relatedKeywords": ["crawl budget optimization", "googlebot crawl rate", "crawl demand seo", "crawl stats report", "faceted navigation crawl waste", "how to fix crawl budget"],
+  "internalLinks": [
+    { "href": "/", "anchor": "run a free SEO + GEO audit" },
+    { "href": "/check", "anchor": "all 40+ SEO/GEO checks" },
+    { "href": "/blog/what-is-robots-txt", "anchor": "What is robots.txt" },
+    { "href": "/blog/how-to-create-an-xml-sitemap", "anchor": "How to create an XML sitemap" },
+    { "href": "/blog/what-is-a-canonical-tag", "anchor": "canonical tags" },
+    { "href": "/blog/how-to-fix-duplicate-content", "anchor": "how to fix duplicate content" },
+    { "href": "/blog/how-to-find-and-fix-broken-links", "anchor": "how to find and fix broken links" },
+    { "href": "/blog/how-to-optimize-images-for-seo", "anchor": "optimizing images for SEO" }
+  ]
+}

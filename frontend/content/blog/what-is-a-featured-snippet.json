@@ -1,0 +1,146 @@
+{
+  "slug": "what-is-a-featured-snippet",
+  "title": "What Is a Featured Snippet? (And How to Win One in 2026)",
+  "date": "2026-06-15",
+  "updatedAt": "2026-06-15",
+  "tag": "SEO",
+  "cluster": "seo-basics",
+  "keyword": "featured snippet",
+  "secondaryKeywords": ["position zero", "answer box", "paragraph snippet", "list snippet"],
+  "readTime": 9,
+  "excerpt": "A featured snippet is the answer box at the top of Google. Here's how to win position zero in 2026.",
+  "description": "A featured snippet is the answer box above Google's #1 result. Learn the three types and how to win a featured snippet in 2026.",
+  "tldr": "A featured snippet is the highlighted answer box Google pulls to the top of search results — often called position zero. Win one by answering the question directly in 40-60 words near the top of a page that already ranks in the top 10.",
+  "status": "published",
+  "sections": [
+    {
+      "heading": "What Is a Featured Snippet?",
+      "body": [
+        "A **featured snippet** is the boxed answer Google displays above the standard #1 organic result, pulled directly from a web page to answer a query immediately. Because it sits above the first ranked link, the SEO community nicknamed it **position zero**. Google extracts the snippet algorithmically — you cannot mark a page \"please feature me\" — but you can structure content so it becomes the easiest answer to lift.",
+        "Featured snippets appear for questions and definitions: \"what is X,\" \"how to Y,\" \"best Z,\" or anything phrased as a query. The snippet shows a chunk of your text, your page title, and your URL, with a link straight into the source. Roughly speaking, if Google can quote a clean, self-contained answer from your page, that page is a candidate.",
+        "Featured snippets matter beyond classic search. The same answer-first, well-structured text that wins a snippet is exactly what AI Overviews, ChatGPT, and voice assistants quote. Optimizing for position zero is now a two-for-one: you win the Google box *and* make your content quotable by answer engines."
+      ]
+    },
+    {
+      "heading": "The Three Types of Featured Snippets",
+      "body": [
+        "Featured snippets come in three main formats, and the format Google picks depends on the question. Knowing which type a query triggers tells you exactly how to structure your answer.",
+        "- **Paragraph snippet** — the most common (~70% of snippets). A 40-60 word block of text answering a \"what is\" or \"why\" question.\n- **List snippet** — ordered (numbered steps) or unordered (bulleted items), triggered by \"how to,\" \"steps,\" \"best,\" or \"list of\" queries.\n- **Table snippet** — a grid Google lifts when the query compares values, prices, or specs.",
+        "There's also a less-common **video snippet** (a YouTube clip with a timestamped jump), but the three text formats above are what most pages compete for. See the comparison table below for which query triggers which format.",
+        "[[table]]",
+        "The practical takeaway: **match your content structure to the snippet type**. A \"how to\" query won't reward a wall of prose — Google wants steps. A comparison query rewards an actual HTML `<table>`. Format mismatch is one of the most common reasons a strong page never wins the box."
+      ]
+    },
+    {
+      "heading": "How to Win a Featured Snippet in 2026",
+      "body": [
+        "Winning a featured snippet starts with already ranking on page one — Google pulls snippets almost exclusively from the **top 10 results**, and often from positions 1-5. So step one is conventional SEO: earn a top-ten ranking for the target query. After that, structure beats everything.",
+        "The core move is **answer-first writing**: place a direct, self-contained answer immediately after the heading that matches the question. For a paragraph snippet, keep the answer to 40-60 words, lead with the subject (not \"it\" or \"this\"), and state the fact plainly. This is the same [self-contained writing](/blog/what-is-generative-engine-optimization) discipline that makes content quotable by AI — a passage that makes sense lifted out of context.",
+        "[[flowchart]]",
+        "Tactics that consistently move the needle:",
+        "- **Mirror the question** in an H2 or H3, then answer it in the very next sentence.\n- **Use a definition pattern**: \"A featured snippet is...\" so Google has a clean clause to lift.\n- **Add structure for lists and tables** — real `<ol>`, `<ul>`, and `<table>` markup, not images of them.\n- **Keep answers concise**: paragraph snippets cap around 320 characters; over-writing gets you skipped.",
+        "> Reverse-engineer the current snippet holder. Search your target query, read the page that owns the box, and write a tighter, more current, more complete answer in the matching format.",
+        "Add [FAQ schema](/blog/how-to-add-faq-schema) to surface question-answer pairs cleanly, and run the page through a [free SEO + GEO audit](/) to confirm your direct answer is detectable. When you're ready, [run a free audit](/) on the live URL to check answer-first structure and schema in one pass."
+      ]
+    },
+    {
+      "heading": "Featured Snippets and AI Answers Are the Same Skill",
+      "body": [
+        "Optimizing for a featured snippet and optimizing for AI answers are now the same skill, because both reward a concise, self-contained, well-attributed answer near the top of a page. Google's AI Overviews, ChatGPT, Perplexity, and voice assistants all favor passages that read cleanly out of context — the exact property a paragraph snippet requires.",
+        "This overlap is why featured-snippet work is the cheapest entry point to **answer engine optimization**. If you'd like the full framework, see [what is answer engine optimization](/blog/what-is-answer-engine-optimization). For spoken results specifically — where assistants read a single snippet aloud — read our guide to [voice search optimization](/blog/voice-search-optimization), since voice answers are very often pulled straight from the featured snippet.",
+        "The strategic shift for 2026: stop thinking \"rank a page\" and start thinking \"win the answer.\" A page engineered to be quoted will earn position zero in Google *and* citations in AI tools, multiplying one piece of work across every surface where people ask questions."
+      ]
+    },
+    {
+      "heading": "Tracking and Keeping Your Snippet",
+      "body": [
+        "A featured snippet is never permanent — Google re-evaluates the box on every crawl, so a snippet you win today can move to a competitor tomorrow. Treat position zero as a rented spot, not a trophy, and monitor it the way you'd monitor any high-value ranking.",
+        "Common reasons to lose a featured snippet: a competitor published a fresher or more concise answer, you edited the page and broke the lifted passage, Google switched the snippet format (paragraph to list), or the query stopped showing a snippet at all. To defend it, keep the answer paragraph intact, refresh facts and dates, and watch the SERP for new entrants.",
+        "Measure clicks carefully. Some snippets are **\"no-click\"** — the box answers the question so completely that users don't visit — while others drive strong traffic because the snippet teases a fuller answer. Track impressions and clicks for snippet queries in Search Console, and for the bigger picture, see [how to track AI search traffic](/blog/how-to-track-ai-search-traffic)."
+      ]
+    }
+  ],
+  "flowchart": {
+    "title": "How to win a featured snippet",
+    "steps": [
+      {
+        "title": "Rank in the top 10",
+        "detail": "Google pulls snippets almost exclusively from page-one results, so earn a top-ten ranking first."
+      },
+      {
+        "title": "Identify the snippet type",
+        "detail": "Search the query and note whether the box is a paragraph, list, or table so you match the format."
+      },
+      {
+        "title": "Write an answer-first passage",
+        "detail": "Put a self-contained 40-60 word answer immediately after a heading that mirrors the question."
+      },
+      {
+        "title": "Add the right structure",
+        "detail": "Use real ordered/unordered lists or an HTML table when the query calls for steps or comparisons."
+      },
+      {
+        "title": "Audit and publish",
+        "detail": "Run the page through a free SEO + GEO audit to confirm the direct answer is detectable, then ship it."
+      },
+      {
+        "title": "Monitor and defend",
+        "detail": "Track the snippet in Search Console and refresh the answer when a competitor or format change threatens it."
+      }
+    ]
+  },
+  "comparisonTable": {
+    "caption": "The three featured snippet types and how to win each",
+    "headers": ["Snippet type", "Triggered by", "How to structure it", "Ideal length"],
+    "rows": [
+      ["Paragraph", "\"What is,\" \"why,\" definition queries", "Direct answer right after the matching heading", "40-60 words"],
+      ["List (ordered)", "\"How to,\" \"steps,\" \"recipe\" queries", "Numbered <ol> with one action per item", "5-8 items"],
+      ["List (unordered)", "\"Best,\" \"types of,\" \"checklist\" queries", "Bulleted <ul> with parallel phrasing", "5-8 items"],
+      ["Table", "\"Compare,\" price, spec, vs. queries", "Real HTML <table> with clear headers", "3-7 rows"]
+    ]
+  },
+  "peopleAlsoAsk": [
+    {
+      "q": "How do I get a featured snippet?",
+      "a": "To get a featured snippet, first rank a page in Google's top 10 for the target query, since snippets are pulled almost exclusively from page-one results. Then add a concise, self-contained answer of 40-60 words immediately after a heading that mirrors the question. Match the format Google already shows — paragraph, list, or table — and keep the answer factual and quotable."
+    },
+    {
+      "q": "What are the types of featured snippets?",
+      "a": "Featured snippets come in three main text formats: paragraph, list, and table. Paragraph snippets are the most common and answer \"what is\" or \"why\" questions in a short block of text. List snippets show numbered steps or bulleted items, and table snippets display a grid for comparison and pricing queries. A separate video snippet format exists for some how-to searches."
+    },
+    {
+      "q": "Do featured snippets increase traffic?",
+      "a": "Featured snippets can increase traffic, but the effect depends on the query. Snippets that tease a fuller answer often lift click-through rate by sitting above the #1 result. However, some snippets are \"no-click\" — they answer the question so completely that users never visit the page — so it's important to track impressions and clicks per query in Search Console."
+    },
+    {
+      "q": "Why did I lose my featured snippet?",
+      "a": "A featured snippet is lost when Google re-evaluates the box and finds a better source. Common causes include a competitor publishing a fresher or more concise answer, an edit that broke the passage Google was lifting, a format switch (paragraph to list), or Google removing the snippet for that query entirely. Keeping the answer paragraph intact and refreshing facts helps defend the spot."
+    },
+    {
+      "q": "What is position zero?",
+      "a": "Position zero is the nickname for the featured snippet because it appears above the first ranked organic result on a Google search page. The term reflects that the snippet outranks the #1 blue link visually, even though it is technically a special presentation of an existing page-one result. Winning position zero means owning the answer box at the very top of the SERP."
+    }
+  ],
+  "faqs": [
+    {
+      "q": "Can I force Google to feature my page?",
+      "a": "No tag or setting forces Google to feature a page; featured snippets are selected algorithmically. You can only increase the odds by ranking in the top 10 and structuring a clean, self-contained answer in the format Google already shows for that query. Schema like FAQ markup helps Google parse your content but does not guarantee the box."
+    },
+    {
+      "q": "Do featured snippets help with AI Overviews and voice search?",
+      "a": "Yes — the answer-first, self-contained writing that wins a featured snippet is the same structure AI Overviews and voice assistants prefer. Voice results are very often read directly from the featured snippet, and AI tools tend to cite the same quotable passages. Optimizing for position zero effectively optimizes for those surfaces at the same time."
+    },
+    {
+      "q": "How long should a featured snippet answer be?",
+      "a": "A paragraph featured snippet answer should run about 40-60 words and stay under roughly 320 characters, since Google truncates longer passages. List snippets work best at 5-8 items and table snippets at 3-7 rows. Concise, format-matched answers are lifted more reliably than long ones."
+    }
+  ],
+  "relatedKeywords": ["position zero SEO", "answer box Google", "how to rank for featured snippets", "types of featured snippets", "paragraph snippet optimization", "no-click search"],
+  "internalLinks": [
+    { "href": "/", "anchor": "run a free SEO + GEO audit" },
+    { "href": "/blog/what-is-answer-engine-optimization", "anchor": "what is answer engine optimization" },
+    { "href": "/blog/voice-search-optimization", "anchor": "voice search optimization" },
+    { "href": "/blog/what-is-generative-engine-optimization", "anchor": "self-contained writing" },
+    { "href": "/blog/how-to-add-faq-schema", "anchor": "FAQ schema" }
+  ]
+}

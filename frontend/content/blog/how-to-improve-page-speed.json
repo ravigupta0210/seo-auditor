@@ -1,0 +1,138 @@
+{
+  "slug": "how-to-improve-page-speed",
+  "title": "How to Improve Page Speed (2026 Guide)",
+  "date": "2026-06-23",
+  "updatedAt": "2026-06-23",
+  "tag": "Technical SEO",
+  "cluster": "technical-seo",
+  "keyword": "how to improve page speed",
+  "secondaryKeywords": ["page speed optimization", "core web vitals", "LCP optimization", "reduce javascript"],
+  "readTime": 9,
+  "excerpt": "A practical, ordered playbook to improve page speed in 2026: optimize images, cut JS, cache, and fix Core Web Vitals.",
+  "description": "Learn how to improve page speed in 2026 with an ordered playbook: image optimization, lazy loading, less JavaScript, caching/CDN, and font tuning for Core Web Vitals.",
+  "tldr": "To improve page speed, fix your largest bottleneck first: optimize and resize images, defer non-critical JavaScript, enable caching and a CDN, and tune font loading. These four wins move the three Core Web Vitals (LCP, INP, CLS) more than any micro-tweak.",
+  "status": "published",
+  "sections": [
+    {
+      "heading": "How to improve page speed: the short answer",
+      "body": [
+        "Learning how to improve page speed starts with attacking the heaviest bottleneck before anything else. For most sites that means oversized images and render-blocking JavaScript, not exotic micro-optimizations. The ordered playbook is simple: **(1) optimize images, (2) lazy-load below-the-fold media, (3) reduce and defer JavaScript, (4) enable caching plus a CDN, and (5) tune font loading.** Done in that order, these wins improve the three metrics Google actually grades you on.",
+        "Those three metrics are the **Core Web Vitals**: Largest Contentful Paint (LCP) measures how fast the main content renders, Interaction to Next Paint (INP) measures responsiveness to clicks and taps, and Cumulative Layout Shift (CLS) measures visual stability. Page-speed work that ignores these metrics is guesswork. Page-speed work organized around them is a checklist.",
+        "Targets to aim for in 2026: **LCP under 2.5 seconds, INP under 200 milliseconds, and CLS under 0.1**, measured at the 75th percentile of real visits. Hit those thresholds and you have a fast page by Google's own definition. The table below maps each metric to the single fix that moves it most.",
+        "[[table]]",
+        "The rest of this guide walks the optimization order, then answers the questions people actually search."
+      ]
+    },
+    {
+      "heading": "The optimization order (do these in sequence)",
+      "body": [
+        "Page-speed fixes are not equal in payoff, and doing them out of order wastes effort. The flowchart below is the sequence that delivers the most improvement per hour of work, because it front-loads the changes that move LCP and CLS — the two vitals most sites fail.",
+        "[[flowchart]]",
+        "The logic: images and video are usually the largest bytes on the page, so compressing and right-sizing them shrinks LCP first. Lazy-loading then stops off-screen media from competing for bandwidth. JavaScript is the next-largest cost and the main driver of poor INP, so cutting and deferring it comes third. Caching and a CDN make every subsequent visit fast for free. Fonts come last because they cause CLS and invisible-text flashes that are cheap to fix once the heavy lifting is done.",
+        "Resist the urge to chase a perfect Lighthouse score. **Lighthouse is a lab simulation; Core Web Vitals are graded on real-user data (CrUX).** Optimize for the field, validate in the lab."
+      ]
+    },
+    {
+      "heading": "Images and lazy loading (your biggest LCP win)",
+      "body": [
+        "Images are the single biggest page-speed lever for most sites because the LCP element is usually a hero image or banner. Fixing images is the fastest path to a passing LCP score. There are three moves that compound:",
+        "- **Serve modern formats.** Convert JPEG and PNG to `WebP` or `AVIF`, which are 25-50% smaller at the same quality.\n- **Right-size, don't just compress.** A 4000px image displayed at 800px wastes bandwidth. Use `srcset` and `sizes` so each device downloads only what it needs.\n- **Set explicit `width` and `height`.** Dimensions reserve layout space and prevent the content jump that ruins CLS.",
+        "Then lazy-load everything below the fold with the native attribute, which is supported everywhere in 2026:",
+        "```html\n<img src=\"hero.avif\" width=\"1200\" height=\"600\" alt=\"...\" fetchpriority=\"high\">\n<img src=\"gallery.avif\" loading=\"lazy\" width=\"800\" height=\"600\" alt=\"...\">\n```",
+        "Note the split: the LCP hero gets `fetchpriority=\"high\"` so the browser loads it immediately, while gallery images get `loading=\"lazy\"`. Never lazy-load the LCP image — doing so delays the very metric you're trying to fix. For the full image workflow including alt text and compression tooling, see [how to optimize images for SEO](/blog/how-to-optimize-images-for-seo)."
+      ]
+    },
+    {
+      "heading": "Reduce JavaScript and fix INP",
+      "body": [
+        "JavaScript is the leading cause of poor Interaction to Next Paint, because every script the browser parses, compiles, and executes blocks the main thread from responding to taps and clicks. Cutting JavaScript is how you fix INP. The audit has three parts: ship less, ship later, and ship smarter.",
+        "> Rule of thumb: if a script isn't needed to render or interact with the content a visitor sees first, it should not block the first paint.",
+        "Concrete tactics that work in 2026:",
+        "- **Defer non-critical scripts** with `defer` or `async`, and move analytics, chat widgets, and A/B-testing tags out of the critical path.\n- **Code-split** so each route ships only the JavaScript it uses instead of one giant bundle.\n- **Audit third-party tags.** A single heavy tag manager or ad script can dominate INP; remove what you can't justify.\n- **Avoid hydration bloat.** If you're on a framework, prefer static or server rendering for content that doesn't need interactivity.",
+        "Third-party scripts are the silent killer here — they run on the main thread but live outside your codebase, so they're easy to forget. Run an audit and list every external `<script>` before you start trimming your own code."
+      ]
+    },
+    {
+      "heading": "Caching, CDN, and font loading",
+      "body": [
+        "Caching and a CDN make repeat visits and far-away visits fast without changing a single line of page code. Caching stores assets so browsers and edge servers don't re-download them. A **content delivery network (CDN)** serves your files from a server physically near the visitor, cutting latency. Together they're the highest-leverage infrastructure change for page speed.",
+        "Set it up like this:",
+        "- **Long-cache static assets.** Give images, CSS, JS, and fonts a `Cache-Control: max-age=31536000, immutable` header with hashed filenames so updates still bust the cache.\n- **Put a CDN in front of everything.** Cloudflare, Fastly, or your host's edge network all qualify; most have free tiers.\n- **Enable compression** with Brotli (or gzip) for text assets.",
+        "Fonts come last because they cause two specific problems — invisible text (FOIT) and layout shift (CLS) — that are quick to fix:",
+        "```css\n@font-face {\n  font-family: 'Inter';\n  src: url('/fonts/inter.woff2') format('woff2');\n  font-display: swap;\n}\n```",
+        "Add `font-display: swap` so text shows immediately in a fallback font, `<link rel=\"preload\">` your primary font file, and self-host instead of calling a third-party font CDN to remove an extra connection. Compare your before/after numbers as part of a structured [SEO audit](/blog/how-to-do-an-seo-audit) so you know which metric each change moved."
+      ]
+    },
+    {
+      "heading": "How to measure and verify your wins",
+      "body": [
+        "Measuring page speed correctly matters as much as the fixes, because lab scores and real-user scores often disagree. Always confirm improvements in **field data**, not just a one-off lab test. The free tools that matter:",
+        "- **PageSpeed Insights** shows both lab (Lighthouse) and field (CrUX) data for any URL.\n- **Chrome DevTools Performance panel** profiles your own visits to find long tasks and layout shifts.\n- **Search Console's Core Web Vitals report** tracks real-user pass/fail across your whole site over time.",
+        "Page speed is one slice of a healthy site. For the broader checklist — crawlability, indexing, structured data, and mobile readiness — read [what is technical SEO](/blog/what-is-technical-seo). And when you want a single scan that flags slow-loading signals alongside 40+ SEO and GEO checks, [run a free SEO + GEO audit](/) on any URL."
+      ]
+    }
+  ],
+  "flowchart": {
+    "title": "Page-speed optimization order",
+    "steps": [
+      { "title": "Optimize images", "detail": "Convert to AVIF/WebP, right-size with srcset, and set explicit width/height to fix LCP and CLS." },
+      { "title": "Lazy-load below-the-fold media", "detail": "Add loading=\"lazy\" to off-screen images so they stop competing for bandwidth with the hero." },
+      { "title": "Reduce and defer JavaScript", "detail": "Code-split, defer non-critical scripts, and audit third-party tags to fix INP." },
+      { "title": "Enable caching + CDN", "detail": "Long-cache hashed assets and serve them from edge servers near the visitor." },
+      { "title": "Tune font loading", "detail": "Use font-display: swap, preload, and self-host to kill invisible text and layout shift." },
+      { "title": "Measure in field data", "detail": "Verify LCP, INP, and CLS in PageSpeed Insights and Search Console, not just Lighthouse." }
+    ]
+  },
+  "comparisonTable": {
+    "caption": "Core Web Vitals: what each metric measures and the fix that moves it",
+    "headers": ["Metric", "What it measures", "Good threshold (2026)", "Top fix"],
+    "rows": [
+      ["LCP", "Time for main content to render", "Under 2.5 s", "Optimize the hero image, preload it, never lazy-load it"],
+      ["INP", "Responsiveness to clicks and taps", "Under 200 ms", "Reduce and defer JavaScript; audit third-party tags"],
+      ["CLS", "Visual stability during load", "Under 0.1", "Set image dimensions; use font-display: swap"]
+    ]
+  },
+  "peopleAlsoAsk": [
+    {
+      "q": "Does page speed affect SEO?",
+      "a": "Yes, page speed affects SEO directly. Google uses Core Web Vitals — LCP, INP, and CLS — as ranking signals, and a slow page is a tiebreaker that can push you below an equally relevant but faster competitor. Speed also affects SEO indirectly: slow pages raise bounce rates and lower engagement, which signal poor user experience."
+    },
+    {
+      "q": "What is a good page load time?",
+      "a": "A good page load time targets Largest Contentful Paint (LCP) under 2.5 seconds at the 75th percentile of real visits, which is Google's 'good' threshold. Total full-page load is less meaningful than LCP because users perceive a page as ready once the main content appears. Aim for the main content to render in under 2.5 seconds on a median mobile connection."
+    },
+    {
+      "q": "How do I test my page speed?",
+      "a": "Test page speed with free tools that report both lab and field data. PageSpeed Insights gives a Lighthouse lab score plus real-user CrUX data for any URL, Chrome DevTools profiles your own visits, and Search Console's Core Web Vitals report tracks pass/fail across your whole site. Always trust field data over a single lab run, since lab simulations can diverge from real users."
+    },
+    {
+      "q": "What slows down a website most?",
+      "a": "Oversized images and excess JavaScript slow down websites most. Unoptimized hero images inflate LCP, while heavy JavaScript bundles and third-party tags block the main thread and wreck INP. Render-blocking resources, missing caching, and no CDN compound the problem by forcing every visitor to download too much from too far away."
+    },
+    {
+      "q": "How can I improve page speed without coding?",
+      "a": "You can improve page speed without coding by compressing and resizing images before upload, enabling a caching and CDN plugin or your host's built-in edge network, and removing unused plugins, fonts, and third-party scripts. Most CMS platforms offer one-click caching and image-optimization tools. These non-code wins handle the biggest bottlenecks — images and caching — for most sites."
+    }
+  ],
+  "faqs": [
+    {
+      "q": "Should I lazy-load my hero image?",
+      "a": "No, you should never lazy-load the LCP element, which is usually the hero image. Lazy-loading delays loading until the browser confirms the element is near the viewport, which postpones the exact paint Core Web Vitals measures. Add fetchpriority=\"high\" to the hero instead and reserve lazy-loading for below-the-fold media."
+    },
+    {
+      "q": "Is a perfect Lighthouse score worth chasing?",
+      "a": "A perfect Lighthouse score is not worth chasing on its own. Lighthouse is a lab simulation, while Google ranks pages using field data from real Chrome users (CrUX). A page can score 100 in the lab and still fail Core Web Vitals in the field, so optimize for real-user metrics and use Lighthouse only to diagnose."
+    },
+    {
+      "q": "How much does a CDN actually help page speed?",
+      "a": "A CDN helps page speed significantly for any audience that isn't right next to your origin server. By serving cached assets from an edge location physically close to each visitor, a CDN cuts network latency that no amount of code optimization can fix. Most CDNs also add Brotli compression and HTTP/3 automatically, and free tiers exist from Cloudflare and major hosts."
+    }
+  ],
+  "relatedKeywords": ["page speed optimization", "improve core web vitals", "reduce largest contentful paint", "lazy load images", "reduce javascript execution time", "website caching and cdn"],
+  "internalLinks": [
+    { "href": "/", "anchor": "run a free SEO + GEO audit" },
+    { "href": "/blog/how-to-do-an-seo-audit", "anchor": "SEO audit" },
+    { "href": "/blog/how-to-optimize-images-for-seo", "anchor": "how to optimize images for SEO" },
+    { "href": "/blog/what-is-technical-seo", "anchor": "what is technical SEO" }
+  ]
+}

@@ -1,0 +1,135 @@
+{
+  "slug": "how-to-rank-in-gemini",
+  "title": "How to Rank in Gemini (Google's AI) in 2026",
+  "date": "2026-06-23",
+  "updatedAt": "2026-06-23",
+  "tag": "AI Search",
+  "cluster": "ai-search",
+  "keyword": "how to rank in Gemini",
+  "secondaryKeywords": ["Gemini SEO", "Google-Extended", "rank in AI Overviews", "Gemini citations"],
+  "readTime": 9,
+  "excerpt": "Gemini ranks pages it can already find in Google, so strong organic SEO plus structured data wins citations.",
+  "description": "Learn how to rank in Gemini, Google's AI. Master organic SEO, Google-Extended, structured data, and answer-first content to earn Gemini citations in 2026.",
+  "tldr": "To rank in Gemini, win Google organic search first: Gemini and AI Overviews pull most sources from the top 10 Google results, then favor pages with answer-first content, schema markup, and strong E-E-A-T. There is no separate Gemini index to game.",
+  "status": "published",
+  "sections": [
+    {
+      "heading": "How Gemini surfaces sources",
+      "body": [
+        "The short answer to **how to rank in Gemini** is to win Google organic search first, because Gemini does not maintain a separate web index. Gemini is Google's AI assistant and the model behind AI Overviews and AI Mode, and when it answers a question that needs current web information, it issues queries against Google's live index and grounds its answer in the pages it retrieves. Studies of AI Overviews consistently show that the large majority of cited URLs already rank in the top 10 organic results for a related query, so the same signals that lift you in classic search are what make you eligible for a Gemini citation.",
+        "That means the path to being cited by Gemini runs straight through classic SEO. If your page is invisible in Google's organic results, it is almost certainly invisible to Gemini. There is no backdoor, no submission form, and no separate Gemini index to game. The good news is that this makes the work concrete: improve the same crawlability, relevance, and authority signals you already track, and you improve your Gemini odds at the same time.",
+        "Gemini's retrieval works in roughly three moves:",
+        "- **Fan-out:** It decomposes one question into several sub-queries and searches Google for each.",
+        "- **Grounding:** It pulls passages from the highest-ranking, most relevant pages.",
+        "- **Synthesis with citation:** It writes an answer and attaches source links to the claims it borrowed.",
+        "Your job is to be the cleanest, most quotable source for one of those sub-queries. Run a [free SEO + GEO audit](/) to see whether your pages are even eligible before you tune anything else."
+      ]
+    },
+    {
+      "heading": "The overlap with Google ranking (and Google-Extended)",
+      "body": [
+        "Ranking in Gemini and ranking in Google share the same foundation, but they are gated by two different controls. Standard Googlebot crawling and indexing determines whether you appear in organic results at all. A separate token, **Google-Extended**, governs whether your content can be used to train and ground Gemini's generative responses.",
+        "Google-Extended is a `robots.txt` user-agent, not a crawler. It does not fetch pages on its own; it is a permission flag. If you disallow it, your pages can still rank in normal Google Search, but Google may exclude them from grounding Gemini and AI features. Most sites that want AI visibility should leave it allowed:",
+        "```\nUser-agent: Google-Extended\nAllow: /\n```",
+        "Do not confuse this with blocking Googlebot, which would remove you from search entirely. If you are weighing the tradeoffs, see [how to block AI crawlers (and when you shouldn't)](/blog/how-to-block-ai-crawlers) and [what robots.txt controls](/blog/what-is-robots-txt).",
+        "[[table]]"
+      ]
+    },
+    {
+      "heading": "Five tactics that earn Gemini citations",
+      "body": [
+        "Earning a Gemini citation comes down to being the most extractable answer for a real sub-query. Five tactics move the needle:",
+        "- **Win strong organic rankings.** Page one is the entry ticket. Build the same things Google has always rewarded: relevant content, internal links, and credible backlinks. Start with [how to improve website ranking on Google](/blog/how-to-improve-website-ranking-on-google).",
+        "- **Lead with the answer.** Put a direct, self-contained answer in the first 1-2 sentences under each heading. Gemini lifts passages, so a buried answer rarely gets quoted. Learn the format in [how to write SEO-friendly content](/blog/how-to-write-seo-friendly-content).",
+        "- **Ship structured data.** Article, FAQPage, and HowTo schema help Gemini parse entities and confidently attribute claims. Check your setup with [what is schema markup](/blog/what-is-schema-markup).",
+        "- **Prove E-E-A-T.** Named authors, credentials, citations, and a clear publisher identity raise trust signals Gemini weighs when choosing whom to cite. See [what is E-E-A-T in SEO](/blog/what-is-eeat-in-seo).",
+        "- **Allow the crawlers.** Confirm Googlebot and Google-Extended are not blocked, and that there is no `noindex` on the pages you want surfaced.",
+        "None of these are exotic. Gemini rewards the same answer-first, well-structured, trustworthy pages that win AI Overviews and Perplexity citations. The skill is doing all five on the same page."
+      ]
+    },
+    {
+      "heading": "The workflow to rank in Gemini",
+      "body": [
+        "Ranking in Gemini is a repeatable loop, not a one-time fix. The flow below takes a page from invisible to cited.",
+        "[[flowchart]]",
+        "Work the loop one page at a time. Pick a question your audience actually asks Gemini, make your page the best organic answer to it, structure it so a model can lift a clean passage, then verify in AI Mode whether you got pulled. If you did not, sharpen the answer paragraph and tighten your schema, then check again. The reason to go page by page rather than site-wide is that Gemini cites at the passage level, not the domain level. One page that nails a single sub-query will earn more citations than ten thin pages that vaguely touch the topic, so depth beats breadth here."
+      ]
+    },
+    {
+      "heading": "How Gemini differs from a blue-link search",
+      "body": [
+        "Gemini differs from a traditional Google search in what it returns: a synthesized answer with a handful of citations instead of ten ranked links. The retrieval engine underneath is shared, but the surface rewards different behavior. A page that ranks #4 might never get clicked in classic search yet still get cited by Gemini if it carries the single cleanest sentence answering a sub-query.",
+        "This is why answer-first writing matters more in the Gemini era than it did when ten blue links were the whole game. The model is reading for a quotable passage, not just relevance. For the broader playbook across every AI engine, read [how to do AI search optimization](/blog/how-to-do-ai-search-optimization) and the closely related [how to rank in Google AI Overviews](/blog/how-to-rank-in-google-ai-overviews).",
+        "> Treat Gemini as a reader that needs one perfect quote, not a ranking algorithm that needs ten keywords.",
+        "The upside: because Gemini and AI Overviews share Google's index, one well-built page can earn visibility across organic results, AI Overviews, AI Mode, and the Gemini app at the same time. You are not optimizing four times; you are optimizing once, correctly."
+      ]
+    }
+  ],
+  "flowchart": {
+    "title": "From invisible to cited in Gemini",
+    "steps": [
+      { "title": "Pick a real question", "detail": "Choose a query your audience would actually ask Gemini or Google." },
+      { "title": "Win organic rank", "detail": "Get the page into Google's top 10 with relevant content and links." },
+      { "title": "Write answer-first", "detail": "Put a self-contained answer in the first two sentences under each heading." },
+      { "title": "Add structured data", "detail": "Mark up with Article, FAQPage, or HowTo schema and valid required fields." },
+      { "title": "Allow Google-Extended", "detail": "Confirm robots.txt permits Google-Extended and the page is indexable." },
+      { "title": "Test and iterate", "detail": "Ask Gemini and AI Mode the question; refine the answer if you are not cited." }
+    ]
+  },
+  "comparisonTable": {
+    "caption": "Google-Extended vs Googlebot: what each controls",
+    "headers": ["Control", "Type", "If you block it", "Recommendation"],
+    "rows": [
+      ["Googlebot", "Crawler", "Removed from Google organic search and Gemini grounding", "Allow"],
+      ["Google-Extended", "robots.txt permission flag", "Stays in organic search, may be excluded from Gemini/AI grounding", "Allow for AI visibility"],
+      ["noindex tag", "Page-level directive", "Dropped from the index entirely", "Remove from pages you want surfaced"]
+    ]
+  },
+  "peopleAlsoAsk": [
+    {
+      "q": "Does Gemini cite sources?",
+      "a": "Yes. When Gemini answers a question that needs current web information, it grounds the response in pages it retrieves from Google's index and attaches citation links to those sources. Citations appear in AI Overviews, AI Mode, and the Gemini app, though not every answer includes them when the model relies on its training data alone."
+    },
+    {
+      "q": "How is Gemini different from Google Search?",
+      "a": "Gemini returns a synthesized answer with a few citations, while classic Google Search returns a ranked list of blue links. Both use the same underlying web index, but Gemini reads pages for a single quotable passage rather than just ranking them. A page that ranks low organically can still be cited by Gemini if it holds the cleanest answer to a sub-query."
+    },
+    {
+      "q": "Does ranking on Google help with Gemini?",
+      "a": "Ranking on Google is the single biggest factor for Gemini visibility. Analyses of AI Overviews show most cited URLs already rank in the top 10 organic results for a related query. Gemini has no separate web index, so strong organic SEO is the foundation for being cited."
+    },
+    {
+      "q": "What is Google-Extended?",
+      "a": "Google-Extended is a robots.txt user-agent token that controls whether Google can use your content to train and ground Gemini and other generative AI features. It is a permission flag, not a crawler, so it does not fetch pages on its own. Blocking it keeps you in organic search but may remove you from Gemini grounding."
+    }
+  ],
+  "faqs": [
+    {
+      "q": "Is there a separate Gemini SEO process from regular SEO?",
+      "a": "No. There is no separate Gemini index to optimize for, so Gemini SEO is regular SEO plus answer-first formatting and structured data. The biggest difference is writing self-contained, extractable passages rather than keyword-stuffed pages. Winning Google organic rankings remains the prerequisite."
+    },
+    {
+      "q": "Should I block Google-Extended to protect my content?",
+      "a": "Blocking Google-Extended is only worth it if you do not want your content used in Gemini's generative answers, since it can reduce your AI visibility. For most sites chasing reach, leaving it allowed is the better call. Blocking it does not affect your normal Google Search rankings."
+    },
+    {
+      "q": "How do I tell if Gemini is already citing my site?",
+      "a": "Ask Gemini, AI Mode, and AI Overviews the questions your pages target, then check whether your URL appears in the citations. You can also monitor referral traffic from AI surfaces; see how to track AI search traffic for the setup. Repeat the checks after each content update to confirm progress."
+    }
+  ],
+  "relatedKeywords": [
+    "Gemini SEO 2026",
+    "rank in Google AI Overviews",
+    "Google-Extended robots.txt",
+    "how to get cited by Gemini",
+    "AI Mode optimization",
+    "answer-first content for AI search"
+  ],
+  "internalLinks": [
+    { "href": "/", "anchor": "Run a free SEO + GEO audit" },
+    { "href": "/blog/how-to-rank-in-google-ai-overviews", "anchor": "How to rank in Google AI Overviews" },
+    { "href": "/blog/how-to-do-ai-search-optimization", "anchor": "How to do AI search optimization" },
+    { "href": "/blog/what-is-robots-txt", "anchor": "What robots.txt controls" },
+    { "href": "/blog/how-to-write-seo-friendly-content", "anchor": "How to write SEO-friendly content" }
+  ]
+}

@@ -1,0 +1,128 @@
+{
+  "slug": "how-to-block-ai-crawlers",
+  "title": "How to Block AI Crawlers (and When You Shouldn't) in 2026",
+  "date": "2026-06-23",
+  "updatedAt": "2026-06-23",
+  "tag": "AI Search",
+  "cluster": "ai-search",
+  "keyword": "how to block AI crawlers",
+  "secondaryKeywords": ["block GPTBot", "robots.txt for AI bots", "Google-Extended", "block ClaudeBot"],
+  "readTime": 9,
+  "excerpt": "Block GPTBot, ClaudeBot and CCBot in robots.txt — but know which bots also send you citation traffic.",
+  "description": "How to block AI crawlers like GPTBot, ClaudeBot, and CCBot in robots.txt — plus the trade-off between blocking training bots and the live-search bots that cite you.",
+  "tldr": "To block AI crawlers, add User-agent rules in robots.txt disallowing GPTBot, ClaudeBot, CCBot, PerplexityBot, and Google-Extended. But block selectively: training crawlers like GPTBot take your content, while live-search bots like OAI-SearchBot can send you citation traffic.",
+  "status": "published",
+  "sections": [
+    {
+      "heading": "How to block AI crawlers in robots.txt",
+      "body": [
+        "The short answer to how to block AI crawlers is that you add `User-agent` and `Disallow` rules to the robots.txt file at the root of your domain, naming each bot you want to keep out. The fastest way to block the major ones is a single robots.txt block that names GPTBot (OpenAI), ClaudeBot (Anthropic), CCBot (Common Crawl), PerplexityBot, and Google-Extended (Google's AI training opt-out token). Place the file at `https://yourdomain.com/robots.txt`, and reputable AI companies will honor the directives within a day or two of their next crawl.",
+        "Here is a copy-paste robots.txt that blocks the main training and scraping bots while leaving normal search engines untouched:",
+        "```\n# Block AI training + scraping crawlers\nUser-agent: GPTBot\nDisallow: /\n\nUser-agent: ClaudeBot\nDisallow: /\n\nUser-agent: CCBot\nDisallow: /\n\nUser-agent: PerplexityBot\nDisallow: /\n\nUser-agent: Google-Extended\nDisallow: /\n\nUser-agent: anthropic-ai\nDisallow: /\n\n# Everyone else (Googlebot, Bingbot, humans) allowed\nUser-agent: *\nDisallow:\n```",
+        "One critical caveat before you ship that file: **robots.txt is a request, not a wall.** It works because well-behaved companies choose to obey it. It does not stop bots that ignore the standard, and it does not block scrapers using fake or rotating user-agent strings. If you need enforcement, you pair robots.txt with firewall or WAF rules. For the protocol fundamentals, see [what is robots.txt](/blog/what-is-robots-txt)."
+      ]
+    },
+    {
+      "heading": "The honest trade-off: training bots vs. live-search bots",
+      "body": [
+        "The hard part of blocking AI crawlers is that \"AI crawler\" is two very different jobs wearing one label. Some bots scrape your content to train a model — you get nothing back. Other bots fetch your page in real time to answer a live user question, and they cite you with a clickable link. Block the first kind and you lose nothing. Block the second kind and you cut off a growing source of referral traffic.",
+        "The clearest example is OpenAI's split fleet. **GPTBot** crawls the open web to gather training data for future models. **OAI-SearchBot** fetches pages live to power ChatGPT's search and inline citations. They are separate user-agents on purpose — so you can block training while keeping search. The same pattern shows up across vendors: training crawlers take, live-search crawlers cite.",
+        "> If a bot puts a link back to your site in front of a user, blocking it is usually a mistake. If a bot only feeds a training corpus you'll never be credited in, blocking it costs you nothing.",
+        "So the strategy most sites land on is not \"block everything\" or \"allow everything\" — it's a deliberate allowlist. Block the pure-training and bulk-scraping bots; allow the live-search and answer bots that can drive clicks. We walk through the exact allow/block split — and how to earn citations from the bots you keep — in [how to get cited by Claude](/blog/how-to-get-cited-by-claude)."
+      ]
+    },
+    {
+      "heading": "The AI crawler cheat sheet: who's who",
+      "body": [
+        "Below is the lookup table for the crawlers worth caring about in 2026, what each one does, and the default recommendation. \"Block\" means it mostly takes for training with no citation upside. \"Allow\" means it can send you traffic. \"Your call\" means it depends on whether you want your content used for AI features at all.",
+        "[[table]]",
+        "A few notes the table can't hold: **Google-Extended** is not a crawler — it's a token Googlebot reads to decide whether your content trains Gemini and feeds AI features. Blocking it does NOT remove you from Google Search or AI Overviews; it only opts you out of model training. **CCBot** belongs to Common Crawl, a nonprofit archive that many AI labs train on indirectly, so blocking it quietly cuts off several downstream models at once."
+      ]
+    },
+    {
+      "heading": "Step-by-step: deciding what to block",
+      "body": [
+        "Don't copy a random robots.txt from a forum. The right answer depends on whether you sell content, want AI citations, or just want to stop bandwidth-eating scrapers. Walk the decision below before you write a single `Disallow` line.",
+        "[[flowchart]]",
+        "After you publish your rules, verify they actually parse and that you haven't accidentally blocked Googlebot or your own sitemap. A typo like a stray `Disallow: /` under `User-agent: *` can deindex your whole site. Run your domain through our [free SEO + GEO audit](/) to confirm your robots.txt is valid and to see which AI bots you're currently allowing or blocking — the [AI bots blocked check](/check/geo.aibots.blocked) flags this specifically.",
+        "If you decide you want AI engines to find AND cite you (the opposite of blocking), the next lever is answer-first content built for AI engines — covered in [how to do AI search optimization](/blog/how-to-do-ai-search-optimization) and [what is generative engine optimization](/blog/what-is-generative-engine-optimization)."
+      ]
+    },
+    {
+      "heading": "Does blocking AI crawlers hurt your SEO?",
+      "body": [
+        "Blocking AI crawlers does not hurt traditional SEO, because the user-agents you block for AI (GPTBot, ClaudeBot, CCBot, PerplexityBot, Google-Extended) are separate from the search crawlers that index you (Googlebot, Bingbot). You can block every training bot and keep your full Google ranking — they read different rules. The robots.txt above is explicitly built so `Googlebot` and `Bingbot` fall under the permissive `User-agent: *` line.",
+        "Where it gets nuanced is **AI search visibility**, which is a newer, separate channel from blue-link SEO. Blocking the live-search bots — OAI-SearchBot, PerplexityBot, ClaudeBot's user-facing fetches — means you won't appear as a cited source in ChatGPT, Perplexity, or Claude answers. That doesn't dent your Google rank, but in 2026 a meaningful slice of discovery happens inside AI answers, and a blocked site simply isn't eligible to be cited.",
+        "So frame the decision honestly: blocking AI crawlers protects your content from uncredited training use at the cost of AI-answer visibility. If your business depends on being the source AI tools quote, block training bots only. If your content is your product (paywalled news, courses, proprietary research), blocking broadly is the rational defensive move. There's no universally correct answer — only the right answer for your model."
+      ]
+    }
+  ],
+  "flowchart": {
+    "title": "Should you block this AI crawler?",
+    "steps": [
+      { "title": "Identify the bot's job", "detail": "Check whether the user-agent crawls for model training or fetches pages live to answer user queries." },
+      { "title": "Does it cite you?", "detail": "If the bot links back to your site in answers (live-search bots), blocking it usually costs you traffic." },
+      { "title": "Is your content your product?", "detail": "Paywalled, proprietary, or premium content is the strongest case for blocking training bots broadly." },
+      { "title": "Write targeted robots.txt rules", "detail": "Add a User-agent + Disallow block per bot you decided to block; leave search engines under User-agent: *." },
+      { "title": "Validate and monitor", "detail": "Confirm Googlebot and your sitemap aren't blocked, then run an audit to verify the rules parse correctly." }
+    ]
+  },
+  "comparisonTable": {
+    "caption": "Major AI crawlers in 2026: what each does and whether to block it",
+    "headers": ["Bot (User-agent)", "Owner", "What it does", "Default call"],
+    "rows": [
+      ["GPTBot", "OpenAI", "Crawls the web to train future GPT models", "Block (training only)"],
+      ["OAI-SearchBot", "OpenAI", "Fetches pages live for ChatGPT search + citations", "Allow (sends traffic)"],
+      ["ClaudeBot", "Anthropic", "Crawls for training and live answer fetches", "Your call"],
+      ["PerplexityBot", "Perplexity", "Live retrieval for cited Perplexity answers", "Allow (sends traffic)"],
+      ["Google-Extended", "Google", "Opt-out token for Gemini training + AI features", "Your call (no SEO impact)"],
+      ["CCBot", "Common Crawl", "Bulk archive many AI labs train on indirectly", "Block (training only)"],
+      ["Bytespider", "ByteDance", "Aggressive scraping for training", "Block"]
+    ]
+  },
+  "peopleAlsoAsk": [
+    {
+      "q": "Should I block AI crawlers?",
+      "a": "Whether you should block AI crawlers depends on your goal. Block pure-training bots like GPTBot and CCBot if you don't want your content used to train models for free, since they give nothing back. But avoid blocking live-search bots like OAI-SearchBot and PerplexityBot, which cite you with clickable links and can drive referral traffic. Most sites benefit from a selective allowlist rather than blocking everything."
+    },
+    {
+      "q": "How do I block GPTBot?",
+      "a": "To block GPTBot, add the lines `User-agent: GPTBot` and `Disallow: /` to the robots.txt file at the root of your domain. OpenAI honors this directive within a day or two of its next crawl. Note that blocking GPTBot stops OpenAI's training crawler only — it does not block OAI-SearchBot, the separate user-agent that powers ChatGPT search citations, which you must disallow by name if you also want to block live search."
+    },
+    {
+      "q": "Does blocking AI crawlers hurt SEO?",
+      "a": "Blocking AI crawlers does not hurt traditional Google or Bing SEO, because AI bots like GPTBot and Google-Extended use different user-agents than Googlebot and Bingbot. Your search rankings stay intact. The one trade-off is AI search visibility: blocking live-search bots removes you from being cited in ChatGPT, Perplexity, and Claude answers, which is a separate channel from blue-link rankings."
+    },
+    {
+      "q": "What is the difference between GPTBot and OAI-SearchBot?",
+      "a": "GPTBot and OAI-SearchBot are both OpenAI crawlers but do opposite jobs. GPTBot scrapes the web to gather training data for future models and credits no one. OAI-SearchBot fetches pages in real time to answer ChatGPT search queries and cites your site with a clickable link. OpenAI keeps them as separate user-agents so you can block training while still allowing search citations."
+    },
+    {
+      "q": "Will robots.txt actually stop AI crawlers?",
+      "a": "Robots.txt stops AI crawlers only if the company behind the bot chooses to obey it, which the major players like OpenAI, Anthropic, and Perplexity do. It does not physically block anything, so bad-faith scrapers using fake user-agents can ignore it entirely. For real enforcement, pair robots.txt directives with firewall or WAF rules that block by IP or behavior."
+    }
+  ],
+  "faqs": [
+    {
+      "q": "Does blocking Google-Extended remove me from Google Search?",
+      "a": "No. Google-Extended is a token that only controls whether your content trains Gemini and feeds Google's AI features. Blocking it leaves your normal Google Search and AI Overviews presence fully intact, because Googlebot reads a different set of rules. It is purely a training opt-out, not a search opt-out."
+    },
+    {
+      "q": "How do I block all AI crawlers at once?",
+      "a": "There is no single wildcard for AI crawlers, so you must name each user-agent in robots.txt with its own Disallow rule — GPTBot, ClaudeBot, CCBot, PerplexityBot, Google-Extended, and others. A `User-agent: *` block would also catch Googlebot and Bingbot, which would damage your search rankings. List the AI bots explicitly and keep the wildcard rule permissive."
+    },
+    {
+      "q": "Can I block AI training but still get cited in AI search?",
+      "a": "Yes, and that is the recommended setup for most sites. Block the training-only bots like GPTBot and CCBot while allowing the live-search bots like OAI-SearchBot and PerplexityBot that fetch pages to answer queries and cite you. This protects your content from uncredited training use while keeping you eligible for AI-answer citations."
+    }
+  ],
+  "relatedKeywords": ["block GPTBot robots.txt", "stop AI from scraping my site", "Google-Extended opt-out", "ClaudeBot disallow", "OAI-SearchBot vs GPTBot", "AI crawler robots.txt rules"],
+  "internalLinks": [
+    { "href": "/", "anchor": "run a free SEO + GEO audit" },
+    { "href": "/blog/how-to-get-cited-by-claude", "anchor": "how to get cited by Claude" },
+    { "href": "/blog/what-is-robots-txt", "anchor": "what is robots.txt" },
+    { "href": "/check/geo.aibots.blocked", "anchor": "AI bots blocked check" },
+    { "href": "/blog/how-to-do-ai-search-optimization", "anchor": "how to do AI search optimization" },
+    { "href": "/blog/what-is-generative-engine-optimization", "anchor": "what is generative engine optimization" }
+  ]
+}

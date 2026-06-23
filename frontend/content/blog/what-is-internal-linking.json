@@ -1,0 +1,142 @@
+{
+  "slug": "what-is-internal-linking",
+  "title": "What Is Internal Linking? (And How to Do It Right in 2026)",
+  "date": "2026-06-23",
+  "updatedAt": "2026-06-23",
+  "tag": "SEO",
+  "cluster": "content-links",
+  "keyword": "internal linking",
+  "secondaryKeywords": ["internal linking strategy", "topic cluster", "hub and spoke model", "internal link anchor text"],
+  "readTime": 9,
+  "excerpt": "Internal linking connects your pages, spreads authority, and shows Google your site structure. Here is how to do it right.",
+  "description": "Internal linking is linking your own pages to each other. Learn the hub-and-spoke model, topic clusters, anchor text rules, and common mistakes for SEO in 2026.",
+  "tldr": "Internal linking is the practice of linking one page on your site to another page on the same site. It spreads PageRank-style authority between pages, helps Google and AI engines understand your site structure, and works best when organized into hub-and-spoke topic clusters.",
+  "status": "published",
+  "sections": [
+    {
+      "heading": "What Is Internal Linking in SEO?",
+      "body": [
+        "Internal linking is the practice of linking one page on your website to another page on the same website. The HTML `<a href=\"/blog/what-is-anchor-text\">anchor text</a>` placed inside one of your articles, pointing to another of your articles, is an internal link. External links point to other domains; internal links keep visitors and crawlers inside yours.",
+        "Internal linking does three jobs at once. First, it spreads authority: when one page earns backlinks, internal links pass a share of that **PageRank-style equity** to the pages it links to. Second, it helps search engines and AI engines understand structure: the links between pages tell Google which topics you cover deeply and which page is the definitive one for a given subject. Third, it guides users to the next logical page, which lifts engagement and conversions.",
+        "Most sites get internal linking wrong by treating it as an afterthought, sprinkling a few random links at publish time. The right approach is structural: you decide in advance how pages relate, build **topic clusters** with a hub-and-spoke model, and use descriptive anchor text. The rest of this guide covers that model, the anchor rules, a step-by-step strategy, and the mistakes that quietly waste your link equity."
+      ]
+    },
+    {
+      "heading": "The Hub-and-Spoke Model and Topic Clusters",
+      "body": [
+        "The hub-and-spoke model is the most reliable internal linking structure for SEO, and a topic cluster is the group of pages it creates. A **hub** (also called a pillar page) is a broad page covering a topic at a high level, like a guide to off-page SEO. The **spokes** are narrower pages covering subtopics in depth, like one page on backlinks and another on anchor text. Every spoke links up to the hub, and the hub links down to every spoke.",
+        "A topic cluster is that hub plus its spokes, all interlinked around a single theme. The structure tells Google two things clearly: that you cover the topic comprehensively, and which page (the hub) is the canonical entry point for the broad query. This is also how AI engines map your authority, because the link graph reveals which page they should cite for the head term versus the long-tail variation.",
+        "> A flat site where every page links to every other page has no structure. A clustered site where spokes point to a hub has a clear hierarchy that search engines can read at a glance.",
+        "Clusters also concentrate link equity where it matters. When a spoke earns a backlink, its link to the hub passes authority upward, strengthening the page you most want to rank for the competitive head term. The diagram below shows how to plan and wire a cluster from scratch.",
+        "[[flowchart]]"
+      ]
+    },
+    {
+      "heading": "Anchor Text for Internal Links",
+      "body": [
+        "Internal link anchor text is the clickable wording you use when linking between your own pages, and it is where you have the most control over the signal you send. Because you write both the link and the destination, you can use clear, descriptive, keyword-relevant anchors without the over-optimization risk that applies to backlinks. Our full breakdown lives in the guide on [what is anchor text](/blog/what-is-anchor-text).",
+        "Follow these rules for internal anchors:",
+        "- **Be descriptive, not generic.** Link with \"how to build a topic cluster\" instead of \"click here\" so users and crawlers know the destination.",
+        "- **Use the destination page's target keyword** when it fits naturally, since this reinforces what that page should rank for.",
+        "- **Vary the phrasing.** Linking to the same page from twenty articles with the identical exact-match anchor looks engineered, even internally. Mix exact, partial, and branded variations.",
+        "- **Keep anchors concise.** Two to five words reads cleanly; a full sentence as a link dilutes the signal.",
+        "Anchor text on internal links carries real weight because it is the clearest hint search engines get about the linked page's topic. The comparison below shows how internal linking differs from external linking across the signals that matter.",
+        "[[table]]"
+      ]
+    },
+    {
+      "heading": "How to Build an Internal Linking Strategy",
+      "body": [
+        "An internal linking strategy is a deliberate plan for how your pages link to each other, built around topic clusters rather than added randomly at publish time. Start by mapping your content into clusters: list your broad pillar topics, then group every existing and planned article under the pillar it supports. This map is the blueprint for every link you place.",
+        "From there, the rules are simple and mechanical:",
+        "- **Link every spoke up to its hub** with descriptive anchor text, and link the hub down to each spoke.",
+        "- **Cross-link sibling spokes** when they are genuinely related, like an alt text page linking to an image optimization page.",
+        "- **Link from high-authority pages to pages that need a boost.** Your most-linked, highest-traffic pages have equity to spare; route some of it to thin or new pages.",
+        "- **Add links contextually inside the body**, not just in a footer or sidebar, because in-content links carry more weight and relevance.",
+        "Internal links also support [on-page SEO](/blog/what-is-on-page-seo) and [off-page SEO](/blog/what-is-off-page-seo): they help distribute the authority that backlinks bring in, so off-page work and internal structure compound. To find orphan pages, broken internal links, and weak structure on your own site, run a [free SEO + GEO audit](/) and review the links section. You can also check [how to find and fix broken links](/blog/how-to-find-and-fix-broken-links) for the cleanup workflow."
+      ]
+    },
+    {
+      "heading": "Common Internal Linking Mistakes",
+      "body": [
+        "Common internal linking mistakes are the patterns that quietly waste link equity or confuse search engines, and most sites make several of them at once. Spotting these is usually faster than building new links, because fixing an orphan page or a broken link recovers value you already have.",
+        "Watch for these:",
+        "- **Orphan pages.** A page with zero internal links pointing to it is nearly invisible to crawlers and rarely ranks, no matter how good the content is.",
+        "- **Broken internal links.** Links to deleted or moved pages waste crawl budget and frustrate users; redirect or update them.",
+        "- **Generic anchor text.** \"Click here\" and \"read more\" tell search engines nothing about the destination.",
+        "- **Too many links on one page.** Cramming a hundred links onto a page splits equity into tiny shares and looks spammy; keep in-content links purposeful.",
+        "- **Linking only to the homepage.** Spreading every link to `/` starves your deep cluster pages of the authority they need to rank.",
+        "- **Ignoring nofollow on internal links.** Internal links should almost always be regular `dofollow` links; see [nofollow vs dofollow links](/blog/nofollow-vs-dofollow-links) for the exceptions.",
+        "The biggest mistake is treating internal linking as a one-time task. Sites grow, pages get deleted, and clusters drift. Re-audit your internal links every few months, fix orphans and broken links, and confirm each new article links into its cluster. A quick [free SEO audit](/) surfaces most of these issues in one pass."
+      ]
+    }
+  ],
+  "flowchart": {
+    "title": "How to Build an Internal Linking Strategy",
+    "steps": [
+      { "title": "Map your topics into clusters", "detail": "Group every page under a broad pillar topic it supports, listing one hub and its spokes per cluster." },
+      { "title": "Choose the hub page", "detail": "Pick the broad pillar page that should rank for the head term as the center of each cluster." },
+      { "title": "Link spokes to the hub", "detail": "From every subtopic page, add a descriptive in-content link pointing up to the pillar page." },
+      { "title": "Link the hub to spokes", "detail": "From the pillar page, link down to each subtopic page so the cluster is fully interlinked." },
+      { "title": "Cross-link related siblings", "detail": "Connect spokes that are genuinely related to each other, like alt text and image optimization." },
+      { "title": "Audit and fix", "detail": "Run an SEO audit to catch orphan pages, broken links, and weak anchors, then repeat each quarter." }
+    ]
+  },
+  "comparisonTable": {
+    "caption": "Internal links vs external links across the signals that matter",
+    "headers": ["Factor", "Internal links", "External links (backlinks)"],
+    "rows": [
+      ["Who controls it", "You (both ends)", "Other websites"],
+      ["Anchor text risk", "Low (use descriptive keywords)", "High (over-optimization penalty)"],
+      ["Main purpose", "Structure and equity flow", "Earn authority and trust"],
+      ["Best anchor style", "Descriptive, keyword-relevant", "Mostly branded and natural"],
+      ["Effect on rankings", "Distributes existing authority", "Adds new authority to the site"],
+      ["Effort to fix", "Edit your own pages", "Outreach and earned links"]
+    ]
+  },
+  "peopleAlsoAsk": [
+    {
+      "q": "Why is internal linking important for SEO?",
+      "a": "Internal linking is important for SEO because it spreads authority between your pages, helps search engines understand your site structure, and guides users to related content. When a page earns backlinks, internal links pass a share of that equity to the pages it links to, lifting their ranking potential. Internal links also tell Google and AI engines which page is the definitive one for a given topic."
+    },
+    {
+      "q": "How many internal links per page?",
+      "a": "There is no official limit on internal links per page, but the practical guidance is to keep them purposeful rather than maxing out a fixed number. A typical blog post might have three to ten contextual internal links, while a long pillar page may have more. Avoid cramming a hundred links onto one page, because that splits link equity into tiny shares and can look spammy."
+    },
+    {
+      "q": "What is a topic cluster?",
+      "a": "A topic cluster is a group of related pages organized around a single theme, with one broad hub page (the pillar) and several narrower spoke pages covering subtopics. Every spoke links up to the hub and the hub links down to every spoke. The structure tells search engines that you cover the topic comprehensively and that the hub is the canonical entry point for the broad query."
+    },
+    {
+      "q": "What anchor text should internal links use?",
+      "a": "Internal links should use descriptive, keyword-relevant anchor text that tells users and crawlers what the linked page is about. Use the destination page's target keyword when it fits naturally, keep anchors to two to five words, and vary the phrasing across links so no single exact-match phrase dominates. Avoid generic anchors like \"click here\" because they send no topical signal."
+    },
+    {
+      "q": "What is the hub-and-spoke model?",
+      "a": "The hub-and-spoke model is an internal linking structure where a broad pillar page (the hub) connects to several narrower subtopic pages (the spokes), and every spoke links back to the hub. The hub covers a topic at a high level while each spoke covers one subtopic in depth. The model concentrates link equity on the hub so it can rank for the competitive head term."
+    }
+  ],
+  "faqs": [
+    {
+      "q": "Do internal links pass PageRank?",
+      "a": "Yes, internal links pass PageRank-style authority between pages on the same site. When a page accumulates ranking signals from backlinks, the internal links on that page distribute a share of that authority to the pages it points to. This is why linking from high-authority pages to thin or new pages can help the weaker pages rank faster."
+    },
+    {
+      "q": "What is an orphan page?",
+      "a": "An orphan page is a page on your site that has zero internal links pointing to it from other pages. Orphan pages are hard for crawlers to discover and rarely rank well, no matter how strong the content is. Fixing them means adding at least one descriptive internal link from a relevant page, which an SEO audit can help you identify."
+    },
+    {
+      "q": "How often should I audit internal links?",
+      "a": "Internal links should be audited every few months, and after any major content changes like deleting or moving pages. Sites grow and clusters drift, so a regular audit catches orphan pages, broken links, and weak anchor text before they cost rankings. Each new article should also be linked into its topic cluster at publish time."
+    }
+  ],
+  "relatedKeywords": ["internal linking strategy", "topic clusters", "hub and spoke model", "pillar page SEO", "internal link anchor text", "orphan pages"],
+  "internalLinks": [
+    { "href": "/", "anchor": "Run a free SEO + GEO audit" },
+    { "href": "/blog/what-is-anchor-text", "anchor": "What is anchor text" },
+    { "href": "/blog/what-is-off-page-seo", "anchor": "What is off-page SEO" },
+    { "href": "/blog/what-is-on-page-seo", "anchor": "What is on-page SEO" },
+    { "href": "/blog/how-to-find-and-fix-broken-links", "anchor": "How to find and fix broken links" },
+    { "href": "/blog/nofollow-vs-dofollow-links", "anchor": "Nofollow vs dofollow links" }
+  ]
+}

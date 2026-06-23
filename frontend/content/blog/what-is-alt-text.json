@@ -1,0 +1,140 @@
+{
+  "slug": "what-is-alt-text",
+  "title": "What Is Alt Text? (And How to Write It for SEO + Accessibility)",
+  "date": "2026-06-23",
+  "updatedAt": "2026-06-23",
+  "tag": "SEO",
+  "cluster": "content-links",
+  "keyword": "alt text",
+  "secondaryKeywords": ["alt attribute", "image accessibility", "decorative images", "image SEO"],
+  "readTime": 8,
+  "excerpt": "Alt text is the written description of an image that screen readers announce and search engines read to understand the picture.",
+  "description": "Alt text describes images for screen readers and search engines. Learn how to write good alt text, when to leave it empty, and its SEO and accessibility role.",
+  "tldr": "Alt text is the text in an image's alt attribute that describes what the image shows. Screen readers announce it for blind users and search engines read it to understand and rank the image. Write a short, literal description under ~125 characters, and use an empty alt=\"\" for purely decorative images.",
+  "status": "published",
+  "sections": [
+    {
+      "heading": "What alt text is and why it matters",
+      "body": [
+        "Alt text (short for \"alternative text\") is the written description you put in the `alt` attribute of an HTML `<img>` tag to explain what the image shows. It exists for two audiences that read it the exact same way: screen-reader software, which announces the alt text aloud to blind and low-vision users, and search-engine crawlers, which read it to understand a picture they cannot see. Alt text also appears in place of an image when the file fails to load.",
+        "Alt text matters because an image is invisible to anything that doesn't have eyes on the rendered page. A photo named `IMG_4821.jpg` with no alt attribute is a blank to a screen reader and a mystery to Googlebot. The alt attribute is the one place you tell both exactly what the picture depicts, which is why it does double duty as your most important accessibility field and your most important image-ranking signal.",
+        "Here is the syntax — the `alt` attribute lives right on the `<img>` tag:",
+        "```html\n<img src=\"/img/golden-retriever-puppy.jpg\"\n     alt=\"Golden retriever puppy sitting in tall grass\">\n```",
+        "Getting alt text right is cheap and high-leverage, and it is a standard line item in any [on-page SEO](/blog/what-is-on-page-seo) review. The rest of this guide covers how to write it well, when to leave it empty, and the SEO versus accessibility split (which, conveniently, mostly isn't a split at all)."
+      ]
+    },
+    {
+      "heading": "How alt text helps SEO and accessibility at once",
+      "body": [
+        "Alt text serves SEO and accessibility simultaneously because both consumers read the same attribute for the same purpose: to understand an image without seeing it. This is the rare case where doing the accessible thing and doing the SEO thing are the same action.",
+        "On the **accessibility** side, alt text is a Web Content Accessibility Guidelines (WCAG) requirement. Screen readers like JAWS, NVDA, and VoiceOver read the alt attribute aloud so a blind user knows what the image conveys. A missing or useless alt (\"image123\") leaves that user with a gap in the page, and it is one of the most common accessibility failures auditors flag.",
+        "On the **SEO** side, alt text is the strongest text signal a search engine has for an image. It helps the image rank in Google Images, gives crawlers context about the surrounding page, and is increasingly pulled into AI Overviews and answer-engine citations that surface visuals. Google's own image guidelines explicitly tell you to write descriptive alt text.",
+        "> Alt text is the rare field where the accessibility-correct answer and the SEO-correct answer are identical. Write for the screen-reader user and you have already written for the crawler.",
+        "The overlap is the whole point: you do not write alt text twice, once for humans and once for robots. You write one literal description and it satisfies both. The only judgment call is whether an image needs alt text at all — which brings us to decorative images."
+      ]
+    },
+    {
+      "heading": "How to write good alt text",
+      "body": [
+        "Good alt text is a short, literal, specific description of what an image shows, written as if you were describing the picture to someone over the phone. The goal is that a person hearing it gets the same information a sighted person gets from seeing it. The comparison below shows the difference between alt text that works and alt text that doesn't.",
+        "[[table]]",
+        "A handful of rules cover almost every case:",
+        "- **Describe, don't keyword-stuff.** \"Blue suede running shoes shown from the side\" beats \"running shoes shoes buy cheap running shoes.\" Stuffed alt text reads as spam to both screen readers and Google.",
+        "- **Skip \"image of\" and \"photo of.\"** Screen readers already announce that it's an image, so those words waste the listener's time.",
+        "- **Be specific.** \"Bar chart showing 2026 revenue up 40% over 2025\" tells the reader the takeaway; \"chart\" tells them nothing.",
+        "- **Keep it under ~125 characters.** Most screen readers cut off around there. If an image genuinely needs more, use a caption or nearby text instead.",
+        "- **Include text that's inside the image.** If a graphic contains words (a quote, a button label, a slide), put that text in the alt so it isn't lost.",
+        "- **Add a keyword only when it fits naturally.** Alt text is a legitimate place for a relevant keyword, but never at the cost of an accurate description.",
+        "Context changes the right answer. The same product photo might be `alt=\"Blue suede running shoes\"` on a category page and `alt=\"Blue suede running shoes, side view showing the gum sole\"` on the product detail page, because the detail matters more there. Write for what the image is doing on that specific page."
+      ]
+    },
+    {
+      "heading": "When to leave alt text empty (decorative images)",
+      "body": [
+        "Decorative images should have an empty alt attribute — `alt=\"\"` — not a missing one and not a description. A decorative image is one that adds no information: a background flourish, a divider line, a spacer, or an icon that sits next to text that already says the same thing. Describing it would only clutter the experience for a screen-reader user with noise.",
+        "The critical distinction is between an **empty** alt and a **missing** alt. An empty `alt=\"\"` tells assistive technology \"this image is decorative, skip it,\" and the screen reader moves on silently. A missing `alt` attribute leaves the screen reader guessing — many will read out the file name (`hero-bg-final-v2-jpg`), which is the worst outcome. Always include the attribute; just leave it empty when the image is decorative.",
+        "```html\n<!-- Decorative: skip it -->\n<img src=\"/img/section-divider.svg\" alt=\"\">\n\n<!-- Informative: describe it -->\n<img src=\"/img/team-photo.jpg\"\n     alt=\"Six-person product team standing in front of a whiteboard\">\n```",
+        "A quick test: ask \"if this image disappeared, would the reader lose any information?\" If no, it's decorative — use `alt=\"\"`. If yes, write a description. Icons are the common gray area: a magnifying-glass icon inside a button already labeled \"Search\" is decorative (`alt=\"\"`), but a standalone star-rating graphic with no adjacent text is informative and needs alt like `alt=\"Rated 4.5 out of 5 stars\"`. Use the decision flow below to route any image to the right answer."
+      ]
+    },
+    {
+      "heading": "Auditing and fixing alt text across your site",
+      "body": [
+        "Auditing alt text means finding every image that is missing the attribute, has an empty alt where it shouldn't, or carries a useless description — then fixing each one based on whether the image is informative or decorative. On a site of any size you cannot eyeball this; you scan for it.",
+        "[[flowchart]]",
+        "The fastest checks for spotting alt-text problems:",
+        "- **Browser DevTools / Lighthouse.** Chrome's built-in Lighthouse accessibility audit flags every image missing an alt attribute on a page.",
+        "- **A crawler.** Site-wide tools list all images and their alt status so you can prioritize templates and high-traffic pages first.",
+        "- **A screen reader.** Turning on VoiceOver (Mac) or NVDA (Windows) and tabbing through a page is the truest test of whether your alt text actually makes sense out loud.",
+        "Once you have the list, fix by impact: start with images on your highest-traffic pages and inside reused templates (a missing alt in a header logo or product card multiplies across thousands of pages). Most CMS platforms expose an alt field in the media library, and modern frameworks like Next.js make `alt` a required prop on their image component — a small nudge that catches the omission at build time.",
+        "If you want a fast way to see which pages have image and alt issues alongside the rest of your on-page signals, **[run a free SEO + GEO audit](/)** — it checks images, metadata, structured data, and GEO readiness on any URL. For the surrounding image work — file names, WebP/AVIF compression, lazy loading, and sitemaps — see [how to optimize images for SEO](/blog/how-to-optimize-images-for-seo). Done together, your images become both findable and genuinely accessible, which in 2026 is the same goal."
+      ]
+    }
+  ],
+  "flowchart": {
+    "title": "Decide and write alt text for any image",
+    "steps": [
+      { "title": "Ask: does the image convey information?", "detail": "If the reader would lose meaning when the image disappears, it is informative; if not, it is decorative." },
+      { "title": "Decorative? Use alt=\"\"", "detail": "Add an empty alt attribute so screen readers skip the image instead of reading its file name." },
+      { "title": "Informative? Describe it literally", "detail": "Write a short, specific description of what the image shows, as if explaining it over the phone." },
+      { "title": "Trim and clean up", "detail": "Keep it under ~125 characters, drop \"image of\" / \"photo of,\" and avoid keyword stuffing." },
+      { "title": "Capture any in-image text", "detail": "If the graphic contains words, include them in the alt so the information is not lost." },
+      { "title": "Test with a screen reader or audit", "detail": "Run Lighthouse or tab through with VoiceOver/NVDA to confirm the alt reads correctly." }
+    ]
+  },
+  "comparisonTable": {
+    "caption": "Good vs bad alt text by image type",
+    "headers": ["Image", "Bad alt text", "Good alt text", "Why"],
+    "rows": [
+      ["Product photo", "alt=\"image\"", "alt=\"Blue suede running shoes, side view\"", "Describes what the image actually shows"],
+      ["Photo of people", "alt=\"team team meeting team work team\"", "alt=\"Six-person product team at a whiteboard\"", "Literal description, no keyword stuffing"],
+      ["Data chart", "alt=\"chart.png\"", "alt=\"Bar chart: 2026 revenue up 40% over 2025\"", "Conveys the chart's takeaway, not just its type"],
+      ["Decorative divider", "alt=\"line graphic decoration border\"", "alt=\"\" (empty)", "Decorative images should be skipped by screen readers"],
+      ["Logo", "(no alt attribute)", "alt=\"Acme Corp logo\"", "Missing alt makes readers hear the file name"],
+      ["Icon next to a label", "alt=\"magnifying glass search icon\"", "alt=\"\" (empty)", "Adjacent \"Search\" label already conveys the meaning"]
+    ]
+  },
+  "peopleAlsoAsk": [
+    {
+      "q": "What is alt text used for?",
+      "a": "Alt text is used to describe an image for people and software that cannot see it. Screen-reader software announces the alt text aloud so blind and low-vision users know what an image conveys, and search engines read it to understand and rank the image in places like Google Images and AI answers. Alt text also displays in place of the image if the file fails to load. It lives in the alt attribute of the HTML <img> tag."
+    },
+    {
+      "q": "Does alt text help SEO?",
+      "a": "Alt text helps SEO and is the strongest text signal a search engine has for an image. The alt attribute tells crawlers what an image depicts, which is how images rank in Google Images and get pulled into AI Overviews and answer-engine citations, and it adds context to the surrounding page. Write alt text as a short, literal description, including a relevant keyword only when it fits naturally rather than stuffing keywords. Purely decorative images should use an empty alt=\"\" so they are skipped."
+    },
+    {
+      "q": "How long should alt text be?",
+      "a": "Alt text should be kept under about 125 characters, because most screen readers truncate it around there. The aim is a short, complete sentence or phrase that describes the image, not a paragraph. If an image genuinely needs a longer explanation, such as a complex chart, put the detail in a caption or nearby body text and keep the alt itself concise. A description like \"Bar chart showing 2026 revenue up 40% over 2025\" is the right length."
+    },
+    {
+      "q": "Should decorative images have alt text?",
+      "a": "Decorative images should have an empty alt attribute, written as alt=\"\", rather than a description or a missing attribute. A decorative image is one that adds no information, such as a background flourish, divider, or an icon next to text that already says the same thing. The empty alt tells screen readers to skip the image silently, while a missing attribute can cause them to read the file name aloud. Reserve written descriptions for images that actually convey information."
+    },
+    {
+      "q": "What is the difference between empty alt and missing alt?",
+      "a": "An empty alt (alt=\"\") and a missing alt attribute produce very different results for screen-reader users. An empty alt explicitly marks an image as decorative, so assistive technology skips it without comment. A missing alt attribute leaves the software with no instruction, and many screen readers respond by reading the image's file name aloud, which is confusing and useless. Always include the alt attribute on every image, and leave it empty only when the image is decorative."
+    }
+  ],
+  "faqs": [
+    {
+      "q": "Should alt text include my keyword?",
+      "a": "Alt text can include a relevant keyword, but only when it fits the accurate description naturally. The primary job of alt text is to describe what the image shows for screen-reader users and crawlers, so accuracy always comes first. Forcing a keyword in, or repeating it, reads as spam to both Google and assistive technology and can hurt more than it helps. Write the literal description, and if your keyword belongs there, it will already be present."
+    },
+    {
+      "q": "Is alt text the same as a caption or title attribute?",
+      "a": "Alt text is not the same as a caption or the title attribute, even though all three relate to images. The alt attribute is the alternative description read by screen readers and crawlers when the image cannot be seen, and it is the one that matters for accessibility and SEO. A caption is visible text displayed near the image for all users, and the title attribute shows a tooltip on hover that screen readers handle inconsistently. Focus your effort on alt text and use captions where extra visible context helps."
+    },
+    {
+      "q": "Do all images on a page need alt text?",
+      "a": "Every image element needs an alt attribute, but not every image needs a written description. Informative images that convey meaning need a literal description in the alt, while purely decorative images should carry an empty alt=\"\" so screen readers skip them. The rule is to always include the attribute on the <img> tag and decide its contents based on whether the image adds information. Leaving the attribute off entirely is the one thing to avoid."
+    }
+  ],
+  "relatedKeywords": ["alt attribute", "image accessibility", "decorative images alt text", "screen reader alt text", "alt text for SEO", "WCAG image alt"],
+  "internalLinks": [
+    { "href": "/", "anchor": "Run a free SEO + GEO audit" },
+    { "href": "/blog/how-to-optimize-images-for-seo", "anchor": "How to optimize images for SEO" },
+    { "href": "/blog/what-is-on-page-seo", "anchor": "What is on-page SEO" },
+    { "href": "/check", "anchor": "All 40+ SEO and GEO checks" }
+  ]
+}

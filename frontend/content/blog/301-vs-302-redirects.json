@@ -1,0 +1,114 @@
+{
+  "slug": "301-vs-302-redirects",
+  "title": "301 vs 302 Redirects: What's the Difference? (2026)",
+  "date": "2026-06-23",
+  "updatedAt": "2026-06-23",
+  "tag": "Technical SEO",
+  "cluster": "technical-seo",
+  "keyword": "301 vs 302 redirect",
+  "secondaryKeywords": ["301 redirect SEO", "302 temporary redirect", "redirect link equity", "permanent vs temporary redirect"],
+  "readTime": 9,
+  "excerpt": "301 vs 302 redirect, explained: 301 is permanent and passes ranking, 302 is temporary. When to use each in 2026.",
+  "description": "301 vs 302 redirect explained: a 301 is permanent and consolidates ranking signals, a 302 is temporary. Learn when to use each and the SEO impact in 2026.",
+  "tldr": "The difference between a 301 vs 302 redirect is permanence: a 301 is a permanent redirect that tells Google the old URL is gone for good and passes ranking signals to the new URL, while a 302 is a temporary redirect that keeps the original URL indexed. Use a 301 for moves that are permanent and a 302 only when the original URL will genuinely return.",
+  "status": "published",
+  "sections": [
+    {
+      "heading": "301 vs 302 redirect: the core difference",
+      "body": [
+        "The difference between a 301 vs 302 redirect comes down to one word: permanence. A **301 redirect** returns the HTTP status `301 Moved Permanently` and tells search engines the original URL has moved for good, so they should index the destination and transfer ranking signals to it. A **302 redirect** returns `302 Found` (historically \"Moved Temporarily\") and tells engines the move is temporary, so they should keep the original URL in the index and expect it to come back.",
+        "Both redirects look identical to a human visitor — type the old URL, land on the new one — but they send opposite instructions to a crawler. A 301 says *forget the old URL and credit the new one.* A 302 says *keep the old URL; this detour is temporary.* Pick the wrong one and you either strand ranking signals on a dead page (302 used for a permanent move) or refuse to consolidate them when you should (the slow case most sites get wrong).",
+        "The practical rule for 2026 is simple: **if the change is permanent, use a 301; if you genuinely plan to restore the original URL, use a 302.** When in doubt, a permanent move is far more common than a temporary one, so 301 is the default for site migrations, HTTPS upgrades, URL renames, and consolidating duplicate pages.",
+        "Redirects sit inside the broader discipline of [technical SEO](/blog/what-is-technical-seo) — the crawl-and-index plumbing that decides whether engines can find and trust your pages. Getting redirect type right is one of the highest-leverage fixes on most sites, because a single misconfigured rule can quietly cap the ranking power of an entire section."
+      ]
+    },
+    {
+      "heading": "When to use a 301 vs a 302",
+      "body": [
+        "Choosing between a 301 and a 302 is a decision about whether the original URL will ever come back. A 301 is correct whenever the answer is no; a 302 is correct only when the answer is a definite yes within a short, known window. Most real-world redirects are permanent, so 301 wins the overwhelming majority of the time.",
+        "Use a **301 permanent redirect** when:",
+        "- You moved or renamed a page (`/old-post` to `/new-post`).\n- You migrated to a new domain or merged two sites.\n- You upgraded from HTTP to HTTPS or from www to non-www (or vice versa).\n- You consolidated duplicate or outdated pages onto one canonical URL.\n- You retired a page and want its ranking signals to flow to a relevant replacement.",
+        "Use a **302 temporary redirect** when:",
+        "- A page is briefly down for maintenance and will return at the same URL.\n- You are A/B testing two versions and the original must keep its index position.\n- You geo- or device-route visitors temporarily but want the canonical URL preserved.\n- A seasonal page (a sale landing page) points elsewhere off-season but returns later.",
+        "[[flowchart]]",
+        "The mistake that costs the most ranking is using a 302 for what is really a permanent move. Because a 302 tells Google to keep indexing the *original* URL, the destination never fully inherits the ranking signals, and the move can underperform for months. If the old URL is never coming back, it should be a 301."
+      ]
+    },
+    {
+      "heading": "The SEO impact: link equity and indexing",
+      "body": [
+        "The SEO impact of a 301 vs 302 redirect is the real reason the choice matters. A 301 redirect passes link equity — the ranking value of backlinks and internal links — to the destination URL and instructs Google to index the destination instead of the source. A 302 redirect keeps the original URL indexed and, by design, does *not* permanently consolidate signals onto the new URL.",
+        "On the question of how much equity a 301 passes: Google has stated for years that 301 (and other permanent) redirects pass full PageRank with no decay, so you do not lose ranking value simply by using a 301. The old advice that redirects \"leak\" 15% of equity is outdated. What matters is relevance — redirecting a deleted page to a *topically related* replacement preserves far more value than dumping every dead URL onto the homepage, which Google often treats as a soft 404.",
+        "For indexing, the two behave oppositely:",
+        "> A 301 tells Google: drop the old URL, index the new one, move the signals over. A 302 tells Google: keep the old URL indexed, this is just a detour.",
+        "Google has also said that if a 302 stays in place long enough, it will *eventually* treat it like a 301 and pass signals — but \"eventually\" can mean weeks or months of underperformance you never needed to suffer. Do not rely on that fallback; set the correct status code from the start. Redirect type is closely tied to canonicalization, so pair clean redirects with a correct [canonical tag](/blog/what-is-a-canonical-tag) on every destination URL."
+      ]
+    },
+    {
+      "heading": "How to set up a 301 redirect (with code)",
+      "body": [
+        "Setting up a 301 redirect means configuring your server, CMS, or CDN to return the `301` status code for the old URL and a `Location` header pointing at the new one. The exact method depends on your stack, but every approach produces the same HTTP response. Below are the three most common configurations.",
+        "**Apache (.htaccess)** — redirect a single page or an entire domain:",
+        "```apache\n# Single page, permanent\nRedirect 301 /old-page /new-page\n\n# Whole domain to HTTPS + non-www\nRewriteEngine On\nRewriteCond %{HTTPS} off [OR]\nRewriteCond %{HTTP_HOST} ^www\\. [NC]\nRewriteRule ^(.*)$ https://example.com/$1 [R=301,L]\n```",
+        "**Nginx** — return a 301 in a server block:",
+        "```nginx\nserver {\n  listen 80;\n  server_name www.example.com example.com;\n  return 301 https://example.com$request_uri;\n}\n\n# Single path\nlocation = /old-page {\n  return 301 /new-page;\n}\n```",
+        "**Node / Express** — for app-level redirects:",
+        "```js\napp.get('/old-page', (req, res) => {\n  res.redirect(301, '/new-page'); // 301 = permanent\n  // res.redirect(302, '/temp') would be temporary\n});\n```",
+        "After deploying any redirect, **verify the status code**, because frameworks and plugins default to 302 surprisingly often. Run `curl -I https://example.com/old-page` and confirm the response reads `HTTP/2 301`, not `302`. You can also confirm your redirects resolve cleanly with our [free SEO + GEO audit](/) on the homepage, which flags redirect chains, wrong status codes, and broken destinations. For the full list, see [all 40+ SEO/GEO checks](/check)."
+      ]
+    },
+    {
+      "heading": "Common 301 and 302 redirect mistakes",
+      "body": [
+        "Redirect mistakes are silent — the page loads fine for visitors while Google quietly fails to pass signals, drops the wrong URL, or burns crawl budget on loops. A handful of errors account for nearly every broken redirect setup, and an audit catches them in one pass.",
+        "[[table]]",
+        "The most expensive mistake is the **accidental 302**, because so many tools default to it. WordPress plugins, framework `redirect()` helpers, and load balancers frequently emit a 302 unless you explicitly request a 301. The fix is boring but essential: check the actual status code on every important redirect rather than assuming.",
+        "Two more traps worth naming. **Redirect chains** (A to B to C to D) dilute crawl efficiency and slow page loads — collapse them so every old URL points *directly* at its final destination in one hop. And **redirecting everything to the homepage** instead of a relevant page signals a soft 404 to Google, wasting the equity you were trying to preserve; send each retired URL to its closest topical match instead.",
+        "Redirects and duplicate content are two sides of the same coin. If you are consolidating overlapping pages, read [how to fix duplicate content](/blog/how-to-fix-duplicate-content) — choose a 301 when the duplicate should disappear, and a canonical when both URLs must stay live for users but only one should rank."
+      ]
+    }
+  ],
+  "flowchart": {
+    "title": "301 or 302? Decision flow",
+    "steps": [
+      { "title": "Is the move permanent?", "detail": "If the original URL is never coming back, you want a 301 permanent redirect." },
+      { "title": "Will the original URL return?", "detail": "If you genuinely plan to restore the source URL within a known window, use a 302 temporary redirect." },
+      { "title": "Is it a migration or HTTPS/www change?", "detail": "Domain moves, HTTPS upgrades, and renames are always permanent — use a 301." },
+      { "title": "Is it maintenance, an A/B test, or seasonal routing?", "detail": "Temporary detours where the original must stay indexed call for a 302." },
+      { "title": "Point to the most relevant destination", "detail": "Redirect to a topically related page, not the homepage, to preserve link equity." },
+      { "title": "Verify the status code", "detail": "Run curl -I and confirm the response is 301 (or 302) and not the wrong default." }
+    ]
+  },
+  "comparisonTable": {
+    "caption": "301 vs 302 redirect: side-by-side comparison",
+    "headers": ["Factor", "301 (Permanent)", "302 (Temporary)"],
+    "rows": [
+      ["HTTP status", "301 Moved Permanently", "302 Found (Moved Temporarily)"],
+      ["Meaning to crawlers", "Old URL is gone; index the new one", "Detour only; keep the old URL indexed"],
+      ["Link equity", "Passes full ranking signals to the destination", "Keeps signals on the original by default"],
+      ["Indexed URL", "Destination URL", "Original (source) URL"],
+      ["Caching", "Cached aggressively by browsers", "Not cached long-term"],
+      ["Use it for", "Migrations, renames, HTTPS, consolidating pages", "Maintenance, A/B tests, seasonal or geo routing"]
+    ]
+  },
+  "peopleAlsoAsk": [
+    { "q": "When should I use a 301 vs 302 redirect?", "a": "Use a 301 redirect whenever the change is permanent — moving or renaming a page, migrating domains, upgrading to HTTPS, or consolidating duplicates — because a 301 passes ranking signals to the new URL and tells Google to index it. Use a 302 redirect only when the original URL will genuinely return, such as brief maintenance, an A/B test, or seasonal routing. Since most real-world moves are permanent, the 301 is the correct default in the large majority of cases." },
+    { "q": "Do 301 redirects pass link equity?", "a": "Yes, 301 redirects pass link equity to the destination URL. Google has confirmed that permanent redirects transfer full PageRank with no decay, so a 301 does not cost you ranking value on its own. What matters most is relevance: redirecting a retired page to a topically related replacement preserves far more equity than sending it to an unrelated page or the homepage, which Google may treat as a soft 404." },
+    { "q": "Does a 302 hurt SEO?", "a": "A 302 redirect hurts SEO when it is used for a move that is actually permanent, because the 302 tells Google to keep indexing the original URL and not consolidate signals onto the destination. The new page can underperform for weeks or months as a result. A 302 used correctly for a genuinely temporary detour does not harm SEO, since the original URL is supposed to stay indexed." },
+    { "q": "How do I set up a 301 redirect?", "a": "To set up a 301 redirect, configure your server, CMS, or CDN to return the 301 status code with a Location header pointing to the new URL. On Apache use `Redirect 301 /old /new` in .htaccess; on Nginx use `return 301 https://example.com$request_uri;`; in Express use `res.redirect(301, '/new-page')`. After deploying, verify the status code with `curl -I https://example.com/old-page` and confirm it reads 301 rather than the 302 that many tools default to." },
+    { "q": "Will a 302 eventually become a 301?", "a": "Google has stated that a 302 redirect left in place for a long time will eventually be treated like a 301, passing signals to the destination. However, eventually can mean weeks or months of weaker rankings you never needed to endure. For any permanent move, set a 301 from the start rather than relying on Google to reinterpret a long-running 302." }
+  ],
+  "faqs": [
+    { "q": "Is a 301 or 302 redirect better for SEO?", "a": "A 301 redirect is better for SEO whenever the move is permanent, because it passes link equity to the new URL and tells Google to index the destination. A 302 is the better choice only for genuinely temporary situations where the original URL must stay indexed and will return. The right choice depends entirely on whether the original URL is coming back, not on which one is universally superior." },
+    { "q": "What is the difference between a 301 and a canonical tag?", "a": "A 301 redirect physically sends users and crawlers from an old URL to a new one, so the original URL no longer serves content. A canonical tag keeps every URL live and crawlable while telling Google which version to credit and show in results. Use a 301 when the old URL should disappear, and a canonical when both URLs should stay accessible to users but only one should rank." },
+    { "q": "Do redirects slow down my site?", "a": "A single redirect adds a small, usually negligible delay, but redirect chains — where one URL redirects to another that redirects again — compound that delay and waste crawl budget. Each hop is an extra round trip before the visitor sees content. Collapse chains so every old URL points directly at its final destination in one hop to keep both speed and crawl efficiency intact." }
+  ],
+  "relatedKeywords": ["301 redirect permanent", "302 temporary redirect SEO", "redirect link equity PageRank", "how to set up a 301 redirect", "301 vs canonical tag", "redirect chain SEO"],
+  "internalLinks": [
+    { "href": "/", "anchor": "Run a free SEO + GEO audit" },
+    { "href": "/check", "anchor": "All 40+ SEO/GEO checks" },
+    { "href": "/blog/what-is-a-canonical-tag", "anchor": "What Is a Canonical Tag?" },
+    { "href": "/blog/how-to-fix-duplicate-content", "anchor": "How to fix duplicate content" },
+    { "href": "/blog/what-is-technical-seo", "anchor": "What Is Technical SEO?" }
+  ]
+}

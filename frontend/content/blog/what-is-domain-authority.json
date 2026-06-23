@@ -1,0 +1,129 @@
+{
+  "slug": "what-is-domain-authority",
+  "title": "What Is Domain Authority? (And Does It Matter in 2026?)",
+  "date": "2026-06-23",
+  "updatedAt": "2026-06-23",
+  "tag": "SEO",
+  "cluster": "content-links",
+  "keyword": "domain authority",
+  "secondaryKeywords": ["DA score", "page authority", "Moz metric", "Google ranking factor"],
+  "readTime": 9,
+  "excerpt": "Domain authority is a Moz score that predicts ranking ability — not a Google ranking factor. Here is what it really means.",
+  "description": "Domain authority is a third-party Moz score from 1 to 100 that predicts ranking ability. It is not a Google ranking factor. Here is what it actually means in 2026.",
+  "tldr": "Domain authority (DA) is a third-party metric created by Moz, scored 1 to 100, that predicts how likely a site is to rank. Google has confirmed it does NOT use domain authority as a ranking factor, so treat DA as a directional benchmark, not a goal.",
+  "status": "published",
+  "sections": [
+    {
+      "heading": "What is domain authority?",
+      "body": [
+        "Domain authority is a third-party metric created by the SEO software company Moz that scores a website's likely ranking strength on a scale from 1 to 100. A higher domain authority score means Moz's model predicts the site is more likely to rank well in search results. The critical thing to understand up front: domain authority is Moz's prediction, not a number Google publishes or uses — Google has repeatedly confirmed it has no internal 'domain authority' ranking factor.",
+        "The score is calculated mainly from a site's backlink profile — how many other domains link to it, how authoritative those linking domains are, and the overall shape of the link graph. Moz feeds those signals into a machine-learning model trained to correlate with actual Google rankings. So DA is best read as 'how does this site's link profile compare to others?' rather than 'how good is this site?'",
+        "Other tools publish their own versions of the same idea under different names: Ahrefs calls it Domain Rating (DR), Semrush calls it Authority Score, and Majestic uses Trust Flow and Citation Flow. They are all proprietary, all approximations, and none of them is the metric Google ranks you on. Treat domain authority as a useful competitive yardstick — and nothing more."
+      ]
+    },
+    {
+      "heading": "Is domain authority a Google ranking factor?",
+      "body": [
+        "Domain authority is not a Google ranking factor. Google's own search representatives, including Gary Illyes and John Mueller, have stated for years that Google does not have a single 'domain authority' or 'website authority' score that it uses to rank pages. Moz built domain authority by reverse-engineering correlations with Google's results — it is an outside-in estimate, not an inside-out signal.",
+        "This trips people up because Google does care about authority in a broader sense. Google has described concepts like site reputation and E-E-A-T (Experience, Expertise, Authoritativeness, Trust), and it absolutely weighs links as one of its core signals. But 'Google values authority' and 'Google uses Moz's DA number' are two very different statements. The first is true; the second is not.",
+        "Here is the practical consequence: optimizing to raise your DA score is optimizing for a third-party model, not for Google. Sometimes the two move together — earning great links lifts both your real rankings and your DA. But you can also game DA with low-value links that do nothing for Google, or even hurt you. Chase the underlying cause (relevant links, strong content, trust), not the proxy.",
+        "[[table]]"
+      ]
+    },
+    {
+      "heading": "What is a good domain authority score?",
+      "body": [
+        "A good domain authority score is relative to your competitors, not an absolute target. DA runs from 1 to 100 on a logarithmic scale, which means climbing from 20 to 30 is far easier than climbing from 70 to 80. Roughly speaking, new sites sit between 1 and 20, established small businesses land in the 30 to 50 range, and major brands and news outlets occupy 70 to 100.",
+        "The only benchmark that matters is the one in your actual search results. If the pages outranking you for your target keywords have a DA of 35, you do not need a DA of 80 — you need to be competitive with 35. Comparing your DA to a giant like Wikipedia (DA 100) tells you nothing actionable.",
+        "> Stop treating DA as a score to maximize. Treat it as a thermometer: it tells you roughly how warm your link profile is versus the sites you compete with, and that is the entire useful function of the number.",
+        "Because the score is logarithmic and recalculated as Moz crawls more of the web, your DA can drift up or down even when you do nothing. A two- or three-point dip is usually noise from Moz re-indexing, not a sign you did something wrong. Watch the trend over months, not the number week to week."
+      ]
+    },
+    {
+      "heading": "How do I increase domain authority?",
+      "body": [
+        "You increase domain authority by improving the things DA is built to measure — primarily earning more high-quality, relevant backlinks — but the goal should be real rankings, with a higher DA as a side effect. Because DA is essentially a model of your backlink profile, the work that raises it is the same work that raises your standing with Google. Follow this loop:",
+        "[[flowchart]]",
+        "The single biggest lever is **relevant, editorial links from authoritative sites**. One link from a respected industry publication moves your authority more than fifty links from directories or comment spam. Build assets worth linking to — original data, free tools, genuinely useful guides — then earn coverage through digital PR. The full playbook lives in our guide to [off-page SEO](/blog/what-is-off-page-seo), and for budget-conscious tactics see [how to get backlinks for free](/blog/how-to-get-backlinks-for-free).",
+        "Avoid the shortcuts that inflate DA without helping Google: buying links, link exchanges, and private blog networks. They can pump a vanity score temporarily, but they expose you to manual penalties and do nothing for the rankings you actually want. The links that survive algorithm updates are the ones you earned honestly. Understanding [the difference between nofollow and dofollow links](/blog/nofollow-vs-dofollow-links) also helps you read your own profile.",
+        "Before you invest in link building, confirm your on-page and technical foundations pass — links pointing at a slow, thin, or unindexable page waste their authority. Run a [free SEO + GEO audit](/) to check the basics first."
+      ]
+    },
+    {
+      "heading": "What to focus on instead of DA in 2026",
+      "body": [
+        "Instead of chasing a domain authority number in 2026, focus on the three things that genuinely move both Google rankings and AI citations: relevant links, helpful content, and demonstrable E-E-A-T. These are the causes that DA only approximates, and they are what answer engines like ChatGPT, Perplexity, and Google AI Overviews actually weigh when deciding whom to cite.",
+        "**Relevant links over raw link count.** A handful of links from on-topic, trusted sites beats a large volume of generic ones. Relevance is the signal both Google and AI systems reward — they want to see that the right communities reference you.",
+        "**Content that deserves to rank.** Original research, clear answers, and genuine expertise attract links naturally and give AI engines something quotable. Self-contained, factual passages are increasingly what gets lifted into AI Overviews — see our breakdown of [generative engine optimization](/blog/what-is-generative-engine-optimization).",
+        "**E-E-A-T and entity trust.** Named authors, real credentials, consistent brand mentions, and citations across the web build the kind of authority Google describes and AI tools recognize. Learn the framework in [what is E-E-A-T in SEO](/blog/what-is-eeat-in-seo), and check whether your pages expose a clear [author and E-E-A-T signal](/check/geo.eeat.author.missing).",
+        "Domain authority can still be a handy gut-check when you size up a prospect's site or scope a competitive niche. Just keep it in its lane: a directional estimate from one vendor, useful for comparison, useless as a north star. Optimize for the search engine and the searcher — DA will follow."
+      ]
+    }
+  ],
+  "flowchart": {
+    "title": "How to raise authority the right way",
+    "steps": [
+      { "title": "Benchmark competitors", "detail": "Note the DA of pages currently outranking you so you know the real target." },
+      { "title": "Fix the foundation", "detail": "Pass on-page and technical SEO before earning links so authority is not wasted." },
+      { "title": "Build linkable assets", "detail": "Publish original data, tools, or guides that other sites genuinely want to cite." },
+      { "title": "Earn relevant links", "detail": "Pitch digital PR and on-topic publications instead of buying or swapping links." },
+      { "title": "Strengthen E-E-A-T", "detail": "Add named authors, credentials, and consistent brand mentions across the web." },
+      { "title": "Track the trend", "detail": "Watch DA and real rankings over months, not week-to-week noise." }
+    ]
+  },
+  "comparisonTable": {
+    "caption": "Domain authority (Moz DA) vs Google's actual signals",
+    "headers": ["Dimension", "Domain Authority (Moz)", "Google's real signals"],
+    "rows": [
+      ["Who owns it", "Moz, a third-party SEO vendor", "Google, internal and undisclosed"],
+      ["What it is", "A predictive score, 1–100", "Hundreds of ranking signals"],
+      ["Is it a ranking factor?", "No — Google does not use it", "Yes — these are the ranking factors"],
+      ["Based on", "Mainly backlink profile", "Links, content, intent, E-E-A-T, and more"],
+      ["Scope", "Whole domain", "Per-query, per-page"],
+      ["Best use", "Competitive benchmark", "What you actually optimize for"]
+    ]
+  },
+  "peopleAlsoAsk": [
+    {
+      "q": "Is domain authority a Google ranking factor?",
+      "a": "No, domain authority is not a Google ranking factor. Domain authority is a score invented by the SEO company Moz to predict ranking strength, and Google representatives have repeatedly confirmed Google has no internal 'domain authority' metric. Google does value links and authority broadly, but it does not use Moz's DA number to rank pages."
+    },
+    {
+      "q": "What is a good domain authority score?",
+      "a": "A good domain authority score is one that is competitive with the sites currently ranking for your target keywords, not a fixed number. As a rough guide, new sites score 1 to 20, established small businesses 30 to 50, and major brands 70 to 100. Because DA is logarithmic, gains get harder the higher you climb, so benchmark against your real competitors rather than chasing a universal target."
+    },
+    {
+      "q": "How do I increase domain authority?",
+      "a": "You increase domain authority by earning more high-quality, relevant backlinks from authoritative websites, since DA is built mainly from your backlink profile. The most durable method is creating linkable assets like original research and earning coverage through digital PR. Avoid buying or exchanging links, which can inflate the score briefly but risk penalties and do nothing for Google rankings."
+    },
+    {
+      "q": "Is DA the same as page authority?",
+      "a": "No, DA and page authority (PA) are different Moz metrics. Domain authority predicts the ranking strength of an entire domain, while page authority predicts the ranking strength of a single individual page. A high-DA site can still have low-PA pages that rank poorly, and a strong individual page can rank well even on a modest domain."
+    },
+    {
+      "q": "Why does my domain authority drop for no reason?",
+      "a": "Domain authority often drifts up or down because Moz periodically recrawls the web and recalculates the score against the rest of the index. A small two- or three-point dip is usually re-indexing noise rather than a problem you caused. Watch the long-term trend over months and prioritize your actual Google rankings, which are the only metric that affects traffic."
+    }
+  ],
+  "faqs": [
+    {
+      "q": "Should I use domain authority at all if Google ignores it?",
+      "a": "Yes, domain authority is still useful as a competitive benchmark even though Google does not use it. DA gives you a quick way to compare your link profile against competitors or to size up a niche before investing. Just treat it as a directional estimate from one vendor, not a goal to maximize, and optimize for real rankings instead."
+    },
+    {
+      "q": "Which is more accurate: Moz DA, Ahrefs DR, or Semrush Authority Score?",
+      "a": "None of Moz DA, Ahrefs DR, or Semrush Authority Score is definitively more accurate, because all three are proprietary estimates built from different link datasets and models. They tend to move in the same direction, so pick one tool and track it consistently rather than comparing scores across tools. Remember that none of them is the metric Google actually ranks you on."
+    },
+    {
+      "q": "Does domain authority help with AI search and GEO?",
+      "a": "Domain authority does not directly help with AI search, because engines like ChatGPT and Perplexity do not read Moz's DA score. However, the underlying signals DA approximates — relevant links, trusted content, and strong E-E-A-T — are exactly what AI engines weigh when deciding which brands to cite. Build genuine authority and both your rankings and your AI citations improve."
+    }
+  ],
+  "relatedKeywords": ["domain authority vs page authority", "what is a good DA score", "how to increase domain authority", "Moz domain authority explained", "is domain authority a ranking factor", "Ahrefs domain rating vs DA"],
+  "internalLinks": [
+    { "href": "/", "anchor": "Run a free SEO + GEO audit" },
+    { "href": "/blog/what-is-off-page-seo", "anchor": "What Is Off-Page SEO?" },
+    { "href": "/blog/how-to-get-backlinks-for-free", "anchor": "How to get backlinks for free" },
+    { "href": "/blog/what-is-eeat-in-seo", "anchor": "What is E-E-A-T in SEO" }
+  ]
+}

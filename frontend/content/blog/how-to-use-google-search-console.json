@@ -1,0 +1,128 @@
+{
+  "slug": "how-to-use-google-search-console",
+  "title": "How to Use Google Search Console (2026 Beginner's Guide)",
+  "date": "2026-06-24",
+  "updatedAt": "2026-06-24",
+  "tag": "Technical SEO",
+  "cluster": "technical-seo",
+  "keyword": "Google Search Console",
+  "secondaryKeywords": ["verify site in Search Console", "submit a sitemap", "URL Inspection tool", "index coverage report"],
+  "readTime": 9,
+  "excerpt": "A beginner walkthrough of Google Search Console: verify, submit a sitemap, read reports, and fix indexing issues.",
+  "description": "Learn how to use Google Search Console step by step: verify your site, submit a sitemap, read the Performance and Pages reports, and fix indexing issues.",
+  "tldr": "Google Search Console is Google's free tool for monitoring how your site appears in Search. Set it up in 4 steps: verify ownership, submit your XML sitemap, read the Performance and Pages (indexing) reports, then use URL Inspection to fix coverage issues.",
+  "status": "published",
+  "sections": [
+    {
+      "heading": "What Google Search Console Is and Why It Matters",
+      "body": [
+        "Google Search Console is a free service from Google that shows how your website appears in Google Search: which queries bring clicks, which pages are indexed, and which URLs have errors. It is the single most important free tool for any site owner who cares about organic traffic, and unlike most SEO software it reports first-party data straight from Google's index.",
+        "Google Search Console answers questions no third-party tool can. It tells you the exact search queries people typed before clicking your result, your average position for each query, and whether Google has actually indexed a given page. If a page is not in Search Console's index, it cannot rank — so the tool is both a diagnostic dashboard and an early-warning system.",
+        "Every site should connect to Search Console before doing anything else in SEO. It powers the indexing checks, sitemap submission, and performance tracking that the rest of this guide walks through.",
+        "> If you only adopt one free SEO tool this year, make it Google Search Console. Everything else is optional; this is not."
+      ]
+    },
+    {
+      "heading": "How to Set Up Google Search Console (Step by Step)",
+      "body": [
+        "Setting up Google Search Console takes four stages: create a property, verify ownership, submit a sitemap, then read your reports. The flowchart below maps the full path from a brand-new account to a site you can monitor and debug.",
+        "[[flowchart]]",
+        "Start by signing in at **search.google.com/search-console** with any Google account. You will be asked to add a *property*, which is the site you want to track. There are two property types:",
+        "- **Domain property** — covers every subdomain and both `http://` and `https://`. Verified via a DNS TXT record. Best for most owners.\n- **URL-prefix property** — covers only the exact URL you enter (e.g. `https://www.example.com/`). Offers more verification methods, including HTML file upload and Google Analytics.",
+        "Verification proves you own the site. The most common methods are adding a **DNS TXT record** at your domain registrar (required for domain properties), uploading an **HTML verification file** to your server root, adding a `<meta>` tag to your homepage `<head>`, or linking an existing **Google Analytics** or **Google Tag Manager** account. Pick whichever you can access fastest — DNS is the most durable because it survives site redesigns and CMS changes.",
+        "Once verified, you have an empty dashboard. Data starts populating within a day or two, but the next two steps make it useful immediately."
+      ]
+    },
+    {
+      "heading": "How to Submit a Sitemap and Get Indexed",
+      "body": [
+        "Submitting a sitemap tells Google Search Console exactly which URLs you want crawled, which speeds up discovery for new and updated pages. Open the **Sitemaps** report in the left sidebar, enter your sitemap URL (usually `https://example.com/sitemap.xml`), and click Submit.",
+        "If you do not have a sitemap yet, generate one first — most platforms (WordPress, Shopify, Webflow, Next.js) produce one automatically, or you can build one by hand. See our guide on [how to create an XML sitemap](/blog/how-to-create-an-xml-sitemap) for the exact format and common mistakes.",
+        "After submission, Search Console shows a status of **Success**, the number of discovered URLs, and the last read date. A `Couldn't fetch` status usually means the URL is wrong, returns a non-200 response, or is blocked by `robots.txt`.",
+        "To push a single important page into the index faster, use the **URL Inspection** tool at the top of the dashboard. Paste the URL, and Search Console reports whether it is indexed, when it was last crawled, and whether there are issues. If the page is valid but not yet indexed, click **Request Indexing** — Google will prioritize a fresh crawl. Use it for new posts and pages you just fixed; it is not meant for bulk submission."
+      ]
+    },
+    {
+      "heading": "How to Read the Performance and Pages Reports",
+      "body": [
+        "The Performance and Pages reports are where Google Search Console earns its place in your workflow. The Performance report shows demand and ranking; the Pages report shows indexing health.",
+        "**Performance report** — Four metrics sit at the top:",
+        "- **Clicks** — how many times users clicked through to your site from Search.\n- **Impressions** — how many times your URLs appeared in results, even without a click.\n- **Average CTR** — clicks divided by impressions.\n- **Average position** — your mean ranking for the filtered query set.",
+        "Toggle all four on, then switch between the **Queries**, **Pages**, **Countries**, and **Search appearance** tabs. The highest-leverage move for beginners: sort by impressions, find queries where you rank in positions 5–15 with a low CTR, and improve those pages' titles and content. Those are rankings you already have — nudging them onto page one is far easier than starting from zero.",
+        "**Pages (indexing) report** — This report splits your URLs into **Indexed** and **Not indexed**, with reasons for each excluded page. Common reasons include `Crawled - currently not indexed`, `Discovered - currently not indexed`, `Page with redirect`, `Excluded by 'noindex' tag`, and `Duplicate without user-selected canonical`. Click any reason to see affected URLs, fix the underlying issue, then hit **Validate Fix** so Google re-checks them.",
+        "The table below shows where each report fits and what action it drives.",
+        "[[table]]",
+        "A quick note on the difference between Search Console and Google Analytics: Search Console measures your presence *inside Google Search* (queries, impressions, indexing), while Analytics measures *behavior on your site* after the click (sessions, conversions, engagement). They are complementary, not interchangeable."
+      ]
+    },
+    {
+      "heading": "How to Fix the Most Common Coverage Issues",
+      "body": [
+        "Coverage issues in Google Search Console are pages Google chose not to index, and most fall into a handful of fixable categories. Work through them in the Pages report from highest URL count down.",
+        "- **Crawled - currently not indexed** — Google saw the page but judged it low value. Improve content depth, add internal links pointing to it, and make sure it is in your sitemap.\n- **Discovered - currently not indexed** — Often a crawl-budget or quality signal. Strengthen internal linking and reduce thin/duplicate pages competing for attention.\n- **Excluded by 'noindex' tag** — Intentional only if you meant it; otherwise remove the `noindex` directive from the page's `<meta>` tag or HTTP header.\n- **Duplicate without user-selected canonical** — Add a clear [canonical tag](/blog/what-is-a-canonical-tag) so Google knows which version to index.\n- **Page with redirect / Not found (404)** — Clean up internal links pointing to dead or redirected URLs.",
+        "Most coverage problems trace back to a few technical-SEO basics: crawlability, canonicalization, and content quality. The fastest way to find them all at once is to run an automated scan — our [free SEO + GEO audit](/) flags missing titles, broken canonicals, indexability blockers, and weak structured data in seconds, then you confirm fixes in Search Console with **Validate Fix**.",
+        "Search Console is one layer of a complete check. When you are ready to go deeper, follow our full walkthrough on [how to do an SEO audit](/blog/how-to-do-an-seo-audit) to combine Search Console data with on-page and structured-data analysis."
+      ]
+    }
+  ],
+  "flowchart": {
+    "title": "Google Search Console setup and key reports",
+    "steps": [
+      { "title": "Add a property", "detail": "Sign in and choose a Domain or URL-prefix property for the site you want to track." },
+      { "title": "Verify ownership", "detail": "Confirm you own the site via DNS TXT record, HTML file, meta tag, or Google Analytics." },
+      { "title": "Submit your sitemap", "detail": "Enter your sitemap URL in the Sitemaps report so Google can discover all your pages." },
+      { "title": "Read Performance", "detail": "Review clicks, impressions, CTR, and average position by query and page." },
+      { "title": "Check Pages (indexing)", "detail": "See which URLs are indexed and why others are excluded." },
+      { "title": "Inspect and fix", "detail": "Use URL Inspection to request indexing and Validate Fix to clear coverage issues." }
+    ]
+  },
+  "comparisonTable": {
+    "caption": "Key Google Search Console reports and what to do with them",
+    "headers": ["Report", "What it shows", "Beginner action"],
+    "rows": [
+      ["Performance", "Clicks, impressions, CTR, and average position by query and page", "Improve titles for queries ranking in positions 5–15"],
+      ["Pages (indexing)", "Indexed vs. not-indexed URLs with exclusion reasons", "Fix the highest-count exclusion, then Validate Fix"],
+      ["Sitemaps", "Submitted sitemaps, discovered URLs, and read status", "Submit sitemap.xml and confirm a Success status"],
+      ["URL Inspection", "Index status and last crawl for a single URL", "Request Indexing for new or just-fixed pages"]
+    ]
+  },
+  "peopleAlsoAsk": [
+    {
+      "q": "Is Google Search Console free?",
+      "a": "Yes, Google Search Console is completely free, with no paid tier, usage cap, or trial period. Anyone with a Google account can verify an unlimited number of sites and access every report at no cost. Google provides it to help site owners improve how their pages appear in Search."
+    },
+    {
+      "q": "How do I verify my site in Search Console?",
+      "a": "To verify a site in Google Search Console, add a property and choose a verification method: a DNS TXT record at your domain registrar, an uploaded HTML file, a meta tag in your homepage head, or a linked Google Analytics or Tag Manager account. DNS verification is recommended because it covers a whole domain and survives site redesigns. Verification usually completes within a few minutes once the record propagates."
+    },
+    {
+      "q": "What is the difference between Search Console and Analytics?",
+      "a": "Google Search Console measures your site's presence inside Google Search — the queries, impressions, average position, and indexing status of your pages. Google Analytics measures what visitors do after they arrive, such as sessions, engagement, and conversions. Search Console is about getting found; Analytics is about what happens next. Most site owners use both together."
+    },
+    {
+      "q": "How do I submit a sitemap?",
+      "a": "To submit a sitemap in Google Search Console, open the Sitemaps report in the left sidebar, type your sitemap URL (usually sitemap.xml), and click Submit. Google then reads the file and lists how many URLs it discovered, returning a Success status when the fetch works. If you see Couldn't fetch, check that the URL is correct, returns a 200 response, and is not blocked by robots.txt."
+    },
+    {
+      "q": "How long does it take for Google to index a new page?",
+      "a": "A new page typically appears in Google's index within a few days to a couple of weeks, depending on your site's authority and crawl frequency. You can speed this up by submitting a sitemap and using the URL Inspection tool's Request Indexing button. Search Console shows the exact index status and last crawl date for any URL you inspect."
+    }
+  ],
+  "faqs": [
+    {
+      "q": "Do I need coding skills to use Google Search Console?",
+      "a": "No coding skills are required to use Google Search Console for everyday tasks like reading reports, submitting a sitemap, or inspecting URLs. Some verification methods, such as uploading an HTML file or editing a DNS record, involve light technical steps, but most CMS platforms and registrars make these point-and-click. Reading the Performance and Pages reports is entirely visual."
+    },
+    {
+      "q": "Why are my pages showing as 'Crawled - currently not indexed'?",
+      "a": "The 'Crawled - currently not indexed' status means Google fetched the page but decided not to add it to the index, usually because it judged the content thin, duplicate, or low priority. To fix it, deepen the content, add internal links from related pages, ensure the URL is in your sitemap, then use Validate Fix. Improvement can take several weeks as Google re-evaluates the page."
+    }
+  ],
+  "relatedKeywords": ["verify website ownership Google", "Search Console performance report", "index coverage errors", "request indexing tool", "submit XML sitemap to Google", "Search Console vs Analytics"],
+  "internalLinks": [
+    { "href": "/", "anchor": "run a free SEO + GEO audit" },
+    { "href": "/blog/how-to-create-an-xml-sitemap", "anchor": "how to create an XML sitemap" },
+    { "href": "/blog/how-to-do-an-seo-audit", "anchor": "how to do an SEO audit" },
+    { "href": "/blog/what-is-a-canonical-tag", "anchor": "what is a canonical tag" }
+  ]
+}

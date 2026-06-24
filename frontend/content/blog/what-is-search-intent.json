@@ -1,0 +1,127 @@
+{
+  "slug": "what-is-search-intent",
+  "title": "What Is Search Intent? (And How to Match It in 2026)",
+  "date": "2026-06-24",
+  "updatedAt": "2026-06-24",
+  "tag": "SEO",
+  "cluster": "content-links",
+  "keyword": "search intent",
+  "secondaryKeywords": ["types of search intent", "search intent SEO", "informational intent", "transactional intent"],
+  "readTime": 9,
+  "excerpt": "Search intent is the goal behind a query. Learn the 4 types, how to read it from the SERP, and how to match it.",
+  "description": "Search intent is the goal behind a search query. Learn the 4 types of search intent, how to identify it from the SERP, and how to match it with content in 2026.",
+  "tldr": "Search intent is the goal behind a query, and it falls into 4 types: informational, navigational, commercial, and transactional. You identify it by reading the current top-ranking results, then match it by giving searchers the format and depth those results already prove Google rewards.",
+  "status": "published",
+  "sections": [
+    {
+      "heading": "What search intent is and why it decides rankings",
+      "body": [
+        "Search intent is the goal a person is trying to accomplish when they type a query into a search engine. Every search falls into one of four types of search intent: **informational** (learn something), **navigational** (reach a specific site), **commercial** (research before buying), and **transactional** (take an action, usually purchase). Google's entire job is to figure out which goal a query represents and serve pages that satisfy it, which is why matching search intent is the single most important factor in whether a page ranks.",
+        "Here is the part most people miss: you can write the most thorough, well-optimized page on the internet, and it will still fail to rank if it answers the wrong intent. A query like `best running shoes` is commercial — searchers want a comparison or a ranked list. If you publish a single-product sales page, Google will not rank it no matter how good it is, because the query's goal is to compare, not to buy one specific item.",
+        "Intent is also why keyword volume is a weak signal on its own. A term might get thousands of searches a month, but if you can't serve the goal behind it with the page type you're able to produce, that volume is worthless to you. Reading intent before you write is what turns a list of keywords into a list of pages worth building — the natural next step after [keyword research](/blog/how-to-do-keyword-research-for-free).",
+        "The good news: you don't have to guess. The current top-ranking results for any query are Google's published answer to what intent it represents, and they tell you exactly what to build."
+      ]
+    },
+    {
+      "heading": "The 4 types of search intent, explained",
+      "body": [
+        "The four types of search intent map to the four reasons anyone ever opens a search engine: to learn, to navigate, to compare, or to act. Knowing which one a query belongs to tells you the page format Google expects, the depth it rewards, and whether the searcher is anywhere near a purchase decision.",
+        "Each type pulls a distinct kind of result. Informational queries surface guides, definitions, and how-tos. Navigational queries surface a single brand or login page. Commercial queries surface listicles, comparisons, and reviews. Transactional queries surface product pages, pricing, and checkout flows. The table below shows the signals, page type, and a worked example for each.",
+        "[[table]]",
+        "A few queries are genuinely mixed — `iphone` could be navigational (Apple's page), commercial (which model to buy), or informational (specs). When intent is split, Google hedges by showing a blend of result types on page one. Read the mix and decide which slice you can realistically win.",
+        "> The most expensive mistake in SEO is targeting a transactional keyword with informational content, or vice versa. The page can be excellent and still never rank, because it answers a goal nobody searching that term actually has."
+      ]
+    },
+    {
+      "heading": "How to identify search intent from the SERP",
+      "body": [
+        "You identify search intent by reading the search engine results page (SERP) for your target query, because the ranking pages are Google's own verdict on what searchers want. Open an incognito window, search the exact phrase, and treat the top 10 results as a finished spec for the page you need to build.",
+        "Run through this read in order. It takes about two minutes per keyword and replaces a lot of guesswork:",
+        "- **Page format** — Are the top results blog posts, product pages, listicles, or tools? That format is what you must match. Ten how-to guides on page one means a how-to guide is the only thing that ranks.\n- **Title patterns** — Repeated modifiers like `best`, `2026`, `how to`, `vs`, or `template` reveal the angle searchers expect. If every title says `best`, a single-product page is the wrong move.\n- **SERP features** — A featured snippet or [AI Overview](/blog/ai-overviews-vs-featured-snippets) signals informational intent and a direct-answer opportunity. Shopping ads and product carousels signal transactional intent.\n- **Content depth** — Skim two or three top results. A 2,500-word pillar means short answers won't compete; a 600-word definition means you don't need to pad.",
+        "[[flowchart]]",
+        "When the results are inconsistent — some guides, some product pages — the intent is mixed and Google is still testing what users prefer. Pick the dominant format and note the secondary one in case you want a follow-up page. A free [SEO and GEO audit](/) can confirm your published page actually matches the format and depth the winners share, instead of leaving it to gut feel."
+      ]
+    },
+    {
+      "heading": "How to match search intent with content",
+      "body": [
+        "Matching search intent means giving searchers the format, depth, and next action the top results already prove Google rewards for that query — then doing it better. Identification tells you what to build; matching is the execution. Three rules cover most cases.",
+        "**Match the format first.** If the SERP is listicles, write a listicle. If it's a comparison, build a comparison. Format is non-negotiable because it's the clearest intent signal Google has — fighting it is how good content stays on page three.",
+        "**Match the depth, then add.** Don't just hit the average word count of the top results; cover what they cover and add one thing they miss — a clearer example, a current 2026 update, an embedded tool, a table. That delta is your reason to outrank, not the word count itself.",
+        "**Match the stage of the journey.** Informational searchers want to learn, not buy — bury a hard sell and they bounce. Commercial searchers want honest comparison; transactional searchers want a frictionless path to act. Serve the stage they're at, and link onward to the next stage on your own pages.",
+        "For the on-page craft of doing this well — headings, answer-first openers, internal links — see [how to write SEO-friendly content](/blog/how-to-write-seo-friendly-content). And remember that in 2026, intent matching also feeds AI answers: when your page format and direct answer match the query goal, you're far likelier to get [pulled into AI Overviews and chatbots](/blog/how-to-rank-in-google-ai-overviews) that quote intent-matched sources."
+      ]
+    },
+    {
+      "heading": "Common intent-matching mistakes to avoid",
+      "body": [
+        "Most search-intent failures come from a handful of repeatable mistakes, and avoiding them is faster than fixing a page after it flops. The pattern is always the same: assuming intent instead of reading the SERP.",
+        "- **Targeting volume over intent.** A high-volume keyword you can't serve with the right page type is a dead end. Always check the SERP format before committing a page to a term.\n- **Forcing transactional CTAs into informational pages.** Someone searching `what is search intent` wants a definition, not a 'Buy Now' button. Earn trust first; convert later.\n- **One page for split intent.** When a query has two real intents, trying to satisfy both on one page usually satisfies neither. Split it into two focused pages instead.\n- **Ignoring SERP features.** A query dominated by a featured snippet or shopping carousel is telling you the intent loudly. Reading those features is free signal most people skip.",
+        "Fixing intent mismatch is also one of the highest-leverage moves on an existing site. If a page gets impressions but few clicks in Search Console, intent mismatch is a prime suspect — the page shows up, but its format doesn't match what searchers picked. Re-read the SERP, realign the format, and re-publish before you write anything new."
+      ]
+    }
+  ],
+  "flowchart": {
+    "title": "How to read search intent from a SERP",
+    "steps": [
+      { "title": "Search the exact query incognito", "detail": "Open a clean, signed-out window and search your target phrase to see neutral, unpersonalized results." },
+      { "title": "Note the dominant page format", "detail": "Check whether the top 10 are guides, listicles, product pages, or tools — that format is what ranks." },
+      { "title": "Scan title patterns and modifiers", "detail": "Repeated words like best, how to, vs, or 2026 reveal the angle and intent searchers expect." },
+      { "title": "Read the SERP features", "detail": "Featured snippets and AI Overviews signal informational intent; shopping carousels signal transactional intent." },
+      { "title": "Classify the intent and build to match", "detail": "Assign one of the four intent types, then match the format and depth the winners share and add one improvement." }
+    ]
+  },
+  "comparisonTable": {
+    "caption": "The 4 types of search intent at a glance",
+    "headers": ["Intent type", "Searcher's goal", "SERP signals", "Page type to build", "Example query"],
+    "rows": [
+      ["Informational", "Learn or understand something", "Guides, snippets, AI Overviews, People Also Ask", "How-to guide, definition, tutorial", "what is search intent"],
+      ["Navigational", "Reach a specific site or page", "One brand dominates, sitelinks, login pages", "Homepage, branded landing page", "search console login"],
+      ["Commercial", "Compare before buying", "Listicles, reviews, 'best' titles, comparisons", "Roundup, comparison, review", "best keyword research tool"],
+      ["Transactional", "Take an action or buy now", "Product pages, pricing, shopping ads, 'buy'", "Product page, pricing, checkout", "buy running shoes online"]
+    ]
+  },
+  "peopleAlsoAsk": [
+    {
+      "q": "What are the 4 types of search intent?",
+      "a": "The four types of search intent are informational, navigational, commercial, and transactional. Informational queries aim to learn something, navigational queries aim to reach a specific website, commercial queries research options before a purchase, and transactional queries aim to take an action such as buying. Each type pulls a distinct kind of result page, which is how you tell them apart."
+    },
+    {
+      "q": "How do I find search intent?",
+      "a": "You find search intent by searching your exact target query in an incognito window and reading the top 10 results. The dominant page format — guide, listicle, product page, or tool — is Google's verdict on what searchers want. Title patterns and SERP features like featured snippets or shopping carousels confirm the intent type."
+    },
+    {
+      "q": "Why does search intent matter for SEO?",
+      "a": "Search intent matters for SEO because Google ranks pages that satisfy the goal behind a query, not just pages with the right keywords. A technically perfect page that answers the wrong intent will not rank, because it fails to give searchers what they came for. Matching intent is the single most reliable predictor of whether a page can rank."
+    },
+    {
+      "q": "How do I match search intent?",
+      "a": "You match search intent by building the page format the top-ranking results share, covering the same depth, and adding one improvement they miss. Match the format first because it is the clearest intent signal, then match the stage of the searcher's journey so informational queries get answers and transactional queries get a clear path to act."
+    },
+    {
+      "q": "Can one keyword have multiple search intents?",
+      "a": "Yes, one keyword can have mixed search intent when its meaning is ambiguous, such as a brand name that could be navigational, commercial, or informational. Google handles split intent by showing a blend of result types on page one. When intent is mixed, pick the dominant format you can win and consider a separate page for the secondary intent."
+    }
+  ],
+  "faqs": [
+    {
+      "q": "Is search intent the same as keyword intent?",
+      "a": "Search intent and keyword intent describe the same concept: the goal behind a query. Some marketers use 'keyword intent' when classifying terms in a research spreadsheet and 'search intent' when reading live SERPs, but both refer to whether a searcher wants to learn, navigate, compare, or buy. There is no meaningful difference in practice."
+    },
+    {
+      "q": "Does search intent affect AI search and chatbots?",
+      "a": "Yes, search intent affects AI search heavily because tools like ChatGPT, Perplexity, and Google AI Overviews favor pages whose format and direct answer match the query's goal. A page that answers informational intent with a clean, standalone answer is far likelier to be cited than one that buries the answer under a sales pitch. Matching intent is now a ranking signal across both classic search and AI answers."
+    },
+    {
+      "q": "How long does it take to fix an intent mismatch?",
+      "a": "Fixing an intent mismatch can show results within days to a few weeks once the realigned page is recrawled, because you are not building authority from scratch — you are giving an existing page the right format. Pages that already earn impressions but few clicks tend to respond fastest, since Google already considers them relevant and only the format was off."
+    }
+  ],
+  "relatedKeywords": ["types of search intent", "search intent SEO", "informational vs transactional intent", "how to find search intent", "matching keyword intent", "commercial intent keywords"],
+  "internalLinks": [
+    { "href": "/", "anchor": "Run a free SEO + GEO audit" },
+    { "href": "/blog/how-to-do-keyword-research-for-free", "anchor": "How to do keyword research for free" },
+    { "href": "/blog/how-to-write-seo-friendly-content", "anchor": "How to write SEO-friendly content" },
+    { "href": "/blog/how-to-rank-in-google-ai-overviews", "anchor": "How to rank in Google AI Overviews" }
+  ]
+}

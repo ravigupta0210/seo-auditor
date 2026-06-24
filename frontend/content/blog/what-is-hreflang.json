@@ -1,0 +1,128 @@
+{
+  "slug": "what-is-hreflang",
+  "title": "What Is Hreflang? (And How to Use It Right in 2026)",
+  "date": "2026-06-24",
+  "updatedAt": "2026-06-24",
+  "tag": "Technical SEO",
+  "cluster": "technical-seo",
+  "keyword": "hreflang",
+  "secondaryKeywords": ["hreflang tags", "hreflang attribute", "language targeting", "international SEO"],
+  "readTime": 9,
+  "excerpt": "Hreflang tells Google which language or region version of a page to show. Here is the syntax, placement, and pitfalls.",
+  "description": "Hreflang tells search engines which language and region version of a page to serve. Learn the syntax, where to place it, and the most common hreflang mistakes in 2026.",
+  "tldr": "Hreflang is an HTML attribute that tells Google which language or region version of a page to show a given searcher. It uses ISO codes like en-us or fr-ca, must be bidirectional (every page links back), and can live in the HTML head, HTTP headers, or an XML sitemap.",
+  "status": "published",
+  "sections": [
+    {
+      "heading": "What Is Hreflang?",
+      "body": [
+        "Hreflang is an HTML attribute that tells search engines which language or regional version of a page to serve to a specific user. When a site publishes the same content in English, Spanish, and German, hreflang signals to Google that these pages are alternates of one another rather than duplicate content, and it maps each version to the right audience.",
+        "The attribute pairs a URL with a language and (optionally) region code, written as `hreflang=\"en-us\"` or `hreflang=\"fr\"`. The language portion uses an ISO 639-1 code, and the optional region uses an ISO 3166-1 Alpha-2 code. So `pt-br` means Portuguese as spoken in Brazil, while `pt-pt` means Portuguese in Portugal.",
+        "Hreflang does not change rankings directly. It is a targeting signal, not a ranking factor. Its job is to make sure a Spanish-speaking searcher in Mexico lands on the Spanish page instead of the English one, which improves engagement and cuts down on the wrong-language bounce that quietly erodes performance. Hreflang is part of the broader [technical SEO](/blog/what-is-technical-seo) layer that controls how engines crawl, index, and serve your pages."
+      ]
+    },
+    {
+      "heading": "Hreflang Syntax and Code Example",
+      "body": [
+        "Hreflang syntax always describes a set of alternate URLs, with each entry naming a URL and the language or region it serves. The cleanest place to start is the HTML head, where each version of the page references every other version, including itself.",
+        "Here is a working example for a page available in US English, UK English, and French:",
+        "```html\n<link rel=\"alternate\" hreflang=\"en-us\" href=\"https://example.com/page\" />\n<link rel=\"alternate\" hreflang=\"en-gb\" href=\"https://example.com/uk/page\" />\n<link rel=\"alternate\" hreflang=\"fr\" href=\"https://example.com/fr/page\" />\n<link rel=\"alternate\" hreflang=\"x-default\" href=\"https://example.com/page\" />\n```",
+        "Two rules make or break this block. **First, every page in the set must include the full list** — the US page, the UK page, and the French page all carry the same four tags. This is the return-tag requirement: if page A points to page B but page B does not point back to A, Google ignores the relationship.",
+        "**Second, use `x-default`** to name the fallback version for users whose language or region you do not explicitly target. It is optional but strongly recommended for the page a global homepage redirector or unmatched user should see.",
+        "> Hreflang and canonical tags work together, not against each other. Each language version should self-canonicalize (point its canonical at itself), never at another language. Pointing a French page's canonical at the English version tells Google to drop the French page entirely."
+      ]
+    },
+    {
+      "heading": "Where to Put Hreflang Tags",
+      "body": [
+        "Hreflang tags can live in three places, and you should pick exactly one method per site to avoid conflicting signals. The three options are the HTML head, the HTTP response header, and the XML sitemap.",
+        "- **HTML head** — `<link rel=\"alternate\">` tags in the `<head>`. Best for most HTML pages and the easiest to inspect. Adds weight to every page when you have many language versions.\n- **HTTP headers** — a `Link:` header in the server response. The only option for non-HTML files like PDFs, where there is no head to edit.\n- **XML sitemap** — `<xhtml:link>` entries inside your sitemap. Best for large sites because it keeps page markup lean and centralizes the mappings in one file you can validate.",
+        "[[table]]",
+        "For most sites I recommend the XML sitemap method once you pass a few hundred URLs. It scales cleanly, keeps your HTML payload small, and lets you audit every relationship in one document. If you are building or auditing your sitemap, start with [how to create an XML sitemap](/blog/how-to-create-an-xml-sitemap).",
+        "Whichever method you choose, use absolute URLs (full `https://` paths), match your canonical URLs exactly, and never mix two methods on the same page. Mixed signals are one of the fastest ways to confuse the implementation."
+      ]
+    },
+    {
+      "heading": "Common Hreflang Mistakes",
+      "body": [
+        "Common hreflang mistakes almost always trace back to broken bidirectionality or invalid codes, and they silently break the entire cluster when they happen. Google's documentation calls hreflang one of the trickiest attributes to get right, and the data backs that up — return-tag errors are the single most frequent failure in international SEO audits.",
+        "The mistakes I see most often:",
+        "- **Missing return tags.** Page A references page B, but B never references A. The pairing is discarded. Every page must list every alternate, itself included.\n- **Wrong or invalid codes.** Using `en-uk` (the country code is `gb`) or `pt` when you meant `pt-br`. Region without language (`hreflang=\"us\"`) is invalid — language always comes first.\n- **Relative URLs.** `/fr/page` instead of `https://example.com/fr/page`. Hreflang requires absolute URLs.\n- **Pointing to non-canonical or redirecting URLs.** Hreflang must point to the final, indexable, self-canonical version — not a URL that 301s or carries a canonical to somewhere else.\n- **Conflicting canonical tags.** A French page that canonicalizes to the English version tells Google to ignore French. Each version self-canonicalizes. See [what is a canonical tag](/blog/what-is-a-canonical-tag) for the full rule.\n- **Mixing implementation methods.** HTML tags on some pages and sitemap entries on others create contradictory mappings.",
+        "Catch these before they cost you traffic. A [free SEO and GEO audit](/) crawls your pages and flags broken return tags, invalid codes, and canonical conflicts in one pass — far faster than checking pages by hand."
+      ]
+    },
+    {
+      "heading": "Do You Actually Need Hreflang?",
+      "body": [
+        "You need hreflang only when you publish substantially the same content in multiple languages or for multiple regions. If your site exists in one language and targets one country, hreflang adds nothing — skip it entirely.",
+        "Use the decision flow below to check whether hreflang applies to your situation.",
+        "[[flowchart]]",
+        "The classic case for hreflang is regional variants of the same language: a US English page and a UK English page with different pricing, spelling, or shipping terms. Without hreflang, Google may show the US page to UK searchers, hurting relevance. Hreflang resolves that. The same applies to Spanish for Spain versus Latin America, or French for France versus Canada.",
+        "If you only translate a handful of pages, implement hreflang for those URLs and leave the single-language pages alone. And remember: hreflang manages which version is shown, not whether you rank. You still need solid content, fast pages, and the rest of your [technical SEO](/blog/what-is-technical-seo) foundation behind it."
+      ]
+    }
+  ],
+  "flowchart": {
+    "title": "Do you need hreflang?",
+    "steps": [
+      { "title": "Multiple language versions?", "detail": "If the same content exists in two or more languages, hreflang likely applies." },
+      { "title": "Or multiple regions, same language?", "detail": "US vs UK English or pt-br vs pt-pt also needs hreflang to target the right audience." },
+      { "title": "Single language, single region?", "detail": "If you serve one language to one country, skip hreflang — it adds nothing." },
+      { "title": "Pick one method", "detail": "Choose HTML head, HTTP headers, or XML sitemap — never mix methods on the same page." },
+      { "title": "Add return tags everywhere", "detail": "Every page must reference every alternate, including itself, or Google ignores the set." },
+      { "title": "Validate and audit", "detail": "Confirm absolute URLs, valid ISO codes, and self-canonicals, then re-audit after launch." }
+    ]
+  },
+  "comparisonTable": {
+    "caption": "Three ways to implement hreflang",
+    "headers": ["Method", "Best for", "Pros", "Cons"],
+    "rows": [
+      ["HTML head <link>", "Most HTML pages, small to mid sites", "Easy to inspect and debug", "Bloats markup with many languages"],
+      ["HTTP Link header", "Non-HTML files like PDFs", "Only option for files with no head", "Hard to inspect; needs server config"],
+      ["XML sitemap", "Large sites, hundreds of URLs", "Lean pages, one file to audit", "Requires correct sitemap structure"]
+    ]
+  },
+  "peopleAlsoAsk": [
+    {
+      "q": "What is hreflang used for?",
+      "a": "Hreflang is used to tell search engines which language or regional version of a page to serve to a given searcher. It maps each URL to a language and optional region code, so a French speaker sees the French page and a US visitor sees the US page. Hreflang prevents wrong-language results and signals that translated pages are alternates rather than duplicate content."
+    },
+    {
+      "q": "Do I need hreflang for one language?",
+      "a": "No. Hreflang is not needed for a site that publishes in a single language and targets a single country, since there are no alternate versions for Google to choose between. Hreflang only becomes useful when the same content exists in multiple languages or in regional variants of one language, such as US and UK English."
+    },
+    {
+      "q": "Where do I put hreflang tags?",
+      "a": "Hreflang tags can be placed in the HTML head as <link rel=\"alternate\"> elements, in the HTTP response as a Link header, or in an XML sitemap using xhtml:link entries. The HTML head suits most pages, HTTP headers are required for non-HTML files like PDFs, and the sitemap method scales best for large sites. Pick one method per site and never mix them on the same page."
+    },
+    {
+      "q": "What is a common hreflang mistake?",
+      "a": "The most common hreflang mistake is missing return tags, where page A references page B but page B does not reference page A back. When return tags are missing, Google discards the relationship and the targeting fails. Every page in a hreflang set must list every alternate, including a self-reference, using absolute URLs and valid ISO codes."
+    },
+    {
+      "q": "Is hreflang a ranking factor?",
+      "a": "Hreflang is not a ranking factor. Hreflang is a targeting signal that controls which existing version of a page Google shows to which audience, not a signal that boosts a page's position. Strong rankings still depend on content quality, page speed, links, and the rest of your technical SEO foundation."
+    }
+  ],
+  "faqs": [
+    {
+      "q": "What does x-default mean in hreflang?",
+      "a": "The x-default value names the fallback page for users whose language or region you do not explicitly target. It is optional but recommended, and it commonly points to a language selector page or the default homepage. Without x-default, Google guesses which version to show unmatched users."
+    },
+    {
+      "q": "Can hreflang and canonical tags conflict?",
+      "a": "Yes, and the conflict is a common cause of dropped pages. Each language version must self-canonicalize, meaning its canonical tag points to itself rather than to another language. If a French page canonicalizes to the English version, Google treats French as a duplicate and removes it from the index."
+    },
+    {
+      "q": "Do Bing and other engines support hreflang?",
+      "a": "Bing does not use hreflang and instead relies on its own language and region meta tags and content language headers. Google and Yandex both support hreflang. If Bing traffic matters to you, add Bing's content-language signals alongside your hreflang implementation."
+    }
+  ],
+  "relatedKeywords": ["hreflang tags", "hreflang attribute", "international SEO", "language targeting", "x-default hreflang", "hreflang return tags"],
+  "internalLinks": [
+    { "href": "/", "anchor": "run a free SEO + GEO audit" },
+    { "href": "/blog/what-is-technical-seo", "anchor": "What is technical SEO" },
+    { "href": "/blog/what-is-a-canonical-tag", "anchor": "What is a canonical tag" },
+    { "href": "/blog/how-to-create-an-xml-sitemap", "anchor": "How to create an XML sitemap" }
+  ]
+}

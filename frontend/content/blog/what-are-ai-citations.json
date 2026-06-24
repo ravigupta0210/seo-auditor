@@ -1,0 +1,127 @@
+{
+  "slug": "what-are-ai-citations",
+  "title": "What Are AI Citations? (And How to Earn Them in 2026)",
+  "date": "2026-06-24",
+  "updatedAt": "2026-06-24",
+  "tag": "AI Search",
+  "cluster": "ai-search",
+  "keyword": "AI citations",
+  "secondaryKeywords": ["AI citation sources", "get cited by AI", "AI Overviews citations", "Perplexity citations"],
+  "readTime": 9,
+  "excerpt": "AI citations are the source links ChatGPT, Perplexity, and Google AI Overviews show with answers. Here's how to earn them.",
+  "description": "AI citations are the source links AI engines show with their answers. Learn what AI citations are, why they matter, and how to earn them in 2026.",
+  "tldr": "AI citations are the source links that AI engines like ChatGPT, Perplexity, and Google AI Overviews display alongside generated answers. You earn them by publishing answer-first content with structured data and building topical trust, not by chasing keyword rankings alone.",
+  "status": "published",
+  "sections": [
+    {
+      "heading": "What Are AI Citations?",
+      "body": [
+        "AI citations are the source links that AI search engines display alongside their generated answers. When ChatGPT, Perplexity, Google AI Overviews, Claude, or Microsoft Copilot answer a question, they often attach footnotes, inline links, or a \"Sources\" panel pointing to the pages they drew from. Those attributions are AI citations, and they are the new front page of search.",
+        "An AI citation is different from a traditional blue-link ranking. A ranking is a position on a results page that a human chooses to click. An AI citation is a vote of confidence baked directly into the answer itself: the model has decided your page is trustworthy enough to ground its claim. The user may never visit your site, but your brand still appears at the exact moment of the decision.",
+        "This matters because search behavior is splitting in two. Some queries still produce ten blue links. A growing share produce a synthesized answer with three to eight cited sources. If your content is not among those sources, you are invisible for that query, no matter how well you would have ranked in classic search."
+      ]
+    },
+    {
+      "heading": "Why AI Citations Matter When Clicks Vanish",
+      "body": [
+        "AI citations matter because they are visibility insurance for a world where clicks are disappearing. The rise of AI-generated answers has accelerated [zero-click search](/blog/what-is-zero-click-search): the user gets a complete answer on the screen and never clicks through. A traditional ranking is worthless if nobody clicks it, but a citation still puts your name and link in front of the user.",
+        "There are three concrete reasons to chase AI citations in 2026:",
+        "- **Brand presence at the answer layer.** Being cited means your brand is associated with authoritative answers, even on zero-click queries.\n- **Qualified referral traffic.** Users who do click a citation are deep in research mode and convert at higher rates than top-of-funnel search visitors.\n- **Compounding trust.** Models that cite you once are more likely to cite you again as your topical authority builds across an entire cluster of related pages.",
+        "Earning citations is the core goal of [generative engine optimization](/blog/what-is-generative-engine-optimization) (GEO). Where classic SEO optimizes for rank position, GEO optimizes for whether the model selects your page as a grounding source. The tactics overlap, but the target metric is fundamentally different."
+      ]
+    },
+    {
+      "heading": "Which AI Engines Show Citations",
+      "body": [
+        "The major AI engines all surface citations, but they format and weight them differently. Knowing how each one cites helps you optimize for the engines that matter to your audience.",
+        "[[table]]",
+        "Perplexity is the most citation-forward engine: nearly every answer carries numbered inline sources. Google AI Overviews show citations as expandable links and tend to favor pages that already rank well in classic search. ChatGPT cites when its search tool is active, pulling from the live web. The practical takeaway is that there is no single algorithm to game; you build content that is genuinely the clearest source on a topic, and the citations follow across engines."
+      ]
+    },
+    {
+      "heading": "How to Earn AI Citations",
+      "body": [
+        "Earning AI citations comes down to three things: structuring content so a model can extract a clean answer, proving the page is trustworthy with structured data, and becoming a repeated source the engines learn to rely on. The flowchart below maps the path from a raw page to a cited source.",
+        "[[flowchart]]",
+        "**Write answer-first.** Lead every page and section with a direct, standalone answer to the question in the heading. Models extract and quote self-contained sentences. A paragraph that opens with \"It depends on several factors...\" gives the model nothing to cite. This is the island test: every answer should make sense if lifted out of its surrounding context, with the subject named explicitly and no orphan pronouns like \"this\" or \"they.\"",
+        "**Add structured data.** Mark up your content with JSON-LD so engines can parse entities, authors, FAQs, and dates without guessing. At minimum, include `Article`, `FAQPage`, and `Organization` [schema markup](/blog/what-is-schema-markup) with the required fields filled in. Structured data is not a magic ranking signal, but it lowers the cost for a model to understand and trust your page.",
+        "**Become a trusted source.** AI engines lean heavily on demonstrated expertise. Show real author bios, cite primary data, keep pages current, and earn mentions from other reputable sites. This is classic [E-E-A-T](/blog/what-is-eeat-in-seo) translated to the AI era. A page with a named expert author and recent updates is a safer citation than an anonymous, stale one.",
+        "> The fastest way to lose a citation is to bury the answer. AI engines reward the page that states the conclusion in the first sentence, then backs it up."
+      ]
+    },
+    {
+      "heading": "Do AI Citations Drive Real Traffic?",
+      "body": [
+        "AI citations drive less raw traffic than top blue-link rankings did, but the traffic they send is higher intent. Perplexity and ChatGPT citation clicks come from users who have read a synthesized answer and want to verify or go deeper, so they arrive further down the funnel. The trade-off is volume for quality.",
+        "The honest 2026 picture is that you should not measure AI citations only by click-through. Treat them as a brand and authority metric first, and a traffic source second. To track them, monitor referral traffic from AI domains and run citation checks across engines. Our guide on [how to track AI search traffic](/blog/how-to-track-ai-search-traffic) walks through the setup.",
+        "If you want to know whether your pages are citation-ready right now, [run a free SEO + GEO audit](/) on the homepage. The audit checks the exact signals engines look for: a direct answer up top, island-test-safe sections, valid JSON-LD, an open AI-crawler policy, and author E-E-A-T. Fix the flagged issues and you remove the most common reasons a model skips your page."
+      ]
+    }
+  ],
+  "flowchart": {
+    "title": "From Page to Cited Source",
+    "steps": [
+      { "title": "Lead with the answer", "detail": "Open each section with a direct, standalone answer to the question in its heading." },
+      { "title": "Pass the island test", "detail": "Make every answer self-contained: name the subject and avoid orphan pronouns." },
+      { "title": "Add JSON-LD structured data", "detail": "Mark up Article, FAQPage, and Organization schema so engines parse your content cleanly." },
+      { "title": "Prove E-E-A-T", "detail": "Show named authors, primary data, and recent update dates to earn trust." },
+      { "title": "Allow AI crawlers", "detail": "Confirm robots.txt and llms.txt let GPTBot, PerplexityBot, and others access the page." },
+      { "title": "Audit and iterate", "detail": "Run a GEO audit, fix flagged gaps, and watch citations compound across the cluster." }
+    ]
+  },
+  "comparisonTable": {
+    "caption": "How major AI engines show citations",
+    "headers": ["Engine", "Citation style", "What it favors"],
+    "rows": [
+      ["Perplexity", "Numbered inline sources on nearly every answer", "Clear, recent, answer-first pages"],
+      ["Google AI Overviews", "Expandable source links above results", "Pages that also rank in classic search"],
+      ["ChatGPT (search)", "Inline links and a sources list", "Authoritative live-web sources"],
+      ["Microsoft Copilot", "Numbered footnotes with link previews", "Bing-indexed, well-structured pages"],
+      ["Claude (web search)", "Cited links within the response", "Trustworthy, factual, well-attributed sources"]
+    ]
+  },
+  "peopleAlsoAsk": [
+    {
+      "q": "What is an AI citation?",
+      "a": "An AI citation is a source link that an AI search engine displays alongside its generated answer. When ChatGPT, Perplexity, or Google AI Overviews answer a question, they attach footnotes or links to the pages they used as grounding. The citation signals that the model judged your page trustworthy enough to base its claim on."
+    },
+    {
+      "q": "How do I get cited by AI?",
+      "a": "To get cited by AI, publish answer-first content that states the conclusion in the opening sentence of each section. Add JSON-LD structured data, show named authors with real expertise, keep pages current, and make sure AI crawlers can access your site. Engines select the clearest, most trustworthy source, so being genuinely the best answer is the durable strategy."
+    },
+    {
+      "q": "Which AI engines show citations?",
+      "a": "Perplexity, Google AI Overviews, ChatGPT search, Microsoft Copilot, and Claude all show citations. Perplexity is the most citation-forward, attaching numbered sources to nearly every answer. Google AI Overviews show expandable source links and tend to favor pages that already rank well in classic search."
+    },
+    {
+      "q": "Do AI citations drive traffic?",
+      "a": "AI citations drive less raw traffic than top blue-link rankings, but the visitors they send are higher intent because they arrive after reading a synthesized answer. Treat citations as a brand and authority metric first and a traffic source second. The biggest value is appearing at the answer layer even when the query is zero-click."
+    },
+    {
+      "q": "Are AI citations the same as backlinks?",
+      "a": "AI citations are not the same as backlinks. A backlink is a link from one website to another that passes ranking signals over time. An AI citation is a real-time attribution chosen by a model when it generates an answer, and it appears directly in front of the user at the moment of search."
+    }
+  ],
+  "faqs": [
+    {
+      "q": "How long does it take to earn AI citations?",
+      "a": "Earning AI citations can happen within days for engines like Perplexity and ChatGPT that pull from the live web, since they re-crawl frequently. Google AI Overviews citations track more closely to classic indexing and authority, so they can take weeks. Publishing answer-first content with valid structured data is the fastest lever."
+    },
+    {
+      "q": "Can I check if my page is ready to be cited by AI?",
+      "a": "Yes, you can check citation readiness by auditing the specific signals engines use: a direct answer near the top, island-test-safe sections, valid JSON-LD, an open AI-crawler policy, and author E-E-A-T. A free SEO + GEO audit flags each of these in one pass so you can fix the gaps before competitors do."
+    },
+    {
+      "q": "Do I need to block or allow AI crawlers to get cited?",
+      "a": "You must allow AI crawlers to be cited, since a blocked bot cannot read or attribute your page. Confirm that robots.txt and your llms.txt file permit agents like GPTBot, PerplexityBot, and Google-Extended. Blocking them protects content but removes any chance of appearing as a citation source."
+    }
+  ],
+  "relatedKeywords": ["AI citation sources", "get cited by AI engines", "Perplexity citations", "Google AI Overviews sources", "generative engine optimization", "answer engine optimization"],
+  "internalLinks": [
+    { "href": "/", "anchor": "Run a free SEO + GEO audit" },
+    { "href": "/blog/what-is-generative-engine-optimization", "anchor": "What is generative engine optimization" },
+    { "href": "/blog/how-to-get-cited-by-perplexity", "anchor": "How to get cited by Perplexity" },
+    { "href": "/blog/what-is-zero-click-search", "anchor": "What is zero-click search" },
+    { "href": "/blog/how-to-track-ai-search-traffic", "anchor": "How to track AI search traffic" }
+  ]
+}

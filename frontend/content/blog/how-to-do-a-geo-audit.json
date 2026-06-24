@@ -1,0 +1,129 @@
+{
+  "slug": "how-to-do-a-geo-audit",
+  "title": "How to Do a GEO Audit (Free Step-by-Step 2026 Guide)",
+  "date": "2026-06-24",
+  "updatedAt": "2026-06-24",
+  "tag": "GEO",
+  "cluster": "geo",
+  "keyword": "GEO audit",
+  "secondaryKeywords": ["GEO audit checklist", "AI citation audit", "free GEO audit tool", "llms.txt audit"],
+  "readTime": 9,
+  "excerpt": "A GEO audit checks whether AI engines can crawl, parse, and cite your site. Run all 6 steps free in seconds.",
+  "description": "A GEO audit checks whether AI engines like ChatGPT and Perplexity can cite your site. Follow this free step-by-step 2026 guide and run every check in seconds.",
+  "tldr": "A GEO audit is a 6-step check of whether AI answer engines can crawl, parse, and cite your pages: llms.txt, AI-crawler access, answer-first structure, the Island Test, FAQ schema, and E-E-A-T. The free SEO Auditor at the homepage runs all six in one pass in under 30 seconds.",
+  "status": "published",
+  "sections": [
+    {
+      "heading": "What is a GEO audit?",
+      "body": [
+        "A GEO audit is a systematic check of whether AI answer engines, such as ChatGPT, Perplexity, Google AI Overviews, and Microsoft Copilot, can find your content, understand it, and cite it inside the answers they generate. Where a classic SEO audit asks *\"will Google rank this page?\"*, a GEO audit asks *\"if an AI is composing a 120-word answer, can it extract a clean, quotable, attributable claim from my page?\"* The two questions overlap but are not the same, and a page can pass an SEO audit while failing a GEO audit completely.",
+        "A GEO audit inspects six things: an `llms.txt` file that guides AI crawlers, robots and crawler-access rules that allow AI bots, answer-first content structure, the Island Test (does each passage stand alone?), FAQ and other structured data, and visible E-E-A-T signals like a named author. Each of these is a binary or near-binary signal that an AI either can or cannot use.",
+        "You can run a GEO audit by hand, but most of the checks are machine-readable, which is exactly why the free [SEO Auditor homepage tool](/) automates all six. Paste a URL, and it returns each GEO check with a pass/fail and a fix. The rest of this guide walks through what each step looks for and why it matters."
+      ]
+    },
+    {
+      "heading": "The 6 steps of a GEO audit",
+      "body": [
+        "A GEO audit follows six steps in order, from machine access to human-trust signals. The first three decide whether an AI can reach and read your page at all; the last three decide whether it will trust and quote it. Skip an early step and the later ones do not matter, because a page an AI crawler cannot fetch will never be cited no matter how well it is written.",
+        "[[flowchart]]",
+        "Run the steps top to bottom. Below is what each step checks and the single most common failure SEO Auditor flags for it."
+      ]
+    },
+    {
+      "heading": "Steps 1-3: Can an AI reach and read your page?",
+      "body": [
+        "**Step 1: llms.txt.** An `llms.txt` file is a plain-text file at your domain root that points AI systems to your most important, most quotable pages. In practice it is one of the gaps a GEO audit flags most often, because few sites publish one yet. A GEO audit checks whether `/llms.txt` exists and is reachable; if it is absent, SEO Auditor flags [llms.txt missing](/check/geo.llmsTxt.missing). For the wider strategy, see [what is generative engine optimization](/blog/what-is-generative-engine-optimization).",
+        "**Step 2: AI-crawler access.** AI engines use named bots, GPTBot, ClaudeBot, PerplexityBot, Google-Extended, OAI-SearchBot, to fetch pages. A GEO audit reads your `robots.txt` and checks that these bots are not blocked. Many sites accidentally block them with a broad `Disallow: /` or a stray AI-bot rule; SEO Auditor surfaces this as [AI bots blocked](/check/geo.aibots.blocked). To decide which to allow on purpose, read [how to block AI crawlers](/blog/how-to-block-ai-crawlers).",
+        "> Rule of thumb: if you want citations, AI crawlers must be allowed. Blocking them is a valid choice only if you also accept being invisible in AI answers.",
+        "**Step 3: Answer-first structure.** AI engines extract the passage that most directly answers a query, usually the first sentence or two after a heading. A GEO audit checks whether your pages lead with a direct answer instead of a throat-clearing intro. A page that buries the answer under 200 words of preamble gives the AI nothing clean to lift; SEO Auditor flags this as [direct answer missing](/check/geo.directAnswer.missing)."
+      ]
+    },
+    {
+      "heading": "Steps 4-6: Will an AI trust and quote your page?",
+      "body": [
+        "**Step 4: The Island Test.** The Island Test asks whether each passage on your page makes sense if an AI lifts it out and drops it into an answer with zero surrounding context. A passage that starts with \"This is why it matters\" fails, because \"this\" points at something the AI did not copy. A passage that names its subject and states a complete fact passes. A GEO audit scans for context-dependent openers and pronoun-led sentences; SEO Auditor reports a [weak Island Test](/check/geo.islandTest.weak). For more on how AI selects what to quote, see [what are AI citations](/blog/what-are-ai-citations).",
+        "**Step 5: FAQ and structured data.** Structured data, especially FAQPage schema, hands AI engines pre-packaged question-and-answer pairs that are trivial to extract and cite. A GEO audit checks for valid JSON-LD and FAQ markup. Missing or malformed schema is a frequent miss; see [how to add FAQ schema](/blog/how-to-add-faq-schema) and [what is schema markup](/blog/what-is-schema-markup) for the exact shape.",
+        "**Step 6: E-E-A-T.** AI engines prefer sources that show experience, expertise, authoritativeness, and trust, and the cheapest visible signal is a named author with a real byline. A GEO audit checks for an author entity; a missing one is flagged as [author missing](/check/geo.eeat.author.missing). Read [what is E-E-A-T in SEO](/blog/what-is-eeat-in-seo) for the wider picture."
+      ]
+    },
+    {
+      "heading": "How to run a GEO audit free in 30 seconds",
+      "body": [
+        "Running a GEO audit by hand means opening `robots.txt`, hunting for `llms.txt`, validating schema, and eyeballing every passage for the Island Test, which is slow and easy to get wrong. The free [SEO Auditor homepage tool](/) automates the entire six-step GEO audit plus 40+ classic SEO checks in a single pass. Paste a URL, and within about 30 seconds it returns each GEO signal with a pass/fail status and a specific fix.",
+        "Here is the fastest workflow:",
+        "- Open the [homepage tool](/) and paste your URL.\n- Read the GEO section: llms.txt, AI-bot access, direct answer, Island Test, FAQ schema, and author.\n- Click any failing check to see the exact fix.\n- Re-run after each fix to confirm it now passes.",
+        "GEO and SEO are complementary, not rival, audits. A GEO audit makes you citable; a classic [SEO audit](/blog/how-to-do-an-seo-audit) makes you rankable, and you want both. The table below sums up where they differ.",
+        "[[table]]",
+        "To understand the strategy a GEO audit serves, read [what is generative engine optimization](/blog/what-is-generative-engine-optimization). To see every individual check the tool runs, browse the [full check list](/check)."
+      ]
+    }
+  ],
+  "flowchart": {
+    "title": "The 6-step GEO audit",
+    "steps": [
+      { "title": "1. Check llms.txt", "detail": "Confirm /llms.txt exists at the domain root and points AI engines to your key pages." },
+      { "title": "2. Check AI-crawler access", "detail": "Read robots.txt and verify GPTBot, ClaudeBot, PerplexityBot, and Google-Extended are not blocked." },
+      { "title": "3. Check answer-first structure", "detail": "Confirm each page leads with a direct, quotable answer instead of a long intro." },
+      { "title": "4. Run the Island Test", "detail": "Verify each passage stands alone with its subject named and no orphan pronouns." },
+      { "title": "5. Check FAQ + structured data", "detail": "Validate JSON-LD and FAQPage schema so AI engines get pre-packaged Q&A pairs." },
+      { "title": "6. Check E-E-A-T signals", "detail": "Confirm a named author byline and other trust signals are visible on the page." }
+    ]
+  },
+  "comparisonTable": {
+    "caption": "GEO audit vs SEO audit: what each one checks",
+    "headers": ["Dimension", "GEO audit", "SEO audit"],
+    "rows": [
+      ["Goal", "Get cited inside AI answers", "Rank in the list of blue links"],
+      ["Key file", "llms.txt", "robots.txt + XML sitemap"],
+      ["Crawlers checked", "GPTBot, ClaudeBot, PerplexityBot", "Googlebot, Bingbot"],
+      ["Content signal", "Answer-first, passes Island Test", "Keywords, headings, internal links"],
+      ["Trust signal", "Named author (E-E-A-T)", "Backlinks + domain authority"],
+      ["Free tool", "SEO Auditor (homepage)", "SEO Auditor (homepage)"]
+    ]
+  },
+  "peopleAlsoAsk": [
+    {
+      "q": "What is a GEO audit?",
+      "a": "A GEO audit is a check of whether AI answer engines like ChatGPT, Perplexity, and Google AI Overviews can crawl, understand, and cite your site. It inspects six signals: llms.txt, AI-crawler access, answer-first structure, the Island Test, FAQ schema, and E-E-A-T. Unlike an SEO audit, which targets ranking position, a GEO audit targets inclusion inside generated answers."
+    },
+    {
+      "q": "How do I check if AI can cite my site?",
+      "a": "To check if AI can cite your site, confirm AI crawlers like GPTBot and ClaudeBot are allowed in robots.txt, that an llms.txt file exists, and that your content answers questions directly in standalone passages. The fastest method is the free SEO Auditor at the homepage, which tests every one of these signals automatically. It returns a pass or fail for each check plus the specific fix."
+    },
+    {
+      "q": "What does a GEO audit check?",
+      "a": "A GEO audit checks six things: an llms.txt file at the domain root, robots.txt rules that allow AI crawlers, answer-first content that leads with a direct answer, the Island Test for standalone passages, FAQ and structured data, and E-E-A-T signals like a named author. The first three decide whether an AI can reach your page; the last three decide whether it will trust and quote it."
+    },
+    {
+      "q": "Is there a free GEO audit tool?",
+      "a": "Yes. SEO Auditor is a free GEO audit tool at its homepage that runs all six GEO checks plus 40+ classic SEO checks in one pass. Paste a URL and it returns llms.txt, AI-crawler access, answer-first structure, Island Test, FAQ schema, and E-E-A-T results in about 30 seconds. No signup or payment is required."
+    },
+    {
+      "q": "How is a GEO audit different from an SEO audit?",
+      "a": "A GEO audit measures whether AI engines can cite your content, while an SEO audit measures whether search engines can rank it. A GEO audit checks llms.txt, AI-crawler access, and the Island Test; an SEO audit checks titles, sitemaps, backlinks, and Core Web Vitals. The two are complementary, and a healthy site passes both."
+    }
+  ],
+  "faqs": [
+    {
+      "q": "How often should I run a GEO audit?",
+      "a": "Run a GEO audit whenever you publish or substantially update a page, and do a full-site GEO audit at least quarterly. AI crawler names and llms.txt conventions change quickly in 2026, so a check that passed six months ago may be stale. Re-running the free SEO Auditor takes seconds and catches drift before it costs you citations."
+    },
+    {
+      "q": "Do I need an llms.txt file to pass a GEO audit?",
+      "a": "An llms.txt file is one of the gaps a GEO audit flags most often, but it is not strictly required for an AI to cite you. AI engines can still crawl and quote allowed pages without it, yet llms.txt makes your best pages easier to discover and signal as canonical. A GEO audit flags a missing llms.txt as a high-value, low-effort fix."
+    },
+    {
+      "q": "Will a GEO audit hurt my classic Google rankings?",
+      "a": "No. The fixes a GEO audit recommends, answer-first writing, structured data, named authors, and allowing crawlers, also help classic Google rankings and AI Overviews. A GEO audit and an SEO audit reinforce each other rather than conflict. The one exception is crawler access, where blocking AI bots is a deliberate trade-off, not a ranking penalty."
+    }
+  ],
+  "relatedKeywords": ["GEO audit checklist", "AI citation audit", "free GEO audit tool", "llms.txt audit", "how to get cited by AI", "AI crawler access check"],
+  "internalLinks": [
+    { "href": "/", "anchor": "Run a free GEO audit" },
+    { "href": "/check", "anchor": "See all 40+ SEO and GEO checks" },
+    { "href": "/blog/what-is-generative-engine-optimization", "anchor": "What is generative engine optimization" },
+    { "href": "/blog/how-to-do-an-seo-audit", "anchor": "How to do an SEO audit" },
+    { "href": "/blog/how-to-block-ai-crawlers", "anchor": "How to block AI crawlers" },
+    { "href": "/blog/what-are-ai-citations", "anchor": "What are AI citations" }
+  ]
+}

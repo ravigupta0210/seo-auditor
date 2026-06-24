@@ -1,0 +1,140 @@
+{
+  "slug": "how-to-rank-a-new-website",
+  "title": "How to Rank a New Website on Google (2026)",
+  "date": "2026-06-24",
+  "updatedAt": "2026-06-24",
+  "tag": "SEO",
+  "cluster": "seo-basics",
+  "keyword": "how to rank a new website",
+  "secondaryKeywords": ["rank a brand new site", "get a new website indexed", "new site SEO timeline", "winnable long-tail keywords"],
+  "readTime": 9,
+  "excerpt": "A realistic 2026 playbook for a brand-new site: get indexed first, win long-tail keywords, build topical depth, earn links.",
+  "description": "Learn how to rank a new website on Google in 2026: get indexed first, target winnable long-tail keywords, build topical depth, and earn early links with honest timelines.",
+  "tldr": "To rank a new website on Google, get it indexed first (sitemap plus Google Search Console plus a few discovery links), then win specific long-tail keywords, build topical depth, and earn a handful of relevant links. Expect 3-6 months before steady traffic, and 6-12 months for anything competitive.",
+  "status": "published",
+  "sections": [
+    {
+      "heading": "The honest short answer",
+      "body": [
+        "How to rank a new website on Google in 2026 comes down to four phases in order: get indexed so Google even knows the site exists, target long-tail keywords you can realistically win, build topical depth around a focused subject, then earn a few relevant backlinks — and be patient, because new sites have almost no accumulated trust. Realistic expectations matter more than tactics here: most new sites see their first meaningful organic traffic in 3-6 months, and competitive terms can take a year.",
+        "A brand-new website starts with two disadvantages. First, Google does not know it exists until it discovers and crawls it. Second, even after indexing, the site has no link authority, no history, and no track record, so it cannot outrank established pages on broad keywords. Nearly every \"my new site won't rank\" problem traces back to ignoring one of those two realities.",
+        "Before you publish anything, [run a free SEO + GEO audit](/) on your homepage so you catch indexing blocks, missing metadata, and structured-data gaps while the site is small and easy to fix. A clean foundation on day one saves months of debugging later.",
+        "The rest of this playbook walks through the sequence: indexing, keyword selection, topical depth, links, and timelines. Skip steps and you will spend months wondering why a technically fine site is invisible."
+      ]
+    },
+    {
+      "heading": "Phase 1: Get indexed before anything else",
+      "body": [
+        "Indexing is the non-negotiable first step for a new website, because Google cannot rank a page it has not crawled and stored in its index. A new domain with zero inbound links can sit undiscovered for weeks, so you have to actively push Google to find it rather than waiting.",
+        "Do these four things in the first week the site is live:",
+        "- **Submit an XML sitemap** — create one listing every important URL and submit it in Search Console; see [how to create an XML sitemap](/blog/how-to-create-an-xml-sitemap).",
+        "- **Set up Google Search Console** — verify the domain, submit the sitemap, and use the URL Inspection tool to request indexing of key pages. The full walkthrough is in [how to use Google Search Console](/blog/how-to-use-google-search-console).",
+        "- **Get a few discovery links** — a single link from any already-indexed page (a social profile, a directory, a relevant forum) gives Google a crawl path to your site. These are for discovery, not ranking power.",
+        "- **Check nothing is blocking crawlers** — confirm `robots.txt` does not `Disallow` your pages and that no accidental `noindex` tag is present; see [what is robots.txt](/blog/what-is-robots-txt).",
+        "Verify indexing by searching `site:yourdomain.com` in Google. If pages appear, you are in the index and can start competing. If nothing shows after a couple of weeks despite a submitted sitemap, you have a technical blocker to find before any content work matters.",
+        "[[flowchart]]"
+      ]
+    },
+    {
+      "heading": "Phase 2: Target keywords a new site can actually win",
+      "body": [
+        "Keyword selection is the single decision that determines whether a new website ranks at all, because a young domain with no authority cannot displace established brands on high-volume terms. The winning move is to go specific: target long-tail keywords with low competition, where the current page-one results are weak, outdated, or thin.",
+        "How to find winnable queries for a brand-new site:",
+        "- **Read the SERP, not the volume number** — if page one is forums, abandoned blogs, or generic listicles, a young site has an opening even at decent search volume.",
+        "- **Add specificity** — \"running shoes\" is unwinnable; \"running shoes for flat feet and overpronation\" is reachable. [How to target long-tail keywords](/blog/how-to-target-long-tail-keywords) covers the full method.",
+        "- **Match search intent exactly** — a new page only ranks if it answers the precise question being asked, whether that is informational, comparison, or transactional ([what is search intent](/blog/what-is-search-intent)).",
+        "- **Use free research tools** — Google autocomplete, the People Also Ask box, and Search Console's Performance report reveal real demand at zero cost; see [how to do keyword research for free](/blog/how-to-do-keyword-research-for-free).",
+        "> Win the keywords no one else bothered to do well. Easy wins build the authority that makes harder terms reachable later — that is the whole strategy for a new site."
+      ]
+    },
+    {
+      "heading": "Phase 3: Build topical depth, then earn early links",
+      "body": [
+        "Topical depth is how a new website signals expertise to Google without the link history that established sites rely on. Instead of publishing scattered articles on unrelated subjects, a new site ranks faster by covering one topic thoroughly — a cluster of related pages that interlink and collectively prove you are an authority on that subject.",
+        "Build depth deliberately:",
+        "- **Pick one focused niche** and publish a hub page plus several supporting articles that answer every adjacent long-tail question.",
+        "- **Interlink the cluster** so authority flows between related pages and Google understands the relationships; see [what is internal linking](/blog/what-is-internal-linking).",
+        "- **Prove E-E-A-T** with named authors, first-hand experience, and citations to primary sources ([what is E-E-A-T in SEO](/blog/what-is-eeat-in-seo)). New sites are scrutinized harder, so visible expertise matters more.",
+        "Once a few pages are indexed and useful, earn a handful of relevant backlinks — they are the strongest signal that other sites trust yours. A few links from genuinely relevant, reputable sources outweigh dozens of low-quality directory links, and the practical tactics are in [how to get backlinks for free](/blog/how-to-get-backlinks-for-free).",
+        "Add the GEO layer while you are at it: valid structured data and answers that pass the island test let AI engines cite a new site even before Google fully trusts it. For the broader strategy and how page one really works in 2026, see [how to rank on the first page of Google](/blog/how-to-rank-on-the-first-page-of-google)."
+      ]
+    },
+    {
+      "heading": "Phase 4: Set realistic timelines and measure",
+      "body": [
+        "Timelines are where most new-site owners give up too early, because SEO rewards patience and compounds slowly. A new website typically gets indexed within days to a few weeks, earns its first long-tail rankings in 2-4 months, and sees steady organic traffic around 3-6 months in — with competitive terms taking 6-12 months or longer. [How long does SEO take to work](/blog/how-long-does-seo-take-to-work) breaks the curve down in detail.",
+        "Here is a realistic month-by-month view of what to expect from a brand-new site:",
+        "[[table]]",
+        "Measure the right thing at each stage. In month one, you are watching indexing status in Search Console, not rankings. By months three to six, you are watching impressions and average position climb on your target queries — traffic follows those leading indicators.",
+        "Re-audit monthly to catch regressions before they cost positions, and lean on the [full list of 40+ SEO and GEO checks](/check) to see exactly what Google and AI engines evaluate. Run the audit, fix the red items, publish into a focused topic, earn a few links, and revisit in a month. Compounding beats sprinting — the sites that win are the ones still publishing in month nine."
+      ]
+    }
+  ],
+  "flowchart": {
+    "title": "New-website ranking sequence",
+    "steps": [
+      { "title": "Get indexed", "detail": "Submit a sitemap, set up Search Console, and get a discovery link so Google can find the site." },
+      { "title": "Verify indexing", "detail": "Search site:yourdomain.com and confirm pages appear before doing any content work." },
+      { "title": "Win long-tail keywords", "detail": "Target specific, low-competition queries whose current page-one results are weak." },
+      { "title": "Build topical depth", "detail": "Publish a focused cluster of interlinked pages that prove expertise on one subject." },
+      { "title": "Earn early links", "detail": "Win a few relevant, reputable backlinks and add structured data for AI citations." },
+      { "title": "Measure and iterate", "detail": "Track indexing then impressions and position monthly, re-audit, and keep publishing." }
+    ]
+  },
+  "comparisonTable": {
+    "caption": "Realistic timeline for a brand-new website",
+    "headers": ["Timeframe", "What to expect", "What to focus on", "What to measure"],
+    "rows": [
+      ["Week 1-2", "Site gets discovered and indexed", "Sitemap, Search Console, discovery links", "Indexing status (site: search)"],
+      ["Month 1-2", "First pages enter the index, little traffic", "Publish winnable long-tail content", "Pages indexed, first impressions"],
+      ["Month 2-4", "Early long-tail rankings appear", "Build topical depth, interlink", "Impressions and average position"],
+      ["Month 3-6", "Steady organic traffic begins", "Earn relevant backlinks, refresh", "Clicks, positions, conversions"],
+      ["Month 6-12", "Competitive terms become reachable", "Scale content and authority", "Traffic growth, ranking keywords"]
+    ]
+  },
+  "peopleAlsoAsk": [
+    {
+      "q": "How long until a new website ranks on Google?",
+      "a": "A new website typically gets indexed within days to a few weeks, earns its first long-tail rankings in 2-4 months, and sees steady organic traffic around 3-6 months in. Competitive commercial keywords can take 6-12 months or longer because a new domain has no accumulated trust or backlinks. Targeting specific long-tail queries first produces visible results much faster than chasing broad high-volume terms."
+    },
+    {
+      "q": "Why is my new site not showing on Google?",
+      "a": "A new site usually does not show on Google because it has not been indexed yet, or because a technical blocker is preventing crawling. Common causes include a missing sitemap, a noindex tag, a robots.txt rule blocking pages, or simply that Google has not discovered the domain because nothing links to it. Search site:yourdomain.com to confirm whether any pages are indexed, then use Search Console's URL Inspection tool to diagnose and request indexing."
+    },
+    {
+      "q": "How do I get a new website indexed?",
+      "a": "To get a new website indexed, set up Google Search Console, submit an XML sitemap, and use the URL Inspection tool to request indexing of your key pages. Getting at least one link from an already-indexed page gives Google a crawl path to discover your site faster. Confirm success by searching site:yourdomain.com; if pages appear, the site is in Google's index and can begin ranking."
+    },
+    {
+      "q": "Do new sites need backlinks to rank?",
+      "a": "New sites need at least a few backlinks for discovery, but not many to rank for low-competition long-tail keywords. A single link from an already-indexed page helps Google find and crawl a new domain, and great intent-matched content can reach page one on winnable queries with very few links. Competitive keywords, however, require a stronger backlink profile, which is why new sites should start with long-tail terms that need little link authority."
+    },
+    {
+      "q": "Can a brand-new website rank without backlinks?",
+      "a": "A brand-new website can rank without backlinks on specific, low-competition long-tail keywords where the existing results are weak. It still needs to be indexed first, which usually requires at least one discovery link so Google can crawl it. For any keyword with meaningful competition, a handful of relevant backlinks is effectively required to compete."
+    }
+  ],
+  "faqs": [
+    {
+      "q": "Should I get backlinks before or after publishing content?",
+      "a": "A new website should publish at least its core content before pursuing backlinks, because people link to pages that are useful and worth referencing. The exception is discovery links: getting one early link from an already-indexed page helps Google crawl the site faster, even before the content is extensive. After publishing a focused topical cluster, actively earn relevant links to that content."
+    },
+    {
+      "q": "Is it worth ranking a new website in 2026 with AI search around?",
+      "a": "Ranking a new website is still worth it in 2026 because Google organic search drives substantial traffic and AI engines often cite the same well-structured, authoritative pages. The work overlaps heavily: clear answers, valid structured data, and topical depth help both classic rankings and AI citations. A new site that ignores SEO is invisible to both Google and answer engines."
+    },
+    {
+      "q": "How many pages should a new website launch with?",
+      "a": "A new website ranks faster by launching with a focused cluster of 5-15 high-quality pages on one topic rather than a single page or dozens of unrelated articles. Depth on a narrow subject signals expertise that a young domain otherwise lacks. Quality and topical focus matter far more than raw page count."
+    }
+  ],
+  "relatedKeywords": ["rank a brand new site on Google", "new website SEO timeline 2026", "get a new website indexed fast", "winnable long-tail keywords for new sites", "how long until a new site ranks", "new domain SEO strategy"],
+  "internalLinks": [
+    { "href": "/", "anchor": "Run a free SEO + GEO audit" },
+    { "href": "/blog/how-to-rank-on-the-first-page-of-google", "anchor": "How to rank on the first page of Google" },
+    { "href": "/blog/how-to-use-google-search-console", "anchor": "How to use Google Search Console" },
+    { "href": "/blog/how-to-get-backlinks-for-free", "anchor": "How to get backlinks for free" },
+    { "href": "/blog/how-to-target-long-tail-keywords", "anchor": "How to target long-tail keywords" },
+    { "href": "/check", "anchor": "All 40+ SEO/GEO checks" }
+  ]
+}

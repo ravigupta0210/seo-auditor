@@ -1,0 +1,137 @@
+{
+  "slug": "content-freshness-for-seo",
+  "title": "Content Freshness for SEO: Does Updating Help in 2026?",
+  "date": "2026-06-24",
+  "updatedAt": "2026-06-24",
+  "tag": "SEO",
+  "cluster": "content-links",
+  "keyword": "content freshness",
+  "secondaryKeywords": ["query deserves freshness", "updating old content", "content decay", "recency in AI search"],
+  "readTime": 9,
+  "excerpt": "Content freshness helps for recency-sensitive queries and AI engines like Perplexity — but not every page.",
+  "description": "Content freshness for SEO explained: when updating helps Google and AI search, when it does nothing, and how to refresh a page so it actually ranks in 2026.",
+  "tldr": "Content freshness helps SEO for queries that demand recency — news, fast-moving topics, and \"2026\" comparisons — and AI engines like Perplexity weight recency heavily, often citing pages published or updated in the last 90 days. For stable, evergreen topics freshness barely moves rankings, and changing only the date with no real edits does nothing.",
+  "status": "published",
+  "sections": [
+    {
+      "heading": "Does content freshness actually help SEO?",
+      "body": [
+        "Content freshness helps SEO when the query demands recency and does almost nothing when it does not. Google applies a system called Query Deserves Freshness (QDF) that boosts recent content for topics where newness matters — breaking news, sports scores, software versions, \"best X in 2026\" comparisons, and anything tied to current events. For stable, evergreen queries like \"what is a title tag\" or \"how does photosynthesis work,\" the freshest result is not the best result, so updating the publish date moves nothing. Freshness is a query-level signal, not a universal ranking boost.",
+        "The bigger shift in 2026 is on the AI side. Answer engines like **Perplexity**, **ChatGPT search**, and **Google AI Overviews** weight recency heavily when choosing which pages to cite, because they are explicitly trying to give users a current answer. Perplexity in particular favors sources published or updated in roughly the last 90 days for time-sensitive prompts, and it surfaces the date in its citations. So a page that is genuinely refreshed — not just re-stamped — has a real edge in AI citations even when its Google ranking barely changes.",
+        "What does **not** work, in either channel: editing the visible date or the structured-data `dateModified` field without changing the content. Google has repeatedly said it detects and ignores cosmetic date changes, and AI crawlers re-read the body, not just the metadata. Fake freshness is one of the easiest manipulations to catch and one of the fastest ways to lose trust. The rest of this guide covers when refreshing pays off, when it is wasted effort, and how to do it so it actually counts.",
+        "If you are new to how ranking signals fit together, start with [what is on-page SEO](/blog/what-is-on-page-seo) and [search intent](/blog/what-is-search-intent), because freshness only matters once intent and structure are right."
+      ]
+    },
+    {
+      "heading": "When updating content helps (and when it doesn't)",
+      "body": [
+        "Updating content helps most when a topic genuinely changes over time, and helps least when the answer is permanent. The deciding question is simple: would a reader in six months be misled by today's version of the page? If yes, freshness matters; if no, your effort is better spent elsewhere. The comparison below maps the common cases.",
+        "[[table]]",
+        "Three signals tell you a specific page is worth refreshing right now:",
+        "- **Traffic decay** — a page that ranked well and is steadily losing impressions in [Google Search Console](/blog/how-to-use-google-search-console) is decaying, and a real update often recovers it.",
+        "- **A SERP that moved on** — if the top results now cover an angle, tool, or year your page ignores, the intent has shifted and your content is stale.",
+        "- **Factual drift** — outdated stats, dead screenshots, discontinued tools, or old version numbers all make a page less trustworthy to humans and AI.",
+        "Where updating is wasted effort: definitional pages, foundational tutorials, and historical explainers whose answer does not change. Re-publishing \"what is a canonical tag\" every quarter signals nothing. For those pages, the win is fixing accuracy when something genuinely breaks — not running a freshness treadmill.",
+        "> Refresh the pages that decay or drift. Leave the pages that are simply true."
+      ]
+    },
+    {
+      "heading": "How to refresh content so it actually ranks",
+      "body": [
+        "Refreshing content effectively means materially improving the page, not touching the timestamp. A real update changes enough that Google re-crawls and re-evaluates the page and that an AI engine re-extracts a better answer from it. The workflow below produces that kind of update every time.",
+        "[[flowchart]]",
+        "The single highest-leverage edit is usually the opening. AI engines lift one self-contained passage to build an answer, so rewriting the first sentence of the page (and each section) to directly answer the question — with a current number or named entity — does more for AI citations than any other change. This is the same answer-first discipline covered in [how to write SEO-friendly content](/blog/how-to-write-seo-friendly-content), and it is what gets pages cited rather than skimmed.",
+        "Beyond the opening, the edits that count are substantive: add a section the SERP now expects, replace outdated stats and screenshots, prune advice that no longer applies, add or fix [internal links](/blog/what-is-internal-linking), and update the year in the title and H1 only if the body genuinely reflects 2026. When you change the body, also update `dateModified` in your JSON-LD so the new date is honest — Google reads `Article` structured data for the modified date, and a truthful signal is worth keeping accurate.",
+        "Finally, resist the urge to spin up a new URL. Updating the existing page preserves its accumulated links and ranking history; publishing a near-duplicate at a new URL splits authority and can trigger [keyword cannibalization](/blog/what-is-keyword-cannibalization). Update in place, then resubmit the URL in Search Console to prompt a re-crawl."
+      ]
+    },
+    {
+      "heading": "Why AI engines weight freshness more than Google",
+      "body": [
+        "AI answer engines weight content freshness more aggressively than classic Google rankings because their core promise is a single current answer rather than a list of options. When Perplexity or Google AI Overviews answer \"best project management tools,\" they cannot hedge with ten links — they synthesize one response, so they lean toward sources that look recent and authoritative. Recency becomes a tiebreaker and often a hard filter for time-sensitive prompts.",
+        "Perplexity is the clearest example. For queries with any temporal element, it heavily favors pages from roughly the last 90 days and displays the source date inline, which means a stale page is visibly disadvantaged even if its facts are still correct. Getting cited there depends on recency plus a clean, extractable structure — the mechanics are covered in [how to get cited by Perplexity](/blog/how-to-get-cited-by-perplexity).",
+        "This changes the freshness math. A page that ranks fine on Google but never gets refreshed may quietly lose its AI citations to a competitor who updates quarterly. So in 2026, freshness is less about chasing a ranking bump and more about staying in the citation pool that feeds [generative engine optimization](/blog/what-is-generative-engine-optimization). Two practical habits matter:",
+        "1. **Keep an honest `dateModified`** so engines and crawlers can verify the page is current.",
+        "2. **Refresh recency-sensitive pages on a cadence** — quarterly for fast-moving topics, on-event for anything tied to releases or news.",
+        "When a refresh is done, validate that the page still passes the basics — a present title, a direct opening, and clean structure — with a [free SEO + GEO audit](/) before you resubmit it."
+      ]
+    },
+    {
+      "heading": "Building a content freshness workflow",
+      "body": [
+        "A content freshness workflow is a repeatable review cadence that surfaces decaying pages and refreshes them on purpose, instead of randomly updating posts and hoping. The goal is to spend update effort only where recency actually pays — recency-sensitive and decaying pages — and to leave evergreen winners alone.",
+        "A workable quarterly process looks like this:",
+        "- **Triage by data.** Pull pages with declining clicks or impressions from Search Console and flag any that have dropped out of the top positions.",
+        "- **Classify by query type.** Sort flagged pages into recency-sensitive (refresh now) versus evergreen (only fix if broken).",
+        "- **Refresh the high-value ones first.** Run the refresh workflow on pages that combine high traffic potential with genuine staleness.",
+        "- **Re-audit and resubmit.** Confirm structure with an audit, update `dateModified`, and request indexing.",
+        "What to avoid: a blanket policy of touching every post monthly. That dilutes effort, trains you to make cosmetic edits, and produces the fake-freshness signal Google ignores. Freshness is a tool for the right pages, not a maintenance ritual for all of them. Pair this workflow with a periodic [SEO audit](/blog/how-to-do-an-seo-audit) so technical issues and freshness gaps get caught in the same pass."
+      ]
+    }
+  ],
+  "flowchart": {
+    "title": "How to refresh a page in 5 steps",
+    "steps": [
+      { "title": "Re-read the live SERP", "detail": "Search the keyword and note any angle, tool, or year the current top results cover that your page misses." },
+      { "title": "Rewrite the answer-first opening", "detail": "Update the first sentence of the page and each section with a current number or named entity so AI engines re-extract a better answer." },
+      { "title": "Replace stale facts and add missing sections", "detail": "Swap outdated stats, screenshots, and version numbers, and add any section the intent now demands." },
+      { "title": "Fix links and honest metadata", "detail": "Repair internal links and update dateModified in JSON-LD only because the body genuinely changed." },
+      { "title": "Re-audit and request a re-crawl", "detail": "Run a free SEO + GEO audit, then resubmit the URL in Search Console to prompt re-indexing." }
+    ]
+  },
+  "comparisonTable": {
+    "caption": "When content freshness helps SEO vs when it does not",
+    "headers": ["Page type", "Does freshness help?", "What to do", "Why"],
+    "rows": [
+      ["News / current events", "Strongly", "Update fast, publish often", "Query Deserves Freshness boosts recent results"],
+      ["\"Best X in 2026\" comparisons", "Strongly", "Refresh quarterly, update the year honestly", "Intent assumes current options and pricing"],
+      ["Fast-moving how-tos (tools, AI)", "Yes", "Refresh when the tool or feature changes", "Stale steps mislead readers and AI engines"],
+      ["Evergreen definitions", "Barely", "Fix only when a fact breaks", "The answer does not change over time"],
+      ["Date-only edits, no content change", "No", "Never do this", "Google ignores cosmetic date changes"]
+    ]
+  },
+  "peopleAlsoAsk": [
+    {
+      "q": "Does Google prefer fresh content?",
+      "a": "Google prefers fresh content only for queries that deserve recency, through a system called Query Deserves Freshness (QDF). For breaking news, fast-moving topics, and \"best in 2026\" comparisons, recent pages get a boost. For evergreen queries like definitions and stable tutorials, the freshest result is not the best result, so a recent date moves nothing. Freshness is a query-level signal, not a universal ranking factor."
+    },
+    {
+      "q": "How often should I update content?",
+      "a": "Update recency-sensitive pages on a cadence — quarterly for fast-moving topics and immediately when news, tools, or prices change — and leave evergreen pages alone until a fact actually breaks. A useful trigger is data: refresh pages that are losing clicks or impressions in Search Console, and ignore stable winners. Updating every page on a fixed monthly schedule wastes effort and produces cosmetic edits that Google discounts."
+    },
+    {
+      "q": "Does updating the date help SEO?",
+      "a": "Updating only the date with no real content change does not help SEO, because Google detects and ignores cosmetic date edits. AI crawlers also re-read the page body rather than trusting the timestamp alone. A date change helps only when it reflects genuine improvements — rewritten openings, replaced facts, or added sections — and the dateModified field should always be honest."
+    },
+    {
+      "q": "Does content freshness help AI search?",
+      "a": "Content freshness helps AI search significantly because answer engines like Perplexity and Google AI Overviews are built to deliver a single current answer. Perplexity favors sources published or updated in roughly the last 90 days for time-sensitive prompts and shows the date in its citations. A genuinely refreshed page can win or hold AI citations even when its Google ranking barely moves, making freshness more important for AI visibility than for classic rankings."
+    },
+    {
+      "q": "What is Query Deserves Freshness?",
+      "a": "Query Deserves Freshness (QDF) is a Google system that boosts recent content for queries where newness matters, such as breaking news, current events, software releases, and time-bound comparisons. For these queries, a page published or updated recently can outrank an older page with otherwise stronger signals. QDF does not apply to evergreen topics, which is why updating a definitional page rarely changes its ranking."
+    }
+  ],
+  "faqs": [
+    {
+      "q": "Is it better to update an old post or publish a new one?",
+      "a": "Updating the existing post is almost always better than publishing a new one on the same topic, because the original URL keeps its accumulated backlinks and ranking history. Publishing a near-duplicate at a new URL splits that authority and can trigger keyword cannibalization, where two of your pages compete for the same query. Update in place, refresh the content genuinely, and resubmit the URL in Search Console to prompt a re-crawl."
+    },
+    {
+      "q": "Should I change dateModified every time I edit a page?",
+      "a": "Change dateModified only when you make a substantive edit, not for a typo fix or a minor tweak. The field should honestly reflect when the content meaningfully changed, because Google reads Article structured data for the modified date and AI engines use it to judge recency. Keeping the date truthful preserves trust, while inflating it with cosmetic edits is the kind of fake freshness that gets discounted."
+    },
+    {
+      "q": "How do I know which pages are decaying?",
+      "a": "Identify decaying pages in Google Search Console by sorting your URLs by declining clicks and impressions over the last few months and flagging any that have slipped out of the top positions. A page that once ranked well and is steadily losing visibility is a strong refresh candidate. Pair that data with a quick SERP check: if the current top results cover an angle or year your page ignores, the intent has moved on and the page is stale."
+    }
+  ],
+  "relatedKeywords": ["query deserves freshness", "updating old blog posts for SEO", "content decay", "how often to update content", "recency in AI search", "refreshing evergreen content"],
+  "internalLinks": [
+    { "href": "/", "anchor": "Run a free SEO + GEO audit" },
+    { "href": "/blog/how-to-get-cited-by-perplexity", "anchor": "How to get cited by Perplexity" },
+    { "href": "/blog/how-to-write-seo-friendly-content", "anchor": "How to write SEO-friendly content" },
+    { "href": "/blog/how-to-use-google-search-console", "anchor": "How to use Google Search Console" },
+    { "href": "/blog/what-is-keyword-cannibalization", "anchor": "What is keyword cannibalization" }
+  ]
+}

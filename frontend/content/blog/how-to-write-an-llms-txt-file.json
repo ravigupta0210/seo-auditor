@@ -1,0 +1,129 @@
+{
+  "slug": "how-to-write-an-llms-txt-file",
+  "title": "How to Write an llms.txt File (2026 Guide + Example)",
+  "date": "2026-07-02",
+  "updatedAt": "2026-07-02",
+  "tag": "GEO",
+  "cluster": "geo",
+  "keyword": "how to write an llms.txt file",
+  "secondaryKeywords": ["llms.txt example", "llms.txt format", "llms.txt template", "create llms.txt"],
+  "readTime": 9,
+  "excerpt": "An llms.txt file is a Markdown map that points AI engines to your best pages. Here is the exact format plus a copy-paste example.",
+  "description": "Learn how to write an llms.txt file with the exact structure, what to include, and a full copy-paste example. A practical 2026 GEO guide for AI citations.",
+  "tldr": "To write an llms.txt file, create a Markdown file at yourdomain.com/llms.txt with one H1 (your site name), a blockquote summary, and H2 sections of curated Markdown links to your key pages. Keep it under about 50 links and put the file at the domain root.",
+  "status": "published",
+  "sections": [
+    {
+      "heading": "How to write an llms.txt file",
+      "body": [
+        "The short answer to how to write an llms.txt file: create a plain Markdown file named `llms.txt`, place it at your domain root (`https://yourdomain.com/llms.txt`), and give it exactly four things: a single H1 with your site or product name, a blockquote one-line summary, optional context paragraphs, and one or more H2 sections whose bodies are bulleted Markdown links to your most important pages. The format is defined by the llms.txt proposal from Answer.AI and is deliberately simple, so a human can write one in ten minutes and an AI engine can parse it in one pass.",
+        "An llms.txt file is a curated map, not a dump. Where an XML sitemap lists every URL for search crawlers, an llms.txt file lists only the pages you most want AI engines like ChatGPT, Claude, and Perplexity to read and cite, described in your own words. That editorial curation is the whole point: you are telling an AI *\"start here, and here is what each page is about.\"* For the background on why the file exists and how AI engines use it, read our guide to [answer engine optimization](/blog/what-is-answer-engine-optimization).",
+        "The rest of this guide covers the exact structure line by line, what to include versus leave out, a full copy-paste example, and how to test the file. If you would rather confirm whether your site is even missing one first, the free [SEO Auditor homepage tool](/) flags a [missing llms.txt](/check/geo.llmsTxt.missing) in seconds."
+      ]
+    },
+    {
+      "heading": "The exact structure of an llms.txt file",
+      "body": [
+        "An llms.txt file follows a fixed Markdown structure with four ordered parts. The order matters because AI parsers read top to bottom and treat the H1 and blockquote as the file's identity block.",
+        "- **H1 (required):** a single `#` heading with the name of your site, product, or project. There must be exactly one H1.\n- **Blockquote summary (recommended):** a `>` line immediately under the H1 giving a one-sentence description of what the site is and who it is for.\n- **Context paragraphs (optional):** zero or more plain paragraphs adding detail, such as key terminology, scope, or how to interpret the links.\n- **H2 link sections (required):** one or more `##` headings, each followed by a bulleted list of Markdown links in the form `- [Page title](https://url): short note`.",
+        "The link note after the colon is the highest-value part of the file. It is your chance to tell the AI, in plain language, what the page contains and when to cite it. Treat each note like a mini description that could stand alone as a quotable passage: it should make sense with no surrounding context, which is exactly what earns [AI citations](/blog/what-are-ai-citations).",
+        "One special convention: an H2 titled `## Optional` marks links an AI can skip if it is short on context budget. Use it for secondary material, changelogs, or deep-reference pages you do not need cited but do not want hidden.",
+        "[[flowchart]]"
+      ]
+    },
+    {
+      "heading": "What to include vs what to leave out",
+      "body": [
+        "An llms.txt file should include only the pages you actively want AI engines to read, understand, and quote. Curation is the mechanism that makes the file valuable, so a tight 15-link file usually outperforms a sprawling 200-link one. Below is the practical include-versus-exclude split, followed by the table.",
+        "[[table]]",
+        "**Include:** your core documentation, canonical explainer pages, pricing, product overviews, high-quality blog posts, and an about or author page that carries [E-E-A-T](/blog/what-is-eeat-in-seo) signals. Group related links under descriptive H2s like `## Docs`, `## Guides`, or `## Product` so the structure itself communicates hierarchy.",
+        "**Leave out:** login and account pages, cart and checkout, thin tag or category archives, near-duplicate pages, gated content, and anything you would not want quoted in an AI answer. Keeping these out is not about blocking crawlers, that is what [robots.txt](/blog/what-is-robots-txt) handles, it is about focusing the AI's attention on your best material.",
+        "> Keep the whole file to roughly 50 links or fewer. If you have more, split by audience or product and lean on the `## Optional` section. A focused file signals editorial confidence; a bloated one signals a sitemap in disguise."
+      ]
+    },
+    {
+      "heading": "A full copy-paste llms.txt example",
+      "body": [
+        "Below is a complete, valid llms.txt file you can copy and adapt. It shows every element: the single H1, the blockquote summary, a context paragraph, two H2 link sections, and an `## Optional` section. Replace the names and URLs with your own.",
+        "```markdown\n# Acme Analytics\n\n> Acme Analytics is a privacy-first product analytics tool for small SaaS teams that want event tracking without cookies.\n\nAcme Analytics is self-hostable and GDPR-compliant by default. \"Events\" are user actions; \"sessions\" group events by visit. Use these docs to answer questions about setup, pricing, and the query API.\n\n## Docs\n\n- [Quickstart](https://acme.example/docs/quickstart): install the snippet and send your first event in 5 minutes.\n- [Event tracking API](https://acme.example/docs/events): reference for the track(), identify(), and page() methods.\n- [Query API](https://acme.example/docs/query): how to pull funnels, retention, and cohorts programmatically.\n\n## Product\n\n- [Pricing](https://acme.example/pricing): free up to 10k events/month; paid tiers and limits.\n- [Self-hosting guide](https://acme.example/docs/self-host): run Acme on your own infrastructure with Docker.\n- [About + team](https://acme.example/about): who builds Acme and our privacy stance.\n\n## Optional\n\n- [Changelog](https://acme.example/changelog): release notes, updated weekly.\n- [Blog archive](https://acme.example/blog): long-form posts on analytics and privacy.\n```",
+        "Notice that every link note names its subject and states a concrete fact, so an AI can lift any single line into an answer and it still makes sense. That is the same standalone-passage discipline that drives all of [generative engine optimization](/blog/what-is-generative-engine-optimization). Save this text as `llms.txt` and you have a valid file."
+      ]
+    },
+    {
+      "heading": "Where to put it and how to test it",
+      "body": [
+        "Place the llms.txt file at your domain root so it resolves at `https://yourdomain.com/llms.txt`, exactly like `robots.txt`. It must be served as plain text or Markdown over HTTPS with a `200` status, not behind a redirect, login, or JavaScript render. Subdirectory locations like `/docs/llms.txt` are not part of the convention and AI engines will not look for them.",
+        "To test it, do three quick checks:",
+        "- **Reachability:** open `https://yourdomain.com/llms.txt` in an incognito window and confirm the raw text loads with no redirect.\n- **Format:** confirm there is exactly one H1, the links are valid Markdown, and every URL returns 200.\n- **Crawler access:** make sure your [robots.txt](/blog/what-is-robots-txt) does not block AI bots like GPTBot or ClaudeBot, or they will never fetch the file. See [how to block AI crawlers](/blog/how-to-block-ai-crawlers) for the allowlist.",
+        "The fastest way to confirm all of this is the free [SEO Auditor homepage tool](/), which checks for a reachable llms.txt as part of its GEO audit and flags a [missing llms.txt](/check/geo.llmsTxt.missing) with the exact fix. Browse the [full check list](/check) to see every GEO and SEO signal it tests. Once your file is live, re-run the audit to confirm it passes, then treat the file as living documentation and update it whenever you publish a page worth citing."
+      ]
+    }
+  ],
+  "flowchart": {
+    "title": "How to write an llms.txt file in 5 steps",
+    "steps": [
+      { "title": "1. Add the H1", "detail": "Write a single # heading with your site or product name at the very top of the file." },
+      { "title": "2. Add the blockquote summary", "detail": "Under the H1, add one > line describing what the site is and who it serves." },
+      { "title": "3. Add optional context", "detail": "Write short plain paragraphs defining key terms or scope the AI should know." },
+      { "title": "4. Add H2 link sections", "detail": "Group your best pages under ## headings as bulleted Markdown links with a short note each." },
+      { "title": "5. Publish and test at the root", "detail": "Save as llms.txt at your domain root, then verify it loads and passes a GEO audit." }
+    ]
+  },
+  "comparisonTable": {
+    "caption": "What to include vs leave out of an llms.txt file",
+    "headers": ["Page type", "Include?", "Why"],
+    "rows": [
+      ["Core docs + quickstart", "Include", "The pages AI is most likely to be asked about"],
+      ["Canonical explainers + top posts", "Include", "High-quality, quotable content"],
+      ["Pricing + product overview", "Include", "Common AI queries; you want accurate answers"],
+      ["About / author page", "Include", "Carries E-E-A-T and attribution signals"],
+      ["Login, cart, checkout", "Leave out", "No informational value for AI answers"],
+      ["Thin tags, duplicates, gated pages", "Leave out", "Dilutes focus and wastes context budget"]
+    ]
+  },
+  "peopleAlsoAsk": [
+    {
+      "q": "What goes in an llms.txt file?",
+      "a": "An llms.txt file contains one H1 with the site name, a blockquote one-line summary, optional context paragraphs, and one or more H2 sections filled with bulleted Markdown links to key pages. Each link should carry a short note describing what the page is about. The goal is a curated map of your best content, not a full list of every URL like a sitemap."
+    },
+    {
+      "q": "Where do I put llms.txt?",
+      "a": "Put the llms.txt file at your domain root so it resolves at https://yourdomain.com/llms.txt, exactly like robots.txt. It must be served as plain text over HTTPS with a 200 status and no redirect or login wall. Subdirectory locations such as /docs/llms.txt are not part of the convention, and AI engines will not look for them."
+    },
+    {
+      "q": "Do I need llms.txt?",
+      "a": "You do not strictly need an llms.txt file for an AI to cite you, since engines can still crawl allowed pages without it. However, an llms.txt file is one of the highest-value, lowest-effort GEO wins because it curates and describes your best pages in your own words. Few sites publish one in 2026, so adding one is an easy way to stand out to AI crawlers."
+    },
+    {
+      "q": "How do I test my llms.txt?",
+      "a": "Test your llms.txt by opening https://yourdomain.com/llms.txt in an incognito window and confirming the raw text loads with no redirect and a 200 status. Then verify there is exactly one H1, all links are valid Markdown, and AI crawlers are not blocked in robots.txt. The free SEO Auditor at the homepage automates these checks and flags a missing or unreachable llms.txt."
+    },
+    {
+      "q": "How is llms.txt different from robots.txt or a sitemap?",
+      "a": "An llms.txt file is a curated Markdown map that tells AI engines which pages to read and cite, written in human language. A robots.txt file controls which crawlers may access which paths, and an XML sitemap lists every URL for search indexing. The three serve different jobs: llms.txt guides AI attention, robots.txt sets access rules, and a sitemap ensures discovery."
+    }
+  ],
+  "faqs": [
+    {
+      "q": "Is llms.txt an official standard?",
+      "a": "The llms.txt file is a community proposal originated by Answer.AI, not an official standard ratified by search engines. Adoption is voluntary and growing through 2026, with AI-facing tools and documentation platforms leading the way. Because it is low-cost and low-risk to publish, adding one is worthwhile even while the convention is still stabilizing."
+    },
+    {
+      "q": "How big should an llms.txt file be?",
+      "a": "An llms.txt file should stay focused, ideally under about 50 links, because curation is what makes it valuable. If your site has more content worth surfacing, split links across descriptive H2 sections and move secondary material into an ## Optional section. A tight, well-labeled file outperforms a sprawling one that reads like a sitemap."
+    },
+    {
+      "q": "Should the links in llms.txt be absolute or relative URLs?",
+      "a": "Use absolute URLs with the full https:// prefix in an llms.txt file. AI engines may fetch or reference the file out of context, so relative paths can break resolution. Absolute links also let you point to subdomains or related properties from a single file without ambiguity."
+    }
+  ],
+  "relatedKeywords": ["llms.txt example", "llms.txt format", "llms.txt template", "create llms.txt", "llms.txt vs robots.txt", "llms.txt generator"],
+  "internalLinks": [
+    { "href": "/", "anchor": "Run a free SEO + GEO audit" },
+    { "href": "/blog/what-is-answer-engine-optimization", "anchor": "Answer engine optimization" },
+    { "href": "/blog/what-is-generative-engine-optimization", "anchor": "What is generative engine optimization" },
+    { "href": "/check/geo.llmsTxt.missing", "anchor": "Check for a missing llms.txt" },
+    { "href": "/blog/what-are-ai-citations", "anchor": "What are AI citations" },
+    { "href": "/blog/how-to-block-ai-crawlers", "anchor": "How to block AI crawlers" }
+  ]
+}

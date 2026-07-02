@@ -1,0 +1,119 @@
+{
+  "slug": "what-are-header-tags",
+  "title": "What Are Header Tags? (H1–H6 SEO Guide, 2026)",
+  "date": "2026-07-02",
+  "updatedAt": "2026-07-02",
+  "tag": "SEO",
+  "cluster": "content-links",
+  "keyword": "header tags",
+  "secondaryKeywords": ["H1 tag", "heading hierarchy", "H1 vs title tag", "headings for SEO"],
+  "readTime": 9,
+  "excerpt": "Header tags (H1–H6) structure your content for readers, search engines, and AI. Learn the hierarchy and the one-H1 rule.",
+  "description": "Header tags (H1–H6) organize a page for readers, Google, and AI. Learn the heading hierarchy, the one-H1 rule, and common header tag mistakes.",
+  "tldr": "Header tags are HTML elements (H1 through H6) that label the sections of a page in order of importance. Use exactly one H1 per page for the main topic, then nest H2s and H3s beneath it to build a logical outline that helps readers, Google, and AI engines parse your content.",
+  "status": "published",
+  "sections": [
+    {
+      "heading": "What are header tags?",
+      "body": [
+        "**Header tags** are HTML elements — `<h1>` through `<h6>` — that label the headings and subheadings of a web page in descending order of importance. The H1 names the whole page, H2s divide it into major sections, H3s break those sections into subsections, and H4–H6 handle deeper nesting. Together they form the visible outline a reader scans and the structural map that search engines and AI models use to understand how a page is organized.",
+        "Here is what the markup looks like:",
+        "```html\n<h1>What Are Header Tags?</h1>\n  <h2>Why header tags matter for SEO</h2>\n  <h2>The H1–H6 hierarchy</h2>\n    <h3>The one-H1 rule</h3>\n    <h3>Nesting H3s under H2s</h3>\n```",
+        "Header tags are not the same thing as font size. Making text big and bold in your CSS does not make it a heading — only the actual `<h1>`–`<h6>` elements carry semantic meaning that machines can read. That distinction is the entire point: header tags tell a browser, a crawler, and a large language model \"this line is a heading, and here is where it sits in the outline,\" which is information no amount of visual styling can convey."
+      ]
+    },
+    {
+      "heading": "Why do header tags matter for SEO?",
+      "body": [
+        "Header tags matter for SEO because they give both Google and AI engines a structured, machine-readable outline of your page. Search engines weigh heading text more heavily than body text when working out what a page is about, so a keyword-relevant H1 and descriptive H2s reinforce your topic. Headings also power the accessibility layer — screen readers let users jump between headings — and that same structure is what makes a page easy to skim.",
+        "The bigger payoff in 2026 is extraction. When Google builds a [featured snippet](/blog/what-is-a-featured-snippet) or an AI Overview, it looks for a clear question-shaped heading followed by a concise answer. When ChatGPT, Perplexity, or Claude pull a passage to cite, they lean on heading structure to locate the relevant chunk. A well-formed H2 like \"How many H1 tags should a page have?\" with a direct answer underneath is far more citable than the same information buried in a wall of text.",
+        "The practical wins:",
+        "- **Featured snippets:** question-based headings are prime snippet real estate.",
+        "- **AI citations:** clean headings help LLMs extract the exact passage that answers a prompt.",
+        "- **Rankings:** headings clarify topic and relevance to Google's crawler.",
+        "- **UX and dwell time:** skimmable pages keep readers on the page longer.",
+        "Header tags are one piece of the larger discipline of [on-page SEO](/blog/what-is-on-page-seo) — the on-page signals you fully control. Get the outline right and every other on-page signal has a cleaner structure to sit inside."
+      ]
+    },
+    {
+      "heading": "The H1–H6 hierarchy explained",
+      "body": [
+        "The H1–H6 hierarchy is a strict order of importance: H1 is the most important heading and H6 the least, and each level should nest logically under the one above it. Think of it like a document outline or a table of contents — you would never jump from a chapter title straight to a sub-sub-point without the levels in between.",
+        "Here is how each level is used in practice:",
+        "[[table]]",
+        "Two rules keep the hierarchy healthy. **Don't skip levels** — an H2 should be followed by an H2 or H3, never a leap straight to H4, because skipping breaks the logical tree that crawlers and screen readers rely on. And **use headings for structure, not styling** — if you only want smaller text, style it with CSS; reserve H4–H6 for genuine sub-levels of meaning.",
+        "> Rule of thumb: if you removed all the body text and read only the headings top to bottom, they should still tell a coherent story. If they don't, your hierarchy is broken.",
+        "Most articles never need more than H1, H2, and H3. Reaching for H4–H6 is a signal your content may be too deeply nested and could be split into separate pages or flattened into a cleaner outline."
+      ]
+    },
+    {
+      "heading": "The one-H1 rule and how many headings to use",
+      "body": [
+        "The one-H1 rule states that each page should have exactly one H1 — a single, unique headline that names the main topic of the page. The H1 answers \"what is this whole page about?\" and there can only be one answer, so a second H1 dilutes that signal and confuses both crawlers and assistive technology about which heading is the true title.",
+        "In modern HTML5, browsers technically allow multiple H1s inside `<section>` elements, and Google has said it can handle more than one. But \"can handle\" is not \"prefers\" — the safest, clearest choice is still one H1 per page. Below that H1, use as many H2s and H3s as the content genuinely needs. There is no magic number: a 400-word page might need two H2s, while a 3,000-word guide might need eight.",
+        "Follow this process to structure any page:",
+        "[[flowchart]]",
+        "A few practical guardrails:",
+        "- **One H1, always** — matched to your primary topic and, ideally, your main keyword.",
+        "- **Every major idea gets an H2** — if a section is long, break it with H3s.",
+        "- **Front-load meaning** — put the informative words early so a skimming reader (and an AI extractor) gets the point fast.",
+        "For the full workflow of turning this outline into ranking pages, see our guide to [writing SEO-friendly content](/blog/how-to-write-seo-friendly-content)."
+      ]
+    },
+    {
+      "heading": "Common header tag mistakes to avoid",
+      "body": [
+        "The most common header tag mistakes come from treating headings as decoration instead of structure. Fixing these is usually a fast, high-leverage win because they are easy to spot and easy to correct.",
+        "The mistakes that show up most often:",
+        "- **Multiple H1s** — competing top-level headings that muddy the page's main topic.",
+        "- **No H1 at all** — a page that starts with an H2 or styled `<div>` and leaves crawlers guessing.",
+        "- **Skipping levels** — jumping from H1 to H4 and breaking the logical tree.",
+        "- **Keyword stuffing headings** — cramming the same phrase into every H2 reads as spam and helps no one.",
+        "- **Using headings for visual size** — turning a `<p>` into an H3 just to shrink it, or vice versa.",
+        "- **Vague headings** — \"Overview\" or \"More info\" tell neither readers nor AI engines anything extractable.",
+        "The last one matters most for 2026. AI engines reward headings that are specific and often question-shaped, because they map cleanly to how people prompt. \"How many H1 tags should a page have?\" is a better H2 than \"H1 count,\" because it mirrors a real query and lets the model lift a self-contained answer. You can catch missing and broken heading structure — plus 40+ other on-page and GEO issues — by running your page through a [free SEO and GEO audit](/) or browsing the [full check list](/check)."
+      ]
+    }
+  ],
+  "flowchart": {
+    "title": "How to structure headings on a page",
+    "steps": [
+      { "title": "Write one H1", "detail": "Create a single H1 that names the page's main topic and includes your primary keyword." },
+      { "title": "Outline major sections as H2s", "detail": "Turn each main idea or question into a descriptive H2." },
+      { "title": "Nest details as H3s", "detail": "Break long H2 sections into H3 subsections without skipping levels." },
+      { "title": "Make headings question-shaped", "detail": "Phrase headings the way readers search so snippets and AI can extract answers." },
+      { "title": "Answer directly under each heading", "detail": "Follow every heading with a concise, standalone answer in the first sentence." },
+      { "title": "Read the outline alone", "detail": "Skim only the headings top to bottom — they should tell the whole story on their own." }
+    ]
+  },
+  "comparisonTable": {
+    "caption": "The H1–H6 header tag hierarchy at a glance",
+    "headers": ["Tag", "Role", "Per page", "Typical use"],
+    "rows": [
+      ["H1", "Main page title", "Exactly one", "The single topic of the whole page"],
+      ["H2", "Major section", "As needed", "Each main idea or question"],
+      ["H3", "Subsection", "As needed", "Points nested under an H2"],
+      ["H4", "Sub-subsection", "Rarely", "Deeper nesting within an H3"],
+      ["H5–H6", "Deepest levels", "Almost never", "Complex docs; sign your content should be split"]
+    ]
+  },
+  "peopleAlsoAsk": [
+    { "q": "How many H1 tags should a page have?", "a": "A page should have exactly one H1 tag. The H1 names the single main topic of the page, so a second H1 dilutes that signal and confuses crawlers and screen readers. HTML5 technically permits multiple H1s inside section elements, but one H1 per page remains the clearest and safest practice in 2026." },
+    { "q": "Do header tags affect SEO?", "a": "Yes, header tags affect SEO. Search engines weigh heading text more heavily than body text when determining what a page is about, so keyword-relevant H1s and H2s reinforce your topic. Headings also power featured snippets and AI citations, because engines look for a clear question-shaped heading followed by a concise answer." },
+    { "q": "What is the difference between H1 and title tag?", "a": "The H1 is the main on-page headline that visitors read after landing on the page, while the title tag is metadata in the HTML head that appears in search results, browser tabs, and social shares. A page has one of each, and they can be worded differently — the title tag can carry the brand and a hook, while the H1 stays cleaner — but they should not contradict each other." },
+    { "q": "Should headings contain keywords?", "a": "Headings should contain keywords naturally, but not at the cost of clarity. Include your primary keyword in the H1 and relevant terms in H2s where they fit the meaning, since heading text is a strong relevance signal. Avoid stuffing the same phrase into every heading — that reads as spam and hurts both readers and AI extraction." }
+  ],
+  "faqs": [
+    { "q": "Can I use multiple H2 and H3 tags on one page?", "a": "Yes, you can and should use as many H2 and H3 tags as your content genuinely needs. Unlike the H1, there is no limit on lower-level headings. Use one H2 per major idea and nest H3s beneath long sections without skipping levels." },
+    { "q": "Does making text bold or big count as a heading?", "a": "No, visually styling text as large or bold does not make it a header tag. Only the actual H1–H6 elements carry the semantic meaning that crawlers, screen readers, and AI models can parse. If you want a real heading, use a heading tag; if you only want bigger text, use CSS." },
+    { "q": "Do header tags help with AI Overviews and ChatGPT citations?", "a": "Yes, header tags help AI engines extract and cite your content. AI Overviews, ChatGPT, and Perplexity use heading structure to locate the passage that answers a prompt. A specific, question-shaped H2 followed by a direct answer is far more likely to be pulled than the same information buried in unstructured text." }
+  ],
+  "relatedKeywords": ["H1 tag SEO", "heading hierarchy", "H1 vs title tag", "how many H1 tags", "headings for featured snippets", "HTML heading structure"],
+  "internalLinks": [
+    { "href": "/", "anchor": "run a free SEO + GEO audit" },
+    { "href": "/blog/what-is-on-page-seo", "anchor": "on-page SEO" },
+    { "href": "/blog/how-to-write-seo-friendly-content", "anchor": "writing SEO-friendly content" },
+    { "href": "/blog/what-is-a-title-tag", "anchor": "title tag" },
+    { "href": "/blog/what-is-a-featured-snippet", "anchor": "featured snippet" }
+  ]
+}

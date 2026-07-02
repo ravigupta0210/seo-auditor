@@ -1,0 +1,110 @@
+{
+  "slug": "url-structure-for-seo",
+  "title": "URL Structure for SEO: Best Practices in 2026",
+  "date": "2026-07-02",
+  "updatedAt": "2026-07-02",
+  "tag": "Technical SEO",
+  "cluster": "technical-seo",
+  "keyword": "URL structure",
+  "secondaryKeywords": ["SEO-friendly URLs", "URL best practices", "slug optimization", "clean URLs"],
+  "readTime": 9,
+  "excerpt": "Good URL structure is short, lowercase, hyphenated, and keyword-relevant. The 2026 rules and mistakes.",
+  "description": "URL structure best practices for SEO in 2026: keep URLs short, lowercase, hyphenated, and keyword-relevant. Learn what to fix and when to change a URL.",
+  "tldr": "Good URL structure is short (aim for under 60 characters), lowercase, hyphenated between words, keyword-relevant, and stable over time. Avoid tracking parameters, dates, session IDs, and folders more than three levels deep, and only change an existing URL when the SEO benefit clearly outweighs the risk of a botched redirect.",
+  "status": "published",
+  "sections": [
+    {
+      "heading": "What good URL structure looks like in 2026",
+      "body": [
+        "Good URL structure is short, human-readable, lowercase, hyphenated between words, and built around the page's primary keyword — and once published, it stays put. A strong URL like `example.com/blog/url-structure` describes the page before anyone clicks, reads cleanly when shared in a chat or citation, and gives search engines a compact relevance signal. A weak URL like `example.com/p?id=8842&ref=fb` describes nothing, breaks when copied, and forces both users and crawlers to guess.",
+        "URL structure is the address system of your site: the path pattern that maps a page's place in your hierarchy (`/blog/`, `/products/`, `/docs/`) plus the final slug that names the individual page. It is a minor direct ranking factor, but its real value is indirect — clean URLs earn more clicks in search results, more shares, cleaner analytics, and more accurate citations from AI answer engines that surface the raw link.",
+        "The five properties that define a good URL in 2026:",
+        "- **Short** — aim for under 60 characters and 3-5 words in the slug; shorter URLs consistently earn higher click-through in results.\n- **Lowercase** — most servers treat `/Page` and `/page` as different URLs, quietly creating duplicates.\n- **Hyphenated** — separate words with hyphens (`-`), never underscores or spaces.\n- **Keyword-relevant** — include the primary keyword, skip stop words like *the*, *and*, *of*.\n- **Stable** — a URL is a promise; changing it breaks links and citations unless you redirect carefully.",
+        "URL structure lives inside [technical SEO](/blog/what-is-technical-seo) — the plumbing that determines whether engines can crawl, understand, and trust your pages. It is one of the cheapest things to get right on a new site and one of the riskiest to fix on an old one, which is why the rules below matter."
+      ]
+    },
+    {
+      "heading": "The rules: short, lowercase, hyphenated, keyword-relevant",
+      "body": [
+        "The core URL rules are simple to state and easy to violate at scale, especially on CMS platforms that auto-generate slugs from titles. Each rule solves a specific problem, so it helps to know what breaks when you ignore it.",
+        "**Keep it short.** Every word after the first few adds noise without adding meaning. A slug of `/best-running-shoes` beats `/the-10-best-running-shoes-for-marathon-runners-in-2026` — trim the article words, dates, and filler. Short URLs display fully in search results instead of being truncated with an ellipsis, and they are far easier to paste, share, and cite.",
+        "**Force lowercase.** `example.com/URL-Structure` and `example.com/url-structure` are technically two different URLs on most Unix servers. Mixed case is a leading cause of accidental duplicate content, so configure your server to force lowercase and set a self-referencing [canonical tag](/blog/what-is-a-canonical-tag) on every page to catch stray variants.",
+        "**Hyphens, not underscores.** Google treats a hyphen as a word separator, so `url-structure` is read as two words. It treats an underscore as a *word joiner*, so `url_structure` can be read as the single token `urlstructure`. This is a rare case where Google's own guidance is explicit and unchanged for over a decade: use hyphens.",
+        "**Make it keyword-relevant.** The slug should contain the page's target keyword and little else. Drop stop words (`a`, `the`, `of`, `and`), drop the publish date, and drop your internal product codes. A reader — or an AI engine deciding whether to cite you — should be able to guess the page topic from the URL alone. This mirrors the [search intent](/blog/what-is-search-intent) you are targeting.",
+        "> A URL you would be comfortable reading aloud on a podcast is almost always a good URL. If it needs spelling out character by character, it needs fixing."
+      ]
+    },
+    {
+      "heading": "Good vs bad URLs, side by side",
+      "body": [
+        "The fastest way to internalize URL best practices is to compare clean URLs against the messy ones most sites actually ship. The table below pairs common bad patterns with their fixed versions and names the specific problem each one causes.",
+        "[[table]]",
+        "The worst offenders are **parameter-stuffed URLs** and **date-stamped URLs.** Query parameters like `?id=`, `?ref=`, and `?sessionid=` create near-infinite URL variants of the same content, splitting ranking signals and burning [crawl budget](/blog/what-is-crawl-budget). Dates baked into the path (`/2026/07/02/`) make otherwise-evergreen content look stale the moment the calendar turns and make the URL harder to keep stable when you refresh the article.",
+        "**Deep nesting** is the third silent killer. A URL like `/category/subcategory/sub-subcategory/type/item` signals a page buried far from the homepage, which can dilute perceived importance and complicate crawling. As a rule, keep pages within three folder levels of the root — a flatter structure is easier to crawl and easier to reason about.",
+        "You can see exactly how your live URLs score by running any page through our [free SEO + GEO audit](/) on the homepage, which flags long, uppercase, parameter-heavy, and deeply nested URLs automatically. For the complete list of what gets inspected, see [all 40+ SEO/GEO checks](/check)."
+      ]
+    },
+    {
+      "heading": "When to change a URL (and when to leave it alone)",
+      "body": [
+        "Deciding whether to change an existing URL is where most URL-structure damage happens, because a rename that is not redirected correctly wipes out the page's accumulated links and rankings overnight. The honest default is: a slightly imperfect URL that already ranks is usually better than a perfect URL that resets to zero.",
+        "[[flowchart]]",
+        "Change a URL when the payoff is structural, not cosmetic — for example, migrating from `?id=884` parameter URLs to readable slugs, removing a date-based path pattern site-wide, or fixing a genuinely misleading slug that no longer matches the content. Leave it alone when the only gain is squeezing in one more keyword or trimming two characters; the ranking upside is negligible and the redirect risk is real.",
+        "When you do change a URL, always ship a **301 (permanent) redirect** from the old address to the new one, never a 302. A 301 passes ranking equity to the new URL; a 302 signals a temporary move and holds equity on the old one. The difference is spelled out in [301 vs 302 redirects](/blog/301-vs-302-redirects), and getting it wrong is one of the most expensive URL mistakes on this list.",
+        "After any URL change, update three things in lockstep: your internal links, your XML sitemap, and your canonical tags, so every signal points at the new address. Then watch [Google Search Console](/blog/how-to-use-google-search-console) for coverage errors and confirm the redirects resolve in a single hop with no chains."
+      ]
+    },
+    {
+      "heading": "Building URL structure into site architecture",
+      "body": [
+        "URL structure is not just a per-page slug decision — the folder pattern encodes your entire site hierarchy, and a coherent pattern compounds over hundreds of pages. A logical structure like `/blog/`, `/guides/`, and `/products/category/item` tells both users and crawlers how content relates, which reinforces topical grouping and makes [internal linking](/blog/what-is-internal-linking) feel natural.",
+        "Pick a directory convention early and apply it consistently. If your blog lives at `/blog/`, keep every post there; do not scatter articles across `/blog/`, `/news/`, and the root. Consistency lets you reason about the site at a glance and lets crawlers predict where new content will appear, which is part of using [crawl budget](/blog/what-is-crawl-budget) efficiently on larger sites.",
+        "Two structural choices worth deciding upfront:",
+        "- **Trailing slash or not** — `/page` and `/page/` are different URLs; pick one form, redirect the other, and never mix them.\n- **Subfolder vs subdomain** — for most content, `example.com/blog` (subfolder) concentrates authority on one domain better than `blog.example.com` (subdomain). Prefer subfolders unless you have a strong technical reason not to.",
+        "Finally, treat URLs as a long-term commitment. The best-structured sites decide their patterns once, document them, and rarely touch them — because a stable URL keeps earning links, shares, and AI citations for years. If you are auditing a whole site rather than one page, walk through [how to do an SEO audit](/blog/how-to-do-an-seo-audit) and fix URL issues in a single planned pass rather than piecemeal."
+      ]
+    }
+  ],
+  "flowchart": {
+    "title": "Should you change this URL?",
+    "steps": [
+      { "title": "Does the URL already rank or earn traffic?", "detail": "If a page has accumulated links and rankings, the bar for changing its URL should be high." },
+      { "title": "Is the problem structural or cosmetic?", "detail": "Change for parameter cleanup, date removal, or misleading slugs; leave it for minor keyword tweaks." },
+      { "title": "Can you ship a clean 301 redirect?", "detail": "If you cannot 301 the old URL to the new one, do not rename it at all." },
+      { "title": "Update internal links and sitemap", "detail": "Point every internal link and every sitemap entry at the new URL, not the old one." },
+      { "title": "Update canonical tags", "detail": "Set the canonical on the new page to itself and confirm no page still canonicals to the old URL." },
+      { "title": "Verify redirects resolve in one hop", "detail": "Check Search Console and confirm each old URL 301s directly to the new one with no chains." }
+    ]
+  },
+  "comparisonTable": {
+    "caption": "Good vs bad URLs and the problem each bad pattern causes",
+    "headers": ["Bad URL", "Good URL", "The problem"],
+    "rows": [
+      ["example.com/p?id=8842&ref=fb", "example.com/blog/url-structure", "Parameters split signals and describe nothing"],
+      ["example.com/2026/07/02/best-shoes", "example.com/best-running-shoes", "Baked-in dates make evergreen content look stale"],
+      ["example.com/Blog/URL_Structure", "example.com/blog/url-structure", "Uppercase and underscores create duplicates and word-joining"],
+      ["example.com/cat/sub/type/kind/item", "example.com/shoes/running-shoes", "Deep nesting buries the page and complicates crawling"],
+      ["example.com/the-10-best-shoes-of-2026-guide", "example.com/best-running-shoes", "Too long; stop words add noise, get truncated in results"]
+    ]
+  },
+  "peopleAlsoAsk": [
+    { "q": "What is a good URL structure?", "a": "A good URL structure is short, lowercase, hyphenated between words, and built around the page's primary keyword, sitting within three folder levels of the homepage. A good URL like example.com/blog/url-structure describes the page before anyone clicks and stays readable when shared or cited. It also stays stable over time, because changing a URL breaks accumulated links and rankings unless it is redirected carefully." },
+    { "q": "Should URLs have keywords?", "a": "Yes, a URL should include the page's primary keyword, because a keyword-relevant slug is a small but real relevance signal and helps users and AI engines understand the page from the link alone. The keyword should appear cleanly without stop words like the, and, or of, and without repetition. Do not stuff multiple keywords into one URL, since that makes it longer and looks manipulative without adding ranking value." },
+    { "q": "Do dashes or underscores matter in URLs?", "a": "Dashes and underscores matter and are not interchangeable in URLs. Google reads a hyphen as a word separator, so url-structure is understood as two words, but it reads an underscore as a word joiner, so url_structure can be treated as the single token urlstructure. Always separate words in a URL with hyphens, never underscores or spaces, which is one of the few pieces of URL guidance Google has stated explicitly." },
+    { "q": "Should I change my URLs for SEO?", "a": "Change a URL for SEO only when the benefit is structural, such as removing tracking parameters, stripping date-based paths, or fixing a genuinely misleading slug. Do not change a URL for cosmetic reasons like adding one more keyword, because a page that already ranks risks losing its links and rankings if the migration is botched. When you do change a URL, always add a 301 redirect from the old address and update internal links, the sitemap, and canonical tags." },
+    { "q": "How long should a URL be?", "a": "A URL should be as short as possible while still describing the page, ideally under 60 characters with a slug of three to five words. Short URLs display fully in search results instead of being truncated, and they are easier to share, paste, and cite. Trim stop words, dates, and internal product codes to keep the slug focused on the primary keyword." }
+  ],
+  "faqs": [
+    { "q": "Do subfolders or subdomains matter for URL structure?", "a": "Subfolders and subdomains are treated differently, and for most content a subfolder like example.com/blog concentrates authority on one domain better than a subdomain like blog.example.com. Google can associate a subdomain with the main domain, but the relationship is weaker and less predictable. Prefer subfolders unless you have a specific technical reason, such as a separately hosted application, to use a subdomain." },
+    { "q": "Should URLs end with a trailing slash?", "a": "A URL with a trailing slash and one without it are technically different addresses, so the important thing is consistency, not which form you choose. Pick one convention across the whole site and 301-redirect the other form to it so you never serve the same content at both. Mixing the two creates duplicate URLs that split ranking signals." },
+    { "q": "Does URL structure affect AI search citations?", "a": "URL structure affects AI search citations because engines like ChatGPT, Perplexity, and Google AI Overviews surface the raw link when they cite a source. A clean, readable URL is more likely to be displayed and clicked than a parameter-stuffed one, and it helps the engine attribute the citation to your preferred address. Long or duplicated URLs can cause an AI engine to cite a variant of your page instead of the canonical version." }
+  ],
+  "relatedKeywords": ["SEO-friendly URL structure", "URL best practices for SEO", "clean URL slugs", "URL length SEO", "hyphens vs underscores in URLs", "changing URLs for SEO"],
+  "internalLinks": [
+    { "href": "/", "anchor": "Run a free SEO + GEO audit" },
+    { "href": "/check", "anchor": "All 40+ SEO/GEO checks" },
+    { "href": "/blog/what-is-a-canonical-tag", "anchor": "What Is a Canonical Tag?" },
+    { "href": "/blog/301-vs-302-redirects", "anchor": "301 vs 302 redirects" },
+    { "href": "/blog/what-is-technical-seo", "anchor": "What Is Technical SEO?" }
+  ]
+}

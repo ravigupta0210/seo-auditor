@@ -1,0 +1,136 @@
+{
+  "slug": "how-to-do-seo-competitor-analysis",
+  "title": "How to Do SEO Competitor Analysis (2026 Guide)",
+  "date": "2026-07-02",
+  "updatedAt": "2026-07-02",
+  "tag": "SEO",
+  "cluster": "content-links",
+  "keyword": "SEO competitor analysis",
+  "secondaryKeywords": ["content gap analysis", "competitor keyword research", "search competitors", "free SEO tools"],
+  "readTime": 9,
+  "excerpt": "A free-first process to find your real search competitors, analyze them, and win the content gaps.",
+  "description": "SEO competitor analysis in 2026: find your real search competitors, analyze their keywords, content, and backlinks, then win the gaps you can take.",
+  "tldr": "SEO competitor analysis is a 5-step process: find your real search competitors (the sites ranking for your target queries, not your business rivals), then analyze their keywords, content, and backlinks to find gaps you can win faster. You can do 80% of it free with Google, Search Console, and a few browser tools.",
+  "status": "published",
+  "sections": [
+    {
+      "heading": "SEO competitor analysis in one pass",
+      "body": [
+        "SEO competitor analysis is the process of identifying the websites that outrank you for the queries you care about, then reverse-engineering why they win so you can find and close the gaps. It answers three questions: who actually competes with you in search, what keywords and content earn them rankings, and where the openings are that you can realistically take. Your search competitors are usually not your business competitors — the site beating you for \"best project management software\" might be a blog, not a rival product.",
+        "The single biggest mistake is analyzing the wrong competitors. If you obsess over a giant brand you will never outrank, you waste months. The goal is to find sites at or slightly above your level that share your keywords, study what makes their pages rank, and pick the battles you can win. That prioritization step is what separates competitor analysis from competitor admiration.",
+        "You can do roughly 80% of this for free with Google search, Google Search Console, and a couple of browser extensions. Paid tools save time on backlink and keyword volume data, but they are not required to start. Here is the full five-step process, where each step feeds the next.",
+        "[[flowchart]]"
+      ]
+    },
+    {
+      "heading": "Step 1: Find your real search competitors",
+      "body": [
+        "Your real search competitors are the sites that rank on page one for the keywords you want, regardless of whether they sell what you sell. Finding them is the foundation of SEO competitor analysis, because everything downstream depends on studying the right sites.",
+        "Start free with Google. Take your 5-10 most important target keywords, search each one (use an incognito window to reduce personalization), and record the domains that appear in the top 10 for multiple terms. A domain that shows up repeatedly across your keyword set is a genuine search competitor. If you have not built a keyword list yet, do that first — see our [free keyword research guide](/blog/how-to-do-keyword-research-for-free).",
+        "Google Search Console adds a second free angle. Open the **Performance** report, find queries where you rank position 5-20, and search those queries to see who sits above you. Those are the competitors you are closest to overtaking.",
+        "> Tip: Group competitors into tiers. Tier 1 = sites at your level (realistic targets). Tier 2 = sites slightly ahead (study them). Tier 3 = giant brands (learn from them, do not chase them yet)."
+      ]
+    },
+    {
+      "heading": "Step 2: Analyze their keywords and content",
+      "body": [
+        "Analyzing a competitor's keywords means mapping which queries drive their traffic and which pages capture it, so you can see the topics they own and the ones they missed. Content analysis then explains why those pages rank — depth, structure, freshness, and format.",
+        "The free method: pick a competitor's strongest pages (often linked from their main navigation or listed in their sitemap at `/sitemap.xml`) and read them like a search engine would. Note the primary keyword in the title tag, the H1, the subheadings, the word count, and the on-page elements they use. Search the page's main keyword and check whether they hold a featured snippet or appear in AI Overviews. Free browser extensions like SEO Minion or Detailed can surface a page's headings and meta tags in one click.",
+        "Paid tools (Ahrefs, Semrush, SE Ranking) speed this up dramatically. Their \"Organic Keywords\" and \"Top Pages\" reports list every term a competitor ranks for with estimated volume and position — data you cannot get precisely for free. Most offer limited free tiers or trials worth using for a focused burst.",
+        "As you review each competitor page, ask: does it answer the query directly and early? Pages that lead with a clear answer win featured snippets and AI citations. Our [answer-first writing guide](/blog/how-to-write-seo-friendly-content) covers the structure that beats fluffy competitors."
+      ]
+    },
+    {
+      "heading": "Step 3: Analyze their backlinks",
+      "body": [
+        "Backlink analysis reveals which sites link to your competitors, why those links exist, and which of them you can realistically earn too. Backlinks remain a core ranking signal in 2026, so understanding a competitor's link profile shows you what authority you are up against and where the linkable opportunities are.",
+        "This is the area where free tools are weakest. Google removed its public link data long ago, and no free source has a complete backlink index. Free options give you a partial view: Ahrefs' free Backlink Checker shows a competitor's top 100 backlinks, and Google Search Console shows only your own links, not theirs. For a full profile you need a paid backlink index.",
+        "What to look for once you have the data: linking domains you could also get (industry directories, resource pages, roundups, guest posts, podcasts), the anchor text patterns competitors use, and any single \"linkable asset\" — a free tool, original study, or definitive guide — that earns most of their links. You can often replicate the tactic without the budget; see our [free backlinks guide](/blog/how-to-get-backlinks-for-free) for the specific plays.",
+        "Do not chase raw link counts. A handful of relevant, high-authority links beats hundreds of scraped directory links, and copying a competitor's spammy links is a fast way to hurt your own site."
+      ]
+    },
+    {
+      "heading": "Step 4: Find and prioritize content gaps",
+      "body": [
+        "A content gap is a keyword or topic your competitors rank for and you do not, representing traffic you are leaving on the table. Content gap analysis is the payoff of the whole process: it turns raw competitor data into a ranked list of pages to build.",
+        "The free method is a manual overlap check. List the strong topics you found on competitor sites in Step 2, then check which ones you have no page for (or only a weak one). Those missing or thin topics are your gaps. Paid tools automate this with a \"Content Gap\" or \"Keyword Gap\" report that compares your domain against several competitors and lists keywords they rank for that you do not — the fastest way to build the list.",
+        "[[table]]",
+        "Prioritize gaps by a simple formula: **opportunity = potential value ÷ difficulty**. Favor topics where competitors are weak (thin content, old dates, low authority), where the intent matches what you can serve, and where you already have topical relevance. A gap a Tier 1 competitor barely covers is worth ten gaps owned by a Tier 3 giant."
+      ]
+    },
+    {
+      "heading": "Step 5: Turn analysis into an action plan",
+      "body": [
+        "The final step of SEO competitor analysis is converting findings into a prioritized action plan, because analysis that never ships changes nothing. Group your findings into three buckets: content to create (net-new pages for gaps), content to improve (existing pages that trail competitors), and links to earn (replicable backlink opportunities).",
+        "Before you write, audit your own site against the standards you saw winning. Run your key pages through a [free SEO and GEO audit](/) to check titles, meta descriptions, schema, and answer-first structure in seconds — the same signals you were grading competitors on. Then close each gap deliberately:",
+        "- **Create** the missing pages, targeting one clear intent each and leading with a direct answer.\n- **Improve** trailing pages by matching or beating competitor depth, adding schema, and updating stale dates.\n- **Earn** links by replicating the tactics behind your competitors' best backlinks.",
+        "Revisit the analysis quarterly. Search results shift, competitors publish, and new gaps open constantly — competitor analysis is a loop, not a one-time project."
+      ]
+    }
+  ],
+  "flowchart": {
+    "title": "The 5-step SEO competitor analysis process",
+    "steps": [
+      { "title": "Find real search competitors", "detail": "Search your target keywords and record the domains that rank on page one for multiple terms." },
+      { "title": "Analyze keywords and content", "detail": "Map which queries and pages drive their traffic, and study why those pages rank." },
+      { "title": "Analyze backlinks", "detail": "Review which sites link to competitors and identify links you can realistically earn too." },
+      { "title": "Find content gaps", "detail": "List topics competitors rank for that you do not cover, or cover weakly." },
+      { "title": "Prioritize and act", "detail": "Rank gaps by value-over-difficulty, then create, improve, and earn accordingly." }
+    ]
+  },
+  "comparisonTable": {
+    "caption": "What free vs paid tools reveal in competitor analysis",
+    "headers": ["Analysis task", "Free tools show", "Paid tools add"],
+    "rows": [
+      ["Find competitors", "Manual Google search + Search Console", "Auto competitor lists by keyword overlap"],
+      ["Competitor keywords", "Read their pages, titles, and headings", "Full keyword list with volume and position"],
+      ["Content gaps", "Manual topic overlap check", "One-click keyword-gap report across rivals"],
+      ["Backlinks", "Top ~100 links (Ahrefs free checker)", "Complete link profile, anchors, and history"],
+      ["Time required", "Hours of manual work", "Minutes with automated reports"]
+    ]
+  },
+  "peopleAlsoAsk": [
+    {
+      "q": "How do I find my SEO competitors?",
+      "a": "Find your SEO competitors by searching your 5-10 most important target keywords in an incognito Google window and recording the domains that appear in the top 10 for multiple terms. A domain that ranks repeatedly across your keyword set is a real search competitor, even if it is not a business rival. Google Search Console adds a second free source: check queries where you rank position 5-20 and see who sits above you."
+    },
+    {
+      "q": "How do I analyze a competitor's keywords?",
+      "a": "Analyze a competitor's keywords by identifying their strongest pages (often in their navigation or /sitemap.xml) and noting the primary keyword in each title tag, H1, and subheadings. Free browser extensions like SEO Minion reveal a page's headings and meta tags in one click. Paid tools such as Ahrefs and Semrush go further, listing every keyword a competitor ranks for with estimated volume and position."
+    },
+    {
+      "q": "Can I do competitor analysis for free?",
+      "a": "Yes, you can do roughly 80% of SEO competitor analysis for free using Google search, Google Search Console, and browser extensions. Free methods cover finding competitors, reading their content, and spotting content gaps manually. The main limitation is backlink data: no free source has a complete link index, so a paid tool is needed for a full backlink profile."
+    },
+    {
+      "q": "What is a content gap?",
+      "a": "A content gap is a keyword or topic that your competitors rank for but you do not cover, or cover only with a thin page. Content gaps represent search traffic you are missing and are the main output of competitor analysis. You find them by comparing the topics competitors own against your own site, then prioritizing the gaps you can realistically win."
+    },
+    {
+      "q": "How often should I do competitor analysis?",
+      "a": "Do a full SEO competitor analysis quarterly, and a lighter check monthly using Google Search Console. Search results shift constantly as competitors publish new content and earn new links, so a one-time analysis goes stale fast. Treating it as a recurring loop keeps your action plan aligned with the current SERP."
+    }
+  ],
+  "faqs": [
+    {
+      "q": "Are my business competitors the same as my SEO competitors?",
+      "a": "Often not. SEO competitors are the sites that rank for your target keywords, which frequently include blogs, publishers, and aggregators rather than your direct business rivals. Always identify competitors from the search results themselves, not from your sales team's list of rivals."
+    },
+    {
+      "q": "Which free tools are best for SEO competitor analysis?",
+      "a": "The most useful free tools are Google search and its People Also Ask boxes, Google Search Console for your own ranking data, and Ahrefs' free Backlink Checker for a partial link view. Browser extensions like SEO Minion or Detailed expose a competitor page's headings and meta tags instantly. Together these cover finding competitors, analyzing content, and spotting gaps without any subscription."
+    },
+    {
+      "q": "How many competitors should I analyze?",
+      "a": "Focus on three to five direct search competitors at or slightly above your level, rather than tracking every site on the SERP. A small, well-chosen set keeps the analysis actionable and the gaps realistic. Giant brands are worth studying for tactics but are rarely worth trying to outrank early on."
+    }
+  ],
+  "relatedKeywords": ["content gap analysis", "competitor keyword research", "how to find search competitors", "free competitor analysis tools", "backlink gap analysis", "SERP competitor research"],
+  "internalLinks": [
+    { "href": "/", "anchor": "Run a free SEO + GEO audit" },
+    { "href": "/blog/how-to-do-keyword-research-for-free", "anchor": "How to do keyword research for free" },
+    { "href": "/blog/how-to-get-backlinks-for-free", "anchor": "How to get backlinks for free" },
+    { "href": "/blog/how-to-do-an-seo-audit", "anchor": "How to do an SEO audit" },
+    { "href": "/blog/how-to-write-seo-friendly-content", "anchor": "How to write SEO-friendly content" }
+  ]
+}

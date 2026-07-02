@@ -1,0 +1,144 @@
+{
+  "slug": "why-is-my-page-not-indexed",
+  "title": "Why Is My Page Not Indexed? (2026 Fixes)",
+  "date": "2026-07-02",
+  "updatedAt": "2026-07-02",
+  "tag": "Technical SEO",
+  "cluster": "technical-seo",
+  "keyword": "why is my page not indexed",
+  "secondaryKeywords": ["page not indexed", "discovered currently not indexed", "crawled currently not indexed", "how to get google to index my page"],
+  "readTime": 9,
+  "excerpt": "Your page isn't indexed for one of seven reasons. Here's how to diagnose each in Search Console and fix it fast.",
+  "description": "Why is my page not indexed? The 7 causes — noindex, robots.txt blocks, canonicals, thin content, discovery — and how to diagnose each in Google Search Console.",
+  "tldr": "If you are asking why is my page not indexed, the cause is almost always one of seven things: a noindex tag, a robots.txt block, a canonical pointing elsewhere, thin or duplicate content, no internal or external links (Google never discovered it), crawl budget waste, or a sitemap/status error. Use Google Search Console's URL Inspection tool to read the exact status label, then fix that specific cause.",
+  "status": "published",
+  "sections": [
+    {
+      "heading": "Why Your Page Is Not Indexed: The 7 Real Causes",
+      "body": [
+        "A page is not indexed when it does not appear in Google's index, which means it can never rank or receive organic traffic no matter how good the content is. When people ask *why is my page not indexed*, the answer is almost always one of seven concrete causes, and each one produces a different status label inside Google Search Console. Guessing wastes weeks; reading the label takes thirty seconds.",
+        "Here are the seven causes, roughly in order of how often they trip people up:",
+        "- **No links to the page** — Google never discovered the URL because nothing (no sitemap, no internal link, no backlink) points to it.",
+        "- **A `noindex` tag** — a meta robots tag or `X-Robots-Tag` HTTP header is explicitly telling Google to keep the page out.",
+        "- **A robots.txt block** — the URL is disallowed, so Googlebot cannot crawl it to see the content.",
+        "- **A canonical pointing elsewhere** — the page tells Google \"the real version is over there,\" so Google indexes the other URL instead.",
+        "- **Thin or duplicate content** — Google crawled the page, decided it adds nothing new, and chose not to index it (the dreaded *Crawled – currently not indexed*).",
+        "- **Crawl budget waste** — on large sites, Googlebot spends its fetches on junk URLs and never reaches your important page.",
+        "- **A status or sitemap error** — the page returns a 404, 5xx, redirect, or soft 404, so there is nothing valid to index.",
+        "The fastest path is to stop theorizing and let Search Console tell you which one you are dealing with. The rest of this guide walks the diagnosis in order."
+      ]
+    },
+    {
+      "heading": "Diagnose It in Google Search Console First",
+      "body": [
+        "Google Search Console is the only source of truth for indexing status — third-party tools estimate, but Search Console reports what Google actually decided. Open the property for your site, paste the full URL into the **URL Inspection** bar at the top, and press enter. Within a few seconds you get a verdict: *URL is on Google*, *URL is not on Google*, or *URL is on Google, but has issues*.",
+        "The URL Inspection panel is the single most useful screen for this problem. It shows the **coverage status** (the exact label like *Discovered – currently not indexed*), whether crawling is **allowed**, whether indexing is **allowed**, the **user-declared canonical** versus the **Google-selected canonical**, and the date of the last crawl. Read all five before touching anything.",
+        "For a site-wide view, open the **Pages** report (formerly *Coverage*) under Indexing. The *Not indexed* section groups every excluded URL by reason, so you can see whether the problem is one page or a pattern across hundreds. If you have never used the tool, our [how to use Google Search Console](/blog/how-to-use-google-search-console) walkthrough covers setup and verification.",
+        "> Rule of thumb: never apply a fix until the URL Inspection label tells you which of the seven causes you have. A `noindex` fix does nothing if the real problem is a robots.txt block.",
+        "Once you know the label, follow the flowchart below to the specific fix."
+      ]
+    },
+    {
+      "heading": "The Diagnosis Flowchart",
+      "body": [
+        "This flowchart maps the URL Inspection result to the underlying cause and the exact fix. Work through it top to bottom — each step assumes the previous one passed.",
+        "[[flowchart]]",
+        "The two labels that confuse people most are *Discovered – currently not indexed* and *Crawled – currently not indexed*, so it is worth being precise about the difference (covered in the People Also Ask section below). One means Google knows the URL exists but has not fetched it yet; the other means Google fetched it and chose not to keep it."
+      ]
+    },
+    {
+      "heading": "Fixing Each Cause",
+      "body": [
+        "Each indexing cause has a distinct fix, and the table below maps the Search Console label to the action that resolves it. Match your label first, then apply only that fix.",
+        "[[table]]",
+        "A few fixes deserve extra detail:",
+        "- **`noindex`** — check the raw HTML for `<meta name=\"robots\" content=\"noindex\">` and check the HTTP response for an `X-Robots-Tag: noindex` header. Staging sites and CMS defaults are the usual culprits. Remove the tag, then request indexing.",
+        "- **robots.txt block** — a disallowed URL cannot be crawled, so Google cannot even read a `noindex` on it. Confirm the block in the URL Inspection \"Crawl allowed?\" line. See [what is robots.txt](/blog/what-is-robots-txt) for the exact syntax and common mistakes.",
+        "- **Canonical mismatch** — if the *Google-selected canonical* differs from your *user-declared canonical*, Google is indexing a different URL. Make sure the page's canonical tag points to itself unless you genuinely want it consolidated. See [what is a canonical tag](/blog/what-is-a-canonical-tag).",
+        "- **Thin or duplicate content** — *Crawled – currently not indexed* is Google's polite way of saying the page is not worth a slot. Add depth, original data, or a clear answer, then consolidate near-duplicates. Our guide on [how to fix duplicate content](/blog/how-to-fix-duplicate-content) covers consolidation.",
+        "After any fix, click **Request Indexing** in URL Inspection. Do not spam it — one request per real change is enough."
+      ]
+    },
+    {
+      "heading": "Brand-New Site or Page: It's Usually Discovery",
+      "body": [
+        "A brand-new page most often fails to index because Google has simply never discovered it — there is no link path leading Googlebot to the URL. Google finds pages by following links and reading sitemaps; a page with zero internal links and zero backlinks is effectively invisible, and requesting indexing once is not a durable substitute for real discovery signals.",
+        "For new sites, do these three things in order:",
+        "1. **Submit an XML sitemap** in Search Console so Google has an explicit list of your URLs. Our guide on [how to create an XML sitemap](/blog/how-to-create-an-xml-sitemap) shows the format.",
+        "2. **Add internal links** from pages Google already crawls (your homepage, a hub page) to the new page. Orphan pages get ignored — see [what is internal linking](/blog/what-is-internal-linking).",
+        "3. **Earn at least one external link** so Google has an independent reason to crawl and trust the URL.",
+        "New domains also sit in a discovery-and-trust ramp for weeks — this is normal, not a bug. If your whole site is new, work through [how to rank a new website](/blog/how-to-rank-a-new-website) rather than obsessing over a single URL. And if you want a fast, free check of the technical signals that block indexing (noindex, robots, canonicals, status codes), [run a free SEO + GEO audit](/) or dig into all [40+ checks](/check)."
+      ]
+    }
+  ],
+  "flowchart": {
+    "title": "How to Diagnose a Page That Won't Index",
+    "steps": [
+      { "title": "Run URL Inspection in Search Console", "detail": "Paste the full URL into the top bar and read the coverage status label plus the crawl/index-allowed lines." },
+      { "title": "Is crawling blocked by robots.txt?", "detail": "If \"Crawl allowed?\" says No, remove the Disallow rule for that path in robots.txt, then re-inspect." },
+      { "title": "Is there a noindex tag or header?", "detail": "If \"Indexing allowed?\" says No, remove the meta robots noindex or X-Robots-Tag noindex from the page." },
+      { "title": "Does the canonical point elsewhere?", "detail": "If the Google-selected canonical differs from your page, fix the canonical tag to point to the correct URL." },
+      { "title": "Was it Crawled – currently not indexed?", "detail": "Treat it as a quality signal: strengthen the content, remove duplicates, and add original value." },
+      { "title": "Was it Discovered or never found?", "detail": "Submit a sitemap, add internal links, and earn a backlink so Google can find and prioritize the URL." }
+    ]
+  },
+  "comparisonTable": {
+    "caption": "Search Console indexing labels mapped to cause and fix",
+    "headers": ["Search Console label", "What it means", "The fix"],
+    "rows": [
+      ["Excluded by 'noindex' tag", "A meta robots or X-Robots-Tag is blocking indexing", "Remove the noindex tag/header, then request indexing"],
+      ["Blocked by robots.txt", "Googlebot is disallowed from crawling the URL", "Remove the Disallow rule for that path in robots.txt"],
+      ["Alternate page with proper canonical tag", "The page canonicalizes to a different URL", "Point the canonical to the page itself if it should rank"],
+      ["Duplicate, Google chose different canonical", "Google picked another URL as the primary version", "Consolidate duplicates or clarify the correct canonical"],
+      ["Crawled – currently not indexed", "Google fetched the page but judged it low-value", "Improve depth, originality, and answer quality"],
+      ["Discovered – currently not indexed", "Google knows the URL but hasn't crawled it yet", "Add links, submit sitemap, reduce crawl waste"],
+      ["Not found (404) / Soft 404", "The URL returns an error or thin near-empty page", "Fix the status code or add real content, then re-submit"]
+    ]
+  },
+  "peopleAlsoAsk": [
+    {
+      "q": "Why is my page not showing on Google?",
+      "a": "A page does not show on Google when it is not in Google's index, and the cause is usually a noindex tag, a robots.txt block, a canonical pointing to another URL, thin content, or the fact that Google never discovered the URL. Paste the URL into Search Console's URL Inspection tool to see the exact reason. Not showing for a specific search term is a different, ranking problem — the page can be indexed yet rank too low to be seen."
+    },
+    {
+      "q": "How long does indexing take?",
+      "a": "Indexing can take anywhere from a few hours to several weeks, and there is no guaranteed timeline. Established sites with strong internal linking and a submitted sitemap often see new pages indexed within a day or two, while brand-new domains can wait weeks because Google is still building trust and crawl demand. Submitting the URL in Search Console and adding internal links speeds discovery, but does not force indexing."
+    },
+    {
+      "q": "How do I get Google to index my page?",
+      "a": "To get Google to index a page, first confirm it is crawlable and indexable — no robots.txt block, no noindex tag, and a self-referencing canonical. Then submit an XML sitemap, add internal links from already-indexed pages, and use the Request Indexing button in Search Console's URL Inspection tool. If the page was Crawled – currently not indexed, indexing usually requires improving the content quality, not just re-requesting."
+    },
+    {
+      "q": "What does \"Discovered - currently not indexed\" mean?",
+      "a": "\"Discovered – currently not indexed\" means Google knows the URL exists (it found it in a sitemap or link) but has not crawled it yet, often because of crawl-budget or perceived-priority limits. It differs from \"Crawled – currently not indexed,\" where Google fetched the page and chose not to index it for quality reasons. Fix the Discovered status by adding internal links, reducing low-value crawlable URLs, and improving overall site quality signals."
+    },
+    {
+      "q": "Can a page be crawled but not indexed?",
+      "a": "Yes, a page can be crawled but not indexed, and Search Console labels this exact state \"Crawled – currently not indexed.\" It means Googlebot fetched the page successfully but decided the content was not worth a spot in the index, usually because it is thin, duplicative, or adds nothing new. The fix is content quality — add original depth and consolidate near-duplicate pages rather than repeatedly requesting indexing."
+    }
+  ],
+  "faqs": [
+    {
+      "q": "Does requesting indexing guarantee my page gets indexed?",
+      "a": "Requesting indexing in Search Console does not guarantee a page gets indexed — it only asks Google to prioritize crawling the URL. If the page has a noindex tag, a robots.txt block, or thin content, Google will crawl it and still exclude it. Fix the underlying cause first, then request indexing so the recrawl sees the corrected page."
+    },
+    {
+      "q": "Why is my page indexed but showing 'has issues' in Search Console?",
+      "a": "A page marked \"URL is on Google, but has issues\" is indexed and eligible to rank, but has a non-blocking problem such as mobile usability warnings, structured-data errors, or Core Web Vitals issues. The page still appears in search, so the issue does not require an indexing fix. Address the flagged problem to protect ranking and eligibility for rich results."
+    },
+    {
+      "q": "How many pages can I request indexing for per day?",
+      "a": "Google applies a daily quota to the Request Indexing button in Search Console, typically allowing only a handful of manual submissions per day per property. For bulk indexing, rely on a submitted XML sitemap and strong internal linking rather than manual requests. Manual requests are best saved for a single page you just fixed and want recrawled quickly."
+    }
+  ],
+  "relatedKeywords": ["discovered currently not indexed fix", "crawled currently not indexed", "get google to index page", "page not showing on google", "search console url inspection", "google not indexing my site"],
+  "internalLinks": [
+    { "href": "/", "anchor": "Run a free SEO + GEO audit" },
+    { "href": "/blog/how-to-use-google-search-console", "anchor": "How to use Google Search Console" },
+    { "href": "/blog/what-is-robots-txt", "anchor": "What is robots.txt" },
+    { "href": "/blog/how-to-rank-a-new-website", "anchor": "How to rank a new website" },
+    { "href": "/blog/what-is-a-canonical-tag", "anchor": "What is a canonical tag" },
+    { "href": "/blog/how-to-create-an-xml-sitemap", "anchor": "How to create an XML sitemap" },
+    { "href": "/check", "anchor": "All 40+ SEO/GEO checks" }
+  ]
+}

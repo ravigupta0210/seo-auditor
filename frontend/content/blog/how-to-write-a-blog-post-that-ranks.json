@@ -1,0 +1,142 @@
+{
+  "slug": "how-to-write-a-blog-post-that-ranks",
+  "title": "How to Write a Blog Post That Ranks (2026 Guide)",
+  "date": "2026-07-02",
+  "updatedAt": "2026-07-02",
+  "tag": "SEO",
+  "cluster": "content-links",
+  "keyword": "how to write a blog post that ranks",
+  "secondaryKeywords": ["long-tail keyword", "search intent", "answer-first writing", "on-page SEO"],
+  "readTime": 9,
+  "excerpt": "A repeatable 6-step process to write a blog post that ranks in Google and gets cited by AI in 2026.",
+  "description": "Learn how to write a blog post that ranks in 2026: pick a long-tail keyword and intent, outline with headers, answer first, add depth, links, and a GEO pass.",
+  "tldr": "To write a blog post that ranks in 2026, follow a 6-step process: pick one long-tail keyword and confirm its intent, outline with question-style H2 headers, open with a direct answer in the first 100 words, add depth with examples and internal links, cover on-page basics, then run a GEO pass so AI engines can cite it.",
+  "status": "published",
+  "sections": [
+    {
+      "heading": "The repeatable process to write a blog post that ranks",
+      "body": [
+        "Knowing how to write a blog post that ranks is not about talent or word count. It is about running the same six-step process every time: pick one long-tail keyword and confirm its intent, outline with question-style headers, open with a direct answer, add depth and internal links, cover the on-page basics, then run a GEO pass so AI engines can quote you. Follow those steps in order and a post has the structure both Google and answer engines reward — miss a step and even great writing gets buried.",
+        "The reason a process beats inspiration is that ranking is mostly structural. Google and AI tools like ChatGPT, Perplexity, and Google AI Overviews do not read your post the way a human does; they parse the title, headings, and opening sentences to decide what the page is about and whether it answers a query. A repeatable process guarantees those signals are in place on every post, so you stop gambling on whether a given article happens to be crawlable and citable.",
+        "Here is the full workflow at a glance. Every step exists because it fixes one specific reason posts fail to rank:",
+        "[[flowchart]]",
+        "Run the flowchart top to bottom. The order matters: keyword and intent come first because they determine your title and headings, and the GEO pass comes last because it polishes content that already exists. The rest of this guide walks through each step with the decisions that actually move rankings."
+      ]
+    },
+    {
+      "heading": "Step 1-2: Pick a long-tail keyword and confirm intent",
+      "body": [
+        "A blog post that ranks starts with one long-tail keyword you can realistically win, not a broad head term. Broad phrases like \"SEO\" or \"marketing\" are dominated by sites with years of authority. A long-tail phrase such as \"how to write a blog post that ranks\" is specific, has clearer intent, and faces far less competition — which is why new and mid-size sites should target it first. Learn the full method in [how to target long-tail keywords](/blog/how-to-target-long-tail-keywords).",
+        "Once you have the phrase, confirm the search intent before outlining a single header. Search intent is the reason behind the query — what the searcher actually wants — and matching it is the single biggest factor in whether a post ranks. A flawless article that answers the wrong question will not rank, no matter how well written. The four intent types each demand a different page shape:",
+        "- **Informational** (\"how to write a blog post that ranks\") wants a guide or walkthrough.",
+        "- **Navigational** (\"wordpress login\") wants a specific page, not an article.",
+        "- **Commercial** (\"best blogging platforms\") wants a comparison or list.",
+        "- **Transactional** (\"buy ahrefs plan\") wants a pricing or product page.",
+        "The fastest way to confirm intent is to **search the keyword yourself and study the top 10 results**. If the first page is all step-by-step guides, write a guide; if it is all listicles, the intent is commercial and an essay will not rank. The SERP is the answer key. For a deeper breakdown, read [what is search intent](/blog/what-is-search-intent).",
+        "> One post, one primary keyword, one intent. Trying to rank a single post for three different queries usually means it ranks for none."
+      ]
+    },
+    {
+      "heading": "Step 3-4: Outline with headers, answer first, then add depth",
+      "body": [
+        "The outline is where a blog post that ranks is won or lost. Build it from question-style H2 headers that mirror how people actually search — \"How long should a blog post be?\" beats a clever label like \"Going the distance.\" Question headers double as the map that AI answer engines parse to locate a citable passage, and they are what win featured snippets and AI Overview mentions. Plan your H1 to match intent, then three to six H2s that each cover one sub-question.",
+        "**Answer first** is the highest-leverage habit in 2026. Open the post — and every section — with a direct, self-contained sentence that names the subject and answers the question, then add the supporting detail. AI tools lift a single passage out of context to build an answer, so each opener has to stand on its own. A section that begins \"This is important because...\" gives a model nothing to quote; one that begins \"The outline is where a blog post that ranks is won or lost...\" is instantly citable.",
+        "After the structure is set, **add depth**. Depth means specifics competitors leave out: real examples, numbers, a short process, a comparison, an edge case. This is where you earn the ranking, because Google and AI engines both favor the most complete answer to a query. Support your points with contextual internal links to related guides — aim for three to five per post using descriptive anchor text, following the principles in [internal linking](/blog/what-is-internal-linking).",
+        "Length follows depth, not the other way around. Write enough to answer the question completely and no more. A focused 1,000-word post that covers the topic beats a padded 3,000-word post every time. The full writing craft, from keyword placement to readability, is covered in [how to write SEO-friendly content](/blog/how-to-write-seo-friendly-content)."
+      ]
+    },
+    {
+      "heading": "Step 5-6: On-page basics and the GEO pass",
+      "body": [
+        "On-page basics are the mechanical signals that let search engines connect your post to a query. Before publishing, confirm five things are true: the primary keyword sits in the title tag, the H1, and the first 100 words; the URL slug is short and keyword-bearing; the meta description is written (not auto-generated); the featured image has descriptive alt text; and every internal link works. These are quick to check and expensive to skip — a missing [title tag](/blog/what-is-a-title-tag) or [meta description](/blog/what-is-a-meta-description) can quietly cap a post's ranking.",
+        "The GEO pass is the 2026 step most writers still miss. Generative engine optimization means structuring content so AI answer engines can extract and cite it, and it comes down to three checks: does each section open with a standalone answer that survives being read in isolation — a core [generative engine optimization](/blog/what-is-generative-engine-optimization) principle — is the author and expertise visible for E-E-A-T, and can AI crawlers actually reach the page. Skip the GEO pass and you rank in classic search but stay invisible in ChatGPT and AI Overviews — a growing share of traffic.",
+        "Here is how the pre-publish and GEO checks compare, and when each one matters:",
+        "[[table]]",
+        "The fastest way to run both passes is to audit the published URL. Paste it into the [free SEO + GEO audit on the homepage](/) and it flags missing on-page tags plus GEO issues like weak direct answers, blocked AI bots, and missing author info in one pass. Fix what it surfaces, and the post ships with every ranking and citation signal in place."
+      ]
+    },
+    {
+      "heading": "Publish, then measure and refresh",
+      "body": [
+        "Publishing is the middle of the process, not the end. A blog post that ranks usually takes weeks to months to climb, so submit the URL in Google Search Console, confirm it is indexed, and then track its position and impressions over time. Rankings rarely appear overnight; watch the trend, not the first-day numbers, using the workflow in [how to use Google Search Console](/blog/how-to-use-google-search-console).",
+        "The highest-return work happens after publishing. Once a post has data, look for pages ranking on page two — positions 11 to 20 — because those are closest to a page-one breakthrough. Refreshing an existing post by tightening the answer-first opening, adding a missing sub-question, or updating a stat almost always pays off faster than writing a brand-new article. Content that stays current also signals freshness, which matters for both Google and AI engines, as covered in [content freshness for SEO](/blog/content-freshness-for-seo).",
+        "Treat the six-step process as a loop, not a line. Write, publish, measure, refresh, repeat. Over a few dozen posts the process compounds: your internal links build topical authority, your best pages earn links and citations, and each new post ranks a little faster because the site around it is stronger."
+      ]
+    }
+  ],
+  "flowchart": {
+    "title": "The 6-step blog-writing process that ranks",
+    "steps": [
+      { "title": "Pick a long-tail keyword", "detail": "Choose one specific, low-competition phrase you can realistically win." },
+      { "title": "Confirm search intent", "detail": "Search the keyword and match the format the top 10 results already use." },
+      { "title": "Outline with question headers", "detail": "Build H2s that mirror real queries so engines can locate the answer." },
+      { "title": "Answer first, then add depth", "detail": "Open each section with a standalone answer, then support it with specifics and internal links." },
+      { "title": "Cover on-page basics", "detail": "Set the title, H1, first-100-words keyword, slug, meta description, and alt text." },
+      { "title": "Run a GEO pass", "detail": "Check island-test openers, visible author E-E-A-T, and AI-crawler access, then publish." }
+    ]
+  },
+  "comparisonTable": {
+    "caption": "On-page basics vs. the GEO pass: what each check covers",
+    "headers": ["Check", "What it covers", "Who reads it", "Where to verify"],
+    "rows": [
+      ["Title & H1 keyword", "Primary keyword in title tag and H1", "Google + AI", "View source / audit"],
+      ["First-100-words keyword", "Topic confirmed early in the body", "Google + AI", "Manual read"],
+      ["Meta description", "Written, not auto-generated, includes keyword", "Google (click-through)", "Audit tool"],
+      ["Answer-first openers", "Each section passes the island test", "AI answer engines", "Audit tool"],
+      ["Author / E-E-A-T", "Visible author and expertise signals", "Google + AI", "Audit tool"],
+      ["AI-crawler access", "GPTBot, ClaudeBot, PerplexityBot not blocked", "AI answer engines", "robots.txt / audit"]
+    ]
+  },
+  "peopleAlsoAsk": [
+    {
+      "q": "How long should a blog post be for SEO?",
+      "a": "A blog post should be exactly as long as it takes to answer the query completely — length follows depth, not a target. In practice most ranking guides land between 1,000 and 2,000 words, but a focused 1,000-word post that fully answers the question beats a padded 3,000-word one. Study the top-ranking results for your keyword; their length reveals the depth Google expects for that query."
+    },
+    {
+      "q": "How do I structure a blog post for SEO?",
+      "a": "Structure a blog post for SEO with one H1 that matches search intent, then three to six question-style H2 headers that each cover one sub-question. Open the post and every section with a direct, standalone answer in the first sentence, keep paragraphs to two to four sentences, and use bullet lists for parallel items. This structure serves both human skimmers and the AI engines that extract citable passages."
+    },
+    {
+      "q": "How many keywords per blog post?",
+      "a": "Target one primary keyword per blog post, plus a handful of related secondary phrases and synonyms used naturally. Assigning a single primary keyword to each post prevents keyword cannibalization, where two of your own pages compete for the same query and split their ranking signals. Secondary keywords belong in the body because they prove topical depth, not because a density tool told you to hit a percentage."
+    },
+    {
+      "q": "How do I get a blog post to rank?",
+      "a": "Get a blog post to rank by matching search intent, answering the question first, adding more depth than competitors, and covering the on-page basics like title, H1, and meta description. Ranking usually takes weeks to months, so submit the URL in Google Search Console, confirm indexing, and track position over time. The fastest wins come from refreshing posts already sitting on page two rather than writing new ones."
+    },
+    {
+      "q": "Does writing a blog post help it rank in AI answers?",
+      "a": "Writing a blog post can help it rank in AI answers like ChatGPT and Google AI Overviews, but only if it passes a GEO pass. Generative engine optimization means each section opens with a standalone answer, the author and expertise are visible for E-E-A-T, and AI crawlers can reach the page. A post can rank in classic Google search yet stay invisible in AI answers if those three checks fail."
+    }
+  ],
+  "faqs": [
+    {
+      "q": "How long does a new blog post take to rank?",
+      "a": "A new blog post typically takes several weeks to a few months to rank, depending on site authority and keyword competition. New sites with little authority take longer, which is why targeting low-competition long-tail keywords first is the fastest path to early rankings."
+    },
+    {
+      "q": "Do I need to update old blog posts to keep them ranking?",
+      "a": "Yes — refreshing old blog posts is one of the highest-return SEO tasks because content freshness is a ranking and AI-citation signal. Focus on posts ranking in positions 11 to 20; tightening the intro, adding a missing sub-question, or updating a stat often lifts them onto page one faster than writing a new post."
+    },
+    {
+      "q": "Can a short blog post outrank a long one?",
+      "a": "Yes, a short blog post can outrank a long one when it answers the query more directly and completely. Google and AI engines reward the most useful answer, not the longest, so a focused 900-word post that nails intent regularly beats a padded 3,000-word competitor."
+    }
+  ],
+  "relatedKeywords": [
+    "how to write blog posts that rank on Google",
+    "blog writing process for SEO",
+    "how to structure a blog post for SEO",
+    "long-tail keyword blog strategy",
+    "answer-first content writing",
+    "GEO for blog posts"
+  ],
+  "internalLinks": [
+    { "href": "/", "anchor": "Run a free SEO + GEO audit on your published post" },
+    { "href": "/blog/how-to-write-seo-friendly-content", "anchor": "How to write SEO-friendly content" },
+    { "href": "/blog/how-to-target-long-tail-keywords", "anchor": "How to target long-tail keywords" },
+    { "href": "/blog/what-is-search-intent", "anchor": "What is search intent" },
+    { "href": "/blog/what-is-generative-engine-optimization", "anchor": "What is generative engine optimization" },
+    { "href": "/blog/how-to-use-google-search-console", "anchor": "How to use Google Search Console" }
+  ]
+}

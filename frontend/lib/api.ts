@@ -79,6 +79,38 @@ export async function listRecentReports(limit = 20): Promise<RecentReport[]> {
   }
 }
 
+/** Capture an email that wants its audit report emailed to them. */
+export async function submitLead(input: { email: string; auditId?: string; url?: string }): Promise<{ ok: boolean; emailed?: boolean; error?: string }> {
+  try {
+    const res = await fetch(`${BACKEND_URL}/api/leads`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(input),
+    });
+    const data = (await res.json().catch(() => ({}))) as { emailed?: boolean; error?: string };
+    if (!res.ok) return { ok: false, error: data.error || 'Something went wrong. Please try again.' };
+    return { ok: true, emailed: data.emailed };
+  } catch {
+    return { ok: false, error: 'Network error. Please try again.' };
+  }
+}
+
+/** Send a feedback message (also emails the site owner). */
+export async function submitFeedback(input: { name?: string; email?: string; message: string; url?: string; website?: string }): Promise<{ ok: boolean; error?: string }> {
+  try {
+    const res = await fetch(`${BACKEND_URL}/api/feedback`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(input),
+    });
+    const data = (await res.json().catch(() => ({}))) as { error?: string };
+    if (!res.ok) return { ok: false, error: data.error || 'Something went wrong. Please try again.' };
+    return { ok: true };
+  } catch {
+    return { ok: false, error: 'Network error. Please try again.' };
+  }
+}
+
 export function grade(score: number): { letter: string; color: string } {
   if (score >= 90) return { letter: 'A', color: '#4ade80' };
   if (score >= 75) return { letter: 'B', color: '#86efac' };

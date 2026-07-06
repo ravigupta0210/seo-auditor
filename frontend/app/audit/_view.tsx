@@ -6,6 +6,7 @@ import Link from 'next/link';
 import { CheckCard, type Check } from './_CheckCard';
 import { ScoreRing } from '../_components/ScoreRing';
 import { SiteHeader } from '../_components/SiteHeader';
+import { EmailReportModal } from './_EmailReportModal';
 
 interface Summary {
   overall: number;
@@ -178,6 +179,8 @@ export function AuditView() {
           </div>
         )}
       </main>
+
+      {phase.kind === 'done' && <EmailReportModal auditId={phase.auditId} url={url} />}
     </>
   );
 }

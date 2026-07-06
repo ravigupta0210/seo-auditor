@@ -21,3 +21,14 @@ services:
         sync: false
       - key: RENDER_JS
         value: "0"
+      # Set these in the Render dashboard (Environment tab) — secrets, not synced.
+      - key: DATABASE_URL
+        sync: false
+      - key: SMTP_USER
+        sync: false
+      - key: SMTP_PASS
+        sync: false
+      - key: FEEDBACK_TO
+        sync: false
+      - key: APP_URL
+        sync: false

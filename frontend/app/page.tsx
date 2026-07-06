@@ -26,7 +26,7 @@ const FAQS: Array<{ q: string; a: string }> = [
   },
   {
     q: 'Do you store my audit data?',
-    a: 'Reports are kept for 7 days in memory so the shareable URL works, then auto-deleted. We don\'t persist URLs to disk, we don\'t train any model on your reports, and we don\'t sell or share data. No analytics tracking beyond Vercel\'s built-in request counters.',
+    a: 'We store the audit report so your shareable report link keeps working and so we can see which checks matter most and improve the tool. If you opt in to an emailed report, we store that email only to send it to you. We never train models on your data and never sell or share it. Providing your email is always optional — the audit works fully without it.',
   },
   {
     q: 'Can I embed the score on my own site?',

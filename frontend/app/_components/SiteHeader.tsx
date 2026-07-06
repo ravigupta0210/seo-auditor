@@ -9,6 +9,7 @@ const NAV = [
   { href: '/check', label: 'Checks' },
   { href: '/compare', label: 'Compare' },
   { href: '/blog', label: 'Blog' },
+  { href: '/feedback', label: 'Feedback' },
 ];
 
 export function SiteHeader() {

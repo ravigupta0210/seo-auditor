@@ -3,6 +3,23 @@
 import { useEffect, useState } from 'react';
 import { submitLead } from '@/lib/api';
 
+const MailIcon = () => (
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+    <rect x="3" y="5" width="18" height="14" rx="2.5" />
+    <path d="m3.5 7.5 8.5 5.5 8.5-5.5" />
+  </svg>
+);
+const CheckIcon = () => (
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.6" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+    <path d="M20 6 9 17l-5-5" />
+  </svg>
+);
+const CloseIcon = () => (
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" aria-hidden="true">
+    <path d="M18 6 6 18M6 6l12 12" />
+  </svg>
+);
+
 /**
  * Post-audit popup: nudges the visitor to get their report by email, because
  * the live results vanish when they close the tab. Fully optional — closes via
@@ -17,7 +34,6 @@ export function EmailReportModal({ auditId, url }: { auditId: string; url: strin
   const [message, setMessage] = useState('');
 
   useEffect(() => {
-    // Show shortly after the report lands, unless already handled this audit.
     let seen = false;
     try {
       seen = localStorage.getItem(storageKey) === '1';
@@ -60,8 +76,8 @@ export function EmailReportModal({ auditId, url }: { auditId: string; url: strin
       setStatus('done');
       setMessage(
         res.emailed
-          ? `Sent! Your report is on its way to ${email}.`
-          : `Thanks! We've saved your email and will send your report shortly.`,
+          ? `Your report is on its way to ${email}.`
+          : `We've saved your email and will send your report shortly.`,
       );
       try {
         localStorage.setItem(storageKey, '1');
@@ -75,111 +91,57 @@ export function EmailReportModal({ auditId, url }: { auditId: string; url: strin
   }
 
   return (
-    <div
-      onClick={dismiss}
-      role="dialog"
-      aria-modal="true"
-      aria-label="Email me this report"
-      style={{
-        position: 'fixed',
-        inset: 0,
-        background: 'rgba(0,0,0,0.55)',
-        backdropFilter: 'blur(3px)',
-        display: 'flex',
-        alignItems: 'center',
-        justifyContent: 'center',
-        padding: 20,
-        zIndex: 1000,
-      }}
-    >
-      <div
-        onClick={(e) => e.stopPropagation()}
-        className="glass-card"
-        style={{ position: 'relative', width: '100%', maxWidth: 420, padding: '28px 26px 26px', animation: 'fadeSlideUp 0.25s ease' }}
-      >
-        <button
-          onClick={dismiss}
-          aria-label="Close"
-          style={{
-            position: 'absolute',
-            top: 12,
-            right: 12,
-            width: 32,
-            height: 32,
-            borderRadius: 8,
-            border: '1px solid var(--border)',
-            background: 'var(--bg-card)',
-            color: 'var(--text-muted)',
-            cursor: 'pointer',
-            fontSize: 18,
-            lineHeight: 1,
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'center',
-          }}
-        >
-          ✕
+    <div className="modal-backdrop" onClick={dismiss} role="dialog" aria-modal="true" aria-label="Email me this report">
+      <div className="modal-card" onClick={(e) => e.stopPropagation()}>
+        <button className="modal-close" onClick={dismiss} aria-label="Close">
+          <CloseIcon />
         </button>
 
         {status === 'done' ? (
-          <div style={{ textAlign: 'center', padding: '10px 0' }}>
-            <div style={{ fontSize: 40, marginBottom: 10 }}>✅</div>
-            <h2 style={{ margin: '0 0 8px', fontSize: 19 }}>You're all set</h2>
-            <p style={{ margin: 0, fontSize: 14, color: 'var(--text-muted)' }}>{message}</p>
-            <button
-              onClick={dismiss}
-              className="btn"
-              style={{ marginTop: 18 }}
-            >
+          <div style={{ textAlign: 'center' }}>
+            <span className="modal-badge is-success">
+              <CheckIcon />
+            </span>
+            <h2 style={{ margin: '0 0 8px', fontSize: 21, letterSpacing: '-0.02em' }}>You&apos;re all set</h2>
+            <p style={{ margin: '0 auto', maxWidth: 320, fontSize: 14.5, color: 'var(--text-dim)', lineHeight: 1.55 }}>{message}</p>
+            <button onClick={dismiss} className="btn btn-primary btn-block" style={{ marginTop: 22 }}>
               Done
             </button>
           </div>
         ) : (
           <>
-            <div style={{ fontSize: 30, marginBottom: 8 }}>📩</div>
-            <h2 style={{ margin: '0 0 6px', fontSize: 20, letterSpacing: '-0.01em' }}>
-              Want this report in your inbox?
-            </h2>
-            <p style={{ margin: '0 0 16px', fontSize: 14, color: 'var(--text-muted)', lineHeight: 1.5 }}>
-              You&apos;ll lose these results when you close this tab. Enter your email and we&apos;ll send the
-              full report — no account needed. It&apos;s optional; close this if you&apos;d rather not.
+            <span className="modal-badge">
+              <MailIcon />
+            </span>
+            <h2 style={{ margin: '0 0 8px', fontSize: 22, letterSpacing: '-0.02em' }}>Want this report in your inbox?</h2>
+            <p style={{ margin: '0 0 20px', fontSize: 14.5, color: 'var(--text-dim)', lineHeight: 1.6 }}>
+              These results disappear when you close the tab. Drop your email and we&apos;ll send the full
+              report — no account needed.
             </p>
-            <form onSubmit={onSubmit} style={{ display: 'flex', flexDirection: 'column', gap: 10 }}>
+            <form onSubmit={onSubmit} style={{ display: 'flex', flexDirection: 'column', gap: 12 }}>
               <input
                 type="email"
                 required
                 autoFocus
+                className="field-input"
                 value={email}
                 onChange={(e) => {
                   setEmail(e.target.value);
                   if (status === 'error') setStatus('idle');
                 }}
                 placeholder="you@example.com"
-                style={{
-                  width: '100%',
-                  padding: '12px 14px',
-                  borderRadius: 10,
-                  border: '1px solid var(--border)',
-                  background: 'var(--bg)',
-                  color: 'var(--text)',
-                  fontSize: 15,
-                }}
+                aria-label="Your email address"
               />
               {status === 'error' && (
-                <p style={{ margin: 0, fontSize: 13, color: 'var(--error)' }}>{message}</p>
+                <p style={{ margin: '-2px 0 0', fontSize: 13, color: 'var(--error)' }}>{message}</p>
               )}
-              <button
-                type="submit"
-                className="btn btn-primary"
-                disabled={status === 'sending'}
-                style={{ justifyContent: 'center', opacity: status === 'sending' ? 0.7 : 1 }}
-              >
-                {status === 'sending' ? <span className="spinner" /> : null}
+              <button type="submit" className="btn btn-primary btn-block" disabled={status === 'sending'}>
+                {status === 'sending' ? <span className="spinner" style={{ marginRight: 8 }} /> : null}
                 {status === 'sending' ? 'Sending…' : 'Email me the report'}
               </button>
             </form>
-            <p style={{ margin: '12px 0 0', fontSize: 11, color: 'var(--text-muted)', textAlign: 'center' }}>
-              We&apos;ll only use it to send this report. No spam.
+            <p style={{ margin: '14px 0 0', fontSize: 11.5, color: 'var(--text-muted)', textAlign: 'center' }}>
+              🔒 Only used to send this report. No spam, ever.
             </p>
           </>
         )}

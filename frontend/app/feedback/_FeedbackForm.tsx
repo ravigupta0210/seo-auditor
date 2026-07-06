@@ -4,6 +4,12 @@ import { useState } from 'react';
 import Link from 'next/link';
 import { submitFeedback } from '@/lib/api';
 
+const CheckIcon = () => (
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.6" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+    <path d="M20 6 9 17l-5-5" />
+  </svg>
+);
+
 export function FeedbackForm() {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
@@ -38,55 +44,44 @@ export function FeedbackForm() {
 
   if (status === 'done') {
     return (
-      <div className="glass-card" style={{ padding: '32px 28px', textAlign: 'center' }}>
-        <div style={{ fontSize: 44, marginBottom: 12 }}>🙏</div>
-        <h2 style={{ margin: '0 0 8px', fontSize: 22 }}>Thanks for the feedback!</h2>
-        <p style={{ margin: '0 0 20px', color: 'var(--text-muted)', fontSize: 15 }}>
+      <div className="glass-card" style={{ padding: '40px 28px', textAlign: 'center' }}>
+        <span className="modal-badge is-success" style={{ marginBottom: 18 }}>
+          <CheckIcon />
+        </span>
+        <h2 style={{ margin: '0 0 8px', fontSize: 23, letterSpacing: '-0.02em' }}>Thanks for the feedback!</h2>
+        <p style={{ margin: '0 auto 22px', maxWidth: 380, color: 'var(--text-dim)', fontSize: 15, lineHeight: 1.6 }}>
           It landed in our inbox and we read every message. We&apos;ll get back to you if you left an email.
         </p>
-        <Link href="/" className="btn btn-primary" style={{ justifyContent: 'center' }}>
+        <Link href="/" className="btn btn-primary">
           Back to the audit tool
         </Link>
       </div>
     );
   }
 
-  const inputStyle: React.CSSProperties = {
-    width: '100%',
-    padding: '12px 14px',
-    borderRadius: 10,
-    border: '1px solid var(--border)',
-    background: 'var(--bg)',
-    color: 'var(--text)',
-    fontSize: 15,
-    fontFamily: 'inherit',
-  };
-  const labelStyle: React.CSSProperties = {
-    display: 'block',
-    fontSize: 13,
-    fontWeight: 600,
-    color: 'var(--text-dim)',
-    marginBottom: 6,
-  };
-
   return (
-    <form onSubmit={onSubmit} className="glass-card" style={{ padding: '26px 24px', display: 'flex', flexDirection: 'column', gap: 16 }}>
-      <div style={{ display: 'flex', gap: 14, flexWrap: 'wrap' }}>
+    <form onSubmit={onSubmit} className="glass-card" style={{ padding: '28px 26px', display: 'flex', flexDirection: 'column', gap: 18 }}>
+      <div style={{ display: 'flex', gap: 16, flexWrap: 'wrap' }}>
         <div style={{ flex: '1 1 180px' }}>
-          <label style={labelStyle} htmlFor="fb-name">Name <span style={{ color: 'var(--text-muted)', fontWeight: 400 }}>(optional)</span></label>
-          <input id="fb-name" style={inputStyle} value={name} onChange={(e) => setName(e.target.value)} placeholder="Your name" maxLength={120} />
+          <label className="field-label" htmlFor="fb-name">
+            Name <span className="field-optional">(optional)</span>
+          </label>
+          <input id="fb-name" className="field-input" value={name} onChange={(e) => setName(e.target.value)} placeholder="Your name" maxLength={120} />
         </div>
         <div style={{ flex: '1 1 180px' }}>
-          <label style={labelStyle} htmlFor="fb-email">Email <span style={{ color: 'var(--text-muted)', fontWeight: 400 }}>(optional)</span></label>
-          <input id="fb-email" type="email" style={inputStyle} value={email} onChange={(e) => setEmail(e.target.value)} placeholder="you@example.com" maxLength={254} />
+          <label className="field-label" htmlFor="fb-email">
+            Email <span className="field-optional">(optional)</span>
+          </label>
+          <input id="fb-email" type="email" className="field-input" value={email} onChange={(e) => setEmail(e.target.value)} placeholder="you@example.com" maxLength={254} />
         </div>
       </div>
 
       <div>
-        <label style={labelStyle} htmlFor="fb-message">Your feedback</label>
+        <label className="field-label" htmlFor="fb-message">Your feedback</label>
         <textarea
           id="fb-message"
           required
+          className="field-input"
           value={message}
           onChange={(e) => {
             setMessage(e.target.value);
@@ -95,7 +90,6 @@ export function FeedbackForm() {
           placeholder="Found a bug? Missing a check? Have an idea? Tell us anything…"
           rows={6}
           maxLength={5000}
-          style={{ ...inputStyle, resize: 'vertical', minHeight: 120 }}
         />
       </div>
 
@@ -112,13 +106,8 @@ export function FeedbackForm() {
 
       {status === 'error' && <p style={{ margin: 0, fontSize: 14, color: 'var(--error)' }}>{error}</p>}
 
-      <button
-        type="submit"
-        className="btn btn-primary"
-        disabled={status === 'sending'}
-        style={{ justifyContent: 'center', opacity: status === 'sending' ? 0.7 : 1 }}
-      >
-        {status === 'sending' ? <span className="spinner" /> : null}
+      <button type="submit" className="btn btn-primary btn-block" disabled={status === 'sending'}>
+        {status === 'sending' ? <span className="spinner" style={{ marginRight: 8 }} /> : null}
         {status === 'sending' ? 'Sending…' : 'Send feedback'}
       </button>
       <p style={{ margin: 0, fontSize: 12, color: 'var(--text-muted)', textAlign: 'center' }}>

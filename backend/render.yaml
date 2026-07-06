@@ -22,11 +22,12 @@ services:
       - key: RENDER_JS
         value: "0"
       # Set these in the Render dashboard (Environment tab) — secrets, not synced.
+      # Email goes over Brevo's HTTP API (Render free tier blocks SMTP ports).
       - key: DATABASE_URL
         sync: false
-      - key: SMTP_USER
+      - key: BREVO_API_KEY
         sync: false
-      - key: SMTP_PASS
+      - key: MAIL_FROM
         sync: false
       - key: FEEDBACK_TO
         sync: false

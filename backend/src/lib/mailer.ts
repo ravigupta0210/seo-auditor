@@ -1,56 +1,75 @@
 /**
- * Email delivery via Gmail SMTP (nodemailer).
+ * Email delivery via Brevo's HTTP API (https://api.brevo.com/v3/smtp/email).
+ *
+ * We use HTTP (port 443) instead of SMTP because Render's free tier blocks all
+ * outbound SMTP ports (25/465/587). HTTPS can't be blocked without breaking the
+ * server itself.
  *
  * Config (all optional — mailer degrades to a no-op + log when unset):
- *   SMTP_USER   Gmail address that sends (e.g. gravi5964@gmail.com)
- *   SMTP_PASS   Gmail *App Password* (16 chars, needs 2-Step Verification on)
- *   FEEDBACK_TO Where feedback notifications go (defaults to SMTP_USER)
- *   MAIL_FROM   Display From (defaults to "Free SEO Audit <SMTP_USER>")
- *   APP_URL     Public frontend origin for report links
+ *   BREVO_API_KEY  Brevo API key (Brevo → SMTP & API → API Keys)
+ *   MAIL_FROM      Verified Brevo sender. "Name <email>" or just the email.
+ *                  (Verify the address in Brevo → Senders first.)
+ *   FEEDBACK_TO    Where feedback notifications go (defaults to the sender email)
+ *   APP_URL        Public frontend origin for report links
  */
-import nodemailer from 'nodemailer';
 import { logger } from './logger.js';
 import type { AuditReport } from './store.js';
 
-const SMTP_USER = process.env.SMTP_USER?.trim();
-const SMTP_PASS = process.env.SMTP_PASS?.trim();
-const FEEDBACK_TO = process.env.FEEDBACK_TO?.trim() || SMTP_USER;
-const MAIL_FROM = process.env.MAIL_FROM?.trim() || (SMTP_USER ? `Free SEO Audit <${SMTP_USER}>` : undefined);
+const BREVO_API_KEY = process.env.BREVO_API_KEY?.trim();
 const APP_URL = (process.env.APP_URL?.trim() || 'https://freeseoaudit.vercel.app').replace(/\/$/, '');
 
-export const mailEnabled = Boolean(SMTP_USER && SMTP_PASS);
+// Parse MAIL_FROM as either "Name <email>" or a bare email address.
+function parseSender(raw: string | undefined): { name: string; email: string } | null {
+  if (!raw) return null;
+  const m = raw.match(/^\s*(.*?)\s*<([^>]+)>\s*$/);
+  if (m && m[2]) return { name: m[1] || 'Free SEO Audit', email: m[2].trim() };
+  const email = raw.trim();
+  return email ? { name: 'Free SEO Audit', email } : null;
+}
 
-const transporter = mailEnabled
-  ? nodemailer.createTransport({
-      host: 'smtp.gmail.com',
-      port: 465,
-      secure: true,
-      auth: { user: SMTP_USER, pass: SMTP_PASS },
-    })
-  : null;
+const SENDER = parseSender(process.env.MAIL_FROM);
+const FEEDBACK_TO = process.env.FEEDBACK_TO?.trim() || SENDER?.email;
+
+export const mailEnabled = Boolean(BREVO_API_KEY && SENDER);
 
 function esc(s: string): string {
   return s.replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]!));
 }
 
 async function send(opts: { to: string; subject: string; html: string; text: string; replyTo?: string }): Promise<boolean> {
-  if (!transporter) {
-    logger.warn({ to: opts.to, subject: opts.subject }, 'mailer disabled (SMTP_USER/SMTP_PASS unset) — email not sent');
+  if (!mailEnabled || !SENDER) {
+    logger.warn({ to: opts.to, subject: opts.subject }, 'mailer disabled (BREVO_API_KEY/MAIL_FROM unset) — email not sent');
     return false;
   }
+  const ac = new AbortController();
+  const timer = setTimeout(() => ac.abort(), 15_000);
   try {
-    await transporter.sendMail({
-      from: MAIL_FROM,
-      to: opts.to,
-      subject: opts.subject,
-      text: opts.text,
-      html: opts.html,
-      replyTo: opts.replyTo,
+    const res = await fetch('https://api.brevo.com/v3/smtp/email', {
+      method: 'POST',
+      headers: {
+        'api-key': BREVO_API_KEY!,
+        'content-type': 'application/json',
+        accept: 'application/json',
+      },
+      body: JSON.stringify({
+        sender: SENDER,
+        to: [{ email: opts.to }],
+        subject: opts.subject,
+        htmlContent: opts.html,
+        textContent: opts.text,
+        ...(opts.replyTo ? { replyTo: { email: opts.replyTo } } : {}),
+      }),
+      signal: ac.signal,
     });
-    return true;
-  } catch (err) {
-    logger.error({ err, to: opts.to }, 'sendMail failed');
+    if (res.status >= 200 && res.status < 300) return true;
+    const body = await res.text().catch(() => '');
+    logger.error({ status: res.status, body: body.slice(0, 500), to: opts.to }, 'Brevo send failed');
     return false;
+  } catch (err) {
+    logger.error({ err, to: opts.to }, 'Brevo send threw');
+    return false;
+  } finally {
+    clearTimeout(timer);
   }
 }
 
@@ -130,7 +149,7 @@ export async function sendFeedbackEmail(fb: {
   userAgent?: string;
 }): Promise<boolean> {
   if (!FEEDBACK_TO) {
-    logger.warn('sendFeedbackEmail: no FEEDBACK_TO/SMTP_USER configured');
+    logger.warn('sendFeedbackEmail: no FEEDBACK_TO/MAIL_FROM configured');
     return false;
   }
   const html = `<div style="font-family:-apple-system,Segoe UI,Roboto,Arial,sans-serif;max-width:560px;color:#1a1a1a">

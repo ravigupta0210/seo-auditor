@@ -22,10 +22,14 @@ services:
       - key: RENDER_JS
         value: "0"
       # Set these in the Render dashboard (Environment tab) — secrets, not synced.
-      # Email goes over Brevo's HTTP API (Render free tier blocks SMTP ports).
+      # Email goes over the Gmail API (HTTPS) — Render free tier blocks SMTP ports.
       - key: DATABASE_URL
         sync: false
-      - key: BREVO_API_KEY
+      - key: GMAIL_CLIENT_ID
+        sync: false
+      - key: GMAIL_CLIENT_SECRET
+        sync: false
+      - key: GMAIL_REFRESH_TOKEN
         sync: false
       - key: MAIL_FROM
         sync: false

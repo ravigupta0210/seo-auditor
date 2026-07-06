@@ -1,77 +1,144 @@
 /**
- * Email delivery via Brevo's HTTP API (https://api.brevo.com/v3/smtp/email).
+ * Email delivery via the Gmail API over HTTPS.
  *
- * We use HTTP (port 443) instead of SMTP because Render's free tier blocks all
- * outbound SMTP ports (25/465/587). HTTPS can't be blocked without breaking the
- * server itself.
+ * Why not SMTP: Render's free tier blocks outbound SMTP ports (25/465/587).
+ * Why not a 3rd-party API with a @gmail.com sender: it fails DMARC → spam.
+ * The Gmail API sends over HTTPS (port 443, not blocked) *through Google as the
+ * authenticated account*, so it's fully authenticated (SPF/DKIM/DMARC pass) and
+ * lands in the inbox. Free, no custom domain needed.
  *
  * Config (all optional — mailer degrades to a no-op + log when unset):
- *   BREVO_API_KEY  Brevo API key (Brevo → SMTP & API → API Keys)
- *   MAIL_FROM      Verified Brevo sender. "Name <email>" or just the email.
- *                  (Verify the address in Brevo → Senders first.)
- *   FEEDBACK_TO    Where feedback notifications go (defaults to the sender email)
- *   APP_URL        Public frontend origin for report links
+ *   GMAIL_CLIENT_ID      OAuth 2.0 client id (Google Cloud → Credentials)
+ *   GMAIL_CLIENT_SECRET  OAuth 2.0 client secret
+ *   GMAIL_REFRESH_TOKEN  Refresh token for the sending account (gmail.send scope)
+ *   MAIL_FROM            From header, e.g. "Free SEO Audit <freeseoaudit.app@gmail.com>"
+ *                        (the email MUST be the authenticated Gmail account)
+ *   FEEDBACK_TO          Where feedback notifications go (defaults to the sender email)
+ *   APP_URL              Public frontend origin for report links
  */
 import { logger } from './logger.js';
 import type { AuditReport } from './store.js';
 
-const BREVO_API_KEY = process.env.BREVO_API_KEY?.trim();
+const CLIENT_ID = process.env.GMAIL_CLIENT_ID?.trim();
+const CLIENT_SECRET = process.env.GMAIL_CLIENT_SECRET?.trim();
+const REFRESH_TOKEN = process.env.GMAIL_REFRESH_TOKEN?.trim();
+const MAIL_FROM = process.env.MAIL_FROM?.trim() || '';
 const APP_URL = (process.env.APP_URL?.trim() || 'https://freeseoaudit.vercel.app').replace(/\/$/, '');
 
-// Parse MAIL_FROM as either "Name <email>" or a bare email address.
-function parseSender(raw: string | undefined): { name: string; email: string } | null {
-  if (!raw) return null;
-  const m = raw.match(/^\s*(.*?)\s*<([^>]+)>\s*$/);
-  if (m && m[2]) return { name: m[1] || 'Free SEO Audit', email: m[2].trim() };
-  const email = raw.trim();
-  return email ? { name: 'Free SEO Audit', email } : null;
+// Extract the bare email from a "Name <email>" or plain-email MAIL_FROM.
+function senderEmail(raw: string): string {
+  const m = raw.match(/<([^>]+)>/);
+  return (m ? m[1] : raw).trim();
 }
+const FROM_HEADER = MAIL_FROM || undefined;
+const SENDER_EMAIL = MAIL_FROM ? senderEmail(MAIL_FROM) : undefined;
+const FEEDBACK_TO = process.env.FEEDBACK_TO?.trim() || SENDER_EMAIL;
 
-const SENDER = parseSender(process.env.MAIL_FROM);
-const FEEDBACK_TO = process.env.FEEDBACK_TO?.trim() || SENDER?.email;
-
-export const mailEnabled = Boolean(BREVO_API_KEY && SENDER);
+export const mailEnabled = Boolean(CLIENT_ID && CLIENT_SECRET && REFRESH_TOKEN && FROM_HEADER);
 
 function esc(s: string): string {
   return s.replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]!));
 }
 
-async function send(opts: { to: string; subject: string; html: string; text: string; replyTo?: string }): Promise<boolean> {
-  if (!mailEnabled || !SENDER) {
-    logger.warn({ to: opts.to, subject: opts.subject }, 'mailer disabled (BREVO_API_KEY/MAIL_FROM unset) — email not sent');
-    return false;
-  }
+// --- Gmail API transport ---------------------------------------------------
+
+let cachedToken: { value: string; expiresAt: number } | null = null;
+
+async function getAccessToken(): Promise<string | null> {
+  if (cachedToken && cachedToken.expiresAt > Date.now() + 60_000) return cachedToken.value;
   const ac = new AbortController();
   const timer = setTimeout(() => ac.abort(), 15_000);
   try {
-    const res = await fetch('https://api.brevo.com/v3/smtp/email', {
+    const res = await fetch('https://oauth2.googleapis.com/token', {
       method: 'POST',
-      headers: {
-        'api-key': BREVO_API_KEY!,
-        'content-type': 'application/json',
-        accept: 'application/json',
-      },
-      body: JSON.stringify({
-        sender: SENDER,
-        to: [{ email: opts.to }],
-        subject: opts.subject,
-        htmlContent: opts.html,
-        textContent: opts.text,
-        ...(opts.replyTo ? { replyTo: { email: opts.replyTo } } : {}),
+      headers: { 'content-type': 'application/x-www-form-urlencoded' },
+      body: new URLSearchParams({
+        client_id: CLIENT_ID!,
+        client_secret: CLIENT_SECRET!,
+        refresh_token: REFRESH_TOKEN!,
+        grant_type: 'refresh_token',
       }),
       signal: ac.signal,
     });
+    if (!res.ok) {
+      logger.error({ status: res.status, body: (await res.text().catch(() => '')).slice(0, 400) }, 'Gmail token refresh failed');
+      return null;
+    }
+    const data = (await res.json()) as { access_token: string; expires_in: number };
+    cachedToken = { value: data.access_token, expiresAt: Date.now() + data.expires_in * 1000 };
+    return data.access_token;
+  } catch (err) {
+    logger.error({ err }, 'Gmail token refresh threw');
+    return null;
+  } finally {
+    clearTimeout(timer);
+  }
+}
+
+function encodeSubject(s: string): string {
+  // RFC 2047 encoded-word only when the subject has non-ASCII (e.g. an em dash).
+  // eslint-disable-next-line no-control-regex
+  if (/^[\x00-\x7F]*$/.test(s)) return s;
+  return `=?UTF-8?B?${Buffer.from(s, 'utf8').toString('base64')}?=`;
+}
+function wrap76(b64: string): string {
+  return b64.replace(/.{76}/g, '$&\r\n');
+}
+
+function buildRaw(opts: { to: string; subject: string; html: string; text: string; replyTo?: string }): string {
+  const boundary = 'mime_boundary_seoauditor';
+  const parts = [
+    `From: ${FROM_HEADER}`,
+    `To: ${opts.to}`,
+    opts.replyTo ? `Reply-To: ${opts.replyTo}` : null,
+    `Subject: ${encodeSubject(opts.subject)}`,
+    'MIME-Version: 1.0',
+    `Content-Type: multipart/alternative; boundary="${boundary}"`,
+    '',
+    `--${boundary}`,
+    'Content-Type: text/plain; charset="UTF-8"',
+    'Content-Transfer-Encoding: base64',
+    '',
+    wrap76(Buffer.from(opts.text, 'utf8').toString('base64')),
+    `--${boundary}`,
+    'Content-Type: text/html; charset="UTF-8"',
+    'Content-Transfer-Encoding: base64',
+    '',
+    wrap76(Buffer.from(opts.html, 'utf8').toString('base64')),
+    `--${boundary}--`,
+    '',
+  ].filter((l): l is string => l !== null);
+  return Buffer.from(parts.join('\r\n'), 'utf8').toString('base64url');
+}
+
+async function send(opts: { to: string; subject: string; html: string; text: string; replyTo?: string }): Promise<boolean> {
+  if (!mailEnabled) {
+    logger.warn({ to: opts.to, subject: opts.subject }, 'mailer disabled (GMAIL_* / MAIL_FROM unset) — email not sent');
+    return false;
+  }
+  const token = await getAccessToken();
+  if (!token) return false;
+  const ac = new AbortController();
+  const timer = setTimeout(() => ac.abort(), 15_000);
+  try {
+    const res = await fetch('https://gmail.googleapis.com/gmail/v1/users/me/messages/send', {
+      method: 'POST',
+      headers: { authorization: `Bearer ${token}`, 'content-type': 'application/json' },
+      body: JSON.stringify({ raw: buildRaw(opts) }),
+      signal: ac.signal,
+    });
     if (res.status >= 200 && res.status < 300) return true;
-    const body = await res.text().catch(() => '');
-    logger.error({ status: res.status, body: body.slice(0, 500), to: opts.to }, 'Brevo send failed');
+    logger.error({ status: res.status, body: (await res.text().catch(() => '')).slice(0, 500), to: opts.to }, 'Gmail API send failed');
     return false;
   } catch (err) {
-    logger.error({ err, to: opts.to }, 'Brevo send threw');
+    logger.error({ err, to: opts.to }, 'Gmail API send threw');
     return false;
   } finally {
     clearTimeout(timer);
   }
 }
+
+// --- Email content ---------------------------------------------------------
 
 function gradeLetter(score: number): string {
   if (score >= 90) return 'A';
@@ -125,7 +192,7 @@ export async function sendReportEmail(to: string, report: AuditReport): Promise<
     ${issueRows ? `<h3 style="font-size:15px;margin:18px 0 8px">Top things to fix</h3>
       <table style="width:100%;border-collapse:collapse">${issueRows}</table>` : ''}
     <p style="margin:22px 0">
-      <a href="${reportUrl}" style="background:#2563eb;color:#fff;text-decoration:none;padding:12px 22px;border-radius:8px;font-weight:600;font-size:15px;display:inline-block">View the full report →</a>
+      <a href="${reportUrl}" style="background:#2563eb;color:#fff;text-decoration:none;padding:12px 22px;border-radius:8px;font-weight:600;font-size:15px;display:inline-block">View the full report</a>
     </p>
     <p style="color:#888;font-size:12px;margin-top:24px">You asked us to email this from freeseoaudit.vercel.app. Reports are kept so this link stays live. Reply to this email with any feedback.</p>
   </div>`;
@@ -137,7 +204,7 @@ export async function sendReportEmail(to: string, report: AuditReport): Promise<
     (issues.length ? `Top things to fix:\n${issues.map((c) => `- [${c.severity}] ${c.title}`).join('\n')}\n\n` : '') +
     `View the full report: ${reportUrl}\n`;
 
-  return send({ to, subject: `Your SEO audit for ${url} — score ${score}/100`, html, text });
+  return send({ to, subject: `Your SEO audit for ${url} - score ${score}/100`, html, text });
 }
 
 /** Notify the site owner of new feedback. */
@@ -155,9 +222,9 @@ export async function sendFeedbackEmail(fb: {
   const html = `<div style="font-family:-apple-system,Segoe UI,Roboto,Arial,sans-serif;max-width:560px;color:#1a1a1a">
     <h2 style="margin:0 0 12px">New feedback on Free SEO Audit</h2>
     <table style="border-collapse:collapse;font-size:14px">
-      <tr><td style="padding:4px 10px 4px 0;color:#888">Name</td><td>${esc(fb.name || '—')}</td></tr>
-      <tr><td style="padding:4px 10px 4px 0;color:#888">Email</td><td>${esc(fb.email || '—')}</td></tr>
-      <tr><td style="padding:4px 10px 4px 0;color:#888">Page</td><td>${esc(fb.url || '—')}</td></tr>
+      <tr><td style="padding:4px 10px 4px 0;color:#888">Name</td><td>${esc(fb.name || '-')}</td></tr>
+      <tr><td style="padding:4px 10px 4px 0;color:#888">Email</td><td>${esc(fb.email || '-')}</td></tr>
+      <tr><td style="padding:4px 10px 4px 0;color:#888">Page</td><td>${esc(fb.url || '-')}</td></tr>
     </table>
     <h3 style="font-size:14px;margin:16px 0 6px">Message</h3>
     <p style="white-space:pre-wrap;font-size:15px;background:#f6f6f6;padding:12px 14px;border-radius:8px;margin:0">${esc(fb.message)}</p>
@@ -165,12 +232,12 @@ export async function sendFeedbackEmail(fb: {
   </div>`;
   const text =
     `New feedback on Free SEO Audit\n\n` +
-    `Name: ${fb.name || '—'}\nEmail: ${fb.email || '—'}\nPage: ${fb.url || '—'}\n\n` +
+    `Name: ${fb.name || '-'}\nEmail: ${fb.email || '-'}\nPage: ${fb.url || '-'}\n\n` +
     `Message:\n${fb.message}\n`;
 
   return send({
     to: FEEDBACK_TO,
-    subject: `Feedback${fb.name ? ` from ${fb.name}` : ''} — Free SEO Audit`,
+    subject: `Feedback${fb.name ? ` from ${fb.name}` : ''} - Free SEO Audit`,
     html,
     text,
     replyTo: fb.email || undefined,

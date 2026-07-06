@@ -1,0 +1,140 @@
+{
+  "slug": "how-to-do-seo-on-google",
+  "title": "How To Do SEO On Google: A Step-by-Step Guide",
+  "date": "2026-07-06",
+  "updatedAt": "2026-07-06",
+  "tag": "SEO",
+  "cluster": "seo-basics",
+  "keyword": "How to do SEO on Google",
+  "secondaryKeywords": ["Google Search Console", "get indexed by Google", "on-page SEO", "keyword research", "rank on Google"],
+  "readTime": 9,
+  "excerpt": "A practical, step-by-step guide to doing SEO on Google in 2026 — from Search Console setup and indexing to on-page, content, and links.",
+  "description": "Learn how to do SEO on Google step by step: set up Search Console, get indexed, target the right keywords, optimize on-page, and earn links and AI citations.",
+  "tldr": "To do SEO on Google, connect your site to Google Search Console and get every page indexed, target keywords that match search intent, optimize each page's title, headings, and content around one keyword, earn quality backlinks, and audit for technical and GEO issues. Google ranks the page that most completely answers a query, so match intent first, then fix the signals that prove it.",
+  "status": "published",
+  "sections": [
+    {
+      "heading": "How to do SEO on Google: the full workflow",
+      "body": [
+        "How to do SEO on Google comes down to a repeatable loop: get your pages into Google's index, target keywords real people search, make each page the most complete answer to one query, prove trust with links and E-E-A-T, then measure in Search Console and refine. Google's job is to serve the single best result for a query, so your job is to be that result — and to give Google the signals it needs to confirm it. Do those five things in order and rankings follow; skip the foundation and even great content stays invisible.",
+        "The order matters because each step unlocks the next. There is no point optimizing a page's title if Google has never crawled it, and no point chasing backlinks to a page that answers the wrong question. This guide follows the sequence Google itself rewards, from indexing through to the modern GEO step that gets you cited inside AI Overviews and ChatGPT.",
+        "Here is the entire process at a glance — run it top to bottom for any new page:",
+        "[[flowchart]]",
+        "If you are brand new to the discipline, start with the primer [what is SEO and how to start](/blog/what-is-seo-and-how-to-start) for the concepts, then come back here for the Google-specific execution. The rest of this guide walks each step with the exact settings and checks that move rankings."
+      ]
+    },
+    {
+      "heading": "Step 1: Get indexed with Google Search Console",
+      "body": [
+        "The first step in doing SEO on Google is getting your pages indexed, and the tool for that is **Google Search Console** — a free product that shows exactly how Google sees your site. Verify ownership (via a DNS record or an HTML tag), submit your `sitemap.xml`, and use the URL Inspection tool to check whether a specific page is indexed. If a page is not in the index, it literally cannot rank for anything. Full setup is covered in [how to use Google Search Console](/blog/how-to-use-google-search-console).",
+        "Indexing is not automatic or instant. Google has to discover a URL, crawl it, and decide it is worth storing — and it skips thin, duplicate, or blocked pages. The most common blockers are a `noindex` tag left in the template, a `Disallow` rule in `robots.txt`, or a canonical tag pointing somewhere else. If Search Console says \"Crawled – currently not indexed,\" the page usually needs to be more useful or better linked internally, not resubmitted.",
+        "- **Submit your sitemap** so Google can discover every page in one file.",
+        "- **Request indexing** for important new pages via URL Inspection to speed up discovery.",
+        "- **Check coverage** weekly and fix anything under \"Not indexed.\"",
+        "> If only one thing gets done this week, make it Search Console verification. You cannot improve what you cannot measure — and you cannot rank what Google hasn't indexed.",
+        "When a page refuses to index, work through the specific causes in [why is my page not indexed](/blog/why-is-my-page-not-indexed) before touching anything else."
+      ]
+    },
+    {
+      "heading": "Step 2: Target keywords and match search intent",
+      "body": [
+        "SEO on Google works only when you target keywords people actually search and match the intent behind them. A keyword is a question in disguise; ranking means giving the answer Google's users expect. Start with free keyword research to find phrases with real demand and beatable competition — the full method is in [how to do keyword research for free](/blog/how-to-do-keyword-research-for-free). For a new or mid-size site, long-tail phrases like \"how to do SEO on Google\" win faster than broad terms like \"SEO\".",
+        "Before you write, confirm the search intent — the reason behind the query. Match it and you rank; miss it and no amount of optimization saves you. The fastest check is to **Google the keyword and study the top 10 results**: their format is Google telling you what it wants. If page one is all how-to guides, a product page will never rank there. Learn to read intent in [what is search intent](/blog/what-is-search-intent), and pick winnable phrases in [how to target long-tail keywords](/blog/how-to-target-long-tail-keywords).",
+        "Assign **one primary keyword to each page**. Two pages targeting the same query is keyword cannibalization — they compete with each other and split Google's ranking signals, so neither wins. Map your keywords to pages once, and let each page own its query.",
+        "The four intent types each need a different page shape: informational wants a guide, navigational wants a specific page, commercial wants a comparison, and transactional wants a product or pricing page. Build the page Google's first page already rewards."
+      ]
+    },
+    {
+      "heading": "Step 3: Optimize on-page and technical SEO",
+      "body": [
+        "On-page SEO tells Google what each page is about, and it is the highest-leverage work you control directly. Put the primary keyword in the **title tag**, the **H1**, the **URL slug**, and the **first 100 words** of the body, then use descriptive H2s that mirror how people search. Write a compelling [meta description](/blog/what-is-a-meta-description) — it does not rank the page but it drives clicks — and give every image real alt text. The deeper craft is in [what is on-page SEO](/blog/what-is-on-page-seo) and the specifics of a [title tag](/blog/what-is-a-title-tag).",
+        "Technical SEO makes sure Google can crawl, render, and trust the page. The essentials Google weighs heaviest are: the site loads fast (Core Web Vitals), works on mobile, serves over HTTPS, and has a clean internal link structure so authority flows to important pages. A page that answers the query perfectly but takes eight seconds to load on a phone loses to a faster competitor. The full checklist lives in [what is technical SEO](/blog/what-is-technical-seo).",
+        "Depth is what earns the ranking. Google favors the most complete answer, so cover the sub-questions competitors skip — add real examples, numbers, a short process, and an edge case. Support each point with **contextual internal links** using descriptive anchor text, which both helps readers and passes ranking signals between your pages. Write for extraction, following [how to write SEO-friendly content](/blog/how-to-write-seo-friendly-content).",
+        "Before publishing, run a full [SEO audit](/blog/how-to-do-an-seo-audit) so you catch missing tags, broken links, and slow pages before Google does."
+      ]
+    },
+    {
+      "heading": "Step 4: Build authority, then measure and improve",
+      "body": [
+        "Once the page is optimized, Google needs proof it is trustworthy — and that proof is mostly **backlinks and E-E-A-T**. A backlink from a relevant, reputable site is a vote that tells Google your page deserves to rank. You do not need to buy them: earn links by creating genuinely citable content, publishing original data, and getting listed where your audience already looks. Practical, no-budget tactics are in [how to get backlinks for free](/blog/how-to-get-backlinks-for-free).",
+        "Alongside links, Google increasingly weighs **E-E-A-T** — Experience, Expertise, Authoritativeness, and Trust. Show a real author with a bio, cite sources, keep content accurate, and demonstrate first-hand experience. This matters even more for health, finance, and safety topics. Understand the signal in [what is E-E-A-T in SEO](/blog/what-is-eeat-in-seo).",
+        "Modern SEO on Google now includes the AI layer. Google AI Overviews and tools like ChatGPT and Perplexity pull answers from pages that are clearly structured and citable — this is **Generative Engine Optimization (GEO)**. To get cited, open each section with a standalone answer, keep author and E-E-A-T signals visible, and make sure AI crawlers are not blocked. Start with [how to rank in Google AI Overviews](/blog/how-to-rank-in-google-ai-overviews) and the [GEO vs SEO](/blog/geo-vs-seo) comparison.",
+        "Finally, measure and iterate. In Search Console, watch impressions, average position, and click-through rate. The fastest wins come from pages sitting in positions 11 to 20 — one refresh often pushes them onto page one, as covered in [how to rank on the first page of Google](/blog/how-to-rank-on-the-first-page-of-google). To check every ranking and GEO signal on any URL in one pass, [run a free SEO + GEO audit](/) on the homepage — no signup required."
+      ]
+    }
+  ],
+  "flowchart": {
+    "title": "How to do SEO on Google: the 5-step loop",
+    "steps": [
+      { "title": "Get indexed in Search Console", "detail": "Verify the site, submit your sitemap, and confirm each page is in Google's index." },
+      { "title": "Target keywords and intent", "detail": "Research real search phrases and match the format Google's top 10 results already reward." },
+      { "title": "Optimize on-page and technical", "detail": "Set the title, H1, first-100-words keyword, and fix speed, mobile, and crawlability." },
+      { "title": "Build authority and E-E-A-T", "detail": "Earn quality backlinks and show real author, expertise, and trust signals." },
+      { "title": "Measure and refine in GSC", "detail": "Track position and CTR, refresh page-two pages, and run a GEO pass for AI citations." }
+    ]
+  },
+  "comparisonTable": {
+    "caption": "The four levers of SEO on Google and what each one signals",
+    "headers": ["Lever", "What you do", "What it tells Google", "Where to verify"],
+    "rows": [
+      ["Indexing", "Submit sitemap, fix noindex/robots", "This page exists and is crawlable", "Search Console coverage"],
+      ["Keywords + intent", "Match top-10 format for the query", "This page answers the searcher", "Manual SERP check"],
+      ["On-page + technical", "Title, H1, speed, mobile, HTTPS", "This page is relevant and usable", "Audit tool / PageSpeed"],
+      ["Authority + E-E-A-T", "Backlinks, author, sources", "This page is trustworthy", "Backlink + audit tools"],
+      ["GEO pass", "Answer-first, unblock AI bots", "This page is citable by AI", "Free SEO + GEO audit"]
+    ]
+  },
+  "peopleAlsoAsk": [
+    {
+      "q": "How To SEO For Beginners",
+      "a": "Beginners should start by getting their site into Google Search Console, then work one page at a time: target a specific keyword, match search intent, and put that keyword in the title, H1, and first paragraph. Focus on genuinely useful content before chasing links. Our full walkthrough, [how to SEO for beginners](/blog/how-to-seo-for-beginners), covers each step in plain language with no jargon or paid tools required."
+    },
+    {
+      "q": "How Do I Do SEO On My Own",
+      "a": "You can do SEO on your own using free tools and a repeatable process. Set up Google Search Console, do free keyword research, optimize each page's on-page basics, publish helpful content, and earn a few relevant links. None of it requires a paid subscription to start. See [how to do SEO for free](/blog/how-to-do-seo-for-free) for the complete no-budget toolkit, and audit your pages on the homepage as you go."
+    },
+    {
+      "q": "What Is SEO And How To Start",
+      "a": "SEO is the practice of optimizing your site so it ranks higher in Google's unpaid results for relevant searches. To start, understand the four core areas — on-page, off-page, technical, and content — then connect Search Console, pick one keyword, and optimize a single page around it. The full beginner primer is [what is SEO and how to start](/blog/what-is-seo-and-how-to-start), which explains the pillars before you execute."
+    },
+    {
+      "q": "Can I Self Learn SEO",
+      "a": "Yes — SEO is one of the most self-teachable digital skills because the tools are free and results are measurable. Learn the fundamentals, practice on a real site, and use Search Console to see what actually moves. The feedback loop teaches faster than any course. We break down a realistic self-study path in [can I self-learn SEO](/blog/can-i-self-learn-seo), including how long it typically takes to see traction."
+    },
+    {
+      "q": "What Are The 4 Types Of SEO",
+      "a": "The four types of SEO are on-page (optimizing content and HTML on your pages), off-page (backlinks and external reputation), technical (crawlability, speed, and site structure), and content SEO (creating pages that match search intent). Strong Google performance needs all four working together — a fast, crawlable site with weak content still won't rank. See [what are the 4 types of SEO](/blog/what-are-the-4-types-of-seo) for how they fit together."
+    }
+  ],
+  "faqs": [
+    {
+      "q": "How long does SEO take to work on Google?",
+      "a": "SEO on Google typically takes three to six months to show meaningful results, and longer for new sites with little authority. Google needs time to crawl, index, and trust pages, and rankings build gradually. Targeting low-competition long-tail keywords first is the fastest way to see early traction."
+    },
+    {
+      "q": "Is SEO on Google free to do?",
+      "a": "Yes, doing SEO on Google is free — Search Console, keyword research, and on-page optimization cost nothing but time. Paid tools speed up research and reporting, but every core task can be done with free tools. The only real investment for a beginner is the effort to learn and apply the process consistently."
+    },
+    {
+      "q": "Do I need to pay Google to rank higher?",
+      "a": "No. Paying Google through Ads places you in the paid results, but it does not improve your organic (unpaid) rankings at all. SEO and Google Ads are separate systems. Organic ranking is earned entirely through relevance, quality content, technical health, and backlinks — money cannot buy an organic position."
+    }
+  ],
+  "relatedKeywords": [
+    "Which type of SEO is best",
+    "What are the 5 pillars of SEO",
+    "How many SEO tools are there",
+    "Which AI is better for SEO",
+    "Which language is best for SEO",
+    "Is SEO dead or evolving in 2026"
+  ],
+  "internalLinks": [
+    { "href": "/", "anchor": "Run a free SEO + GEO audit on any URL" },
+    { "href": "/blog/how-to-use-google-search-console", "anchor": "How to use Google Search Console" },
+    { "href": "/blog/how-to-do-keyword-research-for-free", "anchor": "How to do keyword research for free" },
+    { "href": "/blog/what-is-on-page-seo", "anchor": "What is on-page SEO" },
+    { "href": "/blog/how-to-rank-on-the-first-page-of-google", "anchor": "How to rank on the first page of Google" },
+    { "href": "/blog/how-to-rank-in-google-ai-overviews", "anchor": "How to rank in Google AI Overviews" }
+  ],
+  "images": []
+}

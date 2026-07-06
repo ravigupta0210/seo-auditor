@@ -1,0 +1,149 @@
+{
+  "slug": "how-do-i-do-seo-on-my-own",
+  "title": "How Do I Do SEO On My Own (Solo DIY Plan)",
+  "date": "2026-07-06",
+  "updatedAt": "2026-07-06",
+  "tag": "SEO",
+  "cluster": "seo-basics",
+  "keyword": "How do I do SEO on my own",
+  "secondaryKeywords": [
+    "DIY SEO",
+    "free SEO tools",
+    "weekly SEO routine",
+    "SEO without an agency",
+    "solo SEO plan"
+  ],
+  "readTime": 9,
+  "excerpt": "A realistic solo plan for how to do SEO on your own using free tools and a simple weekly routine you can run without hiring anyone.",
+  "description": "How do I do SEO on my own? Follow a beginner-friendly DIY plan using free tools and a repeatable weekly routine to research, write, optimize, and track your own site.",
+  "tldr": "You can do SEO on your own with three free tools and a five-hour weekly routine. Set up Google Search Console, find low-competition keywords with free tools, write one answer-first page a week, optimize its title and internal links, and track results in Search Console. No agency, no paid subscriptions, and no team are required — just a repeatable rhythm you keep for a few months.",
+  "status": "published",
+  "sections": [
+    {
+      "heading": "Yes, you can do SEO on your own — here's the plan",
+      "body": [
+        "How do I do SEO on my own without an agency? You do it with free tools and about five focused hours a week, following a simple loop: research a keyword, write one answer-first page, optimize its on-page basics, publish, and track the result — then repeat. SEO rewards consistency far more than budget, so a solo person who ships one good page a week for six months will out-rank someone who spent money once and stopped.",
+        "The reason this works solo is that the feedback loop is public and free. Google Search Console shows exactly which queries you rank for and where, so you never have to guess. You improve, you measure, you adjust — the same loop an agency runs, just at your own pace. If you're brand new to the concepts, skim [how to SEO for beginners](/blog/how-to-seo-for-beginners) and [can I self-learn SEO](/blog/can-i-self-learn-seo) first, then come back to this routine.",
+        "Here is the solo SEO workflow you'll repeat each week:",
+        "[[flowchart]]",
+        "Everything below fits into a beginner budget of $0. You'll set up three free tools once, then run the same weekly rhythm. The point is not to do everything at once — it's to build a habit you can actually sustain while running the rest of your business or project."
+      ]
+    },
+    {
+      "heading": "Set up your free toolkit first",
+      "body": [
+        "Before writing anything, set up three free tools that cover the entire DIY SEO loop. You do not need a paid subscription to start, and most solo site owners never need one. Get these connected in your first session:",
+        "- **Google Search Console** — free, essential, and the source of truth for how Google sees your site. Verify your domain, submit your sitemap, and use it to find keywords you already rank for. Full setup is in [how to use Google Search Console](/blog/how-to-use-google-search-console).",
+        "- **A free keyword tool** — Google's own autocomplete, the \"People also ask\" and \"Related searches\" boxes, and free tiers of keyword tools give you plenty of ideas at zero cost. The method is in [how to do keyword research for free](/blog/how-to-do-keyword-research-for-free).",
+        "- **A free site auditor** — paste any URL into the [free SEO + GEO audit on the homepage](/) to check title tags, meta descriptions, speed signals, schema, and AI-search readiness in one pass, with no signup.",
+        "That's the whole stack. For a wider view of what's possible without spending money, [how to do SEO for free](/blog/how-to-do-seo-for-free) lists the free equivalents of every paid feature. Resist the urge to buy tools before you've published and measured a few pages — you won't know what you actually need until then.",
+        "> Budget is not the bottleneck in solo SEO. Consistency is. Three free tools and a weekly habit beat an expensive subscription you use twice."
+      ]
+    },
+    {
+      "heading": "The weekly SEO routine you can actually keep",
+      "body": [
+        "Run the same five-step routine every week, and SEO stops being overwhelming. Block roughly five hours across the week and spend them like this — the exact split matters less than doing all five steps in order:",
+        "- **Research (1 hour):** Pick one long-tail keyword you can realistically win — specific, lower-competition, clear intent. Search it yourself and study the top results to confirm what kind of page ranks. The method is in [how to target long-tail keywords](/blog/how-to-target-long-tail-keywords).",
+        "- **Write (2 hours):** Create one page that answers the query better than the current results. Open with a direct, standalone answer in the first sentence, use question-style headings, and cover the topic completely. See [how to write SEO-friendly content](/blog/how-to-write-seo-friendly-content).",
+        "- **Optimize (1 hour):** Put the keyword in the title tag and first 100 words, write a compelling meta description, add two or three internal links to related pages, and give images alt text. This is the [on-page SEO](/blog/what-is-on-page-seo) layer.",
+        "- **Publish & audit (30 min):** Publish, run the free audit on the live URL, and fix anything it flags. Submit the URL in Search Console so Google indexes it faster.",
+        "- **Track (30 min):** Review last week's pages in Search Console. Note which queries are gaining impressions and which pages sit on page two — those are your next refresh targets.",
+        "Keep this loop for eight to twelve weeks before judging results. SEO compounds: each new page adds internal links and topical depth that help your older pages rank too, so week ten's post ranks faster than week one's."
+      ]
+    },
+    {
+      "heading": "What to do first, second, and third",
+      "body": [
+        "If five steps a week still feels like a lot, sequence your effort by priority so you're always working on the highest-impact task. Here is the order that gives a solo beginner the most return for the least time:",
+        "[[table]]",
+        "Start at the top and only move down once each layer is stable. Indexing before content, content before links — the same logic as any [SEO audit](/blog/how-to-do-an-seo-audit), scaled to one person. Don't chase backlinks in week one when half your pages aren't indexed yet; fix the foundation first.",
+        "One realistic expectation: doing SEO on your own is slower than hiring a team, and that's fine. A solo site owner publishing one strong page a week will see the first ranking movement in one to two months and steady growth by month four to six. The advantage of doing it yourself is that you learn your audience and your niche deeply — knowledge no agency can hand you, which makes every future page sharper."
+      ]
+    },
+    {
+      "heading": "Don't skip the AI-search (GEO) step",
+      "body": [
+        "The one modern step solo SEOs skip is optimizing for AI answer engines, and it's now too big to ignore. A growing share of searches end inside ChatGPT, Perplexity, and Google AI Overviews instead of a blue-link results page. Getting cited there is called **GEO (generative engine optimization)**, and the good news is it overlaps heavily with the answer-first writing you're already doing. The primer is in [what is generative engine optimization](/blog/what-is-generative-engine-optimization).",
+        "GEO comes down to three checks you can run yourself for free: does each section open with a standalone answer an AI can lift out of context, is your author and expertise visible for [E-E-A-T](/blog/what-is-eeat-in-seo), and can AI crawlers actually reach your pages (GPTBot, ClaudeBot, and PerplexityBot not blocked in robots.txt). If you want the difference spelled out, read [GEO vs SEO](/blog/geo-vs-seo) and [how to do AI-search optimization](/blog/how-to-do-ai-search-optimization).",
+        "Fold GEO into your existing routine rather than treating it as extra work. When you run the free audit during your weekly publish step, it flags weak direct answers, blocked AI bots, and missing author signals alongside the classic SEO issues — so one solo person, with free tools and a repeatable weekly habit, can optimize for both Google and the AI engines at the same time."
+      ]
+    }
+  ],
+  "flowchart": {
+    "title": "The solo weekly SEO loop you can run alone",
+    "steps": [
+      { "title": "Set up free tools", "detail": "Verify Google Search Console, pick a free keyword tool, and bookmark a free site auditor — one-time setup." },
+      { "title": "Research one keyword", "detail": "Choose a specific long-tail phrase you can realistically win and confirm intent from the top results." },
+      { "title": "Write an answer-first page", "detail": "Open with a direct answer, use question headings, and cover the topic more completely than competitors." },
+      { "title": "Optimize on-page basics", "detail": "Add the keyword to the title and first 100 words, write the meta description, and add internal links." },
+      { "title": "Publish, audit & index", "detail": "Run the free audit on the live URL, fix flags, then submit it in Search Console." },
+      { "title": "Track and repeat", "detail": "Review impressions weekly, refresh page-two posts, and run the loop again next week." }
+    ]
+  },
+  "comparisonTable": {
+    "caption": "Solo SEO priority order: what to do first, second, and third",
+    "headers": ["Priority", "Task", "Why it comes here", "Free tool"],
+    "rows": [
+      ["1", "Get pages indexed", "Nothing ranks until Google can find it", "Search Console"],
+      ["2", "Publish answer-first content", "Content is what actually ranks", "Any editor + auditor"],
+      ["3", "On-page optimization", "Tells Google what each page is about", "Free site auditor"],
+      ["4", "Internal linking", "Spreads ranking signals across pages", "Manual / auditor"],
+      ["5", "GEO / AI-search pass", "Wins citations in ChatGPT & AI Overviews", "Free SEO + GEO audit"],
+      ["6", "Earn a few backlinks", "Lifts authority once the site is solid", "Outreach / free tactics"]
+    ]
+  },
+  "peopleAlsoAsk": [
+    {
+      "q": "How To SEO For Beginners",
+      "a": "As a beginner doing SEO alone, start small: verify Google Search Console, pick one long-tail keyword, write one answer-first page around it, and optimize its title and internal links. Publish, let Google index it, and track the result before writing the next one. One page a week beats trying to optimize your whole site at once. The full path is in [how to SEO for beginners](/blog/how-to-seo-for-beginners)."
+    },
+    {
+      "q": "What Is SEO And How To Start",
+      "a": "SEO is optimizing your site so it ranks in Google and gets found by AI answer engines. To start doing it on your own, verify your site in Google Search Console, choose one keyword per page, and write content that answers that query directly. Then optimize the title, speed, and internal links. Read [what is SEO and how it works](/blog/what-is-seo-and-how-it-works) for the fundamentals before you begin your first page."
+    },
+    {
+      "q": "Can I Self Learn SEO",
+      "a": "Yes — SEO is highly self-teachable because rankings and traffic give you free, public feedback on what works. Learn the four SEO types, apply them to your own site, and measure results in Search Console. Most solo learners reach a working level in two to three months of weekly practice. See [can I self-learn SEO](/blog/can-i-self-learn-seo) for a structured, no-cost learning path you can follow alone."
+    },
+    {
+      "q": "What Are The 4 Types Of SEO",
+      "a": "The four types of SEO are on-page (content and titles), technical (crawlability and speed), off-page (backlinks), and increasingly GEO/AI-search (getting cited by ChatGPT and AI Overviews). Doing SEO on your own means touching all four, but you'll spend most weeks on on-page content because it's where a solo person has the most direct control. Read [what are the 4 types of SEO](/blog/what-are-the-4-types-of-seo) for details."
+    },
+    {
+      "q": "Which Type Of SEO Is Best",
+      "a": "No single type is \"best\" — on-page, technical, off-page, and GEO work together, and the right focus depends on your site. For a solo beginner, on-page SEO usually delivers the most immediate return because you control it completely and can improve a page today. Technical fixes come next, then off-page and GEO. Prioritize whichever layer is currently weakest on your site rather than picking a favorite."
+    }
+  ],
+  "faqs": [
+    {
+      "q": "How many hours a week does DIY SEO take?",
+      "a": "Plan for about five focused hours a week to do SEO on your own — roughly one for research, two for writing, and the rest for optimization, auditing, and tracking. Consistency matters more than volume: five steady hours every week for a few months beats a single large burst of effort."
+    },
+    {
+      "q": "Can I do SEO on my own without any coding?",
+      "a": "Yes, most solo SEO needs no coding. Writing content, setting title tags and meta descriptions, adding internal links, and reading Search Console are all no-code tasks. A few technical fixes may need light edits, but website builders and free auditors handle or flag most of them for you automatically."
+    },
+    {
+      "q": "Is doing my own SEO worth it versus hiring someone?",
+      "a": "For most small sites, doing your own SEO is worth it early on. It costs only time, teaches you your niche deeply, and the compounding gains are real. Hiring makes sense later once you've proven what works and want to scale faster than five hours a week allows."
+    }
+  ],
+  "relatedKeywords": [
+    "What are the 5 pillars of SEO",
+    "How many SEO tools are there",
+    "Which AI is better for SEO",
+    "Which language is best for SEO",
+    "Is SEO dead or evolving in 2026",
+    "How to do SEO for website step by step"
+  ],
+  "internalLinks": [
+    { "href": "/", "anchor": "Run a free SEO + GEO audit on your own site" },
+    { "href": "/blog/how-to-do-seo-for-free", "anchor": "How to do SEO for free" },
+    { "href": "/blog/how-to-seo-for-beginners", "anchor": "How to SEO for beginners" },
+    { "href": "/blog/how-to-do-keyword-research-for-free", "anchor": "How to do keyword research for free" },
+    { "href": "/blog/how-to-use-google-search-console", "anchor": "How to use Google Search Console" },
+    { "href": "/blog/what-is-generative-engine-optimization", "anchor": "What is generative engine optimization" }
+  ],
+  "images": []
+}

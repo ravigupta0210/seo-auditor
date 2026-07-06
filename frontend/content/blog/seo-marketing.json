@@ -1,0 +1,129 @@
+{
+  "slug": "seo-marketing",
+  "title": "SEO Marketing: A Beginner's Guide (2026)",
+  "date": "2026-07-06",
+  "updatedAt": "2026-07-06",
+  "tag": "SEO",
+  "cluster": "seo-basics",
+  "keyword": "SEO marketing",
+  "secondaryKeywords": ["organic traffic", "on-page SEO", "keyword research", "search intent", "generative engine optimization"],
+  "readTime": 9,
+  "excerpt": "What SEO marketing is, the four types that make it up, and a beginner-friendly process to start earning free organic and AI-search traffic.",
+  "description": "SEO marketing explained for beginners: what it is, the four types of SEO, a step-by-step process to earn free organic traffic, and how GEO fits in for 2026.",
+  "tldr": "SEO marketing is the practice of earning free, organic traffic from search engines by making your site relevant, trustworthy, and easy to crawl. It has four parts — on-page, off-page, technical, and content SEO — plus a newer layer, GEO, for getting cited by AI answer engines. Unlike paid ads, SEO traffic compounds over time and keeps working after you stop paying.",
+  "status": "published",
+  "sections": [
+    {
+      "heading": "What SEO marketing is and why it matters",
+      "body": [
+        "SEO marketing is the practice of earning free, organic traffic from search engines by making your website relevant, trustworthy, and easy for both crawlers and AI to understand. Unlike paid advertising, where traffic stops the moment you stop paying, SEO marketing is a compounding asset: a page that ranks keeps sending visitors month after month at no per-click cost. That durability is why it remains one of the highest-return channels in marketing, and why a single well-optimized guide can outperform years of ad spend.",
+        "The core idea is simple. Search engines like Google — and increasingly AI answer engines like ChatGPT and Google AI Overviews — try to surface the most useful, credible answer to a query. SEO marketing is the work of becoming that answer: choosing the right questions to target, structuring content so engines can parse it, and building enough trust that they rank or cite you over competitors. If you are brand new, [what is SEO and how it works](/blog/what-is-seo-and-how-it-works) covers the fundamentals before you go deeper here.",
+        "SEO marketing matters for three concrete reasons. **First, intent:** search traffic arrives already looking for what you offer, so it converts better than interruptive ads. **Second, cost:** the traffic is free once you rank, so the ROI improves the longer a page lives. **Third, trust:** ranking organically signals credibility in a way a sponsored label never will. Together these make SEO the backbone of most sustainable content and inbound strategies.",
+        "One honest caveat: SEO is a medium-to-long-term play. New pages typically take weeks to months to rank, and results build gradually rather than overnight. If you need traffic this afternoon, run ads; if you want a channel that grows cheaper and stronger over years, invest in SEO marketing."
+      ]
+    },
+    {
+      "heading": "The 4 types of SEO that make up a strategy",
+      "body": [
+        "SEO marketing is made up of four types that work together: on-page SEO, off-page SEO, technical SEO, and content SEO. A complete strategy needs all four, because they cover different signals a search engine weighs — relevance, authority, crawlability, and depth. Skipping one caps your results: flawless content on a site engines can't crawl won't rank, and a technically perfect site with thin content has nothing to rank for. See [what are the 4 types of SEO](/blog/what-are-the-4-types-of-seo) for the full map.",
+        "**On-page SEO** is everything you control on the page itself — the title tag, headings, keyword placement, internal links, image alt text, and how well the content matches search intent. It is the fastest area for beginners to improve because you own every lever. Start with [what is on-page SEO](/blog/what-is-on-page-seo).",
+        "**Off-page SEO** is the trust you earn from outside your site, mostly through backlinks — other sites linking to yours as a vote of confidence. It is slower and harder to control, but it is what separates page one from page five in competitive niches. Learn the basics in [what is off-page SEO](/blog/what-is-off-page-seo) and [how to get backlinks for free](/blog/how-to-get-backlinks-for-free).",
+        "**Technical SEO** is the plumbing: site speed, mobile-friendliness, crawlability, structured data, HTTPS, and a clean sitemap. It rarely wins rankings on its own, but broken technical foundations quietly block everything else. [What is technical SEO](/blog/what-is-technical-seo) explains the checks that matter.",
+        "**Content SEO** ties the others together — researching what your audience searches for and producing genuinely useful pages that answer those queries better than anyone else. Many marketers also frame the discipline as [the 5 pillars of SEO](/blog/what-are-the-5-pillars-of-seo), which adds analytics and user experience to the mix."
+      ]
+    },
+    {
+      "heading": "How to start SEO marketing: a step-by-step process",
+      "body": [
+        "You start SEO marketing by finding a keyword you can win, matching the searcher's intent, publishing a genuinely useful page, covering the on-page and technical basics, then measuring and improving. The flowchart below turns that into a repeatable loop you can run for every page — beginners get results fastest by following it in order rather than jumping to tactics.",
+        "[[flowchart]]",
+        "The two steps beginners most often skip are the first and the last. **Keyword research** stops you from writing pages nobody searches for; target specific, lower-competition phrases first — the method is in [how to do keyword research for free](/blog/how-to-do-keyword-research-for-free) and [how to target long-tail keywords](/blog/how-to-target-long-tail-keywords). **Search intent** then decides the shape of the page: a how-to query wants a guide, a 'best' query wants a comparison. Matching intent is the single biggest ranking factor — read [what is search intent](/blog/what-is-search-intent) to get it right before you write.",
+        "Once the page is live, run an audit before you move on. Paste the URL into the [free SEO + GEO audit on the homepage](/) and it flags missing title tags, weak meta descriptions, crawl blockers, and — increasingly important — whether AI engines can cite your content. Fixing what it surfaces is the fastest way to close the gap to page one. If you want the full walkthrough, [how to do an SEO audit](/blog/how-to-do-an-seo-audit) covers it end to end, and [how to do SEO for free](/blog/how-to-do-seo-for-free) shows the whole workflow on a zero budget."
+      ]
+    },
+    {
+      "heading": "SEO vs. GEO: what's changing in 2026",
+      "body": [
+        "SEO marketing in 2026 is expanding to include GEO — Generative Engine Optimization — the work of getting cited by AI answer engines like ChatGPT, Perplexity, and Google AI Overviews. Classic SEO aims to rank in the blue links; GEO aims to be the source an AI quotes when it answers directly. As more searches are resolved inside an AI answer without a click, being citable is becoming as important as ranking, and the smartest strategies now do both.",
+        "The good news is that GEO builds on SEO rather than replacing it. The same fundamentals — useful content, clear structure, real expertise — feed both. GEO just adds a few AI-specific habits: open each section with a standalone, accurate answer (so a model can quote it out of context), make author and expertise signals visible for E-E-A-T, and confirm AI crawlers like GPTBot and PerplexityBot aren't blocked. Start with [what is generative engine optimization](/blog/what-is-generative-engine-optimization) and [how to do AI search optimization](/blog/how-to-do-ai-search-optimization).",
+        "> SEO gets you ranked. GEO gets you quoted. In 2026 you want both — and the underlying content work is largely shared.",
+        "This does not mean classic SEO is dead. It means the definition of 'showing up in search' is widening to include AI answers. If you are worried the field is disappearing, [is SEO dead or evolving in 2026](/blog/is-seo-dead-or-evolving-in-2026) lays out the evidence. The practical takeaway for a beginner: learn the four types of SEO first, then layer GEO on top — you do not have to choose between them."
+      ]
+    }
+  ],
+  "flowchart": {
+    "title": "A beginner's SEO marketing process, step by step",
+    "steps": [
+      { "title": "Find a winnable keyword", "detail": "Pick a specific, lower-competition phrase your audience actually searches for." },
+      { "title": "Match search intent", "detail": "Check the top results and give searchers the format they expect — guide, list, or product page." },
+      { "title": "Publish useful content", "detail": "Answer the query more completely than competitors, opening each section with a direct answer." },
+      { "title": "Cover on-page + technical basics", "detail": "Set the title, headings, meta description, internal links, speed, and mobile-friendliness." },
+      { "title": "Audit and fix", "detail": "Run a free SEO + GEO audit to catch missing tags, crawl blockers, and un-citable content." },
+      { "title": "Measure and refresh", "detail": "Track rankings in Search Console and update pages sitting on page two to push them higher." }
+    ]
+  },
+  "comparisonTable": {
+    "caption": "SEO marketing vs. paid advertising at a glance",
+    "headers": ["Factor", "SEO marketing", "Paid ads"],
+    "rows": [
+      ["Cost per click", "Free once you rank", "Paid every click, forever"],
+      ["Time to results", "Weeks to months", "Immediate"],
+      ["Longevity", "Compounds; keeps working after you stop", "Stops the moment you stop paying"],
+      ["Trust signal", "High — earned, not bought", "Lower — labeled as sponsored"],
+      ["Best for", "Durable, compounding growth", "Fast, short-term traffic and testing"]
+    ]
+  },
+  "peopleAlsoAsk": [
+    {
+      "q": "How To SEO For Beginners",
+      "a": "Start SEO as a beginner by picking one specific, low-competition keyword, checking what the top results look like to match intent, then writing a page that answers that query better than they do. Cover the on-page basics — title, headings, meta description, internal links — make sure your site is fast and mobile-friendly, then audit the live URL and track it in Search Console. See how to SEO for beginners for the full path."
+    },
+    {
+      "q": "How Do I Do SEO On My Own",
+      "a": "You can absolutely do SEO on your own using free tools. Use Google's own tools — Search Console, Keyword Planner, and the search results themselves — to find keywords and check intent, write genuinely useful content, and run a free audit to catch technical and on-page issues. The workflow in how to do SEO for free covers everything from keyword research to measurement without paid software."
+    },
+    {
+      "q": "What Is SEO And How To Start",
+      "a": "SEO (search engine optimization) is the practice of earning free organic traffic by making your site the most useful, trustworthy answer to a search query. To start, pick a keyword you can realistically rank for, match the searcher's intent, publish content that answers it fully, cover on-page and technical basics, then measure and refine. Read what is SEO and how it works for the foundations before your first page."
+    },
+    {
+      "q": "Can I Self Learn SEO",
+      "a": "Yes — SEO is one of the most self-teachable marketing skills because the feedback loop is public and the core tools are free. You can learn keyword research, on-page optimization, and technical basics from free guides, then practice on a real site and watch rankings respond in Search Console. Consistency beats certification. Can I self learn SEO walks through a realistic learning plan and timeline."
+    },
+    {
+      "q": "What Are The 4 Types Of SEO",
+      "a": "The four types of SEO are on-page (titles, headings, keywords, and intent on your own pages), off-page (backlinks and trust earned from other sites), technical (speed, crawlability, mobile-friendliness, structured data), and content (researching and producing useful pages). A complete SEO marketing strategy needs all four, since each covers a different ranking signal. What are the 4 types of SEO explains how they fit together."
+    }
+  ],
+  "faqs": [
+    {
+      "q": "Is SEO marketing worth it in 2026?",
+      "a": "Yes. SEO remains one of the highest-ROI channels because organic traffic is free once you rank and compounds over time. In 2026 it also feeds GEO — getting cited by AI answer engines — so the same content work now pays off in both classic search and AI answers. It rewards patience over speed."
+    },
+    {
+      "q": "How long does SEO marketing take to work?",
+      "a": "Most new pages take a few weeks to several months to rank, depending on your site's authority and how competitive the keyword is. Low-competition long-tail keywords rank fastest, which is why beginners should target them first and treat SEO as a compounding, medium-term investment rather than a quick win."
+    },
+    {
+      "q": "Do I need to pay for tools to do SEO marketing?",
+      "a": "No. You can run a full SEO program on free tools: Google Search Console for measurement, the live search results for keyword and intent research, and a free SEO + GEO audit for on-page and technical checks. Paid tools save time at scale, but they are not required to start or to rank."
+    }
+  ],
+  "relatedKeywords": [
+    "what is SEO marketing",
+    "types of SEO marketing",
+    "SEO marketing for beginners",
+    "organic search marketing",
+    "SEO vs paid advertising",
+    "SEO and GEO strategy"
+  ],
+  "internalLinks": [
+    { "href": "/", "anchor": "Run a free SEO + GEO audit on your site" },
+    { "href": "/blog/what-is-seo-and-how-it-works", "anchor": "What is SEO and how it works" },
+    { "href": "/blog/what-are-the-4-types-of-seo", "anchor": "What are the 4 types of SEO" },
+    { "href": "/blog/how-to-do-seo-for-free", "anchor": "How to do SEO for free" },
+    { "href": "/blog/what-is-search-intent", "anchor": "What is search intent" },
+    { "href": "/blog/what-is-generative-engine-optimization", "anchor": "What is generative engine optimization" }
+  ],
+  "images": []
+}

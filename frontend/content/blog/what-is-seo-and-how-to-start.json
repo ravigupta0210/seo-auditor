@@ -1,0 +1,134 @@
+{
+  "slug": "what-is-seo-and-how-to-start",
+  "title": "What Is SEO And How To Start: A Beginner's Guide",
+  "date": "2026-07-06",
+  "updatedAt": "2026-07-06",
+  "tag": "SEO",
+  "cluster": "seo-basics",
+  "keyword": "What is SEO and how to start",
+  "secondaryKeywords": ["SEO for beginners", "types of SEO", "pillars of SEO", "search intent", "organic traffic"],
+  "readTime": 8,
+  "excerpt": "A plain-English primer on what SEO is, the four types and five pillars it's built on, and a simple roadmap to start ranking as a beginner.",
+  "description": "What is SEO and how to start? A beginner primer covering how search works, the 4 types and 5 pillars of SEO, and a step-by-step roadmap to start ranking.",
+  "tldr": "SEO (search engine optimization) is the practice of improving your website so it ranks higher in unpaid search results and earns free, ongoing traffic. To start, learn how search works, understand the four types of SEO — on-page, off-page, technical, and content — then pick one keyword, optimize one page around it, and measure results in Google Search Console. Modern SEO also means getting cited in AI answers.",
+  "status": "published",
+  "sections": [
+    {
+      "heading": "What is SEO and how to start as a beginner",
+      "body": [
+        "What is SEO and how to start? SEO — search engine optimization — is the practice of improving your website so it appears higher in the unpaid (organic) results of search engines like Google, and to start you only need to understand how search works, learn the core building blocks, and optimize one page at a time. Unlike ads, which stop the moment you stop paying, SEO earns traffic that keeps arriving for months or years after the work is done. That compounding return is why it is the single highest-leverage skill for anyone building an audience or business online.",
+        "SEO exists because search engines want to show users the most useful, trustworthy result for every query. Do that better than competitors and you rank; ignore it and you stay on page two, where almost nobody clicks. This primer is the concepts-first companion to the hands-on [how to do SEO on Google](/blog/how-to-do-seo-on-google) guide — read this to understand *why* SEO works, then execute the steps there.",
+        "Before diving in, it helps to see how the pieces fit. Here is a beginner roadmap from zero to your first ranking page:",
+        "[[flowchart]]",
+        "You do not need a budget, a degree, or paid tools to begin. Everything below can be done for free, and the rest of this guide explains each concept a beginner needs before writing a single line of content."
+      ]
+    },
+    {
+      "heading": "How search engines actually work",
+      "body": [
+        "Search engines rank pages through three stages: **crawling**, **indexing**, and **ranking**. First, bots crawl the web by following links to discover pages. Next, they index those pages — analyzing and storing what each one is about. Finally, when someone searches, the engine ranks the indexed pages it thinks best answer that specific query. If any stage fails — a page is not crawlable or not indexed — it cannot rank at all, no matter how good it is.",
+        "Ranking is decided by hundreds of signals, but they cluster into a few that matter most: **relevance** (does the page match the query?), **quality** (is the content genuinely useful and accurate?), **authority** (do other sites vouch for it via links?), and **experience** (is it fast, mobile-friendly, and secure?). Google's goal is to serve the single best result, so your goal is to be the most complete, trustworthy answer.",
+        "Two ideas shape everything a beginner does. The first is **keywords** — the phrases people type. The second is **search intent** — the reason behind the phrase. Someone searching \"best running shoes\" wants a comparison, not a history of footwear. Matching that intent is the biggest factor in whether you rank; learn it early in [what is search intent](/blog/what-is-search-intent).",
+        "> Organic results are earned, not bought. Google Ads buys a spot in the paid section — it never improves your organic ranking. SEO and ads are entirely separate systems."
+      ]
+    },
+    {
+      "heading": "The 4 types and 5 pillars of SEO",
+      "body": [
+        "SEO is built on four types that work together, and no single one is enough on its own. Understanding them is the fastest way to see the whole picture as a beginner:",
+        "- **On-page SEO** — optimizing content and HTML on your own pages: titles, headings, keywords, and internal links. Start with [what is on-page SEO](/blog/what-is-on-page-seo).",
+        "- **Off-page SEO** — building reputation beyond your site, mainly through backlinks from other trusted domains. See [what is off-page SEO](/blog/what-is-off-page-seo).",
+        "- **Technical SEO** — making the site crawlable, fast, mobile-friendly, and secure so engines can access it. Covered in [what is technical SEO](/blog/what-is-technical-seo).",
+        "- **Content SEO** — creating pages that fully satisfy search intent and answer the query better than anyone else.",
+        "A helpful way to remember the priorities is the **five pillars of SEO**: crawlability, relevant content, on-page optimization, authority, and user experience. They map closely onto the four types and give you a checklist for any page. The full breakdown is in [what are the 5 pillars of SEO](/blog/what-are-the-5-pillars-of-seo), and the type-by-type view in [what are the 4 types of SEO](/blog/what-are-the-4-types-of-seo).",
+        "Here is how the four types compare — what each covers, and which to prioritize first as a beginner:",
+        "[[table]]",
+        "Beginners should start with on-page and content SEO, because those are fully in your control and deliver the fastest wins. Technical and off-page grow in importance as your site matures."
+      ]
+    },
+    {
+      "heading": "Your first steps: a beginner roadmap",
+      "body": [
+        "To start SEO the right way, take it one page at a time instead of trying to optimize everything at once. Your first four moves, in order: connect **Google Search Console** to see how Google views your site, do free keyword research to pick one realistic target, write a page that fully answers that keyword's intent, and confirm the page is indexed. This single loop, repeated, is the entire beginner playbook.",
+        "**Pick winnable keywords.** As a beginner your site has little authority, so avoid broad head terms and target specific long-tail phrases with clearer intent and less competition. Learn the free method in [how to do keyword research for free](/blog/how-to-do-keyword-research-for-free) and [how to target long-tail keywords](/blog/how-to-target-long-tail-keywords).",
+        "**Optimize and publish.** Put your keyword in the title, the first paragraph, and the URL, then write the most complete answer you can. The craft is covered in [how to write SEO-friendly content](/blog/how-to-write-seo-friendly-content). Then run [an SEO audit](/blog/how-to-do-an-seo-audit) to catch anything missing.",
+        "**Measure and improve.** SEO takes months, not days, so track impressions and position in Search Console and refine over time — full details in [how to use Google Search Console](/blog/how-to-use-google-search-console). The good news: you can absolutely [self-learn SEO](/blog/can-i-self-learn-seo), and the free feedback loop teaches faster than any course.",
+        "One modern addition every beginner should know: SEO in 2026 also means **Generative Engine Optimization (GEO)** — getting cited in AI answers from ChatGPT, Perplexity, and Google AI Overviews. It rewards the same clear, answer-first structure as classic SEO; see [what is Generative Engine Optimization](/blog/what-is-generative-engine-optimization). To check both your SEO and GEO signals on any page, [run a free SEO + GEO audit](/) on the homepage — no signup needed."
+      ]
+    }
+  ],
+  "flowchart": {
+    "title": "Beginner roadmap: from zero to your first ranking page",
+    "steps": [
+      { "title": "Learn how search works", "detail": "Understand crawling, indexing, and ranking, plus keywords and search intent." },
+      { "title": "Know the 4 types of SEO", "detail": "On-page, off-page, technical, and content — start with on-page and content." },
+      { "title": "Connect Search Console", "detail": "Set up the free tool to see how Google crawls and indexes your site." },
+      { "title": "Pick one keyword", "detail": "Do free research and choose a specific, winnable long-tail phrase." },
+      { "title": "Optimize one page", "detail": "Match intent, place the keyword, and publish the most complete answer." },
+      { "title": "Measure and refine", "detail": "Track position in Search Console over months and add a GEO pass for AI citations." }
+    ]
+  },
+  "comparisonTable": {
+    "caption": "The four types of SEO compared for beginners",
+    "headers": ["Type", "What it covers", "Example task", "Beginner priority"],
+    "rows": [
+      ["On-page", "Content and HTML on your pages", "Add keyword to title and H1", "Start here"],
+      ["Content", "Pages that satisfy search intent", "Write a complete answer to a query", "Start here"],
+      ["Technical", "Crawlability, speed, mobile, HTTPS", "Fix slow pages and broken links", "Next"],
+      ["Off-page", "Backlinks and external reputation", "Earn a link from a relevant site", "Later"]
+    ]
+  },
+  "peopleAlsoAsk": [
+    {
+      "q": "How To SEO For Beginners",
+      "a": "For beginners, SEO is simplest as a one-page-at-a-time loop: connect Google Search Console, pick a single specific keyword, write a page that fully answers it, and put that keyword in the title and first paragraph. Master that loop before scaling up. Our step-by-step [how to SEO for beginners](/blog/how-to-seo-for-beginners) guide walks the whole process in plain language with only free tools."
+    },
+    {
+      "q": "How Do I Do SEO On My Own",
+      "a": "You can absolutely do SEO on your own — the essential tools are free and the results are measurable in Search Console. Follow the four types of SEO, focus first on on-page and content, and iterate based on real data. No agency required. Start with the free toolkit in [how to do SEO for free](/blog/how-to-do-seo-for-free), then audit your pages on the homepage to see what to fix."
+    },
+    {
+      "q": "Can I Self Learn SEO",
+      "a": "Yes — SEO is highly self-teachable because every core tool is free and every change is measurable. Learn the fundamentals, apply them to a real website, and let Search Console show you what works. That feedback loop teaches faster than passive study. See our realistic path and timeline in [can I self-learn SEO](/blog/can-i-self-learn-seo) for how to structure your practice."
+    },
+    {
+      "q": "What Are The 4 Types Of SEO",
+      "a": "The four types of SEO are on-page (content and HTML on your pages), off-page (backlinks and reputation), technical (crawlability, speed, and structure), and content SEO (matching search intent). Ranking well needs all four, but beginners should start with on-page and content because those are fully in your control and deliver the fastest results. See [what are the 4 types of SEO](/blog/what-are-the-4-types-of-seo)."
+    },
+    {
+      "q": "Which Type Of SEO Is Best",
+      "a": "No single type of SEO is best — they work as a system, and a weakness in one caps the others. That said, beginners get the most from on-page and content SEO first, because they are fully controllable and drive early rankings. Technical and off-page grow in importance as your site matures. See how they interact in [what are the 4 types of SEO](/blog/what-are-the-4-types-of-seo)."
+    }
+  ],
+  "faqs": [
+    {
+      "q": "How long does it take to learn SEO?",
+      "a": "You can learn the fundamentals of SEO in a few weeks and start applying them immediately, but real proficiency comes from months of practice on a live site. Because results are measurable and the tools are free, hands-on practice teaches faster than any single course or certification."
+    },
+    {
+      "q": "Is SEO still worth it in 2026?",
+      "a": "Yes. SEO is very much alive in 2026 — it has evolved to include AI search, not disappeared. Search engines and AI answer engines both still need to find the best, most trustworthy content. Learning SEO now also prepares you for GEO, the practice of earning citations inside AI-generated answers."
+    },
+    {
+      "q": "Do I need coding skills to start SEO?",
+      "a": "No, you do not need to code to start SEO. Most beginner work — keyword research, writing, titles, and internal links — requires no coding at all. Modern platforms and CMS tools handle the technical basics, and only advanced technical SEO occasionally benefits from light HTML knowledge."
+    }
+  ],
+  "relatedKeywords": [
+    "What are the 5 pillars of SEO",
+    "How many SEO tools are there",
+    "Which AI is better for SEO",
+    "Which language is best for SEO",
+    "Is SEO dead or evolving in 2026",
+    "How to do SEO for website step by step"
+  ],
+  "internalLinks": [
+    { "href": "/", "anchor": "Run a free SEO + GEO audit on your site" },
+    { "href": "/blog/what-are-the-4-types-of-seo", "anchor": "What are the 4 types of SEO" },
+    { "href": "/blog/what-are-the-5-pillars-of-seo", "anchor": "What are the 5 pillars of SEO" },
+    { "href": "/blog/how-to-do-seo-on-google", "anchor": "How to do SEO on Google" },
+    { "href": "/blog/how-to-seo-for-beginners", "anchor": "How to SEO for beginners" },
+    { "href": "/blog/what-is-search-intent", "anchor": "What is search intent" }
+  ],
+  "images": []
+}

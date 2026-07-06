@@ -1,0 +1,127 @@
+{
+  "slug": "how-many-seo-tools-are-there",
+  "title": "How Many SEO Tools Are There? (And Which You Actually Need)",
+  "date": "2026-07-06",
+  "updatedAt": "2026-07-06",
+  "tag": "SEO",
+  "cluster": "seo-basics",
+  "keyword": "How many SEO tools are there",
+  "secondaryKeywords": ["types of SEO tools", "best free SEO tools", "SEO software categories", "SEO tools list"],
+  "readTime": 8,
+  "excerpt": "There are hundreds of SEO tools, but you only need a handful. Here are the categories that matter and a free starter stack.",
+  "description": "How many SEO tools are there? Hundreds to thousands. Here are the real categories of SEO tools and the small free stack you actually need to rank.",
+  "tldr": "There is no exact count — there are hundreds of standalone SEO tools and thousands if you include browser extensions and plugins. The useful answer is that they fall into about eight categories, and you only need one from each. A free stack of Google Search Console, Analytics, a keyword tool, and an audit tool covers most sites.",
+  "status": "published",
+  "sections": [
+    {
+      "heading": "How many SEO tools are there? The honest answer",
+      "body": [
+        "How many SEO tools are there is a question with no exact number: there are **hundreds** of standalone SEO tools on the market, and easily **thousands** once you count browser extensions, WordPress plugins, and single-purpose web apps. Directories like Product Hunt and G2 list well over 300 products in the SEO category alone, and new ones launch every month. So the precise count is not the useful answer — the useful answer is that almost all of them fall into about **eight categories**, and you only need one tool from a few of those categories to do real work.",
+        "The reason the raw number misleads people is that most tools overlap heavily. An all-in-one suite like Ahrefs or Semrush bundles keyword research, backlink analysis, rank tracking, and site audits into one product, while a dozen cheaper tools each do just one of those jobs. Counting them separately makes the market look overwhelming; grouping them by job makes it manageable. Once you know the categories, choosing tools becomes a short checklist instead of an endless comparison.",
+        "Here is how the SEO tool landscape breaks down by category, with examples and whether the average site actually needs one:",
+        "[[table]]",
+        "Read the table by category, not by brand. You do not need every row — you need the ones marked essential, plus maybe one or two optional tools once your site grows. The rest of this guide explains which categories matter, how many tools you genuinely need, and a free stack you can start with today."
+      ]
+    },
+    {
+      "heading": "The categories of SEO tools that actually matter",
+      "body": [
+        "The categories of SEO tools that matter map directly to the parts of SEO you have to get right: technical health, keywords, content, links, and measurement. If you understand [the 4 types of SEO](/blog/what-are-the-4-types-of-seo), the tool categories line up neatly against them. Here is what each category does and why it exists.",
+        "- **All-in-one suites** (Ahrefs, Semrush, Moz) combine keyword, backlink, rank-tracking, and audit features. They are powerful and expensive — typically $99–$200+ per month — and are aimed at agencies and full-time SEOs, not beginners.",
+        "- **Search-engine tools** (Google Search Console, Bing Webmaster Tools) are first-party, free, and non-negotiable. They show you exactly how the engines see your site: which queries you rank for, indexing errors, and crawl issues no third-party tool can fully replicate.",
+        "- **Keyword research tools** (Google Keyword Planner, Ubersuggest, Ahrefs) find the phrases people search and estimate demand and difficulty. You can start [keyword research for free](/blog/how-to-do-keyword-research-for-free) before paying for anything.",
+        "- **Technical and site-audit tools** (this tool, Screaming Frog, PageSpeed Insights) crawl your pages for broken links, slow load times, missing tags, and schema errors. This is where you run an [SEO audit](/blog/how-to-do-an-seo-audit).",
+        "- **Content and on-page tools** (Surfer, Clearscope) score your copy against top-ranking pages for a keyword. Useful once you publish at scale, optional at the start.",
+        "- **GEO / AI-search tools** are the newest category: they check whether ChatGPT, Perplexity, and Google AI Overviews can find and cite your content. Almost no legacy tool covers this yet, which is why it is a fast-growing gap.",
+        "> Most sites are held back by one or two weak categories — usually technical health or measurement — not by owning too few tools."
+      ]
+    },
+    {
+      "heading": "How many SEO tools do you actually need?",
+      "body": [
+        "You actually need **three to five** SEO tools, not thirty. The winning combination is one first-party search-engine tool, one analytics tool, one keyword tool, and one audit tool — and for most small sites, every one of those can be free. Adding more tools past that point produces diminishing returns and a lot of overlapping dashboards you will never open twice.",
+        "The trap beginners fall into is confusing **tool count with results**. Buying a $150/month suite does not improve your rankings; publishing content that matches search intent, fixing technical errors, and earning links does. Tools only tell you what to fix — the work still has to happen. This is why you can [do SEO for free](/blog/how-to-do-seo-for-free) for a long time before a paid tool pays for itself.",
+        "A simple rule: add a tool only when you hit a specific limit of your current one. If you cannot find enough keyword ideas, add a research tool. If you are guessing at technical problems, add an audit tool. If you want to know why AI engines ignore you, add a GEO check. Buy for the problem in front of you, not for the feature list.",
+        "That is also where this project fits: it is one free, no-signup SEO + GEO audit tool. You can [run a free SEO + GEO audit](/) on any URL and get technical, on-page, and AI-search findings in one pass — covering the audit and GEO categories without adding another subscription."
+      ]
+    },
+    {
+      "heading": "The free SEO tool stack you can start with today",
+      "body": [
+        "The free SEO stack that covers most sites is four tools: **Google Search Console, Google Analytics 4, a keyword tool, and an audit tool**. Together they handle measurement, keyword research, and technical health — the categories that matter most for beginners — at zero cost.",
+        "- **Google Search Console** — the single most important free tool. It reports your real queries, clicks, impressions, indexing status, and crawl errors straight from Google. Start with [how to use Google Search Console](/blog/how-to-use-google-search-console).",
+        "- **Google Analytics 4** — free traffic and behavior analytics so you can see which pages actually earn visits and conversions.",
+        "- **Google Keyword Planner or Ubersuggest** — free keyword ideas and rough volume, enough to plan content before you pay for a suite.",
+        "- **A free audit tool** — crawls your pages for missing titles, meta descriptions, slow load, and schema problems. Pair it with **PageSpeed Insights** for performance and Google's Rich Results Test for structured data.",
+        "For the AI-search layer that legacy free tools miss, add a GEO audit. Generative engines now answer a growing share of queries, and [AI search optimization](/blog/how-to-do-ai-search-optimization) checks — answer-first passages, visible author signals, and unblocked AI crawlers — are not covered by Search Console or Analytics. Auditing your live URL is the fastest way to see all of it at once, without stitching together five dashboards or paying for anything."
+      ]
+    }
+  ],
+  "comparisonTable": {
+    "caption": "The main categories of SEO tools, with examples and whether you need one",
+    "headers": ["Category", "What it does", "Example tools", "Do you need it?"],
+    "rows": [
+      ["Search-engine tools", "First-party crawl, index, and query data", "Google Search Console, Bing Webmaster", "Yes — essential, free"],
+      ["Analytics", "Measure traffic and user behavior", "Google Analytics 4", "Yes — free"],
+      ["Keyword research", "Find search demand and difficulty", "Keyword Planner, Ubersuggest", "Yes — free tier fine"],
+      ["Technical / site audit", "Crawl for errors, speed, schema", "This tool, Screaming Frog, PageSpeed", "Yes"],
+      ["GEO / AI-search", "Check AI citability and crawler access", "This tool's GEO audit", "Growing need"],
+      ["Content / on-page", "Optimize copy against top results", "Surfer, Clearscope", "Optional (paid)"],
+      ["Backlink analysis", "Track referring domains and links", "Ahrefs, Majestic", "Optional (paid)"],
+      ["All-in-one suites", "Bundle most of the above in one app", "Ahrefs, Semrush, Moz", "Optional (paid)"]
+    ]
+  },
+  "peopleAlsoAsk": [
+    {
+      "q": "How To SEO For Beginners",
+      "a": "SEO for beginners comes down to four steps: research keywords your audience searches, publish content that answers those queries, cover the technical basics like titles, speed, and mobile-friendliness, then measure results in Google Search Console. Start with free tools and one topic area, and build from there. A full walkthrough lives in our guide on [how to do SEO for beginners](/blog/how-to-seo-for-beginners)."
+    },
+    {
+      "q": "How Do I Do SEO On My Own",
+      "a": "You can do SEO on your own with free tools and a simple routine: pick one keyword per page, write the most complete answer to it, fix technical errors with an audit tool, and track rankings in Search Console. Solo SEO is realistic because the work is process-driven, not tool-driven. See [how to do SEO for free](/blog/how-to-do-seo-for-free) for the step-by-step version."
+    },
+    {
+      "q": "What Is SEO And How To Start",
+      "a": "SEO is the practice of improving a website so it ranks higher in search results and gets cited by AI engines, bringing free organic traffic. To start, learn how search works, choose target keywords, publish helpful content, and audit your site for technical issues. Our primer on [what is SEO and how to start](/blog/what-is-seo-and-how-to-start) covers the full beginner path."
+    },
+    {
+      "q": "Can I Self Learn SEO",
+      "a": "Yes, you can self-learn SEO — most working SEOs are self-taught. The field is well documented in free guides, and you learn fastest by applying tactics to a real site and watching the results in Search Console. Budget a few months to get comfortable with the fundamentals. Read [can I self learn SEO](/blog/can-i-self-learn-seo) for a realistic learning plan and timeline."
+    },
+    {
+      "q": "What Are The 4 Types Of SEO",
+      "a": "The four types of SEO are on-page (content and HTML on your pages), off-page (backlinks and reputation), technical (crawlability, speed, indexing), and increasingly local or GEO depending on how you split it. Each type uses a different set of tools, which is why grouping tools by category helps. See [what are the 4 types of SEO](/blog/what-are-the-4-types-of-seo) for the full breakdown."
+    }
+  ],
+  "faqs": [
+    {
+      "q": "Are free SEO tools good enough to rank?",
+      "a": "Yes. For most small and mid-size sites, free tools like Google Search Console, Analytics, a keyword planner, and a free audit tool cover the essentials. Paid suites add convenience and larger datasets, but they do not rank pages for you — content and technical health do."
+    },
+    {
+      "q": "What is the difference between an SEO tool and an SEO suite?",
+      "a": "A single SEO tool does one job, like keyword research or site auditing. An SEO suite such as Ahrefs or Semrush bundles many tools into one paid product. Suites reduce tool-switching but cost more; several free single-purpose tools can replace them at the start."
+    },
+    {
+      "q": "Do I need a separate tool for AI search and GEO?",
+      "a": "Increasingly, yes. Traditional SEO tools do not check whether ChatGPT, Perplexity, or Google AI Overviews can cite your content. A GEO audit tests answer-first structure, author signals, and AI-crawler access — a category most legacy tools have not added yet."
+    }
+  ],
+  "relatedKeywords": [
+    "Which type of SEO is best",
+    "What are the 5 pillars of SEO",
+    "Which AI is better for SEO",
+    "Which language is best for SEO",
+    "Is SEO dead or evolving in 2026",
+    "How to do SEO for website step by step"
+  ],
+  "internalLinks": [
+    { "href": "/", "anchor": "Run a free SEO + GEO audit" },
+    { "href": "/blog/how-to-do-an-seo-audit", "anchor": "How to do an SEO audit" },
+    { "href": "/blog/how-to-do-seo-for-free", "anchor": "How to do SEO for free" },
+    { "href": "/blog/how-to-do-keyword-research-for-free", "anchor": "How to do keyword research for free" },
+    { "href": "/blog/how-to-use-google-search-console", "anchor": "How to use Google Search Console" },
+    { "href": "/blog/what-are-the-4-types-of-seo", "anchor": "What are the 4 types of SEO" }
+  ],
+  "images": []
+}

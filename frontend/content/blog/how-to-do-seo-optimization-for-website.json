@@ -1,0 +1,147 @@
+{
+  "slug": "how-to-do-seo-optimization-for-website",
+  "title": "How To Do SEO Optimization For Website (2026 Checklist)",
+  "date": "2026-07-06",
+  "updatedAt": "2026-07-06",
+  "tag": "SEO",
+  "cluster": "seo-basics",
+  "keyword": "How to do SEO optimization for website",
+  "secondaryKeywords": [
+    "on-page SEO checklist",
+    "technical SEO",
+    "site structure",
+    "page speed optimization",
+    "schema markup"
+  ],
+  "readTime": 9,
+  "excerpt": "A practical checklist for how to do SEO optimization for a website: crawlability, site structure, speed, meta tags, schema, mobile, and internal links.",
+  "description": "How to do SEO optimization for a website in 2026: fix crawlability, site structure, page speed, title tags, schema, mobile, and internal links with a clear checklist.",
+  "tldr": "To do SEO optimization for a website, work through six technical layers in order: make sure Google can crawl and index every page, build a shallow logical site structure, write unique title tags and meta descriptions, add schema markup, pass Core Web Vitals on mobile, and connect pages with internal links. Fix crawlability first, then presentation, then speed and structured data.",
+  "status": "published",
+  "sections": [
+    {
+      "heading": "How to do SEO optimization for a website, layer by layer",
+      "body": [
+        "How to do SEO optimization for website: fix six technical layers in order — crawlability and indexing first, then site structure, then on-page tags (titles, descriptions, headings), then structured data, then page speed and mobile, and finally internal linking. The order matters because each layer depends on the one before it — there is no point tuning a title tag on a page Google cannot even crawl, and no point building internal links into a page that is not indexed.",
+        "Website SEO splits into two halves that this checklist covers together. **On-page SEO** is everything on the page itself — titles, headings, content, and links — while **technical SEO** is everything that lets a search engine reach, render, and trust the page. Most sites that fail to rank have healthy content but a broken technical layer underneath it. If you want the conceptual background first, read [what is on-page SEO](/blog/what-is-on-page-seo) and [what is technical SEO](/blog/what-is-technical-seo); this guide is the hands-on checklist.",
+        "Here is the full optimization workflow at a glance. Run it top to bottom on any website:",
+        "[[flowchart]]",
+        "Work the flowchart in order and you close the gaps that quietly cap rankings — a noindex tag left over from staging, a five-click-deep product page, a duplicate title across 40 URLs. The rest of this guide walks each layer with the specific checks that move the needle."
+      ]
+    },
+    {
+      "heading": "Layer 1-2: Crawlability, indexing, and site structure",
+      "body": [
+        "Start by confirming Google can crawl and index your pages, because nothing else in SEO works until it can. Open [Google Search Console](/blog/how-to-use-google-search-console), check the Pages report, and look for pages excluded by `noindex`, blocked by `robots.txt`, or marked \"Discovered — currently not indexed.\" Submit an XML sitemap, make sure it lists only canonical URLs that return `200`, and reference it in your `robots.txt` file. A single stray `Disallow: /` from a staging config can hide an entire site.",
+        "Once pages are indexable, fix the **site structure** so both users and crawlers can reach any page in a few clicks. The rule of thumb is a **flat architecture**: every important page should be no more than three clicks from the homepage. Group content into clear categories (home → category → page) rather than deep nested chains, and keep your most valuable pages closest to the homepage so they inherit the most internal link equity.",
+        "URLs are part of structure too. Use short, lowercase, hyphenated slugs that describe the page — `/blog/seo-checklist` beats `/p?id=8842`. Avoid changing URLs without a 301 redirect, and pick one canonical version of your domain (https, with or without www) so you are not splitting signals across duplicates. The full method is in [URL structure for SEO](/blog/url-structure-for-seo).",
+        "> If Google can't crawl it, index it, and reach it in a few clicks, the best content in the world won't rank. Technical foundation comes before everything.",
+        "Finally, verify one canonical URL per piece of content. Duplicate or near-duplicate pages (print versions, tracking-parameter URLs, http and https copies) split ranking signals; a `rel=canonical` tag pointing every variant at the preferred URL consolidates them."
+      ]
+    },
+    {
+      "heading": "Layer 3-4: On-page tags and schema markup",
+      "body": [
+        "With the foundation solid, optimize the on-page tags that tell search engines what each page is about. Every indexable page needs a **unique title tag** — 50 to 60 characters, primary keyword near the front — and a **unique meta description** of 140 to 160 characters that earns the click. Duplicate titles across pages are one of the most common site-wide SEO problems, and they confuse Google about which page to rank. See [what is a title tag](/blog/what-is-a-title-tag) and [what is a meta description](/blog/what-is-a-meta-description) for the exact formulas.",
+        "Inside the page, use **one H1** that matches the page's topic, then H2s and H3s to structure the body in a logical hierarchy. Place your primary keyword in the H1 and the first 100 words, write for humans first, and cover the topic completely — depth and clarity beat keyword stuffing every time. If your site has images, give each a descriptive `alt` attribute and compress it; see [how to optimize images for SEO](/blog/how-to-optimize-images-for-seo).",
+        "Then add **schema markup** (structured data) so search engines understand your content and can show rich results. Use JSON-LD in the page head — `Article` for blog posts, `Product` and `Review` for e-commerce, `FAQPage` for FAQs, `Organization` and `BreadcrumbList` sitewide. Valid schema can earn star ratings, FAQ dropdowns, and breadcrumbs in the results, all of which lift click-through rate. Learn the types in [what is schema markup](/blog/what-is-schema-markup).",
+        "Structured data also feeds AI answer engines. Clean schema plus answer-first writing makes a page far easier for ChatGPT, Perplexity, and Google AI Overviews to extract and cite — the GEO angle covered in [what is generative engine optimization](/blog/what-is-generative-engine-optimization)."
+      ]
+    },
+    {
+      "heading": "Layer 5-6: Page speed, mobile, and internal links",
+      "body": [
+        "Optimize page speed and mobile next, because Google ranks the mobile version of your site and measures real-world load performance through Core Web Vitals. Aim for **LCP under 2.5 seconds, INP under 200 ms, and CLS under 0.1**. The highest-impact fixes are usually compressing and lazy-loading images, serving next-gen formats like WebP, minifying CSS/JS, and enabling caching plus a CDN. Measure with PageSpeed Insights and follow the fixes in [how to improve page speed](/blog/how-to-improve-page-speed).",
+        "Confirm the site is genuinely mobile-friendly: responsive layout, tap targets that aren't cramped, text readable without zoom, and no horizontal scroll. Google uses **mobile-first indexing**, meaning it crawls and ranks based on your mobile pages — if content or structured data is missing on mobile, it effectively doesn't exist for ranking. The details are in [what is mobile-first indexing](/blog/what-is-mobile-first-indexing).",
+        "The last on-site layer is **internal linking**. Link related pages together with descriptive anchor text so crawlers discover new pages, ranking signals flow to your most important URLs, and users find related content. Point links from high-authority pages to the pages you most want to rank, and make sure no important page is orphaned (zero internal links). The strategy is in [what is internal linking](/blog/what-is-internal-linking).",
+        "Here is how the on-site optimization layers stack up, and how to verify each one:",
+        "[[table]]",
+        "The fastest way to check every layer at once is to audit the live URL. Paste it into the [free SEO + GEO audit on the homepage](/) and it flags missing tags, crawlability issues, schema errors, weak Core Web Vitals signals, and GEO problems in a single pass — then you fix what it surfaces."
+      ]
+    },
+    {
+      "heading": "Off-page signals and ongoing measurement",
+      "body": [
+        "On-site optimization gets a website eligible to rank; off-page signals decide how high. The main off-page factor is **backlinks** — links from other reputable sites that act as votes of confidence. You don't need thousands; a handful of relevant, authoritative links usually outperforms hundreds of spammy ones. Start with the tactics in [how to get backlinks for free](/blog/how-to-get-backlinks-for-free) and read [what is off-page SEO](/blog/what-is-off-page-seo) for the full picture.",
+        "SEO optimization is never finished, so measure and iterate. Track impressions, clicks, and average position in Google Search Console, watch Core Web Vitals in the Experience report, and re-run a full site audit monthly to catch regressions like broken links, new duplicate titles, or pages that fell out of the index. Fix issues while they're small.",
+        "Prioritize by impact, not effort. A duplicate-title problem across 40 pages or a sitewide slow LCP will move rankings far more than tweaking one meta description. Work the biggest, most widespread issues first, re-audit, and repeat — that loop is how a website climbs steadily rather than in unpredictable jumps."
+      ]
+    }
+  ],
+  "flowchart": {
+    "title": "The 6-layer website SEO optimization workflow",
+    "steps": [
+      { "title": "Crawlability & indexing", "detail": "Confirm Google can crawl and index every page; submit a sitemap and clear noindex/robots blocks." },
+      { "title": "Site structure & URLs", "detail": "Flatten architecture so key pages are within three clicks; use short descriptive slugs and one canonical domain." },
+      { "title": "On-page tags", "detail": "Write unique title tags, meta descriptions, one H1, and a logical heading hierarchy on every page." },
+      { "title": "Schema markup", "detail": "Add JSON-LD structured data (Article, Product, FAQ, Organization) for rich results and AI extraction." },
+      { "title": "Speed & mobile", "detail": "Pass Core Web Vitals, compress images, and confirm a responsive mobile-first layout." },
+      { "title": "Internal linking", "detail": "Connect related pages with descriptive anchors and push equity to priority URLs, then audit." }
+    ]
+  },
+  "comparisonTable": {
+    "caption": "The website SEO optimization layers and how to verify each",
+    "headers": ["Layer", "What to optimize", "Target / rule", "How to verify"],
+    "rows": [
+      ["Crawlability", "Indexing, robots.txt, sitemap", "Every key page indexed", "Search Console Pages report"],
+      ["Site structure", "Architecture and URL slugs", "Key pages within 3 clicks", "Crawl / manual click test"],
+      ["On-page tags", "Titles, descriptions, H1", "Unique on every page", "View source / audit tool"],
+      ["Schema markup", "JSON-LD structured data", "Valid, no errors", "Rich Results Test / audit"],
+      ["Speed & mobile", "Core Web Vitals, responsive", "LCP <2.5s, INP <200ms", "PageSpeed Insights"],
+      ["Internal linking", "Contextual links, anchors", "No orphaned pages", "Crawl / audit tool"]
+    ]
+  },
+  "peopleAlsoAsk": [
+    {
+      "q": "How To SEO For Beginners",
+      "a": "For beginners, do SEO in three stages: make sure Google can find and index your pages, put your target keyword in the title tag and first paragraph of each page, and earn a few quality links from relevant sites. Start with one page and one keyword, learn Google Search Console, and build from there. Our [SEO for beginners guide](/blog/how-to-seo-for-beginners) walks the full path step by step."
+    },
+    {
+      "q": "How Do I Do SEO On My Own",
+      "a": "You can do SEO on your own with free tools and a weekly routine — no agency required. Use Google Search Console and free keyword tools to find topics, write answer-first content, optimize your title tags and internal links, and audit your site regularly. The complete solo workflow is in [how do I do SEO on my own](/blog/how-do-i-do-seo-on-my-own), which lays out a realistic week-by-week plan for one person."
+    },
+    {
+      "q": "What Is SEO And How To Start",
+      "a": "SEO (search engine optimization) is the practice of improving a website so it ranks higher in Google and gets found by AI answer engines. To start, verify your site in Google Search Console, pick one keyword per page, optimize the title and content around it, and fix technical basics like speed and mobile-friendliness. Read [what is SEO and how it works](/blog/what-is-seo-and-how-it-works) for the fundamentals before your first optimization pass."
+    },
+    {
+      "q": "Can I Self Learn SEO",
+      "a": "Yes, you can self-learn SEO — it is one of the most self-teachable digital skills because the feedback loop (rankings and traffic) is public and free. Start with the four SEO types, practice on a real site, and measure results in Google Search Console. Most people reach a working level in two to three months of consistent practice. See [can I self-learn SEO](/blog/can-i-self-learn-seo) for a structured path."
+    },
+    {
+      "q": "What Are The 4 Types Of SEO",
+      "a": "The four types of SEO are on-page (content, titles, and headings), technical (crawlability, speed, structured data), off-page (backlinks and reputation), and increasingly GEO/AI-search optimization (getting cited by ChatGPT and AI Overviews). Website optimization touches all four, but on-page and technical are where you have the most direct control. Read [what are the 4 types of SEO](/blog/what-are-the-4-types-of-seo) for a breakdown of each."
+    }
+  ],
+  "faqs": [
+    {
+      "q": "How long does website SEO take to show results?",
+      "a": "Website SEO usually takes three to six months to show meaningful ranking gains, and longer on new or low-authority domains. Technical fixes like indexing and speed can help within weeks, but content and backlink improvements compound over months. Track the trend in Search Console rather than judging by the first few weeks."
+    },
+    {
+      "q": "Do I need to pay for tools to optimize my website for SEO?",
+      "a": "No — you can do a complete website SEO optimization with free tools. Google Search Console, PageSpeed Insights, the Rich Results Test, and a free site auditor cover crawlability, speed, schema, and on-page checks. Paid tools speed up keyword and backlink research but are not required to rank."
+    },
+    {
+      "q": "What is the single most important SEO optimization for a website?",
+      "a": "Crawlability and indexing are the single most important optimization, because a page Google cannot crawl or index cannot rank at all no matter how good it is. After that, matching search intent with unique, answer-first content and a fast mobile page delivers the biggest gains for most sites."
+    }
+  ],
+  "relatedKeywords": [
+    "Which type of SEO is best",
+    "What are the 5 pillars of SEO",
+    "How many SEO tools are there",
+    "Which AI is better for SEO",
+    "Which language is best for SEO",
+    "Is SEO dead or evolving in 2026"
+  ],
+  "internalLinks": [
+    { "href": "/", "anchor": "Run a free SEO + GEO audit on your website" },
+    { "href": "/blog/what-is-technical-seo", "anchor": "What is technical SEO" },
+    { "href": "/blog/what-is-on-page-seo", "anchor": "What is on-page SEO" },
+    { "href": "/blog/how-to-improve-page-speed", "anchor": "How to improve page speed" },
+    { "href": "/blog/what-is-schema-markup", "anchor": "What is schema markup" },
+    { "href": "/blog/how-to-use-google-search-console", "anchor": "How to use Google Search Console" }
+  ],
+  "images": []
+}

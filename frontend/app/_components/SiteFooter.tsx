@@ -16,7 +16,7 @@ export function SiteFooter() {
             No signup. No paywall. No crawl cap. Ever.
           </p>
           <p className="site-footer__tagline">
-            📧 Contact: <a href="mailto:gravi5964@gmail.com">gravi5964@gmail.com</a>
+            📧 Contact: <a href="mailto:freeseoaudit.app@gmail.com">freeseoaudit.app@gmail.com</a>
           </p>
           <div className="site-footer__status">
             <span className="site-footer__status-dot" aria-hidden="true" />
@@ -38,7 +38,7 @@ export function SiteFooter() {
           <h3 className="site-footer__heading">Resources</h3>
           <ul className="site-footer__list">
             <li>
-              <a href="mailto:gravi5964@gmail.com">Contact &amp; feedback ✉</a>
+              <Link href="/feedback">Contact &amp; feedback ✉</Link>
             </li>
             <li>
               <a href="https://llmstxt.org/" target="_blank" rel="noopener">

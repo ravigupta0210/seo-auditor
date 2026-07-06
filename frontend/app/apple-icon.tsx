@@ -14,19 +14,19 @@ export default function AppleIcon() {
           alignItems: 'center',
           justifyContent: 'center',
           background:
-            'radial-gradient(circle at 30% 25%, #1e1b4b 0%, #0a0d14 70%)',
+            'radial-gradient(circle at 30% 25%, #1e1b4b 0%, #131519 70%)',
         }}
       >
         <svg width="124" height="124" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
           <defs>
             <linearGradient id="gradMark" x1="2" y1="6" x2="30" y2="26" gradientUnits="userSpaceOnUse">
-              <stop offset="0" stopColor="#a78bfa" />
-              <stop offset="0.55" stopColor="#7c8cff" />
-              <stop offset="1" stopColor="#22d3ee" />
+              <stop offset="0" stopColor="#818cf8" />
+              <stop offset="0.55" stopColor="#6366f1" />
+              <stop offset="1" stopColor="#4f46e5" />
             </linearGradient>
             <radialGradient id="nodeGlow" cx="0.5" cy="0.5" r="0.5">
-              <stop offset="0" stopColor="#a78bfa" stopOpacity="0.55" />
-              <stop offset="1" stopColor="#a78bfa" stopOpacity="0" />
+              <stop offset="0" stopColor="#818cf8" stopOpacity="0.55" />
+              <stop offset="1" stopColor="#818cf8" stopOpacity="0" />
             </radialGradient>
           </defs>
           {/* Glow halos behind nodes for extra depth at 180px */}

@@ -23,9 +23,9 @@ function SchemaNodeMark({ dim }: { dim: number }) {
     >
       <defs>
         <linearGradient id="brand-mark-grad" x1="2" y1="6" x2="30" y2="26" gradientUnits="userSpaceOnUse">
-          <stop offset="0" stopColor="#a78bfa" />
-          <stop offset="0.55" stopColor="#7c8cff" />
-          <stop offset="1" stopColor="#22d3ee" />
+          <stop offset="0" stopColor="#818cf8" />
+          <stop offset="0.55" stopColor="#6366f1" />
+          <stop offset="1" stopColor="#4f46e5" />
         </linearGradient>
       </defs>
       <path

@@ -12,11 +12,11 @@ export function ScoreRing({ score, size = 130, showGrade = true }: ScoreRingProp
   const offset = c * (1 - safe / 100);
 
   const color =
-    safe >= 90 ? '#4ade80' :
-    safe >= 75 ? '#86efac' :
-    safe >= 60 ? '#facc15' :
+    safe >= 90 ? '#34d399' :
+    safe >= 75 ? '#6ee7b7' :
+    safe >= 60 ? '#fbbf24' :
     safe >= 40 ? '#fb923c' :
-    '#ef4444';
+    '#f87171';
 
   const grade =
     safe >= 90 ? 'A' :

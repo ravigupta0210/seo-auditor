@@ -18,7 +18,7 @@ export default function OpenGraphImage() {
           background:
             'radial-gradient(60% 60% at 20% 0%, rgba(139,92,246,0.45), transparent 60%),' +
             'radial-gradient(60% 60% at 90% 100%, rgba(6,182,212,0.40), transparent 65%),' +
-            'linear-gradient(180deg, #06070b 0%, #0a0d14 100%)',
+            'linear-gradient(180deg, #0b0c0e 0%, #131519 100%)',
           color: '#eef2f7',
           fontFamily: 'system-ui, -apple-system, "Segoe UI", sans-serif',
         }}
@@ -28,9 +28,9 @@ export default function OpenGraphImage() {
           <svg width="64" height="64" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
             <defs>
               <linearGradient id="ogGrad" x1="2" y1="6" x2="30" y2="26" gradientUnits="userSpaceOnUse">
-                <stop offset="0" stopColor="#a78bfa" />
-                <stop offset="0.55" stopColor="#7c8cff" />
-                <stop offset="1" stopColor="#22d3ee" />
+                <stop offset="0" stopColor="#818cf8" />
+                <stop offset="0.55" stopColor="#6366f1" />
+                <stop offset="1" stopColor="#4f46e5" />
               </linearGradient>
             </defs>
             <path d="M 6.5 12 L 25.5 7" stroke="url(#ogGrad)" strokeWidth="1.1" strokeOpacity="0.45" strokeLinecap="round" fill="none" />
@@ -52,12 +52,12 @@ export default function OpenGraphImage() {
               borderRadius: 999,
               border: '1px solid rgba(74,222,128,0.35)',
               background: 'rgba(74,222,128,0.12)',
-              color: '#4ade80',
+              color: '#34d399',
               fontSize: 18,
               fontWeight: 500,
             }}
           >
-            <div style={{ width: 10, height: 10, borderRadius: '50%', background: '#4ade80' }} />
+            <div style={{ width: 10, height: 10, borderRadius: '50%', background: '#34d399' }} />
             Free · No signup · Built for AI search
           </div>
         </div>
@@ -70,7 +70,7 @@ export default function OpenGraphImage() {
               fontWeight: 800,
               lineHeight: 1.05,
               letterSpacing: '-0.04em',
-              backgroundImage: 'linear-gradient(135deg, #ffffff 0%, #b8c0cc 60%, #8b5cf6 100%)',
+              backgroundImage: 'linear-gradient(135deg, #ffffff 0%, #b8c0cc 60%, #818cf8 100%)',
               backgroundClip: 'text',
               color: 'transparent',
               maxWidth: 980,
@@ -101,7 +101,7 @@ export default function OpenGraphImage() {
             <span style={{ color: '#3a4252' }}>·</span>
             <span>~3-5s per audit</span>
           </div>
-          <div style={{ fontSize: 22, color: '#7c8cff', fontWeight: 500 }}>
+          <div style={{ fontSize: 22, color: '#6366f1', fontWeight: 500 }}>
             freeseoaudit.vercel.app
           </div>
         </div>

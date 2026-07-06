@@ -147,7 +147,7 @@ function CategoryBreakdown({ summary }: { summary: { byCategory: Record<string, 
       {entries.map(([cat, info]) => {
         const color =
           info.score >= 90 ? 'var(--pass)' :
-          info.score >= 75 ? '#86efac' :
+          info.score >= 75 ? '#6ee7b7' :
           info.score >= 60 ? 'var(--warning)' :
           info.score >= 40 ? '#fb923c' :
           'var(--error)';

@@ -112,16 +112,16 @@ export async function submitFeedback(input: { name?: string; email?: string; mes
 }
 
 export function grade(score: number): { letter: string; color: string } {
-  if (score >= 90) return { letter: 'A', color: '#4ade80' };
-  if (score >= 75) return { letter: 'B', color: '#86efac' };
-  if (score >= 60) return { letter: 'C', color: '#ffb347' };
-  if (score >= 40) return { letter: 'D', color: '#ff9870' };
-  return { letter: 'F', color: '#ff6b6b' };
+  if (score >= 90) return { letter: 'A', color: '#34d399' };
+  if (score >= 75) return { letter: 'B', color: '#6ee7b7' };
+  if (score >= 60) return { letter: 'C', color: '#fbbf24' };
+  if (score >= 40) return { letter: 'D', color: '#fb923c' };
+  return { letter: 'F', color: '#f87171' };
 }
 
 export function sevColor(sev: Check['severity']): string {
-  if (sev === 'error') return '#ff6b6b';
-  if (sev === 'warning') return '#ffb347';
-  if (sev === 'info') return '#57c7ff';
-  return '#4ade80';
+  if (sev === 'error') return '#f87171';
+  if (sev === 'warning') return '#fbbf24';
+  if (sev === 'info') return '#38bdf8';
+  return '#34d399';
 }

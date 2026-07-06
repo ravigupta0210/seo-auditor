@@ -30,7 +30,7 @@ export default async function Image({ params }: { params: Promise<{ slug: string
           background:
             'radial-gradient(60% 60% at 15% 0%, rgba(139,92,246,0.45), transparent 60%),' +
             'radial-gradient(60% 60% at 95% 100%, rgba(6,182,212,0.40), transparent 65%),' +
-            'linear-gradient(180deg, #06070b 0%, #0a0d14 100%)',
+            'linear-gradient(180deg, #0b0c0e 0%, #131519 100%)',
           color: '#eef2f7',
           fontFamily: 'system-ui, -apple-system, "Segoe UI", sans-serif',
         }}
@@ -39,9 +39,9 @@ export default async function Image({ params }: { params: Promise<{ slug: string
           <svg width="56" height="56" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
             <defs>
               <linearGradient id="g" x1="2" y1="6" x2="30" y2="26" gradientUnits="userSpaceOnUse">
-                <stop offset="0" stopColor="#a78bfa" />
-                <stop offset="0.55" stopColor="#7c8cff" />
-                <stop offset="1" stopColor="#22d3ee" />
+                <stop offset="0" stopColor="#818cf8" />
+                <stop offset="0.55" stopColor="#6366f1" />
+                <stop offset="1" stopColor="#4f46e5" />
               </linearGradient>
             </defs>
             <path d="M 6.5 12 L 14 24 L 25.5 7" stroke="url(#g)" strokeWidth="3.2" strokeLinecap="round" strokeLinejoin="round" fill="none" />
@@ -73,7 +73,7 @@ export default async function Image({ params }: { params: Promise<{ slug: string
             fontWeight: 800,
             lineHeight: 1.08,
             letterSpacing: '-0.03em',
-            backgroundImage: 'linear-gradient(135deg, #ffffff 0%, #c2cad6 55%, #8b5cf6 100%)',
+            backgroundImage: 'linear-gradient(135deg, #ffffff 0%, #c2cad6 55%, #818cf8 100%)',
             backgroundClip: 'text',
             color: 'transparent',
             maxWidth: 1020,
@@ -93,7 +93,7 @@ export default async function Image({ params }: { params: Promise<{ slug: string
           }}
         >
           <span style={{ color: '#7a8493' }}>Free SEO + GEO audit · No signup</span>
-          <span style={{ color: '#7c8cff', fontWeight: 500 }}>freeseoaudit.vercel.app</span>
+          <span style={{ color: '#6366f1', fontWeight: 500 }}>freeseoaudit.vercel.app</span>
         </div>
       </div>
     ),

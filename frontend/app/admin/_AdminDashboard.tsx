@@ -3,7 +3,9 @@
 import { useEffect, useState } from 'react';
 import { BACKEND_URL } from '@/lib/api';
 
+type Row = Record<string, unknown>;
 interface Stats {
+  days: number;
   totals: {
     audits_run: number;
     emails_captured: number;
@@ -13,24 +15,26 @@ interface Stats {
     feedback_received: number;
   };
   auditsOverTime: Array<{ day: string; n: number }>;
-  recentFeedback: Array<{ created_at: string; name: string | null; email: string | null; message: string; url: string | null }>;
-  recentLeads: Array<{ created_at: string; email: string; url: string | null; report_sent: boolean }>;
+  recentFeedback: Row[];
+  recentLeads: Row[];
   topUrls: Array<{ url: string; n: number; avg_score: number | null }>;
-  recentAudits: Array<{ created_at: string; url: string; scope: string; overall_score: number | null }>;
-  sentEmails: Array<{ created_at: string; to_email: string; kind: string; subject: string | null; success: boolean }>;
+  recentAudits: Row[];
+  sentEmails: Row[];
   generatedAt: string;
 }
 
-const fmt = (s: string) => {
+const fmt = (s: unknown) => {
   try {
-    return new Date(s).toLocaleString(undefined, { dateStyle: 'medium', timeStyle: 'short' });
+    return new Date(String(s)).toLocaleString(undefined, { dateStyle: 'medium', timeStyle: 'short' });
   } catch {
-    return s;
+    return String(s);
   }
 };
+const shortUrl = (u: unknown) => String(u ?? '').replace(/^https?:\/\//, '').replace(/\/$/, '') || '—';
 
 export function AdminDashboard() {
   const [key, setKey] = useState('');
+  const [days, setDays] = useState(30);
   const [data, setData] = useState<Stats | null>(null);
   const [status, setStatus] = useState<'idle' | 'loading' | 'error'>('idle');
   const [error, setError] = useState('');
@@ -44,16 +48,17 @@ export function AdminDashboard() {
     }
     if (saved) {
       setKey(saved);
-      void load(saved);
+      void load(saved, 30);
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
-  async function load(k: string) {
+  async function load(k: string, d: number) {
     setStatus('loading');
     setError('');
+    setDays(d);
     try {
-      const res = await fetch(`${BACKEND_URL}/api/stats?key=${encodeURIComponent(k)}`, { cache: 'no-store' });
+      const res = await fetch(`${BACKEND_URL}/api/stats?key=${encodeURIComponent(k)}&days=${d}`, { cache: 'no-store' });
       const json = await res.json().catch(() => ({}));
       if (!res.ok) {
         setStatus('error');
@@ -79,22 +84,14 @@ export function AdminDashboard() {
       <form
         onSubmit={(e) => {
           e.preventDefault();
-          if (key.trim()) void load(key.trim());
+          if (key.trim()) void load(key.trim(), 30);
         }}
         className="glass-card"
         style={{ maxWidth: 420, padding: '26px 24px', display: 'flex', flexDirection: 'column', gap: 14 }}
       >
         <div>
           <label className="field-label" htmlFor="admin-key">Admin key</label>
-          <input
-            id="admin-key"
-            type="password"
-            className="field-input"
-            value={key}
-            onChange={(e) => setKey(e.target.value)}
-            placeholder="Your ADMIN_TOKEN"
-            autoFocus
-          />
+          <input id="admin-key" type="password" className="field-input" value={key} onChange={(e) => setKey(e.target.value)} placeholder="Your ADMIN_TOKEN" autoFocus />
         </div>
         {status === 'error' && <p style={{ margin: 0, fontSize: 13.5, color: 'var(--error)' }}>{error}</p>}
         <button type="submit" className="btn btn-primary btn-block" disabled={status === 'loading'}>
@@ -102,7 +99,7 @@ export function AdminDashboard() {
           {status === 'loading' ? 'Loading…' : 'View dashboard'}
         </button>
         <p style={{ margin: 0, fontSize: 12, color: 'var(--text-muted)' }}>
-          This is the <code>ADMIN_TOKEN</code> you set on the backend. Only you can see this data.
+          The <code>ADMIN_TOKEN</code> you set on the backend. Only you can see this data.
         </p>
       </form>
     );
@@ -120,31 +117,39 @@ export function AdminDashboard() {
   const exportHref = (type: string) => `${BACKEND_URL}/api/stats/export?key=${encodeURIComponent(key)}&type=${type}`;
 
   return (
-    <div style={{ display: 'flex', flexDirection: 'column', gap: 26 }}>
+    <div style={{ display: 'flex', flexDirection: 'column', gap: 22 }}>
       <div style={{ display: 'flex', alignItems: 'baseline', justifyContent: 'space-between', gap: 12, flexWrap: 'wrap' }}>
         <p style={{ margin: 0, fontSize: 12.5, color: 'var(--text-muted)' }}>Updated {fmt(data.generatedAt)}</p>
-        <button className="btn btn-secondary" onClick={() => void load(key)} style={{ height: 34, fontSize: 13 }}>
-          ↻ Refresh
-        </button>
+        <button className="btn btn-secondary" onClick={() => void load(key, days)} style={{ height: 34, fontSize: 13 }}>↻ Refresh</button>
       </div>
 
-      {/* KPI row */}
       <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(150px, 1fr))', gap: 12 }}>
         {kpis.map((k) => (
           <div key={k.label} className="glass-card" style={{ padding: '18px 18px' }}>
-            <div style={{ fontSize: 30, fontWeight: 700, letterSpacing: '-0.02em', color: 'var(--accent)', lineHeight: 1.1 }}>
-              {k.value.toLocaleString()}
-            </div>
-            <div style={{ fontSize: 12, color: 'var(--text-muted)', textTransform: 'uppercase', letterSpacing: '0.06em', fontWeight: 600, marginTop: 6 }}>
-              {k.label}
-            </div>
+            <div style={{ fontSize: 30, fontWeight: 700, letterSpacing: '-0.02em', color: 'var(--accent)', lineHeight: 1.1 }}>{k.value.toLocaleString()}</div>
+            <div style={{ fontSize: 12, color: 'var(--text-muted)', textTransform: 'uppercase', letterSpacing: '0.06em', fontWeight: 600, marginTop: 6 }}>{k.label}</div>
           </div>
         ))}
       </div>
 
-      <Panel title="Audits — last 30 days">
+      <section className="glass-card" style={{ padding: '20px 22px' }}>
+        <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: 10, marginBottom: 12, flexWrap: 'wrap' }}>
+          <h2 style={{ margin: 0, fontSize: 15, letterSpacing: '-0.01em' }}>Audits over time</h2>
+          <div style={{ display: 'flex', gap: 6 }}>
+            {[7, 30, 90].map((d) => (
+              <button
+                key={d}
+                onClick={() => void load(key, d)}
+                className="btn btn-secondary"
+                style={{ height: 30, fontSize: 12.5, padding: '0 12px', ...(days === d ? { borderColor: 'var(--accent)', color: 'var(--accent)' } : {}) }}
+              >
+                {d}d
+              </button>
+            ))}
+          </div>
+        </div>
         <AuditsChart data={data.auditsOverTime} />
-      </Panel>
+      </section>
 
       <section className="glass-card" style={{ padding: '16px 20px', display: 'flex', alignItems: 'center', gap: 12, flexWrap: 'wrap' }}>
         <span style={{ fontSize: 13, color: 'var(--text-muted)', fontWeight: 600 }}>Export CSV:</span>
@@ -153,142 +158,146 @@ export function AdminDashboard() {
         <a className="btn btn-secondary" href={exportHref('audits')} style={{ height: 34, fontSize: 13 }}>Audits</a>
       </section>
 
-      <Panel title={`Recent feedback (${data.recentFeedback.length})`}>
-        {data.recentFeedback.length === 0 ? (
-          <Empty>No feedback yet.</Empty>
-        ) : (
-          data.recentFeedback.map((f, i) => (
-            <div key={i} style={{ padding: '12px 0', borderTop: i ? '1px solid var(--border)' : 'none' }}>
-              <div style={{ display: 'flex', justifyContent: 'space-between', gap: 10, flexWrap: 'wrap', marginBottom: 4 }}>
-                <strong style={{ fontSize: 14 }}>{f.name || 'Anonymous'}</strong>
-                <span style={{ fontSize: 12, color: 'var(--text-muted)' }}>{fmt(f.created_at)}</span>
-              </div>
-              {f.email && <div style={{ fontSize: 12.5, color: 'var(--accent)' }}>{f.email}</div>}
-              <p style={{ margin: '6px 0 0', fontSize: 14, color: 'var(--text-dim)', whiteSpace: 'pre-wrap' }}>{f.message}</p>
-            </div>
-          ))
-        )}
-      </Panel>
+      <DataSection
+        title="Feedback"
+        type="feedback"
+        apiKey={key}
+        recent={data.recentFeedback}
+        head={['Name', 'Email', 'Message', 'When']}
+        renderRow={(f) => [(f.name as string) || 'Anonymous', (f.email as string) || '—', <span key="m" style={{ whiteSpace: 'pre-wrap' }}>{String(f.message)}</span>, fmt(f.created_at)]}
+      />
 
-      <Panel title={`Emails captured (${data.recentLeads.length} most recent)`}>
-        {data.recentLeads.length === 0 ? (
-          <Empty>No emails captured yet.</Empty>
-        ) : (
-          <Table
-            head={['Email', 'Audited URL', 'Report', 'When']}
-            rows={data.recentLeads.map((l) => [
-              l.email,
-              l.url ? shortUrl(l.url) : '—',
-              l.report_sent ? '✅ sent' : '—',
-              fmt(l.created_at),
-            ])}
-          />
-        )}
-      </Panel>
+      <DataSection
+        title="Emails captured"
+        type="leads"
+        apiKey={key}
+        recent={data.recentLeads}
+        head={['Email', 'Audited URL', 'Report', 'When', '']}
+        renderRow={(l) => [
+          l.email as string,
+          shortUrl(l.url),
+          l.report_sent ? '✅ sent' : '—',
+          fmt(l.created_at),
+          <ResendButton key="r" email={String(l.email)} auditId={l.audit_id ? String(l.audit_id) : null} apiKey={key} />,
+        ]}
+      />
 
       <Panel title="Most-audited URLs">
         {data.topUrls.length === 0 ? (
           <Empty>No audits yet.</Empty>
         ) : (
-          <Table
-            head={['URL', 'Audits', 'Avg score']}
-            rows={data.topUrls.map((u) => [shortUrl(u.url), String(u.n), u.avg_score == null ? '—' : String(u.avg_score)])}
-          />
+          <ScrollTable head={['URL', 'Audits', 'Avg score']} rows={data.topUrls.map((u) => [shortUrl(u.url), String(u.n), u.avg_score == null ? '—' : String(u.avg_score)])} />
         )}
       </Panel>
 
-      <Panel title="Recent audits">
-        {data.recentAudits.length === 0 ? (
-          <Empty>No audits yet.</Empty>
-        ) : (
-          <Table
-            head={['URL', 'Scope', 'Score', 'When']}
-            rows={data.recentAudits.map((a) => [
-              shortUrl(a.url),
-              a.scope,
-              a.overall_score == null ? '—' : String(a.overall_score),
-              fmt(a.created_at),
-            ])}
-          />
-        )}
-      </Panel>
+      <DataSection
+        title="Audits"
+        type="audits"
+        apiKey={key}
+        recent={data.recentAudits}
+        head={['URL', 'Scope', 'Score', 'When']}
+        renderRow={(a) => [shortUrl(a.url), String(a.scope), a.overall_score == null ? '—' : String(a.overall_score), fmt(a.created_at)]}
+      />
 
-      <Panel title={`Sent emails (${data.sentEmails.length} most recent)`}>
-        {data.sentEmails.length === 0 ? (
-          <Empty>No emails sent yet.</Empty>
-        ) : (
-          <Table
-            head={['To', 'Type', 'Subject', 'Status', 'When']}
-            rows={data.sentEmails.map((e) => [
-              e.to_email,
-              e.kind,
-              e.subject || '—',
-              e.success ? '✅ sent' : '⚠️ failed',
-              fmt(e.created_at),
-            ])}
-          />
-        )}
-      </Panel>
+      <DataSection
+        title="Sent emails"
+        type="sent"
+        apiKey={key}
+        recent={data.sentEmails}
+        head={['To', 'Type', 'Subject', 'Status', 'When']}
+        renderRow={(e) => [e.to_email as string, String(e.kind), (e.subject as string) || '—', e.success ? '✅ sent' : '⚠️ failed', fmt(e.created_at)]}
+      />
     </div>
   );
 }
 
-/** Single-series bar chart: audits per day over the last 30 days. */
-function AuditsChart({ data }: { data: Array<{ day: string; n: number }> }) {
-  const W = 640;
-  const H = 170;
-  const padX = 8;
-  const padTop = 10;
-  const axisH = 22;
-  const plotH = H - padTop - axisH;
-  const innerW = W - padX * 2;
-  const slot = innerW / Math.max(data.length, 1);
-  const barW = Math.max(4, slot - 3);
-  const max = Math.max(1, ...data.map((d) => d.n));
-  const baseline = padTop + plotH;
-  const total = data.reduce((s, d) => s + d.n, 0);
+/** A panel whose rows can be expanded from "recent" to the full list (in-dashboard, no download). */
+function DataSection({
+  title,
+  type,
+  apiKey,
+  recent,
+  head,
+  renderRow,
+}: {
+  title: string;
+  type: string;
+  apiKey: string;
+  recent: Row[];
+  head: string[];
+  renderRow: (row: Row) => Array<React.ReactNode>;
+}) {
+  const [rows, setRows] = useState<Row[]>(recent);
+  const [expanded, setExpanded] = useState(false);
+  const [truncated, setTruncated] = useState(false);
+  const [loading, setLoading] = useState(false);
+  const [err, setErr] = useState('');
 
-  if (total === 0) {
-    return <p style={{ margin: 0, fontSize: 14, color: 'var(--text-muted)' }}>No audits in the last 30 days yet.</p>;
+  async function showAll() {
+    setLoading(true);
+    setErr('');
+    try {
+      const res = await fetch(`${BACKEND_URL}/api/stats/list?key=${encodeURIComponent(apiKey)}&type=${type}`, { cache: 'no-store' });
+      const json = await res.json().catch(() => ({}));
+      if (!res.ok) {
+        setErr(json.error || 'Failed to load.');
+      } else {
+        setRows(json.rows as Row[]);
+        setTruncated(Boolean(json.truncated));
+        setExpanded(true);
+      }
+    } catch {
+      setErr('Network error.');
+    }
+    setLoading(false);
   }
 
-  const dm = (day: string) => {
-    const [, m, d] = day.split('-');
-    return `${Number(m)}/${Number(d)}`;
-  };
+  const count = expanded ? `all ${rows.length}${truncated ? '+' : ''}` : `${recent.length} recent`;
 
   return (
-    <div>
-      <div style={{ fontSize: 12.5, color: 'var(--text-muted)', marginBottom: 8 }}>
-        <strong style={{ color: 'var(--text)' }}>{total.toLocaleString()}</strong> audits · peak {max}/day
-      </div>
-      <div style={{ overflowX: 'auto' }}>
-        <svg viewBox={`0 0 ${W} ${H}`} width="100%" height={H} role="img" aria-label="Audits per day, last 30 days" style={{ display: 'block', minWidth: 320 }}>
-          {/* recessive baseline */}
-          <line x1={padX} y1={baseline} x2={W - padX} y2={baseline} stroke="var(--border)" strokeWidth="1" />
-          {data.map((d, i) => {
-            const x = padX + i * slot + (slot - barW) / 2;
-            const h = (d.n / max) * plotH;
-            const y = baseline - h;
-            return (
-              <g key={d.day}>
-                <rect x={x} y={y} width={barW} height={h} rx={2.5} fill="var(--accent)" opacity={d.n ? 0.92 : 0} />
-                {/* full-slot transparent hit target for hover */}
-                <rect x={padX + i * slot} y={padTop} width={slot} height={plotH} fill="transparent">
-                  <title>{`${d.day}: ${d.n} audit${d.n === 1 ? '' : 's'}`}</title>
-                </rect>
-              </g>
-            );
-          })}
-          {/* first / mid / last date ticks */}
-          {[0, Math.floor(data.length / 2), data.length - 1].map((i) => (
-            <text key={i} x={padX + i * slot + slot / 2} y={H - 6} textAnchor="middle" fontSize="11" fill="var(--text-muted)">
-              {data[i] ? dm(data[i].day) : ''}
-            </text>
-          ))}
-        </svg>
-      </div>
-    </div>
+    <Panel title={`${title} (${count})`}>
+      {rows.length === 0 ? (
+        <Empty>Nothing here yet.</Empty>
+      ) : (
+        <>
+          <ScrollTable head={head} rows={rows.map(renderRow)} />
+          {err && <p style={{ margin: '10px 0 0', fontSize: 13, color: 'var(--error)' }}>{err}</p>}
+          {!expanded && (
+            <button onClick={showAll} className="btn btn-secondary" disabled={loading} style={{ height: 32, fontSize: 12.5, marginTop: 12 }}>
+              {loading ? <span className="spinner" style={{ marginRight: 6 }} /> : null}
+              {loading ? 'Loading…' : 'Show all in dashboard'}
+            </button>
+          )}
+          {expanded && truncated && (
+            <p style={{ margin: '10px 0 0', fontSize: 12, color: 'var(--text-muted)' }}>Showing the latest 1,000. Use CSV export for the complete history.</p>
+          )}
+        </>
+      )}
+    </Panel>
+  );
+}
+
+function ResendButton({ email, auditId, apiKey }: { email: string; auditId: string | null; apiKey: string }) {
+  const [st, setSt] = useState<'idle' | 'sending' | 'done' | 'error'>('idle');
+  if (!auditId) return <span style={{ color: 'var(--text-faint)', fontSize: 12 }}>—</span>;
+  async function go() {
+    setSt('sending');
+    try {
+      const res = await fetch(`${BACKEND_URL}/api/stats/resend?key=${encodeURIComponent(apiKey)}`, {
+        method: 'POST',
+        headers: { 'content-type': 'application/json' },
+        body: JSON.stringify({ email, auditId }),
+      });
+      const j = await res.json().catch(() => ({}));
+      setSt(res.ok && j.emailed ? 'done' : 'error');
+    } catch {
+      setSt('error');
+    }
+  }
+  return (
+    <button className="btn btn-secondary" style={{ height: 28, fontSize: 12, padding: '0 10px' }} disabled={st === 'sending' || st === 'done'} onClick={go}>
+      {st === 'idle' ? 'Resend' : st === 'sending' ? '…' : st === 'done' ? '✓ Sent' : 'Retry'}
+    </button>
   );
 }
 
@@ -305,14 +314,14 @@ function Empty({ children }: { children: React.ReactNode }) {
   return <p style={{ margin: 0, fontSize: 14, color: 'var(--text-muted)' }}>{children}</p>;
 }
 
-function Table({ head, rows }: { head: string[]; rows: string[][] }) {
+function ScrollTable({ head, rows }: { head: string[]; rows: Array<Array<React.ReactNode>> }) {
   return (
-    <div style={{ overflowX: 'auto' }}>
+    <div style={{ maxHeight: 400, overflow: 'auto' }}>
       <table style={{ width: '100%', borderCollapse: 'collapse', fontSize: 13.5 }}>
         <thead>
           <tr>
-            {head.map((h) => (
-              <th key={h} style={{ textAlign: 'left', padding: '6px 10px 6px 0', color: 'var(--text-muted)', fontWeight: 600, fontSize: 11.5, textTransform: 'uppercase', letterSpacing: '0.05em', whiteSpace: 'nowrap' }}>
+            {head.map((h, i) => (
+              <th key={i} style={{ position: 'sticky', top: 0, background: 'var(--bg-card)', textAlign: 'left', padding: '6px 10px 8px 0', color: 'var(--text-muted)', fontWeight: 600, fontSize: 11.5, textTransform: 'uppercase', letterSpacing: '0.05em', whiteSpace: 'nowrap' }}>
                 {h}
               </th>
             ))}
@@ -322,7 +331,7 @@ function Table({ head, rows }: { head: string[]; rows: string[][] }) {
           {rows.map((r, i) => (
             <tr key={i}>
               {r.map((cell, j) => (
-                <td key={j} style={{ padding: '8px 10px 8px 0', borderTop: '1px solid var(--border)', color: j === 0 ? 'var(--text)' : 'var(--text-dim)', maxWidth: 320, overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: j === 0 ? 'normal' : 'nowrap', wordBreak: j === 0 ? 'break-all' : 'normal' }}>
+                <td key={j} style={{ padding: '8px 10px 8px 0', borderTop: '1px solid var(--border)', color: j === 0 ? 'var(--text)' : 'var(--text-dim)', maxWidth: 340, overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: j === 0 ? 'normal' : 'nowrap', wordBreak: j === 0 ? 'break-all' : 'normal', verticalAlign: 'top' }}>
                   {cell}
                 </td>
               ))}
@@ -334,6 +343,58 @@ function Table({ head, rows }: { head: string[]; rows: string[][] }) {
   );
 }
 
-function shortUrl(u: string): string {
-  return u.replace(/^https?:\/\//, '').replace(/\/$/, '');
+/** Single-series bar chart: audits per day. */
+function AuditsChart({ data }: { data: Array<{ day: string; n: number }> }) {
+  const W = 640;
+  const H = 170;
+  const padX = 8;
+  const padTop = 10;
+  const axisH = 22;
+  const plotH = H - padTop - axisH;
+  const innerW = W - padX * 2;
+  const slot = innerW / Math.max(data.length, 1);
+  const barW = Math.max(3, slot - 3);
+  const max = Math.max(1, ...data.map((d) => d.n));
+  const baseline = padTop + plotH;
+  const total = data.reduce((s, d) => s + d.n, 0);
+
+  if (total === 0) {
+    return <p style={{ margin: 0, fontSize: 14, color: 'var(--text-muted)' }}>No audits in this period yet.</p>;
+  }
+
+  const dm = (day: string) => {
+    const [, m, d] = day.split('-');
+    return `${Number(m)}/${Number(d)}`;
+  };
+
+  return (
+    <div>
+      <div style={{ fontSize: 12.5, color: 'var(--text-muted)', marginBottom: 8 }}>
+        <strong style={{ color: 'var(--text)' }}>{total.toLocaleString()}</strong> audits · peak {max}/day
+      </div>
+      <div style={{ overflowX: 'auto' }}>
+        <svg viewBox={`0 0 ${W} ${H}`} width="100%" height={H} role="img" aria-label="Audits per day" style={{ display: 'block', minWidth: 320 }}>
+          <line x1={padX} y1={baseline} x2={W - padX} y2={baseline} stroke="var(--border)" strokeWidth="1" />
+          {data.map((d, i) => {
+            const x = padX + i * slot + (slot - barW) / 2;
+            const h = (d.n / max) * plotH;
+            const y = baseline - h;
+            return (
+              <g key={d.day}>
+                {d.n > 0 && <rect x={x} y={y} width={barW} height={h} rx={2.5} fill="var(--accent)" opacity={0.92} />}
+                <rect x={padX + i * slot} y={padTop} width={slot} height={plotH} fill="transparent">
+                  <title>{`${d.day}: ${d.n} audit${d.n === 1 ? '' : 's'}`}</title>
+                </rect>
+              </g>
+            );
+          })}
+          {[0, Math.floor(data.length / 2), data.length - 1].map((i) => (
+            <text key={i} x={padX + i * slot + slot / 2} y={H - 6} textAnchor="middle" fontSize="11" fill="var(--text-muted)">
+              {data[i] ? dm(data[i].day) : ''}
+            </text>
+          ))}
+        </svg>
+      </div>
+    </div>
+  );
 }

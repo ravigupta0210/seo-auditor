@@ -104,7 +104,22 @@ export function EmailReportModal({ auditId, url }: { auditId: string; url: strin
             </span>
             <h2 style={{ margin: '0 0 8px', fontSize: 21, letterSpacing: '-0.02em' }}>You&apos;re all set</h2>
             <p style={{ margin: '0 auto', maxWidth: 320, fontSize: 14.5, color: 'var(--text-dim)', lineHeight: 1.55 }}>{message}</p>
-            <button onClick={dismiss} className="btn btn-primary btn-block" style={{ marginTop: 22 }}>
+            <p
+              style={{
+                margin: '14px auto 0',
+                maxWidth: 340,
+                fontSize: 12.5,
+                color: 'var(--text-muted)',
+                lineHeight: 1.5,
+                background: 'var(--accent-grad-soft)',
+                border: '1px solid var(--border)',
+                borderRadius: 'var(--radius-sm)',
+                padding: '10px 12px',
+              }}
+            >
+              📬 Don&apos;t see it in a minute? Please <strong style={{ color: 'var(--text-dim)' }}>check your spam folder</strong> — and if it&apos;s there, mark it <strong style={{ color: 'var(--text-dim)' }}>&ldquo;Not spam&rdquo;</strong> so future reports land in your inbox.
+            </p>
+            <button onClick={dismiss} className="btn btn-primary btn-block" style={{ marginTop: 20 }}>
               Done
             </button>
           </div>

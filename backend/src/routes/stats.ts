@@ -149,9 +149,9 @@ function csvEscape(v: unknown): string {
 statsRouter.get('/export', async (req: Request, res: Response) => {
   if (!authorized(req, res)) return;
   const type = String(req.query.type ?? 'leads');
-  const sql = type === 'sent' ? undefined : LIST_SQL[type];
+  const sql = LIST_SQL[type];
   if (!sql) {
-    res.status(400).json({ error: 'type must be leads, feedback, or audits' });
+    res.status(400).json({ error: 'type must be leads, feedback, audits, or sent' });
     return;
   }
   try {

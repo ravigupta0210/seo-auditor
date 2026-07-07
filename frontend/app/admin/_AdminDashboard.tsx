@@ -114,7 +114,6 @@ export function AdminDashboard() {
     { label: 'Emails sent (all)', value: t.emails_sent_total },
     { label: 'Feedback received', value: t.feedback_received },
   ];
-  const exportHref = (type: string) => `${BACKEND_URL}/api/stats/export?key=${encodeURIComponent(key)}&type=${type}`;
 
   return (
     <div style={{ display: 'flex', flexDirection: 'column', gap: 22 }}>
@@ -149,13 +148,6 @@ export function AdminDashboard() {
           </div>
         </div>
         <AuditsChart data={data.auditsOverTime} />
-      </section>
-
-      <section className="glass-card" style={{ padding: '16px 20px', display: 'flex', alignItems: 'center', gap: 12, flexWrap: 'wrap' }}>
-        <span style={{ fontSize: 13, color: 'var(--text-muted)', fontWeight: 600 }}>Export CSV:</span>
-        <a className="btn btn-secondary" href={exportHref('leads')} style={{ height: 34, fontSize: 13 }}>Emails</a>
-        <a className="btn btn-secondary" href={exportHref('feedback')} style={{ height: 34, fontSize: 13 }}>Feedback</a>
-        <a className="btn btn-secondary" href={exportHref('audits')} style={{ height: 34, fontSize: 13 }}>Audits</a>
       </section>
 
       <DataSection
@@ -227,11 +219,21 @@ function DataSection({
   head: string[];
   renderRow: (row: Row) => Array<React.ReactNode>;
 }) {
-  const [rows, setRows] = useState<Row[]>(recent);
+  const [fullRows, setFullRows] = useState<Row[] | null>(null);
   const [expanded, setExpanded] = useState(false);
   const [truncated, setTruncated] = useState(false);
   const [loading, setLoading] = useState(false);
   const [err, setErr] = useState('');
+
+  // Re-sync with the freshly fetched "recent" rows whenever the parent reloads.
+  useEffect(() => {
+    setFullRows(null);
+    setExpanded(false);
+    setTruncated(false);
+  }, [recent]);
+
+  const rows = expanded && fullRows ? fullRows : recent;
+  const exportHref = `${BACKEND_URL}/api/stats/export?key=${encodeURIComponent(apiKey)}&type=${type}`;
 
   async function showAll() {
     setLoading(true);
@@ -242,7 +244,7 @@ function DataSection({
       if (!res.ok) {
         setErr(json.error || 'Failed to load.');
       } else {
-        setRows(json.rows as Row[]);
+        setFullRows(json.rows as Row[]);
         setTruncated(Boolean(json.truncated));
         setExpanded(true);
       }
@@ -255,7 +257,13 @@ function DataSection({
   const count = expanded ? `all ${rows.length}${truncated ? '+' : ''}` : `${recent.length} recent`;
 
   return (
-    <Panel title={`${title} (${count})`}>
+    <section className="glass-card" style={{ padding: '20px 22px' }}>
+      <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', gap: 10, marginBottom: 12, flexWrap: 'wrap' }}>
+        <h2 style={{ margin: 0, fontSize: 15, letterSpacing: '-0.01em' }}>
+          {title} <span style={{ color: 'var(--text-muted)', fontWeight: 400, fontSize: 13 }}>({count})</span>
+        </h2>
+        <a className="btn btn-secondary" href={exportHref} style={{ height: 30, fontSize: 12.5, padding: '0 12px' }}>⬇ Download CSV</a>
+      </div>
       {rows.length === 0 ? (
         <Empty>Nothing here yet.</Empty>
       ) : (
@@ -269,11 +277,11 @@ function DataSection({
             </button>
           )}
           {expanded && truncated && (
-            <p style={{ margin: '10px 0 0', fontSize: 12, color: 'var(--text-muted)' }}>Showing the latest 1,000. Use CSV export for the complete history.</p>
+            <p style={{ margin: '10px 0 0', fontSize: 12, color: 'var(--text-muted)' }}>Showing the latest 1,000. Use Download CSV for the complete history.</p>
           )}
         </>
       )}
-    </Panel>
+    </section>
   );
 }
 

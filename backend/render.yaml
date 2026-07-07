@@ -37,3 +37,6 @@ services:
         sync: false
       - key: APP_URL
         sync: false
+      # Secret that unlocks the /api/stats owner dashboard.
+      - key: ADMIN_TOKEN
+        sync: false

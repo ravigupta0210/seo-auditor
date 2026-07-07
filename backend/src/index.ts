@@ -4,6 +4,7 @@ import { auditRouter } from './routes/audit.js';
 import { badgeRouter } from './routes/badge.js';
 import { feedbackRouter } from './routes/feedback.js';
 import { leadsRouter } from './routes/leads.js';
+import { statsRouter } from './routes/stats.js';
 import { ensureSchema, dbEnabled } from './lib/db.js';
 import { mailEnabled } from './lib/mailer.js';
 import { logger } from './lib/logger.js';
@@ -20,6 +21,7 @@ app.use('/api/audit', auditRouter);
 app.use('/api/badge', badgeRouter);
 app.use('/api/feedback', feedbackRouter);
 app.use('/api/leads', leadsRouter);
+app.use('/api/stats', statsRouter);
 
 app.use((req, res) => {
   res.status(404).json({ error: 'Not found', path: req.originalUrl });

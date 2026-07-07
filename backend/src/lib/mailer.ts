@@ -17,6 +17,7 @@
  *   APP_URL              Public frontend origin for report links
  */
 import { logger } from './logger.js';
+import { pool } from './db.js';
 import type { AuditReport } from './store.js';
 
 const CLIENT_ID = process.env.GMAIL_CLIENT_ID?.trim();
@@ -111,15 +112,32 @@ function buildRaw(opts: { to: string; subject: string; html: string; text: strin
   return Buffer.from(parts.join('\r\n'), 'utf8').toString('base64url');
 }
 
-async function send(opts: { to: string; subject: string; html: string; text: string; replyTo?: string }): Promise<boolean> {
+/** Best-effort log of an email attempt to the sent_emails table. */
+async function logSent(opts: { to: string; subject: string; text: string; kind: string; auditId?: string }, success: boolean): Promise<void> {
+  if (!pool) return;
+  try {
+    await pool.query(
+      'INSERT INTO sent_emails (to_email, kind, subject, body, audit_id, success) VALUES ($1,$2,$3,$4,$5,$6)',
+      [opts.to, opts.kind, opts.subject, opts.text, opts.auditId ?? null, success],
+    );
+  } catch (err) {
+    logger.error({ err }, 'failed to log sent_email');
+  }
+}
+
+async function send(opts: { to: string; subject: string; html: string; text: string; replyTo?: string; kind: string; auditId?: string }): Promise<boolean> {
   if (!mailEnabled) {
     logger.warn({ to: opts.to, subject: opts.subject }, 'mailer disabled (GMAIL_* / MAIL_FROM unset) — email not sent');
     return false;
   }
   const token = await getAccessToken();
-  if (!token) return false;
+  if (!token) {
+    await logSent(opts, false);
+    return false;
+  }
   const ac = new AbortController();
   const timer = setTimeout(() => ac.abort(), 15_000);
+  let ok = false;
   try {
     const res = await fetch('https://gmail.googleapis.com/gmail/v1/users/me/messages/send', {
       method: 'POST',
@@ -127,15 +145,17 @@ async function send(opts: { to: string; subject: string; html: string; text: str
       body: JSON.stringify({ raw: buildRaw(opts) }),
       signal: ac.signal,
     });
-    if (res.status >= 200 && res.status < 300) return true;
-    logger.error({ status: res.status, body: (await res.text().catch(() => '')).slice(0, 500), to: opts.to }, 'Gmail API send failed');
-    return false;
+    ok = res.status >= 200 && res.status < 300;
+    if (!ok) {
+      logger.error({ status: res.status, body: (await res.text().catch(() => '')).slice(0, 500), to: opts.to }, 'Gmail API send failed');
+    }
   } catch (err) {
     logger.error({ err, to: opts.to }, 'Gmail API send threw');
-    return false;
   } finally {
     clearTimeout(timer);
   }
+  await logSent(opts, ok);
+  return ok;
 }
 
 // --- Email content ---------------------------------------------------------
@@ -204,7 +224,7 @@ export async function sendReportEmail(to: string, report: AuditReport): Promise<
     (issues.length ? `Top things to fix:\n${issues.map((c) => `- [${c.severity}] ${c.title}`).join('\n')}\n\n` : '') +
     `View the full report: ${reportUrl}\n`;
 
-  return send({ to, subject: `Your SEO audit for ${url} - score ${score}/100`, html, text });
+  return send({ to, subject: `Your SEO audit for ${url} - score ${score}/100`, html, text, kind: 'report', auditId: id });
 }
 
 /** Notify the site owner of new feedback. */
@@ -241,5 +261,6 @@ export async function sendFeedbackEmail(fb: {
     html,
     text,
     replyTo: fb.email || undefined,
+    kind: 'feedback',
   });
 }

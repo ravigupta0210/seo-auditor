@@ -9,12 +9,15 @@ interface Stats {
     emails_captured: number;
     unique_emails: number;
     report_emails_sent: number;
+    emails_sent_total: number;
     feedback_received: number;
   };
+  auditsOverTime: Array<{ day: string; n: number }>;
   recentFeedback: Array<{ created_at: string; name: string | null; email: string | null; message: string; url: string | null }>;
   recentLeads: Array<{ created_at: string; email: string; url: string | null; report_sent: boolean }>;
   topUrls: Array<{ url: string; n: number; avg_score: number | null }>;
   recentAudits: Array<{ created_at: string; url: string; scope: string; overall_score: number | null }>;
+  sentEmails: Array<{ created_at: string; to_email: string; kind: string; subject: string | null; success: boolean }>;
   generatedAt: string;
 }
 
@@ -111,8 +114,10 @@ export function AdminDashboard() {
     { label: 'Emails captured', value: t.emails_captured },
     { label: 'Unique emails', value: t.unique_emails },
     { label: 'Reports emailed', value: t.report_emails_sent },
+    { label: 'Emails sent (all)', value: t.emails_sent_total },
     { label: 'Feedback received', value: t.feedback_received },
   ];
+  const exportHref = (type: string) => `${BACKEND_URL}/api/stats/export?key=${encodeURIComponent(key)}&type=${type}`;
 
   return (
     <div style={{ display: 'flex', flexDirection: 'column', gap: 26 }}>
@@ -136,6 +141,17 @@ export function AdminDashboard() {
           </div>
         ))}
       </div>
+
+      <Panel title="Audits — last 30 days">
+        <AuditsChart data={data.auditsOverTime} />
+      </Panel>
+
+      <section className="glass-card" style={{ padding: '16px 20px', display: 'flex', alignItems: 'center', gap: 12, flexWrap: 'wrap' }}>
+        <span style={{ fontSize: 13, color: 'var(--text-muted)', fontWeight: 600 }}>Export CSV:</span>
+        <a className="btn btn-secondary" href={exportHref('leads')} style={{ height: 34, fontSize: 13 }}>Emails</a>
+        <a className="btn btn-secondary" href={exportHref('feedback')} style={{ height: 34, fontSize: 13 }}>Feedback</a>
+        <a className="btn btn-secondary" href={exportHref('audits')} style={{ height: 34, fontSize: 13 }}>Audits</a>
+      </section>
 
       <Panel title={`Recent feedback (${data.recentFeedback.length})`}>
         {data.recentFeedback.length === 0 ? (
@@ -196,6 +212,82 @@ export function AdminDashboard() {
           />
         )}
       </Panel>
+
+      <Panel title={`Sent emails (${data.sentEmails.length} most recent)`}>
+        {data.sentEmails.length === 0 ? (
+          <Empty>No emails sent yet.</Empty>
+        ) : (
+          <Table
+            head={['To', 'Type', 'Subject', 'Status', 'When']}
+            rows={data.sentEmails.map((e) => [
+              e.to_email,
+              e.kind,
+              e.subject || '—',
+              e.success ? '✅ sent' : '⚠️ failed',
+              fmt(e.created_at),
+            ])}
+          />
+        )}
+      </Panel>
+    </div>
+  );
+}
+
+/** Single-series bar chart: audits per day over the last 30 days. */
+function AuditsChart({ data }: { data: Array<{ day: string; n: number }> }) {
+  const W = 640;
+  const H = 170;
+  const padX = 8;
+  const padTop = 10;
+  const axisH = 22;
+  const plotH = H - padTop - axisH;
+  const innerW = W - padX * 2;
+  const slot = innerW / Math.max(data.length, 1);
+  const barW = Math.max(4, slot - 3);
+  const max = Math.max(1, ...data.map((d) => d.n));
+  const baseline = padTop + plotH;
+  const total = data.reduce((s, d) => s + d.n, 0);
+
+  if (total === 0) {
+    return <p style={{ margin: 0, fontSize: 14, color: 'var(--text-muted)' }}>No audits in the last 30 days yet.</p>;
+  }
+
+  const dm = (day: string) => {
+    const [, m, d] = day.split('-');
+    return `${Number(m)}/${Number(d)}`;
+  };
+
+  return (
+    <div>
+      <div style={{ fontSize: 12.5, color: 'var(--text-muted)', marginBottom: 8 }}>
+        <strong style={{ color: 'var(--text)' }}>{total.toLocaleString()}</strong> audits · peak {max}/day
+      </div>
+      <div style={{ overflowX: 'auto' }}>
+        <svg viewBox={`0 0 ${W} ${H}`} width="100%" height={H} role="img" aria-label="Audits per day, last 30 days" style={{ display: 'block', minWidth: 320 }}>
+          {/* recessive baseline */}
+          <line x1={padX} y1={baseline} x2={W - padX} y2={baseline} stroke="var(--border)" strokeWidth="1" />
+          {data.map((d, i) => {
+            const x = padX + i * slot + (slot - barW) / 2;
+            const h = (d.n / max) * plotH;
+            const y = baseline - h;
+            return (
+              <g key={d.day}>
+                <rect x={x} y={y} width={barW} height={h} rx={2.5} fill="var(--accent)" opacity={d.n ? 0.92 : 0} />
+                {/* full-slot transparent hit target for hover */}
+                <rect x={padX + i * slot} y={padTop} width={slot} height={plotH} fill="transparent">
+                  <title>{`${d.day}: ${d.n} audit${d.n === 1 ? '' : 's'}`}</title>
+                </rect>
+              </g>
+            );
+          })}
+          {/* first / mid / last date ticks */}
+          {[0, Math.floor(data.length / 2), data.length - 1].map((i) => (
+            <text key={i} x={padX + i * slot + slot / 2} y={H - 6} textAnchor="middle" fontSize="11" fill="var(--text-muted)">
+              {data[i] ? dm(data[i].day) : ''}
+            </text>
+          ))}
+        </svg>
+      </div>
     </div>
   );
 }

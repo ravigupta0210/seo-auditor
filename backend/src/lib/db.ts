@@ -84,6 +84,18 @@ export async function ensureSchema(): Promise<void> {
         created_at timestamptz NOT NULL DEFAULT now()
       );
       CREATE INDEX IF NOT EXISTS feedback_created_at_idx ON feedback (created_at DESC);
+
+      CREATE TABLE IF NOT EXISTS sent_emails (
+        id         uuid PRIMARY KEY DEFAULT gen_random_uuid(),
+        to_email   text NOT NULL,
+        kind       text NOT NULL,
+        subject    text,
+        body       text,
+        audit_id   uuid,
+        success    boolean NOT NULL DEFAULT true,
+        created_at timestamptz NOT NULL DEFAULT now()
+      );
+      CREATE INDEX IF NOT EXISTS sent_emails_created_at_idx ON sent_emails (created_at DESC);
     `);
     schemaReady = true;
     logger.info('postgres schema ready');

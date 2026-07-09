@@ -1,0 +1,160 @@
+{
+  "slug": "llmstxt-vs-robots-txt",
+  "title": "llms.txt vs robots.txt: What is the Difference?",
+  "date": "2026-07-09",
+  "updatedAt": "2026-07-09",
+  "tag": "GEO",
+  "cluster": "geo",
+  "keyword": "llms.txt vs robots.txt",
+  "secondaryKeywords": [
+    "robots.txt for AI",
+    "AI crawler control",
+    "curate content for AI",
+    "llms.txt format"
+  ],
+  "readTime": 9,
+  "excerpt": "robots.txt controls which crawlers can access your site; llms.txt curates your best content for AI models. Here is how they differ and why you want both.",
+  "description": "llms.txt vs robots.txt: robots.txt controls crawler access while llms.txt curates your best content for AI models. Learn what each does and why you need both.",
+  "tldr": "robots.txt and llms.txt do opposite jobs. robots.txt is a permissions file that tells crawlers what they may access (allow/disallow). llms.txt is a proposed markdown file that curates and points AI models to your most important content — it blocks nothing. Most sites should publish both: robots.txt to control access, llms.txt to guide AI to your best pages.",
+  "status": "published",
+  "sections": [
+    {
+      "heading": "llms.txt vs robots.txt: the core difference",
+      "body": [
+        "The difference in llms.txt vs robots.txt is control versus curation. **robots.txt** is a decades-old permissions file that tells crawlers which URLs they are allowed to fetch — it grants or denies access. **llms.txt** is a newer, proposed markdown file that does the opposite job: it curates your most important content and points AI models to it in a clean, easy-to-parse format. robots.txt can block a bot; llms.txt cannot block anything. One is a gate, the other is a guided tour.",
+        "That distinction matters because people assume the two files compete, when they actually solve different problems. robots.txt answers \"is this crawler permitted to load this page?\" llms.txt answers \"if an AI model wants to understand my site, which pages should it read first?\" You are not choosing between them — a well-optimized site typically publishes both, because access control and content curation are separate concerns.",
+        "Here is the same idea in one line: robots.txt is about **who gets in**, llms.txt is about **what they should read**. Everything below expands on that, but if you remember only one sentence, remember that one.",
+        "[[table]]"
+      ]
+    },
+    {
+      "heading": "What robots.txt does (access control)",
+      "body": [
+        "robots.txt is a plain-text file at the root of your domain (`/robots.txt`) that tells crawlers which paths they may or may not request. It has been part of the web since 1994, it follows the Robots Exclusion Protocol, and every major crawler — Googlebot, Bingbot, and AI bots like GPTBot and ClaudeBot — checks it before crawling. Its whole job is permission: `Allow` and `Disallow` rules scoped to a named `User-agent`.",
+        "A typical file looks like this:",
+        "- `User-agent: *` — a rule block that applies to all crawlers.",
+        "- `Disallow: /admin/` — do not crawl anything under /admin/.",
+        "- `Allow: /` — everything else is fair game.",
+        "- `Sitemap: https://example.com/sitemap.xml` — where to find the URL list.",
+        "Crucially, robots.txt is where you control AI crawler access. If you want to keep an AI model out, you name its user-agent and disallow it — for example `User-agent: GPTBot` followed by `Disallow: /`. This is the standard, respected mechanism for the job, covered step by step in [how to block AI crawlers](/blog/how-to-block-ai-crawlers). For a full primer on the file itself, see [what is robots.txt](/blog/what-is-robots-txt).",
+        "> robots.txt is a request, not a wall. Well-behaved crawlers obey it; it does not enforce access the way a password or firewall would. Use server-side auth for anything truly private."
+      ]
+    },
+    {
+      "heading": "What llms.txt does (content curation for AI)",
+      "body": [
+        "llms.txt is a proposed markdown file at `/llms.txt` that curates your most valuable content for large language models — it hands them a clean, structured map of what matters instead of making them guess. It blocks nothing and grants nothing; it exists purely to guide. The format is human-readable markdown: an H1 with your site name, a short blockquote summary, then sections of annotated links to your key pages and docs.",
+        "The problem it solves is context. When an AI model tries to understand your site, it wrestles with navigation, ads, and boilerplate that bury the substance. A raw HTML page is noisy; llms.txt gives the model a curated, low-noise index of the pages you most want it to read and cite. Think of it as a table of contents written specifically for machines that answer questions.",
+        "A minimal llms.txt looks like this:",
+        "- `# Example Co` — your site or product name as the H1.",
+        "- `> A one-line summary of what the site is and who it serves.` — a blockquote for quick context.",
+        "- `## Docs` — a section heading, followed by markdown links like `- [Getting started](https://example.com/start): install and first steps.`",
+        "- Optional `## Optional` section for secondary links a model can skip when short on context.",
+        "Because it is curation rather than control, llms.txt is a [generative engine optimization](/blog/what-is-generative-engine-optimization) tactic — it improves the odds a model surfaces your best pages accurately. The full build steps live in [how to write an llms.txt file](/blog/how-to-write-an-llms-txt-file), and the background is in [what is llms.txt](/blog/what-is-llmstxt)."
+      ]
+    },
+    {
+      "heading": "Do you need both? Which file controls AI crawlers?",
+      "body": [
+        "Yes — most sites should publish both, because they cover different needs. robots.txt is the file that actually controls AI crawler access: it is the only one of the two that can allow or disallow a bot like GPTBot, ClaudeBot, or PerplexityBot. llms.txt has zero authority over access; a model that ignores robots.txt will not be stopped by anything in llms.txt, and one that is blocked in robots.txt will never read your llms.txt at all.",
+        "So the two files work as a pair. First, decide access in robots.txt: allow the AI crawlers you want citations from, disallow the ones you do not. Then, for the crawlers you allow, publish llms.txt to steer them toward your best content. Blocking a bot in robots.txt while curating for it in llms.txt is contradictory — align them so your access policy and your curation policy point the same direction.",
+        "One common mistake ends the whole strategy before it starts: accidentally disallowing an AI bot in robots.txt, then wondering why your llms.txt has no effect. If the gate is shut, the tour never happens. This is exactly the kind of misconfiguration an audit catches. Paste your URL into the [free SEO + GEO audit on the homepage](/) and it checks both files in one pass — whether AI crawlers are blocked in robots.txt, whether llms.txt exists and is well-formed, and whether your content is structured for citation. Getting cited in AI answers depends on both being right, as [what are AI citations](/blog/what-are-ai-citations) explains.",
+        "[[flowchart]]"
+      ]
+    }
+  ],
+  "comparisonTable": {
+    "caption": "llms.txt vs robots.txt at a glance",
+    "headers": ["Dimension", "robots.txt", "llms.txt"],
+    "rows": [
+      ["Primary job", "Control crawler access (allow / disallow)", "Curate and guide AI to your best content"],
+      ["Can it block a bot?", "Yes — Disallow keeps crawlers out", "No — it grants and blocks nothing"],
+      ["Format", "Plain text (Robots Exclusion Protocol)", "Markdown (H1, summary, annotated links)"],
+      ["Location", "/robots.txt", "/llms.txt"],
+      ["Age & adoption", "Standard since 1994, universally respected", "Proposed 2024, adoption still growing"],
+      ["Who reads it", "All crawlers: Google, Bing, GPTBot, ClaudeBot", "AI models seeking clean context"],
+      ["Controls AI crawler access?", "Yes — the file that does this", "No — curation only"],
+      ["Do you need it?", "Yes — every site should have one", "Recommended for GEO / AI visibility"]
+    ]
+  },
+  "flowchart": {
+    "title": "How to set up robots.txt and llms.txt together",
+    "steps": [
+      { "title": "Decide AI access in robots.txt", "detail": "Allow the AI crawlers you want citations from (GPTBot, ClaudeBot, PerplexityBot); disallow the ones you don't." },
+      { "title": "Confirm you aren't blocking by accident", "detail": "A stray Disallow can shut out AI bots and silently kill your GEO strategy." },
+      { "title": "Publish llms.txt for allowed crawlers", "detail": "Add /llms.txt with an H1, a one-line summary, and annotated links to your best pages." },
+      { "title": "Align the two files", "detail": "Don't disallow a bot in robots.txt while curating for it in llms.txt — point both the same way." },
+      { "title": "Audit both in one pass", "detail": "Run a free SEO + GEO audit to verify access, llms.txt validity, and citable structure." }
+    ]
+  },
+  "peopleAlsoAsk": [
+    {
+      "q": "Is llms.txt the same as robots.txt?",
+      "a": "No. robots.txt is an access-control file that tells crawlers which URLs they may fetch, using Allow and Disallow rules. llms.txt is a proposed markdown file that curates your best content and points AI models to it — it cannot allow or block anything. They serve opposite purposes: one is a permissions gate, the other is a curated guide, which is why most sites publish both."
+    },
+    {
+      "q": "Do I need both llms.txt and robots.txt?",
+      "a": "Most sites should have both because they solve different problems. robots.txt controls which crawlers, including AI bots, can access your pages — every site needs one. llms.txt is optional but recommended for AI visibility: it curates your best content so models cite it accurately. Use robots.txt to set access, then llms.txt to guide the crawlers you allow toward your strongest pages."
+    },
+    {
+      "q": "Does llms.txt replace robots.txt?",
+      "a": "No, llms.txt does not replace robots.txt. robots.txt is the standard, universally respected file for controlling crawler access, and nothing about llms.txt changes that. llms.txt only curates content for AI models — it has no power to allow or disallow any bot. If you removed robots.txt and relied on llms.txt for access control, you would have no access control at all."
+    },
+    {
+      "q": "What is the difference between llms.txt and robots.txt?",
+      "a": "The difference is control versus curation. robots.txt is a plain-text permissions file that grants or denies crawler access to URLs. llms.txt is a markdown file that curates and points AI models to your most important content without blocking anything. robots.txt decides who gets in; llms.txt decides what they read first. They are complementary, not competing, and a well-optimized site uses both."
+    },
+    {
+      "q": "Which file controls AI crawlers?",
+      "a": "robots.txt controls AI crawlers. It is the only one of the two files that can allow or disallow bots like GPTBot, ClaudeBot, and PerplexityBot, using named User-agent rules. llms.txt has no control over access — it only curates content for models that are already allowed in. To block or permit an AI crawler, you edit robots.txt, not llms.txt."
+    }
+  ],
+  "faqs": [
+    {
+      "q": "Where do llms.txt and robots.txt live on my site?",
+      "a": "Both sit at the root of your domain: robots.txt at /robots.txt and llms.txt at /llms.txt. Crawlers look for them there by convention, so they must be reachable at those exact paths — not in a subfolder — to be found and used."
+    },
+    {
+      "q": "Will publishing llms.txt make AI models cite me more?",
+      "a": "It can help, but it is not a guarantee. llms.txt gives models a clean, curated map of your best content, which improves the odds they surface and cite the right pages. Adoption is still growing, so treat llms.txt as one GEO signal alongside answer-first content and open AI-crawler access, not a magic switch."
+    },
+    {
+      "q": "Can I block AI bots in robots.txt but still keep llms.txt?",
+      "a": "You can, but it is usually contradictory. If you disallow a bot in robots.txt, it will never fetch your llms.txt, so curating content for that bot is wasted effort. Align the two: block the crawlers you truly want out, and only curate in llms.txt for the ones you allow."
+    }
+  ],
+  "relatedKeywords": [
+    "llms.txt vs robots.txt",
+    "robots.txt for ai",
+    "ai crawler control",
+    "block ai crawlers",
+    "llms.txt purpose"
+  ],
+  "internalLinks": [
+    {
+      "href": "/",
+      "anchor": "run a free SEO + GEO audit"
+    },
+    {
+      "href": "/blog/what-is-robots-txt",
+      "anchor": "What is robots.txt"
+    },
+    {
+      "href": "/blog/how-to-write-an-llms-txt-file",
+      "anchor": "How to write an llms.txt file"
+    },
+    {
+      "href": "/blog/how-to-block-ai-crawlers",
+      "anchor": "How to block AI crawlers"
+    },
+    {
+      "href": "/blog/what-is-generative-engine-optimization",
+      "anchor": "What is generative engine optimization"
+    },
+    {
+      "href": "/blog/what-is-llmstxt",
+      "anchor": "What is llms.txt"
+    }
+  ],
+  "images": []
+}

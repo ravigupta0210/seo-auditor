@@ -1,0 +1,124 @@
+{
+  "slug": "what-is-llmstxt",
+  "title": "What Is llms.txt? A Plain-English Guide",
+  "date": "2026-07-09",
+  "updatedAt": "2026-07-09",
+  "tag": "GEO",
+  "cluster": "geo",
+  "keyword": "what is llms.txt",
+  "secondaryKeywords": ["llms.txt file", "llms.txt format", "llms.txt vs robots.txt", "generative engine optimization", "AI crawlers"],
+  "readTime": 9,
+  "excerpt": "llms.txt is a proposed Markdown file at your site root that gives AI engines a clean, curated map of your best pages — here is what it is and why it matters.",
+  "description": "What is llms.txt? It is a proposed Markdown file at your domain root that gives AI engines a curated map of your best pages for AI citations.",
+  "tldr": "llms.txt is a proposed plain-text Markdown file placed at your domain root that gives AI engines like ChatGPT, Claude, and Perplexity a curated, clean map of your most important pages. Unlike robots.txt, which controls crawler access, llms.txt guides AI attention toward the content you most want read and cited in AI answers.",
+  "status": "published",
+  "sections": [
+    {
+      "heading": "What is llms.txt?",
+      "body": [
+        "So, what is llms.txt? It is a proposed plain-text file, written in Markdown and placed at your domain root (`https://yourdomain.com/llms.txt`), that gives AI engines a curated map of your most important content. Think of it as a hand-picked reading list you hand to large language models like ChatGPT, Claude, and Perplexity, telling them *start here — these are the pages worth reading and citing.* The format was proposed by Jeremy Howard of Answer.AI in 2024 and has been quietly adopted by documentation sites and AI-first companies ever since.",
+        "The problem llms.txt solves is context. When an AI engine tries to understand your site, it faces messy HTML full of navigation, ads, scripts, and boilerplate — and a limited context window to read it all. An llms.txt file cuts through that by listing your key pages as clean Markdown links with a short description of each, in your own words. Instead of guessing what matters, the AI gets an editorial summary of your site.",
+        "> llms.txt is to AI engines what a curated reading list is to a new employee: not every document you own, just the ones that matter and a note on why.",
+        "It is important to be clear about what llms.txt is *not*. It does not block or grant crawler access — that is [robots.txt](/blog/what-is-robots-txt)'s job — and it does not list every URL like an XML sitemap. It is a curation and context file, part of the emerging discipline of [generative engine optimization](/blog/what-is-generative-engine-optimization)."
+      ]
+    },
+    {
+      "heading": "Why llms.txt matters for GEO and AI citations",
+      "body": [
+        "llms.txt matters because AI answer engines increasingly send traffic and shape reputations, and the sites they cite are the ones they can most easily understand. An llms.txt file makes your best content easy to find, parse, and quote — which is the entire goal of earning [AI citations](/blog/what-are-ai-citations). When a model can read a clean summary of your pages, it is more likely to represent you accurately and name you as a source.",
+        "There are three concrete reasons to publish one in 2026:",
+        "- **Context efficiency:** AI models have limited context windows. A clean llms.txt lets them spend that budget on your actual content instead of parsing cluttered HTML.\n- **Editorial control:** You describe each page in your own words, steering how the AI frames your product, docs, or expertise.\n- **First-mover advantage:** Very few sites publish an llms.txt yet, so adding one is a low-effort way to stand out to AI crawlers while the convention is young.",
+        "None of this replaces classic SEO — it complements it. An llms.txt file will not rank you in Google, and it is not a magic switch for AI visibility; the content it points to still has to be genuinely good and reachable. Think of it as removing friction so the quality you already have gets seen. To understand where it fits, compare [GEO vs SEO](/blog/geo-vs-seo)."
+      ]
+    },
+    {
+      "heading": "What an llms.txt file looks like",
+      "body": [
+        "An llms.txt file follows a simple, fixed Markdown structure: a single H1 with your site name, an optional blockquote summary, and one or more H2 sections containing bulleted Markdown links to key pages. Because it is just Markdown, you can write one by hand in about ten minutes.",
+        "```markdown\n# Acme Docs\n\n> Acme is a privacy-first analytics tool for small SaaS teams.\n\n## Guides\n- [Quickstart](https://acme.example/quickstart): send your first event in 5 minutes.\n- [Pricing](https://acme.example/pricing): free tier limits and paid plans.\n\n## Optional\n- [Changelog](https://acme.example/changelog): weekly release notes.\n```",
+        "The short note after each link is the most valuable part: it is a plain-language description the AI can lift directly into an answer, so write each one as a standalone, quotable sentence. Some sites also publish a companion `llms-full.txt` that inlines the full text of key pages, saving the AI a second fetch. For the exact structure, rules, and a longer copy-paste template, follow our step-by-step guide to [writing an llms.txt file](/blog/how-to-write-an-llms-txt-file)."
+      ]
+    },
+    {
+      "heading": "llms.txt vs robots.txt: the key difference",
+      "body": [
+        "The most common confusion is between llms.txt and robots.txt, but they do opposite jobs. robots.txt controls access — which crawlers may visit which paths — while llms.txt provides context, a curated guide to your best content for the crawlers that are allowed in. One is a gate; the other is a map. You can, and often should, have both.",
+        "[[table]]",
+        "In practice they work together. Your [robots.txt](/blog/what-is-robots-txt) decides whether AI bots like GPTBot and ClaudeBot may crawl at all — and if you have [blocked AI crawlers](/blog/how-to-block-ai-crawlers) there, they will never even fetch your llms.txt. Once access is allowed, llms.txt steps in to direct attention. If your goal is the opposite — keeping AI out — llms.txt is not the tool; use robots.txt instead. For a deeper side-by-side, see [llms.txt vs robots.txt](/blog/llmstxt-vs-robots-txt)."
+      ]
+    },
+    {
+      "heading": "Do you need an llms.txt file, and how to check",
+      "body": [
+        "You do not strictly need an llms.txt file — AI engines can still crawl and cite allowed pages without one — but it is one of the highest-value, lowest-effort GEO wins available in 2026. If your site has documentation, product pages, or in-depth content you want AI engines to represent accurately, publishing one is worth the ten minutes it takes.",
+        "You are a good candidate for an llms.txt file if: you run a docs site or SaaS product, you publish expert content you want cited, or you compete in a space where AI answers already influence buyers. Sites that are purely transactional with little informational content gain less from it.",
+        "The quickest way to know where you stand is to check your live site. Paste your URL into the [free SEO + GEO audit on the homepage](/) — no signup — and it reports whether a reachable llms.txt exists, whether AI crawlers can access it, and which GEO signals you are missing, each with a plain-English fix. Once you understand what llms.txt is, the natural next steps are writing one and confirming AI engines can reach it, both of which the audit and our [how-to guide](/blog/how-to-write-an-llms-txt-file) walk you through."
+      ]
+    }
+  ],
+  "comparisonTable": {
+    "caption": "llms.txt vs robots.txt: two different jobs",
+    "headers": ["", "llms.txt", "robots.txt"],
+    "rows": [
+      ["Purpose", "Curate and describe your best content for AI", "Control which crawlers access which paths"],
+      ["Format", "Markdown (headings + links)", "Plain-text directives (User-agent, Disallow)"],
+      ["Location", "yourdomain.com/llms.txt", "yourdomain.com/robots.txt"],
+      ["Controls access?", "No — guidance only", "Yes — allows or blocks crawlers"],
+      ["Who reads it", "AI engines / LLMs", "All crawlers (search + AI)"],
+      ["Standard status", "Community proposal (Answer.AI, 2024)", "Long-established web standard"]
+    ]
+  },
+  "peopleAlsoAsk": [
+    {
+      "q": "What is an llms.txt file?",
+      "a": "An llms.txt file is a proposed Markdown file placed at your domain root that gives AI engines a curated, human-written map of your most important pages. It contains an H1 with your site name, an optional summary, and bulleted links to key content with short descriptions. Its purpose is to help large language models find, understand, and accurately cite your best material."
+    },
+    {
+      "q": "Do I need an llms.txt file?",
+      "a": "You do not strictly need an llms.txt file, since AI engines can crawl allowed pages without one. But it is a low-effort, high-value way to steer how models understand and cite your site, and very few sites have one yet — so it is an easy way to stand out. Docs sites, SaaS products, and expert content benefit most; purely transactional sites gain the least."
+    },
+    {
+      "q": "What does llms.txt do?",
+      "a": "An llms.txt file gives AI engines a clean, curated map of your best content so they spend their limited context budget on the pages that matter instead of parsing cluttered HTML. It lets you describe each page in your own words, improving the odds that models like ChatGPT and Perplexity represent you accurately and cite you as a source. It does not control crawler access."
+    },
+    {
+      "q": "Is llms.txt the same as robots.txt?",
+      "a": "No. llms.txt and robots.txt do opposite jobs. robots.txt controls access — which crawlers may visit which paths — while llms.txt provides context, a curated guide to your best content for crawlers that are allowed in. One is a gate, the other is a map. They complement each other, and many sites publish both."
+    },
+    {
+      "q": "How do I create an llms.txt file?",
+      "a": "Create an llms.txt file by writing a Markdown file with one H1 (your site name), an optional blockquote summary, and H2 sections of bulleted links to your key pages, each with a short description. Save it as llms.txt at your domain root so it loads at yourdomain.com/llms.txt. Our step-by-step guide to writing an llms.txt file includes a full copy-paste template."
+    }
+  ],
+  "faqs": [
+    {
+      "q": "Who created the llms.txt standard?",
+      "a": "The llms.txt proposal was introduced by Jeremy Howard, co-founder of Answer.AI, in September 2024. It is a community convention rather than an official standard ratified by search engines, but adoption has grown steadily among documentation platforms and AI-first companies through 2026."
+    },
+    {
+      "q": "What is llms-full.txt?",
+      "a": "llms-full.txt is a companion file that goes beyond linking to pages by inlining their full text into a single Markdown document. It saves an AI engine a second fetch by putting your key content in one place, at the cost of a larger file. It is optional and used alongside a standard llms.txt."
+    },
+    {
+      "q": "Does Google use llms.txt for ranking?",
+      "a": "No, Google does not use llms.txt as a ranking signal, and it will not affect your position in classic search results. The file is aimed at AI answer engines and large language models, not Google's traditional index. It complements SEO rather than replacing it."
+    }
+  ],
+  "relatedKeywords": [
+    "llms.txt file",
+    "llms.txt format",
+    "llms.txt example",
+    "llms.txt generator",
+    "ai crawler file",
+    "llms-full.txt"
+  ],
+  "internalLinks": [
+    { "href": "/", "anchor": "Run a free SEO + GEO audit" },
+    { "href": "/blog/how-to-write-an-llms-txt-file", "anchor": "How to write an llms.txt file" },
+    { "href": "/blog/what-is-generative-engine-optimization", "anchor": "What is generative engine optimization" },
+    { "href": "/blog/llmstxt-vs-robots-txt", "anchor": "llms.txt vs robots.txt" },
+    { "href": "/blog/what-are-ai-citations", "anchor": "What are AI citations" },
+    { "href": "/blog/what-is-robots-txt", "anchor": "What is robots.txt" }
+  ],
+  "images": []
+}

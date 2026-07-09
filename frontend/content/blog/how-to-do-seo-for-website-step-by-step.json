@@ -1,0 +1,126 @@
+{
+  "slug": "how-to-do-seo-for-website-step-by-step",
+  "title": "How To Do SEO For Website Step By Step (2026 Guide)",
+  "date": "2026-07-09",
+  "updatedAt": "2026-07-09",
+  "tag": "SEO",
+  "cluster": "seo-basics",
+  "keyword": "How to do SEO for website step by step",
+  "secondaryKeywords": ["on-page SEO", "technical SEO", "keyword research", "SEO audit", "generative engine optimization"],
+  "readTime": 10,
+  "excerpt": "A practical 6-step process to do SEO for your website from scratch in 2026 — indexing, keywords, on-page, technical, links, and a GEO pass.",
+  "description": "How to do SEO for website step by step in 2026: get indexed, research keywords, fix on-page and technical basics, earn links, then run a GEO pass.",
+  "tldr": "To do SEO for a website step by step, work in this order: make sure Google can crawl and index the site, research one keyword per page, get on-page basics right (title, H1, content, internal links), fix technical issues like speed and mobile, earn a few relevant backlinks, then run a GEO pass so AI engines can cite you. Do the technical and indexing work first — rankings are impossible if pages cannot be found.",
+  "status": "published",
+  "sections": [
+    {
+      "heading": "The step-by-step order to do SEO for a website",
+      "body": [
+        "The way to do SEO for a website step by step is to fix foundations before chasing rankings: confirm Google can crawl and index the site, research one keyword per page, get the on-page basics right, clear technical blockers, earn a few relevant backlinks, then run a GEO pass so AI answer engines can cite you. This is the exact order that matters — knowing how to do SEO for website step by step means never optimizing a page that search engines cannot even reach yet.",
+        "SEO works because search engines rank the page that most completely and reliably answers a query. Every step below removes one reason a page fails: a page that is not indexed cannot rank, a page targeting the wrong keyword ranks for nothing useful, a page missing its title tag confuses crawlers, and a slow or blocked page loses to a faster competitor. If you are brand new, start with the plain-English overview in [what is SEO and how it works](/blog/what-is-seo-and-how-it-works) before you touch anything.",
+        "Here is the full workflow at a glance. Run it top to bottom on your site:",
+        "[[flowchart]]",
+        "The order is deliberate. Indexing and technical health come first because they are prerequisites — everything else is wasted effort on a page Google cannot see. Content and links come next because they earn the ranking, and the GEO pass comes last because it polishes pages that already exist. The rest of this guide walks each step with the specific decisions that move results."
+      ]
+    },
+    {
+      "heading": "Step 1-2: Get indexed, then research keywords",
+      "body": [
+        "Before optimizing anything, confirm your site is actually in Google's index — because a page that is not indexed cannot rank no matter how good it is. Search `site:yourdomain.com` in Google; if your pages appear, you are indexed. Then connect [Google Search Console](/blog/how-to-use-google-search-console) and submit your sitemap (usually `yourdomain.com/sitemap.xml`). Search Console is free, and it is the single most important tool because it tells you exactly which pages Google has crawled, indexed, and shown to users.",
+        "With indexing confirmed, move to keyword research: assign one primary keyword to each page based on what your audience actually types. Do not guess. The goal is to find phrases with real search demand that you can realistically rank for — usually specific, longer phrases rather than broad one-word terms. A new site that targets \"best running shoes\" will lose; the same site targeting \"best running shoes for flat feet\" has a real shot. You can do this without paid tools using the method in [how to do keyword research for free](/blog/how-to-do-keyword-research-for-free).",
+        "Then confirm the search intent behind each keyword before you write a word. Intent is what the searcher actually wants — a guide, a product page, a comparison, or a quick fact — and matching it is the biggest factor in whether a page ranks. Search your keyword and study the top results: if they are all how-to guides, publish a guide, not a sales page. Learn to read intent in [what is search intent](/blog/what-is-search-intent).",
+        "> One page, one primary keyword, one intent. Pointing two of your own pages at the same query makes them compete with each other and split their ranking signals."
+      ]
+    },
+    {
+      "heading": "Step 3: Optimize on-page SEO for every page",
+      "body": [
+        "On-page SEO is everything you control directly on the page, and it is where most quick wins live. For each target page, get five elements right: the [title tag](/blog/what-is-a-title-tag) with the keyword near the front, one clear H1, the primary keyword in the first 100 words, a written [meta description](/blog/what-is-a-meta-description) that earns the click, and descriptive alt text on images. These are fast to fix and expensive to skip — a missing or duplicate title tag can quietly cap a page's ceiling. The full checklist lives in [what is on-page SEO](/blog/what-is-on-page-seo).",
+        "Content quality is the core of on-page SEO, not a nice-to-have. Google and AI engines both reward the most complete answer to a query, so cover the topic with real depth: specifics, examples, numbers, and the sub-questions competitors skip. Open the page and every section with a direct, standalone answer, then elaborate — this \"answer-first\" habit is what wins featured snippets and AI citations. The craft is covered in [how to write SEO-friendly content](/blog/how-to-write-seo-friendly-content).",
+        "Internal linking ties it together. Link each new page to a few related pages on your site using descriptive anchor text, so both readers and crawlers can move between related topics and understand which pages are most important. A page with zero internal links is an orphan that Google struggles to value. Aim for three to five contextual links per page pointing to genuinely relevant guides.",
+        "Structured data is the on-page bonus round. Adding [schema markup](/blog/what-is-schema-markup) — like Article, FAQ, or Product — helps search engines understand your content and can unlock rich results such as star ratings and FAQ drop-downs, which lift click-through even at the same ranking."
+      ]
+    },
+    {
+      "heading": "Step 4-5: Fix technical SEO and earn backlinks",
+      "body": [
+        "Technical SEO makes sure search engines can crawl, render, and trust your site — and problems here silently cap everything else. Check the essentials: the site loads fast (aim for a good Core Web Vitals score), works on mobile, uses HTTPS, has no broken links or accidental `noindex` tags, and its robots.txt does not block important pages. A fast, crawlable, secure site is a ranking prerequisite, not a luxury. The full scope is explained in [what is technical SEO](/blog/what-is-technical-seo).",
+        "The fastest way to catch technical and on-page problems at once is to audit the live URL. Paste any page into the [free, no-signup SEO + GEO audit on the homepage](/) and it flags missing title tags, weak meta descriptions, broken structured data, slow performance, blocked crawlers, and GEO issues in one pass. For a manual walkthrough of what to check and fix, follow [how to do an SEO audit](/blog/how-to-do-an-seo-audit).",
+        "Backlinks are step five because they are off-page: links from other reputable sites act as votes of confidence and remain one of Google's strongest ranking signals. You do not need hundreds — a handful of relevant, genuine links beats a pile of spammy ones, which can actively hurt you. Start with the free, legitimate tactics in [how to get backlinks for free](/blog/how-to-get-backlinks-for-free), and understand the bigger picture in [what is off-page SEO](/blog/what-is-off-page-seo).",
+        "Do steps 4 and 5 in parallel with your content work, but never before it. Links pointing at a thin or technically broken page waste their value — earn the ranking with the content and structure first, then amplify it with authority signals."
+      ]
+    },
+    {
+      "heading": "Step 6: Run a GEO pass, then measure and iterate",
+      "body": [
+        "The GEO pass is the 2026 step most website owners still skip. Generative engine optimization means structuring content so AI answer engines — ChatGPT, Perplexity, and Google AI Overviews — can extract and cite it. It comes down to three checks: does each section open with a standalone answer that survives being read in isolation, is the author and expertise visible for E-E-A-T, and can AI crawlers like GPTBot and PerplexityBot actually reach the page. Skip it and you may rank in classic search yet stay invisible in AI answers, which are eating a growing share of clicks. Start with [what is generative engine optimization](/blog/what-is-generative-engine-optimization) and the practical steps in [how to do AI search optimization](/blog/how-to-do-ai-search-optimization).",
+        "SEO is a loop, not a one-time project. After publishing, watch Search Console for impressions and average position, and give pages weeks to months to climb — rankings rarely appear overnight. The highest-return work is refreshing pages already sitting on page two (positions 11 to 20): tightening the answer-first opening, adding a missing sub-question, or updating a stat often beats writing something new. The complete measurement workflow is in [how to improve website ranking on Google](/blog/how-to-improve-website-ranking-on-google).",
+        "You can do every step in this guide yourself for free — SEO is a self-teachable skill, not a paid specialty. If you want reassurance before diving in, read [can I self learn SEO](/blog/can-i-self-learn-seo) and the beginner-friendly starting point in [how to SEO for beginners](/blog/how-to-seo-for-beginners). Work the six steps in order, audit each page before and after, and the results compound as your site's authority grows."
+      ]
+    }
+  ],
+  "flowchart": {
+    "title": "The 6-step process to do SEO for a website",
+    "steps": [
+      { "title": "Get crawled and indexed", "detail": "Confirm pages are in Google's index, connect Search Console, and submit your sitemap." },
+      { "title": "Research keywords and intent", "detail": "Assign one realistic primary keyword per page and match its search intent." },
+      { "title": "Optimize on-page SEO", "detail": "Set the title, H1, first-100-words keyword, meta description, content depth, and internal links." },
+      { "title": "Fix technical SEO", "detail": "Ensure fast load, mobile-friendliness, HTTPS, no broken links, and no accidental noindex." },
+      { "title": "Earn relevant backlinks", "detail": "Get a handful of genuine links from reputable sites in your niche." },
+      { "title": "Run a GEO pass", "detail": "Check island-test openers, visible author E-E-A-T, and AI-crawler access, then measure and iterate." }
+    ]
+  },
+  "peopleAlsoAsk": [
+    {
+      "q": "How To SEO For Beginners",
+      "a": "For beginners, do SEO in a fixed order: get your site indexed in Google, pick one realistic keyword per page, write content that fully answers that query, set the on-page basics (title tag, H1, meta description), and fix technical issues like speed and mobile. Start with free tools — Google Search Console and a free audit — before paying for anything. SEO is genuinely self-teachable; you do not need a course or an agency to get started."
+    },
+    {
+      "q": "How Do I Do SEO On My Own",
+      "a": "You can do SEO on your own for free by following six steps: confirm indexing in Google Search Console, research keywords, optimize each page's on-page elements, fix technical health (speed, mobile, HTTPS), earn a few relevant backlinks, and run a GEO pass for AI engines. Use free tools like Search Console and a no-signup audit to check your work. Most small sites never need a paid agency — the process is repeatable and self-taught."
+    },
+    {
+      "q": "What Is SEO And How To Start",
+      "a": "SEO (search engine optimization) is the practice of improving a website so it ranks higher in search results and gets cited by AI engines, bringing free organic traffic. To start, connect Google Search Console, make sure your pages are indexed, then optimize one page at a time around a clear keyword and search intent. Foundations first: fix crawling and indexing before you touch content, because unindexed pages cannot rank at all."
+    },
+    {
+      "q": "Can I Self Learn SEO",
+      "a": "Yes, you can self-learn SEO — it is one of the most self-teachable digital skills, and most working SEOs are self-taught. Everything you need is free: Google Search Console, Google's own documentation, and hands-on practice on a real site. Learn by doing one step at a time — indexing, keywords, on-page, technical, links, then GEO — and audit each page to see what actually changes. No certification or paid course is required to rank a website."
+    },
+    {
+      "q": "What Are The 4 Types Of SEO",
+      "a": "The four types of SEO are on-page SEO (content and elements on the page, like titles and headings), off-page SEO (external signals, mainly backlinks and mentions), technical SEO (crawling, indexing, speed, and mobile), and increasingly local or GEO/AI-search optimization. In practice you work across all four: technical makes pages reachable, on-page makes them relevant, off-page builds authority, and GEO makes them citable by AI answer engines."
+    }
+  ],
+  "faqs": [
+    {
+      "q": "How long does SEO take to show results for a new website?",
+      "a": "SEO usually takes several weeks to a few months to show meaningful results, and longer for a brand-new site with little authority. That is why targeting low-competition, specific keywords first is the fastest path to early rankings. Track average position in Search Console and watch the trend rather than day-one numbers."
+    },
+    {
+      "q": "Do I need to pay for SEO tools to rank a website?",
+      "a": "No — you can rank a website using only free tools. Google Search Console handles indexing and performance data, a free SEO + GEO audit catches on-page and technical issues, and manual SERP analysis reveals keywords and intent. Paid tools speed up research at scale, but they are optional, not required, for most small sites."
+    },
+    {
+      "q": "Which step matters most when doing SEO for a website?",
+      "a": "Indexing and technical health matter most as prerequisites, because a page Google cannot crawl or index cannot rank regardless of content quality. Once those are solid, matching search intent with genuinely useful content is the biggest driver of rankings. Do the foundations first, then earn the ranking with depth and links."
+    }
+  ],
+  "relatedKeywords": [
+    "Which type of SEO is best",
+    "What are the 5 pillars of SEO",
+    "How many SEO tools are there",
+    "Which AI is better for SEO",
+    "Which language is best for SEO",
+    "Is SEO dead or evolving in 2026"
+  ],
+  "internalLinks": [
+    { "href": "/", "anchor": "Run a free SEO + GEO audit on your website" },
+    { "href": "/blog/what-is-seo-and-how-it-works", "anchor": "What is SEO and how it works" },
+    { "href": "/blog/how-to-do-keyword-research-for-free", "anchor": "How to do keyword research for free" },
+    { "href": "/blog/what-is-on-page-seo", "anchor": "What is on-page SEO" },
+    { "href": "/blog/what-is-technical-seo", "anchor": "What is technical SEO" },
+    { "href": "/blog/how-to-do-an-seo-audit", "anchor": "How to do an SEO audit" }
+  ],
+  "images": []
+}

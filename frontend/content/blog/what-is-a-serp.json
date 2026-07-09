@@ -1,0 +1,142 @@
+{
+  "slug": "what-is-a-serp",
+  "title": "What Is a SERP? Search Engine Results Page Explained",
+  "date": "2026-07-09",
+  "updatedAt": "2026-07-09",
+  "tag": "SEO",
+  "cluster": "seo-basics",
+  "keyword": "what is a SERP",
+  "secondaryKeywords": ["SERP meaning", "SERP features", "search engine results page", "SERP analysis"],
+  "readTime": 9,
+  "excerpt": "A SERP is the page of results a search engine returns for a query — here is its anatomy, why SERP features matter, and how AI results reshape it in 2026.",
+  "description": "What is a SERP? A plain-English guide to the search engine results page: its anatomy, key SERP features, and how AI Overviews change results in 2026.",
+  "tldr": "A SERP (Search Engine Results Page) is the page Google or another search engine shows in response to a query. It mixes organic (unpaid) links, paid ads, and rich SERP features like featured snippets, People Also Ask, the knowledge panel, the local pack, and AI Overviews. Understanding its anatomy tells you what to optimize for.",
+  "status": "published",
+  "sections": [
+    {
+      "heading": "What is a SERP, in plain terms",
+      "body": [
+        "So what is a SERP? A SERP — short for **Search Engine Results Page** — is the page a search engine like Google, Bing, or an AI answer engine returns after you type a query. It is the list of links, answer boxes, images, ads, and other results the engine judges most relevant to what you searched. Every time you search and hit enter, the page that loads is a SERP.",
+        "The key idea is that a modern SERP is no longer a plain list of ten blue links. It is a mix of different result types stacked and interleaved on one page: unpaid **organic results**, paid **ads**, and a growing set of **SERP features** — answer boxes, image carousels, maps, and AI-generated summaries — that each occupy their own slot. Which features appear depends on the query and its [search intent](/blog/what-is-search-intent): a how-to question surfaces a featured snippet, a local search surfaces a map, and a product search surfaces shopping ads.",
+        "SERPs matter because they are the battleground for organic traffic. Ranking well means winning a visible slot on the SERP for queries your audience searches — and in 2026 that increasingly means winning a SERP *feature*, not just position one. The rest of this guide breaks down the anatomy of a SERP, why each feature matters, and how zero-click and AI results are reshaping the page.",
+        "> A SERP is the search engine's answer to a single query — and no two SERPs look exactly alike."
+      ]
+    },
+    {
+      "heading": "The anatomy of a SERP: organic, paid, and features",
+      "body": [
+        "A SERP is built from three broad layers: **paid results**, **organic results**, and **SERP features**. Paid results are ads marked \"Sponsored\" that advertisers bid to place, usually at the very top and bottom. Organic results are the unpaid links Google ranks purely on relevance and quality — the ones SEO works to win. SERP features are the enriched elements layered in between: snippets, boxes, carousels, and panels drawn from structured data and top content.",
+        "Here are the most common elements you will see on a Google SERP and what each one means for visibility:",
+        "[[table]]",
+        "The single most important distinction is **paid vs. organic**. Ads get you instant placement for money and stop the moment you stop paying; organic and feature placements are earned through relevance, content quality, and technical health, and they compound over time. That trade-off is the whole subject of [SEO vs SEM](/blog/what-is-seo-and-how-it-works), and it is why most sites invest in organic as the durable channel.",
+        "Notice that features push the traditional organic links further down the page. On many queries the first genuine blue link now sits below an AI Overview, a featured snippet, and a People Also Ask block. That is why simply \"ranking #1\" means less than it used to — position one under three features can get fewer clicks than a featured snippet above them."
+      ]
+    },
+    {
+      "heading": "Why SERP features matter more than ever",
+      "body": [
+        "SERP features matter because they decide who actually gets seen, not just who ranks. A **featured snippet** — the answer box quoted at the top of many results — can pull the majority of clicks for a query even from sites ranked below it, which is why winning \"position zero\" is a core SEO goal. Learn how to earn one in [what is a featured snippet](/blog/what-is-a-featured-snippet).",
+        "Each feature rewards a different kind of content, so knowing which features appear for your target keywords tells you what to optimize:",
+        "- **Featured snippets** reward a clear, self-contained answer in ~40-60 words right after the question.",
+        "- **People Also Ask** rewards content that answers related follow-up questions in a Q&A structure.",
+        "- **Knowledge panels** reward strong entity signals — consistent name, structured data, and authoritative references.",
+        "- **Local pack** rewards a complete Google Business Profile with reviews and accurate location data.",
+        "- **AI Overviews** reward answer-first passages that an AI model can lift and cite directly.",
+        "The practical takeaway: run a **SERP analysis** before you write. Search your target keyword, note which features appear, and shape the page to win one. A page built to answer the exact question a snippet demands has a far better shot than one written blind. You can pressure-test whether your page is snippet- and AI-ready by running a [free SEO + GEO audit](/) on the URL — it flags weak answer-first openers and other citation blockers. For the ranking playbook itself, see [how to rank on the first page of Google](/blog/how-to-rank-on-the-first-page-of-google)."
+      ]
+    },
+    {
+      "heading": "How zero-click and AI results are changing the SERP in 2026",
+      "body": [
+        "The biggest shift on the modern SERP is the rise of **zero-click searches** — queries answered directly on the results page so the user never clicks through to a website. Featured snippets, knowledge panels, weather boxes, and calculators already resolved many searches without a click; AI Overviews have accelerated the trend by generating a full synthesized answer at the top of the page. Understand the impact in [what is zero-click search](/blog/what-is-zero-click-search).",
+        "**AI Overviews** are Google's AI-generated summaries that appear above the organic results for a growing share of queries. Instead of sending you to one page, they read several sources, write a paragraph-length answer, and cite the pages they drew from. This creates a new goal beyond ranking: being *cited inside* the AI answer. The mechanics differ from a classic snippet — see [AI Overviews vs featured snippets](/blog/ai-overviews-vs-featured-snippets).",
+        "For site owners, the response is **Generative Engine Optimization (GEO)** — structuring content so AI answer engines can extract and cite it. In practice that means opening each section with a standalone answer that survives being read in isolation, making author and expertise visible for E-E-A-T, and ensuring AI crawlers like GPTBot and PerplexityBot can actually reach the page. A post can rank on a classic SERP yet be invisible in AI answers if those signals are missing.",
+        "The net effect: a 2026 SERP serves fewer clicks per search but rewards presence in more places — the organic list, the feature boxes, and the AI answer. The winners optimize for all three at once. To check where your page stands on both the classic and AI-search fronts, [run a free SEO + GEO audit](/) and fix what it surfaces."
+      ]
+    }
+  ],
+  "comparisonTable": {
+    "caption": "Common SERP features and what each one means for visibility",
+    "headers": ["SERP element", "What it is", "Paid or organic", "Why it matters"],
+    "rows": [
+      ["Organic results", "Unpaid \"blue link\" listings ranked on relevance", "Organic", "The durable, earned traffic SEO targets"],
+      ["Search ads", "\"Sponsored\" listings advertisers bid on", "Paid", "Instant placement, but stops when you stop paying"],
+      ["Featured snippet", "Answer box quoted above the results (position zero)", "Organic", "Can capture most clicks for a query"],
+      ["People Also Ask", "Expandable list of related follow-up questions", "Organic", "Extra visibility for Q&A-structured content"],
+      ["Knowledge panel", "Fact box about an entity (person, brand, place)", "Organic", "Builds brand authority and trust signals"],
+      ["Local pack", "Map plus three nearby business listings", "Organic", "Critical for local and \"near me\" searches"],
+      ["AI Overview", "AI-generated summary that cites source pages", "Organic", "New goal: be cited inside the AI answer"],
+      ["Image / video pack", "Carousel of images or video results", "Organic", "Wins visual and how-to queries"]
+    ]
+  },
+  "peopleAlsoAsk": [
+    {
+      "q": "What does SERP stand for?",
+      "a": "SERP stands for Search Engine Results Page. It is the page a search engine like Google or Bing returns in response to a query, listing the results it judges most relevant. The acronym is pronounced \"serp\" (one syllable) and is used across SEO to describe everything a searcher sees after hitting enter — organic links, ads, and rich features."
+    },
+    {
+      "q": "What is a SERP feature?",
+      "a": "A SERP feature is any result on a search engine results page that is not a standard organic \"blue link\" — for example a featured snippet, People Also Ask box, knowledge panel, local map pack, image carousel, or AI Overview. SERP features are drawn from structured data and top content, and winning one often earns more visibility and clicks than a regular top-ten ranking."
+    },
+    {
+      "q": "What is a featured snippet in a SERP?",
+      "a": "A featured snippet is the answer box shown at the very top of some SERPs, quoting a concise answer directly from a web page along with a link to it. Often called \"position zero,\" it sits above the first organic result and can capture the majority of clicks for a query. You win one by answering the exact question clearly and concisely near the top of your page."
+    },
+    {
+      "q": "How do SERPs work?",
+      "a": "When you search, the engine interprets your query and its intent, then pulls candidate pages from its index and ranks them by relevance, quality, and authority. It assembles the SERP by combining the top organic results with any paid ads and relevant SERP features — snippets, maps, or AI Overviews — that match the query type. The whole process happens in a fraction of a second per search."
+    },
+    {
+      "q": "Why do SERP results differ for each person?",
+      "a": "SERPs are personalized and contextual, so two people rarely see identical results. Google adjusts what it shows based on your location, device, language, search history, and the exact wording and intent of the query. A \"coffee shop\" search returns different local results in different cities, and a logged-in user may see results influenced by past activity. This is why SEO tools report rankings from neutral, location-set conditions."
+    }
+  ],
+  "faqs": [
+    {
+      "q": "How do I do a SERP analysis?",
+      "a": "Search your target keyword in a clean or incognito browser, then note what appears: which features show (snippet, PAA, AI Overview, local pack), what content formats rank, and how far organic links sit below the fold. That tells you the intent Google rewards and which SERP feature to build your page around before you write."
+    },
+    {
+      "q": "Is a SERP the same on Google and Bing?",
+      "a": "No. Both are search engine results pages, but each engine ranks with its own algorithm and lays out features differently, so the same query can return different results, snippets, and AI summaries on Google versus Bing. AI answer engines like ChatGPT and Perplexity present results differently again, as synthesized cited answers rather than a ranked list."
+    },
+    {
+      "q": "Do ads hurt my organic SERP rankings?",
+      "a": "No. Running Google Ads does not raise or lower your organic rankings — paid and organic results are ranked by separate systems. Ads and organic listings are simply different slots on the same SERP. They can complement each other, but buying ads gives you no direct organic ranking advantage."
+    }
+  ],
+  "relatedKeywords": [
+    "what is a serp",
+    "serp meaning",
+    "serp features",
+    "search engine results page",
+    "serp analysis"
+  ],
+  "internalLinks": [
+    {
+      "href": "/",
+      "anchor": "Run a free SEO + GEO audit"
+    },
+    {
+      "href": "/blog/what-is-a-featured-snippet",
+      "anchor": "What is a featured snippet"
+    },
+    {
+      "href": "/blog/what-is-search-intent",
+      "anchor": "What is search intent"
+    },
+    {
+      "href": "/blog/how-to-rank-on-the-first-page-of-google",
+      "anchor": "How to rank on the first page of Google"
+    },
+    {
+      "href": "/blog/what-is-zero-click-search",
+      "anchor": "What is zero-click search"
+    },
+    {
+      "href": "/blog/ai-overviews-vs-featured-snippets",
+      "anchor": "AI Overviews vs featured snippets"
+    }
+  ],
+  "images": []
+}

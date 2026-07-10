@@ -25,6 +25,14 @@ const SECURITY_HEADERS = [
 const nextConfig = {
   reactStrictMode: true,
   poweredByHeader: false,
+  // Bundle the blog JSON content with any route that reads it via fs, so a
+  // runtime execution (ISR/regeneration) can still see every post instead of
+  // silently falling back to only the legacy hardcoded posts.
+  outputFileTracingIncludes: {
+    '/sitemap.xml': ['./content/blog/**/*.json'],
+    '/blog': ['./content/blog/**/*.json'],
+    '/blog/[slug]': ['./content/blog/**/*.json'],
+  },
   env: {
     NEXT_PUBLIC_BACKEND_URL: process.env.NEXT_PUBLIC_BACKEND_URL || 'http://localhost:4000',
   },

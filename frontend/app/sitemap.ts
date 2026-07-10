@@ -4,10 +4,13 @@ import { getAllPosts } from '@/lib/blog';
 import { COMPARE_SLUGS } from '@/lib/compares';
 import { SITE_URL } from '@/lib/seo';
 
-// Regenerate at most once per hour. The route is purely static (no backend
-// call), so Google's repeat fetches hit the Vercel CDN cache and never time out
-// — the original "Couldn't fetch" cause (a cold-starting backend) is gone.
-export const revalidate = 3600;
+// Fully static: generated at build time (when the content/blog/*.json files are
+// readable on the build machine) and regenerated on EVERY deploy. Do NOT add
+// `revalidate` here: at runtime on Vercel the blog JSON files are not in the
+// serverless function bundle, so a runtime regeneration silently drops every
+// JSON post — leaving only the ~6 legacy posts in the sitemap. Static build-time
+// generation is what keeps all ~150 URLs in the sitemap.
+export const dynamic = 'force-static';
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const now = new Date();

@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import Link from 'next/link';
 import { submitFeedback } from '@/lib/api';
 
@@ -17,6 +17,20 @@ export function FeedbackForm() {
   const [website, setWebsite] = useState(''); // honeypot
   const [status, setStatus] = useState<'idle' | 'sending' | 'done' | 'error'>('idle');
   const [error, setError] = useState('');
+  const [isHelp, setIsHelp] = useState(false);
+
+  // If the visitor arrived from the /help "get help" CTAs (?topic=help), tailor
+  // the form so it reads as a help request (and is easy to spot in the admin).
+  useEffect(() => {
+    try {
+      if (new URLSearchParams(window.location.search).get('topic') === 'help') {
+        setIsHelp(true);
+        setMessage((m) => m || 'I\'d like help with my site. Here\'s the URL and what I need:\n\n');
+      }
+    } catch {
+      /* ignore */
+    }
+  }, []);
 
   async function onSubmit(e: React.FormEvent) {
     e.preventDefault();
@@ -108,7 +122,7 @@ export function FeedbackForm() {
 
       <button type="submit" className="btn btn-primary btn-block" disabled={status === 'sending'}>
         {status === 'sending' ? <span className="spinner" style={{ marginRight: 8 }} /> : null}
-        {status === 'sending' ? 'Sending…' : 'Send feedback'}
+        {status === 'sending' ? 'Sending…' : isHelp ? 'Request help' : 'Send feedback'}
       </button>
       <p style={{ margin: 0, fontSize: 12, color: 'var(--text-muted)', textAlign: 'center' }}>
         We read every message. Leave an email if you&apos;d like a reply.

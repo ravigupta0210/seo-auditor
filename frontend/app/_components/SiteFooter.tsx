@@ -31,6 +31,7 @@ export function SiteFooter() {
             <li><Link href="/check">All 40+ checks</Link></li>
             <li><Link href="/compare">Tool comparisons</Link></li>
             <li><Link href="/blog">Blog &amp; guides</Link></li>
+            <li><Link href="/help">How we help</Link></li>
           </ul>
         </div>
 

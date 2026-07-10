@@ -1,0 +1,140 @@
+{
+  "slug": "what-is-keyword-difficulty",
+  "title": "What Is Keyword Difficulty? How to Read the Score",
+  "date": "2026-07-10",
+  "updatedAt": "2026-07-10",
+  "tag": "SEO",
+  "cluster": "content-links",
+  "keyword": "what is keyword difficulty",
+  "secondaryKeywords": [
+    "keyword difficulty score",
+    "low competition keywords",
+    "keyword difficulty range",
+    "easy keywords to rank for"
+  ],
+  "readTime": 9,
+  "excerpt": "Keyword difficulty is a 0-100 score estimating how hard it is to rank a page for a query — here is how to read it and find winnable keywords.",
+  "description": "What is keyword difficulty? It's a 0-100 estimate of how hard a keyword is to rank for. Learn how tools calculate it and how to find low-competition keywords.",
+  "tldr": "Keyword difficulty is a 0-100 score that estimates how hard it is to rank on page one for a query, based mostly on the backlinks and authority of the pages already ranking. Lower scores mean weaker competition. New sites should target keywords under roughly 20-30, treat the number as an estimate rather than gospel, and confirm winnability by studying the actual results page.",
+  "status": "published",
+  "sections": [
+    {
+      "heading": "What is keyword difficulty and what the score means",
+      "body": [
+        "So what is keyword difficulty? It is a 0-100 score that estimates how hard it is to rank on the first page of Google for a given keyword. A low number means the pages currently ranking are weak and beatable; a high number means the top results are established, heavily-linked pages you would struggle to displace. SEO tools like Ahrefs, Semrush, Moz, and free alternatives all publish a version of this metric, and while they scale it differently, they are all answering the same question: how much authority would a page need to break into the top 10 for this query?",
+        "The key word is **estimate**. Keyword difficulty is a model's best guess based on public signals, not a measurement of your actual odds. Two tools can score the same keyword 18 and 42 because they weight backlinks, domain authority, and content differently. Use the number to compare keywords against each other and to filter a big list quickly — not as a precise probability that you will rank.",
+        "Difficulty is only half of a keyword's value. The other half is intent and volume: a difficulty-5 keyword nobody searches is worthless, and a difficulty-70 keyword can still be worth chasing over years if it drives revenue. The winning move for most sites is to find the overlap — decent search volume, clear [search intent](/blog/what-is-search-intent) you can satisfy, and a difficulty score low enough that a new page has a real chance.",
+        "> Keyword difficulty tells you how strong the competition is. It does not tell you whether the keyword is worth winning — that is volume and intent's job."
+      ]
+    },
+    {
+      "heading": "How keyword difficulty is calculated",
+      "body": [
+        "Keyword difficulty is calculated mostly from the **backlink profiles and authority of the pages already ranking on page one** for that keyword. A tool runs the search, looks at the top 10 results, and measures how many unique referring domains point to each ranking page, how authoritative those linking sites are, and the overall domain strength of the competitors. It compresses all of that into a single 0-100 number. If the current top 10 are all pages with hundreds of referring domains, difficulty is high; if several are thin pages with almost no links, difficulty is low.",
+        "Backlinks dominate the calculation because links remain the clearest public proxy for authority, but most tools blend in additional signals:",
+        "- **Referring domains to the ranking pages** — the single heaviest factor in most models.",
+        "- **Domain-level authority** of the competing sites, similar to [domain authority](/blog/what-is-domain-authority).",
+        "- **On-page relevance and content depth** of the current results.",
+        "- **SERP features** like ads, featured snippets, and AI Overviews that push organic results down.",
+        "Because each tool has its own link index and its own formula, the exact number varies by tool — Semrush's KD%, Ahrefs' KD, and Moz's Difficulty are not interchangeable. What is consistent is the direction: a keyword one tool calls easy will rarely be called brutally hard by another. That is why difficulty is best read as a band (easy / medium / hard) rather than a precise figure. Here is roughly how the ranges translate:",
+        "[[table]]"
+      ]
+    },
+    {
+      "heading": "What is a good keyword difficulty score for a new site",
+      "body": [
+        "For a brand-new site with little authority, a good keyword difficulty score is roughly **under 20-30**. New sites have not yet earned the backlinks or trust to outrank established pages, so targeting low-difficulty keywords is the only realistic path to early rankings. Chasing a difficulty-60 keyword in month one wastes effort on a page that cannot compete; winning ten difficulty-15 keywords instead builds traffic, links, and the topical authority that makes harder keywords reachable later.",
+        "\"Good\" is relative to your own site's strength, though. A site with an established backlink profile and existing rankings can comfortably target difficulty-40 or -50 keywords, because it brings authority the tool cannot see when it scores a keyword in the abstract. That is the built-in limitation of the metric: keyword difficulty measures the competition, not you. Always read the score alongside an honest assessment of your own domain — the approach in [how to rank a new website](/blog/how-to-rank-a-new-website) is built entirely around this reality.",
+        "As a practical rule of thumb for choosing targets by site age:",
+        "- **Brand-new site (0-6 months):** target difficulty under 20. Prioritize [long-tail keywords](/blog/how-to-target-long-tail-keywords).",
+        "- **Growing site (some rankings, a few links):** difficulty 20-35 is realistic.",
+        "- **Established site (topical authority, steady backlinks):** difficulty 35-55 becomes winnable.",
+        "The pattern is a ladder: win the easy keywords first, use the authority they build to climb into harder ones. Skipping rungs is the most common reason new sites publish for months and see nothing."
+      ]
+    },
+    {
+      "heading": "How to find low-competition keywords you can actually win",
+      "body": [
+        "The fastest way to find low-competition keywords is to look for **long-tail phrases with clear intent that the current top results answer poorly**. Low difficulty on its own is not enough — you want a keyword where the ranking pages are thin, off-topic, or outdated, because that is a gap you can fill. Difficulty scores narrow the list; a manual look at the results page confirms the opportunity. Start with the free workflow in [how to do keyword research for free](/blog/how-to-do-keyword-research-for-free), then filter and validate.",
+        "A repeatable process for surfacing winnable keywords:",
+        "[[flowchart]]",
+        "The single most reliable signal is the **manual SERP check** in the last step. Search your keyword and look at who ranks. If page one is dominated by major brands with deep, current content, the low difficulty score is misleading — move on. If you see forum threads, thin pages, results that miss the intent, or content years out of date, that is a winnable keyword regardless of the exact number. Difficulty scores are an estimate; the live results page is the ground truth.",
+        "Two habits keep this efficient. First, cluster related low-difficulty keywords into a single piece rather than one thin page each — it builds [topical authority](/blog/what-is-topical-authority) and avoids [keyword cannibalization](/blog/what-is-keyword-cannibalization). Second, once a page is live, audit it so it actually captures the ranking and AI-citation signals it deserves. Paste the URL into the [free SEO + GEO audit on the homepage](/) to flag missing on-page tags, weak answer-first openers, and blocked AI crawlers before you move to the next keyword."
+      ]
+    }
+  ],
+  "flowchart": {
+    "title": "How to find low-competition keywords you can win",
+    "steps": [
+      { "title": "Start with a seed topic", "detail": "Pick a topic you can write about with real expertise and intent to serve." },
+      { "title": "Expand into long-tail variations", "detail": "Use free tools and autocomplete to gather specific, multi-word phrases." },
+      { "title": "Filter by keyword difficulty", "detail": "Keep phrases scoring low enough for your site's current authority (often under 20-30)." },
+      { "title": "Check intent and volume", "detail": "Keep keywords with clear intent you can satisfy and enough searches to matter." },
+      { "title": "Do a manual SERP check", "detail": "Search the keyword — if the top results are thin, outdated, or off-topic, it's winnable." },
+      { "title": "Write, publish, and audit", "detail": "Cover the topic fully, then run a free SEO + GEO audit to lock in ranking signals." }
+    ]
+  },
+  "comparisonTable": {
+    "caption": "Keyword difficulty ranges and what each band means",
+    "headers": ["Difficulty score", "Band", "What it means", "Who should target it"],
+    "rows": [
+      ["0-14", "Very easy", "Top results are thin or barely optimized; almost no backlinks needed", "Brand-new sites with no authority"],
+      ["15-29", "Easy", "A well-written, complete page can rank with a few links", "New and growing sites"],
+      ["30-49", "Medium", "Ranking pages have real backlinks; needs strong content plus some authority", "Sites with existing rankings and links"],
+      ["50-69", "Hard", "Established, well-linked competitors; needs solid domain authority", "Authoritative sites in the niche"],
+      ["70-100", "Very hard", "Big brands with deep backlink profiles dominate", "Only high-authority sites, over the long term"]
+    ]
+  },
+  "peopleAlsoAsk": [
+    {
+      "q": "What is a good keyword difficulty score?",
+      "a": "A good keyword difficulty score depends on your site's authority. For a brand-new site, aim under 20-30, where the ranking pages are weak enough that a complete, well-written article can compete without a large backlink profile. Established sites with existing rankings and links can comfortably target 40-50. Read the score against your own domain strength, because keyword difficulty measures the competition, not you."
+    },
+    {
+      "q": "How is keyword difficulty calculated?",
+      "a": "Keyword difficulty is calculated mainly from the backlink profiles and authority of the pages already ranking on page one. A tool searches the keyword, examines the top 10 results, and measures their referring domains, domain-level authority, content depth, and SERP features, then compresses it into a 0-100 score. Backlinks carry the most weight, which is why each tool's number differs slightly based on its own link index and formula."
+    },
+    {
+      "q": "What is a low competition keyword?",
+      "a": "A low competition keyword is one where the pages currently ranking are weak — thin, outdated, off-topic, or lightly linked — so a new page can realistically break into the top 10. Low-difficulty scores flag candidates, but true low competition is confirmed by searching the keyword and seeing forum threads, sparse content, or results that miss the intent. Long-tail phrases are the richest source of these keywords."
+    },
+    {
+      "q": "How do I find easy keywords to rank for?",
+      "a": "Find easy keywords by expanding a seed topic into long-tail variations, filtering for low keyword difficulty, then doing a manual check of the results page. Keep keywords with clear intent and enough search volume, and prioritize any where the current top results are thin, outdated, or off-topic. Clustering several related low-difficulty keywords into one thorough page builds authority faster than many thin pages."
+    },
+    {
+      "q": "Is keyword difficulty accurate?",
+      "a": "Keyword difficulty is a useful estimate, not a precise measurement. It's a model's best guess from public signals like backlinks and domain authority, so two tools can score the same keyword very differently. Use it to compare keywords and filter large lists quickly, but always confirm with a manual look at the actual results page, which reveals whether the competition is genuinely beatable."
+    }
+  ],
+  "faqs": [
+    {
+      "q": "Which keyword difficulty tool is most accurate?",
+      "a": "No single tool is definitively most accurate because each uses its own link index and formula. Ahrefs, Semrush, and Moz all give reliable directional readings. Rather than trusting one number, compare a keyword across tools and always validate with a manual SERP check, which is the ground truth."
+    },
+    {
+      "q": "Does keyword difficulty include search volume?",
+      "a": "No — keyword difficulty and search volume are separate metrics. Difficulty estimates how hard a keyword is to rank for, while volume estimates how many people search it. A keyword needs both a manageable difficulty and enough volume to be worth targeting, so always read the two numbers together."
+    },
+    {
+      "q": "Can I rank for high-difficulty keywords eventually?",
+      "a": "Yes, but it usually takes time and authority. Win low-difficulty keywords first to build backlinks and topical authority, then harder keywords become reachable as your domain strengthens. Trying to rank a high-difficulty keyword from a brand-new site almost always fails, so treat difficulty as a ladder to climb."
+    }
+  ],
+  "relatedKeywords": [
+    "keyword difficulty score",
+    "low competition keywords",
+    "keyword competition",
+    "easy keywords to rank for",
+    "keyword difficulty tool"
+  ],
+  "internalLinks": [
+    { "href": "/", "anchor": "run a free SEO + GEO audit" },
+    { "href": "/blog/how-to-do-keyword-research-for-free", "anchor": "How to do keyword research for free" },
+    { "href": "/blog/how-to-target-long-tail-keywords", "anchor": "How to target long-tail keywords" },
+    { "href": "/blog/what-is-search-intent", "anchor": "What is search intent" },
+    { "href": "/blog/how-to-rank-a-new-website", "anchor": "How to rank a new website" },
+    { "href": "/blog/what-is-domain-authority", "anchor": "What is domain authority" }
+  ],
+  "images": []
+}

@@ -1,0 +1,135 @@
+{
+  "slug": "what-is-a-pillar-page",
+  "title": "What Is a Pillar Page? (And How to Build One)",
+  "date": "2026-07-10",
+  "updatedAt": "2026-07-10",
+  "tag": "SEO",
+  "cluster": "content-links",
+  "keyword": "what is a pillar page",
+  "secondaryKeywords": [
+    "topic cluster",
+    "pillar page vs cluster page",
+    "content pillar",
+    "pillar page seo"
+  ],
+  "readTime": 9,
+  "excerpt": "A pillar page is a broad, comprehensive page on a core topic that links to and from detailed cluster posts — here is how it builds topical authority.",
+  "description": "What is a pillar page? A broad, comprehensive page on a core topic that links to detailed cluster posts. Learn pillar vs cluster and how to build one for SEO.",
+  "tldr": "A pillar page is a broad, comprehensive page that covers a core topic in full and links out to detailed cluster posts, which link back to it. Together the pillar and its cluster form a topic cluster that signals topical authority to Google and AI engines. The pillar wins the broad head keyword; each cluster post targets a specific long-tail sub-question.",
+  "status": "published",
+  "sections": [
+    {
+      "heading": "What is a pillar page in SEO",
+      "body": [
+        "So what is a pillar page? It is a broad, comprehensive page that covers a core topic from end to end and links out to a set of detailed \"cluster\" posts, each of which links back to it. Instead of trying to cram every detail into one enormous article, the pillar gives a complete overview of the whole subject and hands off the specifics to focused supporting pages. Together, the pillar page and its cluster posts form a **topic cluster** — a deliberately interlinked group of pages built around one theme.",
+        "The pillar is the hub. It targets the broad, high-level keyword for the topic — something like \"content marketing\" or \"email marketing\" — and reads like a definitive guide a newcomer could start with. The cluster posts are the spokes: each one goes deep on a single sub-question the pillar only summarizes, targeting a specific [long-tail keyword](/blog/how-to-target-long-tail-keywords). A pillar about email marketing might link to cluster posts on subject lines, list segmentation, deliverability, and automation.",
+        "This structure exists because search has shifted from ranking individual pages to rewarding demonstrated expertise across a topic. When Google and AI engines see a well-linked hub of pages that collectively cover a subject in depth, they read it as a signal that your site is an authority on that theme — the foundation of [topical authority](/blog/what-is-topical-authority). A single great article is a data point; a pillar and its cluster are a body of evidence.",
+        "> A pillar page is not just a long article. It is the hub of a linked topic cluster, and its power comes from the connections to and from its cluster posts."
+      ]
+    },
+    {
+      "heading": "Pillar page vs cluster page: the difference",
+      "body": [
+        "The difference between a pillar page and a cluster page is scope and role: the **pillar covers a broad topic and targets a head keyword**, while each **cluster page covers one narrow sub-topic and targets a long-tail keyword**. The pillar links to every cluster post; every cluster post links back to the pillar. That reciprocal linking is what turns a pile of related articles into a topic cluster search engines can recognize.",
+        "Think of it as breadth versus depth. The pillar answers \"what is this whole topic and how do the pieces fit together?\" It stays comprehensive but shallow on any single point, because going deep on everything would make it unreadable. Each cluster page answers one specific question completely — the depth the pillar deliberately skips. A reader can start at the pillar for orientation and drill into a cluster post for the detail they need.",
+        "Here is how the two roles compare directly:",
+        "[[table]]",
+        "The relationship is symbiotic. The pillar passes authority and context down to cluster posts through its links, helping them rank; the cluster posts pass relevance and depth back up to the pillar, helping it rank for the competitive head term. Neither works as well alone, which is why the sensible move is to plan the pillar and its cluster together rather than publishing one giant page and hoping. The linking mechanics behind this are covered in [internal linking](/blog/what-is-internal-linking)."
+      ]
+    },
+    {
+      "heading": "How a pillar page builds topical authority",
+      "body": [
+        "A pillar page builds topical authority by giving search engines a clear, interlinked map of everything your site knows about a topic. Topical authority is the trust a site earns by comprehensively covering a subject, and a pillar-cluster structure is the most direct way to demonstrate it. When crawlers follow the links between your pillar and its cluster posts, they can see that you have not just touched a topic but covered its major questions — and sites that own a topic tend to rank across the whole cluster, not just one page.",
+        "There are three mechanisms at work. First, **internal linking concentrates relevance**: the dense links within a cluster tell Google which pages belong together and which page (the pillar) is the definitive one. Second, **comprehensive coverage matches more queries**: a full cluster naturally captures dozens of related long-tail searches a single page never could. Third, **the pillar becomes a link magnet**: because it is the most complete resource on the topic, it is the page other sites choose to cite, and those [backlinks](/blog/what-is-a-backlink) lift the entire cluster.",
+        "This matters more than ever for AI search. Generative engines like ChatGPT, Perplexity, and Google AI Overviews assemble answers by pulling from sources they judge authoritative on a topic. A well-structured topic cluster, where each page opens with a clear answer, gives these engines many citable, on-topic passages to draw from — a core idea in [generative engine optimization](/blog/what-is-generative-engine-optimization). Owning a topic in classic search increasingly means getting cited in AI answers too.",
+        "The compounding effect is the real payoff. As you add cluster posts and they earn links, the whole structure strengthens, and each new page ranks a little faster because the authority around it is already established. This is also why keeping the pillar current matters — refreshed, [evergreen content](/blog/what-is-evergreen-content) at the hub keeps the entire cluster signalling freshness and relevance."
+      ]
+    },
+    {
+      "heading": "How to build a pillar page and its cluster",
+      "body": [
+        "To build a pillar page, start by choosing a core topic broad enough to support 5-10 sub-topics but narrow enough that you can genuinely own it. Then map the cluster before writing a word: list the specific questions and long-tail keywords that fall under the topic, and turn each into a planned cluster post. The pillar and its supporting pages should be designed as one system, not discovered after the fact. Follow this sequence:",
+        "[[flowchart]]",
+        "When you write the pillar itself, structure it as a comprehensive guide: an H1 on the core topic, then question-style H2 sections that each summarize a sub-topic and link to the deeper cluster post covering it. Confirm the [search intent](/blog/what-is-search-intent) behind the head keyword first — a pillar for an informational topic is a guide, not a product page. Open the page and each section with a direct answer so it is skimmable and citable, applying the craft in [how to write SEO-friendly content](/blog/how-to-write-seo-friendly-content).",
+        "The linking is the step people skip and the step that makes it work. Every cluster post must link up to the pillar with descriptive anchor text, and the pillar must link down to every cluster post. Keep one keyword per page so your own pages don't compete — the risk covered in [keyword cannibalization](/blog/what-is-keyword-cannibalization) — and expand the cluster over time as you find new sub-questions. Each new post is also a full article in its own right, so build them with the process in [how to write a blog post that ranks](/blog/how-to-write-a-blog-post-that-ranks).",
+        "Once pages are live, verify they actually carry the ranking and citation signals they should. Paste each URL into the [free SEO + GEO audit on the homepage](/) to catch missing on-page tags, weak answer-first openers, broken internal links between pillar and cluster, and blocked AI crawlers — the small structural issues that quietly hold a whole cluster back."
+      ]
+    }
+  ],
+  "flowchart": {
+    "title": "How to build a pillar page and topic cluster",
+    "steps": [
+      { "title": "Pick a core topic", "detail": "Choose a subject broad enough for 5-10 sub-topics but focused enough to own." },
+      { "title": "Map the cluster keywords", "detail": "List the long-tail sub-questions under the topic — each becomes a cluster post." },
+      { "title": "Write the pillar page", "detail": "Cover the whole topic comprehensively with question-style H2s and answer-first openers." },
+      { "title": "Write the cluster posts", "detail": "Give each sub-question its own deep page targeting one long-tail keyword." },
+      { "title": "Interlink pillar and cluster", "detail": "Link the pillar down to every cluster post and every cluster post back up to the pillar." },
+      { "title": "Audit, publish, and expand", "detail": "Run a free SEO + GEO audit, then add cluster posts over time to grow the topic." }
+    ]
+  },
+  "comparisonTable": {
+    "caption": "Pillar page vs cluster page: roles compared",
+    "headers": ["Attribute", "Pillar page", "Cluster page"],
+    "rows": [
+      ["Scope", "Broad — the whole core topic", "Narrow — one sub-topic"],
+      ["Keyword target", "Head keyword (broad, competitive)", "Long-tail keyword (specific)"],
+      ["Depth", "Comprehensive overview, shallow per point", "Deep on a single question"],
+      ["Role in the cluster", "Hub — links to every cluster post", "Spoke — links back to the pillar"],
+      ["Typical length", "Longer, guide-style (2,000+ words)", "Focused article (1,000-1,800 words)"],
+      ["Primary job", "Own the topic and earn backlinks", "Match specific searches and pass depth up"]
+    ]
+  },
+  "peopleAlsoAsk": [
+    {
+      "q": "What is a pillar page example?",
+      "a": "A pillar page example is a comprehensive \"email marketing\" guide that gives a full overview of the topic and links out to detailed cluster posts on subject lines, list segmentation, deliverability, and automation. The pillar targets the broad head keyword and orients a newcomer, while each linked cluster post goes deep on one sub-question and links back to the pillar, forming a topic cluster."
+    },
+    {
+      "q": "What is the difference between a pillar page and a cluster page?",
+      "a": "A pillar page covers a broad topic and targets a competitive head keyword, while a cluster page covers one narrow sub-topic and targets a specific long-tail keyword. The pillar is the hub that links to every cluster post; each cluster post is a spoke that links back to the pillar. The pillar stays comprehensive but shallow per point; cluster pages provide the depth."
+    },
+    {
+      "q": "How long should a pillar page be?",
+      "a": "A pillar page is usually long — often 2,000 words or more — because it comprehensively covers a broad topic and summarizes every sub-topic in its cluster. But length should follow coverage, not a target word count. The right length is whatever it takes to give a complete overview and link out to each cluster post; padding to hit a number adds no ranking value."
+    },
+    {
+      "q": "Do pillar pages help SEO?",
+      "a": "Yes, pillar pages help SEO by building topical authority. A pillar and its interlinked cluster show search engines you cover a topic comprehensively, which helps the whole group rank rather than one page. The pillar concentrates internal-link relevance, captures more long-tail queries across the cluster, and becomes the most cite-worthy resource, attracting backlinks that lift every connected page."
+    },
+    {
+      "q": "How do I create a pillar page?",
+      "a": "Create a pillar page by picking a core topic, mapping its long-tail sub-questions into planned cluster posts, then writing a comprehensive guide with question-style H2 sections and answer-first openers. Link the pillar down to every cluster post and each cluster post back up to the pillar. Finally, audit each URL for on-page and GEO issues, then expand the cluster over time."
+    }
+  ],
+  "faqs": [
+    {
+      "q": "How many cluster posts should a pillar page have?",
+      "a": "Most pillar pages support 5-10 cluster posts to start, though strong clusters grow to dozens over time. Focus on covering the topic's real sub-questions rather than hitting a number. Add cluster posts as you discover new long-tail queries, since a more complete cluster signals stronger topical authority."
+    },
+    {
+      "q": "Is a pillar page the same as a homepage?",
+      "a": "No. A homepage introduces your whole site or brand, while a pillar page is a comprehensive guide to one core topic that links to related cluster posts. A homepage can link to pillar pages, but the pillar's job is to own a specific subject and act as the hub of its topic cluster."
+    },
+    {
+      "q": "Can a pillar page rank without cluster posts?",
+      "a": "A pillar page can rank on its own, but it ranks far better with cluster posts. The internal links from deep, on-topic cluster pages pass relevance and authority up to the pillar, helping it compete for its head keyword. Without them, the pillar is just one page trying to win a competitive term alone."
+    }
+  ],
+  "relatedKeywords": [
+    "pillar page example",
+    "topic cluster",
+    "pillar page vs cluster page",
+    "content pillar",
+    "pillar page seo"
+  ],
+  "internalLinks": [
+    { "href": "/", "anchor": "run a free SEO + GEO audit" },
+    { "href": "/blog/what-is-topical-authority", "anchor": "What is topical authority" },
+    { "href": "/blog/what-is-internal-linking", "anchor": "What is internal linking" },
+    { "href": "/blog/how-to-write-a-blog-post-that-ranks", "anchor": "How to write a blog post that ranks" },
+    { "href": "/blog/what-is-search-intent", "anchor": "What is search intent" },
+    { "href": "/blog/how-to-write-seo-friendly-content", "anchor": "How to write SEO-friendly content" }
+  ],
+  "images": []
+}

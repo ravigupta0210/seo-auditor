@@ -1,0 +1,135 @@
+{
+  "slug": "what-is-programmatic-seo",
+  "title": "What Is Programmatic SEO? (With Examples)",
+  "date": "2026-07-10",
+  "updatedAt": "2026-07-10",
+  "tag": "Technical SEO",
+  "cluster": "technical-seo",
+  "keyword": "what is programmatic SEO",
+  "secondaryKeywords": ["programmatic SEO examples", "template pages", "scaled content abuse", "data-driven pages", "SEO at scale"],
+  "readTime": 9,
+  "excerpt": "Programmatic SEO explained: how to generate hundreds of targeted pages from one template plus data, with real examples and the line that keeps it out of Google's scaled-content penalty.",
+  "description": "What is programmatic SEO? Learn how to generate many targeted pages from a template and data at scale, with real examples and how to avoid Google's spam penalty.",
+  "tldr": "Programmatic SEO is generating many targeted pages from a single template plus a structured dataset, so one build can rank for hundreds of long-tail queries like \"[city] plumbers\" or \"[tool A] vs [tool B].\" It works when every generated page carries genuine unique value; it becomes spam the moment pages are thin, near-duplicate filler that trip Google's scaled-content-abuse policy.",
+  "status": "published",
+  "sections": [
+    {
+      "heading": "What programmatic SEO actually is",
+      "body": [
+        "The short answer to what is programmatic SEO: it is the practice of generating many targeted landing pages from a single template plus a structured dataset, so one build can rank for hundreds or thousands of similar long-tail queries at once. Instead of hand-writing a page for \"plumbers in Austin,\" then another for \"plumbers in Denver,\" you write one template with placeholders, feed it a spreadsheet of cities and local data, and the system produces a distinct, indexable page for every row. The keyword pattern is repeatable; the data behind each page is unique.",
+        "The core insight is that huge categories of search demand follow a predictable pattern: \"[city] [service],\" \"[product A] vs [product B],\" \"how to convert [unit] to [unit],\" \"[job title] salary in [country].\" Each individual query has low volume and low competition, but there are thousands of them. Writing each page by hand is impossibly slow. A template plus a database lets you cover the whole pattern in one engineering effort — this is exactly the [long-tail keyword](/blog/how-to-target-long-tail-keywords) strategy, executed at scale.",
+        "Programmatic SEO is a subset of [technical SEO](/blog/what-is-technical-seo) because the hard parts are engineering, not prose: modeling the data, designing a template that renders unique value per row, generating a clean [URL structure](/blog/url-structure-for-seo), and making sure every page ends up in your [XML sitemap](/blog/how-to-create-an-xml-sitemap) and gets crawled. Here is the pipeline every programmatic project follows:",
+        "[[flowchart]]",
+        "Notice that keyword-pattern research comes first and quality review comes last. The order matters: the pattern decides what data you need, and the review gate is what separates a durable programmatic site from one that gets deindexed in a spam sweep."
+      ]
+    },
+    {
+      "heading": "Real programmatic SEO examples",
+      "body": [
+        "The clearest way to understand programmatic SEO is through sites you already use. Most large data-driven sites are built this way, whether they call it that or not:",
+        "- **Zillow** generates a page for essentially every address and every \"[city] real estate\" query from its property database — millions of pages, one template family.",
+        "- **TripAdvisor and Booking.com** produce \"things to do in [city]\" and \"[city] hotels\" pages from a listings dataset.",
+        "- **Wise** (formerly TransferWise) ranks for thousands of \"convert [currency] to [currency]\" queries with a single calculator template plus live rate data.",
+        "- **G2 and Capterra** own \"[software category] software\" and \"[tool A] vs [tool B]\" with template pages fed by their review database.",
+        "- **Nomad List** built a business on \"cost of living in [city]\" pages generated from cost and climate data.",
+        "This very site is a working example of programmatic SEO done right. It ships a per-check explainer page for every audit rule it runs — one template, one catalog of checks as the dataset — so a search for a specific issue like a missing canonical tag or a broken JSON-LD block lands on a page dedicated to exactly that check. It also generates head-to-head [comparison pages](/blog/what-is-search-intent) for tools. The template is shared, but each page answers a genuinely different question with its own explanation, fix, and examples. That last part is the whole game.",
+        "> The pattern is always the same: a repeatable query shape, a dataset with one row per page, and a template that turns each row into a page a human would find genuinely useful on its own."
+      ]
+    },
+    {
+      "heading": "The line between programmatic SEO and spam",
+      "body": [
+        "The single line that separates legitimate programmatic SEO from a penalty is unique value per page: every generated page must give a searcher something specific and useful that no other page gives them. In March 2024 Google introduced its **scaled content abuse** policy, which targets \"creating many pages primarily to manipulate search rankings and not helping users.\" Programmatic SEO is not banned — thin, near-duplicate programmatic SEO is. The distinction is entirely about whether the pages help people.",
+        "A page fails the test when the only thing that changes between rows is the keyword. If your \"plumbers in Austin\" and \"plumbers in Denver\" pages are byte-for-byte identical except for the city name find-and-replaced in, you have built a doorway page, and Google's systems are very good at detecting that pattern across thousands of URLs at once. Here is how the good and the penalized versions compare:",
+        "[[table]]",
+        "The practical test: pick two random generated pages and read them side by side. If a real user would find each one useful on its own — because the data, examples, or answer genuinely differ — you are fine. If they feel like the same page wearing different keyword hats, you are building the thing Google penalizes. Thin programmatic pages also drain [crawl budget](/blog/what-is-crawl-budget): Google wastes crawls on low-value URLs and may slow indexing of your good ones.",
+        "AI-first quality matters now too. Answer engines like ChatGPT, Perplexity, and Google AI Overviews cite pages that give a clean, self-contained answer. A programmatic page that opens with a direct, data-specific answer is both more useful to humans and more likely to be cited, which is why a [generative engine optimization](/blog/what-is-generative-engine-optimization) pass belongs in your template, not just your blog posts."
+      ]
+    },
+    {
+      "heading": "How to build programmatic SEO that lasts",
+      "body": [
+        "Building durable programmatic SEO comes down to five decisions: pick a keyword pattern with real demand, source a dataset rich enough to make each page unique, design a template that surfaces that uniqueness above the fold, generate clean URLs and a sitemap, and gate every page through a quality review before it ships. Skip the data-richness step and you are just spinning up doorways.",
+        "Start with the **keyword pattern**. Confirm the \"[modifier] [head term]\" shape has search volume across many variations and that the [search intent](/blog/what-is-search-intent) is consistent — every \"[city] plumbers\" searcher wants local providers, so one template fits all of them. If intent shifts between variations, one template can't serve them and you'll rank for none.",
+        "Then invest in the **data**. This is where most projects win or lose. The richer and more proprietary your dataset, the more unique value each page carries and the harder it is for competitors to copy. Pull from APIs, public datasets, your own product data, or aggregated user contributions — but make sure each row genuinely differs in ways a reader cares about, not just a name swap.",
+        "Design the **template** so the unique data is the hero of the page, not buried under boilerplate. The first screen should answer the query with this row's specific data. Add supporting content — a short intro, an FAQ, relevant [internal links](/blog/what-is-internal-linking) to sibling and parent pages — but never let the boilerplate outweigh the unique part. Then handle the mechanics: descriptive title tags and meta descriptions generated per page, one canonical URL each to avoid duplication, and inclusion in a fresh sitemap so the pages get discovered.",
+        "Finally, **review before shipping**. Spot-check a sample of generated pages, and audit the template on a live URL. Paste a representative page into the [free SEO + GEO audit on the homepage](/) — it flags thin content, missing per-page metadata, weak answer-first openers, and whether AI crawlers can reach the page, all of which decide whether your programmatic pages rank and get cited. Fix the template once and the fix propagates to every page it generates. If you want a broader pre-launch pass, follow the full [SEO audit workflow](/blog/how-to-write-a-blog-post-that-ranks) on your templates before generating at scale."
+      ]
+    }
+  ],
+  "flowchart": {
+    "title": "The programmatic SEO pipeline",
+    "steps": [
+      { "title": "Research the keyword pattern", "detail": "Find a repeatable query shape like \"[city] plumbers\" with demand across many variations and one consistent intent." },
+      { "title": "Source and structure the data", "detail": "Build a dataset with one row per page, rich enough to make each page genuinely unique." },
+      { "title": "Design the page template", "detail": "Surface the unique data above the fold; keep boilerplate minimal and per-page metadata dynamic." },
+      { "title": "Generate URLs and sitemap", "detail": "Produce clean, keyword-bearing URLs, canonical each page, and add them all to the XML sitemap." },
+      { "title": "Review quality per page", "detail": "Spot-check generated pages and audit the template so every page carries real unique value." },
+      { "title": "Publish, monitor, prune", "detail": "Index in Search Console, track which patterns rank, and remove pages that stay thin or unvisited." }
+    ]
+  },
+  "comparisonTable": {
+    "caption": "Legitimate programmatic SEO vs. scaled content abuse",
+    "headers": ["Aspect", "Programmatic SEO (works)", "Scaled content abuse (penalized)"],
+    "rows": [
+      ["Data per page", "Genuinely unique data in every row", "Same content, keyword find-and-replaced"],
+      ["User value", "Each page answers a real question usefully", "Pages exist only to catch a keyword"],
+      ["Template role", "Presents unique data cleanly", "Pads thin data with boilerplate"],
+      ["Intent match", "One consistent intent across variations", "Forced onto queries it can't serve"],
+      ["Scale mindset", "As many pages as there is real data", "As many pages as possible, quality aside"],
+      ["Outcome", "Durable long-tail rankings and AI citations", "Deindexed in a scaled-content sweep"]
+    ]
+  },
+  "peopleAlsoAsk": [
+    {
+      "q": "What is an example of programmatic SEO?",
+      "a": "A classic example is Wise's \"convert [currency] to [currency]\" pages: one calculator template plus live exchange-rate data generates thousands of pages that each rank for a specific conversion query. Zillow's per-address listings, TripAdvisor's \"things to do in [city]\" pages, and G2's \"[tool A] vs [tool B]\" comparisons work the same way — a shared template fed by a dataset with one unique row per page."
+    },
+    {
+      "q": "Is programmatic SEO worth it?",
+      "a": "Programmatic SEO is worth it when you have a repeatable keyword pattern with demand and a dataset rich enough to make each page genuinely useful. It captures long-tail traffic that would be impossibly slow to target by hand. It is not worth it if your data is thin, because near-duplicate pages get caught by Google's scaled-content-abuse policy and can drag down the whole site rather than help it."
+    },
+    {
+      "q": "Is programmatic SEO spam?",
+      "a": "Programmatic SEO is not spam by itself — Google penalizes thin, near-duplicate pages, not automation. The line is unique value per page: if every generated page gives searchers something specific and useful, it is legitimate. If pages differ only by a swapped keyword and exist mainly to rank, they are doorway pages that violate Google's scaled content abuse policy and risk deindexing."
+    },
+    {
+      "q": "How do you do programmatic SEO?",
+      "a": "Do programmatic SEO in five steps: research a repeatable keyword pattern with consistent intent, source a structured dataset with one unique row per page, design a template that surfaces that data above the fold with dynamic metadata, generate clean canonical URLs and a sitemap, then review quality before publishing. Audit a sample page on a live URL to confirm each one carries real value before generating at scale."
+    },
+    {
+      "q": "What tools do you need for programmatic SEO?",
+      "a": "You need three things: a data source (an API, public dataset, spreadsheet, or your own product database), a way to render the template at each URL (a CMS, static site generator, or web framework like Next.js), and a way to generate and submit a sitemap so the pages get crawled. Keyword tools help find the pattern, and an SEO audit tool verifies the template produces unique, crawlable pages."
+    }
+  ],
+  "faqs": [
+    {
+      "q": "How many pages can a programmatic SEO project have?",
+      "a": "There is no hard limit — projects range from dozens to millions of pages. The real cap is your data: only create as many pages as you have genuinely unique, useful data to fill. If page count outpaces real value, the extra pages become thin content that hurts more than it helps."
+    },
+    {
+      "q": "Does programmatic SEO work for small sites?",
+      "a": "Yes. Small sites often win with a focused programmatic set — a few hundred pages built on one proprietary dataset or a per-feature explainer pattern. You don't need Zillow's scale; you need a repeatable query pattern and enough unique data to make each page worth reading. Small, high-quality sets rank and get cited by AI engines."
+    },
+    {
+      "q": "How is programmatic SEO different from regular content writing?",
+      "a": "Regular content writing produces one hand-crafted page per topic. Programmatic SEO produces many pages from one template plus a dataset, so the effort is front-loaded into engineering and data rather than prose. The two complement each other: programmatic pages cover repeatable long-tail patterns while written articles cover deeper, one-off topics."
+    }
+  ],
+  "relatedKeywords": [
+    "programmatic seo example",
+    "programmatic seo tools",
+    "scaled content abuse",
+    "template pages seo",
+    "programmatic seo strategy"
+  ],
+  "internalLinks": [
+    { "href": "/", "anchor": "Run a free SEO + GEO audit on a template page" },
+    { "href": "/blog/how-to-target-long-tail-keywords", "anchor": "How to target long-tail keywords" },
+    { "href": "/blog/what-is-technical-seo", "anchor": "What is technical SEO" },
+    { "href": "/blog/url-structure-for-seo", "anchor": "URL structure for SEO" },
+    { "href": "/blog/what-is-search-intent", "anchor": "What is search intent" },
+    { "href": "/blog/how-to-create-an-xml-sitemap", "anchor": "How to create an XML sitemap" }
+  ],
+  "images": []
+}

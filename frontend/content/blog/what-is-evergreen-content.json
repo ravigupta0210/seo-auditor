@@ -1,0 +1,164 @@
+{
+  "slug": "what-is-evergreen-content",
+  "title": "What Is Evergreen Content? (With Examples)",
+  "date": "2026-07-10",
+  "updatedAt": "2026-07-10",
+  "tag": "SEO",
+  "cluster": "content-links",
+  "keyword": "what is evergreen content",
+  "secondaryKeywords": ["evergreen content examples", "evergreen vs time-sensitive content", "how to create evergreen content", "compounding traffic"],
+  "readTime": 9,
+  "excerpt": "Evergreen content stays useful and searchable for years — here's what it is, real examples, how to create it, and why it still needs refreshing.",
+  "description": "What is evergreen content? Content that stays relevant and searchable for years, like how-tos and definitions. See examples, how to create it, and why it compounds.",
+  "tldr": "Evergreen content is content that stays relevant and searchable for years rather than spiking and fading like news. Think how-to guides, definitions, and tutorials — topics with steady, ongoing demand. Because it keeps ranking, evergreen content compounds traffic over time instead of decaying. It's the backbone of most SEO strategies, but even evergreen posts need periodic refreshing to stay accurate and hold their rankings.",
+  "status": "published",
+  "sections": [
+    {
+      "heading": "What is evergreen content?",
+      "body": [
+        "What is evergreen content? Evergreen content is content that stays relevant, accurate, and searchable for years after you publish it — named after evergreen trees that keep their leaves through every season. Instead of spiking when it's new and then dying off like a news story, evergreen content answers a question people keep asking, so it keeps earning search traffic month after month.",
+        "The defining trait is **sustained search demand**. A topic is evergreen when the number of people searching for it stays roughly steady over time rather than tying to a date, event, or trend. \"How to tie a tie\" gets searched the same amount this July as last July and will next July too. \"2024 election results\" spiked once and collapsed. The first is evergreen; the second is time-sensitive.",
+        "This is why evergreen content sits at the heart of nearly every serious SEO strategy. A news post might pull a huge burst of traffic in week one and near-zero by week three. An evergreen guide starts slower — search engines take weeks to trust it — but then holds its ranking and traffic for years, quietly compounding. Understanding this trade-off is foundational to [what is SEO and how it works](/blog/what-is-seo-and-how-it-works).",
+        "> Evergreen isn't a format or a word count. It's a demand pattern: does this topic get searched steadily, or does interest die with a date?"
+      ]
+    },
+    {
+      "heading": "Evergreen vs. time-sensitive content: examples",
+      "body": [
+        "The clearest way to understand evergreen content is to see it beside its opposite: time-sensitive (or topical) content, which is tied to a moment and loses value once that moment passes. Both have a place — topical content wins attention and links fast; evergreen content builds a durable traffic base — but they behave completely differently over time.",
+        "[[table]]",
+        "Notice the pattern across the evergreen column: these are **questions with permanent answers**. Definitions (\"what is a meta description\"), how-tos (\"how to change a tire\"), tutorials, glossaries, and foundational explainers all qualify because the underlying need doesn't expire. The right-hand column is anything anchored to a date, a version number, a launch, or a trend that will feel dated in a year.",
+        "Some content is deliberately in between and that's fine. A post like \"best laptops for 2026\" mixes an evergreen need (people always want laptop recommendations) with a time-sensitive frame (the year and specific models). These hybrids can rank for years *if* you commit to refreshing them — which is exactly why refreshing matters, as we cover below and in [content freshness for SEO](/blog/content-freshness-for-seo).",
+        "The opposite of evergreen is sometimes called topical, news, or seasonal content. It isn't worse — it's a different tool. Great strategies run both: evergreen posts for the compounding base, topical posts for spikes and link-building."
+      ]
+    },
+    {
+      "heading": "Why evergreen content compounds traffic",
+      "body": [
+        "Evergreen content compounds traffic because each post keeps ranking and drawing visitors long after publication, so new posts add to your total rather than replacing traffic that faded. With time-sensitive content you're on a treadmill — last month's traffic vanishes and you have to publish again just to stay level. With evergreen content, month five earns you the traffic from posts one through five combined.",
+        "That compounding shows up three ways over time:",
+        "- **Rankings mature and strengthen.** Evergreen pages accumulate age, links, and engagement signals, which tend to lift their rankings — and thus their traffic — the longer they exist.",
+        "- **Links and citations accrue.** Because the page stays relevant, other sites keep linking to it and AI engines keep citing it, feeding back into higher rankings.",
+        "- **Topical authority builds.** A cluster of evergreen posts around one subject signals expertise to Google, helping every page in the cluster rank better. That's the core idea in [what is topical authority](/blog/what-is-topical-authority).",
+        "There's a return-on-effort angle too. You write an evergreen post once, and it can pay back for years — a far better ratio than content you must constantly replace. This is why most efficient content strategies weight heavily toward evergreen, using long-tail keywords with steady demand as the seeds, as explained in [how to target long-tail keywords](/blog/how-to-target-long-tail-keywords)."
+      ]
+    },
+    {
+      "heading": "How to create evergreen content",
+      "body": [
+        "You create evergreen content by choosing a topic with steady, dateless demand and writing an answer thorough enough to stay the best result for years. It starts with topic selection, not writing — pick the wrong subject and no amount of craft makes it evergreen.",
+        "Follow this process:",
+        "[[flowchart]]",
+        "A few principles make the difference between content that lasts and content that quietly dates itself:",
+        "- **Choose questions, not events.** Target queries like \"how to,\" \"what is,\" \"why does,\" and \"best way to\" that people will still ask next year. Confirm demand is steady, not a one-time spike, before committing.",
+        "- **Write for the intent, completely.** Match what the searcher wants and answer it more thoroughly than competitors. Open each section with a direct answer so both readers and AI engines can lift it — the method in [how to write a blog post that ranks](/blog/how-to-write-a-blog-post-that-ranks).",
+        "- **Avoid built-in expiration.** Skip phrases like \"last week\" or \"the new update,\" and put volatile facts (prices, version numbers, current-year stats) in places you can easily edit rather than woven through every paragraph.",
+        "- **Cover fundamentals, not fads.** Evergreen topics tend to be foundational concepts that don't change quickly — the how-to's and definitions people always need. The full craft is in [how to write SEO-friendly content](/blog/how-to-write-seo-friendly-content).",
+        "Before you publish, sanity-check the page's technical SEO too. Paste the URL into the [free SEO + GEO audit on the homepage](/) — it confirms your title, meta description, and answer-first structure are in place so your evergreen post ranks in classic search and gets cited by AI engines from day one."
+      ]
+    },
+    {
+      "heading": "Even evergreen content needs refreshing",
+      "body": [
+        "Evergreen doesn't mean \"publish and forget\" — even evergreen content needs periodic refreshing to stay accurate and hold its rankings. \"Evergreen\" describes the topic's lasting demand, not the article's permanence. The question stays relevant for years, but your specific answer can drift out of date as facts, examples, screenshots, and best practices change around it.",
+        "There are two reasons to refresh, and both matter:",
+        "- **Accuracy.** A tools list from 2022 may name products that no longer exist; a how-to may reference an interface that's been redesigned. Outdated details erode trust and can quietly cost you rankings.",
+        "- **Freshness signals.** Google and AI engines factor in how recently content was updated. A meaningfully refreshed post — updated stats, new sections, a current year — often regains rankings it had slowly lost. The full mechanics are in [content freshness for SEO](/blog/content-freshness-for-seo).",
+        "A practical cadence: review your top evergreen posts every 6 to 12 months. Fix any inaccuracies, add anything competitors now cover, tighten the answer-first opening, and update the \"last updated\" date. Prioritize pages that have slipped from page one to page two — those refreshes pay back fastest, a tactic covered in [how to improve website ranking on Google](/blog/how-to-improve-website-ranking-on-google).",
+        "> The best content strategy is a small library of evergreen posts you actively maintain — not a large one you abandon. Ten refreshed evergreen guides will out-earn fifty forgotten ones."
+      ]
+    }
+  ],
+  "flowchart": {
+    "title": "How to create evergreen content in 5 steps",
+    "steps": [
+      { "title": "Pick a dateless topic", "detail": "Choose a question with steady, ongoing search demand — not one tied to an event or trend." },
+      { "title": "Confirm steady demand", "detail": "Check that interest is stable over time, not a one-time spike, before committing to the topic." },
+      { "title": "Match intent completely", "detail": "Answer what the searcher actually wants, more thoroughly than the current top results." },
+      { "title": "Write answer-first", "detail": "Open each section with a standalone answer, and avoid dates or phrases that expire." },
+      { "title": "Publish and schedule refreshes", "detail": "Ship it, then review every 6-12 months to keep facts current and hold rankings." }
+    ]
+  },
+  "comparisonTable": {
+    "caption": "Evergreen vs. time-sensitive content",
+    "headers": ["Aspect", "Evergreen content", "Time-sensitive content"],
+    "rows": [
+      ["Search demand", "Steady for years", "Spikes, then fades fast"],
+      ["Traffic pattern", "Compounds over time", "Burst, then decays"],
+      ["Examples", "How-tos, definitions, tutorials, guides", "News, launch coverage, event recaps, trends"],
+      ["Ranking timeline", "Slow to start, durable", "Fast, then drops off"],
+      ["Maintenance", "Periodic refreshes", "Rarely worth updating"],
+      ["Best used for", "A durable traffic base", "Attention spikes and link-building"]
+    ]
+  },
+  "peopleAlsoAsk": [
+    {
+      "q": "What is an example of evergreen content?",
+      "a": "Examples of evergreen content include how-to guides (\"how to change a tire\"), definitions and glossary posts (\"what is a meta description\"), tutorials, checklists, and foundational explainers. What they share is dateless demand: people search these terms at a steady rate year after year because the underlying need never expires, so the content keeps ranking and earning traffic for years."
+    },
+    {
+      "q": "Why is evergreen content important for SEO?",
+      "a": "Evergreen content is important for SEO because it compounds traffic: each post keeps ranking for years, so new posts add to your total instead of replacing traffic that faded. It builds topical authority, attracts ongoing links and AI citations, and delivers a strong return on effort — you write it once and it pays back for years, forming the durable base of most SEO strategies."
+    },
+    {
+      "q": "What is the opposite of evergreen content?",
+      "a": "The opposite of evergreen content is time-sensitive content — also called topical, news, or seasonal content. It's tied to a specific date, event, launch, or trend, so it spikes in traffic when new and drops off quickly once the moment passes. Examples include news articles, product launch coverage, and event recaps. It isn't worse, just a different tool for winning fast attention."
+    },
+    {
+      "q": "How do I create evergreen content?",
+      "a": "Create evergreen content by picking a topic with steady, dateless demand — a question people will still ask next year — then answering it more completely than the current top results. Write answer-first, avoid phrases and facts that expire, and cover fundamentals rather than fads. Confirm search demand is stable before committing, publish, then schedule refreshes every 6 to 12 months."
+    },
+    {
+      "q": "Does evergreen content need updating?",
+      "a": "Yes. Evergreen describes the topic's lasting demand, not the article's permanence — your specific answer can drift out of date as facts, tools, and best practices change. Refresh top evergreen posts every 6 to 12 months to fix inaccuracies and add new information. Updates also send freshness signals that help Google and AI engines keep ranking the page."
+    }
+  ],
+  "faqs": [
+    {
+      "q": "Is evergreen content always long-form?",
+      "a": "No. Evergreen is defined by lasting search demand, not length. A short, precise definition post or a quick how-to can be perfectly evergreen. What matters is that the topic stays relevant for years and your answer is the most complete one for that specific query."
+    },
+    {
+      "q": "How often should I update evergreen content?",
+      "a": "Review your top evergreen posts every 6 to 12 months, and more often for fast-moving topics like software or SEO itself. Fix inaccuracies, add anything competitors now cover, and update the last-modified date. Prioritize pages that have slipped from page one — those refreshes pay back fastest."
+    },
+    {
+      "q": "Can evergreen content rank in AI answers?",
+      "a": "Yes, and it's well suited to it. Because evergreen content answers stable, common questions thoroughly, AI engines like ChatGPT and Google AI Overviews readily cite it — as long as each section opens with a standalone, quotable answer. Keeping it refreshed also helps AI engines treat it as current and trustworthy."
+    }
+  ],
+  "relatedKeywords": [
+    "evergreen content examples",
+    "evergreen vs time-sensitive content",
+    "how to create evergreen content",
+    "evergreen blog posts",
+    "evergreen content strategy"
+  ],
+  "internalLinks": [
+    {
+      "href": "/",
+      "anchor": "Run a free SEO + GEO audit"
+    },
+    {
+      "href": "/blog/content-freshness-for-seo",
+      "anchor": "Content freshness for SEO"
+    },
+    {
+      "href": "/blog/how-to-write-a-blog-post-that-ranks",
+      "anchor": "How to write a blog post that ranks"
+    },
+    {
+      "href": "/blog/how-to-write-seo-friendly-content",
+      "anchor": "How to write SEO-friendly content"
+    },
+    {
+      "href": "/blog/what-is-topical-authority",
+      "anchor": "What is topical authority"
+    },
+    {
+      "href": "/blog/how-to-target-long-tail-keywords",
+      "anchor": "How to target long-tail keywords"
+    }
+  ],
+  "images": []
+}

@@ -1,0 +1,154 @@
+{
+  "slug": "what-is-a-backlink",
+  "title": "What Is a Backlink? A Beginner Guide (2026)",
+  "date": "2026-07-10",
+  "updatedAt": "2026-07-10",
+  "tag": "SEO",
+  "cluster": "seo-basics",
+  "keyword": "what is a backlink",
+  "secondaryKeywords": ["backlink meaning", "quality backlinks", "dofollow vs nofollow", "how backlinks work", "types of backlinks"],
+  "readTime": 9,
+  "excerpt": "A plain-English guide to what a backlink is, why links still matter for SEO, and how to tell a good one from a spammy one.",
+  "description": "What is a backlink? A backlink is a link from another website to yours. Learn why they matter for SEO, quality vs quantity, dofollow vs nofollow, and how to earn them.",
+  "tldr": "A backlink is a link from another website that points to a page on your site. Search engines treat each one as a vote of confidence, so pages with more high-quality backlinks tend to rank higher. Quality beats quantity: one link from a trusted, relevant site outweighs dozens of spammy ones.",
+  "status": "published",
+  "sections": [
+    {
+      "heading": "What is a backlink, in plain English",
+      "body": [
+        "If you are wondering what is a backlink, the short answer is that a backlink is a link from another website that points to a page on your site. If a cooking blog writes an article and includes a clickable link to your recipe page, that link is a backlink for you — an inbound link earned from someone else's domain. Search engines like Google, and increasingly AI answer engines like ChatGPT and Perplexity, treat each backlink as a signal that other people find your page useful enough to reference.",
+        "The reason this matters comes down to how Google decided which pages to trust in the first place. Its original PageRank algorithm counted links between sites as votes: a page linked to by many others was probably more valuable than one nobody referenced. That core idea still holds in 2026. Backlinks remain one of Google's strongest ranking signals because they are hard to fake at scale — you generally have to earn a link by publishing something worth citing.",
+        "It helps to separate three link types that beginners often confuse. A **backlink** (or inbound link) comes *from another site to yours*. An **internal link** connects two pages *within your own site*. An **outbound link** points *from your site out to someone else's*. Only backlinks act as third-party endorsements, which is why they carry the most SEO weight.",
+        "Backlinks are the foundation of [off-page SEO](/blog/what-is-off-page-seo) — the ranking factors that happen away from your own pages. On-page work like titles and content tells Google what your page is about; backlinks tell Google whether the rest of the web agrees it is worth trusting."
+      ]
+    },
+    {
+      "heading": "Why backlinks still matter for ranking",
+      "body": [
+        "Backlinks matter because they are the clearest way for search engines to measure trust and authority across the web. A page cannot vouch for itself convincingly; anyone can claim to be an expert. But when independent, reputable sites link to a page, that pattern of endorsements is difficult to manufacture, so Google leans on it heavily when deciding which of ten similar pages deserves the top spot.",
+        "This is where the concept of [domain authority](/blog/what-is-domain-authority) comes in. Authority is not an official Google score, but third-party tools estimate how trusted a domain is largely based on the quantity and quality of its backlink profile. A new site with zero backlinks starts from near-invisibility; each quality link it earns gradually raises its ceiling for what it can rank for.",
+        "Backlinks also drive results in two ways at once. First, **ranking signal**: they help pages climb the [SERP](/blog/what-is-a-serp). Second, **referral traffic**: a link on a popular, relevant page sends real visitors who click through, independent of any ranking benefit. A single link from a widely-read industry article can deliver both a rankings bump and a steady stream of qualified readers.",
+        "One caveat for 2026: backlinks are powerful but not the whole game. Google now weighs content quality, [search intent](/blog/what-is-search-intent) matching, and page experience alongside links. A page with great backlinks but thin, off-intent content will still struggle. Think of backlinks as one leg of a three-legged stool — necessary, but not sufficient on their own."
+      ]
+    },
+    {
+      "heading": "Quality vs quantity: what makes a good backlink",
+      "body": [
+        "A good backlink comes from a website that is trusted, topically relevant to yours, and links to you naturally within real content. Ten links like that will move your rankings more than a thousand links from spammy directories or link farms. Google has spent years teaching its algorithms to ignore — or actively penalize — low-quality links, so chasing raw quantity is a waste of effort at best and a risk at worst.",
+        "When judging a backlink, weigh these factors:",
+        "- **Authority of the linking site** — a link from an established, well-linked domain passes more value than one from a brand-new site.",
+        "- **Topical relevance** — a link from a site in your niche counts for more than an unrelated one; a link to a bakery from a food blog beats one from a car forum.",
+        "- **Editorial placement** — a link inside the main body of an article, given because the writer chose to cite you, beats a link buried in a footer or sidebar.",
+        "- **Anchor text** — the visible, clickable words of the link give Google context. Descriptive [anchor text](/blog/what-is-anchor-text) helps; over-optimized, keyword-stuffed anchors can look manipulative.",
+        "- **Dofollow status** — whether the link passes ranking signal at all (more on this next).",
+        "Here is how the common backlink types stack up on quality and how hard they are to earn:",
+        "[[table]]",
+        "> One editorially-earned link from a respected site in your niche is worth more than a hundred you paid for or built yourself. When in doubt, ask: would this link exist if search engines didn't?"
+      ]
+    },
+    {
+      "heading": "Dofollow vs nofollow links",
+      "body": [
+        "A dofollow link passes ranking signal (\"link equity\") to the page it points at, while a nofollow link tells search engines not to pass that signal. Technically, a nofollow link carries a `rel=\"nofollow\"` attribute in its HTML; a standard link without that attribute is dofollow by default. This distinction decides whether a backlink actively helps your rankings or mainly just sends referral traffic.",
+        "That does **not** make nofollow links worthless. Since 2019 Google treats `nofollow` (and the related `sponsored` and `ugc` attributes) as hints rather than strict rules, so it may still consider them. More importantly, nofollow links from big platforms — think a mention in a news comment, a social profile, or a Wikipedia citation — send real visitors and make your backlink profile look natural. A profile that is 100% dofollow can itself look engineered.",
+        "The practical takeaway: aim for a **natural mix**. Pursue dofollow editorial links for ranking power, but don't refuse nofollow links from relevant, high-traffic sources. For a full breakdown of when each type helps, see [nofollow vs dofollow links](/blog/nofollow-vs-dofollow-links).",
+        "You can check whether any specific link is nofollow by viewing the page source and searching for the `rel` attribute on that link, or by using a browser extension that highlights nofollow links on a page."
+      ]
+    },
+    {
+      "heading": "How to earn backlinks (and check yours)",
+      "body": [
+        "You earn backlinks by publishing something people genuinely want to reference, then making sure the right people find it. There is no shortcut around being link-worthy — the durable tactics all start with content that answers a question better, or with more data, than what already ranks. Original research, free tools, clear beginner guides, and strong opinion pieces attract links because other writers need something credible to cite.",
+        "A few beginner-friendly ways to start earning links:",
+        "- **Create linkable assets** — a statistics roundup, a template, or a definitive guide that others cite when they touch the topic.",
+        "- **Guest posting** — write for a relevant publication and earn a contextual link back.",
+        "- **Digital PR and outreach** — pitch your data or story to journalists and bloggers covering your niche.",
+        "- **Reclaim unlinked mentions** — find places that mention your brand without linking, and politely ask for a link.",
+        "For a full, no-budget playbook, read [how to get backlinks for free](/blog/how-to-get-backlinks-for-free). It walks through outreach templates and asset ideas that work even for a brand-new site.",
+        "Before you chase new links, know where you stand. You can [run a free SEO + GEO audit](/) on any page to see its on-page health and the technical signals that make a page worth linking to and worth citing by AI engines. Strong pages earn links more easily, and in 2026 the same qualities that attract human links — clarity, authority, a direct answer up top — also help engines like ChatGPT and Google AI Overviews quote you. If you want the human-earning side in depth, pair this with [what is off-page SEO](/blog/what-is-off-page-seo)."
+      ]
+    }
+  ],
+  "comparisonTable": {
+    "caption": "Common backlink types ranked by SEO value and effort to earn",
+    "headers": ["Backlink type", "Typical quality", "Effort to earn", "Dofollow?"],
+    "rows": [
+      ["Editorial link (cited in an article)", "Highest", "High", "Usually dofollow"],
+      ["Guest post link", "High", "Medium", "Often dofollow"],
+      ["Resource / roundup listing", "Medium-high", "Medium", "Varies"],
+      ["Business directory / profile", "Low-medium", "Low", "Often nofollow"],
+      ["Social media / forum mention", "Low (referral value)", "Low", "Usually nofollow"],
+      ["Paid or link-farm link", "Negative (risky)", "Low", "Dofollow but penalized"]
+    ]
+  },
+  "peopleAlsoAsk": [
+    {
+      "q": "What is a backlink example?",
+      "a": "A backlink example: a marketing blog publishes an article about SEO tools and includes a clickable link to your homepage as a recommended resource. That link, sitting on their domain but pointing to yours, is a backlink for you. Another example is a news site citing your original research and linking to the study — an editorial backlink, the most valuable kind because it was earned, not bought or self-placed."
+    },
+    {
+      "q": "Are backlinks still important in 2026?",
+      "a": "Yes, backlinks remain one of Google's strongest ranking signals in 2026, and they now also influence which sources AI answer engines trust and cite. What has changed is the emphasis on quality: a handful of relevant, authoritative links beats thousands of low-quality ones, and manipulative link schemes are penalized. Backlinks work best alongside strong content and good search-intent matching, not as a standalone tactic."
+    },
+    {
+      "q": "What is a good backlink?",
+      "a": "A good backlink comes from a trusted, topically relevant website that links to you editorially within real content, using natural anchor text. Authority of the linking domain, relevance to your niche, and placement inside the main body all raise a link's value. The best test: would this link exist if search engines didn't? Links earned because your content is genuinely useful are the ones that last and rank."
+    },
+    {
+      "q": "How do I get backlinks?",
+      "a": "You get backlinks by publishing content worth referencing — original research, free tools, clear guides — then promoting it through outreach, guest posting, and digital PR. Reclaiming unlinked brand mentions and getting listed on relevant resource pages are quick early wins. Avoid buying links or using link farms; those violate Google's guidelines and risk penalties. See our free backlink playbook for step-by-step tactics and outreach templates."
+    },
+    {
+      "q": "What is the difference between a backlink and an internal link?",
+      "a": "A backlink comes from another website to yours and acts as a third-party vote of confidence, which is why it carries strong SEO weight. An internal link connects two pages within your own site and helps with navigation, crawlability, and spreading authority around your pages — but it is not an outside endorsement. Both matter, but only backlinks signal that other sites trust your content."
+    }
+  ],
+  "faqs": [
+    {
+      "q": "Can backlinks hurt my website?",
+      "a": "Yes — low-quality, spammy, or paid links can hurt you. Google may ignore them or, in cases of clear manipulation, apply a penalty that drops your rankings. If you find toxic links pointing at your site, you can disavow them in Google Search Console, though most sites never need to."
+    },
+    {
+      "q": "How many backlinks do I need to rank?",
+      "a": "There is no fixed number — it depends on the keyword's competition and the quality of the links. Some low-competition long-tail keywords rank with a handful of good links or even none, while competitive terms need many authoritative ones. Focus on earning relevant, high-quality links rather than hitting a target count."
+    },
+    {
+      "q": "Do backlinks help with AI search and ChatGPT citations?",
+      "a": "Indirectly, yes. Backlinks build the domain authority and trust signals that make AI engines more likely to treat your site as a credible source worth citing. But AI citation also depends on clear, answer-first content the engine can lift — which is why pairing strong backlinks with GEO best practices works best."
+    }
+  ],
+  "relatedKeywords": [
+    "backlink meaning",
+    "types of backlinks",
+    "dofollow backlink",
+    "quality backlinks",
+    "how backlinks work"
+  ],
+  "internalLinks": [
+    {
+      "href": "/",
+      "anchor": "run a free SEO + GEO audit"
+    },
+    {
+      "href": "/blog/how-to-get-backlinks-for-free",
+      "anchor": "How to get backlinks for free"
+    },
+    {
+      "href": "/blog/nofollow-vs-dofollow-links",
+      "anchor": "Nofollow vs dofollow links"
+    },
+    {
+      "href": "/blog/what-is-anchor-text",
+      "anchor": "What is anchor text"
+    },
+    {
+      "href": "/blog/what-is-off-page-seo",
+      "anchor": "What is off-page SEO"
+    },
+    {
+      "href": "/blog/what-is-domain-authority",
+      "anchor": "What is domain authority"
+    }
+  ],
+  "images": []
+}

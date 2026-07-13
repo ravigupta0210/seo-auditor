@@ -1,6 +1,7 @@
 'use client';
 
 import Link from 'next/link';
+import { track } from '@/lib/analytics';
 
 interface Summary {
   overall: number;
@@ -64,7 +65,7 @@ export function ConversionCTA({ summary, url }: { summary: Summary; url: string 
         Fixing them is how you win back organic traffic and start getting cited in AI answers.
       </p>
       <div style={{ display: 'flex', gap: 10, flexWrap: 'wrap' }}>
-        <Link href="/help" className="btn btn-primary">See how we can help →</Link>
+        <Link href="/help" className="btn btn-primary" onClick={() => track('help_cta_clicked', { url, score })}>See how we can help →</Link>
       </div>
       <p style={{ margin: '12px 0 0', fontSize: 12.5, color: 'var(--text-muted)' }}>
         Prefer to DIY? Every issue below expands with a copy-paste fix.

@@ -32,10 +32,32 @@ const fmt = (s: unknown) => {
 };
 const shortUrl = (u: unknown) => String(u ?? '').replace(/^https?:\/\//, '').replace(/\/$/, '') || '—';
 
+interface GscData {
+  range: { startDate: string; endDate: string };
+  totals: { clicks: number; impressions: number; ctr: number; position: number };
+  topQueries: Array<{ query: string; clicks: number; impressions: number; ctr: number; position: number }>;
+  topPages: Array<{ page: string; clicks: number; impressions: number; ctr: number; position: number }>;
+  sitemaps: Array<{ path: string; lastDownloaded: string | null; isPending: boolean; discovered: number; errors: string | null }>;
+}
+interface PhData {
+  days: number;
+  visitors: number;
+  pageviews: number;
+  events: Record<string, number>;
+  conversionRate: number;
+}
+interface Insights {
+  gsc: GscData | null;
+  gscReason: string | null;
+  posthog: PhData | null;
+  posthogReason: string | null;
+}
+
 export function AdminDashboard() {
   const [key, setKey] = useState('');
   const [days, setDays] = useState(30);
   const [data, setData] = useState<Stats | null>(null);
+  const [insights, setInsights] = useState<Insights | null>(null);
   const [status, setStatus] = useState<'idle' | 'loading' | 'error'>('idle');
   const [error, setError] = useState('');
 
@@ -72,6 +94,13 @@ export function AdminDashboard() {
         localStorage.setItem('adminKey', k);
       } catch {
         /* ignore */
+      }
+      // Growth insights (GSC + PostHog) — best-effort, never blocks the dashboard.
+      try {
+        const ir = await fetch(`${BACKEND_URL}/api/insights?key=${encodeURIComponent(k)}&days=${d}`, { cache: 'no-store' });
+        setInsights(ir.ok ? ((await ir.json()) as Insights) : null);
+      } catch {
+        setInsights(null);
       }
     } catch {
       setStatus('error');
@@ -130,6 +159,8 @@ export function AdminDashboard() {
           </div>
         ))}
       </div>
+
+      <InsightsSection insights={insights} />
 
       <section className="glass-card" style={{ padding: '20px 22px' }}>
         <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: 10, marginBottom: 12, flexWrap: 'wrap' }}>
@@ -306,6 +337,94 @@ function ResendButton({ email, auditId, apiKey }: { email: string; auditId: stri
     <button className="btn btn-secondary" style={{ height: 28, fontSize: 12, padding: '0 10px' }} disabled={st === 'sending' || st === 'done'} onClick={go}>
       {st === 'idle' ? 'Resend' : st === 'sending' ? '…' : st === 'done' ? '✓ Sent' : 'Retry'}
     </button>
+  );
+}
+
+function MiniTiles({ items }: { items: Array<{ label: string; value: string | number }> }) {
+  return (
+    <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(120px, 1fr))', gap: 10, marginBottom: 14 }}>
+      {items.map((it) => (
+        <div key={it.label} className="glass-card" style={{ padding: '14px 14px' }}>
+          <div style={{ fontSize: 24, fontWeight: 700, color: 'var(--accent)', letterSpacing: '-0.02em', lineHeight: 1.1 }}>
+            {typeof it.value === 'number' ? it.value.toLocaleString() : it.value}
+          </div>
+          <div style={{ fontSize: 11, color: 'var(--text-muted)', textTransform: 'uppercase', letterSpacing: '0.06em', fontWeight: 600, marginTop: 4 }}>
+            {it.label}
+          </div>
+        </div>
+      ))}
+    </div>
+  );
+}
+
+function GscBody({ gsc }: { gsc: GscData }) {
+  const t = gsc.totals;
+  const hasTraffic = t.clicks > 0 || t.impressions > 0;
+  return (
+    <>
+      <MiniTiles
+        items={[
+          { label: 'Clicks', value: t.clicks },
+          { label: 'Impressions', value: t.impressions },
+          { label: 'CTR', value: `${(t.ctr * 100).toFixed(1)}%` },
+          { label: 'Avg position', value: t.position ? t.position.toFixed(1) : '—' },
+        ]}
+      />
+      {gsc.sitemaps.length > 0 && (
+        <p style={{ margin: '0 0 12px', fontSize: 13, color: 'var(--text-muted)' }}>
+          Sitemaps:{' '}
+          {gsc.sitemaps.map((s) => `${s.path} (${s.discovered} discovered${s.isPending ? ', pending' : ''}${s.errors ? `, ${s.errors} errors` : ''})`).join(' · ')}
+        </p>
+      )}
+      {!hasTraffic ? (
+        <Empty>No Search impressions yet — the site is still being indexed. Queries/clicks will fill in as pages get indexed.</Empty>
+      ) : (
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: 16 }}>
+          <div>
+            <h3 style={{ margin: '0 0 8px', fontSize: 13, color: 'var(--text-dim)' }}>Top queries</h3>
+            <ScrollTable head={['Query', 'Clicks', 'Impr', 'Pos']} rows={gsc.topQueries.map((q) => [q.query, String(q.clicks), String(q.impressions), q.position.toFixed(1)])} />
+          </div>
+          <div>
+            <h3 style={{ margin: '0 0 8px', fontSize: 13, color: 'var(--text-dim)' }}>Top pages</h3>
+            <ScrollTable head={['Page', 'Clicks', 'Impr', 'Pos']} rows={gsc.topPages.map((p) => [shortUrl(p.page), String(p.clicks), String(p.impressions), p.position.toFixed(1)])} />
+          </div>
+        </div>
+      )}
+    </>
+  );
+}
+
+function PhBody({ ph }: { ph: PhData }) {
+  const ev = ph.events;
+  return (
+    <>
+      <MiniTiles
+        items={[
+          { label: 'Visitors', value: ph.visitors },
+          { label: 'Pageviews', value: ph.pageviews },
+          { label: 'Audits started', value: ev.audit_started ?? 0 },
+          { label: 'Email conv.', value: `${ph.conversionRate}%` },
+        ]}
+      />
+      <ScrollTable
+        head={['Funnel event', 'Count']}
+        rows={['audit_started', 'audit_completed', 'email_captured', 'help_requested', 'feedback_submitted'].map((e) => [e, String(ev[e] ?? 0)])}
+      />
+    </>
+  );
+}
+
+function InsightsSection({ insights }: { insights: Insights | null }) {
+  if (!insights) return null;
+  return (
+    <>
+      <Panel title="Search Console">
+        {insights.gsc ? <GscBody gsc={insights.gsc} /> : <Empty>{insights.gscReason ?? 'Not available.'}</Empty>}
+      </Panel>
+      <Panel title="Analytics (PostHog)">
+        {insights.posthog ? <PhBody ph={insights.posthog} /> : <Empty>{insights.posthogReason ?? 'Not available.'}</Empty>}
+      </Panel>
+    </>
   );
 }
 

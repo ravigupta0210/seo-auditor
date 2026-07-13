@@ -3,6 +3,7 @@
 import { useEffect, useState } from 'react';
 import Link from 'next/link';
 import { submitFeedback } from '@/lib/api';
+import { track } from '@/lib/analytics';
 
 const CheckIcon = () => (
   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.6" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
@@ -49,6 +50,7 @@ export function FeedbackForm() {
       url: typeof window !== 'undefined' ? window.location.href : undefined,
     });
     if (res.ok) {
+      track(isHelp ? 'help_requested' : 'feedback_submitted', { hasEmail: Boolean(email.trim()) });
       setStatus('done');
     } else {
       setStatus('error');

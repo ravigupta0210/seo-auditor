@@ -18,6 +18,7 @@
  */
 import { logger } from './logger.js';
 import { pool } from './db.js';
+import { getGoogleAccessToken } from './googleAuth.js';
 import type { AuditReport } from './store.js';
 
 const CLIENT_ID = process.env.GMAIL_CLIENT_ID?.trim();
@@ -42,39 +43,6 @@ function esc(s: string): string {
 }
 
 // --- Gmail API transport ---------------------------------------------------
-
-let cachedToken: { value: string; expiresAt: number } | null = null;
-
-async function getAccessToken(): Promise<string | null> {
-  if (cachedToken && cachedToken.expiresAt > Date.now() + 60_000) return cachedToken.value;
-  const ac = new AbortController();
-  const timer = setTimeout(() => ac.abort(), 15_000);
-  try {
-    const res = await fetch('https://oauth2.googleapis.com/token', {
-      method: 'POST',
-      headers: { 'content-type': 'application/x-www-form-urlencoded' },
-      body: new URLSearchParams({
-        client_id: CLIENT_ID!,
-        client_secret: CLIENT_SECRET!,
-        refresh_token: REFRESH_TOKEN!,
-        grant_type: 'refresh_token',
-      }),
-      signal: ac.signal,
-    });
-    if (!res.ok) {
-      logger.error({ status: res.status, body: (await res.text().catch(() => '')).slice(0, 400) }, 'Gmail token refresh failed');
-      return null;
-    }
-    const data = (await res.json()) as { access_token: string; expires_in: number };
-    cachedToken = { value: data.access_token, expiresAt: Date.now() + data.expires_in * 1000 };
-    return data.access_token;
-  } catch (err) {
-    logger.error({ err }, 'Gmail token refresh threw');
-    return null;
-  } finally {
-    clearTimeout(timer);
-  }
-}
 
 function encodeSubject(s: string): string {
   // RFC 2047 encoded-word only when the subject has non-ASCII (e.g. an em dash).
@@ -130,7 +98,7 @@ async function send(opts: { to: string; subject: string; html: string; text: str
     logger.warn({ to: opts.to, subject: opts.subject }, 'mailer disabled (GMAIL_* / MAIL_FROM unset) — email not sent');
     return false;
   }
-  const token = await getAccessToken();
+  const token = await getGoogleAccessToken({ clientId: CLIENT_ID!, clientSecret: CLIENT_SECRET!, refreshToken: REFRESH_TOKEN! });
   if (!token) {
     await logSent(opts, false);
     return false;

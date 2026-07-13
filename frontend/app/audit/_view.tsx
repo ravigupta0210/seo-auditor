@@ -8,6 +8,7 @@ import { ScoreRing } from '../_components/ScoreRing';
 import { SiteHeader } from '../_components/SiteHeader';
 import { EmailReportModal } from './_EmailReportModal';
 import { ConversionCTA } from './_ConversionCTA';
+import { track } from '@/lib/analytics';
 
 interface Summary {
   overall: number;
@@ -38,6 +39,7 @@ export function AuditView() {
     setPhase({ kind: 'starting' });
     setChecks([]);
     setCrawled([]);
+    track('audit_started', { url, scope });
 
     const endpoint =
       scope === 'site'
@@ -63,6 +65,7 @@ export function AuditView() {
     es.addEventListener('done', (e: MessageEvent) => {
       const data = JSON.parse(e.data) as { summary: Summary; auditId: string };
       setPhase({ kind: 'done', summary: data.summary, auditId: data.auditId });
+      track('audit_completed', { url, scope, score: data.summary?.overall });
       es.close();
     });
     es.addEventListener('error', (e) => {

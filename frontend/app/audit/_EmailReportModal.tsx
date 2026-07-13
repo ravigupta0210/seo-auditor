@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from 'react';
 import { submitLead } from '@/lib/api';
+import { track } from '@/lib/analytics';
 
 const MailIcon = () => (
   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
@@ -73,6 +74,7 @@ export function EmailReportModal({ auditId, url }: { auditId: string; url: strin
     setStatus('sending');
     const res = await submitLead({ email, auditId, url });
     if (res.ok) {
+      track('email_captured', { url, emailed: res.emailed });
       setStatus('done');
       setMessage(
         res.emailed

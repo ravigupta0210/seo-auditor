@@ -37,6 +37,15 @@ services:
         sync: false
       - key: APP_URL
         sync: false
-      # Secret that unlocks the /api/stats owner dashboard.
+      # Secret that unlocks the /api/stats + /api/insights owner dashboard.
       - key: ADMIN_TOKEN
+        sync: false
+      # Growth observability — Search Console (read-only) + PostHog.
+      - key: GSC_REFRESH_TOKEN
+        sync: false
+      - key: GSC_SITE_URL
+        sync: false
+      - key: POSTHOG_API_KEY
+        sync: false
+      - key: POSTHOG_PROJECT_ID
         sync: false

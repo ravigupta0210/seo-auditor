@@ -4,28 +4,9 @@ import { logger } from '../lib/logger.js';
 import { pool } from '../lib/db.js';
 import { store } from '../lib/store.js';
 import { sendReportEmail } from '../lib/mailer.js';
+import { requireAdminAndDb } from '../lib/adminAuth.js';
 
 export const statsRouter = Router();
-
-const ADMIN_TOKEN = process.env.ADMIN_TOKEN?.trim();
-
-/** Shared auth guard for the owner-only stats routes. Returns true if allowed. */
-function authorized(req: Request, res: Response): boolean {
-  if (!ADMIN_TOKEN) {
-    res.status(403).json({ error: 'Stats are disabled. Set ADMIN_TOKEN on the backend to enable.' });
-    return false;
-  }
-  const key = String(req.query.key ?? '');
-  if (key.length !== ADMIN_TOKEN.length || key !== ADMIN_TOKEN) {
-    res.status(401).json({ error: 'Unauthorized' });
-    return false;
-  }
-  if (!pool) {
-    res.status(503).json({ error: 'No database configured (DATABASE_URL unset).' });
-    return false;
-  }
-  return true;
-}
 
 // SQL for the full list of each data type (used by both dashboard + CSV export).
 const LIST_SQL: Record<string, string> = {
@@ -40,7 +21,7 @@ const LIST_SQL: Record<string, string> = {
  * Aggregate counts, an audits time series, and recent rows per section.
  */
 statsRouter.get('/', async (req: Request, res: Response) => {
-  if (!authorized(req, res)) return;
+  if (!requireAdminAndDb(req, res)) return;
   const days = [7, 30, 90].includes(Number(req.query.days)) ? Number(req.query.days) : 30;
 
   try {
@@ -92,7 +73,7 @@ statsRouter.get('/', async (req: Request, res: Response) => {
  * Full rows (capped at 1000) for browsing in the dashboard.
  */
 statsRouter.get('/list', async (req: Request, res: Response) => {
-  if (!authorized(req, res)) return;
+  if (!requireAdminAndDb(req, res)) return;
   const type = String(req.query.type ?? '');
   const sql = LIST_SQL[type];
   if (!sql) {
@@ -113,7 +94,7 @@ statsRouter.get('/list', async (req: Request, res: Response) => {
  * Re-sends the report email for a saved audit to the given address.
  */
 statsRouter.post('/resend', async (req: Request, res: Response) => {
-  if (!authorized(req, res)) return;
+  if (!requireAdminAndDb(req, res)) return;
   const email = String(req.body?.email ?? '').trim();
   const auditId = String(req.body?.auditId ?? '').trim();
   if (!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email) || !/^[0-9a-f-]{36}$/i.test(auditId)) {
@@ -147,7 +128,7 @@ function csvEscape(v: unknown): string {
  * Streams the full table as a CSV download.
  */
 statsRouter.get('/export', async (req: Request, res: Response) => {
-  if (!authorized(req, res)) return;
+  if (!requireAdminAndDb(req, res)) return;
   const type = String(req.query.type ?? 'leads');
   const sql = LIST_SQL[type];
   if (!sql) {

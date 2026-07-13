@@ -1,0 +1,158 @@
+{
+  "slug": "how-to-rank-in-meta-ai",
+  "title": "How to Rank in Meta AI (2026 Guide)",
+  "date": "2026-07-13",
+  "updatedAt": "2026-07-13",
+  "tag": "AI Search",
+  "cluster": "ai-search",
+  "keyword": "how to rank in Meta AI",
+  "secondaryKeywords": ["Meta AI citations", "optimize for Meta AI", "Llama SEO", "rank in Meta AI answers"],
+  "readTime": 9,
+  "excerpt": "Meta AI answers from live web results and cites sources across WhatsApp, Instagram, and Facebook — here is the GEO playbook to get your pages surfaced.",
+  "description": "Learn how to rank in Meta AI, the Llama assistant in WhatsApp and Instagram: allow AI crawlers, write answer-first content, and earn citations. A 2026 playbook.",
+  "tldr": "To rank in Meta AI, treat it as general generative engine optimization: Meta AI answers from live web results and cites sources, so allow AI crawlers to reach your pages, open every section with a standalone quotable answer, and earn the brand mentions and authority signals that make Llama trust and surface your site.",
+  "status": "published",
+  "sections": [
+    {
+      "heading": "How to rank in Meta AI: the short answer",
+      "body": [
+        "The honest answer to **how to rank in Meta AI** is that there is no Meta AI-specific trick — you win by doing generative engine optimization well. Meta AI is Meta's Llama-based assistant built into WhatsApp, Instagram, Facebook, Messenger, and the standalone meta.ai site, and when a question needs current information it runs a live web search and answers with linked citations. Ranking means becoming one of the pages it retrieves and quotes, which comes down to being crawlable, being quotable, and being trusted.",
+        "There is no ad slot, submission form, or paid placement inside Meta AI's cited answers as of 2026 — you cannot buy your way in. What you can control is three levers: (1) letting AI and search crawlers reach and read your pages, (2) structuring content so a model can lift a clean, self-contained answer, and (3) earning the mentions and authority that make Meta AI treat you as a reliable source. These are the same fundamentals behind ranking in [ChatGPT](/blog/how-to-rank-in-chatgpt) and every other answer engine.",
+        "This guide walks through each lever with concrete steps, plus how Meta AI differs from classic Google search. If you want a shortcut, you can [run a free SEO + GEO audit](/) on any URL and see which of these signals are already failing before you invest in content."
+      ]
+    },
+    {
+      "heading": "What Meta AI is and how it finds information",
+      "body": [
+        "Meta AI is the assistant Meta ships inside the apps billions of people already open daily, so appearing in its answers is a distribution channel, not a novelty. Ask it something and it either answers from the Llama model's own training or, for anything time-sensitive or specific, searches the live web and summarizes the top results with source links. Understanding which path a query takes is the key to knowing how to rank in Meta AI for it.",
+        "The two paths reward different work. **Live web search** rewards pages that rank well in the mainstream search indexes Meta AI draws on — generally Google and Bing as of 2026 — and that state their answer plainly enough to be quoted. **Training-data recall** rewards durable, widespread brand mentions accumulated across the web before the model's cutoff. You optimize for the first with ranking and crawlability, and for the second with the kind of authority that earns [AI citations](/blog/what-are-ai-citations) over time.",
+        "Here is the path a page travels to become a Meta AI citation. Each step is a place your page can be filtered out:",
+        "[[flowchart]]",
+        "Notice that ranking in ordinary search sits early in the chain. If your page is invisible in Google and Bing for the query, Meta AI's live search rarely finds it, no matter how good the content is — which is why classic SEO and GEO are complementary, not separate, disciplines (more in [GEO vs SEO](/blog/geo-vs-seo))."
+      ]
+    },
+    {
+      "heading": "Step 1: Let Meta AI's crawlers reach and read your pages",
+      "body": [
+        "Crawlability is the foundation, and it is where most sites quietly fail. If your robots.txt blocks AI user-agents, or your key content only appears after JavaScript runs, a model may never ingest the passage you want it to quote. Before writing a word of new content, confirm the door is open.",
+        "Do these four checks in order:",
+        "- **Audit robots.txt** so you are not accidentally disallowing AI and search crawlers such as `GPTBot`, `Google-Extended`, and standard search bots on pages you want surfaced. If you deliberately want some bots out, do it knowingly — see [how to block AI crawlers](/blog/how-to-block-ai-crawlers).\n- **Make content server-rendered or crawlable** rather than hidden behind client-side rendering, so the answer text exists in the HTML a crawler receives.\n- **Fix on-page basics** Meta AI's underlying search sources weigh: a unique title, a real meta description, clean heading hierarchy, and no stray `noindex`.\n- **Consider an [llms.txt file](/blog/how-to-write-an-llms-txt-file)** to point AI systems at your most important pages — a low-cost complement, not a ranking guarantee.",
+        "If you only do one thing this week, verify your robots.txt is not blocking crawlers on the pages you most want cited. A single overly broad `Disallow` line can erase you from every AI answer at once — the highest-leverage five-minute fix in GEO. The [free audit](/) flags blocked AI bots and missing metadata in one pass."
+      ]
+    },
+    {
+      "heading": "Step 2: Write answer-first content Meta AI can lift",
+      "body": [
+        "Being crawlable makes you eligible; answer-first writing gets you actually quoted. Language models extract the cleanest, most self-contained passage that resolves the user's question, so a page that states its answer in the first two sentences beats one that buries it under paragraphs of preamble. This is the core of the broader [AI search optimization](/blog/how-to-do-ai-search-optimization) discipline.",
+        "Lead every key section with a direct, standalone answer, and name the subject explicitly instead of leaning on pronouns — write \"Meta AI cites sources when it searches the web\" rather than \"It shows them.\" A passage that still makes sense when read alone, out of context, is what we call passing the Island Test, and it is exactly what a model copies into an answer. Pages that fail this test rarely get cited even when they rank.",
+        "Formatting moves that consistently help:",
+        "- Put a one- or two-sentence **direct answer** immediately under each heading.\n- Open the post with a short **TL;DR** that contains a specific number or named entity.\n- Break processes into **numbered steps** and parallel items into **short bullet lists** a model can reproduce cleanly.\n- Add an **FAQ section** where each question is a real query and each answer stands entirely on its own.",
+        "> A model does not read your page top to bottom like a person. It scans for the single quotable island that answers the query. Write so that island is easy to find and lift.",
+        "The full craft — including how depth and internal links compound — is covered in our [generative engine optimization](/blog/what-is-generative-engine-optimization) guide."
+      ]
+    },
+    {
+      "heading": "Step 3: Earn authority, then measure — Meta AI vs Google",
+      "body": [
+        "Structured data and off-site mentions move you from occasionally cited to the source Meta AI trusts. Add valid **FAQPage** and **Article** JSON-LD so machines parse your questions, answers, author, and dates without guessing. Then reinforce **E-E-A-T**: real author bylines with credentials, visible publish and updated dates, and citations to primary sources — the signals detailed in [what E-E-A-T is](/blog/what-is-eeat-in-seo). Models infer trust partly from how often and how consistently your brand is named across reputable sites, so contribute original data, get into roundups, and keep your entity consistent.",
+        "The priorities differ from classic search, and the table below shows where to spend effort depending on which surface you are chasing:",
+        "[[table]]",
+        "Finally, set expectations on measurement. Meta AI lives inside apps that pass little or no referrer data, so you will rarely see clean \"Meta AI\" traffic in analytics. Watch for meta.ai referrals, monitor brand-search lift, and check server logs for crawler activity — the approach in [how to track AI search traffic](/blog/how-to-track-ai-search-traffic). Treat citations as brand exposure that shapes demand rather than a directly attributable click source, and judge progress by trend over months, not days."
+      ]
+    }
+  ],
+  "flowchart": {
+    "title": "How a page becomes a Meta AI citation",
+    "steps": [
+      { "title": "Publish & stay crawlable", "detail": "Your page is server-rendered and not blocked for AI or search crawlers." },
+      { "title": "Rank in mainstream search", "detail": "It ranks in the indexes Meta AI draws on (generally Google and Bing) for the query." },
+      { "title": "A user asks Meta AI", "detail": "Someone asks a question in WhatsApp, Instagram, Facebook, or meta.ai that needs fresh info." },
+      { "title": "Live web search fires", "detail": "Meta AI retrieves and reads the top-ranking pages for that query." },
+      { "title": "Model extracts an answer", "detail": "It lifts the cleanest self-contained passage that resolves the question." },
+      { "title": "You get cited", "detail": "Your page appears as a linked source beside Meta AI's answer." }
+    ]
+  },
+  "comparisonTable": {
+    "caption": "Where to focus for Meta AI vs Google search",
+    "headers": ["Factor", "Rank in Meta AI", "Rank in Google search"],
+    "rows": [
+      ["What gets you found", "Ranking in the search indexes Meta AI queries", "Ranking in Google's own index"],
+      ["Where it appears", "Inside WhatsApp, Instagram, Facebook, meta.ai", "The Google results page"],
+      ["Content format that wins", "Answer-first, FAQ, standalone passages", "Depth, intent-match, internal links"],
+      ["Structured data payoff", "High — models parse FAQ/Article schema", "Medium — rich-result eligibility"],
+      ["Can you pay to appear?", "No paid placement in cited answers (2026)", "Yes, via Google Ads (separate from organic)"],
+      ["Brand mentions", "Strong signal for trust and recall", "Indirect, via links and authority"],
+      ["Traffic measurement", "Hard — little referrer data", "Clear — Search Console and analytics"]
+    ]
+  },
+  "peopleAlsoAsk": [
+    {
+      "q": "Does Meta AI cite sources?",
+      "a": "Yes, generally. When Meta AI answers a question using live web results, it typically shows linked source citations beneath or alongside the response, much like other AI search assistants. For questions it answers purely from the Llama model's training data, no live citation appears — so being cited requires content Meta AI actually retrieves during a web search."
+    },
+    {
+      "q": "How does Meta AI find information?",
+      "a": "Meta AI finds information two ways. For fresh or specific queries it runs a live web search — as of 2026 generally powered by partner search indexes such as Google and Bing — and summarizes the top results with citations. For broad evergreen questions it draws on the underlying Llama model's training data, where your visibility depends on how widely your brand was discussed across the web."
+    },
+    {
+      "q": "What is Meta AI?",
+      "a": "Meta AI is Meta's Llama-based assistant, built into WhatsApp, Instagram, Facebook, and Messenger, plus the standalone meta.ai website. It answers questions, generates images, and — when a query needs current information — searches the live web and cites sources. Because it reaches billions of users inside apps they already open daily, appearing in its answers is a fast-growing distribution channel."
+    },
+    {
+      "q": "How do I get my site into Meta AI answers?",
+      "a": "Get your site into Meta AI answers by treating it as generative engine optimization: allow AI and search crawlers to reach your pages, publish answer-first content that states a clear response in the opening sentences, and earn the authority signals — brand mentions, citations, visible expertise — that make a model trust you. Rank for the query in mainstream search first, since Meta AI's live results draw on those indexes."
+    },
+    {
+      "q": "Is Meta AI different from ChatGPT?",
+      "a": "Yes and no. Both are large-language-model assistants that can search the web and cite sources, so the ranking playbook is largely the same. The differences are the model (Meta uses its own Llama family), the distribution (Meta AI lives inside WhatsApp, Instagram, and Facebook), and the search backend each relies on. Optimize once for answer-first, crawlable, authoritative content and you improve on both."
+    }
+  ],
+  "faqs": [
+    {
+      "q": "Does Meta AI have ads in its answers?",
+      "a": "As of 2026, Meta AI answers generally do not carry paid placements inside the cited results, so you cannot buy your way into them. Meta has signaled ads may reach its AI products over time, but organic visibility today depends on ranking and quotable content, not spend."
+    },
+    {
+      "q": "Do I need a Facebook or Instagram page to rank in Meta AI?",
+      "a": "No. Meta AI cites public web pages it retrieves through search, not only Meta-owned profiles, so any crawlable site can be surfaced. A consistent social presence can reinforce brand recognition, but your website's crawlability, answer-first structure, and authority are what decide whether Meta AI quotes you."
+    },
+    {
+      "q": "Can I track traffic from Meta AI?",
+      "a": "Tracking Meta AI traffic is difficult because in-app assistants often send little or no referrer data. Watch for referrals from meta.ai in analytics, monitor brand-search lift, and use server logs to spot crawler activity. Treat AI citations as brand exposure that influences demand rather than a clean click source."
+    }
+  ],
+  "relatedKeywords": [
+    "rank in meta ai",
+    "meta ai search",
+    "meta ai citations",
+    "optimize for meta ai",
+    "llama seo"
+  ],
+  "internalLinks": [
+    {
+      "href": "/",
+      "anchor": "Run a free SEO + GEO audit"
+    },
+    {
+      "href": "/blog/how-to-do-ai-search-optimization",
+      "anchor": "How to do AI search optimization"
+    },
+    {
+      "href": "/blog/what-is-generative-engine-optimization",
+      "anchor": "What is generative engine optimization"
+    },
+    {
+      "href": "/blog/how-to-rank-in-chatgpt",
+      "anchor": "How to rank in ChatGPT"
+    },
+    {
+      "href": "/blog/what-are-ai-citations",
+      "anchor": "What are AI citations"
+    },
+    {
+      "href": "/blog/how-to-block-ai-crawlers",
+      "anchor": "How to block AI crawlers"
+    }
+  ],
+  "images": []
+}

@@ -1,0 +1,128 @@
+{
+  "slug": "what-is-page-authority",
+  "title": "What Is Page Authority? (vs Domain Authority)",
+  "date": "2026-07-13",
+  "updatedAt": "2026-07-13",
+  "tag": "SEO",
+  "cluster": "seo-basics",
+  "keyword": "what is page authority",
+  "secondaryKeywords": ["page authority vs domain authority", "good page authority score", "how to increase page authority", "Moz page authority"],
+  "readTime": 9,
+  "excerpt": "Page Authority is Moz's 1-100 score predicting how well one page can rank. Here is what it means, what a good score is, and how to raise it.",
+  "description": "What is page authority? Moz's 1-100 score predicting a single page's ranking strength. Learn how it differs from domain authority and how to improve it.",
+  "tldr": "Page Authority is a 1-100 score, created by the SEO tool Moz, that predicts how well a single page can rank in Google. It is driven mainly by the quality and quantity of links pointing to that page. It is a third-party estimate, not a Google metric, and higher is better relative to your competitors.",
+  "status": "published",
+  "sections": [
+    {
+      "heading": "What is page authority, in plain terms",
+      "body": [
+        "What is page authority? Page Authority (PA) is a 1-to-100 score, invented by the SEO software company **Moz**, that predicts how well a single web page is likely to rank in Google search results. A higher score means a stronger page. It is a relative, comparative metric: a PA of 45 is meaningless on its own but tells you a lot when you line it up against the pages you are competing with for a keyword.",
+        "The most important thing to understand up front is that Page Authority is **not a Google metric**. Google does not publish it, use it, or care about it. Moz built PA by training a machine-learning model on many known ranking signals — chiefly the link profile of the page — to approximate ranking strength. Other tools sell their own versions of the same idea under different names: Ahrefs calls its page-level score **URL Rating (UR)**, and Semrust and Semrush use metrics like **Authority Score**. They are all third-party estimates, and they will disagree with each other.",
+        "Page Authority is best treated as a thermometer, not a thermostat. It reports a temperature; it does not set one. You cannot raise the score directly, and chasing the number itself is a trap. What you can do is improve the underlying things the score measures — mostly links to that specific page — and watch PA rise as a side effect. Think of it as a quick, directional read on how much ranking power a URL has accumulated.",
+        "> Page Authority is a prediction of ranking ability, not a ranking factor. Improving the score is a symptom of doing good SEO, never the goal itself."
+      ]
+    },
+    {
+      "heading": "Page authority vs domain authority",
+      "body": [
+        "The single most common confusion is Page Authority vs Domain Authority, and the difference is simple: **Page Authority scores one URL; Domain Authority scores the whole website.** A single blog post has its own PA, but every page on the same site shares one Domain Authority (DA) — the site-wide equivalent. A brand-new article on a powerful site inherits a strong DA but starts with a weak PA until it earns its own links.",
+        "That distinction matters because it changes what you work on. If your DA is low, the whole site lacks authority and you need site-wide link building and time. If your DA is healthy but one important page has a low PA, the fix is targeted: get more links — external and internal — pointing at that specific page. Here is how the two metrics line up:",
+        "[[table]]",
+        "In practice you read them together. A page with high PA on a high-DA site is very hard to outrank. A high-PA page on a weak domain can still punch above its weight for a specific query. And a low-PA page on a strong domain is your biggest opportunity: the domain's strength means a handful of good links to that URL can move it quickly. For the site-wide side of the equation, read [what is domain authority](/blog/what-is-domain-authority)."
+      ]
+    },
+    {
+      "heading": "What drives page authority, and what is a good score",
+      "body": [
+        "Page Authority is driven overwhelmingly by **links to that specific page**. The model weighs both external backlinks (other websites linking to the URL) and the quantity and quality of those links far more heavily than anything on the page itself. A page with 30 relevant links from trusted sites will out-score a longer, better-written page with two. This is why link building sits at the center of moving PA — start with [how to get backlinks for free](/blog/how-to-get-backlinks-for-free).",
+        "The second big driver is **internal linking**. Links from other pages on your own site pass authority to a target URL, which is why orphaned pages — pages nothing links to — tend to have the lowest scores. A deliberate internal-linking structure funnels authority from your strongest pages to the ones you want to rank, and it is the fastest lever you fully control. See [what is internal linking](/blog/what-is-internal-linking) for the method. Not every link counts equally, though — a `rel=\"nofollow\"` link passes less signal, so understanding [nofollow vs dofollow links](/blog/nofollow-vs-dofollow-links) helps you judge which links actually move the needle.",
+        "So what is a good page authority score? Because PA is **logarithmic**, the scale is not linear — climbing from 20 to 30 is far easier than climbing from 70 to 80, and the very top scores are reserved for pages like the Wikipedia homepage. Use these rough bands as a guide, always compared against the pages ranking for your target keyword:",
+        "- **1-20** — new or lightly-linked pages; normal for fresh content.",
+        "- **20-40** — an established page with some links; competitive for long-tail keywords.",
+        "- **40-60** — a strong page that can compete for moderately competitive terms.",
+        "- **60+** — a well-linked page on an authoritative site; hard to outrank.",
+        "The honest answer to \"what is a good score\" is: **higher than the pages you are trying to beat.** If the top results for your keyword average a PA of 35, you need to get into that range, not chase an arbitrary 60."
+      ]
+    },
+    {
+      "heading": "How to improve page authority",
+      "body": [
+        "You improve Page Authority by improving the things it measures — you cannot edit the number directly. The work falls into a short, repeatable list, in rough order of impact:",
+        "- **Earn quality backlinks to the page.** A few links from relevant, trusted sites move PA more than dozens of low-quality ones. Create something genuinely link-worthy — original data, a tool, a definitive guide — then promote it.",
+        "- **Strengthen internal links to the URL.** Add contextual links from your most authoritative existing pages, using descriptive anchor text, to pass authority to the target.",
+        "- **Fix orphaned and weakly-linked pages.** Every important page should be reachable in a few clicks and linked from related content.",
+        "- **Improve the page so it earns links naturally.** Better content is what makes other sites willing to link — depth, accuracy, and a clear answer-first structure all help. See [how to improve website ranking on Google](/blog/how-to-improve-website-ranking-on-google).",
+        "- **Be patient.** PA updates on Moz's crawl schedule, and links take time to be discovered and counted. Do not expect same-week movement.",
+        "One caution: because PA is a third-party score, do not optimize for the number at the expense of the reader. Buying links or spamming directories can inflate a score briefly while doing real damage to how Google actually treats the page. The durable play is to build links the honest way and treat any rise in PA as confirmation you are on the right track.",
+        "Finally, remember that on-page factors still decide whether that hard-won link authority converts into rankings. A page can have a great PA and still underperform if its title, headings, and answer-first structure are weak, or if AI crawlers cannot read it. You can [run a free SEO + GEO audit](/) on any URL to check those on-page and GEO signals in one pass — a useful companion to a link metric, since PA tells you how strong a page is while an audit tells you whether the page is set up to use that strength."
+      ]
+    }
+  ],
+  "comparisonTable": {
+    "caption": "Page Authority vs Domain Authority at a glance",
+    "headers": ["Aspect", "Page Authority (PA)", "Domain Authority (DA)"],
+    "rows": [
+      ["What it scores", "A single page / URL", "The entire website"],
+      ["Scale", "1-100, logarithmic", "1-100, logarithmic"],
+      ["Made by", "Moz (third party)", "Moz (third party)"],
+      ["Main driver", "Links to that specific page", "Links to the whole domain"],
+      ["Varies per page?", "Yes — every page differs", "No — same across the site"],
+      ["Best use", "Compare competing pages for a keyword", "Compare whole sites"],
+      ["A Google metric?", "No", "No"]
+    ]
+  },
+  "peopleAlsoAsk": [
+    {
+      "q": "What is the difference between page authority and domain authority?",
+      "a": "Page Authority scores a single page's ranking strength, while Domain Authority scores the entire website. Every page has its own PA, but the whole site shares one DA. A new post on a strong site inherits high DA but starts with low PA until it earns its own links. Both are Moz's 1-100 metrics, not Google's."
+    },
+    {
+      "q": "What is a good page authority score?",
+      "a": "A good Page Authority score is one higher than the pages you are competing against for a keyword — there is no universal number. Because the scale is logarithmic, 20-40 is competitive for long-tail terms, 40-60 is strong, and 60+ is hard to outrank. Always compare your PA to the top-ranking results rather than chasing an arbitrary target."
+    },
+    {
+      "q": "How do I increase page authority?",
+      "a": "Increase Page Authority by earning quality backlinks to that specific page, adding internal links from your strongest existing pages, and fixing orphaned URLs. Because PA is a prediction based on links, you cannot edit the number directly — you improve what it measures. A few links from trusted, relevant sites move it more than dozens of low-quality ones, and changes take weeks to appear."
+    },
+    {
+      "q": "Is page authority a Google ranking factor?",
+      "a": "No. Page Authority is not a Google ranking factor and Google does not use it. It is a third-party score built by Moz that predicts ranking ability by modeling known signals, mainly a page's links. Google has confirmed it uses no single \"authority score\" like this. Treat PA as a useful directional estimate, not something Google measures."
+    },
+    {
+      "q": "How is page authority calculated?",
+      "a": "Moz calculates Page Authority with a machine-learning model trained to predict Google rankings, weighting a page's link profile — the quantity and quality of links pointing to that URL — most heavily. The output is normalized onto a logarithmic 1-100 scale, which is why gains near the top are far harder than gains near the bottom. The exact formula is proprietary and updates as Moz recalibrates."
+    }
+  ],
+  "faqs": [
+    {
+      "q": "Does page authority update automatically?",
+      "a": "Yes. Moz recalculates Page Authority on its own crawl schedule, so scores refresh periodically as new links are discovered. Because updates lag real changes by weeks, a page you improved today may not show a higher PA for a while. Do not treat short-term dips as meaningful."
+    },
+    {
+      "q": "Can two pages on the same site have different page authority?",
+      "a": "Absolutely. Page Authority is per-URL, so every page on a site can have a different score depending on its own links. A homepage usually has the highest PA because most internal and external links point to it, while a buried, orphaned page can have a very low score on the same domain."
+    },
+    {
+      "q": "Should I use page authority or Ahrefs URL Rating?",
+      "a": "Either works — both estimate a single page's link strength and both are third-party approximations, so they will disagree. Page Authority comes from Moz, URL Rating from Ahrefs. Pick one tool and stay consistent so your comparisons are apples-to-apples, rather than mixing scores from different models."
+    }
+  ],
+  "relatedKeywords": [
+    "page authority",
+    "domain authority",
+    "link equity",
+    "authority score",
+    "pagerank",
+    "Moz page authority",
+    "URL rating"
+  ],
+  "internalLinks": [
+    { "href": "/", "anchor": "run a free SEO + GEO audit" },
+    { "href": "/blog/what-is-domain-authority", "anchor": "What is domain authority" },
+    { "href": "/blog/how-to-get-backlinks-for-free", "anchor": "How to get backlinks for free" },
+    { "href": "/blog/what-is-internal-linking", "anchor": "What is internal linking" },
+    { "href": "/blog/nofollow-vs-dofollow-links", "anchor": "Nofollow vs dofollow links" },
+    { "href": "/blog/how-to-improve-website-ranking-on-google", "anchor": "How to improve website ranking" }
+  ],
+  "images": []
+}

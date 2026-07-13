@@ -1,0 +1,132 @@
+{
+  "slug": "what-is-a-noindex-tag",
+  "title": "What Is a Noindex Tag? (And When to Use It)",
+  "date": "2026-07-13",
+  "updatedAt": "2026-07-13",
+  "tag": "Technical SEO",
+  "cluster": "technical-seo",
+  "keyword": "what is a noindex tag",
+  "secondaryKeywords": ["noindex meta tag", "noindex vs disallow", "X-Robots-Tag", "robots meta tag", "noindex nofollow"],
+  "readTime": 9,
+  "excerpt": "A noindex tag tells search engines not to index a page so it never appears in results. Here is how to add one, when to use it, and why it is not the same as a robots.txt disallow.",
+  "description": "What is a noindex tag? A meta robots directive that tells search engines not to index a page. Learn how to add it, noindex vs robots.txt disallow, and when to use each.",
+  "tldr": "A noindex tag is a directive — either a meta robots tag in the HTML head or an X-Robots-Tag HTTP header — that tells search engines not to include a page in their index, so it never shows in search results. Google must be able to crawl the page to see the tag, which is why noindex differs from a robots.txt disallow.",
+  "status": "published",
+  "sections": [
+    {
+      "heading": "What is a noindex tag?",
+      "body": [
+        "The short answer to what is a noindex tag is this: it is a directive that tells search engines not to include a specific page in their index, meaning the page will not appear in search results. It is delivered one of two ways: as a **meta robots tag** in the `<head>` of the HTML, or as an **X-Robots-Tag** in the HTTP response header. Both say the same thing to a crawler — you may read this page, but do not list it in search results.",
+        "The most common form is a single line in the page head:",
+        "- `<meta name=\"robots\" content=\"noindex\">`",
+        "That `robots` value targets all search engines. To address one crawler specifically, you swap in its name — for example `<meta name=\"googlebot\" content=\"noindex\">` speaks only to Google. The directive is respected by the major search engines, so once Googlebot crawls a page carrying it, the page is dropped from (or kept out of) the index.",
+        "The critical detail — and the source of most noindex mistakes — is that **a search engine must be able to crawl the page to see the tag**. A noindex directive lives inside the page, so if the crawler never fetches the page, it never learns you wanted it hidden. That single fact explains the difference between noindex and a robots.txt disallow, which we cover below."
+      ]
+    },
+    {
+      "heading": "How to add a noindex tag",
+      "body": [
+        "There are two supported ways to apply noindex, and which one you choose depends on the file type. Here is how to add each:",
+        "- **Meta robots tag (HTML pages).** Place this inside the `<head>` section: `<meta name=\"robots\" content=\"noindex\">`. Most CMS platforms expose this without touching code — WordPress with Yoast or Rank Math has a per-page \"noindex\" toggle, and many site builders offer a \"hide from search engines\" switch that writes the same tag.",
+        "- **X-Robots-Tag (any file, including non-HTML).** Send the directive as an HTTP header: `X-Robots-Tag: noindex`. This is the only way to noindex non-HTML resources like PDFs, images, or other documents that have no HTML head to hold a meta tag. You configure it in your server config (Apache `.htaccess`, Nginx `add_header`) or at your CDN.",
+        "After adding the tag, **verify it is actually being served**. View the page source and confirm the meta tag is present in the raw HTML — not injected only by JavaScript after load, which some crawlers may miss. For header-based tags, inspect the HTTP response. Google Search Console's URL Inspection tool will also report whether a page is marked noindex and why it is excluded.",
+        "> A noindex tag only works if the crawler can reach the page. Never combine it with a robots.txt block on the same URL — that stops the crawl before the tag can be read. More on that trap next.",
+        "The fastest way to catch a misconfigured or missing directive across your site is to [run a free SEO + GEO audit](/) — it checks each page's indexability, flags pages that are accidentally noindexed, and confirms search and AI crawlers can reach the content you actually want ranked."
+      ]
+    },
+    {
+      "heading": "Noindex vs. robots.txt disallow vs. canonical",
+      "body": [
+        "The single most important distinction in this topic is **noindex vs. robots.txt disallow**, because people constantly reach for the wrong one. They solve different problems, and using them together often backfires.",
+        "**Noindex controls indexing. Robots.txt disallow controls crawling.** A noindex tag lets the crawler fetch the page and instructs it not to list the page in results. A `Disallow` line in [robots.txt](/blog/what-is-robots-txt) does the opposite — it tells the crawler not to fetch the page at all. The trap is this: **if you disallow a URL in robots.txt, Google may never crawl it, which means it may never see your noindex tag.** A disallowed page with inbound links can still appear in search as a bare, description-less URL, because Google knows the page exists but is forbidden from reading its noindex instruction.",
+        "A canonical tag is a third, distinct tool. It does not hide a page — it consolidates duplicate or near-duplicate pages by naming the preferred version, letting Google index one URL and fold the ranking signals of the variants into it. Use a [canonical tag](/blog/what-is-a-canonical-tag) for duplicates you still want indexed under one URL; use noindex for pages you want fully out of results.",
+        "Here is how the three compare:",
+        "[[table]]",
+        "The practical rule: **to keep a page out of Google, use noindex and make sure the page stays crawlable.** To manage duplicate content, use canonical. Use robots.txt disallow to save [crawl budget](/blog/what-is-crawl-budget) on low-value URLs you also do not need indexed — but never as your primary tool for hiding a page from search, and never on a page you have also noindexed. If a page you want out of Google is still showing up, [why is my page not indexed](/blog/why-is-my-page-not-indexed) works through the reverse diagnosis too."
+      ]
+    },
+    {
+      "heading": "When to use noindex (and when not to)",
+      "body": [
+        "Use noindex on pages that need to exist for users but add no value in search results — pages that would only dilute your site's quality or create duplication if indexed. Good candidates include:",
+        "- **Thank-you and confirmation pages** users reach only after an action.",
+        "- **Internal search results pages**, which generate near-infinite low-value URLs.",
+        "- **Thin tag or filter archives** that duplicate your main content, a common [duplicate content](/blog/how-to-fix-duplicate-content) source.",
+        "- **Staging, login, and admin pages** that should never surface publicly.",
+        "- **Gated or paginated utility pages** with no standalone search value.",
+        "Just as important is knowing when *not* to noindex. **Never noindex a page you want to rank**, and be especially careful with site-wide templates — accidentally applying noindex to a whole section or, worst case, the entire site is one of the most damaging technical SEO mistakes, and it can quietly wipe out organic traffic. After any template change, spot-check that important pages are still indexable.",
+        "One nuance worth understanding is **noindex, nofollow** vs. **noindex, follow**. Adding `nofollow` (`<meta name=\"robots\" content=\"noindex, nofollow\">`) tells Google not to follow the links on the page, so link equity stops there. In most cases you want `noindex, follow` — keep the page out of the index but let Google follow its links so those linked pages still get discovered and credited. Reserve `noindex, nofollow` for pages whose outbound links you genuinely do not want crawled, like login or thank-you pages. For the bigger picture of how these directives fit together, see [what is technical SEO](/blog/what-is-technical-seo)."
+      ]
+    },
+    {
+      "heading": "How noindex behaves over time — and a common gotcha",
+      "body": [
+        "Noindex does not remove a page instantly. When you add the tag to a page already in Google's index, the page stays in results until Googlebot re-crawls it and processes the directive. For a low-traffic page that can take days or weeks. To speed removal of an already-indexed page, request a re-crawl via Google Search Console's URL Inspection tool, and for urgent cases use the Removals tool for a temporary hide while the noindex takes permanent effect.",
+        "The gotcha that trips up even experienced SEOs is the **noindex-plus-disallow deadlock**. Say a page is indexed, you add `noindex` to remove it, and — trying to be thorough — you also `Disallow` it in robots.txt. Now Google cannot crawl the page, so it cannot see the new noindex tag, so the page can linger in the index indefinitely as a URL-only listing. The fix is counterintuitive: **remove the robots.txt block**, let Google crawl the page, read the noindex, and drop it. Only after it is deindexed can you disallow it again if you want to.",
+        "There is also a lesser-known behavior worth noting: Google has stated that if a page is left noindexed for a very long time, it may eventually treat the noindex as a signal to stop following the page's links as well. In practice this rarely bites, but it is a reason not to leave critical hub pages noindexed for months. When in doubt, verify a specific URL's status directly in Search Console rather than assuming — and re-audit periodically so an accidental noindex never goes unnoticed."
+      ]
+    }
+  ],
+  "comparisonTable": {
+    "caption": "Noindex vs. robots.txt disallow vs. canonical: what each one actually does",
+    "headers": ["Directive", "What it controls", "Page appears in results?", "Best use"],
+    "rows": [
+      ["noindex tag", "Indexing (page is crawled, not listed)", "No — kept out of the index", "Hide a specific page from search"],
+      ["robots.txt disallow", "Crawling (page is not fetched)", "Sometimes — as a URL-only listing", "Save crawl budget on low-value URLs"],
+      ["canonical tag", "Which duplicate URL is indexed", "Yes — the preferred version", "Consolidate duplicate content"],
+      ["noindex + disallow", "Blocks crawl before tag is seen", "Yes — noindex never processed", "Avoid — it deadlocks removal"]
+    ]
+  },
+  "peopleAlsoAsk": [
+    {
+      "q": "How do I add a noindex tag?",
+      "a": "Add a noindex tag one of two ways. For HTML pages, place `<meta name=\"robots\" content=\"noindex\">` inside the page's <head> — most CMS platforms and SEO plugins like Yoast expose a per-page toggle that writes this for you. For non-HTML files like PDFs, send the directive as an HTTP header instead: `X-Robots-Tag: noindex`. After adding it, verify the tag appears in the raw page source or response header."
+    },
+    {
+      "q": "What is the difference between noindex and robots.txt disallow?",
+      "a": "Noindex controls indexing; robots.txt disallow controls crawling. A noindex tag lets Google crawl the page and tells it not to list the page in results. A disallow tells Google not to crawl the page at all — which means it may never see a noindex tag on that page. A disallowed page can still appear as a bare URL, so noindex is the correct tool for hiding a page from search."
+    },
+    {
+      "q": "When should I use noindex?",
+      "a": "Use noindex on pages that need to exist for users but add no search value: thank-you and confirmation pages, internal search results, thin tag or filter archives, and staging or admin pages. It keeps them out of results without deleting them. Never noindex a page you want to rank, and double-check site-wide templates so you do not accidentally deindex whole sections."
+    },
+    {
+      "q": "Does noindex remove a page from Google?",
+      "a": "Yes, but not instantly. Google removes a noindexed page only after it re-crawls the page and processes the directive, which can take days or weeks for low-traffic URLs. To speed it up, request a re-crawl via Search Console's URL Inspection tool. Crucially, the page must remain crawlable — if it is also blocked in robots.txt, Google may never see the noindex and the page can linger."
+    },
+    {
+      "q": "What is noindex nofollow?",
+      "a": "Noindex, nofollow (`<meta name=\"robots\" content=\"noindex, nofollow\">`) tells Google both to keep the page out of the index and not to follow its links, so link equity stops there. In most cases you instead want noindex, follow, which hides the page but still lets Google crawl and credit its outbound links. Reserve noindex, nofollow for pages like login or thank-you pages."
+    }
+  ],
+  "faqs": [
+    {
+      "q": "Can I noindex a page but still let Google follow its links?",
+      "a": "Yes. Use `<meta name=\"robots\" content=\"noindex, follow\">`. This keeps the page out of search results while letting Google follow and credit its outbound links, so linked pages are still discovered. It is the default choice for most utility pages you want hidden but that link to content you want crawled."
+    },
+    {
+      "q": "Does noindex affect my rankings on other pages?",
+      "a": "Not directly. Noindexing a low-value page can actually help your site overall by removing thin or duplicate URLs that dilute quality signals. The risk is only from mistakes — accidentally noindexing important pages or entire templates, which removes them from search and can sharply cut organic traffic."
+    },
+    {
+      "q": "How do I check if a page is noindexed?",
+      "a": "View the page's raw source and look for a robots meta tag containing noindex, or inspect the HTTP response for an X-Robots-Tag header. Google Search Console's URL Inspection tool also reports whether a URL is excluded by a noindex directive, making it the most reliable place to confirm a page's real indexing status."
+    }
+  ],
+  "relatedKeywords": [
+    "noindex tag",
+    "noindex meta tag",
+    "noindex vs disallow",
+    "remove page from google",
+    "robots meta tag"
+  ],
+  "internalLinks": [
+    { "href": "/", "anchor": "run a free SEO + GEO audit" },
+    { "href": "/blog/what-is-robots-txt", "anchor": "What is robots.txt" },
+    { "href": "/blog/why-is-my-page-not-indexed", "anchor": "Why is my page not indexed" },
+    { "href": "/blog/what-is-a-canonical-tag", "anchor": "What is a canonical tag" },
+    { "href": "/blog/what-is-crawl-budget", "anchor": "What is crawl budget" },
+    { "href": "/blog/how-to-fix-duplicate-content", "anchor": "How to fix duplicate content" }
+  ],
+  "images": []
+}

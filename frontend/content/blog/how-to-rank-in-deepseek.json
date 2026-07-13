@@ -1,0 +1,158 @@
+{
+  "slug": "how-to-rank-in-deepseek",
+  "title": "How to Rank in DeepSeek (AI Search)",
+  "date": "2026-07-13",
+  "updatedAt": "2026-07-13",
+  "tag": "AI Search",
+  "cluster": "ai-search",
+  "keyword": "how to rank in DeepSeek",
+  "secondaryKeywords": ["DeepSeek citations", "optimize for DeepSeek", "DeepSeek SEO", "get cited by DeepSeek"],
+  "readTime": 9,
+  "excerpt": "DeepSeek is a newer AI assistant that retrieves and cites live web pages when search is on — here is how to become one of the sources it quotes.",
+  "description": "Learn how to rank in DeepSeek, the newer AI search assistant that cites web sources: stay crawlable, write answer-first content, and earn authority in 2026.",
+  "tldr": "To rank in DeepSeek, apply the standard GEO playbook to a newer engine: when its search mode is on, DeepSeek retrieves live web pages and cites them, so keep your site crawlable by AI bots, lead each section with a self-contained answer a model can lift, and build the authority and mentions that make it choose you as a source.",
+  "status": "published",
+  "sections": [
+    {
+      "heading": "How to rank in DeepSeek: the short answer",
+      "body": [
+        "Figuring out **how to rank in DeepSeek** starts with one clarification: DeepSeek only cites web pages when its search mode is switched on. DeepSeek is an AI assistant from the Chinese lab of the same name — known for its open-weight R1 and V3 models — and with web search enabled it retrieves live pages and lists numbered citations beside its answer. Ranking means becoming one of those retrieved, quoted pages, which is a matter of being findable, being extractable, and being trusted.",
+        "There is no ad slot or paid placement inside DeepSeek's sourced answers as of 2026, so this is earned visibility, not bought. The three levers you control are the same ones behind every answer engine: (1) keeping AI and search crawlers able to reach your content, (2) writing passages a model can lift cleanly, and (3) accumulating the authority that makes DeepSeek pick you over a competitor. If you already perform in [ChatGPT](/blog/how-to-rank-in-chatgpt) or Grok, most of that work carries straight over.",
+        "The upside of a newer engine is less entrenched competition; the caveat is smaller reach than Google or the biggest assistants. This guide covers each lever, and you can [run a free SEO + GEO audit](/) on any URL to see which signals are already weak before you commit effort."
+      ]
+    },
+    {
+      "heading": "What DeepSeek is and how its search works",
+      "body": [
+        "DeepSeek is a conversational assistant available through its app and website, and it answers in two distinct modes. With search off, it responds from what the model learned during training — no live citations. With search on, it queries the live web, pulls the most relevant pages, and summarizes them with numbered sources you can click to verify. Knowing which mode a query uses is central to how to rank in DeepSeek for it.",
+        "Each mode rewards different work. **Search mode** favors pages that already rank in mainstream search for the query and that answer plainly enough to quote — retrieval leans on the web index, so your ordinary search visibility feeds it. **Model-only answers** reflect how prominently your brand and claims were represented in the training data, which you influence through durable, widespread mentions rather than any on-page tweak. Both are forms of earning [AI citations](/blog/what-are-ai-citations).",
+        "Here is the route a page takes to be cited by DeepSeek, and where it can drop out along the way:",
+        "[[flowchart]]",
+        "The recurring theme is that mainstream search ranking sits upstream of AI-search visibility. A page nobody can find in ordinary search is unlikely to be retrieved by DeepSeek's search step — which is exactly why classic SEO and GEO reinforce each other rather than compete, as we cover in [GEO vs SEO](/blog/geo-vs-seo)."
+      ]
+    },
+    {
+      "heading": "Make sure DeepSeek can crawl and read your pages",
+      "body": [
+        "Retrieval only works on content that can be fetched and parsed, so crawlability is the non-negotiable first step. Many sites lose AI visibility not to weak content but to a blocked bot or a page that renders its text only after JavaScript executes. Close those gaps before anything else.",
+        "Work through these checks:",
+        "- **Review robots.txt** to confirm you are not disallowing AI or search crawlers on the pages you want retrieved. Crawler names shift over time, so revisit periodically; if you intend to exclude some, do it deliberately per [how to block AI crawlers](/blog/how-to-block-ai-crawlers).\n- **Serve text in the HTML**, not solely through client-side rendering, so a crawler receives the answer without executing scripts.\n- **Get the on-page fundamentals right** — a unique title, a genuine meta description, sensible headings, and no accidental `noindex` — since these feed the search ranking DeepSeek draws on.\n- **Add an [llms.txt file](/blog/how-to-write-an-llms-txt-file)** to signpost your key pages to AI systems; treat it as a helpful complement, never a guarantee.",
+        "The single highest-leverage action here is verifying robots.txt on your most important pages — one overly broad rule can remove you from AI answers everywhere at once. Our [free audit](/) reports blocked AI bots and missing metadata together so you can fix both in a single pass."
+      ]
+    },
+    {
+      "heading": "Write extractable, well-cited answers",
+      "body": [
+        "Once DeepSeek can read you, the deciding factor is whether it can extract a clean answer. Models quote the most self-contained passage that resolves the query, so content that front-loads its answer wins over content that meanders toward it. This extractability is the heart of [AI search optimization](/blog/how-to-do-ai-search-optimization).",
+        "Open each section with a direct, standalone statement and name the subject outright rather than relying on \"it\" or \"this\" — for example, \"DeepSeek cites sources when search mode is enabled\" instead of \"It shows them then.\" A sentence that holds up when read entirely on its own passes what practitioners call the Island Test, and that is the sentence a model reuses. Passages that only make sense in context are usually skipped, even on a page that ranks.",
+        "Practical habits that raise your hit rate:",
+        "- Place a **one- or two-sentence answer** right under each heading before any elaboration.\n- Start the article with a compact **summary** naming a specific fact, number, or entity.\n- Turn procedures into **numbered steps** and comparisons into **tight bullet lists**.\n- Include an **FAQ** whose questions mirror real searches and whose answers each stand alone.",
+        "> DeepSeek does not reward the longest page; it rewards the most liftable one. Make your best answer impossible to miss and easy to copy.",
+        "For how depth, structure, and internal links compound into durable AI visibility, see our [generative engine optimization](/blog/what-is-generative-engine-optimization) guide."
+      ]
+    },
+    {
+      "heading": "Build authority, then measure — DeepSeek vs Google",
+      "body": [
+        "Extractable content earns occasional citations; authority earns consistent ones. Mark up your pages with valid **Article** and **FAQPage** JSON-LD so machines read your author, dates, questions, and answers directly. Then strengthen **E-E-A-T** with named authors and real credentials, visible publish and update dates, and links to primary sources — the framework in [what E-E-A-T is](/blog/what-is-eeat-in-seo). Because models weigh how often a brand is cited across trustworthy sites, invest in original data, expert commentary, and a consistent brand entity that is easy to recognize.",
+        "The effort mix differs from classic search. This table shows where to concentrate for each surface:",
+        "[[table]]",
+        "On measurement, keep expectations realistic. DeepSeek, like most chat assistants, passes little referrer data, so clean attribution is rare. Look for deepseek.com referrals in analytics, track brand-search lift, and inspect server logs for its crawler — the workflow in [how to track AI search traffic](/blog/how-to-track-ai-search-traffic). Read citations as top-of-funnel brand exposure and judge progress over months. Because DeepSeek is newer, expect its share of your AI visibility to grow or shrink as the engine's reach shifts."
+      ]
+    }
+  ],
+  "flowchart": {
+    "title": "How a page becomes a DeepSeek citation",
+    "steps": [
+      { "title": "Publish & stay crawlable", "detail": "Your page returns text in the HTML and is not blocked for AI or search crawlers." },
+      { "title": "Rank in mainstream search", "detail": "It ranks for the query in the web index DeepSeek's search step draws on." },
+      { "title": "User enables search mode", "detail": "Someone asks DeepSeek a question with web search turned on." },
+      { "title": "DeepSeek retrieves pages", "detail": "It fetches and reads the most relevant results for that query." },
+      { "title": "Model lifts an answer", "detail": "It extracts the cleanest self-contained passage that resolves the question." },
+      { "title": "You get cited", "detail": "Your page appears as a numbered source next to DeepSeek's answer." }
+    ]
+  },
+  "comparisonTable": {
+    "caption": "Where to focus for DeepSeek vs Google search",
+    "headers": ["Factor", "Rank in DeepSeek", "Rank in Google search"],
+    "rows": [
+      ["Trigger for citation", "User has search mode enabled", "Any query on the results page"],
+      ["What surfaces you", "Ranking in the index DeepSeek retrieves from", "Ranking in Google's own index"],
+      ["Content format that wins", "Answer-first, FAQ, standalone passages", "Depth, intent-match, internal links"],
+      ["Structured data payoff", "High — models parse FAQ/Article schema", "Medium — rich-result eligibility"],
+      ["Reach in 2026", "Newer, smaller, growing", "Largest search audience"],
+      ["Can you pay to appear?", "No paid placement in cited answers", "Yes, via Google Ads (separate from organic)"],
+      ["Traffic measurement", "Hard — little referrer data", "Clear — Search Console and analytics"]
+    ]
+  },
+  "peopleAlsoAsk": [
+    {
+      "q": "Does DeepSeek cite sources?",
+      "a": "Yes, generally. When you enable DeepSeek's web-search mode, its assistant retrieves live pages and lists numbered source citations alongside the answer so you can verify claims. With search turned off it responds from the model's training data alone and shows no live citations — meaning a retrievable, well-ranked page is what earns you a spot in the sourced answers."
+    },
+    {
+      "q": "How does DeepSeek find information?",
+      "a": "DeepSeek finds information by combining its language model with an optional web-search step. When search is active it queries the live web, pulls the most relevant pages, and summarizes them with citations; when search is off it answers from what the model learned during training. Being surfaced therefore depends on ranking for the query and being easy to crawl and quote."
+    },
+    {
+      "q": "What is DeepSeek?",
+      "a": "DeepSeek is an AI assistant from the Chinese lab of the same name, known for its open-weight R1 and V3 models. Through its app and website it answers questions conversationally and, with search enabled, retrieves and cites live web results. It is a newer entrant than ChatGPT or Gemini but has grown quickly as a question-answering surface."
+    },
+    {
+      "q": "How do I get cited by DeepSeek?",
+      "a": "Get cited by DeepSeek by making your page easy to retrieve and easy to quote: keep AI and search crawlers unblocked, rank for the target query in mainstream search, and open each section with a self-contained answer a model can lift verbatim. Reinforce it with clear authorship and citations so the assistant treats your page as a trustworthy source worth surfacing."
+    },
+    {
+      "q": "Is DeepSeek like ChatGPT?",
+      "a": "DeepSeek is similar to ChatGPT in that both are conversational assistants that can search the web and cite sources, so the optimization approach overlaps heavily. The main differences are the company and models behind them and DeepSeek's smaller, newer reach. If your content already performs in ChatGPT or Perplexity, the same answer-first, crawlable foundation carries over to DeepSeek."
+    }
+  ],
+  "faqs": [
+    {
+      "q": "Is DeepSeek worth optimizing for in 2026?",
+      "a": "DeepSeek is worth light optimization if it reaches your audience, but it is a smaller surface than Google, ChatGPT, or Gemini as of 2026. The good news is you do not optimize separately — the same answer-first, crawlable, authoritative content that wins those engines also earns DeepSeek citations at no extra cost."
+    },
+    {
+      "q": "Does DeepSeek respect robots.txt?",
+      "a": "Generally, well-behaved AI crawlers honor robots.txt directives, so blocking a bot there can keep your content out of that engine. Because crawler names and behavior change, do not rely on blocking alone for privacy. If you want DeepSeek and other assistants to cite you, confirm you are not disallowing AI or search user-agents."
+    },
+    {
+      "q": "Can I track DeepSeek referrals?",
+      "a": "Tracking DeepSeek referrals is hard because chat assistants pass little referrer data. Check analytics for visits from deepseek.com, watch for unexplained brand-search growth, and review server logs for its crawler. Like most AI search, treat citations as top-of-funnel brand exposure rather than a reliably attributable traffic source."
+    }
+  ],
+  "relatedKeywords": [
+    "rank in deepseek",
+    "deepseek search",
+    "deepseek citations",
+    "optimize for deepseek",
+    "deepseek seo"
+  ],
+  "internalLinks": [
+    {
+      "href": "/",
+      "anchor": "run a free SEO + GEO audit"
+    },
+    {
+      "href": "/blog/how-to-do-ai-search-optimization",
+      "anchor": "How to do AI search optimization"
+    },
+    {
+      "href": "/blog/what-is-generative-engine-optimization",
+      "anchor": "What is generative engine optimization"
+    },
+    {
+      "href": "/blog/how-to-rank-in-chatgpt",
+      "anchor": "How to rank in ChatGPT"
+    },
+    {
+      "href": "/blog/how-to-rank-in-grok",
+      "anchor": "How to rank in Grok"
+    },
+    {
+      "href": "/blog/what-are-ai-citations",
+      "anchor": "What are AI citations"
+    }
+  ],
+  "images": []
+}

@@ -1,0 +1,121 @@
+{
+  "slug": "what-is-a-content-gap-analysis",
+  "title": "What Is a Content Gap Analysis?",
+  "date": "2026-07-13",
+  "updatedAt": "2026-07-13",
+  "tag": "SEO",
+  "cluster": "content-links",
+  "keyword": "what is a content gap analysis",
+  "secondaryKeywords": ["keyword gap analysis", "competitor content analysis", "content gap analysis free", "how to find content gaps"],
+  "readTime": 9,
+  "excerpt": "A content gap analysis finds the topics and keywords competitors rank for but you don't, so you know exactly what to create next. Here is the full process.",
+  "description": "What is a content gap analysis? Finding topics and keywords competitors rank for that you don't, so you know what to create next. Here is how to do one free.",
+  "tldr": "A content gap analysis is the process of finding topics and keywords your competitors rank for but you do not, so you know exactly what content to create next. You compare your site's ranking pages against competitors', spot the missing subjects, review the search results for intent, and turn each gap into a prioritized content plan.",
+  "status": "published",
+  "sections": [
+    {
+      "heading": "What is a content gap analysis?",
+      "body": [
+        "What is a content gap analysis? A content gap analysis is the process of finding the topics, keywords, and questions your competitors rank for — but you do not — so you have a data-backed list of what to create next. Instead of guessing at blog ideas, you let the search results tell you where the demand and the missing coverage are, then fill those holes on purpose.",
+        "The word \"gap\" covers three related things. A **keyword gap** is a specific search term competitors rank for and you are absent from. A **topic gap** is a whole subject area you have not covered at all. And a **content-depth gap** is a topic you do cover but more thinly than the pages beating you. A good analysis surfaces all three, because each one implies a different action — write a new page, build a whole cluster, or improve an existing post.",
+        "Content gap analysis matters because it is the highest-signal way to plan content. The pages ranking on page one are proof of what Google rewards for a query; if three competitors all have a guide you lack, that is validated demand, not a hunch. It is also how you build [topical authority](/blog/what-is-topical-authority) — filling the gaps in a subject signals to search engines and AI answer engines that you cover the topic comprehensively.",
+        "> A content gap analysis turns \"what should we write about?\" from an opinion into a prioritized, evidence-based list."
+      ]
+    },
+    {
+      "heading": "How to do a content gap analysis, step by step",
+      "body": [
+        "You run a content gap analysis in five stages: identify your real competitors, pull the keywords they rank for, subtract the ones you already rank for, review the leftover keywords in the actual search results, then prioritize what to build. Here is the full process:",
+        "[[flowchart]]",
+        "**Start by finding your true SEO competitors — not just your business rivals.** Your competitors for search are whoever ranks on page one for the terms you want. Search a few of your core keywords and note which sites keep appearing; those are the ones worth analyzing, even if they are publishers or comparison sites rather than direct commercial competitors. The method is covered fully in [how to do SEO competitor analysis](/blog/how-to-do-seo-competitor-analysis).",
+        "**Next, gather the keywords each competitor ranks for and compare them against yours.** Paid tools like Ahrefs and Semrush have a dedicated \"Content Gap\" or \"Keyword Gap\" report that does the subtraction automatically: you enter your domain plus two or three competitors, and it lists terms they rank for that you do not. The output is your raw gap list.",
+        "**Then review the promising keywords in Google itself.** A keyword in the gap list is only worth pursuing if you understand the intent behind it and can realistically compete. Search each candidate, study the top results, and confirm what format wins — a guide, a comparison, a tool — before committing. This SERP-review step, grounded in [search intent](/blog/what-is-search-intent), stops you from writing the wrong kind of page for a keyword."
+      ]
+    },
+    {
+      "heading": "How to do a content gap analysis for free",
+      "body": [
+        "You do not need paid software to run a useful content gap analysis — the free version trades automation for a little manual work. Here are the methods, from fastest to most thorough:",
+        "- **Google Search Console gap-spotting.** Open the Performance report and look at the Queries tab. Find searches where you get impressions but sit on page two or three, and keywords you rank for on the wrong page. These are gaps in your own coverage you can fix immediately.",
+        "- **Manual SERP mapping.** Take your main topic, search it, and open the top three results. Note every subheading and question they cover that you do not. Repeat for your five most important keywords and you will have a concrete list of missing subtopics — a poor-man's competitor analysis. Pair it with [free keyword research](/blog/how-to-do-keyword-research-for-free) to size the demand.",
+        "- **\"People Also Ask\" and autocomplete mining.** The People Also Ask box and Google's autocomplete suggestions reveal real questions searchers have about your topic. Every question you cannot already answer with a page or section is a gap. `site:competitor.com topic` searches also show you exactly what a rival has published on a subject.",
+        "- **Free tiers of paid tools.** Ahrefs' free Webmaster Tools and the limited free searches in Semrush or Ubersuggest can surface some competitor keywords without a subscription — enough to seed a small analysis.",
+        "The free approach is slower but often sharper, because manually reading competitors' pages forces you to understand *why* they rank, not just *that* they rank. For a handful of priority topics, the manual SERP-mapping method alone will fill a quarter of content ideas."
+      ]
+    },
+    {
+      "heading": "Turning gaps into a content plan",
+      "body": [
+        "A list of gaps is not a plan — the payoff comes from prioritizing and shaping the gaps into content you will actually publish. Score each gap on three factors: **opportunity** (search demand for the keyword), **relevance** (how well it fits your site and audience), and **difficulty** (how strong the ranking pages are and whether you can realistically compete). A high-relevance, low-difficulty gap with steady demand is where you start.",
+        "Group the surviving gaps into clusters rather than treating them as isolated posts. If your analysis reveals ten missing keywords that all orbit one subject, that is a signal to build a pillar page plus supporting articles, which compounds into topical authority faster than ten scattered posts. Once you know what to write, [how to write a blog post that ranks](/blog/how-to-write-a-blog-post-that-ranks) covers turning each gap into a page that actually competes.",
+        "Do not overlook **depth gaps on pages you already have.** Often the fastest win is not a new article but improving an existing one that ranks on page two — adding the subheadings, questions, and examples that the page-one results include and you omitted. Refreshing an underperforming page frequently beats writing from scratch.",
+        "Finally, close the loop by checking that the pages you build are technically able to rank and be cited. After publishing a gap-filling article, [run a free SEO + GEO audit](/) on its URL to confirm the on-page basics are in place and that AI answer engines can read it — because a page that fills a real content gap still needs solid titles, structure, and answer-first passages to capture the traffic the gap represents. Treat content gap analysis as a recurring habit: rerun it every few months, because competitors publish constantly and new gaps open as fast as you close old ones."
+      ]
+    }
+  ],
+  "flowchart": {
+    "title": "The content gap analysis process",
+    "steps": [
+      { "title": "Find your true SEO competitors", "detail": "Search your core keywords and list the sites that keep ranking on page one, not just your business rivals." },
+      { "title": "Pull their ranking keywords", "detail": "Use a keyword-gap report or manual SERP mapping to collect the terms each competitor ranks for." },
+      { "title": "Subtract what you already rank for", "detail": "Remove keywords you already cover to leave the raw gap list of missing topics and terms." },
+      { "title": "Review gaps in the SERP", "detail": "Search each promising keyword, confirm intent and format, and judge whether you can realistically compete." },
+      { "title": "Prioritize and cluster", "detail": "Score gaps by opportunity, relevance, and difficulty, then group related ones into content clusters." },
+      { "title": "Create or refresh, then re-audit", "detail": "Write the new page or improve a thin one, then audit the URL and repeat the whole process quarterly." }
+    ]
+  },
+  "peopleAlsoAsk": [
+    {
+      "q": "How do I do a content gap analysis?",
+      "a": "Do a content gap analysis in five steps: identify the sites that actually rank for your target keywords, pull the keywords each ranks for, subtract the ones you already rank for, review the remaining keywords in Google to confirm intent and difficulty, then prioritize and cluster them into a content plan. Tools automate the keyword comparison, but manual SERP review is what makes the list usable."
+    },
+    {
+      "q": "What tools do I need for content gap analysis?",
+      "a": "You can use paid tools like Ahrefs or Semrush, which have dedicated Content Gap and Keyword Gap reports that compare domains automatically. But you do not need them: Google Search Console shows gaps in your own coverage, and manual SERP mapping plus People Also Ask mining does the job for free. The essential tool is Google itself, for reviewing intent."
+    },
+    {
+      "q": "What is a keyword gap?",
+      "a": "A keyword gap is a specific search term that one or more competitors rank for and you do not. It is the most granular type of content gap. A keyword gap report lists these terms by entering your domain alongside a few competitors, so you can see exactly which searches you are missing and how much demand each one has before deciding what to create."
+    },
+    {
+      "q": "Why is content gap analysis important?",
+      "a": "Content gap analysis is important because it replaces guesswork with evidence. The pages ranking on page one prove what Google rewards for a query, so a gap several competitors fill is validated demand rather than a hunch. Filling gaps systematically also builds topical authority, signaling to search engines and AI answer engines that you cover a subject comprehensively."
+    },
+    {
+      "q": "How often should I do a content gap analysis?",
+      "a": "Run a content gap analysis every three to six months, plus whenever you enter a new topic area. Competitors publish constantly and search demand shifts, so gaps you closed last quarter can reopen and new ones appear. A quarterly cadence keeps your content plan current without spending so much time analyzing that you never publish."
+    }
+  ],
+  "faqs": [
+    {
+      "q": "Is a content gap analysis only for blog content?",
+      "a": "No. While it is most common for blog and informational content, the same method applies to product pages, comparison pages, landing pages, and even FAQ sections. Any page type where competitors rank and you do not represents a gap worth evaluating against demand, relevance, and difficulty."
+    },
+    {
+      "q": "Can I do a content gap analysis without competitors' data?",
+      "a": "Yes. You can analyze the search results directly instead of a competitor's whole domain. Search each target keyword, read the top-ranking pages, and note every subtopic and question they cover that you do not. This SERP-based method needs no competitor keyword export and often produces sharper insight because you read the winning pages yourself."
+    },
+    {
+      "q": "What is the difference between a content gap and a content audit?",
+      "a": "A content gap analysis looks outward at what you are missing versus competitors and the SERP. A content audit looks inward at the pages you already have, assessing which to keep, update, merge, or remove. They complement each other: the audit finds thin pages to improve, the gap analysis finds new pages to create."
+    }
+  ],
+  "relatedKeywords": [
+    "content gap analysis",
+    "keyword gap",
+    "competitor content analysis",
+    "topic gaps",
+    "content strategy",
+    "content gap analysis free",
+    "how to find content gaps"
+  ],
+  "internalLinks": [
+    { "href": "/", "anchor": "run a free SEO + GEO audit" },
+    { "href": "/blog/how-to-do-seo-competitor-analysis", "anchor": "How to do SEO competitor analysis" },
+    { "href": "/blog/how-to-do-keyword-research-for-free", "anchor": "How to do keyword research for free" },
+    { "href": "/blog/what-is-topical-authority", "anchor": "What is topical authority" },
+    { "href": "/blog/how-to-write-a-blog-post-that-ranks", "anchor": "How to write a blog post that ranks" },
+    { "href": "/blog/what-is-search-intent", "anchor": "What is search intent" }
+  ],
+  "images": []
+}

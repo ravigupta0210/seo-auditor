@@ -1,0 +1,159 @@
+{
+  "slug": "what-is-a-rich-snippet",
+  "title": "What Is a Rich Snippet? (With Examples)",
+  "date": "2026-07-13",
+  "updatedAt": "2026-07-13",
+  "tag": "SEO",
+  "cluster": "seo-basics",
+  "keyword": "what is a rich snippet",
+  "secondaryKeywords": ["rich results", "structured data", "schema markup", "featured snippet", "rich snippet types"],
+  "readTime": 9,
+  "excerpt": "A rich snippet is a normal Google result enhanced with extra visual details like stars, prices, or FAQs — powered by structured data.",
+  "description": "What is a rich snippet? Learn how schema markup turns a plain Google result into a rich result with stars, prices, and FAQs — and how it lifts your CTR.",
+  "tldr": "A rich snippet is an ordinary Google search result enhanced with extra visual details — star ratings, prices, images, cook times, or FAQ dropdowns — pulled from structured data (schema markup) on your page. It is different from a featured snippet, which is a boxed answer at the top of results. Rich snippets make your listing bigger and more clickable, lifting click-through rate.",
+  "status": "published",
+  "sections": [
+    {
+      "heading": "What is a rich snippet? (definition and examples)",
+      "body": [
+        "This guide answers what is a rich snippet with real examples: a rich snippet is an **ordinary Google search result enhanced with extra visual details** — star ratings, prices, images, cook times, or a dropdown of FAQs — that a plain blue-link result does not show. Those extras are not typed in by hand; Google pulls them from **structured data** (schema markup) embedded in your page's code.",
+        "You have seen rich snippets whether or not you knew the name. A recipe result showing a photo, a 4.8-star rating, and a 35-minute cook time is a rich snippet. A product result showing a price, an \"In stock\" label, and review stars is a rich snippet. A support article with an expandable list of questions beneath it is a rich snippet. In each case the underlying page told Google, in machine-readable form, exactly what those numbers and labels mean.",
+        "Google's own name for this family of enhanced listings is **rich results**. \"Rich snippet\" is the older, widely used term for the same idea — a standard result dressed up with extra data. The important thing to remember is the cause and effect: no structured data, no rich snippet. Google will not invent stars or prices; it displays them only when your [schema markup](/blog/what-is-schema-markup) supplies them and passes validation.",
+        "> A rich snippet does not change your ranking position directly. It changes how your result *looks* at that position — bigger, more informative, and more clickable than the plain listings around it."
+      ]
+    },
+    {
+      "heading": "Rich snippet vs. featured snippet (they are not the same)",
+      "body": [
+        "This is the single most common point of confusion, so let's be precise: a **rich snippet** and a **featured snippet** are different things. A rich snippet is a normal organic result made richer with extra data from your schema. A [featured snippet](/blog/what-is-a-featured-snippet) is a separate box at the very top of the results — often called \"position zero\" — that quotes an answer pulled directly from a page to respond to a question immediately.",
+        "The differences that matter:",
+        "- **Position.** A rich snippet stays at your organic ranking position; a featured snippet sits above all the normal results in its own box.",
+        "- **What triggers it.** A rich snippet is earned with structured data you add to your code. A featured snippet is chosen by Google's algorithm from well-structured on-page content — you cannot mark up your way into one.",
+        "- **What it shows.** A rich snippet adds visual data (stars, price, image). A featured snippet extracts a paragraph, list, or table that answers a query.",
+        "- **How many.** Many results on a page can carry rich snippets at once; only one featured snippet appears per query.",
+        "In short, you *add schema* to pursue rich snippets and you *write clear, answer-first content* to win featured snippets. They can even stack — a page can hold a featured snippet while other results below show rich snippets. For how these compare with AI-era answer boxes, see [AI Overviews vs. featured snippets](/blog/ai-overviews-vs-featured-snippets) and the broader anatomy of results in [what is a SERP](/blog/what-is-a-serp)."
+      ]
+    },
+    {
+      "heading": "Types of rich snippets and the schema each needs",
+      "body": [
+        "Rich snippets come in many types, and each one is unlocked by a specific schema type. You cannot mix and match — a review-stars rich snippet needs review schema, a recipe rich snippet needs recipe schema, and so on. The table below maps the most common rich snippet types to what shows in the SERP and the structured data that earns it:",
+        "[[table]]",
+        "A few notes on this list. **Review stars** are the most sought-after rich snippet because those gold stars catch the eye and lift clicks, but Google restricts them to a defined set of content types and forbids self-serving reviews. **Product** rich snippets are essential for ecommerce and combine price, availability, and ratings in one listing. **FAQ** rich snippets, added with FAQPage schema and covered in [how to add FAQ schema](/blog/how-to-add-faq-schema), once appeared widely; since 2023 Google has limited their display to authoritative government and health sites — but the markup still helps AI engines and remains valid to include.",
+        "**Breadcrumb**, **event**, and **sitelinks search box** rich snippets are easy wins many sites overlook. Breadcrumbs replace the raw URL with a readable navigation path, events surface dates and locations, and the sitelinks search box adds a search field right in your result. Pick the types that match the content you actually publish rather than adding every schema you can find."
+      ]
+    },
+    {
+      "heading": "How to earn rich snippets with structured data",
+      "body": [
+        "Earning a rich snippet comes down to adding valid structured data and giving Google a reason to trust it. It is a process, not a switch you flip, and Google grants rich results at its own discretion — but the steps below are what put you in the running:",
+        "[[flowchart]]",
+        "Start by **matching your page to an eligible type**. Google only supports rich results for specific content categories, so confirm yours is on the list before writing markup. Then **add the right schema** in JSON-LD, the format Google recommends — it sits in a script tag in your page's head and does not affect what visitors see. Fill in every required property for that type; a review snippet with no rating value will not qualify.",
+        "Next, **validate the markup**. Google's Rich Results Test and Search Console's enhancement reports tell you whether your structured data is eligible and flag missing or malformed fields — fix every error before expecting results. **Confirm Google can crawl the page** and that the JSON-LD is not blocked or rendered only after user interaction. Finally, **earn trust and wait**: rich results are discretionary, and quality, accuracy, and site authority all influence whether Google shows them.",
+        "The fastest way to check your markup without leaving your workflow is to run a [free SEO + GEO audit](/) on the published URL. It parses your JSON-LD, flags invalid or incomplete schema, and surfaces the on-page issues that keep rich results from appearing — the same structured-data signals that also help AI answer engines understand your page."
+      ]
+    },
+    {
+      "heading": "Do rich snippets help SEO? CTR and AI search",
+      "body": [
+        "Rich snippets help SEO indirectly, and the main lever is **click-through rate**. A rich snippet does not raise your ranking position on its own — Google has been explicit that structured data is not a direct ranking factor. What it does is make your listing bigger and more informative than the plain results around it, so more searchers click it. A result with gold stars and a price simply draws the eye more than a bare title and description.",
+        "That CTR lift matters because it compounds. More clicks at the same position mean more traffic, and a listing that consistently earns clicks sends a positive engagement signal. Winning rich snippets alongside strong rankings is part of the same playbook covered in [how to rank on the first page of Google](/blog/how-to-rank-on-the-first-page-of-google) — the goal is not just to rank but to own the most clickable version of your listing.",
+        "There is a growing second payoff: **AI search**. The same structured data that powers rich snippets gives generative engines like Google AI Overviews and ChatGPT a clean, machine-readable description of your content — your products, ratings, authors, and answers stated explicitly rather than inferred from prose. As more search happens through AI answers, that clarity increasingly decides whether your content is understood and cited. Adding valid schema is one investment that pays off in classic rich snippets and AI visibility at once — validate yours with a [free SEO + GEO audit](/) to make sure it is working."
+      ]
+    }
+  ],
+  "flowchart": {
+    "title": "How to earn a rich snippet in 5 steps",
+    "steps": [
+      { "title": "Match an eligible content type", "detail": "Confirm your page fits a supported rich result — product, review, recipe, FAQ, event, or breadcrumb." },
+      { "title": "Add the right schema", "detail": "Mark up the page with valid JSON-LD for that type and fill in every required property." },
+      { "title": "Validate the markup", "detail": "Run Google's Rich Results Test and fix every error or missing field it reports." },
+      { "title": "Make sure Google can crawl it", "detail": "Confirm the page is indexed and the JSON-LD is not blocked or hidden behind interaction." },
+      { "title": "Earn trust and wait", "detail": "Google grants rich results at its discretion; accuracy, quality, and site authority all help." }
+    ]
+  },
+  "comparisonTable": {
+    "caption": "Common rich snippet types and the schema markup each one needs",
+    "headers": ["Rich snippet type", "What shows in the SERP", "Schema type needed"],
+    "rows": [
+      ["Review stars", "Gold star rating and review count", "Review / AggregateRating"],
+      ["Product", "Price, availability, and rating", "Product + Offer"],
+      ["FAQ", "Expandable question-and-answer list", "FAQPage"],
+      ["Recipe", "Photo, cook time, rating, and calories", "Recipe"],
+      ["Breadcrumb", "Readable site navigation path", "BreadcrumbList"],
+      ["Event", "Date, time, and location", "Event"],
+      ["Sitelinks search box", "Search field beneath the result", "WebSite + SearchAction"]
+    ]
+  },
+  "peopleAlsoAsk": [
+    {
+      "q": "What is the difference between a rich snippet and a featured snippet?",
+      "a": "A rich snippet is a normal organic result enhanced with extra data from your schema markup — stars, price, or an image — and it stays at your ranking position. A featured snippet is a separate box at the very top of results that quotes an answer to a question. You earn rich snippets by adding structured data; Google chooses featured snippets algorithmically from clear on-page content. They are different features and can appear together."
+    },
+    {
+      "q": "How do I get a rich snippet?",
+      "a": "Get a rich snippet by matching your page to an eligible content type, adding valid JSON-LD schema for it, validating that markup in Google's Rich Results Test, and making sure Google can crawl the page. Fill in every required property for the schema type, fix all validation errors, then wait — Google shows rich results at its discretion based on quality and trust. There is no fee or submission form."
+    },
+    {
+      "q": "What are rich results?",
+      "a": "Rich results are Google's official name for search listings enhanced with extra visual features beyond a plain blue link — review stars, product prices, recipe cards, FAQ dropdowns, breadcrumbs, and more. \"Rich snippet\" is the older, common term for the same thing. All rich results are powered by structured data (schema markup) that tells Google what the extra details on your page mean."
+    },
+    {
+      "q": "Do rich snippets help SEO?",
+      "a": "Rich snippets help SEO indirectly. They are not a direct ranking factor — adding schema will not move you up the results by itself. What they do is make your listing larger and more eye-catching, which lifts click-through rate and brings more traffic at the same position. The same structured data also helps AI answer engines understand and cite your content."
+    },
+    {
+      "q": "What schema do I need for rich snippets?",
+      "a": "The schema depends on the rich snippet you want: Review or AggregateRating for star ratings, Product plus Offer for ecommerce listings, Recipe for recipe cards, FAQPage for FAQ dropdowns, BreadcrumbList for navigation paths, and Event for event details. Add the markup in JSON-LD, fill in every required property, and validate it in Google's Rich Results Test before expecting the snippet to appear."
+    }
+  ],
+  "faqs": [
+    {
+      "q": "Does adding schema guarantee a rich snippet?",
+      "a": "No. Valid schema makes your page eligible for a rich snippet, but Google shows rich results at its discretion. It weighs content quality, accuracy, and site trust, and it may choose not to display a snippet even for perfect markup. Schema is necessary but not sufficient."
+    },
+    {
+      "q": "What format should I use for structured data?",
+      "a": "Use JSON-LD. It is the format Google recommends and the easiest to maintain because it lives in a single script tag in your page's head, separate from your visible HTML. Microdata and RDFa also work, but JSON-LD is cleaner to add, update, and validate."
+    },
+    {
+      "q": "Why did my rich snippet disappear?",
+      "a": "Rich snippets can vanish if your markup breaks, a required property goes missing, Google detects spammy or inaccurate data, or the page loses trust. Re-test the URL in Google's Rich Results Test, fix any errors, and check Search Console's enhancement reports for warnings, then wait for Google to recrawl."
+    }
+  ],
+  "relatedKeywords": [
+    "rich snippet",
+    "rich results",
+    "structured data",
+    "schema markup",
+    "rich snippet examples",
+    "rich snippet vs featured snippet"
+  ],
+  "internalLinks": [
+    {
+      "href": "/",
+      "anchor": "run a free SEO + GEO audit"
+    },
+    {
+      "href": "/blog/what-is-schema-markup",
+      "anchor": "What is schema markup"
+    },
+    {
+      "href": "/blog/what-is-a-featured-snippet",
+      "anchor": "What is a featured snippet"
+    },
+    {
+      "href": "/blog/how-to-add-faq-schema",
+      "anchor": "How to add FAQ schema"
+    },
+    {
+      "href": "/blog/what-is-a-serp",
+      "anchor": "What is a SERP"
+    },
+    {
+      "href": "/blog/how-to-rank-on-the-first-page-of-google",
+      "anchor": "How to rank on the first page of Google"
+    }
+  ],
+  "images": []
+}

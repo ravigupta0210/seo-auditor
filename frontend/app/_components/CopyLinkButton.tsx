@@ -19,7 +19,17 @@ const CheckIcon = () => (
  * Compact "Copy link" button. Copies the given URL (falls back to the current
  * page URL) and flips to a "Copied!" confirmation for a moment.
  */
-export function CopyLinkButton({ url, label = 'Copy link' }: { url?: string; label?: string }) {
+export function CopyLinkButton({
+  url,
+  label = 'Copy link',
+  ariaLabel = 'Copy link to this report',
+  trackMethod = 'copy_top',
+}: {
+  url?: string;
+  label?: string;
+  ariaLabel?: string;
+  trackMethod?: string;
+}) {
   const [copied, setCopied] = useState(false);
 
   async function copy() {
@@ -27,7 +37,7 @@ export function CopyLinkButton({ url, label = 'Copy link' }: { url?: string; lab
     try {
       await navigator.clipboard.writeText(target);
       setCopied(true);
-      track('report_shared', { method: 'copy_top' });
+      track('report_shared', { method: trackMethod });
       setTimeout(() => setCopied(false), 1800);
     } catch {
       /* clipboard blocked — ignore */
@@ -39,7 +49,7 @@ export function CopyLinkButton({ url, label = 'Copy link' }: { url?: string; lab
       type="button"
       onClick={copy}
       className="btn btn-secondary"
-      aria-label="Copy link to this report"
+      aria-label={ariaLabel}
       style={{ display: 'inline-flex', alignItems: 'center', gap: 7, padding: '7px 12px', fontSize: 13 }}
     >
       <span style={{ display: 'inline-flex', color: copied ? 'var(--pass)' : 'inherit' }}>

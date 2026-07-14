@@ -219,14 +219,36 @@ function StaticCheckCard({ check }: { check: Check & { affectedPages?: string[] 
 
 function BadgeEmbed({ reportId, host, score }: { reportId: string; host: string; score: number }) {
   const badgeUrl = `${process.env.NEXT_PUBLIC_BACKEND_URL || ''}/api/badge?score=${score}&host=${encodeURIComponent(host)}`;
-  const embed = `<a href="${process.env.NEXT_PUBLIC_SITE_URL || 'https://example.com'}/audit/${reportId}"><img src="${badgeUrl}" alt="SEO score for ${host}" /></a>`;
+  const embed = `<a href="${SITE_URL}/audit/${reportId}"><img src="${badgeUrl}" alt="SEO score for ${host}" /></a>`;
   return (
     <details className="glass-card" style={{ padding: '14px 18px' }}>
       <summary style={{ cursor: 'pointer', fontSize: 13, color: 'var(--text-dim)' }}>
         ◆ Embed this score on your site
       </summary>
       <p style={{ margin: '10px 0 8px', fontSize: 12, color: 'var(--text-muted)' }}>Paste this into any blog post or README:</p>
-      <pre style={{ margin: 0, fontSize: 11.5 }}>{embed}</pre>
+      <div style={{ position: 'relative' }}>
+        <pre
+          style={{
+            margin: 0,
+            fontSize: 11.5,
+            lineHeight: 1.6,
+            background: 'rgba(127,127,127,0.10)',
+            color: 'var(--text)',
+            border: '1px solid var(--border)',
+            borderRadius: 8,
+            padding: '12px 14px',
+            paddingRight: 104,
+            overflowX: 'auto',
+            whiteSpace: 'pre-wrap',
+            wordBreak: 'break-all',
+          }}
+        >
+          {embed}
+        </pre>
+        <div style={{ position: 'absolute', top: 8, right: 8 }}>
+          <CopyLinkButton url={embed} label="Copy code" ariaLabel="Copy embed code" trackMethod="copy_embed" />
+        </div>
+      </div>
     </details>
   );
 }

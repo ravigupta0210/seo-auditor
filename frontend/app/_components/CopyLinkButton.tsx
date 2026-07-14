@@ -24,11 +24,13 @@ export function CopyLinkButton({
   label = 'Copy link',
   ariaLabel = 'Copy link to this report',
   trackMethod = 'copy_top',
+  iconOnly = false,
 }: {
   url?: string;
   label?: string;
   ariaLabel?: string;
   trackMethod?: string;
+  iconOnly?: boolean;
 }) {
   const [copied, setCopied] = useState(false);
 
@@ -42,6 +44,28 @@ export function CopyLinkButton({
     } catch {
       /* clipboard blocked — ignore */
     }
+  }
+
+  if (iconOnly) {
+    return (
+      <button
+        type="button"
+        onClick={copy}
+        className="btn btn-secondary"
+        aria-label={copied ? 'Copied' : ariaLabel}
+        title={copied ? 'Copied!' : label}
+        style={{
+          display: 'inline-flex',
+          alignItems: 'center',
+          justifyContent: 'center',
+          padding: 8,
+          flexShrink: 0,
+          color: copied ? 'var(--pass)' : 'inherit',
+        }}
+      >
+        {copied ? <CheckIcon /> : <LinkIcon />}
+      </button>
+    );
   }
 
   return (

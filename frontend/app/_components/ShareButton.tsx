@@ -66,14 +66,21 @@ export function ShareButton({
   }, [open]);
 
   async function onClick() {
-    // Native share sheet (mobile + some desktop browsers).
-    if (typeof navigator !== 'undefined' && typeof navigator.share === 'function') {
+    // Use the native share sheet only on touch devices (phones/tablets), where
+    // it's the expected UX. On desktop it's unreliable/invisible, so always show
+    // our own dropdown menu instead.
+    const isTouch =
+      typeof window !== 'undefined' &&
+      typeof navigator !== 'undefined' &&
+      typeof navigator.share === 'function' &&
+      window.matchMedia('(pointer: coarse)').matches;
+    if (isTouch) {
       try {
         await navigator.share({ title: shareTitle, text: shareText, url: shareUrl });
         track('report_shared', { method: 'native', host, score });
         return;
       } catch {
-        /* user cancelled or share unsupported — fall through to menu */
+        /* user cancelled — fall through to the menu */
       }
     }
     setOpen((o) => !o);

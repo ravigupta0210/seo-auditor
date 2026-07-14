@@ -1,0 +1,141 @@
+{
+  "slug": "what-are-core-web-vitals",
+  "title": "What Are Core Web Vitals? (2026 Guide)",
+  "date": "2026-07-14",
+  "updatedAt": "2026-07-14",
+  "tag": "Technical SEO",
+  "cluster": "technical-seo",
+  "keyword": "what are Core Web Vitals",
+  "secondaryKeywords": ["LCP", "INP", "CLS", "page experience signals", "field vs lab data"],
+  "readTime": 9,
+  "excerpt": "Core Web Vitals are Google's three page-experience metrics — LCP, INP, and CLS. Here are the good thresholds and how to measure and improve each one.",
+  "description": "What are Core Web Vitals? Google's three page-experience metrics — LCP, INP, and CLS — with the good thresholds and how to measure and improve each.",
+  "tldr": "Core Web Vitals are Google's three real-world page-experience metrics: Largest Contentful Paint (LCP) for loading, target under 2.5 seconds; Interaction to Next Paint (INP) for responsiveness, under 200 milliseconds; and Cumulative Layout Shift (CLS) for visual stability, under 0.1. They are a lightweight ranking signal and are measured from real Chrome users.",
+  "status": "published",
+  "sections": [
+    {
+      "heading": "What are Core Web Vitals?",
+      "body": [
+        "If you have wondered what are Core Web Vitals, they are the three real-world performance metrics Google uses to measure page experience: **Largest Contentful Paint (LCP)** for loading speed, **Interaction to Next Paint (INP)** for responsiveness, and **Cumulative Layout Shift (CLS)** for visual stability. Each has a defined \"good\" threshold, each is measured from real Chrome users, and together they form a lightweight ranking signal that also shapes how visitors experience your site.",
+        "Google introduced Core Web Vitals in 2020 as part of its broader **page experience** signals, alongside factors like mobile-friendliness and HTTPS. The idea is to measure not just whether a page loads, but whether it loads quickly, responds fast when tapped, and stays visually stable while it does. These three metrics are deliberately chosen to map to the moments a real user notices friction: waiting for content, tapping a button that does not respond, and content jumping around under their thumb.",
+        "It helps to see the three metrics and their thresholds side by side before we break each one down:",
+        "[[table]]",
+        "Two things are worth stressing up front. First, the thresholds shown are Google's official \"good\" targets, and Google grades a metric at the **75th percentile** — meaning at least 75% of page loads must hit the target, so you are optimizing for your slower visits, not your fastest. Second, Core Web Vitals sit inside the wider practice of [technical SEO](/blog/what-is-technical-seo); they are a measurable subset of overall site health, not the whole picture."
+      ]
+    },
+    {
+      "heading": "LCP: Largest Contentful Paint (loading)",
+      "body": [
+        "**Largest Contentful Paint (LCP)** measures how long it takes for the largest visible element — usually a hero image, a video poster, or a big block of text — to render in the viewport. A **good LCP is 2.5 seconds or less**; 2.5 to 4.0 seconds needs improvement, and anything over 4.0 seconds is poor. LCP is the metric most people mean when they say a page \"feels slow,\" because it marks the moment the main content actually appears.",
+        "The most common LCP culprits are slow server response times, render-blocking CSS and JavaScript, and large, unoptimized images. Because the largest element is often an image, LCP improvements usually start there: serve modern formats like WebP or AVIF, size images correctly for the device, and add `fetchpriority=\"high\"` to the hero image so the browser fetches it first. On the server side, a fast time to first byte and a CDN both directly cut LCP.",
+        "> LCP is about the largest element the user can see — not when the whole page finishes loading. Fix the hero, and you fix most of the number.",
+        "Many LCP wins overlap with general speed work, so if this is your weak metric, start with the tactics in [how to improve page speed](/blog/how-to-improve-page-speed): compress and lazy-load below-the-fold images, defer non-critical scripts, and preload the fonts and hero asset the first screen depends on."
+      ]
+    },
+    {
+      "heading": "INP: Interaction to Next Paint (responsiveness)",
+      "body": [
+        "**Interaction to Next Paint (INP)** measures how quickly the page responds visually after a user interacts — a tap, click, or key press. It records the delay from the interaction to the next frame the browser paints, across the whole visit, and reports a value near the worst one. A **good INP is 200 milliseconds or less**; 200 to 500 ms needs improvement, and above 500 ms is poor.",
+        "INP is the newest of the three. In **March 2024 it officially replaced First Input Delay (FID)** as a Core Web Vital. The change matters because FID only measured the delay before the browser *started* processing the first interaction, which most sites passed easily. INP is stricter: it measures the full time until the user actually *sees* a response, on every interaction, so it exposes sluggish menus, laggy form fields, and janky filters that FID never caught.",
+        "The main cause of poor INP is **long JavaScript tasks** that block the main thread while the user is trying to interact. Fixes include breaking up long tasks, deferring or removing heavy third-party scripts (chat widgets, analytics, tag managers are frequent offenders), and avoiding large layout or style recalculations on interaction. If your site is interactive — filters, tabs, accordions, add-to-cart — INP is usually the Core Web Vital most worth your attention."
+      ]
+    },
+    {
+      "heading": "CLS: Cumulative Layout Shift (visual stability)",
+      "body": [
+        "**Cumulative Layout Shift (CLS)** measures how much visible content unexpectedly moves around as the page loads. It is a unitless score, not a time: it multiplies how much of the screen shifted by how far it moved, and sums the unexpected shifts. A **good CLS is 0.1 or less**; 0.1 to 0.25 needs improvement, and above 0.25 is poor. CLS is the metric behind the frustrating moment when you go to tap a link and an ad loads above it, pushing the whole page down.",
+        "The usual causes are images and embeds without dimensions, ads or iframes that inject themselves after load, and web fonts that reflow text when they swap in. The fixes are mostly preventive: always set explicit `width` and `height` (or a CSS `aspect-ratio`) on images and video so the browser reserves space, reserve fixed slots for ads and embeds before they load, and use `font-display: optional` or preloaded fonts to avoid text reflow.",
+        "CLS is often the fastest of the three to fix because the causes are structural rather than performance-bound — you are reserving space, not shaving milliseconds. A single missing image dimension can be the difference between a passing and failing score, which is why an [on-page SEO](/blog/what-is-on-page-seo) review that checks image attributes doubles as CLS insurance."
+      ]
+    },
+    {
+      "heading": "How Core Web Vitals affect SEO and how to measure them",
+      "body": [
+        "Core Web Vitals are a **confirmed but lightweight Google ranking factor**. Google has said page experience is a tiebreaker: when two pages are similarly relevant, the one with a better experience can win, but strong Core Web Vitals will not rescue thin or irrelevant content. Treat them as a way to protect rankings you have earned on quality and relevance, and as part of the mobile-first evaluation covered in [mobile-first indexing](/blog/what-is-mobile-first-indexing), not as a shortcut to the top.",
+        "A critical distinction when measuring is **field data versus lab data**. Field data (also called Real User Monitoring) comes from the **Chrome User Experience Report (CrUX)** — actual visits from real Chrome users over the last 28 days — and it is what Google uses for ranking. Lab data comes from a single simulated load in a tool like Lighthouse; it is great for debugging because it is reproducible, but it is not what counts for ranking. If your lab score is great but rankings lag, check the field data — real users on slower phones and networks tell the true story.",
+        "To measure your own pages, start with **PageSpeed Insights** (which shows both CrUX field data and a Lighthouse lab run), the Core Web Vitals report in **Google Search Console**, and the Lighthouse or Performance panels in Chrome DevTools. Prioritize by which metric is failing at the 75th percentile, fix the biggest contributor first, and re-measure — CrUX updates on a rolling 28-day window, so field improvements take a few weeks to fully show.",
+        "For a fast first read, paste any URL into the [free SEO + GEO audit on our homepage](/) — it flags performance and page-experience signals alongside on-page and GEO issues in a single pass, so you can see where Core Web Vitals fit into the larger picture before you dig into a dedicated speed tool. Improving these metrics is one lever among many in [how to improve your website ranking on Google](/blog/how-to-improve-website-ranking-on-google)."
+      ]
+    }
+  ],
+  "comparisonTable": {
+    "caption": "The three Core Web Vitals: what each measures and the thresholds",
+    "headers": ["Metric", "What it measures", "Good", "Needs work", "Poor"],
+    "rows": [
+      ["LCP (Largest Contentful Paint)", "Loading — when the largest visible element renders", "≤ 2.5s", "2.5s – 4.0s", "> 4.0s"],
+      ["INP (Interaction to Next Paint)", "Responsiveness — delay from input to visible response", "≤ 200ms", "200ms – 500ms", "> 500ms"],
+      ["CLS (Cumulative Layout Shift)", "Visual stability — unexpected movement of content", "≤ 0.1", "0.1 – 0.25", "> 0.25"]
+    ]
+  },
+  "peopleAlsoAsk": [
+    {
+      "q": "What are the 3 Core Web Vitals?",
+      "a": "The three Core Web Vitals are Largest Contentful Paint (LCP), which measures loading and should be 2.5 seconds or less; Interaction to Next Paint (INP), which measures responsiveness and should be 200 milliseconds or less; and Cumulative Layout Shift (CLS), which measures visual stability and should be 0.1 or less. Together they cover loading speed, interactivity, and how much the page unexpectedly moves as it loads."
+    },
+    {
+      "q": "What is a good Core Web Vitals score?",
+      "a": "A page passes Core Web Vitals when all three metrics hit their good thresholds at the 75th percentile of real visits: LCP of 2.5 seconds or less, INP of 200 milliseconds or less, and CLS of 0.1 or less. The 75th percentile means at least three quarters of your page loads must meet the target, so you are optimizing for your slower visits, not just your fastest ones."
+    },
+    {
+      "q": "Do Core Web Vitals affect SEO?",
+      "a": "Yes, but lightly. Core Web Vitals are a confirmed Google ranking factor within its page-experience signals, but Google treats them as a tiebreaker between pages of similar relevance rather than a primary factor. Strong Core Web Vitals will not lift thin or irrelevant content, yet they can protect and slightly boost rankings you have already earned on quality — and they measurably improve conversions and user experience."
+    },
+    {
+      "q": "What are LCP, INP, and CLS?",
+      "a": "LCP (Largest Contentful Paint) is the time for the largest visible element to render, measuring loading. INP (Interaction to Next Paint) is the delay from a tap or click to the next visual response, measuring interactivity — it replaced First Input Delay in March 2024. CLS (Cumulative Layout Shift) is a unitless score for how much content unexpectedly moves as the page loads, measuring visual stability."
+    },
+    {
+      "q": "How do I improve Core Web Vitals?",
+      "a": "Improve LCP by optimizing images, using a CDN, and preloading the hero asset; improve INP by breaking up long JavaScript tasks and deferring heavy third-party scripts; and improve CLS by setting explicit width and height on images and reserving space for ads and embeds. Measure with PageSpeed Insights, fix the worst-failing metric first at the 75th percentile, then re-check the field data after a few weeks."
+    }
+  ],
+  "faqs": [
+    {
+      "q": "What tool does Google use to measure Core Web Vitals?",
+      "a": "Google uses the Chrome User Experience Report (CrUX), which collects real-user field data from opted-in Chrome visitors over a rolling 28-day window. You can view this data in PageSpeed Insights and the Core Web Vitals report inside Google Search Console."
+    },
+    {
+      "q": "Why did INP replace First Input Delay (FID)?",
+      "a": "INP replaced FID in March 2024 because FID only measured the delay before the browser began handling the first interaction, which most sites passed easily. INP measures the full time until the user sees a response, across every interaction, giving a far more accurate picture of real responsiveness."
+    },
+    {
+      "q": "What is the difference between field data and lab data?",
+      "a": "Field data comes from real Chrome users via CrUX and is what Google uses for ranking. Lab data comes from a single simulated load in a tool like Lighthouse and is ideal for debugging because it is reproducible, but it does not directly affect rankings."
+    }
+  ],
+  "relatedKeywords": [
+    "core web vitals",
+    "LCP",
+    "CLS",
+    "INP",
+    "page experience",
+    "core web vitals thresholds"
+  ],
+  "internalLinks": [
+    {
+      "href": "/",
+      "anchor": "run a free SEO + GEO audit"
+    },
+    {
+      "href": "/blog/how-to-improve-page-speed",
+      "anchor": "How to improve page speed"
+    },
+    {
+      "href": "/blog/what-is-technical-seo",
+      "anchor": "What is technical SEO"
+    },
+    {
+      "href": "/blog/what-is-mobile-first-indexing",
+      "anchor": "What is mobile-first indexing"
+    },
+    {
+      "href": "/blog/how-to-improve-website-ranking-on-google",
+      "anchor": "How to improve website ranking"
+    },
+    {
+      "href": "/blog/what-is-on-page-seo",
+      "anchor": "What is on-page SEO"
+    }
+  ],
+  "images": []
+}

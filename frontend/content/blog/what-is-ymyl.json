@@ -1,0 +1,157 @@
+{
+  "slug": "what-is-ymyl",
+  "title": "What Is YMYL in SEO? (Your Money or Your Life)",
+  "date": "2026-07-14",
+  "updatedAt": "2026-07-14",
+  "tag": "SEO",
+  "cluster": "seo-basics",
+  "keyword": "what is YMYL",
+  "secondaryKeywords": ["your money or your life", "ymyl pages", "quality rater guidelines", "ymyl eeat"],
+  "readTime": 9,
+  "excerpt": "A clear guide to what YMYL means, which pages count, why Google is stricter, and how YMYL sites build the trust Google demands.",
+  "description": "What is YMYL? \"Your Money or Your Life\" pages that affect health, finances, or safety. Learn why Google holds them to a higher E-E-A-T bar and how to build trust.",
+  "tldr": "YMYL stands for \"Your Money or Your Life\" — pages that could affect a person's health, finances, safety, legal standing, or wellbeing. Because bad advice on these topics can cause real harm, Google's Quality Rater Guidelines hold YMYL pages to a much higher E-E-A-T bar. To rank, YMYL sites must show real author credentials, cite reliable sources, keep information accurate and current, and be transparent about who is behind the content.",
+  "status": "published",
+  "sections": [
+    {
+      "heading": "What is YMYL? A plain-English definition",
+      "body": [
+        "What is YMYL? It stands for **\"Your Money or Your Life\"** — Google's term for pages whose content could significantly affect a person's health, financial stability, safety, or overall wellbeing. If reading a page could lead someone to make a decision that harms their body, their bank account, or their legal standing when the information is wrong, Google classifies that page as YMYL and judges it more harshly than an ordinary page.",
+        "The concept comes straight from Google's **Search Quality Rater Guidelines**, the 170-plus-page manual Google gives the human contractors who evaluate search results. Those raters do not change rankings directly, but their judgments train and validate Google's ranking systems. The guidelines single out YMYL topics for the strictest scrutiny precisely because the stakes are highest — a misleading medical or financial page can do real-world damage in a way a recipe blog cannot.",
+        "The core idea is a **risk-of-harm test**, not a fixed list of industries. Google asks: if this page is inaccurate, untrustworthy, or deceptive, how much could it hurt the person reading it? The higher the potential harm, the more \"YMYL\" the page is, and the higher the trust bar it must clear to rank.",
+        "> YMYL is not about your business being important. It is about how much damage your content could do to a reader if it were wrong. That single question decides how strict Google is with your pages."
+      ]
+    },
+    {
+      "heading": "Examples of YMYL pages (and what isn't)",
+      "body": [
+        "YMYL is easiest to understand through examples, because the label depends on the topic and its potential to cause harm, not on the type of site. A personal blog post giving cancer treatment advice is YMYL; a Fortune 500 company's page about its office snacks is not. The clearest YMYL categories are:",
+        "- **Health and safety**: medical conditions, drugs, treatments, mental health, emergency preparedness, nutrition advice.",
+        "- **Finance**: investing, taxes, loans, insurance, retirement, banking, cryptocurrency, buying a home.",
+        "- **Legal**: immigration, divorce, wills, tenant rights, criminal defense — anything guiding a major legal decision.",
+        "- **News and civic information**: coverage of major events, elections, and public policy where accuracy affects decisions.",
+        "- **Groups and safety**: content about specific groups of people, plus safety-critical instructions (car repair, electrical work).",
+        "Plenty of content is **not** YMYL. Recipes, hobby guides, entertainment reviews, travel tips, fashion, and most how-to content carry little risk if they are imperfect. That does not mean quality is optional — E-E-A-T helps everywhere — but Google will not hold a lasagna recipe to the same evidentiary standard as a page about drug interactions.",
+        "Here is a direct comparison of how Google treats the two, and why the bar differs so much:",
+        "[[table]]",
+        "If you are unsure where a page falls, ask the harm question. \"Could following this cost someone their health, money, or safety?\" If yes, treat it as YMYL and build it to the higher standard described below."
+      ]
+    },
+    {
+      "heading": "Why Google is stricter with YMYL content",
+      "body": [
+        "Google is stricter with YMYL content because search results for these topics carry real-world consequences, and a broken result can hurt people. If Google surfaces a scam investment scheme, dangerous health advice, or a fake legal shortcut, the harm is immediate and severe — and it is Google's reputation on the line as the source of the answer. So the ranking systems demand more proof of trustworthiness before ranking a YMYL page highly.",
+        "This is also why YMYL sites feel core updates so sharply. Broad [algorithm updates](/blog/how-to-improve-website-ranking-on-google) re-weigh quality across the index, and they tune the trust bar hardest on high-stakes topics. A thin, anonymous finance or health page that skated by for years can lose most of its rankings in a single core update, while the same weakness on a hobby blog goes unpunished. If your medical or money content dropped after an update, the stricter YMYL standard is usually the reason.",
+        "The stricter treatment shows up as three demands Google makes of YMYL pages specifically:",
+        "- **Higher accuracy**: claims must be correct and consistent with expert and scientific consensus, not fringe or outdated.",
+        "- **Verifiable expertise**: the author or organization must demonstrably know the subject — not just write confidently about it.",
+        "- **Clear accountability**: readers must be able to see who is responsible for the content and hold them to it.",
+        "None of this is a separate ranking algorithm. It is the same quality systems applying a stricter threshold — which is exactly why the fix is the same everywhere: prove trust."
+      ]
+    },
+    {
+      "heading": "The YMYL and E-E-A-T connection",
+      "body": [
+        "YMYL and E-E-A-T are two halves of the same idea: YMYL defines **how high** the trust bar sits, and E-E-A-T is **how you clear it**. E-E-A-T stands for Experience, Expertise, Authoritativeness, and Trustworthiness — the framework Google's raters use to judge whether a page deserves confidence. On a non-YMYL page, weak E-E-A-T is a minor drag; on a YMYL page, it is often the difference between ranking and vanishing.",
+        "For YMYL topics, the guidelines lean hardest on **Trust** — the center of the E-E-A-T model — and on **Expertise**. Google effectively asks: would a reasonable person trust this specific author and site to advise them on their health or money? \"YMYL pages with low E-E-A-T are held to a much stricter standard\" is not a paraphrase — it is close to the guidelines' actual instruction to raters. A dosage guide written by an anonymous account fails that test no matter how well written it is.",
+        "The distinction that trips people up is **Experience vs. Expertise**. For some YMYL topics, formal expertise wins — you want a licensed doctor on a page about drug interactions. For others, lived experience carries weight — a page about coping with a diagnosis benefits from someone who has been through it. Strong YMYL content often pairs both: expert accuracy plus a human voice. The full framework is worth reading in depth in [what is E-E-A-T in SEO](/blog/what-is-eeat-in-seo).",
+        "> On a YMYL page, ask of every claim: \"Who is saying this, why should I trust them, and can I verify it?\" If the page cannot answer, neither Google nor your reader will trust it."
+      ]
+    },
+    {
+      "heading": "How YMYL sites build the trust Google demands",
+      "body": [
+        "Building trust on a YMYL site is a deliberate, repeatable checklist, not a vibe. Because Google is looking for verifiable signals of expertise and accountability, your job is to make those signals impossible to miss on every page. The highest-leverage moves are:",
+        "- **Show a real, credentialed author.** Add a byline, a photo, and a bio that states relevant qualifications, and link to a full author page. Anonymous YMYL content is the single biggest red flag.",
+        "- **Cite reliable sources.** Link claims to primary research, official bodies, and recognized authorities — and keep those citations current. Sourcing signals both accuracy and honesty.",
+        "- **Keep information accurate and up to date.** Stale medical, legal, or financial advice is actively dangerous, so review YMYL pages on a schedule. [Content freshness](/blog/content-freshness-for-seo) matters more here than almost anywhere.",
+        "- **Be transparent about who you are.** Publish clear About, Contact, editorial-policy, and (where relevant) medical or financial review pages. Trust starts with knowing who is behind the site.",
+        "- **Add expert or professional review.** \"Medically reviewed by\" or \"fact-checked by\" a named professional turns a claim into an accountable one.",
+        "Beyond individual pages, build **topical depth** so Google sees you as a genuine authority on the subject rather than a site dabbling in high-stakes topics — the approach in [topical authority](/blog/what-is-topical-authority). Depth and consistency across a whole section signal that expertise is real, not decorative. Write the content itself to be clear, sourced, and answer-first, following [how to write SEO-friendly content](/blog/how-to-write-seo-friendly-content).",
+        "To see how your YMYL pages score on the signals Google actually checks, [run a free SEO + GEO audit](/) — it flags missing author and E-E-A-T signals, thin or unsupported content, and weak trust markers, which are exactly the weaknesses that sink YMYL pages after a core update. Fix what it surfaces, and your health, finance, or legal content ships with the accountability Google demands."
+      ]
+    }
+  ],
+  "comparisonTable": {
+    "caption": "YMYL vs. non-YMYL pages: how Google's expectations differ",
+    "headers": ["Factor", "YMYL page", "Non-YMYL page"],
+    "rows": [
+      ["Example", "Drug interactions, tax advice, mortgage guide", "Recipe, hobby guide, movie review"],
+      ["Potential for harm", "High — health, money, or safety at risk", "Low — a bad result is a minor annoyance"],
+      ["E-E-A-T bar", "Very high; Trust and Expertise are decisive", "Helpful but rarely make-or-break"],
+      ["Author requirements", "Named, credentialed, verifiable expert", "Byline nice to have, not required"],
+      ["Sourcing", "Citations to authoritative sources expected", "Optional; personal opinion often fine"],
+      ["Core-update sensitivity", "High — thin/anonymous pages drop hard", "Lower — weak trust penalized gently"]
+    ]
+  },
+  "peopleAlsoAsk": [
+    {
+      "q": "What does YMYL stand for?",
+      "a": "YMYL stands for \"Your Money or Your Life.\" It is Google's label for pages whose content could significantly affect a person's health, financial stability, safety, legal standing, or overall wellbeing. The term comes from Google's Search Quality Rater Guidelines, which instruct human raters to hold these high-stakes pages to a much stricter standard of accuracy and trust than ordinary content, because bad information on these topics can cause real-world harm."
+    },
+    {
+      "q": "What are examples of YMYL pages?",
+      "a": "YMYL pages include medical and health advice, financial content like investing, taxes, and loans, legal guidance such as immigration or wills, major news and civic information, and safety-critical instructions. The common thread is potential for harm: if inaccurate content could damage a reader's health, money, or safety, it is YMYL. Recipes, hobby guides, and entertainment reviews are not YMYL because a mistake carries little real-world risk."
+    },
+    {
+      "q": "How does YMYL affect SEO?",
+      "a": "YMYL raises the trust bar your pages must clear to rank. Google applies its strictest E-E-A-T scrutiny to YMYL topics, so thin, anonymous, or poorly sourced content struggles to rank and often drops sharply during core updates. To perform in YMYL niches, you need visible author credentials, authoritative citations, accurate and current information, and clear transparency about who runs the site — signals Google treats as decisive here."
+    },
+    {
+      "q": "What is the connection between YMYL and E-E-A-T?",
+      "a": "YMYL defines how high the trust bar sits; E-E-A-T is how you clear it. E-E-A-T (Experience, Expertise, Authoritativeness, Trustworthiness) is the framework Google's raters use to judge a page's credibility. On YMYL topics, Google leans hardest on Trust and Expertise, so weak E-E-A-T that a hobby blog could survive will sink a health or finance page. The two concepts always travel together in Google's guidelines."
+    },
+    {
+      "q": "Does my site count as YMYL?",
+      "a": "Ask the harm question of your pages: could following this content cost someone their health, money, safety, or legal standing if it were wrong? If yes, those pages are YMYL, even on an otherwise casual site — a single dangerous health post makes that post YMYL. YMYL is decided page by page based on topic and risk, not by whether your whole site is officially in a regulated industry."
+    }
+  ],
+  "faqs": [
+    {
+      "q": "Is YMYL an official Google ranking factor?",
+      "a": "YMYL is not a standalone ranking factor or algorithm. It is a classification in Google's Quality Rater Guidelines that raises the trust threshold Google's existing ranking systems apply. In practice that means E-E-A-T signals carry far more weight on YMYL pages than on ordinary ones."
+    },
+    {
+      "q": "Can a small blog rank for YMYL topics?",
+      "a": "Yes, but it is harder. A small blog can rank for YMYL topics by showing genuine, verifiable expertise or lived experience, citing authoritative sources, and being transparent about authorship. What sinks small YMYL sites is anonymity and thin content, not size alone — credibility, not company scale, is what Google rewards."
+    },
+    {
+      "q": "How often should I update YMYL pages?",
+      "a": "Review YMYL pages on a regular schedule — at least a few times a year, and immediately when guidance, laws, or medical consensus change. Outdated health, legal, or financial advice can be actively harmful, so freshness matters more for YMYL content than for almost any other type of page."
+    }
+  ],
+  "relatedKeywords": [
+    "ymyl",
+    "your money your life",
+    "eeat",
+    "google quality rater guidelines",
+    "ymyl pages"
+  ],
+  "internalLinks": [
+    {
+      "href": "/",
+      "anchor": "run a free SEO + GEO audit"
+    },
+    {
+      "href": "/blog/what-is-eeat-in-seo",
+      "anchor": "What is E-E-A-T in SEO"
+    },
+    {
+      "href": "/blog/how-to-write-seo-friendly-content",
+      "anchor": "How to write SEO-friendly content"
+    },
+    {
+      "href": "/blog/what-is-topical-authority",
+      "anchor": "What is topical authority"
+    },
+    {
+      "href": "/blog/how-to-improve-website-ranking-on-google",
+      "anchor": "How to improve website ranking"
+    },
+    {
+      "href": "/blog/content-freshness-for-seo",
+      "anchor": "Content freshness for SEO"
+    }
+  ],
+  "images": []
+}

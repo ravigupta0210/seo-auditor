@@ -1,0 +1,132 @@
+{
+  "slug": "what-is-a-knowledge-panel",
+  "title": "What Is a Knowledge Panel? (And How to Get One)",
+  "date": "2026-07-14",
+  "updatedAt": "2026-07-14",
+  "tag": "SEO",
+  "cluster": "seo-basics",
+  "keyword": "what is a knowledge panel",
+  "secondaryKeywords": ["Google Knowledge Graph", "entity SEO", "claim knowledge panel", "brand SEO"],
+  "readTime": 9,
+  "excerpt": "A knowledge panel is the info box Google shows about a person, brand, or place. Here is what triggers one, how to earn it, and how to claim yours.",
+  "description": "What is a knowledge panel? The info box about an entity on Google's results, built from the Knowledge Graph. Learn what triggers one and how to earn yours.",
+  "tldr": "A knowledge panel is the information box Google shows about an entity — a person, brand, organization, or place — on the right of desktop results or the top on mobile. It is built from the Google Knowledge Graph, not from any single web page. You earn one by becoming a recognized entity through Wikidata, consistent data, Organization or Person schema, and authoritative mentions.",
+  "status": "published",
+  "sections": [
+    {
+      "heading": "What is a knowledge panel?",
+      "body": [
+        "So **what is a knowledge panel**? A knowledge panel is the boxed summary Google displays about a specific *entity* — a person, brand, organization, product, or place — when you search its name. On desktop it sits in the right-hand rail; on mobile it appears at the top of the results. It pulls together the essentials at a glance: a name, description, logo or photo, founding date, official social profiles, and links to related entities.",
+        "The critical thing to understand is where that box comes from. **A knowledge panel is generated from the Google Knowledge Graph, not from any single web page.** The Knowledge Graph is Google's giant database of real-world entities and the facts and relationships that connect them. So unlike a normal search result, you cannot simply write a page and rank it into a knowledge panel — Google has to first recognize your subject as a distinct entity it understands.",
+        "That is why knowledge panels appear for established people, companies, and landmarks, but not for a brand Google has never heard of. Earning one is really the work of becoming a recognized entity — the core idea behind [semantic SEO](/blog/what-is-semantic-seo) and entity-based optimization.",
+        "> A knowledge panel is not something you write. It is something you become eligible for once Google is confident it knows who or what you are."
+      ]
+    },
+    {
+      "heading": "What triggers a knowledge panel",
+      "body": [
+        "A knowledge panel triggers when someone searches for a query Google confidently maps to a single entity in its Knowledge Graph. Three conditions generally need to hold:",
+        "- **Google recognizes the entity.** There is a distinct node in the Knowledge Graph for your person, brand, or place, assembled from corroborating sources across the web.",
+        "- **The query is entity-seeking.** The searcher typed a name — \"Patagonia\", \"Serena Williams\", \"Eiffel Tower\" — rather than a how-to question. Name searches signal the searcher wants facts about a thing, which is exactly what a panel provides.",
+        "- **The facts are consistent.** Google can reconcile the entity's details (name, description, founding date, location) across enough trustworthy sources to display them without contradiction.",
+        "This is different from how a normal page ranks. A blog post ranks because it matches a query and carries ranking signals; a knowledge panel appears because Google has resolved an *identity*. That is why two brands with identical SEO can differ — one is an established entity in the graph and one is not. Building that recognition is the same [E-E-A-T](/blog/what-is-eeat-in-seo) and authority work that lifts the rest of your presence on the [search results page](/blog/what-is-a-serp)."
+      ]
+    },
+    {
+      "heading": "Knowledge panel vs featured snippet",
+      "body": [
+        "Knowledge panels and featured snippets are the two big boxed results people mix up, but they answer different needs from different sources. **A knowledge panel summarizes an entity from the Knowledge Graph; a [featured snippet](/blog/what-is-a-featured-snippet) answers a question by quoting one ranking web page.** Here is the side-by-side:",
+        "[[table]]",
+        "The practical consequence is that you pursue them in completely different ways. You *cannot* write your way into a knowledge panel — you become an entity Google trusts. You *can* write your way into a featured snippet — you structure a page to answer a specific question more directly than competitors. One is an identity problem; the other is a content-structure problem.",
+        "Both, though, share a foundation: clear, well-structured, trustworthy content that Google and AI engines can parse. The same [schema markup](/blog/what-is-schema-markup) and answer-first writing that helps you win snippets also strengthens the entity signals behind a panel."
+      ]
+    },
+    {
+      "heading": "How to get and influence a knowledge panel",
+      "body": [
+        "You do not request a knowledge panel — you earn one by making your entity unmistakable to Google. Work these levers in order of impact:",
+        "- **Get into the reference graph.** A well-sourced Wikipedia article and a `Wikidata` entry are among the strongest entity signals, because Google leans on them heavily to seed the Knowledge Graph. If Wikipedia notability is out of reach, a complete Wikidata item still helps.",
+        "- **Add Organization or Person schema.** Mark up your official site with `Organization` or `Person` structured data, including `sameAs` links to your verified social and reference profiles. This tells Google, in machine-readable terms, exactly which entity your site represents. See [what is schema markup](/blog/what-is-schema-markup) for the how-to.",
+        "- **Keep NAP and facts consistent.** Your name, address, phone, founding date, and description should match everywhere they appear — your site, social profiles, business directories, and press. Contradictions make Google less confident, and confidence is what triggers a panel.",
+        "- **Earn authoritative mentions.** Coverage in reputable, independent publications corroborates that you are a real, notable entity. These unlinked and linked mentions build the web of evidence Google needs.",
+        "This is slow, compounding work — closer to reputation-building than to on-page SEO. But every consistent signal you add raises the odds that Google resolves your name into a distinct, panel-eligible entity. Run the [free SEO + GEO audit](/) to confirm your Organization or Person schema and `sameAs` links are valid and readable, since a broken markup block is a common reason the entity signal never lands."
+      ]
+    },
+    {
+      "heading": "Claiming and verifying your knowledge panel",
+      "body": [
+        "If a knowledge panel already exists for you or your brand, you can claim it to influence what it shows. **Claiming means Google verifies you as the official representative of the entity, which lets you suggest edits and add certain features.** The process, at a high level:",
+        "- **Find your panel** by searching your exact entity name while signed into your Google account.",
+        "- **Look for a \"Claim this knowledge panel\" link** near the bottom of the panel. If it appears, follow it.",
+        "- **Verify your identity** through one of Google's methods, typically by confirming ownership of an official profile (a verified social account, website, or similar) tied to the entity.",
+        "- **Suggest changes** once verified. Note that you can *suggest* — Google still decides what to display, because the panel reflects the Knowledge Graph, not your preferences.",
+        "Even without claiming, anyone can propose a correction via the \"Feedback\" or \"Suggest an edit\" option on a panel, and Google weighs those against its sources. What you cannot do is buy, delete, or freely rewrite a panel — its contents are Google's synthesis of trusted data across the web. The durable path to a panel that says the right things is the entity work in the previous section: consistent facts, valid schema, and authoritative sources all pointing at the same, unambiguous you."
+      ]
+    }
+  ],
+  "comparisonTable": {
+    "caption": "Knowledge panel vs featured snippet: two different boxes, two different sources",
+    "headers": ["Attribute", "Knowledge panel", "Featured snippet"],
+    "rows": [
+      ["Source", "Google Knowledge Graph (entity data)", "A single ranking web page"],
+      ["What it's about", "An entity: person, brand, org, place", "A specific question or query"],
+      ["Position", "Right rail on desktop, top on mobile", "Position zero, above result #1"],
+      ["Trigger", "Searching an entity's name", "Asking a question-style query"],
+      ["How to influence it", "Become a recognized entity (Wikidata, schema, mentions)", "Structure a page to answer the query directly"],
+      ["Can you claim/edit it", "Yes — verify, then suggest edits", "No — you optimize the page, not the box"],
+      ["Attribution", "Aggregated, often citing Wikipedia", "One attributed source URL"]
+    ]
+  },
+  "peopleAlsoAsk": [
+    {
+      "q": "How do I get a knowledge panel?",
+      "a": "You earn a knowledge panel by becoming an entity Google recognizes, not by requesting one. The strongest levers are a well-sourced Wikipedia and Wikidata entry, Organization or Person schema with sameAs links on your official site, consistent NAP and facts across the web, and authoritative independent mentions. When enough trusted sources agree on who you are, Google builds a Knowledge Graph node and can display a panel for name searches."
+    },
+    {
+      "q": "What is the difference between a knowledge panel and a featured snippet?",
+      "a": "A knowledge panel summarizes an entity — a person, brand, or place — using data from the Google Knowledge Graph, and appears on the right or top of results. A featured snippet answers a specific question by quoting a single ranking web page at position zero. You earn a panel by becoming a recognized entity; you earn a snippet by structuring a page to answer a query more directly than competitors."
+    },
+    {
+      "q": "What is the Google Knowledge Graph?",
+      "a": "The Google Knowledge Graph is Google's database of real-world entities — people, places, organizations, products — and the facts and relationships that connect them. Google assembles it from many trusted sources, including Wikipedia and Wikidata, then uses it to power knowledge panels, understand queries, and disambiguate entities. A knowledge panel is essentially the visible front end of a single entity's record in that graph."
+    },
+    {
+      "q": "What is an entity in SEO?",
+      "a": "In SEO, an entity is a distinct, well-defined thing — a person, brand, place, or concept — that Google can identify and store as a node in its Knowledge Graph, separate from the words used to describe it. Entity SEO focuses on making Google confident about who or what you are through consistent facts, schema markup, and authoritative references, which is the foundation for earning a knowledge panel."
+    },
+    {
+      "q": "Can I edit my knowledge panel?",
+      "a": "You cannot freely rewrite a knowledge panel, but you can influence it. If you claim and verify the panel as the entity's official representative, you can suggest edits that Google reviews. Anyone can also propose corrections via the panel's feedback option. Google always makes the final call, because the panel reflects the Knowledge Graph's synthesis of trusted sources, not your preferences."
+    }
+  ],
+  "faqs": [
+    {
+      "q": "How long does it take to get a knowledge panel?",
+      "a": "There is no fixed timeline — a knowledge panel appears only when Google is confident about your entity, which can take months of consistent signals. Established brands with Wikipedia coverage may already have one; new entities often wait until schema, references, and consistent facts accumulate enough trust."
+    },
+    {
+      "q": "Does a knowledge panel cost money?",
+      "a": "No. You cannot buy a knowledge panel, and Google does not sell them. Any service promising a paid panel is misleading — panels are generated from the Knowledge Graph based on trusted public data. The only real investment is the entity-building work: valid schema, consistent facts, and authoritative mentions."
+    },
+    {
+      "q": "Why did my knowledge panel disappear?",
+      "a": "Panels can vanish when Google loses confidence in the entity — often from conflicting facts across sources, a removed Wikipedia or Wikidata entry, or lost authoritative references. Restoring one means re-establishing consistent, well-sourced signals so Google can reliably reconstruct the entity in its Knowledge Graph."
+    }
+  ],
+  "relatedKeywords": [
+    "knowledge panel",
+    "google knowledge graph",
+    "entity seo",
+    "knowledge panel schema",
+    "brand seo"
+  ],
+  "internalLinks": [
+    { "href": "/", "anchor": "run a free SEO + GEO audit" },
+    { "href": "/blog/what-is-schema-markup", "anchor": "What is schema markup" },
+    { "href": "/blog/what-is-a-featured-snippet", "anchor": "What is a featured snippet" },
+    { "href": "/blog/what-is-a-serp", "anchor": "What is a SERP" },
+    { "href": "/blog/what-is-semantic-seo", "anchor": "What is semantic SEO" },
+    { "href": "/blog/what-is-eeat-in-seo", "anchor": "What is E-E-A-T in SEO" }
+  ],
+  "images": []
+}

@@ -1,0 +1,148 @@
+{
+  "slug": "what-is-a-404-error",
+  "title": "What Is a 404 Error? (And How to Fix It)",
+  "date": "2026-07-14",
+  "updatedAt": "2026-07-14",
+  "tag": "Technical SEO",
+  "cluster": "technical-seo",
+  "keyword": "what is a 404 error",
+  "secondaryKeywords": ["404 not found", "soft 404", "custom 404 page", "301 redirect"],
+  "readTime": 9,
+  "excerpt": "A plain-English guide to what a 404 error is, why it happens, whether it hurts SEO, and how to decide between redirecting, restoring, or leaving it.",
+  "description": "What is a 404 error? An HTTP status code meaning the page was not found. Learn the causes, SEO impact, and how to fix or safely leave a 404.",
+  "tldr": "A 404 error is an HTTP status code that means the server found the site but not the specific page or URL you requested — usually because the page was deleted, the URL changed, or a link is broken or mistyped. A handful of 404s is normal and harmless; the real SEO problem is mass 404s or a valuable page that lost its inbound links. Fix a 404 by redirecting to a replacement, restoring the page, or fixing the broken link — and leave truly gone, low-value URLs to return 404.",
+  "status": "published",
+  "sections": [
+    {
+      "heading": "What is a 404 error and what causes it",
+      "body": [
+        "The short answer to what is a 404 error is that it is the HTTP status code a web server returns when it can reach your site but cannot find the specific page or URL that was requested. The server is effectively saying \"this domain exists, but there is nothing at this address.\" You have seen the result: a **404 Not Found** page instead of the content you expected. The 404 is one of dozens of HTTP status codes, and it belongs to the `4xx` family that signals a client-side problem — the request pointed at something that is not there.",
+        "It helps to separate the two halves of a URL request. The server responds `200 OK` when the page loads normally, `301` or `302` when the page has moved, `500` when the server itself breaks, and `404` when the path simply does not resolve to a page. That distinction matters for SEO because Google treats each code differently: a `404` tells Google \"stop expecting a page here,\" while a `301` tells it \"the page moved, follow me.\"",
+        "Most 404 errors trace back to one of a few everyday causes:",
+        "- **A deleted page** — you removed a post or product and nothing was put in its place.",
+        "- **A changed URL** — you edited a slug, switched CMS, or restructured folders, and the old address no longer exists.",
+        "- **A broken internal link** — a link on your own site points to a page that has since moved or been removed.",
+        "- **A mistyped or malformed link** — a typo in an internal link, a bad link on another site, or a hand-edited URL.",
+        "- **An expired or seasonal page** — a sale, event, or listing that was taken down on purpose.",
+        "Not every 404 is your fault, either. Bots, scrapers, and old bookmarks constantly request URLs that never existed, and browsers routinely ask for files like `/favicon.ico`. Those requests generating 404s are completely normal background noise, not a problem to chase."
+      ]
+    },
+    {
+      "heading": "Soft 404s: the version Google actually dislikes",
+      "body": [
+        "A soft 404 is a page that looks like a \"not found\" page to users but returns a `200 OK` status code to search engines instead of a real `404`. In other words, the content says \"sorry, this page doesn't exist,\" but the server tells Google \"everything is fine, this is a valid page.\" That mismatch is the version of the problem Google explicitly flags in Search Console, because it wastes crawl effort and pollutes the index with empty pages.",
+        "> A true 404 is honest — it tells Google the page is gone. A soft 404 lies about it, and that is exactly why Google treats soft 404s as a quality issue worth reporting.",
+        "Soft 404s usually come from thin or empty pages that technically load: an out-of-stock product page with no content, an empty search-results or category page, a \"no results found\" screen, or a JavaScript app that renders an error message while the server still returns `200`. Google's own algorithms try to detect these and will label them **Soft 404** in the Pages report even though your server never sent a 404 code.",
+        "The fix is to make the status code match reality. If the page is genuinely gone, return a real `404` (or `410 Gone`). If the page should exist but is thin, add real content or redirect it to a relevant page. Never leave a dead page returning `200` — that is the outcome Google penalizes most. You can confirm what code a URL actually returns by running it through the [free SEO + GEO audit](/), which reports the real HTTP status alongside other technical issues."
+      ]
+    },
+    {
+      "heading": "Do 404 errors hurt SEO?",
+      "body": [
+        "A few 404 errors do not hurt your SEO — Google expects them and treats them as a normal part of the web. Pages get removed, URLs change, and links rot; Google's documentation states plainly that returning a 404 for a page that no longer exists is the correct behavior and does not harm the rest of your site. So the common panic over a handful of 404s in Search Console is misplaced.",
+        "The real problems are specific and worth taking seriously. **Mass 404s** — hundreds or thousands appearing after a botched migration or CMS switch — signal that something broke, waste [crawl budget](/blog/what-is-crawl-budget) on dead URLs, and can leave real content unreachable. **Lost link equity** is the other one: if a 404ing page had valuable backlinks or strong internal links, that ranking authority evaporates unless you redirect the URL to a live page. And **broken internal links** pointing at 404s hurt both crawlability and user experience, which is why finding and fixing them is a standard [technical SEO](/blog/what-is-technical-seo) task.",
+        "There is also a user-experience cost that indirectly affects rankings. A visitor who hits a dead-end 404 with no navigation and no helpful next step usually bounces, and a pattern of that behavior is a weak negative signal. A well-designed custom 404 page that offers search, popular links, and a path back into the site turns a dead end into a recoverable moment. So the honest answer to \"do 404s hurt SEO\" is: individually no, but the situations that produce lots of them often do."
+      ]
+    },
+    {
+      "heading": "How to fix a 404 error (decide first, then act)",
+      "body": [
+        "Fixing a 404 error is a decision, not a single action: for each dead URL you choose to redirect it, restore it, or leave it. The mistake most people make is applying one fix to everything — blanket-redirecting every 404 to the homepage, which Google treats as a soft 404 and which frustrates users. Walk each URL through this decision instead:",
+        "[[flowchart]]",
+        "**Redirect it** with a `301` when there is a clear replacement — a new URL after a slug change, a similar product, or a newer article covering the same topic. A 301 is a permanent redirect that passes most of the old page's link equity to the new one, which is why it is the right tool when the URL had backlinks or rankings. Make sure the target is genuinely relevant; redirecting to an unrelated page is treated as a soft 404. See [301 vs 302 redirects](/blog/301-vs-302-redirects) for which code to use.",
+        "**Restore it** when the page 404'd by mistake — an accidental deletion, a migration that dropped content, or a page that still has traffic, links, and search demand. If people and search engines still want that content, the best fix is to bring the page back at its original URL.",
+        "**Leave it as a 404** when the page is truly gone and low value — an expired coupon, a discontinued product with no successor, a spammy old URL, or a page nobody links to. Returning a clean `404` (or `410 Gone` to signal permanence) tells Google to drop it from the index, which is exactly what you want. Do not redirect these anywhere; a real 404 is the correct answer.",
+        "Whichever path you pick, back it with two safeguards: a **custom 404 page** that keeps lost visitors on the site with search and popular links, and a routine to **fix internal links** so your own pages never point at dead URLs. Our guide on [how to find and fix broken links](/blog/how-to-find-and-fix-broken-links) covers the tooling for the second one."
+      ]
+    },
+    {
+      "heading": "Finding 404s and keeping them in check",
+      "body": [
+        "You cannot fix 404s you cannot see, so the first step is monitoring. Google Search Console's **Pages** report lists URLs excluded as \"Not found (404)\" and, separately, as \"Soft 404\" — start there, because those are the errors Google actually encountered while crawling. A dedicated crawler (Screaming Frog, Sitebug, or similar) then finds internal links pointing at 404s across your whole site, and your server or analytics logs reveal which dead URLs are still getting real traffic and are therefore worth restoring or redirecting.",
+        "Prioritize by impact, not by count. A single 404 on a page with backlinks and steady traffic matters far more than a thousand 404s from bots hitting random paths. Sort your list by inbound links and visits, fix the high-value URLs first with redirects or restorations, and let the low-value long tail return clean 404s. Chasing every 404 to zero is wasted effort — a healthy site always has some.",
+        "The efficient way to catch status-code problems before they spread is to audit the URL directly. Paste any page into the [free SEO + GEO audit on the homepage](/) and it reports the exact HTTP status a URL returns, flags soft 404s where the code and content disagree, and surfaces broken internal links — the same signals covered in [why is my page not indexed](/blog/why-is-my-page-not-indexed) when a 404 is the reason a page fell out of Google. Fix what it surfaces and your 404s stay in the harmless-background-noise category where they belong."
+      ]
+    }
+  ],
+  "flowchart": {
+    "title": "Found a 404? How to decide what to do",
+    "steps": [
+      { "title": "Is there a clear replacement page?", "detail": "A moved URL, similar product, or newer article covering the same topic — if yes, 301 redirect to it." },
+      { "title": "Did the page 404 by mistake?", "detail": "Accidental deletion or a migration that dropped content, and it still has traffic or links — if yes, restore it at the original URL." },
+      { "title": "Is the page truly gone and low value?", "detail": "Expired offer, discontinued item, or a URL nobody links to — if yes, leave a clean 404 (or 410) so Google drops it." },
+      { "title": "Add a custom 404 page", "detail": "For every leftover dead end, show search and popular links so visitors can recover instead of bouncing." },
+      { "title": "Fix internal links pointing at it", "detail": "Update or remove your own links to the dead URL so you stop sending users and crawlers into 404s." }
+    ]
+  },
+  "peopleAlsoAsk": [
+    {
+      "q": "What causes a 404 error?",
+      "a": "A 404 error is caused by a request for a page the server cannot find. The most common causes are a deleted page with no replacement, a changed URL or slug, a broken internal link, and a mistyped or malformed link — including bad links from other sites. Bots and old bookmarks requesting URLs that never existed also generate harmless 404s that are not your fault."
+    },
+    {
+      "q": "Do 404 errors hurt SEO?",
+      "a": "A few 404 errors do not hurt SEO — Google expects them and returning a 404 for a removed page is correct behavior. The real problems are mass 404s from a broken migration, lost link equity when a page with backlinks 404s, and broken internal links that harm crawling and user experience. Individual 404s are harmless; the situations that create lots of them usually are not."
+    },
+    {
+      "q": "How do I fix a 404 error?",
+      "a": "Fix a 404 error by deciding per URL: 301 redirect it to a relevant replacement when one exists, restore the page at its original URL if it 404'd by mistake and still has value, or leave a clean 404 when the page is truly gone and low value. Back that with a helpful custom 404 page and by fixing internal links that point at the dead URL."
+    },
+    {
+      "q": "What is a soft 404?",
+      "a": "A soft 404 is a page that looks like a \"not found\" page to users but returns a 200 OK status code to search engines instead of a real 404. The status code disagrees with the content, which wastes crawl budget and pollutes the index, so Google flags it in Search Console. Common sources are empty category pages, out-of-stock products, and JavaScript apps that render errors while the server still returns 200."
+    },
+    {
+      "q": "Should I redirect 404 pages?",
+      "a": "Redirect a 404 page only when there is a genuinely relevant replacement — use a 301 redirect so link equity carries over. Do not blanket-redirect every 404 to the homepage, because Google treats an irrelevant redirect as a soft 404 and it frustrates users. When a page is truly gone with no successor, leaving a clean 404 or 410 is the correct choice, not a redirect."
+    }
+  ],
+  "faqs": [
+    {
+      "q": "What is the difference between a 404 and a 410 status code?",
+      "a": "A 404 means \"not found\" and leaves open the possibility the page could return, while a 410 means \"Gone\" and signals the page has been removed permanently. Both drop a page from Google's index, but 410 tells crawlers to stop checking sooner. Use 410 when you are certain a URL will never come back."
+    },
+    {
+      "q": "Can too many 404 errors slow down my crawl budget?",
+      "a": "Yes — when a site has thousands of 404s, Googlebot spends crawl effort requesting dead URLs instead of your real content. On large sites this can delay how quickly new and updated pages get crawled. A handful of 404s has no measurable effect, but mass 404s after a broken migration are worth cleaning up promptly."
+    },
+    {
+      "q": "Does a custom 404 page help SEO?",
+      "a": "A custom 404 page does not directly boost rankings, but it improves user experience by giving lost visitors search, navigation, and popular links instead of a dead end. That reduces bounces and keeps people on your site. It should still return a real 404 status code — styling the page does not change the code it sends."
+    }
+  ],
+  "relatedKeywords": [
+    "404 error",
+    "soft 404",
+    "404 not found",
+    "fix 404 errors",
+    "custom 404 page",
+    "404 vs 410 status code"
+  ],
+  "internalLinks": [
+    {
+      "href": "/",
+      "anchor": "run a free SEO + GEO audit"
+    },
+    {
+      "href": "/blog/how-to-find-and-fix-broken-links",
+      "anchor": "How to find and fix broken links"
+    },
+    {
+      "href": "/blog/301-vs-302-redirects",
+      "anchor": "301 vs 302 redirects"
+    },
+    {
+      "href": "/blog/what-is-crawl-budget",
+      "anchor": "What is crawl budget"
+    },
+    {
+      "href": "/blog/why-is-my-page-not-indexed",
+      "anchor": "Why is my page not indexed"
+    },
+    {
+      "href": "/blog/what-is-technical-seo",
+      "anchor": "What is technical SEO"
+    }
+  ],
+  "images": []
+}

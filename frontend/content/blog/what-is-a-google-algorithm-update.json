@@ -1,0 +1,168 @@
+{
+  "slug": "what-is-a-google-algorithm-update",
+  "title": "What Is a Google Algorithm Update?",
+  "date": "2026-07-14",
+  "updatedAt": "2026-07-14",
+  "tag": "SEO",
+  "cluster": "seo-basics",
+  "keyword": "what is a Google algorithm update",
+  "secondaryKeywords": ["google core update", "helpful content update", "algorithm update recovery", "google ranking systems"],
+  "readTime": 9,
+  "excerpt": "A plain-English guide to what a Google algorithm update is, why your traffic moved, how to diagnose a drop, and how to recover.",
+  "description": "What is a Google algorithm update? A change to Google's ranking systems. Learn core vs. targeted updates, why traffic moves, and how to diagnose and recover.",
+  "tldr": "A Google algorithm update is a change to the ranking systems Google uses to order search results. Broad core updates re-weigh the whole index, while targeted updates hit specific issues like spam or unhelpful content. Updates reshuffle rankings, which is why traffic drops or jumps. To recover, diagnose against a known update date, improve helpful content and E-E-A-T, and wait for the next refresh.",
+  "status": "published",
+  "sections": [
+    {
+      "heading": "What is a Google algorithm update, in plain English",
+      "body": [
+        "What is a Google algorithm update? It is a change Google makes to the ranking systems that decide the order of search results. Google runs thousands of small tweaks a year and a handful of large, named ones. When a system changes, the same pages get scored differently, so rankings reshuffle — some pages rise, some fall, and the traffic to your site moves with them. There is no single \"algorithm\"; it is a stack of systems (for relevance, quality, spam, freshness, and more) that Google updates continuously.",
+        "The reason updates matter to you is simple: your rankings are not fixed. A page sitting at position 4 for months can drop to position 15 overnight, not because you changed anything, but because Google changed how it judges pages like yours. Understanding **which** kind of update hit you is the whole game, because the fix for a spam update is completely different from the fix for a core update.",
+        "Google splits its updates into two broad families that you need to tell apart:",
+        "- **Broad core updates** re-evaluate the entire index against Google's idea of quality. Nothing is \"wrong\" with your page in a rules sense — it is a relative re-ranking, so a competitor simply out-qualified you.",
+        "- **Targeted updates** address one specific issue: the **spam updates** (link spam, scaled content abuse), the **helpful content** system (now folded into core), and the **reviews** system for product reviews. These reward or demote pages against a defined problem.",
+        "> Rule of thumb: a broad core update means \"other pages got judged better than yours.\" A targeted update means \"your page tripped a specific wire.\" You respond to each differently."
+      ]
+    },
+    {
+      "heading": "Core updates vs. targeted updates",
+      "body": [
+        "A broad core update is the most misunderstood event in SEO because there is nothing to \"fix\" in the usual sense. Google is not penalizing you; it is recalculating quality across billions of pages, and your relative position shifts. Google's own guidance says pages that drop after a core update did nothing wrong — the fix is to make the page genuinely more useful and helpful than the pages that now outrank it. That is a content and E-E-A-T problem, not a technical one.",
+        "Targeted updates are the opposite: they hunt for a defined pattern. The **spam updates** demote link schemes, cloaking, and scaled content made to game rankings. The **helpful content** signal (originally a standalone update, now integrated into the core ranking system) demotes content written for search engines rather than people — think thin affiliate pages, AI-spun articles with no first-hand experience, or pages that answer nothing new. The **reviews** system rewards product reviews with real testing and hands-on evidence over regurgitated spec sheets.",
+        "Here is how the two families differ in practice, and what each one asks of you:",
+        "[[table]]",
+        "The practical takeaway: before you touch anything, figure out which family moved you. Rewriting your whole site for \"quality\" when you were actually caught by a link-spam update wastes weeks. The diagnosis below tells you which lever to pull. If you suspect a manual action rather than an algorithmic shift, that is a separate path covered in [how to recover from a Google penalty](/blog/how-to-recover-from-google-penalty)."
+      ]
+    },
+    {
+      "heading": "Why your traffic dropped (or jumped)",
+      "body": [
+        "When traffic moves sharply, an algorithm update is one of several possible causes — and jumping to conclusions is the classic mistake. A sudden drop can just as easily be a tracking bug, a seasonal dip, a manual action, a technical error (a `noindex` tag shipped by accident, a robots.txt block, a server outage), or a SERP layout change like a new AI Overview eating your clicks. Before blaming an update, rule those out.",
+        "The signature of an algorithm-driven change is specific: the drop is **sharp** (not a slow slide), it **lines up with a known update date**, and it hits **rankings and organic clicks together** while direct and referral traffic stay flat. If your Search Console impressions and average position fell off a cliff on the exact day a core update rolled out, you have your answer. If traffic dropped but rankings held, it is probably a SERP-feature or tracking issue, not an algorithm hit.",
+        "A jump works the same way in reverse. If a core update rewards helpful, experience-rich content and you have been quietly building that, you can wake up to a step-change in traffic. Those gains are the flip side of someone else's loss — the update re-ranked a query set and you came out ahead.",
+        "Use this flow to separate an algorithm update from everything else that moves traffic:",
+        "[[flowchart]]",
+        "The key discipline is to **correlate before you react**. Note the exact date the change started in [Google Search Console](/blog/how-to-do-an-seo-audit), then check it against the published rollout dates for Google's updates. A match is strong evidence; no match means look elsewhere first."
+      ]
+    },
+    {
+      "heading": "How to diagnose which update hit you",
+      "body": [
+        "Diagnosing an algorithm update is detective work with two clues: **timing** and **scope**. Timing means pinning down the exact day your metrics changed and matching it to a known update rollout — Google announces core, spam, and reviews updates and gives start/end dates, so a drop that begins mid-rollout is almost certainly that update. Scope means asking *which* pages moved: is it the whole site, one section, or a single content type?",
+        "Scope is what tells the update families apart. Work through it like this:",
+        "- **Whole-site, gradual across a core update window** → a broad core update re-judged your overall quality. The answer is site-wide helpfulness and [E-E-A-T](/blog/what-is-eeat-in-seo), not one page.",
+        "- **Only thin, search-first, or AI-generated pages dropped** → the helpful-content signal. Improve or prune pages that add nothing beyond what already ranks. See [does AI content hurt SEO](/blog/does-ai-content-hurt-seo).",
+        "- **Only product-review pages dropped** → the reviews system. Add first-hand testing, original photos, pros/cons, and comparisons.",
+        "- **Pages with bought links or spun content dropped** → a spam update. Clean up the offending links and content.",
+        "Confirm the timing in Search Console's **Performance** report: switch to the full date range, watch for the cliff, and compare the before/after query set. To make scope obvious, run a [free SEO + GEO audit](/) on the pages that lost the most — it surfaces weak content, missing author/E-E-A-T signals, and thin answers that core and helpful-content updates specifically target, so you can see whether the affected pages share a fixable flaw.",
+        "> Write down your diagnosis before making changes. \"July core update, whole-site quality\" and \"March spam update, three link-heavy pages\" lead to completely different work plans. Guessing wrong costs you a full update cycle."
+      ]
+    },
+    {
+      "heading": "How to recover — and why there's no instant fix",
+      "body": [
+        "Recovery from an algorithm update is a rebuild, not a switch you flip — and this is the part people hate to hear. Even after you fix the underlying issue, rankings usually do not return until Google runs the **next** update or refresh of the same system, which can be weeks or months away. Google re-scores pages against the new criteria on its own schedule; you cannot force a re-evaluation. So the honest recovery timeline is: fix now, recover on Google's clock.",
+        "What you actually do depends on the diagnosis, but for the most common case — a core or helpful-content hit — the work is to make pages **genuinely more helpful than what now outranks them**. That means:",
+        "- **Deepen the content**: add first-hand experience, specifics, examples, and answers competitors skip, so the page is the most useful result, not a rehash.",
+        "- **Strengthen E-E-A-T**: show a real, credentialed author, cite sources, and make expertise visible — critical for [YMYL topics](/blog/what-is-eeat-in-seo).",
+        "- **Prune or merge dead weight**: thin, redundant, or search-first pages can drag a whole site down under the helpful-content signal; consolidate or remove them.",
+        "- **Fix the specific trigger** for spam or reviews updates: remove manipulative links, add hands-on testing evidence.",
+        "The strategic shift behind every recent update is the same: Google increasingly rewards **content that helps a real person** over content built to satisfy an algorithm. The old tricks — keyword stuffing, thin pages at scale, spun articles — are exactly what the newer systems demote. So the durable recovery play, and the one that survives the *next* update too, is to build [topical authority](/blog/how-to-improve-website-ranking-on-google) with content only you can write. Keep it current, since [freshness](/blog/content-freshness-for-seo) is its own signal, then wait for the refresh. There is no shortcut, but there is a reliable path.",
+        "Improve the pages, confirm the fixes with an [SEO audit](/blog/how-to-do-an-seo-audit), and let the next update do its job."
+      ]
+    }
+  ],
+  "flowchart": {
+    "title": "Diagnose a traffic change: is it an algorithm update?",
+    "steps": [
+      { "title": "Traffic dropped or jumped sharply", "detail": "Note the exact date the change started in Google Search Console — sharp, not gradual." },
+      { "title": "Rule out the non-update causes", "detail": "Check for tracking bugs, seasonality, a manual action, noindex/robots errors, outages, or a new SERP/AI Overview layout." },
+      { "title": "Does the date match a known update?", "detail": "Compare your cliff to Google's published core, spam, and reviews rollout dates. A match is strong evidence." },
+      { "title": "Identify the scope", "detail": "Whole site (core), thin/AI pages (helpful content), review pages (reviews system), or link-heavy pages (spam)?" },
+      { "title": "Fix the matching cause", "detail": "Improve helpfulness and E-E-A-T for core; prune thin content; add first-hand testing; clean up spam links." },
+      { "title": "Wait for the next refresh", "detail": "Rankings recover when Google re-runs the system on its own schedule — there is no instant fix." }
+    ]
+  },
+  "comparisonTable": {
+    "caption": "Broad core updates vs. targeted updates: how to tell them apart",
+    "headers": ["Aspect", "Broad core update", "Targeted update (spam / helpful / reviews)"],
+    "rows": [
+      ["What it changes", "Re-weighs quality across the whole index", "Targets one defined problem"],
+      ["Why you moved", "A competitor out-qualified you (relative)", "Your page tripped a specific wire"],
+      ["Is anything 'wrong'?", "No — nothing to fix in a rules sense", "Yes — a fixable pattern (spam, thin content)"],
+      ["Typical scope", "Site-wide, many queries", "Specific pages or content types"],
+      ["How to respond", "Improve overall helpfulness + E-E-A-T", "Fix the exact trigger, then improve"],
+      ["Recovery timing", "Next core update", "Next refresh of that system"]
+    ]
+  },
+  "peopleAlsoAsk": [
+    {
+      "q": "What is the latest Google algorithm update?",
+      "a": "Google runs continuous updates, but the named, high-impact ones are its broad core updates (several per year), plus periodic spam updates and product-reviews updates. Google announces major rollouts on its Search Status Dashboard with start and end dates. Rather than chasing the latest name, check whether your traffic changed on a published rollout date — that tells you if an update affected you far more reliably than the headline."
+    },
+    {
+      "q": "What is a Google core update?",
+      "a": "A Google core update is a broad change to Google's main ranking systems that re-evaluates quality across the entire index. It is not a penalty: pages that drop did nothing wrong in a rules sense — other pages were simply judged more helpful. Recovery comes from making your content genuinely more useful and trustworthy than what now outranks it, then waiting for the next core update to re-score the page."
+    },
+    {
+      "q": "How do I recover from an algorithm update?",
+      "a": "First diagnose which update hit you by matching your traffic drop to a known rollout date and checking which pages moved. Then fix the matching cause: improve helpfulness and E-E-A-T for a core update, prune thin content for a helpful-content hit, add first-hand testing for reviews, or remove spam links. Rankings recover only when Google re-runs that system, so there is no instant fix — improve the pages and wait for the next refresh."
+    },
+    {
+      "q": "How often does Google update its algorithm?",
+      "a": "Google makes thousands of ranking changes every year — most are tiny and unannounced. The ones that reshuffle rankings noticeably are the named updates: broad core updates roughly every few months, plus periodic spam and product-reviews updates. You do not need to track every tweak; you only need to know the dates of the major named updates so you can correlate them with any sharp change in your own traffic."
+    },
+    {
+      "q": "What is the helpful content update?",
+      "a": "The helpful content update introduced a signal that demotes content written primarily for search engines rather than people — thin pages, spun or low-effort AI content, and articles that add nothing beyond what already ranks. Google has since folded it into the core ranking system. To pass it, publish content with first-hand experience and genuine value, and prune pages that exist only to catch search traffic."
+    }
+  ],
+  "faqs": [
+    {
+      "q": "Can I speed up recovery after an algorithm update?",
+      "a": "Not directly. You can fix the underlying issue immediately, but Google only re-scores pages when it next runs that ranking system, which can take weeks or months. Making changes early means you are ready when the refresh arrives — but there is no button that forces a re-evaluation."
+    },
+    {
+      "q": "Do algorithm updates ever get reversed?",
+      "a": "Google occasionally tunes an update after rollout, but you should not count on a reversal to restore your rankings. Treat a drop as a signal that the new criteria judged your pages harshly, and improve the content. Waiting for Google to undo an update is a losing strategy."
+    },
+    {
+      "q": "Are algorithm updates the same as a Google penalty?",
+      "a": "No. An algorithm update is an automated re-ranking that applies to everyone, while a penalty (manual action) is a human reviewer flagging your site for guideline violations, which appears in Search Console. Penalties require a reconsideration request; algorithm drops require better content and patience."
+    }
+  ],
+  "relatedKeywords": [
+    "google algorithm update",
+    "google core update",
+    "helpful content update",
+    "algorithm penalty",
+    "google ranking updates"
+  ],
+  "internalLinks": [
+    {
+      "href": "/",
+      "anchor": "run a free SEO + GEO audit"
+    },
+    {
+      "href": "/blog/how-to-improve-website-ranking-on-google",
+      "anchor": "How to improve website ranking"
+    },
+    {
+      "href": "/blog/what-is-eeat-in-seo",
+      "anchor": "What is E-E-A-T in SEO"
+    },
+    {
+      "href": "/blog/does-ai-content-hurt-seo",
+      "anchor": "Does AI content hurt SEO"
+    },
+    {
+      "href": "/blog/content-freshness-for-seo",
+      "anchor": "Content freshness for SEO"
+    },
+    {
+      "href": "/blog/how-to-recover-from-google-penalty",
+      "anchor": "How to recover from a Google penalty"
+    }
+  ],
+  "images": []
+}

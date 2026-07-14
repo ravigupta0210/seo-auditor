@@ -1,0 +1,145 @@
+{
+  "slug": "does-https-affect-seo",
+  "title": "Does HTTPS Affect SEO? (SSL & Rankings)",
+  "date": "2026-07-14",
+  "updatedAt": "2026-07-14",
+  "tag": "Technical SEO",
+  "cluster": "technical-seo",
+  "keyword": "does HTTPS affect SEO",
+  "secondaryKeywords": ["HTTP vs HTTPS", "SSL certificate", "Let's Encrypt", "301 redirect", "ranking signal"],
+  "readTime": 9,
+  "excerpt": "Yes, HTTPS affects SEO — it has been a confirmed Google ranking signal since 2014 and is now table stakes. Here's why, plus how to migrate safely.",
+  "description": "Does HTTPS affect SEO? Yes — it's been a confirmed Google ranking signal since 2014 and is now table stakes. Learn why and how to migrate safely.",
+  "tldr": "Yes, HTTPS affects SEO. Google confirmed HTTPS as a lightweight ranking signal in 2014, and it is now table stakes because Chrome labels plain HTTP pages as \"Not secure.\" HTTPS also protects user data, preserves referral analytics, and builds trust. SSL/TLS certificates are free via Let's Encrypt, so there is no cost reason to stay on HTTP.",
+  "status": "published",
+  "sections": [
+    {
+      "heading": "Does HTTPS affect SEO?",
+      "body": [
+        "Yes — does HTTPS affect SEO is one of the few questions in search with a clear answer: Google confirmed **HTTPS as a ranking signal in August 2014**, and it has only grown more important since. It is a lightweight signal on its own, but HTTPS is now **table stakes** rather than an edge, because Chrome and every other major browser label plain HTTP pages as **\"Not secure,\"** which quietly kills trust and conversions before ranking even enters the conversation.",
+        "HTTPS is the secure version of HTTP. It encrypts the connection between a visitor's browser and your server using an **SSL/TLS certificate**, so data — logins, form entries, payment details — cannot be read or tampered with in transit. The padlock you see in the address bar means that encryption is active and the certificate is valid.",
+        "The practical takeaway is that the ranking boost is small, but the cost of *not* having HTTPS is large. You lose a minor ranking signal, you inherit a browser warning that scares visitors away, and you break other things SEO depends on — which is why HTTPS is a foundational part of [technical SEO](/blog/what-is-technical-seo) rather than an optional upgrade. The rest of this guide covers how big the effect is, why it matters beyond ranking, and how to migrate without losing traffic."
+      ]
+    },
+    {
+      "heading": "HTTP vs HTTPS and how big the ranking effect is",
+      "body": [
+        "The difference between **HTTP and HTTPS** is encryption. HTTP sends data as plain text that anyone on the network path — a shared Wi-Fi, an ISP, an attacker — can read or modify. HTTPS wraps that same traffic in TLS encryption, so it is unreadable in transit and verified as coming from your genuine server. HTTPS also unlocks the modern web platform: HTTP/2, service workers, and many browser APIs simply refuse to run over insecure HTTP.",
+        "How big is the ranking effect itself? **Small and direct.** Google described the 2014 HTTPS signal as affecting fewer than 1% of queries and said it carries less weight than high-quality content. So HTTPS will not push a weak page up the results — but as a sitewide baseline that is trivially free to earn, there is no reason to leave that signal on the table. Think of it the way you would page-experience factors: a tiebreaker that compounds with everything else, similar to how [Core Web Vitals affect SEO](/blog/what-are-core-web-vitals).",
+        "> HTTPS is a small ranking signal but a large trust signal. In 2026, being flagged \"Not secure\" costs you far more traffic than the ranking bump ever added.",
+        "An **SSL/TLS certificate** is what makes HTTPS possible, and it is **free**. Services like **Let's Encrypt** issue automated, auto-renewing certificates at no cost, and most hosts (and platforms like Vercel, Netlify, or Cloudflare) provision and renew them for you with one click. The old excuse that certificates were expensive or fiddly no longer holds."
+      ]
+    },
+    {
+      "heading": "Why HTTPS matters beyond rankings",
+      "body": [
+        "The ranking signal is the smallest reason to use HTTPS. The bigger reasons are trust, data protection, and analytics integrity — all of which feed SEO indirectly.",
+        "- **Trust and conversions.** Chrome marks HTTP pages \"Not secure\" in the address bar, and any form on an HTTP page triggers an explicit warning. Visitors abandon pages that look unsafe, and bounces and lost conversions hurt the engagement signals search engines watch.",
+        "- **Data protection.** HTTPS encrypts everything in transit, so passwords, form submissions, and payment data cannot be intercepted. For any site with a login or checkout, this is non-negotiable, and it is a baseline expectation for E-E-A-T and user safety.",
+        "- **Referral data in analytics.** When a secure HTTPS site links to an insecure HTTP site, browsers strip the referrer, so that traffic shows up as \"direct\" instead of crediting the source. Being on HTTPS preserves accurate referral data in Google Analytics — data you rely on to measure SEO performance.",
+        "- **Access to modern features.** HTTP/2, HTTP/3, and many performance and PWA capabilities require HTTPS, and some of those directly help the speed metrics covered in [how to improve page speed](/blog/how-to-improve-page-speed).",
+        "Put together, HTTPS is less a ranking hack and more the entry ticket to a professional, trustworthy site. Skipping it undercuts nearly every other investment you make in SEO."
+      ]
+    },
+    {
+      "heading": "How to migrate from HTTP to HTTPS safely",
+      "body": [
+        "Migrating from HTTP to HTTPS is safe when done in order, and the single most important step is **301 redirects** — a permanent redirect from every HTTP URL to its HTTPS equivalent. The 301 tells Google the move is permanent and passes ranking signals to the new secure URLs, so you keep the authority you have earned instead of starting over. Skip or misconfigure the redirects and you risk duplicate content and a traffic drop.",
+        "Follow this sequence to migrate without losing rankings:",
+        "[[flowchart]]",
+        "A few details make the difference between a clean migration and a messy one. Update all **canonical tags** to point to the HTTPS versions — see [what is a canonical tag](/blog/what-is-a-canonical-tag) — and fix any internal links, images, scripts, and stylesheets that still call `http://`, because a single insecure asset triggers a **mixed-content** warning that voids the padlock. Then add the new HTTPS property in Google Search Console, resubmit your sitemap, and keep the HTTP-to-HTTPS 301s in place permanently.",
+        "As for the common worry — **does HTTPS slow the site down?** No. The tiny cost of the TLS handshake is more than offset by HTTP/2 and HTTP/3, which are only available over HTTPS, so secure sites are usually *faster*, not slower. Encryption is not a performance excuse to avoid the migration."
+      ]
+    },
+    {
+      "heading": "Verify HTTPS is set up correctly",
+      "body": [
+        "Getting a certificate installed is only half the job — a broken HTTPS setup can hurt SEO more than plain HTTP. After migrating, confirm four things: the certificate is valid and not expired, every HTTP URL 301-redirects to HTTPS, there are no mixed-content assets loading over `http://`, and canonicals and internal links all point to the secure version.",
+        "The fastest way to check all of this at once is to audit the live URL. Paste your HTTPS address into the [free SEO + GEO audit on our homepage](/) — it flags certificate and security-header issues, insecure or redirect problems, and the on-page signals that a migration can disturb, in a single no-signup pass. Catching a stray mixed-content asset or a missing redirect here saves you from a slow, silent ranking leak.",
+        "HTTPS is one item on a larger checklist. Once it is confirmed, work through the rest of your foundation with [how to do an SEO audit](/blog/how-to-do-an-seo-audit) and the broader tactics in [how to improve your website ranking on Google](/blog/how-to-improve-website-ranking-on-google). Secure by default is simply where every serious site starts in 2026."
+      ]
+    }
+  ],
+  "flowchart": {
+    "title": "How to migrate from HTTP to HTTPS without losing rankings",
+    "steps": [
+      { "title": "Get an SSL/TLS certificate", "detail": "Provision a free certificate via Let's Encrypt or your host's one-click SSL." },
+      { "title": "Install and configure it", "detail": "Enable HTTPS on the server and confirm the padlock shows on a secure URL." },
+      { "title": "Fix mixed content", "detail": "Update internal links, images, scripts, and canonicals from http:// to https://." },
+      { "title": "Add 301 redirects", "detail": "Permanently redirect every HTTP URL to its HTTPS equivalent and keep them forever." },
+      { "title": "Update Search Console & sitemaps", "detail": "Add the HTTPS property, resubmit the sitemap, and update analytics settings." },
+      { "title": "Verify with an audit", "detail": "Re-crawl the HTTPS site to catch bad redirects, expired certs, or mixed content." }
+    ]
+  },
+  "peopleAlsoAsk": [
+    {
+      "q": "Is HTTPS a Google ranking factor?",
+      "a": "Yes. Google confirmed HTTPS as a ranking signal in August 2014. It is a lightweight factor — Google said it affects a small share of queries and carries less weight than quality content — but it is a genuine, sitewide signal. Because an SSL certificate is free and the migration is one-time, there is no practical reason not to earn it. In 2026 HTTPS is a baseline expectation rather than a competitive edge."
+    },
+    {
+      "q": "What is the difference between HTTP and HTTPS?",
+      "a": "HTTP sends data between the browser and server as plain text that anyone on the network path can read or alter. HTTPS encrypts that same traffic with an SSL/TLS certificate, so it cannot be intercepted or tampered with, and it verifies the connection comes from your genuine server. The padlock in the address bar signals an active, valid HTTPS connection; \"Not secure\" signals plain HTTP."
+    },
+    {
+      "q": "Does an SSL certificate help SEO?",
+      "a": "Yes, indirectly and directly. Installing a valid SSL/TLS certificate is what enables HTTPS, which is a confirmed Google ranking signal. Just as importantly, it removes the \"Not secure\" browser warning that scares visitors away, protects user data, and preserves referral data in analytics. SSL certificates are free through Let's Encrypt, so the SEO and trust benefits come at no cost."
+    },
+    {
+      "q": "How do I migrate from HTTP to HTTPS?",
+      "a": "Get an SSL/TLS certificate (free via Let's Encrypt), install it on your server, then update all internal links, images, scripts, and canonical tags to use https:// to avoid mixed-content warnings. Add permanent 301 redirects from every HTTP URL to its HTTPS version, add the HTTPS property in Google Search Console, resubmit your sitemap, and verify the result with an audit to catch broken redirects."
+    },
+    {
+      "q": "Does HTTPS affect page speed?",
+      "a": "No — HTTPS does not slow sites down in practice. The small overhead of the TLS handshake is more than offset by HTTP/2 and HTTP/3, which browsers only allow over HTTPS, so secure sites are usually faster than their HTTP equivalents. Performance is not a valid reason to avoid migrating; if anything, moving to HTTPS unlocks speed features you cannot use otherwise."
+    }
+  ],
+  "faqs": [
+    {
+      "q": "Do I need HTTPS on a small blog with no logins?",
+      "a": "Yes. Even without logins, Chrome labels HTTP pages \"Not secure,\" which erodes trust and can cost you visitors. HTTPS also preserves referral data in analytics and unlocks modern browser features. Since certificates are free via Let's Encrypt, there is no reason for any site to stay on HTTP."
+    },
+    {
+      "q": "Will migrating to HTTPS hurt my rankings temporarily?",
+      "a": "Done correctly with permanent 301 redirects from every HTTP URL to its HTTPS equivalent, migration passes ranking signals through and causes little to no lasting drop. Problems only arise from missing redirects, mixed content, or wrong canonicals — which is why verifying the setup with an audit afterward matters."
+    },
+    {
+      "q": "What is mixed content and why does it break HTTPS?",
+      "a": "Mixed content is when an HTTPS page loads some resources — images, scripts, or stylesheets — over insecure HTTP. Browsers flag or block these, and it removes the padlock even though the page itself is secure. Fix it by updating every asset URL to https:// during migration."
+    }
+  ],
+  "relatedKeywords": [
+    "https seo",
+    "ssl certificate seo",
+    "http vs https",
+    "https ranking factor",
+    "secure website seo",
+    "migrate http to https"
+  ],
+  "internalLinks": [
+    {
+      "href": "/",
+      "anchor": "run a free SEO + GEO audit"
+    },
+    {
+      "href": "/blog/what-is-technical-seo",
+      "anchor": "What is technical SEO"
+    },
+    {
+      "href": "/blog/how-to-improve-website-ranking-on-google",
+      "anchor": "How to improve website ranking"
+    },
+    {
+      "href": "/blog/how-to-improve-page-speed",
+      "anchor": "How to improve page speed"
+    },
+    {
+      "href": "/blog/how-to-do-an-seo-audit",
+      "anchor": "How to do an SEO audit"
+    },
+    {
+      "href": "/blog/what-is-a-canonical-tag",
+      "anchor": "What is a canonical tag"
+    }
+  ],
+  "images": []
+}

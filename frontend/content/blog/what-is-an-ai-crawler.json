@@ -1,0 +1,136 @@
+{
+  "slug": "what-is-an-ai-crawler",
+  "title": "What Is an AI Crawler? (GPTBot, ClaudeBot & More)",
+  "date": "2026-07-14",
+  "updatedAt": "2026-07-14",
+  "tag": "GEO",
+  "cluster": "geo",
+  "keyword": "what is an AI crawler",
+  "secondaryKeywords": ["GPTBot", "ClaudeBot", "AI bot user agents", "training vs retrieval crawler"],
+  "readTime": 9,
+  "excerpt": "AI crawlers are the bots that feed ChatGPT, Claude, and Perplexity. Here is what they are, the major ones by user-agent, and how to allow or block them.",
+  "description": "What is an AI crawler? A bot that fetches pages to train AI models or source cited AI answers. Meet GPTBot, ClaudeBot, PerplexityBot and how to control them.",
+  "tldr": "An AI crawler is an automated bot that fetches web pages to feed AI systems — either to train models like GPT and Claude, or to retrieve live sources so AI answers can cite them. Major ones include GPTBot and OAI-SearchBot (OpenAI), ClaudeBot (Anthropic), PerplexityBot, Google-Extended, Bytespider, and CCBot. You allow or block them in robots.txt and llms.txt.",
+  "status": "published",
+  "sections": [
+    {
+      "heading": "What is an AI crawler?",
+      "body": [
+        "The short answer to **what is an AI crawler** is this: an AI crawler is an automated bot that fetches web pages so that AI systems can read them. Some do it to build the training datasets behind large language models like GPT and Claude; others fetch pages live, at the moment someone asks a question, so an AI answer engine can quote your site and link to it. Same basic mechanic as any web crawler — request a URL, read the HTML, follow the links — but the destination is an AI product instead of a classic search index.",
+        "It helps to split AI crawlers into two jobs, because you often want to treat them differently:",
+        "- **Training crawlers** collect large volumes of text to train or fine-tune a model. Examples: `GPTBot`, `ClaudeBot`, `CCBot`. Content they grab may influence a model's future answers, but you rarely get a direct citation or click.",
+        "- **Retrieval crawlers** fetch pages in real time to ground an AI answer in current sources — and they usually cite and link the page. Examples: `OAI-SearchBot`, `PerplexityBot`, `ChatGPT-User`. These are the ones that can send you traffic.",
+        "> Rule of thumb: blocking a training crawler protects your content from model training; blocking a retrieval crawler removes you from AI answers and the citations they carry. They are not the same decision.",
+        "This distinction is the heart of [generative engine optimization](/blog/what-is-generative-engine-optimization) — the practice of making your content easy for AI engines to find, read, and cite. If you want AI Overviews, ChatGPT, or Perplexity to mention your brand, the retrieval crawlers have to be able to reach you."
+      ]
+    },
+    {
+      "heading": "The major AI crawlers and their user-agents",
+      "body": [
+        "You identify an AI crawler the same way you identify Googlebot: by its **user-agent string** in your server logs. Each operator publishes the exact strings and, usually, the IP ranges they crawl from, so you can allow or block them precisely. Here are the ones worth knowing in 2026:",
+        "[[table]]",
+        "A few things this table makes clear. First, one company can run several crawlers — OpenAI alone operates `GPTBot` (training), `OAI-SearchBot` (search retrieval), and `ChatGPT-User` (fetched when a user pastes or asks about a URL). Blocking one does not block the others. Second, `Google-Extended` is not a crawler at all in the normal sense — it is a control token you place in robots.txt to opt out of Gemini training and grounding, while regular Googlebot keeps crawling for classic search. Third, `CCBot` belongs to Common Crawl, a nonprofit whose open dataset is a training source for many models, so it is often the most consequential single bot to think about.",
+        "If you want the full copy-paste list of strings and how to act on each one, see [how to block AI crawlers](/blog/how-to-block-ai-crawlers)."
+      ]
+    },
+    {
+      "heading": "How AI crawlers find your content",
+      "body": [
+        "AI crawlers discover pages through the same three channels as any crawler — there is no secret AI-only pipeline. Understanding these channels tells you exactly where to make your content reachable.",
+        "- **Links.** Crawlers follow hyperlinks from page to page. A page with no internal or external links pointing at it is effectively invisible, which is why solid internal linking matters as much for AI as it does for Google.",
+        "- **Sitemaps.** An `XML sitemap` referenced in your [robots.txt](/blog/what-is-robots-txt) hands crawlers a clean list of your canonical URLs. Retrieval crawlers lean on this to find fresh, indexable pages fast.",
+        "- **Common Crawl.** Many training crawlers do not crawl the open web directly at all — they consume Common Crawl's periodic snapshot of billions of pages. If `CCBot` reached your site months ago, that copy can end up in training data even if you block other bots today.",
+        "There is a fourth, GEO-specific channel emerging: the [llms.txt file](/blog/how-to-write-an-llms-txt-file), a plain-text file at your domain root that points AI systems to your most important, cleanly formatted content. It is a proposed standard rather than a universal one, but it signals intent and curates what you would like an AI to read first.",
+        "The practical takeaway: if a page is not linked, not in your sitemap, and blocked from crawling, no AI engine can cite it. Reachability is step one of earning [AI citations](/blog/what-are-ai-citations)."
+      ]
+    },
+    {
+      "heading": "AI crawler vs Googlebot: what's different",
+      "body": [
+        "An AI crawler and Googlebot fetch pages the same way, but they exist for different reasons, and that difference changes how you should treat them. **Googlebot builds a search index that returns ranked blue links; an AI crawler feeds a model that generates or grounds a written answer.**",
+        "Three practical differences follow from that:",
+        "- **JavaScript rendering.** Googlebot renders JavaScript before indexing. Most AI crawlers today fetch the raw HTML and do little or no rendering, so content injected purely by client-side JavaScript may be invisible to them. Server-rendered or static HTML is the safer bet for AI visibility.",
+        "- **The payoff.** Ranking in Google earns a click; being read by a retrieval AI crawler earns a citation inside an answer, which may or may not be clicked. Being read by a training crawler earns neither directly — it shapes future model behavior.",
+        "- **Control surface.** You manage Googlebot mostly through robots.txt, meta robots, and Search Console. AI crawlers add newer levers: per-bot robots.txt rules, `Google-Extended`, and llms.txt. Blocking Googlebot removes you from Google; blocking every AI crawler removes you from the AI answer layer while leaving classic search intact.",
+        "One trap to avoid: **cloaking**. Serving a full page to Googlebot but a blank or stripped page to `GPTBot` or `PerplexityBot` — whether on purpose or through a misconfigured firewall or CDN rule — quietly erases you from AI answers even though your Google rankings look fine. It is a common, invisible failure."
+      ]
+    },
+    {
+      "heading": "How to allow or block AI crawlers",
+      "body": [
+        "You control AI crawlers primarily through `robots.txt`, the plain-text file at the root of your domain that names each bot and tells it what it may fetch. To block a specific crawler, add a matching block:",
+        "- `User-agent: GPTBot` then `Disallow: /` blocks OpenAI's training crawler across the whole site.",
+        "- Repeat the pattern for `ClaudeBot`, `CCBot`, `Bytespider`, or any user-agent you want to exclude.",
+        "- Use `Google-Extended` in the same file to opt out of Gemini training without touching normal Googlebot.",
+        "To *allow* AI crawlers, the safest move is to do nothing that blocks them — no catch-all `Disallow`, no firewall rule that trips on AI user-agents — and to publish a [well-formed llms.txt file](/blog/how-to-write-an-llms-txt-file) pointing to your best content. Remember that robots.txt is a request, not a wall: reputable crawlers (GPTBot, ClaudeBot, PerplexityBot) honor it, but honoring it is voluntary.",
+        "The hard part is verifying that your intended policy is actually what crawlers experience. This is where our tool helps: the [free SEO + GEO audit on the homepage](/) probes your site with real AI user-agents, so it catches when a page is accidentally blocked or **cloaked** — served differently to `GPTBot` and `PerplexityBot` than to a normal browser. Paste any URL and it reports which AI crawlers can reach you, whether your robots.txt does what you think, and where your content falls short of being citable. Fix what it flags and your allow/block policy matches reality instead of your assumptions."
+      ]
+    }
+  ],
+  "comparisonTable": {
+    "caption": "The major AI crawlers in 2026: user-agent, operator, and what they do",
+    "headers": ["Crawler (user-agent)", "Operator", "Purpose", "Type"],
+    "rows": [
+      ["GPTBot", "OpenAI", "Collects text to train and improve GPT models", "Training"],
+      ["OAI-SearchBot", "OpenAI", "Indexes pages to cite in ChatGPT search results", "Retrieval"],
+      ["ChatGPT-User", "OpenAI", "Fetches a page when a user asks ChatGPT about it", "Retrieval (user-triggered)"],
+      ["ClaudeBot", "Anthropic", "Collects text to train Claude models", "Training"],
+      ["PerplexityBot", "Perplexity", "Indexes pages to cite in Perplexity answers", "Retrieval"],
+      ["Google-Extended", "Google", "Opt-out token for Gemini training and grounding", "Control token"],
+      ["Bytespider", "ByteDance (TikTok)", "Collects data for ByteDance AI products", "Training"],
+      ["CCBot", "Common Crawl", "Builds the open dataset many models train on", "Training (dataset)"]
+    ]
+  },
+  "peopleAlsoAsk": [
+    {
+      "q": "What are examples of AI crawlers?",
+      "a": "The most common AI crawlers in 2026 are GPTBot, OAI-SearchBot, and ChatGPT-User (all OpenAI), ClaudeBot (Anthropic), PerplexityBot (Perplexity), Bytespider (ByteDance), and CCBot (Common Crawl). Google-Extended is a related control token rather than a crawler. You identify each by its user-agent string in your server logs, and each operator publishes the exact strings so you can allow or block them individually."
+    },
+    {
+      "q": "What is GPTBot?",
+      "a": "GPTBot is OpenAI's training crawler — the bot that fetches public web pages to help train and improve GPT models. It identifies itself with the user-agent GPTBot and honors robots.txt, so you can block it with a User-agent: GPTBot, Disallow: / rule. GPTBot is separate from OAI-SearchBot and ChatGPT-User, which retrieve pages for ChatGPT's live search answers, so blocking GPTBot does not remove you from those."
+    },
+    {
+      "q": "Should I block AI crawlers?",
+      "a": "It depends on which crawler and your goal. Blocking training crawlers like GPTBot, ClaudeBot, and CCBot keeps your content out of model training but does not affect SEO. Blocking retrieval crawlers like OAI-SearchBot and PerplexityBot removes you from AI answers and the citations that send traffic. Most sites that want AI visibility should block selectively — or not at all — rather than blanket-blocking every AI bot."
+    },
+    {
+      "q": "How do AI crawlers find my content?",
+      "a": "AI crawlers find content through three channels: hyperlinks they follow from page to page, XML sitemaps referenced in your robots.txt, and Common Crawl's open snapshot of the web, which many training models consume instead of crawling directly. A newer channel is llms.txt, a file that points AI systems to your key pages. If a page is unlinked, missing from your sitemap, and blocked, no AI engine can reach it."
+    },
+    {
+      "q": "What is the difference between an AI crawler and Googlebot?",
+      "a": "Googlebot builds a search index that returns ranked links; an AI crawler feeds a language model that writes or grounds an answer. Googlebot renders JavaScript, while most AI crawlers read only raw HTML. Ranking in Google earns a click; being read by a retrieval AI crawler earns a citation in an AI answer. You can block AI crawlers while leaving Googlebot — and your classic search rankings — completely untouched."
+    }
+  ],
+  "faqs": [
+    {
+      "q": "Do AI crawlers obey robots.txt?",
+      "a": "Reputable AI crawlers like GPTBot, ClaudeBot, and PerplexityBot honor robots.txt, so per-bot Disallow rules do work for them. But robots.txt is a voluntary standard, not enforcement — less scrupulous scrapers can ignore it, so treat it as a request rather than a wall."
+    },
+    {
+      "q": "Can I see AI crawlers in my server logs?",
+      "a": "Yes. AI crawlers announce themselves with distinct user-agent strings such as GPTBot, ClaudeBot, and PerplexityBot, so you can filter your server or CDN logs to see which bots visit, how often, and which pages they fetch. Operators also publish IP ranges you can verify against."
+    },
+    {
+      "q": "Does blocking AI crawlers hurt my SEO?",
+      "a": "No. Blocking AI crawlers such as GPTBot or ClaudeBot has no effect on your Google rankings, because they are separate from Googlebot. The only cost is AI visibility — blocking retrieval crawlers removes you from ChatGPT, Perplexity, and AI Overview citations, but your classic search performance is unchanged."
+    }
+  ],
+  "relatedKeywords": [
+    "ai crawler",
+    "GPTBot",
+    "ClaudeBot",
+    "PerplexityBot",
+    "ai bot user agents"
+  ],
+  "internalLinks": [
+    { "href": "/", "anchor": "run a free SEO + GEO audit" },
+    { "href": "/blog/how-to-block-ai-crawlers", "anchor": "How to block AI crawlers" },
+    { "href": "/blog/what-is-generative-engine-optimization", "anchor": "What is generative engine optimization" },
+    { "href": "/blog/how-to-write-an-llms-txt-file", "anchor": "How to write an llms.txt file" },
+    { "href": "/blog/what-are-ai-citations", "anchor": "What are AI citations" },
+    { "href": "/blog/what-is-robots-txt", "anchor": "What is robots.txt" }
+  ],
+  "images": []
+}

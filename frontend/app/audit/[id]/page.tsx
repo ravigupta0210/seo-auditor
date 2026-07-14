@@ -6,6 +6,8 @@ import { ScoreRing } from '@/app/_components/ScoreRing';
 import { SiteHeader } from '@/app/_components/SiteHeader';
 import { SiteFooter } from '@/app/_components/SiteFooter';
 import { ShareButton } from '@/app/_components/ShareButton';
+import { CopyLinkButton } from '@/app/_components/CopyLinkButton';
+import { SITE_URL } from '@/lib/seo';
 
 interface PageProps {
   params: Promise<{ id: string }>;
@@ -68,7 +70,10 @@ export default async function ReportPage({ params }: PageProps) {
       <SiteHeader />
       <main style={{ maxWidth: 980, margin: '0 auto', padding: '32px 24px 60px' }}>
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
-        <Link href="/" style={{ fontSize: 13, color: 'var(--text-muted)' }}>← New audit</Link>
+        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', gap: 12 }}>
+          <Link href="/" style={{ fontSize: 13, color: 'var(--text-muted)' }}>← New audit</Link>
+          <CopyLinkButton url={`${SITE_URL}/audit/${report.id}`} />
+        </div>
 
         <header style={{ margin: '20px 0 28px' }}>
           <span className="tag" style={{ marginBottom: 12 }}>

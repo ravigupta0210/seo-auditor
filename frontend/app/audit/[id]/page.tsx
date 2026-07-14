@@ -5,6 +5,7 @@ import { getReport, sevColor, type Check, type PageReport } from '@/lib/api';
 import { ScoreRing } from '@/app/_components/ScoreRing';
 import { SiteHeader } from '@/app/_components/SiteHeader';
 import { SiteFooter } from '@/app/_components/SiteFooter';
+import { ShareButton } from '@/app/_components/ShareButton';
 
 interface PageProps {
   params: Promise<{ id: string }>;
@@ -97,6 +98,10 @@ export default async function ReportPage({ params }: PageProps) {
               </div>
             ))}
           </div>
+        </div>
+
+        <div style={{ marginBottom: 22 }}>
+          <ShareButton reportId={report.id} host={host} score={report.summary.overall} variant="primary" />
         </div>
 
         <CategoryBreakdown summary={report.summary} />

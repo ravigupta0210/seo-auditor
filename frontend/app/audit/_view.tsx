@@ -8,6 +8,7 @@ import { ScoreRing } from '../_components/ScoreRing';
 import { SiteHeader } from '../_components/SiteHeader';
 import { EmailReportModal } from './_EmailReportModal';
 import { ConversionCTA } from './_ConversionCTA';
+import { ShareButton } from '../_components/ShareButton';
 import { track } from '@/lib/analytics';
 
 interface Summary {
@@ -124,9 +125,12 @@ export function AuditView() {
           <>
             <SummaryBar summary={phase.summary} />
             <ConversionCTA summary={phase.summary} url={url} />
-            <p style={{ fontSize: 13, color: 'var(--text-muted)', marginBottom: 18 }}>
-              <Link href={`/audit/${phase.auditId}`}>View shareable report →</Link>
-            </p>
+            <div style={{ display: 'flex', alignItems: 'center', gap: 16, flexWrap: 'wrap', marginBottom: 18 }}>
+              <ShareButton reportId={phase.auditId} host={host} score={phase.summary.overall} />
+              <Link href={`/audit/${phase.auditId}`} style={{ fontSize: 13, color: 'var(--text-muted)' }}>
+                View shareable report →
+              </Link>
+            </div>
           </>
         )}
 

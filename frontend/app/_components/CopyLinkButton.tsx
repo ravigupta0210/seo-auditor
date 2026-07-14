@@ -14,6 +14,13 @@ const CheckIcon = () => (
     <path d="M20 6 9 17l-5-5" />
   </svg>
 );
+// Classic two-page "copy" icon.
+const CopyDocIcon = () => (
+  <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+    <rect x="8" y="8" width="13" height="13" rx="2" />
+    <path d="M4 16c-1.1 0-2-.9-2-2V5c0-1.1.9-2 2-2h9c1.1 0 2 .9 2 2" />
+  </svg>
+);
 
 /**
  * Compact "Copy link" button. Copies the given URL (falls back to the current
@@ -63,7 +70,7 @@ export function CopyLinkButton({
           color: copied ? 'var(--pass)' : 'inherit',
         }}
       >
-        {copied ? <CheckIcon /> : <LinkIcon />}
+        {copied ? <CheckIcon /> : <CopyDocIcon />}
       </button>
     );
   }

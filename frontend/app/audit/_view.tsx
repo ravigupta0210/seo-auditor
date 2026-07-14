@@ -124,13 +124,13 @@ export function AuditView() {
         {phase.kind === 'done' && (
           <>
             <SummaryBar summary={phase.summary} />
-            <ConversionCTA summary={phase.summary} url={url} />
             <div style={{ display: 'flex', alignItems: 'center', gap: 16, flexWrap: 'wrap', marginBottom: 18 }}>
-              <ShareButton reportId={phase.auditId} host={host} score={phase.summary.overall} />
+              <ShareButton reportId={phase.auditId} host={host} score={phase.summary.overall} variant="primary" />
               <Link href={`/audit/${phase.auditId}`} style={{ fontSize: 13, color: 'var(--text-muted)' }}>
                 View shareable report →
               </Link>
             </div>
+            <ConversionCTA summary={phase.summary} url={url} />
           </>
         )}
 

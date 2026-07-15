@@ -1,0 +1,157 @@
+{
+  "slug": "what-is-people-also-ask",
+  "title": "What Is People Also Ask (PAA) in Google?",
+  "date": "2026-07-15",
+  "updatedAt": "2026-07-15",
+  "tag": "SEO",
+  "cluster": "seo-basics",
+  "keyword": "what is People Also Ask",
+  "secondaryKeywords": ["PAA box", "related questions", "how to rank in PAA", "featured snippet"],
+  "readTime": 9,
+  "excerpt": "People Also Ask is Google's expanding box of related questions. Here is how it works and how to get your pages inside it.",
+  "description": "What is People Also Ask? It is Google's expanding box of related questions. Learn how the PAA box works, how Google picks questions, and how to rank in it.",
+  "tldr": "People Also Ask (PAA) is a SERP feature that shows a box of related questions, each of which expands to reveal a short answer pulled from a ranking page. It expands dynamically as you click, drawing new questions from live search data. Rank in it by targeting real questions and answering them concisely and answer-first.",
+  "status": "published",
+  "sections": [
+    {
+      "heading": "What is People Also Ask and how the box works",
+      "body": [
+        "What is People Also Ask? It is a Google SERP feature that displays a box of related questions between the organic results, and each question expands to reveal a short answer drawn from a page that ranks for that query. You will usually see it labeled \"People also ask\" with three or four collapsed questions, each with a downward arrow. Click one and it opens an answer snippet — a paragraph, list, or table — plus a link to the source page and a title.",
+        "The defining behavior of the PAA box is that it is **dynamic**. When you expand one question, Google appends two to four brand-new questions to the bottom of the box, generated from related searches in real time. In practice the list is close to endless: keep clicking and Google keeps feeding you deeper, more specific questions. This is why PAA is one of the most valuable SERP features to target — a single query can surface dozens of question slots, and each slot is a citation opportunity for your content.",
+        "Each expanded answer is pulled the same way a [featured snippet](/blog/what-is-a-featured-snippet) is: Google finds a passage on a ranking page that directly answers the question and lifts it into the box. That means the answer you see is not written by Google — it is extracted verbatim from a real page, with a link back to it. If your page owns the clearest answer to a question, it can be the one Google quotes.",
+        "> The PAA box is essentially a self-expanding cluster of featured snippets. Win one answer and you appear alongside the top organic results without ranking #1."
+      ]
+    },
+    {
+      "heading": "How Google chooses People Also Ask questions",
+      "body": [
+        "Google chooses People Also Ask questions from the queries real users type around a topic, then ranks candidate answers by how directly a page addresses each question. The questions are not random — they come from Google's understanding of the topic graph: reformulations of your search, follow-up questions searchers ask next, and adjacent subtopics that share intent. If people who search your keyword also search five related questions, those are the questions most likely to appear.",
+        "Two signals decide **which page** fills each answer slot:",
+        "- **Relevance of a specific passage.** Google looks for a self-contained block of text on a ranking page that answers the exact question. A page can win a PAA answer even if it is not #1 overall, as long as one passage is the best match.",
+        "- **Existing ranking strength.** In practice the answers almost always come from pages already ranking on page one for the underlying query, so topical authority and standard ranking factors still gate entry.",
+        "Because the box is generated live, the questions shift over time and by location, device, and even the search session. Two people searching the same term can see different PAA questions. This is normal — treat PAA as a moving target and focus on covering the *cluster* of questions around your topic rather than chasing one exact phrase. Matching the underlying [search intent](/blog/what-is-search-intent) of the cluster matters more than guessing today's exact wording."
+      ]
+    },
+    {
+      "heading": "How to rank in People Also Ask",
+      "body": [
+        "To rank in People Also Ask, put the target question in a heading and follow it immediately with a concise, self-contained answer that Google can lift verbatim. The mechanics are the same as winning a featured snippet, and one structure does most of the work: **question heading, then answer-first paragraph.** Here is the workflow that reliably gets pages into the box:",
+        "[[flowchart]]",
+        "Start by **finding the real questions**. Expand the PAA box for your keyword and keep clicking to surface the deeper questions; each one is a heading you can target. Tools help, but the live box is the most honest source of what Google is actually asking.",
+        "Then **answer concisely and answer-first**. Open the section with a direct sentence that restates the question's subject and answers it in 40 to 60 words — the length Google typically extracts. A section that begins \"This depends on several factors...\" gives Google nothing to quote; one that begins \"People Also Ask is a Google SERP feature that...\" is instantly liftable. This is the same island-test discipline that wins AI citations.",
+        "Reinforce the pattern with **FAQ structure and schema**. Grouping genuine questions with tight answers — and marking them up so Google understands the Q&A relationship — makes your page easy to parse for PAA. See [how to add FAQ schema](/blog/how-to-add-faq-schema) for the markup. None of this works without **topical authority**: pages already ranking on page one for the query are the ones Google pulls from, so the underlying content still has to be strong, as covered in [how to write a blog post that ranks](/blog/how-to-write-a-blog-post-that-ranks).",
+        "The fastest way to check whether your page is structured to win PAA answers is to audit it. Paste the URL into the [free SEO + GEO audit on the homepage](/) — it flags weak, non-answer-first openings and content that is not structured as extractable Q&A, which are the two most common reasons a page never appears in the box."
+      ]
+    },
+    {
+      "heading": "Do People Also Ask boxes help SEO?",
+      "body": [
+        "Yes — People Also Ask boxes help SEO in two concrete ways: visibility and snippet pipeline. First, appearing in PAA plants your brand and a clickable link high on the page even when you rank at position 6 or 8, so you capture attention and clicks you would otherwise miss. On queries where PAA sits near the top, the box can earn more visibility than several organic positions below it.",
+        "Second, PAA is a **feeder for featured snippets**. The answer-first, question-targeted content that wins a PAA slot is the same content that wins the featured snippet above the organic results — and Google often promotes the same passage between the two. Optimizing for PAA therefore compounds: one well-structured section can land you the featured snippet, several PAA answers, and citations in [AI Overviews](/blog/ai-overviews-vs-featured-snippets), all from the same work.",
+        "There is a real trade-off to acknowledge. Because PAA answers reveal the information right on the SERP, some users get what they need without clicking — the same zero-click dynamic that affects featured snippets. But the net is still positive for most pages: a link inside the box is free real estate above competitors, and questions that need more than a 50-word answer still drive the click. The goal is to be *in* the box, then write answers complete enough to satisfy Google yet incomplete enough to reward a click.",
+        "PAA is only one of many boxes competing for space on the page. To see how it fits alongside the rest, read [what are SERP features](/blog/what-are-serp-features)."
+      ]
+    },
+    {
+      "heading": "PAA vs featured snippet: how they differ",
+      "body": [
+        "People Also Ask and featured snippets are close cousins — both extract a direct answer from a ranking page — but they occupy different slots and behave differently. A featured snippet is a single, prominent answer box that usually sits at position zero above the organic results, tied to your main query. A PAA box is a stack of *multiple* related questions, each collapsed until clicked, and it can appear anywhere on the page while expanding endlessly as users interact with it.",
+        "The table below breaks down the practical differences and what each means for how you optimize:",
+        "[[table]]",
+        "The strategic takeaway: **optimize once, win both.** The question-heading-plus-answer-first structure that earns a featured snippet is exactly what earns PAA answers, so you never have to choose. Build every informational section around a real question and a tight, standalone answer, mark up your genuine FAQs with schema, and you position the page to capture the snippet, multiple PAA slots, and AI citations from a single pass — the highest-leverage on-page work in 2026."
+      ]
+    }
+  ],
+  "flowchart": {
+    "title": "How to get your content into the People Also Ask box",
+    "steps": [
+      { "title": "Find the real questions", "detail": "Expand the PAA box for your keyword and keep clicking to surface the deeper related questions to target." },
+      { "title": "Turn each question into a heading", "detail": "Use the exact question phrasing as an H2 or H3 so Google can match it to the query." },
+      { "title": "Answer first, in 40-60 words", "detail": "Open with a direct, self-contained sentence Google can lift verbatim into the box." },
+      { "title": "Add FAQ structure and schema", "detail": "Group genuine Q&A and mark it up so Google reads the question-answer relationship." },
+      { "title": "Earn topical authority", "detail": "PAA answers come from page-one pages, so the underlying content must already rank." }
+    ]
+  },
+  "comparisonTable": {
+    "caption": "People Also Ask vs. featured snippet: how the two SERP features compare",
+    "headers": ["Aspect", "People Also Ask (PAA)", "Featured snippet"],
+    "rows": [
+      ["What it is", "A box of related questions that each expand", "A single answer box for the main query"],
+      ["Position", "Anywhere on the page, often mid-results", "Position zero, above organic results"],
+      ["Number of answers", "Many — expands dynamically as users click", "One answer per query"],
+      ["Trigger", "Related and follow-up questions", "The primary search query"],
+      ["How to win it", "Question heading + answer-first passage", "Question heading + answer-first passage"],
+      ["Best for", "Capturing multiple question slots per topic", "Owning the top of a high-volume query"]
+    ]
+  },
+  "peopleAlsoAsk": [
+    {
+      "q": "What is the People Also Ask box?",
+      "a": "The People Also Ask box is a Google SERP feature that shows a list of related questions between the organic results. Each question is collapsed until you click it, then expands to reveal a short answer extracted from a ranking page, plus a link to the source. Clicking one question loads more, so the box grows dynamically the longer you interact with it."
+    },
+    {
+      "q": "How do I rank in People Also Ask?",
+      "a": "Rank in People Also Ask by using the target question as a heading, then answering it immediately in a concise, self-contained paragraph of 40 to 60 words that Google can lift verbatim. Add FAQ structure and schema, target the real questions the box surfaces when you expand it, and make sure the underlying page already ranks on page one for the topic."
+    },
+    {
+      "q": "How does Google choose People Also Ask questions?",
+      "a": "Google chooses People Also Ask questions from the related and follow-up queries real users search around a topic, generated live from its topic graph. The questions shift by location, device, and session, so two users can see different ones. Google then fills each answer slot with the passage from a page-one page that most directly matches the question."
+    },
+    {
+      "q": "Do People Also Ask boxes help SEO?",
+      "a": "Yes. People Also Ask boxes help SEO by giving your page visibility and a clickable link high on the results page even when you rank below the top spots. PAA answers also feed featured snippets and AI Overviews, so the answer-first content that wins a PAA slot compounds across features. The trade-off is some zero-click searches, but the net effect is usually positive."
+    },
+    {
+      "q": "What is the difference between PAA and featured snippets?",
+      "a": "A featured snippet is a single answer box at position zero tied to your main query, while People Also Ask is a stack of multiple related questions that each expand and keep multiplying as users click. Both extract answers from ranking pages using the same question-plus-answer-first structure, so optimizing for one positions your page to win the other."
+    }
+  ],
+  "faqs": [
+    {
+      "q": "Why do People Also Ask questions keep changing?",
+      "a": "PAA questions change because Google generates them live from related searches, and they vary by location, device, and search session. The box also expands as you click, appending new questions each time. Treat it as a moving target and cover the whole question cluster rather than one exact phrase."
+    },
+    {
+      "q": "Can appearing in People Also Ask hurt my traffic?",
+      "a": "It can cause some zero-click searches, since the answer shows on the SERP. But a link inside the box is free visibility above competitors, and questions needing more than a short answer still drive clicks. Write answers complete enough for Google yet incomplete enough to reward a visit."
+    },
+    {
+      "q": "Do I need FAQ schema to appear in People Also Ask?",
+      "a": "No, FAQ schema is not required to appear in People Also Ask — Google can extract an answer from any well-structured passage. But grouping genuine questions with tight answers and marking them up makes the Q&A relationship explicit and easier to parse, which improves your odds of being the page Google quotes."
+    }
+  ],
+  "relatedKeywords": [
+    "people also ask",
+    "paa box",
+    "google paa",
+    "related questions",
+    "serp features"
+  ],
+  "internalLinks": [
+    {
+      "href": "/",
+      "anchor": "run a free SEO + GEO audit"
+    },
+    {
+      "href": "/blog/what-is-a-featured-snippet",
+      "anchor": "What is a featured snippet"
+    },
+    {
+      "href": "/blog/how-to-add-faq-schema",
+      "anchor": "How to add FAQ schema"
+    },
+    {
+      "href": "/blog/what-is-search-intent",
+      "anchor": "What is search intent"
+    },
+    {
+      "href": "/blog/what-are-serp-features",
+      "anchor": "What are SERP features"
+    },
+    {
+      "href": "/blog/how-to-write-a-blog-post-that-ranks",
+      "anchor": "How to write a blog post that ranks"
+    }
+  ],
+  "images": []
+}

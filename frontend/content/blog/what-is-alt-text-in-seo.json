@@ -1,0 +1,137 @@
+{
+  "slug": "what-is-alt-text-in-seo",
+  "title": "What Is Alt Text in SEO? (And How to Write It)",
+  "date": "2026-07-15",
+  "updatedAt": "2026-07-15",
+  "tag": "Technical SEO",
+  "cluster": "technical-seo",
+  "keyword": "what is alt text",
+  "secondaryKeywords": ["image alt text", "alt attribute", "image SEO", "accessibility"],
+  "readTime": 8,
+  "excerpt": "Alt text is the written description of an image that screen readers and search engines rely on — here is what it is and how to write it well.",
+  "description": "What is alt text? It is the alt attribute that describes an image for screen readers and search engines. Learn how to write it well, with examples.",
+  "tldr": "Alt text is the `alt` attribute on an image tag that describes what the image shows. Screen readers read it aloud for visually impaired users, and search engines use it to understand and rank images. Good alt text is short, specific, and describes the image naturally — no \"image of\" filler and no keyword stuffing.",
+  "status": "published",
+  "sections": [
+    {
+      "heading": "What is alt text and where does it live?",
+      "body": [
+        "So what is alt text? Alt text (short for \"alternative text\") is the `alt` attribute on an HTML `<img>` tag — a short written description of what the image shows. It exists so that anyone or anything that cannot see the image still understands it: a screen reader reads it aloud to a blind user, a browser displays it when the image fails to load, and a search engine uses it to figure out what the picture is about.",
+        "In code it looks like this:",
+        "`<img src=\"golden-retriever-puppy.jpg\" alt=\"A golden retriever puppy sitting in tall grass\">`",
+        "The `src` is the file the browser fetches; the `alt` is the fallback meaning. If the connection drops, the file 404s, or the user is on a screen reader, the `alt` text is all that survives — so it has to carry the image's purpose on its own.",
+        "Alt text is one of the oldest accessibility features on the web and it has quietly become an SEO signal too. Because Google cannot actually \"see\" a photo the way a person does, the `alt` attribute is one of the strongest clues it has about an image's subject — which is why it shows up in nearly every image-optimization and [technical SEO](/blog/what-is-technical-seo) checklist."
+      ]
+    },
+    {
+      "heading": "Why alt text matters for SEO and accessibility",
+      "body": [
+        "Alt text matters for two audiences at once: people using assistive technology and the crawlers that index your site. Getting it right serves both, which is rare in SEO.",
+        "- **Accessibility.** Around one in forty people worldwide lives with a visual impairment, and many browse with a screen reader that announces each image by reading its `alt` text. An image with no `alt` is announced as a meaningless \"image\" or, worse, by reading the file name aloud. Good alt text is the difference between a usable page and a confusing one — and in many regions (ADA, WCAG, the European Accessibility Act) it is a legal requirement, not a nicety.",
+        "- **Image SEO.** Descriptive alt text helps your images rank in Google Images and Google Lens, which drive real traffic for recipe, product, travel, and how-to content. It is the primary text signal Google associates with a picture, so it directly affects which searches surface your image.",
+        "- **Context for the whole page.** Search engines and AI answer engines read alt text as part of understanding the page's topic, not just the image. Relevant, natural alt text reinforces what a page is about — one more signal that the content matches a query.",
+        "- **A fallback when images break.** Slow connections, blocked hotlinks, and broken CDNs all happen. When the image will not load, the `alt` text renders in its place so the page still makes sense.",
+        "> Alt text is the rare optimization where doing the accessible thing and the SEO thing are the same thing. Write it for the human using a screen reader and the search benefit follows."
+      ]
+    },
+    {
+      "heading": "How to write good alt text (with examples)",
+      "body": [
+        "Good alt text describes the image accurately and concisely, in plain language, as if you were describing the picture to someone on the phone. Aim for a short phrase — roughly 5 to 15 words — that captures what matters about the image in context.",
+        "Follow these rules:",
+        "- **Be specific and descriptive.** \"A barista pouring latte art into a white ceramic cup\" beats \"coffee.\" Describe what is actually in the frame.",
+        "- **Skip \"image of\" and \"picture of.\"** Screen readers already announce that it is an image, so those words waste the listener's time. Start with the subject.",
+        "- **Keep it concise.** If you need two sentences, the detail probably belongs in a caption or the body text, not the `alt`.",
+        "- **Use keywords naturally, and only when they fit.** If your target term genuinely describes the image, include it. Never stuff keywords — Google treats stuffed alt text as spam, and it makes the page hostile for screen-reader users.",
+        "- **Match the context.** The same photo of a shoe might be \"red running shoe\" on a gallery page and \"Nike Pegasus 41 in crimson, side profile\" on a product page. Describe what is relevant to that page.",
+        "- **Do not repeat nearby text.** If a caption already names the image, the alt text should not just echo it word for word.",
+        "Here is how good and bad alt text compare on the same images:",
+        "[[table]]",
+        "For a deeper walkthrough of file names, compression, and dimensions alongside alt text, see [how to optimize images for SEO](/blog/how-to-optimize-images-for-seo)."
+      ]
+    },
+    {
+      "heading": "Alt text vs. title attribute vs. file name",
+      "body": [
+        "These three are easy to confuse because they all attach text to an image, but they do different jobs. Only one of them — the `alt` attribute — is essential.",
+        "- **Alt text (`alt`)** is the accessible, indexable description. Screen readers announce it and search engines index it. This is the one that matters.",
+        "- **Title attribute (`title`)** produces the little tooltip that appears when you hover a mouse over the image. It is not reliably announced by screen readers, is invisible on touch devices, and carries little to no SEO weight. Treat it as optional decoration, never as a substitute for `alt`.",
+        "- **File name** (`red-running-shoe.jpg` vs. `IMG_4821.jpg`) is a minor secondary signal. Descriptive, hyphen-separated file names help a little, but they are far weaker than alt text. Rename files where it is easy; do not obsess over it.",
+        "The practical takeaway: always write the `alt`, give descriptive file names when convenient, and mostly ignore the `title` attribute. As part of your broader [on-page SEO](/blog/what-is-on-page-seo), alt text does the heavy lifting."
+      ]
+    },
+    {
+      "heading": "When to leave alt text empty (decorative images)",
+      "body": [
+        "Not every image needs a description. When an image is purely decorative — it adds no information and exists only for visual styling — the correct move is an empty `alt` attribute: `alt=\"\"`. This is intentional and correct, not a mistake.",
+        "An **empty `alt`** (`alt=\"\"`) tells a screen reader to skip the image entirely, so the user is not interrupted by a pointless announcement. Use it for background flourishes, decorative dividers, spacer graphics, and icons that sit next to text that already says the same thing.",
+        "A **missing `alt`** (no attribute at all) is different and worse: many screen readers fall back to reading the file name aloud, so a user hears \"I-M-G underscore 4 8 2 1 dot j-p-g.\" Always include the attribute — either with a real description or deliberately empty.",
+        "The quick test: **does the image convey information the surrounding text does not?** If yes, describe it. If it is there only to look nice, give it `alt=\"\"`. Informative images (charts, product photos, diagrams, screenshots) always earn a real description; a divider line never does.",
+        "The fastest way to find images missing alt text across a whole page is to [run a free SEO + GEO audit](/) — paste any URL and it flags every image with a missing or empty `alt` attribute, alongside the rest of your on-page and [Core Web Vitals](/blog/what-are-core-web-vitals) checks. It is a good habit to pair with your regular [SEO-friendly content](/blog/how-to-write-seo-friendly-content) workflow so nothing ships without a description."
+      ]
+    }
+  ],
+  "comparisonTable": {
+    "caption": "Bad vs. good alt text for the same image",
+    "headers": ["Image", "Bad alt text", "Good alt text", "Why"],
+    "rows": [
+      ["A product photo of a red running shoe", "\"shoe\"", "\"Red Nike Pegasus running shoe, side profile\"", "Specific and describes what the buyer sees"],
+      ["A team photo in an office", "\"image of our team\"", "\"Six-person marketing team standing in the office lobby\"", "Drops the \"image of\" filler, describes the scene"],
+      ["A bar chart of monthly traffic", "\"chart.png\"", "\"Bar chart showing organic traffic rising from 2k to 9k over six months\"", "Conveys the data, not just that it is a chart"],
+      ["A keyword-stuffed example", "\"cheap shoes buy shoes running shoes best shoes\"", "\"Red running shoe on a white background\"", "Natural description; stuffing reads as spam"],
+      ["A decorative divider line", "\"line\"", "\"\" (empty alt)", "Purely decorative, so screen readers should skip it"]
+    ]
+  },
+  "peopleAlsoAsk": [
+    {
+      "q": "What is alt text in SEO?",
+      "a": "In SEO, alt text is the `alt` attribute on an image that describes what the image shows to search engines and screen readers. Because Google cannot see a picture directly, the alt text is its main clue about the image's subject, which helps the image rank in Google Images and reinforces what the whole page is about. It also makes the page accessible to visually impaired users."
+    },
+    {
+      "q": "Does alt text help SEO?",
+      "a": "Yes. Alt text helps SEO in three ways: it lets your images rank in Google Images and Lens, it gives search engines context about the page's topic, and it improves accessibility, which is itself a quality signal. The gains are modest per image but add up across a site — and because alt text is also required for accessibility, it is effort you should spend regardless."
+    },
+    {
+      "q": "How do I write good alt text?",
+      "a": "Write good alt text by describing the image accurately in a short, natural phrase of roughly 5 to 15 words. Start with the subject, skip \"image of\" and \"picture of,\" include a keyword only when it genuinely fits, and never stuff keywords. Match the description to the page context, and leave the alt empty (`alt=\"\"`) for purely decorative images."
+    },
+    {
+      "q": "What is the difference between alt text and a title attribute?",
+      "a": "Alt text (the `alt` attribute) is the accessible, indexable description that screen readers announce and search engines read — it is essential. The title attribute only produces a hover tooltip, is ignored on touch devices and by most screen readers, and carries little SEO value. Always write the alt attribute; treat the title attribute as optional and never use it as a replacement."
+    },
+    {
+      "q": "Do all images need alt text?",
+      "a": "Every image should have an `alt` attribute, but not every image needs a description. Informative images — product photos, charts, diagrams, screenshots — need a real description. Purely decorative images should have an empty alt (`alt=\"\"`) so screen readers skip them. The one thing to avoid is omitting the attribute entirely, because many screen readers then read the file name aloud."
+    }
+  ],
+  "faqs": [
+    {
+      "q": "How long should alt text be?",
+      "a": "Keep alt text to a short phrase, roughly 5 to 15 words or under about 125 characters. Some screen readers cut off longer descriptions, and extra length rarely adds value. If an image needs more explanation, put that detail in a caption or the body text rather than the alt attribute."
+    },
+    {
+      "q": "Can I put keywords in alt text?",
+      "a": "Yes, but only when the keyword genuinely describes the image. A natural keyword that fits the picture is fine and helps image SEO. Stuffing multiple keywords into alt text is treated as spam by Google and makes the page worse for screen-reader users, so describe the image first and let relevant keywords appear naturally."
+    },
+    {
+      "q": "What happens if an image has no alt text?",
+      "a": "If an image has no alt attribute, screen readers often read its file name aloud, which is confusing for visually impaired users, and search engines lose an important clue about the image's subject. The image also shows nothing meaningful if it fails to load. Always include the attribute, even if you leave it empty for decorative images."
+    }
+  ],
+  "relatedKeywords": [
+    "alt text",
+    "image alt text",
+    "alt attribute",
+    "image seo",
+    "accessibility alt text"
+  ],
+  "internalLinks": [
+    { "href": "/", "anchor": "run a free SEO + GEO audit" },
+    { "href": "/blog/how-to-optimize-images-for-seo", "anchor": "How to optimize images for SEO" },
+    { "href": "/blog/what-is-on-page-seo", "anchor": "What is on-page SEO" },
+    { "href": "/blog/what-is-technical-seo", "anchor": "What is technical SEO" },
+    { "href": "/blog/how-to-write-seo-friendly-content", "anchor": "How to write SEO-friendly content" },
+    { "href": "/blog/what-are-core-web-vitals", "anchor": "What are Core Web Vitals" }
+  ],
+  "images": []
+}

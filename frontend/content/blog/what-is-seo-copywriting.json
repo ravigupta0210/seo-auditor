@@ -1,0 +1,143 @@
+{
+  "slug": "what-is-seo-copywriting",
+  "title": "What Is SEO Copywriting? (2026 Guide)",
+  "date": "2026-07-15",
+  "updatedAt": "2026-07-15",
+  "tag": "SEO",
+  "cluster": "content-links",
+  "keyword": "what is SEO copywriting",
+  "secondaryKeywords": ["seo copywriter", "search intent", "conversion copywriting", "geo copywriting"],
+  "readTime": 9,
+  "excerpt": "SEO copywriting is writing that both ranks in search and persuades readers to act. Here is how it differs from plain copywriting and SEO writing, plus a process.",
+  "description": "What is SEO copywriting? It is writing content that ranks in search and persuades readers to act — here is how it works and how to do it well in 2026.",
+  "tldr": "SEO copywriting is writing content that both ranks in search engines and persuades readers to take action. It blends keyword and search-intent research with clear structure and conversion-focused writing. In 2026 it also means satisfying AI search — opening with direct, quotable answers so generative engines can cite you while readers stay and convert.",
+  "status": "published",
+  "sections": [
+    {
+      "heading": "What is SEO copywriting?",
+      "body": [
+        "So, what is SEO copywriting? **SEO copywriting is the craft of writing content that both ranks in search engines and persuades the reader to take action.** It sits at the intersection of two disciplines: SEO, which gets the page found, and copywriting, which gets the reader to keep reading, trust you, and convert. A page that ranks but doesn't persuade wastes the traffic; a page that persuades but doesn't rank never gets the traffic. SEO copywriting does both jobs at once.",
+        "That dual goal is what separates it from its neighbors. Plain **copywriting** is optimized for persuasion — landing pages, ads, emails — with no obligation to rank in Google. Plain **SEO writing** is optimized to rank — it nails keywords, structure, and search intent — but often reads flat and rarely drives a next step. SEO copywriting refuses to trade one for the other: it earns the ranking *and* moves the reader toward a conversion.",
+        "In practice, an SEO copywriter is asking three questions about every piece at the same time: *Will search engines (and now AI engines) understand and surface this? Will a human actually want to read it? And does it lead the reader to do something next?* Holding all three in your head at once is the whole skill.",
+        "> Ranking gets the click. Copywriting earns the outcome after the click. SEO copywriting is the discipline that refuses to choose between them."
+      ]
+    },
+    {
+      "heading": "How SEO copywriting differs from copywriting and SEO writing",
+      "body": [
+        "SEO copywriting differs from regular copywriting by adding everything a page needs to be found: keyword and search-intent research, a scannable structure of headings, natural keyword use, and the E-E-A-T signals that build trust with search engines. A brilliant sales page nobody can find in Google isn't doing SEO copywriting — it's doing copywriting. The search layer is the addition.",
+        "It differs from plain SEO writing by adding persuasion and conversion. A lot of \"SEO content\" is technically optimized and completely forgettable — it answers the query, then trails off with no reason to stay or act. SEO copywriting keeps the reader engaged with a strong hook, concrete specifics, and a clear next step, so the ranking actually produces business results instead of a bounce.",
+        "You can see the three disciplines side by side:",
+        "- **Copywriting** — Goal: persuade and convert. Optimized for: humans. Weak spot: may never rank or get found.",
+        "- **SEO writing** — Goal: rank in search. Optimized for: search engines. Weak spot: often flat, low-converting, easy to ignore.",
+        "- **SEO copywriting** — Goal: rank *and* convert. Optimized for: search engines, AI engines, and humans. Trade-off: harder to do well, which is exactly why it's valuable.",
+        "The practical implication: SEO copywriting starts from [search intent](/blog/what-is-search-intent), not from a clever angle. You research what the searcher actually wants, give them that first, and only then layer in the persuasion and the call to action. Get the order wrong — persuasion before the answer — and you lose both the ranking and the reader. The broader craft of writing pages that satisfy both goals is covered in [how to write SEO-friendly content](/blog/how-to-write-seo-friendly-content)."
+      ]
+    },
+    {
+      "heading": "The SEO copywriting process, step by step",
+      "body": [
+        "Good SEO copywriting is a repeatable process, not a burst of inspiration. Run the same steps every time and you stop gambling on whether a given piece happens to rank or convert. Here is the workflow at a glance:",
+        "[[flowchart]]",
+        "Each step maps to a specific skill. **Keyword and intent research** comes first because it decides everything downstream: the phrase you target and the *reason* behind it dictate the format, the angle, and the promise you can credibly make. Confirm intent by studying the pages already ranking — if they are all how-to guides, a sales page won't win the slot. Do this properly with [free keyword research](/blog/how-to-do-keyword-research-for-free).",
+        "**Structure and answer-first drafting** come next. Outline with question-style H2 headings that mirror how people search, then open the piece — and every section — with a direct, self-contained answer before you elaborate. This serves skimmers, wins featured snippets, and gives AI engines a clean passage to quote. Only after the answer is delivered do you layer in the persuasion.",
+        "**Natural keyword use** means weaving your primary phrase and its related terms into titles, headings, and the first hundred words without stuffing. Modern search understands meaning, so covering the topic thoroughly with related concepts — the idea behind [semantic SEO](/blog/what-is-semantic-seo) — matters more than hitting a keyword-density number that no algorithm has used in years.",
+        "Finally, **compelling headlines and a clear CTA**. The headline decides whether the ranking earns a click; the call to action decides whether the visit earns a result. Every SEO copywriting piece should make the next step obvious — subscribe, try the tool, read the related guide — because traffic with no next step is a missed conversion. The same discipline applied to a full article is laid out in [how to write a blog post that ranks](/blog/how-to-write-a-blog-post-that-ranks)."
+      ]
+    },
+    {
+      "heading": "Does SEO copywriting still work in 2026?",
+      "body": [
+        "Yes — SEO copywriting still works in 2026, but the bar has moved. It's no longer enough to rank in classic search and persuade a human; your copy now also has to satisfy **AI search**. When ChatGPT, Perplexity, and Google AI Overviews answer a question, they lift a passage out of your page and cite it — or they don't. Generative Engine Optimization (GEO) is the layer SEO copywriting has to add to stay effective.",
+        "The good news is that great SEO copywriting was already most of the way there. The single most important GEO habit — **the island test** — is just disciplined answer-first writing: could a section's opening sentence stand completely on its own if an AI lifted it out of context? If it names the subject and answers the question in one self-contained line, it's citable; if it starts with \"This is important because…\", it gives a model nothing to quote.",
+        "A few things changed for the SEO copywriter in 2026:",
+        "- **Write for extraction, not just reading.** Structure each section so a single passage can be pulled out and cited without losing meaning.",
+        "- **Make expertise visible.** AI engines weigh [E-E-A-T](/blog/what-is-eeat-in-seo) heavily when deciding whom to cite. Name the author and show real experience.",
+        "- **Let AI crawlers in.** If GPTBot, ClaudeBot, or PerplexityBot are blocked in `robots.txt`, your copy can't be cited no matter how good it is.",
+        "- **Aim for durable topics.** Content built around lasting questions — the logic of [evergreen content](/blog/what-is-evergreen-content) — keeps earning citations and rankings long after publication.",
+        "The fastest way to confirm your copy clears both the SEO and GEO bar is to audit the live page. Paste the URL into the [free SEO + GEO audit on the homepage](/) and it flags weak answer-first openings, missing author/E-E-A-T signals, blocked AI bots, and on-page gaps in one pass. Fix what it surfaces, and your SEO copywriting ranks, converts, *and* gets cited."
+      ]
+    }
+  ],
+  "flowchart": {
+    "title": "The SEO copywriting process",
+    "steps": [
+      { "title": "Research keyword + intent", "detail": "Pick one primary phrase and confirm what the searcher actually wants by studying the pages already ranking." },
+      { "title": "Outline to match intent", "detail": "Build question-style H2 headings that mirror how people search and cover each sub-question." },
+      { "title": "Write answer-first", "detail": "Open the piece and every section with a direct, standalone answer before you elaborate." },
+      { "title": "Weave keywords naturally", "detail": "Place the primary phrase and related terms in the title, headings, and first 100 words — no stuffing." },
+      { "title": "Add persuasion + a CTA", "detail": "Keep the reader engaged with specifics and lead them to one clear next step." },
+      { "title": "Run an SEO + GEO audit", "detail": "Check answer-first openers, visible E-E-A-T, and AI-crawler access before publishing." }
+    ]
+  },
+  "peopleAlsoAsk": [
+    {
+      "q": "What is SEO copywriting?",
+      "a": "SEO copywriting is writing content that both ranks in search engines and persuades the reader to take action. It combines SEO — keyword and search-intent research, structure, and E-E-A-T that get a page found — with copywriting that keeps people reading and moves them toward a conversion. A page that ranks but doesn't persuade, or persuades but doesn't rank, isn't doing the job; SEO copywriting does both at once."
+    },
+    {
+      "q": "How is SEO copywriting different from regular copywriting?",
+      "a": "Regular copywriting optimizes purely for persuasion — landing pages, ads, emails — with no obligation to rank. SEO copywriting adds the search layer: keyword and intent research, a scannable heading structure, natural keyword use, and E-E-A-T signals so search and AI engines can find and trust the page. It keeps the persuasion but makes the content discoverable, so the writing actually gets traffic to convert."
+    },
+    {
+      "q": "How do I write SEO copy?",
+      "a": "Write SEO copy by following a repeatable process: research one keyword and confirm its search intent, outline with question-style headings, open every section with a direct answer, weave keywords in naturally, then add persuasion and a clear call to action. Finish with an SEO and GEO audit to confirm the page can be found, cited by AI engines, and understood by readers before you publish."
+    },
+    {
+      "q": "Does SEO copywriting still work in 2026?",
+      "a": "Yes, SEO copywriting still works in 2026, but it now has to satisfy AI search too. Beyond ranking in Google and persuading humans, your copy must be structured so AI engines like ChatGPT and Google AI Overviews can extract and cite a passage. That means answer-first writing, visible author expertise, and unblocked AI crawlers — layered on top of the classic SEO and persuasion fundamentals."
+    },
+    {
+      "q": "What skills do you need for SEO copywriting?",
+      "a": "SEO copywriting needs a blend of skills: keyword and search-intent research, on-page structure, natural keyword placement, and the persuasive-writing craft of hooks, clarity, and calls to action. In 2026 add GEO skills — writing self-contained answer-first passages and surfacing E-E-A-T so AI engines cite you. The rarer combination is holding search relevance and human persuasion in mind simultaneously."
+    }
+  ],
+  "faqs": [
+    {
+      "q": "Is SEO copywriting the same as content writing?",
+      "a": "No. Content writing is a broad term for producing articles and posts. SEO copywriting is more specific: it deliberately optimizes writing to both rank in search and persuade readers to act, combining keyword and intent research with conversion-focused copy rather than just informing."
+    },
+    {
+      "q": "How long should SEO copy be?",
+      "a": "As long as it takes to answer the query completely and lead the reader to a next step — no more. Length follows depth, not a word target. Study the top-ranking pages for your keyword; their depth reveals what searchers and Google expect for that topic."
+    },
+    {
+      "q": "Can AI write SEO copy for me?",
+      "a": "AI can draft and speed up SEO copy, but unedited output tends to be generic, lacks real experience, and misreads search intent. The winning approach is AI-assisted: use it for drafts and ideas, then add original insight, accurate answer-first structure, and visible E-E-A-T that earns rankings and citations."
+    }
+  ],
+  "relatedKeywords": [
+    "seo copywriting",
+    "seo writing",
+    "content writing",
+    "seo copy",
+    "writing for seo"
+  ],
+  "internalLinks": [
+    {
+      "href": "/",
+      "anchor": "run a free SEO + GEO audit"
+    },
+    {
+      "href": "/blog/how-to-write-seo-friendly-content",
+      "anchor": "How to write SEO-friendly content"
+    },
+    {
+      "href": "/blog/what-is-search-intent",
+      "anchor": "What is search intent"
+    },
+    {
+      "href": "/blog/how-to-write-a-blog-post-that-ranks",
+      "anchor": "How to write a blog post that ranks"
+    },
+    {
+      "href": "/blog/what-is-semantic-seo",
+      "anchor": "What is semantic SEO"
+    },
+    {
+      "href": "/blog/what-is-evergreen-content",
+      "anchor": "What is evergreen content"
+    }
+  ],
+  "images": []
+}

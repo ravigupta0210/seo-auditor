@@ -1,0 +1,159 @@
+{
+  "slug": "what-is-google-discover",
+  "title": "What Is Google Discover? (And How to Get In)",
+  "date": "2026-07-15",
+  "updatedAt": "2026-07-15",
+  "tag": "SEO",
+  "cluster": "seo-basics",
+  "keyword": "what is Google Discover",
+  "secondaryKeywords": ["google discover feed", "discover traffic", "how to get on google discover", "discover optimization"],
+  "readTime": 9,
+  "excerpt": "Google Discover is a personalized, AI-driven content feed on mobile that surfaces content without a search query. Here is how it works and how to earn placement.",
+  "description": "What is Google Discover? It is Google's personalized, AI-driven content feed on mobile — learn how it works and how to get your content shown in the feed.",
+  "tldr": "Google Discover is a personalized, AI-driven content feed on the Google app and mobile home screen that surfaces articles and videos based on your interests — with no search query involved. You can't target it directly, but you earn placement with fresh, high-quality, mobile-friendly content, strong E-E-A-T signals, compelling titles, and large high-resolution images.",
+  "status": "published",
+  "sections": [
+    {
+      "heading": "What is Google Discover?",
+      "body": [
+        "So, what is Google Discover? **Google Discover is the personalized, AI-driven content feed** that appears inside the Google app and below the search bar on the mobile Chrome home screen. It surfaces articles, videos, and pages that Google's systems predict you will want to read — based entirely on your interests and activity, with no search query involved. Unlike a results page, you never ask Discover anything; it decides what to show you and pushes it in front of you.",
+        "That single difference — **no query** — is what makes Discover unlike every other channel in SEO. Classic Google Search is *pull*: a user types a keyword and Google returns matching pages. Discover is *push*: Google guesses what a specific person cares about and serves a scrolling feed before they ask. Two people opening the Google app at the same moment see completely different feeds, because the ranking input is the reader's interest graph, not a keyword.",
+        "Discover is not a niche surface, either. It is one of the largest content-distribution channels in the world, reaching hundreds of millions of people every day on Android and the iOS Google app. For news, lifestyle, sports, and how-to publishers, Discover can send more traffic in a day than organic search does in a week — which is exactly why so many site owners want in, and why so few understand how it actually works.",
+        "> Search answers a question the reader already has. Discover starts a session the reader didn't know they wanted. That is the whole mental model."
+      ]
+    },
+    {
+      "heading": "How Google Discover works",
+      "body": [
+        "Google Discover works by matching content to a person's inferred interests, not to a keyword they typed. Google builds a profile of what each user cares about from their search history, their activity across Google products, topics they follow, their location, and what they have engaged with in Discover before. It then ranks candidate pages against that profile and fills the feed with the ones it predicts will earn a tap.",
+        "Because the input is interest rather than intent, the ranking signals are different from search. Discover leans heavily on **content quality and freshness**, on whether Google's systems trust the source (E-E-A-T), on the appeal of the title and image, and on how people have historically engaged with your content. There is no query-to-keyword match to optimize, so keyword density and exact-match titles matter far less here than they do in search.",
+        "A few practical mechanics are worth knowing:",
+        "- **It is content-focused, not query-focused.** Google shows pages it thinks a person wants to see next, so timely and evergreen-interest topics both work, but for different reasons.",
+        "- **Images are a first-class ranking factor.** Discover is a visual feed, and a large, high-resolution image is often what earns the tap. Enable it with the `max-image-preview:large` robots meta tag so Google can show the full-size thumbnail.",
+        "- **E-E-A-T gates trust.** Sites without clear authorship or a track record rarely get sustained Discover traffic. Read [what is E-E-A-T in SEO](/blog/what-is-eeat-in-seo) to see the exact signals to make visible.",
+        "- **Freshness compounds.** New content has a natural advantage because Discover rewards timeliness — more on that in [content freshness for SEO](/blog/content-freshness-for-seo).",
+        "Crucially, Google decides eligibility page by page and person by person, in real time. There is no Discover \"index\" you submit to; any indexed page that meets the content policies can appear, and eligibility can turn on or off as the algorithm re-evaluates your site's quality."
+      ]
+    },
+    {
+      "heading": "How to get your content into Google Discover",
+      "body": [
+        "You cannot *target* Google Discover the way you target a keyword — there is no query to rank for — but you can make your content eligible and appealing enough that Google chooses to feature it. Every practice that earns Discover placement is a quality signal Google can already measure, so the work overlaps heavily with strong [website ranking on Google](/blog/how-to-improve-website-ranking-on-google) generally.",
+        "Focus on the levers Google has publicly tied to Discover eligibility:",
+        "- **Publish genuinely high-quality, people-first content.** Discover surfaces content its systems predict people will find helpful and satisfying — not clickbait. Thin or misleading pages get filtered out.",
+        "- **Show clear E-E-A-T signals.** Name the author, show their expertise, and make the publishing site trustworthy. Experience and authority are the price of admission for a sustained feed presence.",
+        "- **Use compelling, honest titles.** The title has to earn a tap in a scrolling feed without over-promising. Curiosity-gap or exaggerated titles can get your content demoted from Discover entirely.",
+        "- **Add large, high-quality images with proper markup.** Use images at least 1,200px wide and enable large previews with `max-image-preview:large`. This is one of the highest-leverage Discover moves — see [how to optimize images for SEO](/blog/how-to-optimize-images-for-seo) for sizing, format, and alt-text specifics.",
+        "- **Be fast and mobile-friendly.** Discover is a mobile surface, so page speed and a clean mobile layout matter directly. This is also why [mobile-first indexing](/blog/what-is-mobile-first-indexing) is a prerequisite: if the mobile version of your page is weak, Discover has little to work with.",
+        "- **Follow Google's content policies.** Discover applies stricter policies than search around dangerous, deceptive, and manipulative content. A policy violation removes eligibility across your whole site, not just one page.",
+        "Here is how the two channels compare, so you can see why Discover optimization looks different from search optimization:",
+        "[[table]]",
+        "The fastest way to check whether your pages are structurally ready is to audit a published URL. Paste it into the [free SEO + GEO audit on the homepage](/) and it flags missing image previews, weak or missing author/E-E-A-T signals, mobile issues, and blocked crawlers — the same quality signals Discover eligibility depends on. Fix what it surfaces before you worry about Discover specifically."
+      ]
+    },
+    {
+      "heading": "Why Google Discover traffic is so spiky and volatile",
+      "body": [
+        "Google Discover traffic is famously spiky: a single article can send tens of thousands of visits one day and zero the next, with no change on your end. This is normal and expected, because Discover is a real-time, interest-driven feed rather than a stable keyword ranking. A page's presence in the feed is re-decided constantly against shifting user interest and freshness windows.",
+        "Several forces drive the volatility:",
+        "- **No fixed position.** In search, ranking #3 for a keyword produces steady traffic. In Discover there is no position — a page is either being shown to a wave of interested users right now, or it isn't.",
+        "- **Freshness decay.** Timely pieces surge while the topic is hot, then fall off fast as interest cools and newer content takes the slot.",
+        "- **Personalization swings.** Because feeds are per-person, a shift in what a large audience segment is engaging with can lift or drop your content overnight.",
+        "- **Quality re-evaluation.** Google can reduce a whole site's Discover eligibility if its systems detect a drop in quality or a policy issue, which shows up as a sudden, sustained decline.",
+        "> Treat Discover as upside, not baseline. Build your business on the steadier traffic from search and direct, and let Discover be the volatile bonus on top.",
+        "If your Discover traffic dropped, check three things first: whether a big story simply aged out, whether a recent core or quality update coincided with the drop, and whether any page tripped a content policy. You will find the volume trend in **Google Search Console** under the dedicated Discover performance report, which only appears once a site has earned meaningful Discover impressions."
+      ]
+    },
+    {
+      "heading": "The bottom line: earn Discover, don't chase it",
+      "body": [
+        "The most important thing to accept about Google Discover is that you influence it indirectly. There is no Discover keyword, no submit button, and no reliable way to force a page into the feed. What you can do is make every page the kind of content Google is confident a real person will value — and let the algorithm do the matching.",
+        "That reframing is freeing, because it points all your effort at durable work: strong topical content, visible expertise, fast mobile pages, large images, and honest titles. Every one of those also helps you rank in classic search and get cited by AI answer engines, so nothing you do for Discover is wasted even on the days the feed sends you nothing.",
+        "Practically, the play is: keep publishing high-quality, people-first content on topics your audience genuinely cares about; make authorship and expertise obvious; ship large, well-marked images; keep the mobile experience fast; and stay well inside Google's content policies. Do that consistently and Discover placement becomes a recurring bonus layered on top of a business that never depended on it."
+      ]
+    }
+  ],
+  "comparisonTable": {
+    "caption": "Google Search vs. Google Discover: how the two channels differ",
+    "headers": ["Dimension", "Google Search", "Google Discover"],
+    "rows": [
+      ["Trigger", "A typed or spoken query", "No query — Google predicts interest"],
+      ["User intent", "Active: they are looking for something", "Passive: they are browsing a feed"],
+      ["Main ranking signals", "Relevance to keywords, links, intent match", "Interest match, content quality, freshness, E-E-A-T"],
+      ["Where it appears", "The search results page", "Google app and mobile Chrome home feed"],
+      ["Role of images", "Helpful but secondary", "First-class — often what earns the tap"],
+      ["Traffic pattern", "Steady and keyword-driven", "Spiky and volatile"],
+      ["How you optimize", "Target keywords and search intent", "Publish fresh, high-quality content with great images"]
+    ]
+  },
+  "peopleAlsoAsk": [
+    {
+      "q": "What is Google Discover?",
+      "a": "Google Discover is a personalized, AI-driven content feed inside the Google app and on the mobile Chrome home screen. It surfaces articles, videos, and pages that Google predicts a specific user will want to read, based on their interests and activity — with no search query involved. Unlike search, it is a push channel: Google decides what to show you rather than responding to something you typed."
+    },
+    {
+      "q": "How do I get my content on Google Discover?",
+      "a": "You can't submit to Discover directly, but you make content eligible by publishing high-quality, people-first pages with clear E-E-A-T signals, honest and compelling titles, and large high-resolution images enabled with the max-image-preview:large tag. The pages must be fast, mobile-friendly, and fully inside Google's Discover content policies. Any indexed page that meets those bars can be chosen for the feed."
+    },
+    {
+      "q": "How does Google Discover work?",
+      "a": "Google Discover works by matching content to a user's inferred interests rather than to a keyword. Google builds an interest profile from search history, activity across its products, followed topics, and past Discover engagement, then ranks candidate pages against that profile. Content quality, freshness, source trust (E-E-A-T), and the appeal of the title and image decide which pages fill each person's feed."
+    },
+    {
+      "q": "Why did my Google Discover traffic drop?",
+      "a": "Discover traffic is naturally spiky, so a drop is often normal: a timely story aged out, or user interest shifted. Larger, sustained declines usually trace to a core or quality algorithm update, a content-policy issue that removed site-wide eligibility, or a fall in your content's quality signals. Check the Discover report in Google Search Console and compare the timing against known Google updates."
+    },
+    {
+      "q": "What are the requirements for Google Discover?",
+      "a": "There is no formal application — any page Google has indexed is potentially eligible. In practice, Discover requires high-quality, people-first content, visible E-E-A-T, a fast mobile-friendly page, honest titles, and compliance with Discover's content policies, which are stricter than search. Large, high-resolution images with large-preview markup dramatically improve your odds of being featured."
+    }
+  ],
+  "faqs": [
+    {
+      "q": "Can I directly target or advertise into Google Discover?",
+      "a": "Organic placement can't be targeted — there is no keyword or submit button, and Google chooses pages algorithmically. Google does sell Discovery/Demand Gen ads that appear in the feed, but those are paid placements and separate from earning organic Discover traffic through content quality."
+    },
+    {
+      "q": "Does Google Discover only show news?",
+      "a": "No. News surges in Discover because it is timely, but evergreen how-to guides, lifestyle, sports, entertainment, and product content all appear when they match a user's interests. Discover is interest-based, so any topic someone cares about can surface, not just breaking news."
+    },
+    {
+      "q": "How do I track Google Discover traffic?",
+      "a": "Use the dedicated Discover performance report in Google Search Console, which shows impressions, clicks, and CTR for Discover separately from search. The report only appears once your site has earned enough Discover impressions, so a missing report usually means little to no Discover eligibility yet."
+    }
+  ],
+  "relatedKeywords": [
+    "google discover",
+    "discover feed",
+    "google discover traffic",
+    "discover seo",
+    "mobile discover"
+  ],
+  "internalLinks": [
+    {
+      "href": "/",
+      "anchor": "run a free SEO + GEO audit"
+    },
+    {
+      "href": "/blog/how-to-improve-website-ranking-on-google",
+      "anchor": "How to improve website ranking"
+    },
+    {
+      "href": "/blog/what-is-eeat-in-seo",
+      "anchor": "What is E-E-A-T in SEO"
+    },
+    {
+      "href": "/blog/content-freshness-for-seo",
+      "anchor": "Content freshness for SEO"
+    },
+    {
+      "href": "/blog/what-is-mobile-first-indexing",
+      "anchor": "What is mobile-first indexing"
+    },
+    {
+      "href": "/blog/how-to-optimize-images-for-seo",
+      "anchor": "How to optimize images for SEO"
+    }
+  ],
+  "images": []
+}

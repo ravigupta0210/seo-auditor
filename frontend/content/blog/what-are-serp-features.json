@@ -1,0 +1,151 @@
+{
+  "slug": "what-are-serp-features",
+  "title": "What Are SERP Features? (2026 Guide)",
+  "date": "2026-07-15",
+  "updatedAt": "2026-07-15",
+  "tag": "SEO",
+  "cluster": "seo-basics",
+  "keyword": "what are SERP features",
+  "secondaryKeywords": ["featured snippet", "knowledge panel", "AI Overviews", "local pack"],
+  "readTime": 9,
+  "excerpt": "SERP features are the non-standard result elements beyond the ten blue links. Here are the main types and how to win them.",
+  "description": "What are SERP features? They are the rich result elements beyond the ten blue links — snippets, PAA, AI Overviews. Learn the main types and how to earn them.",
+  "tldr": "SERP features are the non-standard result elements Google shows beyond the ten blue organic links — featured snippets, People Also Ask, knowledge panels, image and video packs, local packs, sitelinks, and AI Overviews. They push classic links down the page and can either steal or earn extra clicks, so winning them is a core part of modern SEO.",
+  "status": "published",
+  "sections": [
+    {
+      "heading": "What are SERP features?",
+      "body": [
+        "What are SERP features? They are the non-standard result elements Google displays on a search results page beyond the ten traditional blue organic links — things like featured snippets, People Also Ask boxes, image packs, knowledge panels, local map results, and the newer AI Overviews. Anything on the page that is not a plain title-plus-URL-plus-description organic listing is a SERP feature. They are drawn from a mix of sources: your indexed pages, structured data, Google Business Profiles, the Knowledge Graph, and third-party feeds.",
+        "SERP features exist because Google wants to answer the query on the page itself, in the format that best matches intent. A recipe query gets image thumbnails and star ratings; a local query gets a map and three business listings; a factual query gets a direct answer box. The result is that a modern [search engine results page](/blog/what-is-a-serp) rarely looks like a clean list of ten links — it is a mosaic of boxes, and the classic organic results are often pushed well down the page.",
+        "For SEO this changes the game. Ranking #1 in the classic sense no longer guarantees the top of the visible page, because a featured snippet, an AI Overview, and a PAA box can all sit above you. The opportunity is that each feature is a *new* slot to compete for — often winnable with content structure and schema rather than raw authority. Understanding the main types is the first step to claiming them.",
+        "> On many queries the ten blue links are now the bottom half of the page. If your SEO strategy only optimizes for classic rankings, you are competing for the leftovers."
+      ]
+    },
+    {
+      "heading": "The most common SERP features",
+      "body": [
+        "The most common SERP features fall into a handful of recurring types, each triggered by a different kind of intent. Knowing which ones appear for your keywords tells you where the real estate — and the clicks — actually are:",
+        "- **Featured snippet.** A single answer box at the top (\"position zero\") that extracts a paragraph, list, or table from a ranking page. Deep dive: [what is a featured snippet](/blog/what-is-a-featured-snippet).",
+        "- **People Also Ask.** An expanding box of related questions, each revealing a short extracted answer. See [what is People Also Ask](/blog/what-is-people-also-ask).",
+        "- **AI Overviews.** Google's generative answer at the very top, synthesizing multiple sources into a summary with links — the newest and most disruptive feature.",
+        "- **Knowledge panel.** A box, usually on the right, showing facts about an entity (a person, company, or place) pulled from the Knowledge Graph. See [what is a knowledge panel](/blog/what-is-a-knowledge-panel).",
+        "- **Image and video packs.** Rows of image thumbnails or video results (often YouTube) inserted into the page for visual queries.",
+        "- **Local pack.** A map with three nearby business listings, triggered by local intent like \"coffee near me.\"",
+        "- **Sitelinks.** A cluster of extra links to inner pages shown beneath a single result, common for brand and navigational searches.",
+        "- **Top stories.** A carousel of recent news articles for timely, newsworthy queries.",
+        "- **Reviews and star ratings.** Star ratings and review counts appended to a result — a [rich snippet](/blog/what-is-a-rich-snippet) powered by structured data.",
+        "Not every feature appears for every query. Informational searches skew toward snippets, PAA, and AI Overviews; commercial and local searches surface local packs, reviews, and shopping results; branded searches trigger knowledge panels and sitelinks. Match your target keyword to the features it actually shows before deciding what to optimize for."
+      ]
+    },
+    {
+      "heading": "Why SERP features matter for SEO",
+      "body": [
+        "SERP features matter because they reshape where clicks go: they push the classic organic links down the page and can either steal clicks through zero-click answers or earn you extra visibility above competitors. A featured snippet or AI Overview that answers the query outright means some users never scroll — the well-documented rise of zero-click searches. If you only rank in the classic results, a feature sitting above you quietly caps your click-through rate.",
+        "The flip side is the opportunity. Each feature is a slot you can win, often without being the #1 organic result. A page ranking at position 7 can capture the featured snippet, appear in three PAA answers, and get cited in the AI Overview — collectively out-earning the nominal top result. Because many features reward content *structure* and *schema* rather than raw domain authority, they are frequently the most winnable ground on the page for smaller sites.",
+        "There is also a defensive reason to care. AI Overviews and featured snippets increasingly satisfy the query on the page, so the pages that still earn the click are the ones that either *are* the cited source or offer depth the summary cannot. Being the source Google quotes is now a traffic strategy in itself. That is why answer-first structure and [generative engine optimization](/blog/how-to-rank-in-google-ai-overviews) have moved from nice-to-have to central — the features are where a growing share of attention lands."
+      ]
+    },
+    {
+      "heading": "How to win SERP features",
+      "body": [
+        "You win SERP features by matching each feature's trigger with the right on-page signal: answer-first content for snippets and PAA, structured data for rich results and knowledge panels, and a complete Google Business Profile for the local pack. There is no single lever — each feature reads a different signal — so the practical approach is to identify which features your keyword shows, then earn them one by one. The table maps the main features to how you actually win each:",
+        "[[table]]",
+        "Three principles cut across almost every feature. First, **structure content as extractable answers**: lead sections with a real question as the heading and a concise, self-contained answer beneath it, so Google can lift it into a snippet, PAA slot, or AI Overview. Second, **add the relevant [schema markup](/blog/what-is-schema-markup)** — FAQ, Review, Product, Organization, and the rest — so Google can confidently render rich results and understand your entities. Third, **match search intent precisely**, because Google only shows features that fit the query; a listicle will never win a local pack, and a product page will never win a how-to snippet.",
+        "The fastest way to find out which signals your page is missing is to audit it. Paste your URL into the [free SEO + GEO audit on the homepage](/) — it checks your metadata, structured data, and answer-first content structure in one pass, flagging the exact gaps that keep pages out of featured snippets, rich results, and AI Overviews. Fix what it surfaces, and you ship with the signals each feature needs."
+      ]
+    },
+    {
+      "heading": "AI Overviews: the newest SERP feature",
+      "body": [
+        "AI Overviews are the newest and most consequential SERP feature: a Google-generated answer at the very top of the page that synthesizes information from several sources into a summary, with links to the pages it drew from. Unlike a featured snippet, which lifts one passage from one page, an AI Overview composes an original answer from multiple pages — which means multiple sites can be cited in a single overview, but also that the answer often satisfies the searcher without a click.",
+        "Winning citations in AI Overviews follows the same discipline as the older features, intensified. Google's generative layer favors content it can confidently extract and attribute, so **answer-first passages that survive being read in isolation** — the island test — are what get cited. Visible author expertise and E-E-A-T signals, clean structure, and AI-crawler access all feed the same goal: being a source the model trusts enough to quote. For the full playbook, see [how to rank in Google AI Overviews](/blog/how-to-rank-in-google-ai-overviews).",
+        "The strategic point for 2026 is that the features now overlap. The same answer-first section, backed by schema and topical authority, can win the featured snippet, several PAA answers, and an AI Overview citation simultaneously. That convergence is good news: you do not optimize separately for each feature. You write genuinely useful, well-structured, well-marked-up content once, and it competes for every slot on the page at the same time — which is exactly what a modern SERP-feature strategy is."
+      ]
+    }
+  ],
+  "comparisonTable": {
+    "caption": "Common SERP features and how to earn each one",
+    "headers": ["SERP feature", "What it is", "How to earn it"],
+    "rows": [
+      ["Featured snippet", "Single answer box at position zero", "Question heading + concise answer-first passage"],
+      ["People Also Ask", "Expanding box of related questions", "Target real questions with tight, extractable answers"],
+      ["AI Overviews", "Generative summary of multiple sources", "Answer-first, island-test content plus visible E-E-A-T"],
+      ["Knowledge panel", "Entity facts from the Knowledge Graph", "Organization/Person schema and consistent entity signals"],
+      ["Image / video pack", "Rows of image or video results", "Descriptive alt text, filenames, and video schema"],
+      ["Local pack", "Map with three local businesses", "Complete Google Business Profile and local relevance"],
+      ["Reviews / stars", "Star ratings appended to a result", "Valid Review or AggregateRating structured data"],
+      ["Sitelinks", "Extra links under one result", "Clear site structure and strong brand-query authority"]
+    ]
+  },
+  "peopleAlsoAsk": [
+    {
+      "q": "What are SERP features in SEO?",
+      "a": "In SEO, SERP features are the non-standard elements Google shows on a results page beyond the ten blue organic links — featured snippets, People Also Ask boxes, knowledge panels, image and video packs, local packs, sitelinks, top stories, review stars, and AI Overviews. They are drawn from your pages, structured data, and Google's Knowledge Graph, and they reshape where clicks land on the page."
+    },
+    {
+      "q": "What are the most common SERP features?",
+      "a": "The most common SERP features are featured snippets, People Also Ask boxes, AI Overviews, knowledge panels, image and video packs, local packs, sitelinks, top stories, and review star ratings. Which ones appear depends on intent: informational queries surface snippets and PAA, local queries show the map pack, and branded queries trigger knowledge panels and sitelinks."
+    },
+    {
+      "q": "How do I rank in SERP features?",
+      "a": "Rank in SERP features by matching each feature's trigger to the right signal: answer-first content for snippets and PAA, structured data for rich results and knowledge panels, and a complete Google Business Profile for the local pack. Across all of them, structure content as extractable answers, add relevant schema markup, and match the search intent of the query precisely."
+    },
+    {
+      "q": "Do SERP features affect click-through rate?",
+      "a": "Yes. SERP features affect click-through rate significantly. Features like featured snippets and AI Overviews can answer the query on the page, causing zero-click searches that reduce clicks to organic results below them. But winning a feature gives you visibility and clicks above competitors, so the net effect depends on whether you own the feature or sit beneath it."
+    },
+    {
+      "q": "What is a rich result vs a SERP feature?",
+      "a": "A SERP feature is any non-standard element on the results page, while a rich result is a specific subtype — an organic listing enhanced with extra detail from your structured data, like review stars, prices, or FAQ dropdowns. Every rich result is a SERP feature, but many SERP features, such as the local pack or AI Overviews, are not rich results."
+    }
+  ],
+  "faqs": [
+    {
+      "q": "Are SERP features the same on mobile and desktop?",
+      "a": "No. SERP features often differ between mobile and desktop. Knowledge panels that sit in a right-hand column on desktop move inline on mobile, and features like the local pack take up proportionally more space on smaller screens. Always check the SERP on both device types for your target keyword."
+    },
+    {
+      "q": "Can one page win multiple SERP features at once?",
+      "a": "Yes. A single well-structured page can win several SERP features simultaneously — for example the featured snippet, several People Also Ask answers, and an AI Overview citation. The answer-first, schema-backed content that earns one feature is usually the same content that qualifies it for the others."
+    },
+    {
+      "q": "Do SERP features require schema markup?",
+      "a": "Some do and some do not. Rich results like review stars, FAQs, and product details require valid structured data. But featured snippets, People Also Ask, and AI Overviews are earned through answer-first content structure, not schema, though clean markup still helps Google understand the page."
+    }
+  ],
+  "relatedKeywords": [
+    "serp features",
+    "google serp features",
+    "rich results",
+    "featured snippet",
+    "serp real estate"
+  ],
+  "internalLinks": [
+    {
+      "href": "/",
+      "anchor": "run a free SEO + GEO audit"
+    },
+    {
+      "href": "/blog/what-is-a-serp",
+      "anchor": "What is a SERP"
+    },
+    {
+      "href": "/blog/what-is-a-featured-snippet",
+      "anchor": "What is a featured snippet"
+    },
+    {
+      "href": "/blog/what-is-a-rich-snippet",
+      "anchor": "What is a rich snippet"
+    },
+    {
+      "href": "/blog/what-is-people-also-ask",
+      "anchor": "What is People Also Ask"
+    },
+    {
+      "href": "/blog/what-is-schema-markup",
+      "anchor": "What is schema markup"
+    }
+  ],
+  "images": []
+}

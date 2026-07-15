@@ -1,0 +1,153 @@
+{
+  "slug": "what-is-thin-content",
+  "title": "What Is Thin Content? (And How to Fix It)",
+  "date": "2026-07-15",
+  "updatedAt": "2026-07-15",
+  "tag": "SEO",
+  "cluster": "content-links",
+  "keyword": "what is thin content",
+  "secondaryKeywords": ["low quality content", "content pruning", "Helpful Content", "Google Panda"],
+  "readTime": 9,
+  "excerpt": "Thin content is any page that offers little or no value to the user. Here's how Google judges it, how to spot it, and how to fix it.",
+  "description": "What is thin content? Any page that offers little value to the searcher. Learn why Google penalizes it, how it differs from duplicate content, and how to fix it.",
+  "tldr": "Thin content is any page that offers little or no value to the searcher — pages that don't satisfy the intent behind the query. That includes very short pages, auto-generated or scraped text, doorway pages, and near-duplicate pages. Google demotes it through the Panda algorithm and the Helpful Content system. Fix it by expanding pages with real value, consolidating overlapping ones, or pruning and noindexing pages that can't be saved. Word count is a symptom, not the test.",
+  "status": "published",
+  "sections": [
+    {
+      "heading": "What is thin content?",
+      "body": [
+        "What is thin content? Thin content is any page that provides little or no value to the person who lands on it — a page that fails to satisfy the intent behind the search that brought them there. Google's own quality guidelines describe it as content with \"little or no added value,\" and that phrase is the key: thinness is measured by value delivered, not by word count. A crisp 300-word answer that fully resolves a query is not thin, while a rambling 1,500-word page that says nothing useful absolutely is.",
+        "The label covers several distinct patterns, and it helps to recognize them because each has a different fix:",
+        "- **Low-value short pages** that don't come close to answering the query — a definition with no explanation, a product page with one line of boilerplate.",
+        "- **Auto-generated or scraped content** — text spun by a program, copied from other sites, or mass-produced without human editing or expertise.",
+        "- **Doorway pages** — batches of near-identical pages created to rank for slight keyword variations (\"plumber in [city]\" x 200) that all funnel users to the same place.",
+        "- **Thin affiliate pages** — product round-ups that just restate manufacturer copy and affiliate links with no original testing, comparison, or insight.",
+        "- **Near-duplicate pages** — many pages so similar they add nothing beyond the first one.",
+        "> The common thread is not length. It is whether the page gives the searcher something they couldn't get faster elsewhere. Value is the test; word count is just a symptom that sometimes points to it."
+      ]
+    },
+    {
+      "heading": "Why Google penalizes thin content",
+      "body": [
+        "Google penalizes thin content because its entire job is to send searchers to the most useful result, and a page with little value is by definition a poor result. Two systems handle this. The **Panda** algorithm, launched in 2011 and later folded into the core ranking system, was built specifically to demote low-quality, thin, and duplicate content site-wide. The **Helpful Content system**, rolled out from 2022 and now part of core updates, does the same job with a sharper focus: it rewards content written to help people and demotes content written primarily to rank in search engines.",
+        "The consequences are rarely limited to the offending page. Both systems can act at the **site level** — a large share of thin pages can drag down the rankings of your genuinely good pages too, because the site as a whole reads as low quality. This is why publishing hundreds of near-empty pages to \"cover more keywords\" so often backfires. It is also why thin content overlaps with [index bloat](/blog/what-is-index-bloat): a bloated index full of low-value URLs dilutes the signals Google uses to judge your whole domain. These demotions typically surface after a [Google algorithm update](/blog/what-is-a-google-algorithm-update), which is when many sites first notice a traffic drop and trace it back to thin pages.",
+        "The rise of AI writing has raised the stakes. Google's position is that AI-generated content is not automatically thin or against its guidelines — but content mass-produced to game rankings, with no added value or expertise, is exactly what the Helpful Content system targets, regardless of how it was made. We cover this nuance in [does AI content hurt SEO](/blog/does-ai-content-hurt-seo); the short version is that AI is fine as a drafting tool and a liability as a volume shortcut."
+      ]
+    },
+    {
+      "heading": "Thin content vs duplicate content",
+      "body": [
+        "Thin content and duplicate content are related but distinct problems, and confusing them leads to the wrong fix. **Thin content is about value** — the page doesn't help the user, whether the text is original or not. **Duplicate content is about repetition** — the same or very similar text appears on more than one URL, on your site or across the web. A page can be one, the other, or both.",
+        "Here is how the two compare and where they overlap:",
+        "[[table]]",
+        "The reason the distinction matters is that the remedies differ. Duplicate content is usually a **technical** fix: set a canonical tag, consolidate URL variants, or 301-redirect the copies — the playbook in [how to fix duplicate content](/blog/how-to-fix-duplicate-content). Thin content is usually an **editorial** fix: the page needs more genuine value, needs to be merged with a stronger page, or needs to be removed. Treating a thin page as a duplicate (or vice versa) means you apply a canonical tag when the page actually needed rewriting, and the ranking problem never goes away.",
+        "The overlap is real, though. A set of near-duplicate doorway pages is both duplicative *and* thin, and cleaning it up solves both at once by consolidating the value into a single strong page."
+      ]
+    },
+    {
+      "heading": "How to identify thin content on your site",
+      "body": [
+        "You identify thin content by auditing pages against the intent they target, not against an arbitrary word count. Start by pulling every indexable URL — from your sitemap, Google Search Console's Pages report, and analytics — then triage them with a few concrete signals:",
+        "- **Low or zero organic traffic and impressions** over the last several months, especially on older pages that have had time to rank.",
+        "- **High bounce or short dwell time** relative to similar pages, suggesting the page didn't answer the query.",
+        "- **Very low word count paired with weak coverage** — the page clearly doesn't address the sub-questions the top-ranking results all cover.",
+        "- **No unique value** — no original data, examples, images, or perspective beyond what competitors already say.",
+        "- **Near-duplicates and templated pages** produced in bulk from the same skeleton.",
+        "Read a sample of the flagged pages the way a searcher would and ask the blunt question: if I searched this query and landed here, would I be satisfied or hit the back button? That human judgment is the real test. To make the pass systematic across a whole site, run our [free SEO + GEO audit](/), which surfaces weak pages and flags content that fails the \"island test\" — passages that don't stand on their own well enough for search engines or AI answer engines to cite. Pair it with [how to write SEO-friendly content](/blog/how-to-write-seo-friendly-content) as your standard for what a strong page should include."
+      ]
+    },
+    {
+      "heading": "How to fix thin content",
+      "body": [
+        "There are three fixes for thin content — expand, consolidate, or prune — and choosing the right one depends on whether the page targets a query worth ranking for and whether it can realistically be made valuable.",
+        "**Expand the pages worth saving.** If a thin page targets a real query and you have something genuine to add, rewrite it to fully satisfy the intent: answer the main question directly, cover the sub-questions competitors cover, and add original value — an example, a comparison, a step-by-step, data, or a visual. The goal is not to hit a word count; it is to make the page the most useful result for its query. Length rises as a side effect of real coverage, not the other way around.",
+        "**Consolidate overlapping pages.** When several thin pages circle the same topic, merge them into one strong, comprehensive page and 301-redirect the old URLs to it. This concentrates your value, your links, and your ranking signals into a single page that can actually compete, instead of several weak ones splitting attention.",
+        "**Prune what can't be saved.** Some pages have no query worth targeting and no realistic path to value — expired listings, empty tag pages, thin syndicated posts. Remove them (return `410` or delete) or, if they must stay live for users but shouldn't rank, keep them out of the index with a [noindex tag](/blog/what-is-a-noindex-tag). Pruning dead weight is not just cleanup: because thin content can drag down a whole site, removing it often lifts the pages you keep.",
+        "One caution: prune deliberately, not in a panic. Confirm a page truly has no value and no meaningful traffic or links before deleting it, and redirect where a related page exists so you don't strand visitors or lose earned signals."
+      ]
+    }
+  ],
+  "comparisonTable": {
+    "caption": "Thin content vs. quality content: what separates them",
+    "headers": ["Signal", "Thin content", "Quality content"],
+    "rows": [
+      ["Value to searcher", "Little or none; user hits back button", "Fully satisfies the intent behind the query"],
+      ["Origin", "Auto-generated, scraped, or spun in bulk", "Original, written or reviewed by someone with expertise"],
+      ["Coverage", "Ignores the sub-questions competitors answer", "Covers the topic completely, including edge cases"],
+      ["Unique elements", "Restates what others already say", "Adds original data, examples, or perspective"],
+      ["Purpose", "Built primarily to rank for keywords", "Built primarily to help the reader (E-E-A-T)"],
+      ["Typical outcome", "Demoted by Panda / Helpful Content", "Ranks and gets cited by AI answer engines"]
+    ]
+  },
+  "peopleAlsoAsk": [
+    {
+      "q": "What is thin content in SEO?",
+      "a": "Thin content in SEO is any page that offers little or no value to the searcher and fails to satisfy the intent behind their query. It includes very short low-value pages, auto-generated or scraped text, doorway pages built to rank for keyword variations, thin affiliate pages, and near-duplicates. Google judges thinness by the value a page delivers, not by word count, so a short page that fully answers a question is not thin while a long, empty one is."
+    },
+    {
+      "q": "Is thin content bad for SEO?",
+      "a": "Yes. Google's Panda algorithm and Helpful Content system are built to demote low-value content, and they can act at the site level — a large share of thin pages can pull down the rankings of your good pages too. That's why publishing many near-empty pages to cover more keywords usually backfires. Removing or improving thin content often lifts the rest of the site because it reads as higher quality overall."
+    },
+    {
+      "q": "How do I fix thin content?",
+      "a": "Choose one of three fixes per page. Expand pages worth saving by rewriting them to fully satisfy the query with original value. Consolidate several overlapping thin pages into one strong page and 301-redirect the old URLs. Prune pages that can't be made valuable by deleting them or applying a noindex tag if they must stay live for users. The right choice depends on whether the query is worth ranking for and whether the page can realistically become useful."
+    },
+    {
+      "q": "What is the difference between thin content and duplicate content?",
+      "a": "Thin content is about value — the page doesn't help the user, whether or not the text is original. Duplicate content is about repetition — the same or very similar text appears on multiple URLs. The fixes differ: duplicate content is usually a technical fix like a canonical tag or redirect, while thin content is an editorial fix like expanding, merging, or removing the page. A page can be both, as with near-identical doorway pages."
+    },
+    {
+      "q": "How many words is thin content?",
+      "a": "There is no word-count threshold for thin content — Google measures value delivered, not length. A concise 300-word page that fully answers a query is not thin, while a padded 1,500-word page that says nothing useful is. Low word count can be a symptom worth investigating, but the real test is whether the page satisfies the searcher's intent better than they could get elsewhere. Write to answer the question completely, not to hit a number."
+    }
+  ],
+  "faqs": [
+    {
+      "q": "Is AI-generated content considered thin content?",
+      "a": "Not automatically. Google says AI-generated content isn't against its guidelines, but content mass-produced to manipulate rankings with no added value or expertise is exactly what the Helpful Content system targets, however it was made. AI used as a drafting tool for genuinely useful, reviewed content is fine; AI used as a volume shortcut tends to produce thin pages."
+    },
+    {
+      "q": "Will deleting thin pages hurt my rankings?",
+      "a": "Deleting truly worthless pages usually helps, because thin content can drag down a whole site. But prune deliberately: confirm a page has no meaningful traffic, links, or value first, and 301-redirect it to a related page where one exists so you don't strand users or lose earned signals. Careless mass deletion can remove pages that were quietly ranking."
+    },
+    {
+      "q": "Can product or category pages be thin content?",
+      "a": "Yes. E-commerce pages with only a one-line boilerplate description, no unique detail, and no reviews are a common form of thin content. Fix them by adding original descriptions, specifications, images, FAQs, and user reviews so the page genuinely helps a shopper decide, rather than repeating manufacturer copy that appears on hundreds of other sites."
+    }
+  ],
+  "relatedKeywords": [
+    "thin content",
+    "low quality content",
+    "content pruning",
+    "helpful content",
+    "content quality",
+    "thin content vs duplicate content"
+  ],
+  "internalLinks": [
+    {
+      "href": "/",
+      "anchor": "run a free SEO + GEO audit"
+    },
+    {
+      "href": "/blog/how-to-write-seo-friendly-content",
+      "anchor": "How to write SEO-friendly content"
+    },
+    {
+      "href": "/blog/what-is-index-bloat",
+      "anchor": "What is index bloat"
+    },
+    {
+      "href": "/blog/how-to-fix-duplicate-content",
+      "anchor": "How to fix duplicate content"
+    },
+    {
+      "href": "/blog/does-ai-content-hurt-seo",
+      "anchor": "Does AI content hurt SEO"
+    },
+    {
+      "href": "/blog/what-is-a-google-algorithm-update",
+      "anchor": "What is a Google algorithm update"
+    }
+  ],
+  "images": []
+}

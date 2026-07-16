@@ -1,0 +1,133 @@
+{
+  "slug": "what-is-a-redirect-chain",
+  "title": "What Is a Redirect Chain? (And How to Fix It)",
+  "date": "2026-07-16",
+  "updatedAt": "2026-07-16",
+  "tag": "Technical SEO",
+  "cluster": "technical-seo",
+  "keyword": "what is a redirect chain",
+  "secondaryKeywords": [
+    "redirect loop",
+    "redirect hops",
+    "301 redirect",
+    "wasted crawl budget",
+    "link equity"
+  ],
+  "readTime": 8,
+  "excerpt": "What a redirect chain is, why multiple redirect hops waste crawl budget and dilute link equity, how it differs from a redirect loop, and how to fix it.",
+  "description": "What is a redirect chain? When a URL redirects to another that redirects again (A to B to C) instead of straight to the final page. Here is how to fix it.",
+  "tldr": "A redirect chain is when a URL redirects to another URL that itself redirects, and so on (A to B to C), instead of pointing straight to the final page. Each extra hop wastes crawl budget, slows the page load, dilutes link equity, and adds a point of failure. The fix is simple: update every redirect to point directly at the final destination URL.",
+  "status": "published",
+  "sections": [
+    {
+      "heading": "What a redirect chain is",
+      "body": [
+        "What is a redirect chain? A redirect chain is when a URL redirects to a second URL that then redirects to a third (or more) before finally reaching the destination — A points to B, B points to C, and only C serves the real page. Instead of one clean hop from the requested URL to the final one, the browser and crawler are bounced through a series of intermediate stops. Each stop is a separate HTTP redirect (usually a 301 or 302), and the whole sequence is the chain.",
+        "A single redirect is normal and healthy — you use one every time you move a page, switch to HTTPS, or consolidate duplicate URLs. The problem is not redirecting; it is redirecting *through* intermediate URLs that could have been skipped. `example.com/old` → `example.com/new` is a direct redirect and totally fine. `example.com/old` → `www.example.com/old` → `https://www.example.com/old` → `https://www.example.com/new` is a four-hop chain that should have been a single jump straight to the final HTTPS URL.",
+        "Chains rarely get built on purpose. They accumulate over time as small, reasonable redirects stack on top of each other: someone adds an HTTP-to-HTTPS rule, later someone adds a non-www-to-www rule, then a page is renamed, then the site migrates platforms — and each rule fires in sequence because nobody went back to collapse them. The result is a site full of two-, three-, and four-hop chains that every crawler has to walk through. Redirects are a core part of [technical SEO](/blog/what-is-technical-seo), and keeping them direct is one of the easiest wins available."
+      ]
+    },
+    {
+      "heading": "Why redirect chains hurt SEO",
+      "body": [
+        "Redirect chains hurt SEO in four concrete ways, all stemming from the extra hops. First, they **waste crawl budget.** Every redirect is a request a crawler must make and follow. A three-hop chain turns one URL into three round-trips before any content is fetched, so search engines process fewer of your real pages per crawl. On large sites this directly reduces how much gets discovered and refreshed — see [what is crawl budget](/blog/what-is-crawl-budget) for the full mechanics.",
+        "Second, they **slow the page down for users.** Each hop is a full network round-trip — DNS, connection, response — before the browser even starts loading the destination. On mobile connections that latency stacks up quickly, hurting your [Core Web Vitals](/blog/what-are-core-web-vitals) and the experience of anyone who clicks an old link.",
+        "Third, they **dilute link equity.** A backlink pointing at the first URL passes its ranking value along the chain, but each redirect can shed a little of that authority. The more hops between the linked URL and the final page, the more diluted — and the less reliably it consolidates — the equity becomes.",
+        "Fourth, and most dangerous, **each hop is a point of failure.** If any URL in the chain later breaks, returns a [404 error](/blog/what-is-a-404-error), or starts a loop, the whole path dies and users and crawlers never reach the destination. A direct redirect has one link that can break; a four-hop chain has four. Google also gives up after roughly five hops in a single chain, so long chains can leave the final page uncrawled entirely."
+      ]
+    },
+    {
+      "heading": "Redirect chain vs redirect loop vs direct redirect",
+      "body": [
+        "It helps to see the three redirect patterns side by side, because they are easy to confuse and have very different consequences. A **direct redirect** is the healthy case: one hop from the old URL straight to the final destination. A **redirect chain** is two or more hops in sequence that still eventually resolve — inefficient but functional. A **redirect loop** is the broken case: URLs that redirect back to each other (A → B → A) so the destination is *never* reached and the browser eventually shows a \"too many redirects\" error.",
+        "[[table]]",
+        "The key distinction: a chain wastes resources but still works, while a loop is completely broken and blocks access to the page. A loop is effectively a self-inflicted outage — neither users nor crawlers can load anything — so loops are an emergency to fix immediately, whereas chains are an optimization you should fix but that will not take a page fully offline. Both are worth catching, and both come down to the same root cause: redirect rules that reference intermediate URLs instead of the final one.",
+        "The type of redirect matters too. Chains built from **301 (permanent)** redirects are the least harmful because 301s consolidate signals, while **302 (temporary)** redirects in a chain add uncertainty about which URL should be indexed. If you are unsure which to use, read [301 vs 302 redirects](/blog/301-vs-302-redirects) before touching your rules."
+      ]
+    },
+    {
+      "heading": "How to find redirect chains",
+      "body": [
+        "You cannot fix redirect chains you cannot see, and chains are invisible in a browser — it silently follows every hop and shows only the final page, hiding the detour. To find them you have to inspect the actual HTTP responses. There are three practical methods.",
+        "**Use a site crawler.** Tools that crawl your whole site (Screaming Frog, Sitebulb, and similar) produce a redirect report listing every URL, each hop it passes through, and the final status code. This is the most thorough approach because it catches chains across your entire URL set at once, including ones buried in old internal links. Sort by number of hops to prioritize the worst offenders.",
+        "**Check individual URLs with a redirect checker.** For a specific page — say, an important landing page or a URL with valuable backlinks — a redirect-path checker or a quick command shows the exact sequence. On the command line, `curl -IL https://example.com/old` prints every hop and status code in order, so you can read the chain directly.",
+        "**Run an audit that flags them automatically.** [Run a free SEO + GEO audit](/) on any URL and it follows the redirects for you and reports the full hop-by-hop path, so you can see a chain — and whether it ends in a 200, a 404, or a loop — without installing anything. While you are checking redirects, it is worth catching [broken internal links](/blog/how-to-find-and-fix-broken-links) in the same pass, since old links are what feed chains in the first place."
+      ]
+    },
+    {
+      "heading": "How to fix redirect chains",
+      "body": [
+        "Fixing a redirect chain comes down to one rule: **point every redirect directly at the final destination URL.** Once you know the chain (A → B → C → D), edit the redirect rules so that A, B, and C each go straight to D in a single hop. Collapse the sequence so no redirect ever targets another URL that also redirects. This usually happens in your server config (`.htaccess`, Nginx `rewrite`), your CDN or edge rules, or a redirect plugin — wherever the rules live, update the target of each rule to the final URL.",
+        "Follow this in order to fix a chain cleanly:",
+        "- **Map the full chain** first so you know the true final destination — the URL that returns a 200, not just the next hop.",
+        "- **Update every intermediate rule** to point straight to that final URL, using a **301** for permanent moves so signals consolidate.",
+        "- **Fix internal links at the source.** If your own navigation, sitemap, or content links to the old A URL, change those links to point at D directly — that removes the redirect entirely for internal traffic, which is even better than a clean single redirect.",
+        "- **Re-test after the change** to confirm each old URL now resolves in one hop to a 200, with no leftover intermediate stops and no loop.",
+        "> The goal is not zero redirects — you will always need some. The goal is that no redirect ever points at another redirect.",
+        "One caution: when you consolidate, make sure the final destination is genuinely correct and live. Repointing a chain at a URL that itself 404s or redirects again just creates a new, subtler problem. Verify the endpoint returns HTTP 200, then move on. Done right, collapsing chains recovers wasted crawl budget, speeds up every affected page, and consolidates the link equity your old URLs have been quietly leaking."
+      ]
+    }
+  ],
+  "comparisonTable": {
+    "caption": "Direct redirect vs redirect chain vs redirect loop",
+    "headers": ["Pattern", "Path", "Reaches destination?", "SEO impact", "Urgency to fix"],
+    "rows": [
+      ["Direct redirect", "A to final (1 hop)", "Yes", "Minimal — the healthy default", "None — this is the goal"],
+      ["Redirect chain", "A to B to C to final (2+ hops)", "Yes, but slowly", "Wastes crawl budget, slows load, dilutes link equity", "Medium — an optimization"],
+      ["Redirect loop", "A to B to A (never ends)", "No — 'too many redirects' error", "Page is completely inaccessible to users and crawlers", "High — fix immediately"]
+    ]
+  },
+  "peopleAlsoAsk": [
+    {
+      "q": "What is a redirect chain?",
+      "a": "A redirect chain is when a URL redirects to another URL that itself redirects, and so on, before reaching the final page — A points to B, B points to C, and only C serves the real content. Instead of one clean hop to the destination, crawlers and browsers are bounced through intermediate URLs. Each hop is a separate HTTP redirect, usually a 301 or 302, and the whole sequence is the chain."
+    },
+    {
+      "q": "Are redirect chains bad for SEO?",
+      "a": "Yes, redirect chains are bad for SEO. Each extra hop wastes crawl budget by forcing crawlers to make more requests, slows the page load with additional network round-trips, dilutes the link equity passed from backlinks, and adds a point of failure that can break the whole path. Google also stops following after about five hops, so long chains can leave the final page uncrawled entirely."
+    },
+    {
+      "q": "How do I find redirect chains?",
+      "a": "Find redirect chains by inspecting the actual HTTP responses, since browsers hide them by following every hop silently. Use a site crawler like Screaming Frog for a full redirect report, check individual URLs with a redirect-path tool or the command `curl -IL <url>`, or run an audit that follows the redirects and reports the full hop-by-hop path automatically. Sort by number of hops to fix the worst chains first."
+    },
+    {
+      "q": "How do I fix a redirect chain?",
+      "a": "Fix a redirect chain by pointing every redirect directly at the final destination URL. Map the full chain to find the true endpoint (the URL returning HTTP 200), then update each intermediate rule so it jumps straight there in one hop, using a 301 for permanent moves. Also update your own internal links to point at the final URL, and re-test to confirm each old URL now resolves in a single hop."
+    },
+    {
+      "q": "What is a redirect loop?",
+      "a": "A redirect loop is when URLs redirect back to each other so the destination is never reached — A redirects to B and B redirects back to A, cycling forever. Unlike a redirect chain, which is inefficient but still resolves, a loop is completely broken: the browser gives up and shows a 'too many redirects' error, and neither users nor crawlers can load the page. Loops are an emergency to fix immediately."
+    }
+  ],
+  "faqs": [
+    {
+      "q": "How many redirects is too many in a chain?",
+      "a": "More than one is technically a chain, but the practical concern starts at three or more hops. Google stops following after roughly five redirects in a single chain, so anything approaching that risks the final page never being crawled. Aim for exactly one hop from any old URL to its final destination."
+    },
+    {
+      "q": "Do redirect chains lose link equity?",
+      "a": "Yes, redirect chains can dilute link equity. A backlink's ranking value passes along the chain, but each hop risks shedding some of that authority and consolidating it less reliably. Collapsing a chain so the linked URL redirects straight to the final page preserves more of the equity those backlinks carry."
+    },
+    {
+      "q": "Does HTTPS or www cause redirect chains?",
+      "a": "Often, yes. Separate rules for HTTP-to-HTTPS and non-www-to-www frequently fire in sequence, so a request passes through both before reaching the final URL. Combine them into a single rule that redirects straight to the canonical HTTPS URL — for example, directly to https://www.example.com — instead of chaining two rules."
+    }
+  ],
+  "relatedKeywords": [
+    "redirect chain",
+    "redirect loop",
+    "301 redirect chain",
+    "redirect hops",
+    "how to fix redirect chains",
+    "crawl budget redirects"
+  ],
+  "internalLinks": [
+    { "href": "/", "anchor": "run a free SEO + GEO audit" },
+    { "href": "/blog/301-vs-302-redirects", "anchor": "301 vs 302 redirects" },
+    { "href": "/blog/what-is-crawl-budget", "anchor": "What is crawl budget" },
+    { "href": "/blog/how-to-find-and-fix-broken-links", "anchor": "How to find and fix broken links" },
+    { "href": "/blog/what-is-a-404-error", "anchor": "What is a 404 error" },
+    { "href": "/blog/what-is-technical-seo", "anchor": "What is technical SEO" }
+  ],
+  "images": []
+}

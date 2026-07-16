@@ -1,0 +1,136 @@
+{
+  "slug": "what-is-keyword-density",
+  "title": "What Is Keyword Density? (Does It Still Matter?)",
+  "date": "2026-07-16",
+  "updatedAt": "2026-07-16",
+  "tag": "SEO",
+  "cluster": "content-links",
+  "keyword": "what is keyword density",
+  "secondaryKeywords": ["keyword density formula", "good keyword density", "keyword stuffing", "keyword density myth"],
+  "readTime": 9,
+  "excerpt": "Keyword density is the percentage of times a keyword appears versus total words on a page — and Google has no target for it. Here is the formula, the myth, and what to do instead.",
+  "description": "What is keyword density? It is the percentage of times a keyword appears versus total words. Learn the formula, why there is no ideal number, and what to do instead.",
+  "tldr": "Keyword density is the percentage of times a keyword appears relative to the total word count on a page, calculated as (keyword count / total words) × 100. There is no ideal number and Google does not use a target density to rank pages. Chasing one leads to keyword stuffing; write naturally for intent instead.",
+  "status": "published",
+  "sections": [
+    {
+      "heading": "What is keyword density and how do you calculate it?",
+      "body": [
+        "So what is keyword density? Keyword density is the percentage of times a target keyword appears on a page relative to the total number of words on that page. It is a simple ratio, not a ranking dial: it describes how often a phrase shows up, and nothing more. If a 1,000-word article uses the phrase \"keyword density\" ten times, its density for that phrase is 1%.",
+        "The formula is straightforward:",
+        "`(keyword count / total words) × 100 = keyword density %`",
+        "So ten uses of a keyword across 1,000 words gives `(10 / 1000) × 100 = 1%`. The metric dates back to the late 1990s and early 2000s, when search engines really did count keyword occurrences to judge relevance. Stuffing a page with a phrase used to work, so writers tracked density obsessively and \"optimal density\" tools flourished.",
+        "That era is over. Modern search engines read meaning, not just repetition, so density is best understood as a **descriptive** measure of your draft rather than a **prescriptive** target to hit. It can flag a page that repeats a phrase unnaturally, but it cannot tell you the number that will make a page rank — because no such number exists.",
+        "> Keyword density measures a symptom, not a cause. A page ranks because it answers the query well, not because it hit a percentage."
+      ]
+    },
+    {
+      "heading": "Is there a good keyword density? (The myth)",
+      "body": [
+        "There is no good keyword density, and Google does not use a target density to rank pages. This is the single most important thing to understand about the metric: the \"ideal 1–3%\" figure repeated across old SEO blogs is a myth with no basis in how modern search works. Google's own search advocates have said plainly that there is no ideal keyword density and that writers should not think in those terms.",
+        "The myth persists because it feels actionable — a number is easier to chase than \"write something genuinely useful.\" But treating density as a target inverts cause and effect. Pages do not rank because they hit 2%; they rank because they satisfy the searcher, and a natural article about a topic will use the relevant words at a natural rate as a **side effect** of covering it well.",
+        "Chasing a density target actively backfires. To force a phrase up to some percentage, writers repeat it in places it does not belong, which reads awkwardly and edges toward [keyword stuffing](/blog/what-is-keyword-stuffing) — a practice Google's spam policies explicitly penalize. The pursuit of a \"good\" density is exactly what produces the bad outcome.",
+        "Here is the mindset shift that actually helps:",
+        "[[table]]"
+      ]
+    },
+    {
+      "heading": "Why obsessing over density leads to keyword stuffing",
+      "body": [
+        "Obsessing over keyword density leads directly to keyword stuffing because the only way to raise a density number on purpose is to repeat the phrase more than the writing needs. Once the exact phrase becomes the goal, sentences get contorted to fit it in, and the page tips from natural to spammy.",
+        "Keyword stuffing is loading a page with a keyword to manipulate rankings — repeating it in the body, hiding it in the footer, or cramming variations into alt text and meta tags. It is a named violation in Google's spam policies, and it hurts on two fronts: it can trigger a ranking demotion, and it makes the page worse for the humans who land on it. A sentence like \"Our keyword density tool is the best keyword density tool for keyword density\" screams manipulation to both readers and algorithms.",
+        "The signals a modern search engine actually rewards are the opposite of repetition:",
+        "- **Topical coverage** — do you address the sub-questions a searcher has, not just the head phrase?",
+        "- **Semantic relevance** — do related terms and synonyms appear naturally, showing depth?",
+        "- **Readability** — can a person read the page without tripping over forced phrasing?",
+        "- **Intent match** — does the page format match what the searcher wanted?",
+        "None of those improve when you push a density number up. If you want to check whether a draft reads as natural or stuffed, paste the published URL into the [free SEO + GEO audit on the homepage](/) — it flags over-repetition and thin content instead of chasing an arbitrary percentage."
+      ]
+    },
+    {
+      "heading": "What to do instead of tracking keyword density",
+      "body": [
+        "Instead of tracking keyword density, write for the searcher's intent and let the relevant words fall where they naturally belong. This is not vague advice — it is a concrete workflow that replaces the density number with signals search engines actually use.",
+        "**Confirm intent first.** Before writing, understand what the searcher wants and match the page format to it. A how-to query needs steps; a comparison query needs a table. Getting this right matters far more than any word count. See [what is search intent](/blog/what-is-search-intent) for the full method.",
+        "**Use semantic and related terms, not repetition.** Modern engines understand that a page about \"running shoes\" is relevant when it also mentions cushioning, pronation, and mileage — even if the exact phrase appears only a few times. Covering the topic with its natural vocabulary is the modern replacement for density. This is the core idea behind [semantic SEO](/blog/what-is-semantic-seo).",
+        "**Place the keyword where it counts, then stop.** Use your primary phrase in the title, the H1, the first 100 words, and one or two subheadings — not because a formula demands it, but because those spots tell engines and readers what the page is about. After that, write in plain language and use synonyms freely.",
+        "**Apply the \"sounds natural\" test.** Read a paragraph aloud. If the keyword appears so often that it sounds robotic or repetitive, you have too much — trust your ear over any tool. As a rough guideline, if the exact phrase shows up more than roughly once every 150–200 words, check whether each use earns its place. There is no penalty for going under; there is only downside to going over.",
+        "For the complete approach to writing pages that read naturally and still rank, see [how to write SEO-friendly content](/blog/how-to-write-seo-friendly-content) and the workflow in [how to write a blog post that ranks](/blog/how-to-write-a-blog-post-that-ranks)."
+      ]
+    },
+    {
+      "heading": "Keyword density vs. keyword stuffing: the difference",
+      "body": [
+        "Keyword density is a neutral **measurement** — the percentage of times a phrase appears — while keyword stuffing is an **abusive practice** of repeating a phrase to manipulate rankings. One is a number you can calculate on any page, including well-written ones; the other is a spam tactic Google penalizes. A page can have a perfectly ordinary density and still be fine, and a page can be stuffed regardless of the exact figure.",
+        "The line between them is intent and reading experience, not a threshold. There is no percentage at which natural writing legally becomes stuffing. Instead, ask whether each use of the phrase serves the reader or serves the algorithm. If sentences were bent to fit the keyword in, it is stuffing no matter what the density calculator says.",
+        "The practical takeaway: stop measuring density as a target, and start measuring whether your page fully answers the query in language a human enjoys reading. Do that, and the density takes care of itself. For the flip side of this topic — what over-optimization looks like and how to avoid a penalty — read [what is keyword stuffing](/blog/what-is-keyword-stuffing)."
+      ]
+    }
+  ],
+  "comparisonTable": {
+    "caption": "Density mindset vs. topic and intent mindset",
+    "headers": ["Question you ask", "Density mindset", "Topic and intent mindset"],
+    "rows": [
+      ["Goal of the page", "Hit a target percentage for the keyword", "Fully answer the searcher's question"],
+      ["How the keyword is used", "Repeated to reach a number", "Placed where it clarifies the topic, then left alone"],
+      ["Vocabulary", "Same exact phrase over and over", "Related terms, synonyms, and natural language"],
+      ["What you measure", "Keyword count / total words", "Intent match, coverage, and readability"],
+      ["Typical result", "Awkward, stuffed-sounding copy", "Natural copy that reads well and ranks"],
+      ["Risk", "Keyword stuffing penalty", "None — this is what Google rewards"]
+    ]
+  },
+  "peopleAlsoAsk": [
+    {
+      "q": "What is keyword density?",
+      "a": "Keyword density is the percentage of times a keyword appears on a page relative to the total word count, calculated as (keyword count / total words) × 100. For example, ten uses of a phrase in a 1,000-word article gives a density of 1%. It is a descriptive measurement of how often a phrase appears — not a ranking factor or a target you need to hit."
+    },
+    {
+      "q": "What is a good keyword density?",
+      "a": "There is no good keyword density, because Google does not use a target density to rank pages. The old \"1–3%\" advice is a myth from an earlier era of search. Instead of aiming for a percentage, write naturally for the searcher's intent and use the keyword where it clarifies the topic — in the title, first paragraph, and a subheading — then let related terms fall where they belong."
+    },
+    {
+      "q": "Does keyword density matter for SEO?",
+      "a": "Keyword density does not matter as a ranking factor — modern search engines read meaning and topical relevance, not repetition. It only matters as a rough warning sign: an unusually high density can indicate keyword stuffing, which Google penalizes. Focus on matching search intent, covering the topic with natural language, and readability, and the density will take care of itself."
+    },
+    {
+      "q": "How do I calculate keyword density?",
+      "a": "Calculate keyword density by dividing the number of times the keyword appears by the total word count, then multiplying by 100: (keyword count / total words) × 100. If a phrase appears 8 times in a 1,600-word page, the density is (8 / 1600) × 100 = 0.5%. The calculation is easy, but the resulting number is not a target to optimize toward."
+    },
+    {
+      "q": "What is keyword density vs keyword stuffing?",
+      "a": "Keyword density is a neutral measurement — the percentage of times a phrase appears on a page. Keyword stuffing is an abusive practice of repeating a phrase to manipulate rankings, and it violates Google's spam policies. The difference is intent and reading experience, not a specific percentage: if a phrase was repeated to game the algorithm rather than help the reader, it is stuffing."
+    }
+  ],
+  "faqs": [
+    {
+      "q": "Is 2% keyword density ideal?",
+      "a": "No. The \"2% is ideal\" figure is a myth with no basis in how Google ranks pages. Google has stated there is no ideal keyword density. Aiming for any specific percentage encourages unnatural repetition, so write for intent and readability instead of a target number."
+    },
+    {
+      "q": "Do keyword density checker tools still work?",
+      "a": "Keyword density checkers still calculate the percentage correctly, but the number they output is not a ranking target. They are only useful as a rough sanity check for over-repetition. Do not treat their suggested \"optimal\" ranges as a rule — they reflect outdated SEO thinking."
+    },
+    {
+      "q": "How many times should I use my keyword on a page?",
+      "a": "Use your primary keyword where it clarifies the topic — the title, H1, first 100 words, and one or two subheadings — then write naturally with synonyms and related terms. There is no required count. If the exact phrase starts to sound repetitive when read aloud, you are using it too often."
+    }
+  ],
+  "relatedKeywords": [
+    "keyword density",
+    "keyword frequency",
+    "keyword stuffing",
+    "keyword optimization",
+    "tf-idf",
+    "ideal keyword density",
+    "keyword density formula"
+  ],
+  "internalLinks": [
+    { "href": "/", "anchor": "run a free SEO + GEO audit" },
+    { "href": "/blog/what-is-keyword-stuffing", "anchor": "What is keyword stuffing" },
+    { "href": "/blog/how-to-write-seo-friendly-content", "anchor": "How to write SEO-friendly content" },
+    { "href": "/blog/what-is-semantic-seo", "anchor": "What is semantic SEO" },
+    { "href": "/blog/what-is-search-intent", "anchor": "What is search intent" },
+    { "href": "/blog/how-to-write-a-blog-post-that-ranks", "anchor": "How to write a blog post that ranks" }
+  ],
+  "images": []
+}

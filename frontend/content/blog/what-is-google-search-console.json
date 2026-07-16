@@ -1,0 +1,162 @@
+{
+  "slug": "what-is-google-search-console",
+  "title": "What Is Google Search Console? (Beginner Guide)",
+  "date": "2026-07-16",
+  "updatedAt": "2026-07-16",
+  "tag": "Technical SEO",
+  "cluster": "technical-seo",
+  "keyword": "what is Google Search Console",
+  "secondaryKeywords": [
+    "Google Search Console setup",
+    "GSC reports",
+    "verify site ownership",
+    "search performance report",
+    "index coverage"
+  ],
+  "readTime": 9,
+  "excerpt": "Google Search Console is a free Google tool that shows how your site performs in Search — clicks, impressions, indexing status, and issues to fix.",
+  "description": "What is Google Search Console? A free Google tool showing your site's Search performance — clicks, impressions, position, indexing status, sitemaps, and issues.",
+  "tldr": "Google Search Console is a free Google tool that shows how your site performs in Search: clicks, impressions, average position, which pages are indexed, and any crawling or indexing issues. You verify ownership once, submit a sitemap, then use its Performance and Pages reports to find and fix problems. It reports on Search — it does not index your site for you.",
+  "status": "published",
+  "sections": [
+    {
+      "heading": "What is Google Search Console and what is it for?",
+      "body": [
+        "Google Search Console is a free tool from Google that shows how your website performs in Google Search. That is the short answer to what is Google Search Console: a dashboard, connected directly to Google's own data, that reports which of your pages appear in search results, how many clicks and impressions they get, what average position they hold, and whether Google can crawl and index them. It is the closest thing to seeing your site through Google's eyes.",
+        "You use it for four jobs that no other free tool does as well. First, **measure search performance** — the exact queries people type to find you, and how each page ranks for them. Second, **check indexing** — which URLs are in Google's index and which were excluded, with the reason. Third, **submit and monitor sitemaps** so Google discovers new pages faster. Fourth, **catch problems early** — Google emails you when it detects a crawl error, a manual penalty, or a Core Web Vitals issue.",
+        "One thing Google Search Console is *not*: it does not index your site for you. Adding a property and submitting a sitemap tells Google where your pages are, but ranking still depends on your content, links, and technical health. Search Console is a reporting and diagnostic tool — it shows you what is wrong so you can fix it, following the workflow in [how to do an SEO audit](/blog/how-to-do-an-seo-audit).",
+        "> Think of Search Console as Google's report card for your site. It grades the work; it does not do the work."
+      ]
+    },
+    {
+      "heading": "Is Google Search Console free, and GSC vs Google Analytics",
+      "body": [
+        "Yes — Google Search Console is completely free, with no paid tier, no seat limits, and no signup cost beyond a Google account. Anyone who owns or manages a website should have it connected, because the data it exposes about how Google sees your site is available nowhere else at any price.",
+        "The most common confusion is Search Console versus Google Analytics, because both are free Google products. The difference is simple: **Search Console reports what happens on Google before the click** (impressions, ranking position, and the query someone searched), while **Google Analytics reports what happens on your site after the click** (page views, time on page, conversions, and traffic from every source, not just Google). They answer different questions and are strongest used together.",
+        "Here is a side-by-side so you know which tool to open for which question:",
+        "[[table]]",
+        "A practical rule: when the question is *\"why isn't this page getting search traffic?\"* start in Search Console, because the answer is usually a ranking, indexing, or query-match problem it can show you. When the question is *\"what do visitors do once they arrive?\"* open Analytics. Neither replaces the other."
+      ]
+    },
+    {
+      "heading": "How to set up Google Search Console (verify ownership)",
+      "body": [
+        "Setting up Google Search Console takes a few minutes and comes down to one core step: proving you own the site. Google will not show you private performance data until you verify ownership, which stops anyone from spying on a competitor's numbers. Here is the full flow:",
+        "[[flowchart]]",
+        "You choose one of two property types when you add the site. A **Domain property** covers every version of your site at once — `http`, `https`, `www`, and all subdomains — and is verified by adding a TXT record to your domain's DNS. A **URL-prefix property** covers only one exact address (for example `https://www.example.com/`) and offers more verification methods: uploading an HTML file, adding a meta tag, or connecting through Google Analytics or Tag Manager. For most people the Domain property is the cleaner choice because it captures all traffic in one place.",
+        "After verification, do two things immediately. **Submit your sitemap** under the Sitemaps report (usually `sitemap.xml`) so Google can discover your pages efficiently — this matters most for new sites and is closely tied to [crawl budget](/blog/what-is-crawl-budget). Then **request indexing** for your most important URLs using the URL Inspection tool. Data takes a day or two to start populating, so do not panic if the Performance report is empty on day one."
+      ]
+    },
+    {
+      "heading": "The key reports and how to use them for SEO",
+      "body": [
+        "Google Search Console has four reports that do the heavy lifting, and knowing what each one answers is how you turn it from a dashboard into an SEO workflow. Learn these four and you can diagnose almost any organic-traffic problem.",
+        "**Performance** is where you live. It lists every query and page with its clicks, impressions, click-through rate, and average position. The highest-return move here is to filter for pages ranking in positions 11-20 — page two — because a small improvement often lifts them onto page one. Low CTR at a high position usually means a weak title or meta description you can rewrite. This is the raw material for [how to improve website ranking on Google](/blog/how-to-improve-website-ranking-on-google).",
+        "**Pages** (the indexing report) shows which URLs are indexed and which are not, grouped by reason — `Crawled - currently not indexed`, `Discovered - not indexed`, `Excluded by noindex tag`, and more. When a page is missing from Google entirely, this is the first place to look; the reasons map directly to the fixes in [why is my page not indexed](/blog/why-is-my-page-not-indexed).",
+        "**Sitemaps** confirms Google read your sitemap and how many of its URLs were indexed. **Enhancements / Experience** reports on structured data, mobile usability, and Core Web Vitals, flagging invalid markup and slow pages. Together these four reports cover the technical side of SEO — pair them with the broader picture in [what is technical SEO](/blog/what-is-technical-seo).",
+        "Search Console tells you *what* is wrong; it does not always tell you *why* or check the newer signals. To go further — including whether AI answer engines can read and cite your pages — [run a free SEO + GEO audit](/) on any URL and it flags on-page, indexing, and GEO issues in one pass."
+      ]
+    },
+    {
+      "heading": "Common Search Console mistakes to avoid",
+      "body": [
+        "The biggest mistake is treating Search Console as a vanity dashboard you glance at once a month. Its value is diagnostic: the Performance and Pages reports are where you find specific, fixable problems, so the habit that pays off is reviewing them regularly and acting on what they surface, not just watching the totals rise and fall.",
+        "A second common error is misreading the **average position** metric. It is an average across every query and device where your page appeared, so a single number like \"position 14\" hides the fact that you might rank third for one query and fortieth for another. Always filter by query or page before drawing conclusions — the aggregate view is a starting point, never the answer.",
+        "Finally, people submit a sitemap and assume the job is done. A sitemap helps discovery, but pages still get excluded for reasons like `noindex` tags, duplicate content, or thin value. Check the Pages report a week after launch to confirm your important URLs actually made it into the index — discovery and indexing are two different steps, and only the Pages report tells you the second one succeeded."
+      ]
+    }
+  ],
+  "flowchart": {
+    "title": "How to set up Google Search Console",
+    "steps": [
+      { "title": "Sign in with a Google account", "detail": "Go to search.google.com/search-console and sign in — the same account you use for Gmail works." },
+      { "title": "Add your property", "detail": "Choose a Domain property (covers all subdomains and protocols) or a URL-prefix property (one exact address)." },
+      { "title": "Verify ownership", "detail": "Add a DNS TXT record for a Domain property, or upload an HTML file / add a meta tag for a URL-prefix property." },
+      { "title": "Submit your sitemap", "detail": "Open the Sitemaps report and submit sitemap.xml so Google can discover your pages efficiently." },
+      { "title": "Request indexing of key pages", "detail": "Use URL Inspection to ask Google to crawl your most important URLs first." },
+      { "title": "Review reports as data arrives", "detail": "Performance and Pages populate within a day or two — then check them regularly and fix what they flag." }
+    ]
+  },
+  "comparisonTable": {
+    "caption": "Google Search Console vs Google Analytics: which tool answers which question",
+    "headers": ["Dimension", "Google Search Console", "Google Analytics"],
+    "rows": [
+      ["What it measures", "Performance in Google Search (before the click)", "Behavior on your site (after the click)"],
+      ["Key metrics", "Impressions, clicks, position, CTR, indexing", "Sessions, page views, time on page, conversions"],
+      ["Traffic sources", "Google organic search only", "All sources — search, social, direct, referral, ads"],
+      ["Shows search queries", "Yes — the exact terms people searched", "No — organic query data is not exposed"],
+      ["Shows indexing status", "Yes — which pages are in Google's index", "No"],
+      ["Best question to ask it", "Why isn't this page getting search traffic?", "What do visitors do once they arrive?"]
+    ]
+  },
+  "peopleAlsoAsk": [
+    {
+      "q": "What is Google Search Console used for?",
+      "a": "Google Search Console is used to monitor how your site performs in Google Search. It shows the queries people search to find you, your clicks, impressions, and average position, which pages are indexed, and any crawling or indexing errors. You also use it to submit sitemaps, request indexing of new pages, and receive alerts when Google detects problems like penalties or Core Web Vitals issues."
+    },
+    {
+      "q": "Is Google Search Console free?",
+      "a": "Yes, Google Search Console is completely free. There is no paid tier, no seat limit, and no cost beyond having a Google account. Every website owner should connect it because the data it provides — how Google crawls, indexes, and ranks your pages — is available nowhere else at any price. Its free companion, Google Analytics, covers on-site behavior, and the two work best together."
+    },
+    {
+      "q": "What is the difference between Google Search Console and Google Analytics?",
+      "a": "Search Console reports what happens in Google Search before the click — impressions, ranking position, and the exact query someone typed. Google Analytics reports what happens on your site after the click — page views, time on page, conversions, and traffic from every source, not just Google. Use Search Console to diagnose why a page lacks search traffic, and Analytics to understand what visitors do once they land."
+    },
+    {
+      "q": "How do I set up Google Search Console?",
+      "a": "Sign in at search.google.com/search-console with a Google account, add your site as a property, then verify ownership — a DNS TXT record for a Domain property, or an HTML file, meta tag, or Analytics connection for a URL-prefix property. After verifying, submit your sitemap and request indexing of key pages. Data starts populating within a day or two."
+    },
+    {
+      "q": "How do I use Google Search Console for SEO?",
+      "a": "Use the Performance report to find pages ranking in positions 11-20 and improve them, and to spot high-ranking pages with low click-through that need a better title or meta description. Use the Pages report to find URLs Google excluded from the index and fix the stated reason. Submit sitemaps, monitor Core Web Vitals, and act on Google's alerts as they arrive."
+    }
+  ],
+  "faqs": [
+    {
+      "q": "How long does it take for Google Search Console to show data?",
+      "a": "Search Console usually starts showing Performance data within one to two days of verification, and it typically displays data up to about 16 months back once populated. The report is not real-time — there is a delay of a day or two, so recent clicks and impressions appear after a short lag rather than instantly."
+    },
+    {
+      "q": "Can Google Search Console fix SEO problems automatically?",
+      "a": "No. Search Console is a reporting and diagnostic tool, not an automated fixer. It tells you which pages are not indexed, which have invalid structured data, or which are slow, but you must make the actual changes on your site. Once fixed, you can use it to request re-crawling and validation of the resolved issues."
+    },
+    {
+      "q": "Do I need Google Search Console if I already use Google Analytics?",
+      "a": "Yes. The two tools answer different questions and neither replaces the other. Analytics tracks on-site behavior after a visitor arrives, while Search Console reveals search queries, ranking position, and indexing status that Analytics cannot show. For SEO you need both, and you can link them so search-query data appears alongside behavior data."
+    }
+  ],
+  "relatedKeywords": [
+    "google search console",
+    "gsc",
+    "search console setup",
+    "gsc reports",
+    "webmaster tools"
+  ],
+  "internalLinks": [
+    {
+      "href": "/",
+      "anchor": "run a free SEO + GEO audit"
+    },
+    {
+      "href": "/blog/why-is-my-page-not-indexed",
+      "anchor": "Why is my page not indexed"
+    },
+    {
+      "href": "/blog/how-to-do-an-seo-audit",
+      "anchor": "How to do an SEO audit"
+    },
+    {
+      "href": "/blog/how-to-improve-website-ranking-on-google",
+      "anchor": "How to improve website ranking"
+    },
+    {
+      "href": "/blog/what-is-crawl-budget",
+      "anchor": "What is crawl budget"
+    },
+    {
+      "href": "/blog/what-is-technical-seo",
+      "anchor": "What is technical SEO"
+    }
+  ],
+  "images": []
+}

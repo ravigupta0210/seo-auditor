@@ -1,0 +1,160 @@
+{
+  "slug": "what-is-googlebot",
+  "title": "What Is Googlebot? (How Google Crawls Your Site)",
+  "date": "2026-07-16",
+  "updatedAt": "2026-07-16",
+  "tag": "Technical SEO",
+  "cluster": "technical-seo",
+  "keyword": "what is Googlebot",
+  "secondaryKeywords": [
+    "Googlebot user agent",
+    "crawl render index",
+    "Googlebot smartphone",
+    "crawl budget",
+    "control Googlebot"
+  ],
+  "readTime": 9,
+  "excerpt": "Googlebot is Google's web crawler that discovers and fetches pages so they can be rendered and indexed — the first step before any page can rank.",
+  "description": "What is Googlebot? Google's web crawler that discovers and fetches your pages so they can be rendered and indexed — how it works, and how to control it.",
+  "tldr": "Googlebot is Google's web crawler — the software that discovers and downloads pages from the web so Google can render and index them. It follows links and sitemaps, mostly crawls as a smartphone user agent, and works within a crawl budget. You control it with robots.txt and meta robots tags, and you monitor it in Search Console's Crawl Stats report. Crawling is step one before any page can rank.",
+  "status": "published",
+  "sections": [
+    {
+      "heading": "What is Googlebot?",
+      "body": [
+        "Googlebot is Google's web crawler — the automated software that discovers and downloads pages from the web so they can be indexed. That is the direct answer to what is Googlebot: a bot (also called a spider or crawler) that visits URLs, reads their content, and follows the links it finds to discover more pages. Everything Google shows in search results starts here, because a page Googlebot never fetches can never be indexed or ranked.",
+        "There is not really one Googlebot but a family of crawlers sharing the name. The two main ones are **Googlebot Smartphone**, which crawls as a mobile device and does the vast majority of crawling under Google's mobile-first indexing, and **Googlebot Desktop**, which crawls as a desktop browser for a smaller share of requests. Related crawlers handle images, video, news, and ads, but when people say \"Googlebot\" they almost always mean the main smartphone crawler.",
+        "You can recognize Googlebot by its **user agent** string, which contains the word `Googlebot` (for example, `Mozilla/5.0 ... Googlebot/2.1; +http://www.google.com/bot.html`). Because bad actors can fake that string, Google's real crawlers come from a published list of IP ranges you can verify — important context when you look at server logs later in this guide.",
+        "> Crawling is not ranking. Googlebot's only job is to find and fetch pages. What happens to them afterward — indexing and ranking — is a separate stage, covered below."
+      ]
+    },
+    {
+      "heading": "How Googlebot works: crawl, render, index",
+      "body": [
+        "Googlebot works in three distinct stages — **crawl, render, then index** — and understanding the split explains most indexing problems. A page can be crawled but never indexed, or crawled but rendered incompletely, and each stage has its own failure modes. Here is the full pipeline:",
+        "[[flowchart]]",
+        "In the **crawl** stage, Googlebot fetches the raw HTML of a URL it discovered from a link, a sitemap, or a previous crawl. In the **render** stage, Google runs the page's JavaScript in a headless browser to see the final content a user would — this is why sites that build content entirely with client-side JavaScript can be crawled yet appear empty to Google if rendering fails. In the **index** stage, Google analyzes the rendered content, understands what the page is about, and stores it in the index so it can appear in results.",
+        "The critical takeaway: **crawling does not guarantee indexing**. Google may crawl a page and then decide not to index it because the content is thin, duplicate, or blocked by a `noindex` tag. When a page is missing from Google, the fix depends on which stage failed — the diagnostic steps are in [why is my page not indexed](/blog/why-is-my-page-not-indexed). Rendering matters just as much as crawling, which is a core reason [technical SEO](/blog/what-is-technical-seo) exists as a discipline."
+      ]
+    },
+    {
+      "heading": "Crawl budget and how often Googlebot crawls",
+      "body": [
+        "How often Googlebot crawls your site depends on your **crawl budget** — the number of URLs Googlebot is willing and able to fetch in a given period. For most small and mid-size sites, crawl budget is effectively unlimited and never a concern. It becomes a real constraint on large sites (tens of thousands of URLs or more), where Google will not crawl every page as often as you might want.",
+        "Two forces set the budget. **Crawl capacity** is how much Googlebot can fetch without overloading your server — a fast, healthy site earns more crawling; a slow or error-prone one gets throttled back. **Crawl demand** is how much Google *wants* to crawl your pages, driven by their popularity and how often they change. A frequently updated, frequently linked page gets crawled far more often than a stale, orphaned one. The full mechanics are in [what is crawl budget](/blog/what-is-crawl-budget).",
+        "There is no fixed schedule for how often Googlebot visits. A busy news homepage may be crawled many times a day, while a rarely changed page on a small site might be crawled once every few weeks. You can nudge frequency by keeping a clean sitemap with accurate `lastmod` dates, improving site speed, and making sure important pages are well linked internally so crawl demand stays high.",
+        "Googlebot is not the only crawler visiting modern sites. AI answer engines send their own bots — GPTBot, ClaudeBot, PerplexityBot — and how you treat them is a separate decision, explained in [what is an AI crawler](/blog/what-is-an-ai-crawler)."
+      ]
+    },
+    {
+      "heading": "How to see and control Googlebot",
+      "body": [
+        "You can confirm Googlebot is visiting your site in two ways. The easiest is **Search Console's Crawl Stats report** (under Settings), which shows total crawl requests over time, average response time, and a breakdown by response code and Googlebot type. The more precise way is your **server access logs**, where each Googlebot request appears with its user agent and IP — verify those IPs against Google's published ranges to filter out fakes. To confirm how a specific URL is seen, use the URL Inspection tool, which reports the last crawl and the rendered HTML.",
+        "Controlling Googlebot comes down to two mechanisms that do very different things. Use `robots.txt` to control **crawling** — a `Disallow` rule tells Googlebot not to fetch a path at all. Use the `noindex` meta robots tag to control **indexing** — it lets Googlebot fetch the page but tells it to keep the page out of the index. Confusing the two is the classic mistake, so keep the distinction sharp:",
+        "[[table]]",
+        "The pitfall to avoid: **do not block a page in robots.txt if you want it de-indexed**. If Googlebot cannot crawl the page, it never sees the `noindex` tag, so a URL blocked in robots.txt can still linger in results. To remove a page, allow crawling and add `noindex` — or use a [noindex tag](/blog/what-is-a-noindex-tag) — then let Googlebot re-crawl it. The syntax and common patterns for the crawl-control file are in [what is robots.txt](/blog/what-is-robots-txt).",
+        "To check quickly whether Googlebot (and AI crawlers) can actually reach your important pages, [run a free SEO + GEO audit](/) on any URL — it flags blocked bots, `noindex` tags, and rendering issues in one pass."
+      ]
+    },
+    {
+      "heading": "Common Googlebot mistakes to avoid",
+      "body": [
+        "The most damaging Googlebot mistake is accidentally blocking it from resources it needs to render the page. If your `robots.txt` disallows the folders holding your CSS and JavaScript, Googlebot fetches the HTML but cannot render the page as a user sees it, which can quietly hurt indexing and rankings. Let Googlebot crawl the assets required to render your content.",
+        "A second frequent error is assuming a crawl equals an index. Seeing Googlebot in your logs or Crawl Stats confirms discovery, not inclusion — the page still has to pass the indexing stage. Always verify important URLs in Search Console's Pages report or URL Inspection tool rather than trusting that a crawl means the page is live in search.",
+        "Finally, many sites serve content only through client-side JavaScript and then wonder why Google indexes an empty page. Googlebot does render JavaScript, but rendering is resource-intensive and can be delayed or fail on heavy pages. Where it matters, serve meaningful content in the initial HTML through server-side rendering or static generation, so Googlebot sees your content on the first fetch without depending on a flawless render."
+      ]
+    }
+  ],
+  "flowchart": {
+    "title": "How Googlebot processes a page: crawl to index",
+    "steps": [
+      { "title": "Discover the URL", "detail": "Googlebot finds a page from links on other pages, your sitemap, or a previous crawl." },
+      { "title": "Check robots.txt", "detail": "Before fetching, Googlebot confirms the URL is not disallowed for its user agent." },
+      { "title": "Crawl the HTML", "detail": "Googlebot downloads the raw HTML, mostly as the Googlebot Smartphone user agent." },
+      { "title": "Render the page", "detail": "Google runs the page's JavaScript in a headless browser to see the final content a user would." },
+      { "title": "Index the content", "detail": "Google analyzes the rendered page, understands its topic, and stores it — unless a noindex tag blocks it." },
+      { "title": "Eligible to rank", "detail": "Only indexed pages can appear in search results; ranking is then decided separately." }
+    ]
+  },
+  "comparisonTable": {
+    "caption": "Controlling Googlebot: robots.txt (crawling) vs noindex (indexing)",
+    "headers": ["Aspect", "robots.txt Disallow", "noindex meta robots"],
+    "rows": [
+      ["What it controls", "Whether Googlebot crawls the URL at all", "Whether an indexed page appears in results"],
+      ["Where it lives", "A /robots.txt file at your domain root", "In the page HTML head or an HTTP header"],
+      ["Googlebot fetches the page?", "No — the URL is not crawled", "Yes — it crawls, then drops from the index"],
+      ["Reliably removes a page from Google?", "No — blocked URLs can still linger in results", "Yes — the page is dropped after re-crawl"],
+      ["Use it when", "You want to save crawl budget on low-value paths", "You want a crawlable page kept out of search"]
+    ]
+  },
+  "peopleAlsoAsk": [
+    {
+      "q": "What is Googlebot?",
+      "a": "Googlebot is Google's web crawler — the automated software that discovers and downloads pages from the web so Google can render and index them. It follows links and sitemaps to find URLs, fetches their content, and passes them along the pipeline that decides what appears in search results. It is really a family of crawlers, but the main one is Googlebot Smartphone, which does most crawling under mobile-first indexing."
+    },
+    {
+      "q": "How does Googlebot work?",
+      "a": "Googlebot works in three stages: crawl, render, and index. It first discovers a URL from links or a sitemap and fetches its raw HTML. It then renders the page by running its JavaScript in a headless browser to see the final content. Finally Google analyzes that rendered content and stores it in the index. Crawling does not guarantee indexing — a page can be crawled and still excluded."
+    },
+    {
+      "q": "How often does Googlebot crawl my site?",
+      "a": "There is no fixed schedule — crawl frequency depends on your crawl budget, set by crawl capacity (how fast and healthy your server is) and crawl demand (how popular and how frequently updated your pages are). A busy, frequently updated site may be crawled many times a day, while a small static page might be crawled once every few weeks. Faster sites and fresh, well-linked content get crawled more often."
+    },
+    {
+      "q": "How do I know if Googlebot visited my site?",
+      "a": "Check Search Console's Crawl Stats report (under Settings) for total crawl requests over time, response codes, and a breakdown by Googlebot type. For precise detail, look at your server access logs, where each Googlebot request shows its user agent and IP — verify those IPs against Google's published ranges since the user agent can be faked. URL Inspection shows the last crawl of any specific page."
+    },
+    {
+      "q": "Can I control Googlebot?",
+      "a": "Yes. Use robots.txt to control crawling — a Disallow rule stops Googlebot fetching a path. Use a noindex meta robots tag to control indexing — it lets Googlebot crawl the page but keeps it out of results. Do not block a page in robots.txt if you want it de-indexed, because Googlebot must crawl the page to see the noindex tag. Allow crawling plus noindex to remove a page."
+    }
+  ],
+  "faqs": [
+    {
+      "q": "Is Googlebot the same as Google Search Console?",
+      "a": "No. Googlebot is the crawler that fetches your pages; Google Search Console is the free dashboard where you monitor and influence that crawling. Search Console's Crawl Stats and URL Inspection tools report what Googlebot did, but Googlebot itself is the automated software doing the fetching, not a tool you log into."
+    },
+    {
+      "q": "Does Googlebot use a mobile or desktop user agent?",
+      "a": "Googlebot mostly crawls as Googlebot Smartphone, a mobile user agent, because Google uses mobile-first indexing — it indexes the mobile version of your content by default. A smaller share of crawling still happens as Googlebot Desktop. This is why a mobile-friendly, fully rendered page matters for how Google sees and indexes your site."
+    },
+    {
+      "q": "Can Googlebot read JavaScript content?",
+      "a": "Yes, Googlebot renders JavaScript by running it in a headless browser, so client-side content can be indexed. However, rendering is resource-intensive and can be delayed or fail on heavy pages. For important content, serve it in the initial HTML via server-side rendering or static generation so Googlebot sees it on the first fetch without depending on a flawless render."
+    }
+  ],
+  "relatedKeywords": [
+    "googlebot",
+    "google crawler",
+    "google spider",
+    "crawl budget",
+    "googlebot user agent"
+  ],
+  "internalLinks": [
+    {
+      "href": "/",
+      "anchor": "run a free SEO + GEO audit"
+    },
+    {
+      "href": "/blog/what-is-crawl-budget",
+      "anchor": "What is crawl budget"
+    },
+    {
+      "href": "/blog/what-is-robots-txt",
+      "anchor": "What is robots.txt"
+    },
+    {
+      "href": "/blog/what-is-an-ai-crawler",
+      "anchor": "What is an AI crawler"
+    },
+    {
+      "href": "/blog/why-is-my-page-not-indexed",
+      "anchor": "Why is my page not indexed"
+    },
+    {
+      "href": "/blog/what-is-technical-seo",
+      "anchor": "What is technical SEO"
+    }
+  ],
+  "images": []
+}

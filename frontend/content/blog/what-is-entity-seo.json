@@ -1,0 +1,153 @@
+{
+  "slug": "what-is-entity-seo",
+  "title": "What Is Entity SEO? (And Why It Matters)",
+  "date": "2026-07-16",
+  "updatedAt": "2026-07-16",
+  "tag": "SEO",
+  "cluster": "content-links",
+  "keyword": "what is entity SEO",
+  "secondaryKeywords": ["entity optimization", "Google Knowledge Graph", "structured data", "topical authority"],
+  "readTime": 9,
+  "excerpt": "Entity SEO optimizes around the people, places, and concepts Google understands in its Knowledge Graph — not just keyword strings. Here is how it works.",
+  "description": "What is entity SEO? Learn how optimizing around entities in Google's Knowledge Graph — not keyword strings — drives disambiguation, topical authority, and AI answers.",
+  "tldr": "Entity SEO is the practice of optimizing around entities — the distinct people, places, brands, and concepts Google understands through its Knowledge Graph — instead of matching keyword strings. You help search and AI engines identify your brand as a real thing, connect it to related entities, and trust it as an authority, using structured data, consistent facts, and entity-rich content.",
+  "status": "published",
+  "sections": [
+    {
+      "heading": "What is entity SEO?",
+      "body": [
+        "What is entity SEO? Entity SEO is the practice of optimizing your content around **entities** — the distinct, uniquely identifiable people, places, brands, products, and concepts that a search engine understands as real things — rather than around the exact keyword strings a person types. Instead of trying to match the letters in \"best crm software,\" entity SEO makes sure Google understands that *your brand* is a CRM product, who makes it, what it competes with, and which topics it is an authority on. You are optimizing meaning, not text.",
+        "The shift matters because modern search does not work on string-matching alone. Since the 2012 Knowledge Graph launch and every language-understanding update since, Google reads a query, resolves it to the entities it refers to, and then looks for pages that discuss those same entities and their relationships. A page can rank for words it never literally uses if the engine is confident it covers the right entity — and a page stuffed with the exact keyword can still lose if the engine cannot tell which entity it is about.",
+        "Entity SEO is the natural extension of [semantic SEO](/blog/what-is-semantic-seo): semantic SEO focuses on covering a topic completely, while entity SEO focuses on making the specific things inside that topic machine-identifiable and interconnected. Get both right and you become the source engines reach for — in classic results, knowledge panels, and AI answers alike.",
+        "> Keywords are how people ask. Entities are how machines understand. Entity SEO closes the gap between the two."
+      ]
+    },
+    {
+      "heading": "Entities and the Google Knowledge Graph",
+      "body": [
+        "An **entity** is any single, distinct thing that can be uniquely identified and described — a person (Serena Williams), a place (Lisbon), a company (Stripe), a product (the iPhone), or an abstract concept (photosynthesis). What makes something an entity is not that it has a name, but that it is *one specific thing* with attributes and relationships that set it apart from everything else. Google even assigns entities internal machine IDs so it can track them independently of the words used to name them.",
+        "The **Google Knowledge Graph** is the giant database of these entities and the connections between them. It stores facts as relationships — *Stripe → founded by → Patrick and John Collison*, *Stripe → is a → payments company*, *Stripe → competitor of → PayPal*. When you search, Google maps your words to entities in this graph, then uses the surrounding relationships to understand intent and surface the right answer. The [knowledge panel](/blog/what-is-a-knowledge-panel) you see on the right of some results is the graph made visible: it is Google showing you what it knows about an entity.",
+        "Google builds this graph by reading the whole web plus trusted structured sources, and it connects your brand to it through a few strong signals:",
+        "- **Structured data** on your site that explicitly names the entity and its properties.",
+        "- **Authoritative references** like Wikipedia and Wikidata that describe the entity in a fixed, machine-readable form.",
+        "- **Consistent mentions** — the same name, facts, and details repeated across many independent sources (this is the entity version of a citation).",
+        "- **Co-occurrence** — your entity appearing alongside related entities in credible content, which teaches the graph how you connect to the rest of a topic.",
+        "The goal of entity SEO is to feed every one of these signals a clear, consistent picture so the graph can place your brand accurately."
+      ]
+    },
+    {
+      "heading": "Why entity SEO matters",
+      "body": [
+        "Entity SEO matters because search engines increasingly rank and answer based on *understanding*, not *matching* — and four concrete benefits follow directly from being a recognized entity.",
+        "**Disambiguation.** Many names are ambiguous — \"Apple\" the company versus the fruit, \"Jordan\" the person versus the country. When the graph clearly identifies which entity you are, Google stops guessing and confidently connects your pages to the right queries. Without that clarity, your content competes in a blurry pool of unrelated meanings.",
+        "**Topical authority.** Entities are how Google measures whether you actually cover a subject. A site that discusses a topic's core entities and their relationships in depth earns [topical authority](/blog/what-is-topical-authority), which lifts every page on that topic — not just the one targeting a keyword.",
+        "**Knowledge panels and rich results.** Once you are an established entity, Google can award you a knowledge panel, brand carousels, and other rich features that dominate the SERP and build trust before a click.",
+        "**AI answers.** Generative engines like ChatGPT, Gemini, Perplexity, and Google AI Overviews are built on entity understanding. They cite sources they can confidently associate with the entity in question. If AI engines do not recognize your brand as a distinct entity, you are invisible in the answers they generate — which is a fast-growing slice of search. Here is how the two approaches compare in practice:",
+        "[[table]]"
+      ]
+    },
+    {
+      "heading": "How to do entity SEO",
+      "body": [
+        "Doing entity SEO means making your entities explicit, consistent, and connected everywhere a search engine looks. Five practices do most of the work.",
+        "**1. Add structured data.** [Schema markup](/blog/what-is-schema-markup) is the most direct way to tell engines which entity a page is about. Use `Organization`, `Person`, `Product`, or `Article` types, and the `sameAs` property to link your entity to its Wikipedia, Wikidata, LinkedIn, and social profiles — `sameAs` is the literal bridge that ties your site to a graph entity.",
+        "**2. Establish the entity on Wikidata and Wikipedia.** These are primary feeds for the Knowledge Graph. A well-referenced Wikidata item (and a Wikipedia article if your brand meets notability) gives Google a canonical, machine-readable definition of who you are.",
+        "**3. Keep facts consistent (NAP and beyond).** Your **N**ame, **A**ddress, and **P**hone number — plus founding date, founders, and category — should be identical across your site, directories, and profiles. Conflicting facts make the graph uncertain and weaken the entity.",
+        "**4. Write entity-rich content.** Cover the entities a topic genuinely involves and name them precisely. Mention related people, products, and concepts, and describe how they connect. This co-occurrence teaches the graph your place in the topic and reinforces your authority.",
+        "**5. Internal-link by entity, not just by keyword.** Link related pages together with descriptive anchors so engines see a connected cluster of content about the same set of entities. A tight internal-link structure is how you signal that your site, as a whole, is an authority on an entity — not just a scatter of pages.",
+        "The fastest way to check whether your entity signals are actually present is to audit the page. Paste any URL into the [free SEO + GEO audit on the homepage](/) and it flags missing structured data, weak `sameAs` links, and thin author or brand signals that keep engines from resolving your entity."
+      ]
+    },
+    {
+      "heading": "Entity SEO and AI search",
+      "body": [
+        "Entity SEO is arguably more important for AI search than for classic Google, because generative engines answer by reasoning over entities and their relationships rather than ranking ten blue links. When someone asks an AI assistant \"which tool audits a site for AI search readiness,\" the model resolves that question to entities — a category, its attributes, the brands within it — and cites sources it associates with the right one. Understanding [how AI search engines work](/blog/how-do-ai-search-engines-work) makes clear why an unrecognized brand simply never enters the candidate set.",
+        "This is why entity SEO and generative engine optimization overlap so heavily. Both depend on being a clearly defined, consistently described, well-connected entity. The difference is emphasis: entity SEO builds the identity and relationships; GEO structures individual pages so an engine can extract and cite them. Do the entity work first, because no amount of page-level polish helps if the engine cannot tell what your brand *is*.",
+        "Start small and compound. Add correct schema with `sameAs` links, claim or clean up your Wikidata item, unify your facts across the web, and write content that names the real entities in your topic. Each step makes your brand a little more legible to the graph, and once engines resolve you confidently, every downstream signal — rankings, knowledge panels, and AI citations — gets easier to earn."
+      ]
+    }
+  ],
+  "comparisonTable": {
+    "caption": "Keyword-based SEO vs. entity-based SEO: what each one optimizes",
+    "headers": ["Dimension", "Keyword-based SEO", "Entity-based SEO"],
+    "rows": [
+      ["Unit of optimization", "Exact keyword strings", "Distinct entities and their relationships"],
+      ["How engines match", "Text on the page matches text in the query", "Query and page resolve to the same entity"],
+      ["Core signal", "Keyword placement and density", "Structured data, consistent facts, co-occurrence"],
+      ["Authority measured by", "Backlinks to a page", "Entity recognition + topical depth across a site"],
+      ["Risk of ambiguity", "High — same words, different meanings", "Low — entity is uniquely identified"],
+      ["Fit for AI search", "Weak — LLMs don't string-match", "Strong — LLMs reason over entities"]
+    ]
+  },
+  "peopleAlsoAsk": [
+    {
+      "q": "What is entity SEO?",
+      "a": "Entity SEO is the practice of optimizing content around entities — the distinct people, places, brands, and concepts a search engine understands through its Knowledge Graph — instead of around exact keyword strings. It focuses on making your brand machine-identifiable and connecting it to related entities, so engines rank and cite you based on understanding rather than text-matching."
+    },
+    {
+      "q": "What is an entity in SEO?",
+      "a": "An entity is any single, uniquely identifiable thing a search engine can describe — a person, place, company, product, or concept — with its own attributes and relationships. Google even assigns entities internal IDs so it can track them independently of the words used to name them. What makes something an entity is that it is one specific thing, not just a word."
+    },
+    {
+      "q": "What is the Google Knowledge Graph?",
+      "a": "The Google Knowledge Graph is a vast database of entities and the connections between them, storing facts as relationships like 'Stripe → founded by → the Collison brothers.' When you search, Google maps your words to entities in this graph and uses the surrounding relationships to understand intent. The knowledge panel you sometimes see is the graph made visible."
+    },
+    {
+      "q": "How do I optimize for entities?",
+      "a": "Optimize for entities by adding structured data with a `sameAs` property linking to your Wikipedia, Wikidata, and social profiles; establishing a referenced Wikidata item; keeping your name, facts, and details consistent across the web; writing content that names related entities; and internal-linking related pages so engines see a connected cluster about the same entity."
+    },
+    {
+      "q": "Why is entity SEO important?",
+      "a": "Entity SEO is important because search and AI engines increasingly rank and answer based on understanding, not text-matching. Being a recognized entity delivers disambiguation, topical authority, knowledge panels, and — critically — visibility in AI answers from ChatGPT, Gemini, and Google AI Overviews, which are built entirely on entity understanding and cite brands they can confidently identify."
+    }
+  ],
+  "faqs": [
+    {
+      "q": "Is entity SEO the same as semantic SEO?",
+      "a": "They are closely related but not identical. Semantic SEO focuses on covering a topic completely and its meaning; entity SEO focuses on making the specific things inside that topic — the entities — uniquely identifiable and interconnected for machines. Entity SEO is best seen as the identity-and-relationship layer of a broader semantic strategy."
+    },
+    {
+      "q": "Do I need a Wikipedia page for entity SEO?",
+      "a": "No, a Wikipedia page helps but is not required. Wikidata, correct schema markup with sameAs links, consistent facts across the web, and entity-rich content can establish your brand as an entity on their own. Wikipedia simply accelerates recognition when your brand meets its notability guidelines."
+    },
+    {
+      "q": "How does schema markup help entity SEO?",
+      "a": "Schema markup is the most direct way to tell engines which entity a page is about. Types like Organization or Person define the entity, and the sameAs property links it to authoritative profiles like Wikidata and LinkedIn — the literal bridge that connects your site to a Knowledge Graph entity."
+    }
+  ],
+  "relatedKeywords": [
+    "entity seo",
+    "entities in seo",
+    "google knowledge graph",
+    "entity optimization",
+    "semantic seo vs entity seo",
+    "entity-based search"
+  ],
+  "internalLinks": [
+    {
+      "href": "/",
+      "anchor": "run a free SEO + GEO audit"
+    },
+    {
+      "href": "/blog/what-is-semantic-seo",
+      "anchor": "What is semantic SEO"
+    },
+    {
+      "href": "/blog/what-is-a-knowledge-panel",
+      "anchor": "What is a knowledge panel"
+    },
+    {
+      "href": "/blog/what-is-topical-authority",
+      "anchor": "What is topical authority"
+    },
+    {
+      "href": "/blog/what-is-schema-markup",
+      "anchor": "What is schema markup"
+    },
+    {
+      "href": "/blog/how-do-ai-search-engines-work",
+      "anchor": "How do AI search engines work"
+    }
+  ],
+  "images": []
+}

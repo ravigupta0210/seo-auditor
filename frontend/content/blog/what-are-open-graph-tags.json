@@ -1,0 +1,160 @@
+{
+  "slug": "what-are-open-graph-tags",
+  "title": "What Are Open Graph Tags? (SEO + Social)",
+  "date": "2026-07-16",
+  "updatedAt": "2026-07-16",
+  "tag": "Technical SEO",
+  "cluster": "technical-seo",
+  "keyword": "what are Open Graph tags",
+  "secondaryKeywords": ["og tags", "open graph protocol", "og:image size", "social meta tags"],
+  "readTime": 9,
+  "excerpt": "Open Graph tags control how your URL looks when shared on social and chat apps. Here is what they are, the tags that matter, and how to test them.",
+  "description": "What are Open Graph tags? The og: meta tags that control your link preview on social and chat apps — the key tags, image sizes, and how to test them.",
+  "tldr": "Open Graph tags are og: meta tags in your page's <head> — og:title, og:description, og:image, og:url, og:type — that control how a URL looks when shared on social media and chat apps. They are not a direct Google ranking factor, but a good preview lifts click-through, which drives traffic and links.",
+  "status": "published",
+  "sections": [
+    {
+      "heading": "What are Open Graph tags?",
+      "body": [
+        "What are Open Graph tags? They are `<meta>` tags in your page's `<head>` that tell social platforms and chat apps how to build the preview card when someone shares your URL. When you paste a link into Facebook, LinkedIn, iMessage, Slack, WhatsApp, or Discord and a title, description, and image pop up, those come from Open Graph tags. Without them the platform guesses — often grabbing the wrong image or a truncated title — and your link shows up as a bare, unclickable URL.",
+        "The format comes from the **Open Graph protocol**, originally created by Facebook and now read by nearly every platform that renders link previews. Every tag uses a `property` attribute prefixed with `og:` and a `content` value you control. That is the whole idea: you supply the exact title, description, and image, and the platform displays them instead of scraping your page and guessing.",
+        "Here are the five tags that do almost all the work, in a minimal head block:",
+        "```html\n<meta property=\"og:title\" content=\"What Are Open Graph Tags? (SEO + Social)\" />\n<meta property=\"og:description\" content=\"The og: meta tags that control your link preview on social and chat apps.\" />\n<meta property=\"og:image\" content=\"https://example.com/og-image.png\" />\n<meta property=\"og:url\" content=\"https://example.com/what-are-open-graph-tags\" />\n<meta property=\"og:type\" content=\"article\" />\n```",
+        "Open Graph tags live only in the HTML source, not on the visible page — a reader never sees them, but every crawler and share bot does. That makes them easy to forget and easy to get wrong, which is exactly why they are worth auditing."
+      ]
+    },
+    {
+      "heading": "Do Open Graph tags help SEO?",
+      "body": [
+        "Open Graph tags are not a direct Google ranking factor — Google does not read `og:title` to decide where you rank. But they are a real **indirect SEO win**, and dismissing them as \"just social\" leaves easy traffic on the table.",
+        "The mechanism is click-through. A link with a sharp title, clear description, and a crisp 1200×630 image gets clicked and reshared far more often than a bare URL. More shares mean more visits, and a share of those visitors link to you, mention you, or subscribe. Those links and brand mentions are what actually move rankings. So the chain runs like this:",
+        "- **Good Open Graph tags** → a rich, trustworthy preview card.",
+        "- **Rich preview** → higher click-through and more reshares on social and in chat.",
+        "- **More reach** → more traffic, brand searches, and editorial links.",
+        "- **Links and brand signals** → the things Google actually rewards.",
+        "> Open Graph tags do not rank your page — they earn the clicks and links that do. Treat them as a distribution multiplier, not a ranking tag.",
+        "There is also a growing GEO angle. AI assistants and chat surfaces increasingly render link cards using Open Graph data, so a clean `og:title` and `og:image` shape how your content appears when it is cited in a conversation, not just on a social feed. If you are already thinking about [technical SEO](/blog/what-is-technical-seo), Open Graph belongs on the same checklist as your title tags and canonical URLs."
+      ]
+    },
+    {
+      "heading": "The Open Graph tags that matter (and og:image sizing)",
+      "body": [
+        "You do not need every tag in the protocol — five carry the weight, and one image mistake undoes all of them. This table lists the essentials and how each affects the preview:",
+        "[[table]]",
+        "The single tag people get wrong most is `og:image`. Use an absolute URL (not a relative path), host a **1200×630 pixel** image (a 1.91:1 ratio), and keep it under about 5 MB and in PNG or JPG. That size renders sharp as a large card on Facebook, LinkedIn, and Slack without being cropped. Undersized images (below 600×315) get downgraded to a tiny thumbnail, and the wrong ratio gets awkwardly cropped — often cutting off your logo or headline.",
+        "A few practical rules that save the most reshares:",
+        "- **Always set `og:image` to an absolute HTTPS URL.** Relative paths fail on most scrapers.",
+        "- **Bake any text in the image large and centered**, since edges get cropped on some clients.",
+        "- **Keep `og:title` under ~60 characters and `og:description` under ~110** so nothing truncates. These can differ from your [title tag](/blog/what-is-a-title-tag) and [meta description](/blog/what-is-a-meta-description) — social copy can be punchier than search copy.",
+        "- **Set `og:url` to the canonical URL** so shares of tracking-parameter variants consolidate to one page.",
+        "If you want structured data on the same page too, Open Graph pairs cleanly with [schema markup](/blog/what-is-schema-markup): Open Graph controls the social card, schema controls the Google rich result. They are complementary, not duplicates."
+      ]
+    },
+    {
+      "heading": "Open Graph vs Twitter Cards",
+      "body": [
+        "Open Graph and Twitter Cards do the same job — build a link preview — but they are two different tag families, and knowing when you need both prevents duplicated, conflicting markup.",
+        "**Twitter Cards** are X's (formerly Twitter's) own preview system, using `twitter:` meta tags like `twitter:card`, `twitter:title`, and `twitter:image`. The important thing: **X falls back to Open Graph tags when Twitter Card tags are missing.** So if you only have Open Graph, your link still previews on X — it just uses `og:title` and `og:image`. You add `twitter:` tags only when you want X-specific behavior, most commonly `twitter:card` set to `summary_large_image` to force the big-image layout.",
+        "For most sites the winning setup is: **full Open Graph tags plus two Twitter tags** — `twitter:card` and optionally `twitter:site` (your @handle for attribution). Everything else — title, description, image — cascades from Open Graph, so you maintain one image and one description instead of two.",
+        "```html\n<meta name=\"twitter:card\" content=\"summary_large_image\" />\n<meta name=\"twitter:site\" content=\"@yourhandle\" />\n```",
+        "Note the attribute difference that trips people up: Open Graph uses `property=\"og:...\"` while Twitter uses `name=\"twitter:...\"`. Mixing them up (e.g. `name=\"og:title\"`) is one of the most common reasons a valid-looking tag silently fails to render."
+      ]
+    },
+    {
+      "heading": "How to test and fix your Open Graph tags",
+      "body": [
+        "Never trust that Open Graph tags work just because they are in your source — test the rendered card before you rely on it, because caching and scraper quirks cause tags to fail in practice even when the HTML looks correct.",
+        "The fastest manual checks are the platform debuggers. Facebook's Sharing Debugger and LinkedIn's Post Inspector both fetch your URL, show the exact card they will render, and expose missing or malformed tags. They also let you **force a re-scrape**, which is essential: platforms cache Open Graph data aggressively, so after you fix a wrong image the old one can stick for days until you clear the cache in the debugger.",
+        "Common failures these tools surface — and the fix for each:",
+        "- **No image shows** → `og:image` is a relative path or the URL 404s; switch to an absolute HTTPS URL.",
+        "- **Old image is stuck** → the platform cached it; re-scrape in the debugger to refresh.",
+        "- **Wrong title/description** → a plugin or theme is injecting a second, conflicting `og:title`; remove the duplicate.",
+        "- **Tags missing entirely** → they were added after `</head>` or rendered only client-side, so scrapers never see them; make sure they are server-rendered inside `<head>`.",
+        "To catch these in one pass alongside the rest of your on-page setup, [run a free SEO + GEO audit](/) on the URL. It flags missing or malformed Open Graph tags together with title, description, and GEO issues, so you fix the whole preview-and-ranking surface at once instead of bouncing between four separate debuggers. Fold this into your broader [on-page SEO](/blog/what-is-on-page-seo) routine and every page you publish ships with a preview card that earns the click."
+      ]
+    }
+  ],
+  "comparisonTable": {
+    "caption": "The Open Graph tags that matter and what each one controls",
+    "headers": ["Tag", "What it controls", "Required?", "Best practice"],
+    "rows": [
+      ["og:title", "Headline shown on the card", "Yes", "Under ~60 chars; can differ from your title tag"],
+      ["og:description", "Supporting line under the title", "Recommended", "Under ~110 chars; punchy, benefit-led"],
+      ["og:image", "Preview image on the card", "Yes", "Absolute HTTPS URL, 1200×630 px, <5 MB PNG/JPG"],
+      ["og:url", "Canonical URL for the share", "Recommended", "Use the canonical URL to consolidate shares"],
+      ["og:type", "Content type (article, website, etc.)", "Recommended", "\"article\" for posts, \"website\" for the homepage"],
+      ["og:site_name", "Your brand/site name on the card", "Optional", "Set once site-wide for consistent attribution"]
+    ]
+  },
+  "peopleAlsoAsk": [
+    {
+      "q": "What are Open Graph tags?",
+      "a": "Open Graph tags are og: meta tags in a page's <head> — og:title, og:description, og:image, og:url, and og:type — that tell social platforms and chat apps how to build the preview card when your URL is shared. They come from the Open Graph protocol created by Facebook and are now read by LinkedIn, Slack, iMessage, WhatsApp, Discord, and X. Without them, platforms guess your title and image, often getting both wrong."
+    },
+    {
+      "q": "Do Open Graph tags help SEO?",
+      "a": "Open Graph tags are not a direct Google ranking factor, but they are an indirect SEO win. A rich preview card earns more clicks and reshares than a bare URL, and that extra reach drives traffic, brand searches, and editorial links — which are the signals Google actually rewards. Think of Open Graph tags as a distribution multiplier that earns the links and clicks that move rankings, rather than a ranking tag themselves."
+    },
+    {
+      "q": "How do I add Open Graph tags?",
+      "a": "Add Open Graph tags by placing og: meta tags inside your page's <head>, before the closing </head> tag. Set og:title, og:description, og:image (an absolute HTTPS URL), og:url, and og:type on every page. Most CMS platforms and SEO plugins generate them automatically — you just supply the image and copy. The critical rule is that they must be server-rendered inside <head>, because share bots do not run client-side JavaScript."
+    },
+    {
+      "q": "What is the difference between Open Graph and Twitter Cards?",
+      "a": "Open Graph is the cross-platform preview system read by Facebook, LinkedIn, Slack, and most apps, using property=\"og:...\" tags. Twitter Cards are X's own system, using name=\"twitter:...\" tags. The key difference: X falls back to your Open Graph tags when Twitter Card tags are missing, so you only add twitter: tags for X-specific behavior — usually twitter:card set to summary_large_image. Most sites need full Open Graph plus just those one or two Twitter tags."
+    },
+    {
+      "q": "What are the most important Open Graph tags?",
+      "a": "The five most important Open Graph tags are og:title, og:description, og:image, og:url, and og:type. Of these, og:title and og:image do the most work — the title is the headline on the card and the image is the visual that drives clicks. Get og:image right by using an absolute HTTPS URL at 1200×630 pixels; an undersized or relative-path image is the single most common reason a preview card fails to render."
+    }
+  ],
+  "faqs": [
+    {
+      "q": "What size should an Open Graph image be?",
+      "a": "Use 1200×630 pixels, a 1.91:1 ratio, in PNG or JPG under about 5 MB. That renders as a large, sharp card on Facebook, LinkedIn, and Slack without cropping. Images below 600×315 get downgraded to a small thumbnail, and off-ratio images get awkwardly cropped, often cutting off text."
+    },
+    {
+      "q": "Why is my Open Graph image not updating when I share a link?",
+      "a": "Platforms cache Open Graph data aggressively, so an old image can persist for days after you change it. Force a refresh by running the URL through Facebook's Sharing Debugger or LinkedIn's Post Inspector and re-scraping, which clears the cache and pulls your current og:image."
+    },
+    {
+      "q": "Do Open Graph tags need to be server-rendered?",
+      "a": "Yes. Share bots and scrapers do not execute client-side JavaScript, so Open Graph tags added by JS after page load are invisible to them. The tags must be present in the server-rendered HTML inside <head>, or your preview card falls back to guessed data."
+    }
+  ],
+  "relatedKeywords": [
+    "open graph tags",
+    "og tags",
+    "social meta tags",
+    "twitter cards",
+    "open graph protocol",
+    "og:image size 1200x630"
+  ],
+  "internalLinks": [
+    {
+      "href": "/",
+      "anchor": "run a free SEO + GEO audit"
+    },
+    {
+      "href": "/blog/what-is-a-title-tag",
+      "anchor": "What is a title tag"
+    },
+    {
+      "href": "/blog/what-is-a-meta-description",
+      "anchor": "What is a meta description"
+    },
+    {
+      "href": "/blog/what-is-schema-markup",
+      "anchor": "What is schema markup"
+    },
+    {
+      "href": "/blog/what-is-technical-seo",
+      "anchor": "What is technical SEO"
+    },
+    {
+      "href": "/blog/what-is-on-page-seo",
+      "anchor": "What is on-page SEO"
+    }
+  ],
+  "images": []
+}

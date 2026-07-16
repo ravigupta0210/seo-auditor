@@ -1,0 +1,131 @@
+{
+  "slug": "what-is-dwell-time",
+  "title": "What Is Dwell Time in SEO? (And How to Improve It)",
+  "date": "2026-07-16",
+  "updatedAt": "2026-07-16",
+  "tag": "SEO",
+  "cluster": "seo-basics",
+  "keyword": "what is dwell time",
+  "secondaryKeywords": ["dwell time vs bounce rate", "is dwell time a ranking factor", "pogo-sticking", "improve dwell time"],
+  "readTime": 9,
+  "excerpt": "Dwell time is how long a user stays on your page after clicking from search before returning to the results. Learn what it is, whether it is a ranking factor, and how to improve it.",
+  "description": "What is dwell time? It is how long a searcher stays on your page before returning to Google. Learn if it is a ranking factor and how to improve it in this guide.",
+  "tldr": "Dwell time is how long a user stays on your page after clicking a search result before returning to the results page. It reflects how well your content satisfied the query. Google says it is not a direct ranking factor, but the satisfaction it signals is. Improve it by matching intent, answering fast, and making the page easy to read.",
+  "status": "published",
+  "sections": [
+    {
+      "heading": "What is dwell time in SEO?",
+      "body": [
+        "So what is dwell time? Dwell time is the length of time a user spends on your page after clicking a search result, before returning to the search engine results page (SERP). It measures the gap between the click and the bounce-back: click your listing, read for two minutes, then hit the back button, and your dwell time for that visit is two minutes.",
+        "The metric matters because it captures something a ranking algorithm cares about — satisfaction. A long dwell time suggests the searcher found what they came for and stayed to consume it. A short dwell time, especially an immediate return to the SERP, hints that the page did not answer the query and the user went looking elsewhere.",
+        "Dwell time is a **search-specific** engagement measure. It only exists in the context of a search click, which distinguishes it from general analytics metrics. Google itself does not publish or hand you a dwell-time number in Search Console or Analytics — it is an inferred concept describing the search-click-to-return journey, not a field you can read off a dashboard.",
+        "> Dwell time is not about keeping people trapped on a page. It is a byproduct of a page that answers the question so well the searcher has no reason to go back."
+      ]
+    },
+    {
+      "heading": "Is dwell time a ranking factor?",
+      "body": [
+        "Dwell time is not a direct Google ranking factor. Google representatives have repeatedly said they do not use dwell time, time on site, or bounce rate as direct ranking signals, in part because those metrics are noisy and easy to misread — a long dwell time can mean a confused user hunting for an answer just as easily as a satisfied one.",
+        "The nuance is important, though. While the raw metric is not a ranking input, the **satisfaction it reflects** absolutely is. Google's systems are built to reward content that meets the searcher's need, and it evaluates user-interaction patterns in aggregate — through systems like its long-running quality and helpfulness signals — to learn which results people find useful. So dwell time is best thought of as a *symptom* of quality that correlates with ranking, not a *lever* you pull to rank.",
+        "This distinction changes how you should act on it. Do not try to game dwell time directly with tricks that trap users on the page. Instead, improve the underlying quality that produces a healthy dwell time naturally: relevance, clarity, and depth. When you fix the cause, the metric follows — and so do the rankings that the metric correlates with.",
+        "For a closely related debate on a metric Google also says is not a direct signal, see [does bounce rate affect SEO](/blog/does-bounce-rate-affect-seo)."
+      ]
+    },
+    {
+      "heading": "Dwell time vs. bounce rate vs. time on page",
+      "body": [
+        "Dwell time, bounce rate, and time on page are three distinct metrics that people constantly confuse. They measure different things, come from different places, and can move in opposite directions on the same page — so treating them as interchangeable leads to bad decisions.",
+        "**Dwell time** is the time between a search click and the return to the SERP. It is search-specific and inferred, not reported by your analytics. **Bounce rate** is the percentage of sessions in which a user views a single page and leaves without a second interaction — it is a site-analytics metric and is not tied to search. **Time on page** is how long a visitor is active on one page regardless of how they arrived, and it is famously unreliable because analytics often cannot measure the final page of a session accurately.",
+        "The overlaps cause real confusion. A high bounce rate can go with a great dwell time: someone searches \"what is dwell time,\" clicks your page, reads the full answer for three minutes, and leaves satisfied — that is a bounce and a single-page session, but a long, healthy dwell. Judging that page by bounce rate alone would flag a success as a failure.",
+        "Here is how the three compare side by side:",
+        "[[table]]"
+      ]
+    },
+    {
+      "heading": "Pogo-sticking: the signal that really hurts",
+      "body": [
+        "Pogo-sticking is when a user clicks a search result, returns to the SERP almost immediately, and clicks a different result instead — the behavior that produces the shortest, most negative dwell times. It is the pattern Google is most likely to read as dissatisfaction, because the user explicitly rejected your page in favor of a competitor for the same query.",
+        "Pogo-sticking is worse than a simple bounce. A bounce can be a satisfied exit — the searcher got the answer and closed the tab. Pogo-sticking is a rejection: the searcher looked at your page, decided it did not answer the question, and bounced *back to keep searching*. That immediate back-and-forth to try another listing is the clearest signal that your result failed to match the intent behind the query.",
+        "The cause is almost always an **intent mismatch or a slow, off-putting first impression**. The searcher wanted a quick definition and hit a 2,000-word sales page; or the page took five seconds to load; or the answer was buried below ads and fluff. Fix those and pogo-sticking drops, because the searcher finds a reason to stay within the first few seconds.",
+        "To see whether your page gives a searcher an immediate reason to stay, run the published URL through the [free SEO + GEO audit on the homepage](/) — it flags slow load times, weak or missing answer-first openers, and thin content that commonly drive pogo-sticking."
+      ]
+    },
+    {
+      "heading": "How to improve dwell time",
+      "body": [
+        "Improve dwell time by giving searchers a fast, relevant reason to stay and read — the same things that make a page genuinely good. Because dwell time is a symptom of satisfaction, every improvement here targets the underlying cause rather than the metric itself.",
+        "- **Match search intent.** The biggest driver of short dwell time is a page that answers a different question than the searcher asked. Confirm the intent behind your keyword and match the page format to it before anything else — see [what is search intent](/blog/what-is-search-intent).",
+        "- **Answer first.** Open with a direct, self-contained answer in the first 100 words so the searcher immediately sees they are in the right place. A strong opener is the single best defense against pogo-sticking.",
+        "- **Make it readable.** Short paragraphs, descriptive subheadings, and bullet lists let people skim and find their answer. Dense walls of text push readers back to the SERP.",
+        "- **Speed up the page.** A slow load is a dwell-time killer — many users leave before the content even appears. Tighten your Core Web Vitals using [how to improve page speed](/blog/how-to-improve-page-speed).",
+        "- **Add relevant media.** A helpful image, table, or short video gives readers a reason to linger and consume, naturally extending dwell time.",
+        "- **Link to related depth.** Contextual internal links invite the reader deeper into your site, turning a single-page visit into a longer session and reducing the pull back to search.",
+        "Every one of these tactics is really a content-quality upgrade. That is the point: the reliable way to improve dwell time is to make the page more useful. The broader on-page checklist lives in [what is on-page SEO](/blog/what-is-on-page-seo), and the writing craft in [how to write SEO-friendly content](/blog/how-to-write-seo-friendly-content)."
+      ]
+    }
+  ],
+  "comparisonTable": {
+    "caption": "Dwell time vs. bounce rate vs. time on page",
+    "headers": ["Metric", "What it measures", "Source", "Tied to search?"],
+    "rows": [
+      ["Dwell time", "Time from a search click until the user returns to the SERP", "Inferred (not in your analytics)", "Yes — search-specific"],
+      ["Bounce rate", "Percent of single-page sessions with no second interaction", "Site analytics", "No — any traffic source"],
+      ["Time on page", "How long a visitor is active on one page, however they arrived", "Site analytics (often unreliable)", "No — any traffic source"],
+      ["What a high value means", "Dwell: satisfaction. Bounce: ambiguous. Time on page: engagement or confusion", "—", "—"]
+    ]
+  },
+  "peopleAlsoAsk": [
+    {
+      "q": "What is dwell time in SEO?",
+      "a": "Dwell time in SEO is how long a user stays on your page after clicking a search result before returning to the search results page. Click your listing, read for two minutes, then hit back, and your dwell time is two minutes. It reflects how well your page satisfied the query — a long dwell suggests the searcher found what they wanted, while an immediate return suggests it missed the mark."
+    },
+    {
+      "q": "Is dwell time a ranking factor?",
+      "a": "Dwell time is not a direct Google ranking factor. Google representatives have repeatedly said they do not use dwell time, time on site, or bounce rate as direct signals because they are noisy. However, the searcher satisfaction that dwell time reflects is what Google's systems aim to reward. Treat it as a symptom of quality that correlates with ranking, not a lever you pull to rank."
+    },
+    {
+      "q": "What is a good dwell time?",
+      "a": "There is no universal good dwell time, because the right length depends on the query. A quick-answer search like a definition may be fully satisfied in 30 seconds, while a how-to guide might warrant several minutes. Instead of chasing a number, aim to match intent so the searcher stays as long as the task requires and leaves satisfied rather than bouncing back to try another result."
+    },
+    {
+      "q": "What is the difference between dwell time and bounce rate?",
+      "a": "Dwell time is how long a searcher stays on your page before returning to the SERP, and it is search-specific. Bounce rate is the percentage of single-page sessions with no second interaction, measured in your site analytics regardless of traffic source. They can disagree: a page can have a high bounce rate and a long, healthy dwell time when a searcher reads the full answer and leaves satisfied."
+    },
+    {
+      "q": "How do I improve dwell time?",
+      "a": "Improve dwell time by matching search intent, opening with a direct answer in the first 100 words, and making the page fast and easy to read with short paragraphs, subheadings, and lists. Add relevant media and internal links to related depth so readers stay longer. Because dwell time reflects satisfaction, the reliable fix is making the page genuinely more useful, not tricking users into staying."
+    }
+  ],
+  "faqs": [
+    {
+      "q": "Can I see dwell time in Google Analytics?",
+      "a": "No. Dwell time is an inferred, search-specific concept, not a field in Google Analytics or Search Console. Analytics reports related metrics like engagement time and bounce rate, but none of them measure the exact click-to-SERP-return journey that dwell time describes. Treat it as a mental model rather than a number to track."
+    },
+    {
+      "q": "Does low dwell time always mean a bad page?",
+      "a": "Not always. A short dwell time can be perfectly healthy when the query has a quick answer — a searcher who gets a definition in 20 seconds and leaves satisfied has a low dwell time and a successful visit. Low dwell time is only a warning sign when it comes with pogo-sticking, where users return to the SERP to click a competitor instead."
+    },
+    {
+      "q": "What is the difference between dwell time and pogo-sticking?",
+      "a": "Dwell time is the length of a visit before returning to search; pogo-sticking is a specific negative pattern where a user returns almost instantly and clicks a different result. Pogo-sticking produces the shortest dwell times and is the clearest dissatisfaction signal, because the searcher actively rejected your page in favor of a competitor for the same query."
+    }
+  ],
+  "relatedKeywords": [
+    "dwell time",
+    "time on page",
+    "user engagement",
+    "bounce rate",
+    "pogo-sticking",
+    "dwell time vs bounce rate",
+    "is dwell time a ranking factor"
+  ],
+  "internalLinks": [
+    { "href": "/", "anchor": "run a free SEO + GEO audit" },
+    { "href": "/blog/does-bounce-rate-affect-seo", "anchor": "Does bounce rate affect SEO" },
+    { "href": "/blog/how-to-write-seo-friendly-content", "anchor": "How to write SEO-friendly content" },
+    { "href": "/blog/what-is-search-intent", "anchor": "What is search intent" },
+    { "href": "/blog/how-to-improve-page-speed", "anchor": "How to improve page speed" },
+    { "href": "/blog/what-is-on-page-seo", "anchor": "What is on-page SEO" }
+  ],
+  "images": []
+}

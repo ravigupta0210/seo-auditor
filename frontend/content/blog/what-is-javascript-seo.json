@@ -1,0 +1,132 @@
+{
+  "slug": "what-is-javascript-seo",
+  "title": "What Is JavaScript SEO? (2026 Guide)",
+  "date": "2026-07-16",
+  "updatedAt": "2026-07-16",
+  "tag": "Technical SEO",
+  "cluster": "technical-seo",
+  "keyword": "what is JavaScript SEO",
+  "secondaryKeywords": [
+    "client-side rendering",
+    "server-side rendering",
+    "static site generation",
+    "Google JavaScript rendering",
+    "dynamic rendering"
+  ],
+  "readTime": 9,
+  "excerpt": "What JavaScript SEO is, how Google renders JS, why client-side rendering risks your rankings, and how to make React, Vue, and Angular sites crawlable.",
+  "description": "What is JavaScript SEO? The practice of making JS-heavy sites crawlable and indexable — how Google renders JS, CSR vs SSR vs SSG, and how to fix it.",
+  "tldr": "JavaScript SEO is the practice of making JavaScript-heavy sites — React, Vue, Angular — crawlable and indexable. Google crawls the HTML, queues the page, then renders it later with a headless Chromium before indexing. If your content, links, and metadata only appear after that render, they can be delayed or missed, so the fix is to serve key content in the initial HTML.",
+  "status": "published",
+  "sections": [
+    {
+      "heading": "What JavaScript SEO is and why it matters",
+      "body": [
+        "What is JavaScript SEO? It is the practice of making sites that rely heavily on JavaScript — typically single-page apps built with React, Vue, or Angular — crawlable, renderable, and indexable by search engines. On a plain HTML site, everything a crawler needs is in the source that comes back from the server. On a JavaScript site, the server often returns a near-empty shell and the real content, links, and metadata are assembled in the browser by JavaScript. JavaScript SEO is the work of making sure search engines still see that content.",
+        "This matters because Google does not treat a JavaScript page the way a browser does. A browser downloads the shell, runs the script, and shows you a finished page in one smooth motion. Google splits that into two separate stages that can be hours or days apart, and other crawlers — including most AI answer engines — often skip the JavaScript stage entirely. If your important content only exists after the script runs, some engines will index a blank page and some will never see the content at all.",
+        "The symptoms are familiar to anyone who has shipped a modern web app: pages that load perfectly for users but show a thin or empty snippet in Google, titles and descriptions that never update, internal links that crawlers ignore, or a brand-new site that stays stuck at a handful of indexed URLs. Every one of those traces back to the same root cause — content that depends on JavaScript that the engine did not, or could not, run. Fixing it starts with understanding how Google processes JavaScript in the first place.",
+        "For the broader context of where this fits, JavaScript SEO is one pillar of [what is technical SEO](/blog/what-is-technical-seo) — the crawlability and indexability layer beneath your content."
+      ]
+    },
+    {
+      "heading": "How Google renders JavaScript (the two-wave process)",
+      "body": [
+        "Google processes a JavaScript page in three phases — crawl, render, index — and the render phase is where JavaScript sites live or die. First, [Googlebot](/blog/what-is-googlebot) fetches the raw HTML and reads whatever is present in that initial response. If links and content are already in the HTML, they get discovered immediately. Anything that depends on JavaScript is not executed yet.",
+        "Second, the page is placed in a **render queue**. Google has a finite pool of rendering resources, so pages wait their turn — sometimes seconds, historically much longer. When a page reaches the front of the queue, Google renders it with a headless Chromium (the Web Rendering Service), running the JavaScript to build the final DOM. Only after that render does Google see the content, links, and metadata your script generated.",
+        "Third, the rendered output is indexed, and any new links discovered during rendering go back into the crawl queue to repeat the cycle. This split is often called the **two-wave** model: wave one indexes the raw HTML, wave two indexes the rendered result later. The practical consequence is a rendering delay — if your title, canonical, or main content is injected by JavaScript, it may be missing or stale during wave one, and time-sensitive pages (news, new products) can be indexed slowly or with the wrong metadata.",
+        "> Google renders JavaScript, but it does so on its own schedule and its own budget. Depending on the render is a bet that the queue moves fast and the script never errors — a bet you do not need to make.",
+        "There is a second, sharper reason not to rely on rendering: it eats [crawl budget](/blog/what-is-crawl-budget). Rendering is far more expensive than fetching HTML, so a site that forces Google to render every page gets fewer pages processed per crawl than an equivalent site that serves ready-made HTML."
+      ]
+    },
+    {
+      "heading": "CSR vs SSR vs SSG: which rendering method to choose",
+      "body": [
+        "The single biggest JavaScript SEO decision is where your HTML gets built: in the user's browser (client-side rendering), on your server at request time (server-side rendering), or ahead of time at build (static site generation). This one choice determines whether an engine sees your content in wave one or has to wait for a render — or never sees it at all.",
+        "**Client-side rendering (CSR)** is the risky default of a plain create-react-app or Vue SPA: the server sends an empty `<div id=\"root\"></div>` and JavaScript fills it in. Users are fine, but crawlers get nothing until they render, and non-rendering crawlers get a blank page. **Server-side rendering (SSR)** — Next.js, Nuxt, Angular Universal — runs the JavaScript on the server and ships fully-formed HTML, so content is present in wave one. **Static site generation (SSG)** pre-builds HTML at deploy time; it is the fastest and safest for SEO but suits content that does not change per request.",
+        "Here is how the main approaches compare on the factors that decide rankings and indexing:",
+        "[[table]]",
+        "The practical rule for 2026: if a page needs to rank or be cited, its meaningful content should exist in the HTML the server returns — via SSR or SSG — not be assembled entirely in the browser. Modern frameworks make this the default, so the fix is usually adopting the framework's rendering mode rather than rebuilding the app. Faster first paint from server-rendered HTML also helps [page speed](/blog/how-to-improve-page-speed) and [Core Web Vitals](/blog/what-are-core-web-vitals), which feed rankings directly."
+      ]
+    },
+    {
+      "heading": "Common JavaScript SEO problems (and how to spot them)",
+      "body": [
+        "Most JavaScript SEO failures come from a short list of recurring mistakes. The first is **links that are not real links.** Crawlers follow `<a href=\"/page\">`; they do not click. A menu built as `<div onclick=\"navigate()\">` is invisible to Googlebot, so whole sections of a site never get discovered. Always render navigation and internal links as anchor tags with a real `href`.",
+        "The second is **content locked behind interaction.** If a product description, review, or tab body only loads after a click, scroll, or hover, Google may never trigger that event during rendering — it does not interact with pages. Content you want indexed must be in the DOM on load, not gated behind a user action.",
+        "The third is **blocked JavaScript.** If `robots.txt` disallows the `.js` files or API endpoints that build the page, Google cannot render it and falls back to the empty shell. Never block the scripts or JSON endpoints your page needs to render. Other frequent culprits: metadata injected too late so wave-one indexing captures the wrong title or [why a page is not indexed](/blog/why-is-my-page-not-indexed) at all; soft 404s where a client-side router returns HTTP 200 for a missing page; and canonical or `noindex` tags set by JavaScript that conflict with the raw HTML.",
+        "To spot these fast, compare two versions of your page. **View source** shows the raw HTML Google sees in wave one; the browser's rendered DOM (Inspect element) shows the final result. If your main content, title, or links appear in the rendered DOM but not in view-source, they depend on JavaScript — and that is exactly your JavaScript SEO risk. Google Search Console's URL Inspection tool shows the rendered HTML Google actually captured, which is the ground truth."
+      ]
+    },
+    {
+      "heading": "JavaScript SEO best practices and the GEO angle",
+      "body": [
+        "The best practices reduce to one principle: **do not make an engine run JavaScript to learn what a page is about.** Serve critical content, internal links, titles, meta descriptions, canonicals, and structured data (JSON-LD) in the server response using SSR or SSG. Use real `<a href>` links, keep scripts and data endpoints crawlable in `robots.txt`, return proper HTTP status codes from the server (a genuine 404, not a client-side fake), and avoid injecting `noindex` or canonical tags with JavaScript. If a legacy app truly cannot be re-architected, dynamic rendering — serving pre-rendered HTML to bots — is a stopgap, though Google now treats it as a workaround rather than a recommendation.",
+        "The 2026 twist is generative engine optimization. Google renders JavaScript; most **AI crawlers do not.** GPTBot, ClaudeBot, PerplexityBot, and similar agents that power AI answers typically fetch the raw HTML and never execute the script. That means a client-side-rendered page can rank acceptably in classic Google search yet be completely invisible to ChatGPT, Claude, and Perplexity — they see the empty shell. If you want to be cited in AI answers, server-rendered content is not optional. Learn how these bots behave in [what is an AI crawler](/blog/what-is-an-ai-crawler).",
+        "The fastest way to know where you stand is to test the raw HTML directly. [Run a free SEO + GEO audit](/) on any URL and it fetches the page the way a non-rendering crawler does, flagging content and links that only appear after JavaScript runs, blocked scripts, missing server-side metadata, and AI-crawler access — the exact signals that separate a JavaScript site that ranks and gets cited from one that quietly disappears."
+      ]
+    }
+  ],
+  "comparisonTable": {
+    "caption": "CSR vs SSR vs SSG vs dynamic rendering: SEO implications",
+    "headers": ["Approach", "Where HTML is built", "In wave-one HTML?", "SEO / GEO risk", "Best for"],
+    "rows": [
+      ["Client-side rendering (CSR)", "In the user's browser", "No — empty shell", "High: delayed indexing; AI crawlers see nothing", "App dashboards behind login, not indexable pages"],
+      ["Server-side rendering (SSR)", "On the server per request", "Yes", "Low: content present for all crawlers", "Dynamic, personalized, or frequently-changing pages"],
+      ["Static site generation (SSG)", "At build time", "Yes", "Lowest: fastest and fully crawlable", "Blogs, docs, marketing pages that rarely change"],
+      ["Dynamic rendering", "Bots get pre-rendered HTML, users get CSR", "Yes (for bots)", "Medium: a workaround, extra infra to maintain", "Legacy apps that cannot move to SSR yet"]
+    ]
+  },
+  "peopleAlsoAsk": [
+    {
+      "q": "What is JavaScript SEO?",
+      "a": "JavaScript SEO is the practice of making JavaScript-heavy sites — usually React, Vue, or Angular single-page apps — crawlable, renderable, and indexable by search engines. Because the content on these sites is built in the browser rather than served as plain HTML, JavaScript SEO ensures search engines can still see the content, links, and metadata. In practice it means serving critical content in the server's HTML instead of relying on the browser to assemble it."
+    },
+    {
+      "q": "Is JavaScript bad for SEO?",
+      "a": "JavaScript is not bad for SEO by itself — Google can render it — but relying on it to deliver critical content is risky. Client-side-rendered content is indexed on a delay, costs extra crawl budget, and is invisible to most AI crawlers that never run JavaScript. JavaScript becomes a problem only when content, links, or metadata exist solely after the script runs. Serve those in the server HTML and JavaScript and SEO coexist fine."
+    },
+    {
+      "q": "How does Google render JavaScript?",
+      "a": "Google renders JavaScript in three phases: crawl, render, index. Googlebot first fetches the raw HTML, then places the page in a render queue. When resources are available it renders the page with a headless Chromium, running the JavaScript to build the final DOM, and only then indexes the result. This split — often called the two-wave model — means JavaScript-generated content can be indexed later than content already present in the HTML."
+    },
+    {
+      "q": "What is the difference between server-side and client-side rendering?",
+      "a": "Server-side rendering (SSR) runs the JavaScript on the server and sends fully-built HTML, so content is present the moment a crawler fetches the page. Client-side rendering (CSR) sends a near-empty shell and builds the page in the user's browser, so crawlers see nothing until they render it and non-rendering crawlers see nothing at all. For SEO, SSR is far safer because content appears in the first-wave HTML."
+    },
+    {
+      "q": "How do I make a JavaScript site SEO-friendly?",
+      "a": "Make a JavaScript site SEO-friendly by serving critical content in the server's HTML using server-side rendering (SSR) or static site generation (SSG), so engines do not have to run JavaScript to see it. Use real anchor links with an href, keep your scripts and data endpoints crawlable in robots.txt, return correct HTTP status codes, and avoid injecting canonical or noindex tags with JavaScript. Then verify the raw HTML with an audit tool."
+    }
+  ],
+  "faqs": [
+    {
+      "q": "Can Google index a React or Vue single-page app?",
+      "a": "Yes, Google can index React and Vue single-page apps because it renders JavaScript, but client-side-rendered pages are indexed on a delay and cost extra crawl budget. Using a framework like Next.js or Nuxt to server-render the content removes the delay and guarantees crawlers and AI bots see it in the first-wave HTML."
+    },
+    {
+      "q": "Do AI crawlers like GPTBot render JavaScript?",
+      "a": "Most AI crawlers, including GPTBot, ClaudeBot, and PerplexityBot, do not render JavaScript — they fetch the raw HTML and stop. A client-side-rendered page therefore looks empty to them, so it can rank in Google yet never be cited in ChatGPT or Perplexity. Server-side rendering is required to appear in AI answers."
+    },
+    {
+      "q": "How can I see what Google sees on my JavaScript page?",
+      "a": "Compare view-source (the raw HTML Google reads first) with the rendered DOM in your browser's Inspect panel. If content appears in the rendered DOM but not in view-source, it depends on JavaScript. Google Search Console's URL Inspection tool shows the exact rendered HTML Google captured, which is the definitive check."
+    }
+  ],
+  "relatedKeywords": [
+    "javascript seo",
+    "js rendering",
+    "client-side rendering seo",
+    "server-side rendering seo",
+    "google javascript rendering",
+    "react seo"
+  ],
+  "internalLinks": [
+    { "href": "/", "anchor": "run a free SEO + GEO audit" },
+    { "href": "/blog/what-is-technical-seo", "anchor": "What is technical SEO" },
+    { "href": "/blog/what-is-googlebot", "anchor": "What is Googlebot" },
+    { "href": "/blog/how-to-improve-page-speed", "anchor": "How to improve page speed" },
+    { "href": "/blog/why-is-my-page-not-indexed", "anchor": "Why is my page not indexed" },
+    { "href": "/blog/what-is-an-ai-crawler", "anchor": "What is an AI crawler" }
+  ],
+  "images": []
+}

@@ -1,0 +1,164 @@
+{
+  "slug": "what-are-sitelinks",
+  "title": "What Are Sitelinks? (And How to Get Them)",
+  "date": "2026-07-16",
+  "updatedAt": "2026-07-16",
+  "tag": "SEO",
+  "cluster": "seo-basics",
+  "keyword": "what are sitelinks",
+  "secondaryKeywords": ["google sitelinks", "sitelinks search box", "brand serp", "site structure"],
+  "readTime": 9,
+  "excerpt": "Sitelinks are the extra sub-links Google shows under a result. You cannot add them directly, but you can strongly influence which ones appear.",
+  "description": "What are sitelinks? The extra sub-links Google shows under a result. They are automatic — here is how to influence which ones appear and demote bad ones.",
+  "tldr": "Sitelinks are the extra sub-links Google shows indented under a single search result, deep-linking to key pages like Pricing or Contact. They appear automatically — you cannot add them directly — but a clear site structure, strong internal linking, and a solid brand presence strongly influence which pages Google chooses.",
+  "status": "published",
+  "sections": [
+    {
+      "heading": "What are sitelinks?",
+      "body": [
+        "Sitelinks are the extra sub-links Google displays indented beneath a single search result, deep-linking to important pages inside the same site. Search a brand like \"notion\" or \"github\" and under the main blue link you will see a small grid or list of shortcuts — Pricing, Login, Templates, Careers — each pointing to a specific page. Those shortcuts are sitelinks, and understanding **what are sitelinks** starts with one fact: they belong to a single result, not the whole page of results.",
+        "Google generates sitelinks automatically from its understanding of your site's structure. Its algorithms decide a page has enough authority and a clear enough hierarchy that showing a few internal destinations will help searchers, then it picks which pages to surface. You never mark a link as a \"sitelink\" — there is no tag or setting for it.",
+        "Sitelinks come in a few flavors you will encounter on the [SERP](/blog/what-is-a-serp):",
+        "- **Full sitelinks** — a grid of up to six links under a brand's homepage result, typical for navigational searches.",
+        "- **One-line sitelinks** — a compact row of two to four links under a non-homepage result or a smaller brand.",
+        "- **Sitelinks search box** — a search field embedded directly in the result that queries your site.",
+        "They matter because they dominate screen space and telegraph trust. A result with a full sitelink grid pushes competitors down the page, signals that Google considers you the authoritative destination, and gives searchers a direct path to what they want — which lifts click-through on your most valuable pages."
+      ]
+    },
+    {
+      "heading": "How do you get sitelinks? (You influence, not add)",
+      "body": [
+        "You cannot directly add sitelinks — Google generates them algorithmically — but you can strongly influence which pages qualify and which ones it picks. Every lever comes down to making your site's important pages obvious, well-linked, and trusted. Here is the workflow:",
+        "[[flowchart]]",
+        "The foundation is a **clear, shallow site structure**. Google favors sites where the key pages sit close to the homepage and the hierarchy is easy to parse. Organize navigation into a logical hierarchy — a handful of top-level sections, each linking down to its children — and keep important pages within two or three clicks of the homepage. A tangled structure with everything buried five levels deep gives Google no clean set of candidates to promote.",
+        "The second lever is **internal linking**. The pages you link to most often, with the most descriptive anchor text, are the ones Google reads as most important — and the strongest sitelink candidates. Point consistent, meaningful anchors at your key pages from your navigation, footer, and body content. If you want \"Pricing\" to become a sitelink, link to it as \"Pricing\" everywhere, not as \"click here.\" This is exactly the discipline covered in [internal linking](/blog/what-is-internal-linking), and it is the single most controllable sitelink factor.",
+        "> Sitelinks are Google's summary of what your internal links already say. If your own linking does not make your key pages obvious, Google has nothing clear to promote."
+      ]
+    },
+    {
+      "heading": "The signals that make sitelinks more likely",
+      "body": [
+        "Beyond structure and internal links, sitelinks track closely with brand strength and page clarity. These are the practical signals worth auditing, and how much each one moves the needle:",
+        "[[table]]",
+        "**Descriptive page titles and headings** matter more than most people expect. Google often uses your page's [title tag](/blog/what-is-a-title-tag) as the sitelink's anchor text, so a page titled \"Pricing – Acme\" produces a clean \"Pricing\" sitelink, while a vague title like \"Plans & Options for Growing Teams\" produces a messy or omitted one. Give every key page a short, unambiguous title.",
+        "**Brand signals** are the reason sitelinks appear mostly for navigational and branded searches. When people search your brand name directly, Google infers you are a known entity worth deep-linking. You build those signals over time with a consistent brand name, [schema markup](/blog/what-is-schema-markup) that defines your organization, and enough authority that your brand is a recognizable search. Full sitelink grids almost always require this brand recognition — they rarely appear for a small, unbranded site.",
+        "Finally, **a clean, crawlable technical foundation** lets Google discover and trust the candidate pages in the first place. If your key pages are slow, blocked, or have thin content, they will not be promoted regardless of how well you link to them. A short, descriptive URL — following the principles in [URL structure for SEO](/blog/url-structure-for-seo) — reinforces the hierarchy Google is trying to read."
+      ]
+    },
+    {
+      "heading": "The sitelinks search box",
+      "body": [
+        "The sitelinks search box is a search field Google embeds directly inside your search result, letting people search within your site without leaving the SERP. When a user types a query into it and hits enter, Google sends them to your own site's search results page for that term. It appears mainly for strong branded searches where Google judges an on-site search would help.",
+        "Like regular sitelinks, the search box is automatic — you cannot force it on. But you can make it eligible and shape its behavior with `WebSite` schema. Adding `SearchAction` structured data tells Google the URL pattern of your internal search so it can wire the box to your search engine:",
+        "```json\n{\n  \"@context\": \"https://schema.org\",\n  \"@type\": \"WebSite\",\n  \"url\": \"https://example.com/\",\n  \"potentialAction\": {\n    \"@type\": \"SearchAction\",\n    \"target\": \"https://example.com/search?q={search_term_string}\",\n    \"query-input\": \"required name=search_term_string\"\n  }\n}\n```",
+        "Two caveats worth knowing. First, this markup does not summon the search box — it only defines the target if Google decides to show one; the box still depends on brand authority. Second, if you do not want a sitelinks search box at all, you can suppress it by adding a `<meta name=\"google\" content=\"nositelinkssearchbox\">` tag to your homepage `<head>`. This is one of the few pieces of direct control Google offers over sitelinks."
+      ]
+    },
+    {
+      "heading": "Can you control or demote bad sitelinks?",
+      "body": [
+        "You cannot pin the sitelinks you want, but you can suppress ones you do not — Google removed the old demotion tool from Search Console, so control now happens through the site itself. If a low-value page (a stale promo, an empty tag archive) keeps showing as a sitelink, your options are to fix or remove the page.",
+        "The reliable levers when a bad sitelink appears:",
+        "- **Weaken its internal links.** Reduce the number and prominence of links pointing to the unwanted page; strengthen links to the page you would rather see promoted.",
+        "- **Improve or consolidate the page.** A thin page that Google promoted may drop out once you merge it, redirect it, or flesh it out.",
+        "- **Noindex genuinely useless pages.** If a page should never appear anywhere, a `noindex` tag removes it from the index and therefore from sitelink candidacy.",
+        "- **Fix the title.** If the sitelink text is confusing, a clearer title tag usually cleans up the anchor Google shows.",
+        "Because everything routes back to structure, titles, and internal links, the fastest way to spot problems is to audit the site as a whole. [Run a free SEO + GEO audit](/) to surface weak internal linking, missing schema, and unclear titles on your key pages — the exact signals that decide which sitelinks Google shows. Pair that with a strong [brand SERP](/blog/what-are-serp-features) and clean structure, and sitelinks tend to follow on their own. They are earned, not requested — the work is making your best pages impossible for Google to overlook."
+      ]
+    }
+  ],
+  "flowchart": {
+    "title": "How to encourage Google sitelinks",
+    "steps": [
+      { "title": "Build a clear, shallow structure", "detail": "Keep key pages within two or three clicks of the homepage with a logical hierarchy." },
+      { "title": "Internally link to key pages", "detail": "Point consistent, descriptive anchor text at the pages you want promoted." },
+      { "title": "Write descriptive page titles", "detail": "Give each key page a short, unambiguous title — Google often uses it as the sitelink anchor." },
+      { "title": "Strengthen brand signals", "detail": "Use a consistent brand name and organization schema so Google treats you as a known entity." },
+      { "title": "Add WebSite/SearchAction schema", "detail": "Define your internal search so a sitelinks search box can render." },
+      { "title": "Audit, then fix weak pages", "detail": "Remove, improve, or de-link low-value pages so only your best ones qualify." }
+    ]
+  },
+  "comparisonTable": {
+    "caption": "Signals that make sitelinks more likely — and how much each matters",
+    "headers": ["Signal", "Why it matters", "Impact", "How to improve"],
+    "rows": [
+      ["Site structure", "Gives Google a clean hierarchy to promote", "High", "Keep key pages 2–3 clicks from home"],
+      ["Internal linking", "Tells Google which pages are most important", "High", "Consistent descriptive anchors to key pages"],
+      ["Descriptive titles", "Often used as the sitelink anchor text", "High", "Short, unambiguous title tag per page"],
+      ["Brand signals", "Sitelinks skew to branded/navigational search", "High", "Consistent brand name + organization schema"],
+      ["WebSite schema", "Enables the sitelinks search box", "Medium", "Add SearchAction structured data"],
+      ["Technical health", "Slow or blocked pages get skipped", "Medium", "Fast, crawlable, indexable key pages"]
+    ]
+  },
+  "peopleAlsoAsk": [
+    {
+      "q": "What are sitelinks in Google?",
+      "a": "Sitelinks in Google are the extra sub-links shown indented beneath a single search result, deep-linking to important pages inside that site — like Pricing, Login, or Contact. Google generates them automatically from its understanding of your site structure and internal links, choosing pages it thinks will help searchers. They appear most often for branded and navigational searches, and they dominate screen space, pushing competitors down the page."
+    },
+    {
+      "q": "How do I get sitelinks?",
+      "a": "You cannot add sitelinks directly — Google generates them algorithmically — but you influence them by making your key pages obvious and trusted. Build a clear, shallow site structure, link internally to important pages with descriptive anchor text, give each page a short unambiguous title, and strengthen your brand signals. Sitelinks are essentially Google's summary of what your own internal linking already says is important, so strong internal linking is the biggest lever."
+    },
+    {
+      "q": "What is a sitelinks search box?",
+      "a": "A sitelinks search box is a search field Google embeds inside your search result so people can search within your site directly from the SERP. Typing a query sends the user to your own site's search results for that term. It appears mainly for strong branded searches. You can make it eligible with WebSite and SearchAction schema, or suppress it entirely with a nositelinkssearchbox meta tag on your homepage."
+    },
+    {
+      "q": "Can I control my sitelinks?",
+      "a": "You cannot pin the sitelinks you want, but you can influence and demote them. Google retired the old demotion tool, so control now happens through the site: weaken internal links to an unwanted page, improve or consolidate thin pages, fix confusing titles, or noindex pages that should never appear. To promote a page instead, strengthen its internal links and give it a clear, descriptive title tag."
+    },
+    {
+      "q": "Why do not I have sitelinks?",
+      "a": "Most sites lack sitelinks because they have weak brand signals, an unclear site structure, or inconsistent internal linking — Google has no confident set of key pages to promote. Sitelinks also skew heavily toward branded and navigational searches, so a newer or lesser-known brand simply may not trigger them yet. Improve structure, internal linking, and titles, build brand recognition over time, and sitelinks tend to appear on their own."
+    }
+  ],
+  "faqs": [
+    {
+      "q": "How long does it take to get sitelinks?",
+      "a": "There is no fixed timeline — sitelinks appear once Google trusts your site structure and brand enough, which can take weeks to many months. They come faster for sites with clear hierarchy, strong internal linking, and recognizable branded search demand. New or low-authority sites often wait longest because Google needs confidence before deep-linking."
+    },
+    {
+      "q": "Do sitelinks only appear for the homepage?",
+      "a": "No. Full sitelink grids usually appear under a homepage result for branded searches, but one-line sitelinks — a compact row of two to four links — regularly show under interior pages and category results too. Any page with clear structure and strong internal links can earn compact sitelinks, not just the homepage."
+    },
+    {
+      "q": "Does schema markup create sitelinks?",
+      "a": "Schema markup does not directly create standard sitelinks, but it helps. WebSite and Organization schema strengthen the brand and site signals Google uses when deciding to show them, and SearchAction schema is what enables the sitelinks search box specifically. Schema supports sitelinks; it does not force them to appear."
+    }
+  ],
+  "relatedKeywords": [
+    "sitelinks",
+    "google sitelinks",
+    "sitelinks search box",
+    "brand serp",
+    "site structure",
+    "how to get sitelinks"
+  ],
+  "internalLinks": [
+    {
+      "href": "/",
+      "anchor": "run a free SEO + GEO audit"
+    },
+    {
+      "href": "/blog/what-are-serp-features",
+      "anchor": "What are SERP features"
+    },
+    {
+      "href": "/blog/what-is-internal-linking",
+      "anchor": "What is internal linking"
+    },
+    {
+      "href": "/blog/what-is-schema-markup",
+      "anchor": "What is schema markup"
+    },
+    {
+      "href": "/blog/url-structure-for-seo",
+      "anchor": "URL structure for SEO"
+    },
+    {
+      "href": "/blog/what-is-a-serp",
+      "anchor": "What is a SERP"
+    }
+  ],
+  "images": []
+}

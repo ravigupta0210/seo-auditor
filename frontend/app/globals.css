@@ -1481,6 +1481,12 @@ textarea.field-input { resize: vertical; min-height: 128px; line-height: 1.55; }
 .print-only { display: none; }
 
 @media print {
+  /* Remove the browser's default header/footer (date + page title) and
+     recreate page margins with our own padding so content isn't at the edge. */
+  @page { margin: 0; }
+  body { padding: 14mm 12mm !important; }
+  body::before { display: none !important; }
+
   /* Strip all interactive site chrome from the printed report */
   .no-print,
   .site-header,
@@ -1514,7 +1520,7 @@ textarea.field-input { resize: vertical; min-height: 128px; line-height: 1.55; }
     margin-bottom: 22px;
   }
   .pdf-brand-top { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-bottom: 12px; }
-  .pdf-brand-id { display: flex; align-items: center; gap: 12px; }
+  .pdf-brand-id { display: flex; align-items: center; gap: 24px; }
   .pdf-brand-logo { max-height: 48px; max-width: 220px; object-fit: contain; }
   .pdf-brand-company { font-weight: 700; font-size: 17px; }
   .pdf-brand-fallback { font-weight: 700; font-size: 18px; }

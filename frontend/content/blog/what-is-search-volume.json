@@ -1,0 +1,149 @@
+{
+  "slug": "what-is-search-volume",
+  "title": "What Is Search Volume in SEO?",
+  "date": "2026-07-17",
+  "updatedAt": "2026-07-17",
+  "tag": "SEO",
+  "cluster": "seo-basics",
+  "keyword": "what is search volume",
+  "secondaryKeywords": ["monthly search volume", "keyword volume", "search demand", "how to find search volume"],
+  "readTime": 9,
+  "excerpt": "Search volume is the average monthly searches for a keyword — what it means, what counts as good, how to find it free, and why it isn't the same as traffic.",
+  "description": "What is search volume in SEO? It's the average monthly searches for a keyword — learn what counts as good, how to find it free, and why volume isn't traffic.",
+  "tldr": "Search volume is the average number of times a keyword is searched on Google per month. It's an estimate, not an exact count, because Google groups close variants together. A 'good' volume depends on intent and niche — low-volume, high-intent terms often convert better than popular ones, and you never capture the full volume as traffic.",
+  "status": "published",
+  "sections": [
+    {
+      "heading": "What is search volume, exactly?",
+      "body": [
+        "What is search volume? Search volume is the average number of times people search a specific keyword on Google in a given month, shown as a single figure like 2,400, 90, or 40,500. It is the headline metric in every keyword tool because it estimates demand — how many people are actually looking for the thing your page covers. A keyword with zero search volume is a topic almost nobody searches for; a keyword with tens of thousands is a topic in high demand and, usually, high competition.",
+        "The number is almost always reported as a **monthly average**, not a live count. Tools take the searches over the past 12 months and average them, which smooths out spikes. That matters for seasonal terms: \"christmas gift ideas\" might show 60,500 as its yearly average while actually getting 400,000 searches in December and almost none in June. When you see a volume figure, read it as \"roughly this many searches in a typical month,\" not a promise for the month you publish.",
+        "Search volume is one of three numbers you weigh when choosing a keyword. The other two are [search intent](/blog/what-is-search-intent) — what the searcher actually wants — and [keyword difficulty](/blog/what-is-keyword-difficulty), which estimates how hard it is to rank. Volume tells you how big the prize is; the other two tell you whether you can win it and whether winning is worth anything. Judging a keyword on volume alone is the most common beginner mistake."
+      ]
+    },
+    {
+      "heading": "Search volume is an estimate, not an exact count",
+      "body": [
+        "No SEO tool has Google's real search data, so every search volume figure is a modeled estimate — and different tools disagree, sometimes by a lot. Google Keyword Planner pulls from advertiser data, while tools like Ahrefs, Semrush, and free alternatives build their own models from clickstream data and Keyword Planner ranges. It is normal for three tools to show 1,900, 2,400, and 3,600 for the same keyword. Treat volume as a **ballpark for comparison**, not a precise forecast.",
+        "Google also **groups close variants together** into one number. \"How to find search volume,\" \"finding search volume,\" and \"where to find search volume\" may all report the same figure because Google buckets synonyms and word-order variations. This is why the raw number understates reality in one sense — many phrasings feed one estimate — and why chasing exact-match phrasing is pointless. You are ranking for a cluster of related queries, not one string of text.",
+        "> Use search volume to rank keywords against each other, never as an absolute prediction of visits. \"Higher than the alternative\" is a safe read; \"exactly 2,400 people will see this\" is not.",
+        "One more wrinkle: Keyword Planner shows **ranges** (like 1K–10K) unless you run active ads, and it rounds aggressively. For a new site, the direction of the number matters far more than the decimal. Is this a 100-a-month topic or a 10,000-a-month topic? That distinction changes your strategy; the difference between 2,100 and 2,400 does not."
+      ]
+    },
+    {
+      "heading": "What counts as 'good' search volume?",
+      "body": [
+        "There is no universal \"good\" search volume — it depends entirely on intent, niche, and your site's authority. A B2B software term at 200 searches a month can be worth more than a celebrity-gossip term at 200,000, because the 200 are buyers and the 200,000 are browsers. Before asking whether a volume is high enough, ask what the searcher wants and what a visit is worth to you. A low-volume keyword with strong commercial intent often beats a high-volume one with none.",
+        "As a rough orientation for a newer site, here is how volume tiers tend to behave — but read every tier through the lens of intent, not the number alone:",
+        "- **1–100 searches/month** — very specific long-tail terms. Low traffic each, but easy to rank and often high-converting. Dozens of these add up.",
+        "- **100–1,000/month** — the sweet spot for most new and mid-size sites: real demand, winnable competition.",
+        "- **1,000–10,000/month** — meaningful traffic, usually strong competition; realistic once you have some authority.",
+        "- **10,000+/month** — head terms dominated by established sites. Aspirational, not a starting point.",
+        "This is exactly why [long-tail keywords](/blog/how-to-target-long-tail-keywords) are the smart first move for a new site. A single long-tail term looks tiny, but they are specific, less competitive, and convert better because the searcher knows precisely what they want. Ranking #1 for fifty 80-a-month long-tail keywords delivers more qualified traffic than ranking #30 for one 40,000-a-month head term you will never crack."
+      ]
+    },
+    {
+      "heading": "How to find search volume for free",
+      "body": [
+        "You do not need a paid subscription to find search volume — several free sources give you enough signal to choose keywords. Start with these:",
+        "- **Google Keyword Planner** (free with any Google Ads account, no spend required) — the source closest to Google's own data, though it shows ranges rather than exact figures unless you run ads.",
+        "- **Google Search Console** — for keywords you *already* rank for, this shows real impressions, which is truer than any estimate. Impressions are effectively your slice of real search volume.",
+        "- **Google autocomplete and \"People also ask\"** — free demand signals. If Google suggests a phrase, people are searching it; the suggestions themselves are ranked by popularity.",
+        "- **Free keyword tools** — options like Keyword Surfer, Ubersuggest's free tier, and Google Trends (relative, not absolute) let you eyeball volume without paying.",
+        "The full free workflow — combining these sources, filtering by intent, and building a keyword list — is covered step by step in [how to do keyword research for free](/blog/how-to-do-keyword-research-for-free). For a brand-new site, pair that with a plan for [ranking a new website](/blog/how-to-rank-a-new-website) so you target volumes you can realistically win in your first year, not head terms that stay out of reach.",
+        "Before you commit to a keyword, make sure the page you build around it is actually crawlable and citable. Paste your URL into the [free SEO + GEO audit on the homepage](/) — it flags missing titles, weak answer-first openings, and blocked AI crawlers, so the volume you're chasing can actually turn into rankings and AI citations."
+      ]
+    },
+    {
+      "heading": "Search volume vs. traffic: you won't get it all",
+      "body": [
+        "A keyword's search volume is not the traffic you will receive — even ranking #1 captures only a fraction of it. Click-through rate falls sharply by position: the top organic result earns roughly 25–30% of clicks, position 3 around 10%, and page-two results a rounding error. On top of that, AI Overviews and \"zero-click\" answers now resolve many searches without any click at all. So a 1,000-volume keyword you rank #1 for might send 250 visits, not 1,000 — and less if an AI answer sits above you.",
+        "This is the single biggest reason not to chase high-volume terms exclusively. A 10,000-volume head term where you rank #15 sends almost nothing, because virtually no one clicks page two. A 300-volume long-tail term where you rank #1 sends a steady, qualified trickle. Multiply that across many long-tail wins and the math favors specificity over raw volume nearly every time. Here is how the two approaches trade off:",
+        "[[table]]",
+        "The takeaway: use search volume to size the opportunity, then let intent and difficulty decide whether to chase it. The best keyword strategy for most sites is a broad base of low- and mid-volume terms you can actually rank for, plus a few high-volume terms as long-term targets. Volume points you toward demand — it is your on-page relevance, your [search intent](/blog/what-is-search-intent) match, and your ability to earn a top position that turn that demand into traffic."
+      ]
+    }
+  ],
+  "comparisonTable": {
+    "caption": "High-volume head terms vs. long-tail keywords: the real tradeoffs",
+    "headers": ["Factor", "High-volume head term", "Long-tail keyword"],
+    "rows": [
+      ["Example", "\"seo\" (~90,000/mo)", "\"what is search volume\" (~500/mo)"],
+      ["Competition", "Extreme — dominated by authority sites", "Low to moderate — winnable for new sites"],
+      ["Intent clarity", "Vague — could want anything", "Specific — you know what they need"],
+      ["Conversion rate", "Lower — mostly browsers", "Higher — searcher knows what they want"],
+      ["Time to rank", "Months to years, if ever", "Weeks to months"],
+      ["Best for", "Established sites and brand terms", "New sites building traffic and authority"]
+    ]
+  },
+  "peopleAlsoAsk": [
+    {
+      "q": "What is search volume in SEO?",
+      "a": "Search volume in SEO is the average number of times a specific keyword is searched on Google per month, reported as a single figure like 2,400. It estimates demand — how many people are looking for a topic — and is the headline number in every keyword research tool. It is a modeled estimate averaged over 12 months, not a live or exact count, so use it to compare keywords rather than predict precise traffic."
+    },
+    {
+      "q": "What is a good monthly search volume?",
+      "a": "There is no universal good monthly search volume — it depends on intent, niche, and your site's authority. For a newer site, 100–1,000 searches a month is often the sweet spot: real demand with winnable competition. But a 200-volume keyword with strong buying intent can outperform a 200,000-volume one with none. Judge volume alongside intent and keyword difficulty, never on the number alone."
+    },
+    {
+      "q": "How do I find search volume for keywords?",
+      "a": "Find search volume for free using Google Keyword Planner (closest to Google's data, shown as ranges), Google Search Console (real impressions for keywords you already rank for), and Google autocomplete plus 'People also ask' for demand signals. Free tools like Keyword Surfer, Google Trends, and Ubersuggest's free tier also work. Different tools disagree, so treat every figure as a ballpark for comparison, not an exact number."
+    },
+    {
+      "q": "Is high search volume always better?",
+      "a": "No — high search volume is not always better. High-volume head terms are usually dominated by established sites, have vague intent, and convert poorly, so ranking on page two of a 10,000-volume keyword sends almost no traffic. Lower-volume long-tail keywords are easier to rank, have clearer intent, and convert better. A broad base of winnable low- and mid-volume terms usually beats chasing a few popular ones."
+    },
+    {
+      "q": "What is the difference between search volume and traffic?",
+      "a": "Search volume is how many times a keyword is searched per month; traffic is how many of those searchers actually visit your page. You never capture the full volume, because click-through rate drops sharply by position — the top result gets roughly 25–30%, page-two results almost nothing — and AI Overviews resolve many searches with no click at all. A 1,000-volume keyword ranked #1 might send around 250 visits."
+    }
+  ],
+  "faqs": [
+    {
+      "q": "Why do different tools show different search volumes?",
+      "a": "Because no tool has Google's real search data, each one models its own estimate from advertiser and clickstream data. It's normal to see 1,900, 2,400, and 3,600 for the same keyword across three tools. Use volume to rank keywords against each other, not as an exact prediction."
+    },
+    {
+      "q": "Can a keyword with low search volume still be worth targeting?",
+      "a": "Yes. Low-volume keywords are often specific, less competitive, and convert better because the searcher knows exactly what they want. Dozens of long-tail terms at 50–200 searches a month can deliver more qualified traffic than one head term you rank #30 for and never crack the top page."
+    },
+    {
+      "q": "Does search volume change over time?",
+      "a": "Yes. Search volume shifts with seasonality, trends, and news, which is why tools report a 12-month average that smooths out spikes. Seasonal terms can swing enormously month to month. Check Google Trends alongside the average figure to see whether a keyword is rising, stable, seasonal, or fading."
+    }
+  ],
+  "relatedKeywords": [
+    "search volume",
+    "monthly search volume",
+    "keyword volume",
+    "search demand",
+    "keyword metrics"
+  ],
+  "internalLinks": [
+    {
+      "href": "/",
+      "anchor": "run a free SEO + GEO audit"
+    },
+    {
+      "href": "/blog/how-to-do-keyword-research-for-free",
+      "anchor": "How to do keyword research for free"
+    },
+    {
+      "href": "/blog/how-to-target-long-tail-keywords",
+      "anchor": "How to target long-tail keywords"
+    },
+    {
+      "href": "/blog/what-is-search-intent",
+      "anchor": "What is search intent"
+    },
+    {
+      "href": "/blog/what-is-keyword-difficulty",
+      "anchor": "What is keyword difficulty"
+    },
+    {
+      "href": "/blog/how-to-rank-a-new-website",
+      "anchor": "How to rank a new website"
+    }
+  ],
+  "images": []
+}

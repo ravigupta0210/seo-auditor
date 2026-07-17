@@ -1,0 +1,145 @@
+{
+  "slug": "what-are-http-status-codes",
+  "title": "What Are HTTP Status Codes? (SEO Guide)",
+  "date": "2026-07-17",
+  "updatedAt": "2026-07-17",
+  "tag": "Technical SEO",
+  "cluster": "technical-seo",
+  "keyword": "what are HTTP status codes",
+  "secondaryKeywords": ["200 OK status code", "301 redirect", "404 vs 410", "5xx server errors"],
+  "readTime": 9,
+  "excerpt": "A plain-English guide to what HTTP status codes are, the 2xx/3xx/4xx/5xx groups, and which ones affect crawling and indexing.",
+  "description": "What are HTTP status codes and which ones matter for SEO? A guide to 200, 301, 302, 404, 410, and 5xx and how each affects crawling and indexing.",
+  "tldr": "HTTP status codes are three-digit numbers a server returns for every request, grouped into 2xx (success), 3xx (redirects), 4xx (client errors), and 5xx (server errors). For SEO the ones that matter most are 200 OK, 301 (permanent redirect that passes ranking equity), 404 and 410 (missing pages), and 5xx server errors that block crawling.",
+  "status": "published",
+  "sections": [
+    {
+      "heading": "What are HTTP status codes and why they matter for SEO",
+      "body": [
+        "What are HTTP status codes? They are three-digit numbers a web server returns with every response, telling the browser or crawler what happened when it requested a URL. Every time Googlebot or a browser asks for a page, the server answers with a code like `200`, `301`, `404`, or `503`. That single number decides whether the page gets rendered, redirected, retried, or dropped — which is exactly why HTTP status codes are a core [technical SEO](/blog/what-is-technical-seo) signal, not a developer-only detail.",
+        "Search engines lean on these codes to decide what to crawl, index, and keep in their index. A `200` says \"here is the page, index it.\" A `301` says \"this content moved permanently, follow me and pass the ranking signals.\" A `404` says \"nothing here.\" Send the wrong code — say a soft `200` on a page that should be `404`, or a `302` where you meant a `301` — and you quietly leak crawl budget, ranking equity, or index coverage.",
+        "The codes are organized into five ranges by their first digit. You mostly care about four of them:",
+        "- **2xx — Success:** the request worked and the page is served (e.g. `200 OK`).",
+        "- **3xx — Redirection:** the resource lives at another URL (e.g. `301`, `302`, `304`).",
+        "- **4xx — Client error:** the request was wrong or the page is gone (e.g. `404`, `410`).",
+        "- **5xx — Server error:** the server itself failed (e.g. `500`, `503`).",
+        "> The first digit tells you the category; the full three digits tell you the exact situation. Learn the handful below and you can diagnose most crawling and indexing problems from the status column alone."
+      ]
+    },
+    {
+      "heading": "The 2xx and 3xx codes: success and redirects",
+      "body": [
+        "**`200 OK`** is the code you want on every page that should rank. It means the server found the URL and returned the content successfully, so crawlers render it and consider it for indexing. If an important page returns anything other than `200`, indexing is at risk — so `200` is the baseline a healthy, indexable URL should always send.",
+        "**`301 Moved Permanently`** is the redirect that matters most for SEO. It tells search engines the page has moved for good and to transfer the old URL's ranking signals (\"link equity\") to the new one. Use a `301` whenever you change a URL, merge pages, or move to HTTPS, so you keep the rankings the old URL earned.",
+        "**`302 Found`** is a *temporary* redirect. It sends users to a new URL but signals the original will return, so engines keep the old URL indexed and are slower to pass equity. Using a `302` for a permanent move is a common mistake that can stall a migration — the difference is covered fully in [301 vs 302 redirects](/blog/301-vs-302-redirects).",
+        "**`304 Not Modified`** is a caching response: the server tells a crawler the page has not changed since it last fetched it, so nothing is re-downloaded. It is efficient and helps preserve [crawl budget](/blog/what-is-crawl-budget), and it is normal to see it in server logs — not a problem to fix.",
+        "One redirect warning: avoid chaining them. A URL that `301`s to another URL that `301`s again forces crawlers through extra hops, dilutes signals, and slows indexing. Keep redirects to a single hop — see [what is a redirect chain](/blog/what-is-a-redirect-chain) for how to find and flatten them."
+      ]
+    },
+    {
+      "heading": "The 4xx and 5xx codes: client and server errors",
+      "body": [
+        "**`404 Not Found`** means the requested URL does not exist. A `404` is normal and healthy for genuinely removed pages — Google expects them and eventually drops the URL from its index. The problem is not `404`s themselves but `404`s on URLs that still have inbound links or traffic, which waste that value. See [what is a 404 error](/blog/what-is-a-404-error) for how to handle them without losing equity.",
+        "**`410 Gone`** is a stronger, more deliberate version of `404`. It tells crawlers the page is intentionally and permanently removed, which can prompt Google to deindex it faster than a `404` would. Use `410` when you have permanently retired content and want it out of the index quickly; use `301` instead if an equivalent replacement page exists.",
+        "**`500 Internal Server Error`** signals the server crashed or misconfigured while handling the request. Crawlers cannot read the page, so a `500` blocks indexing entirely — and widespread `500`s tell Google the site is unhealthy, which can slow crawling across the whole domain. These need immediate attention.",
+        "**`503 Service Unavailable`** means the server is temporarily down or overloaded — the correct code to return during planned maintenance. Google treats a short-lived `503` as \"come back later\" and preserves the existing index, but a `503` that persists for days risks deindexing. Never leave a site on `503` longer than necessary.",
+        "Here is a reference table of the SEO-relevant codes, what each means, and how search engines treat it:",
+        "[[table]]",
+        "If any of these appear on pages that should be live and indexable, that is a bug to fix. The fastest way to spot them is to audit the URL and read the status column, which surfaces the exact problem behind a page that will not index — see [why is my page not indexed](/blog/why-is-my-page-not-indexed)."
+      ]
+    },
+    {
+      "heading": "How to check and fix status codes on your site",
+      "body": [
+        "You can read a page's status code in seconds. Open your browser's developer tools, go to the **Network** tab, reload the page, and the status appears next to each request. On the command line, `curl -I https://example.com` prints just the response headers, including the status. For redirects, `curl -IL` follows the chain and shows every hop — the quickest way to catch an accidental `302` or a multi-step redirect.",
+        "At scale, checking one URL at a time is not enough. Crawl the whole site and group URLs by status code so you can see patterns: a cluster of `404`s from an old section, `302`s that should be `301`s, or intermittent `5xx`s under load. The [free SEO + GEO audit on the homepage](/) fetches your URL, reports the exact status code it returned, and flags redirect chains and error responses that block crawling — a fast way to catch status-code issues before they cost you rankings.",
+        "The fixes follow directly from the code. Return `200` on every page that should rank; `301` (not `302`) for permanent moves and HTTPS migrations; `404` or `410` for genuinely removed content; and `503` — never `200` — during maintenance so search engines know to retry. Get the status codes right and you remove one of the most common silent causes of lost crawling and indexing.",
+        "Status codes also matter for AI search. Generative crawlers like GPTBot and PerplexityBot obey the same responses — a `404` or `5xx` means your content never makes it into an AI answer either. Serving clean `200`s and correct redirects keeps a page eligible for both classic Google results and AI citations."
+      ]
+    }
+  ],
+  "comparisonTable": {
+    "caption": "SEO-relevant HTTP status codes: meaning and how search engines treat them",
+    "headers": ["Code", "Name", "What it means", "SEO impact"],
+    "rows": [
+      ["200", "OK", "Page found and served successfully", "Indexable — the code every ranking page should return"],
+      ["301", "Moved Permanently", "Content moved for good to a new URL", "Passes ranking equity to the new URL; use for moves and HTTPS"],
+      ["302", "Found", "Temporary redirect; original will return", "Keeps old URL indexed; wrong choice for permanent moves"],
+      ["304", "Not Modified", "Page unchanged since last crawl", "Saves crawl budget; normal, nothing to fix"],
+      ["404", "Not Found", "URL does not exist", "Eventually deindexed; fine for removed pages, wasteful if links point to it"],
+      ["410", "Gone", "Page permanently and intentionally removed", "Deindexes faster than 404; use for retired content with no replacement"],
+      ["500", "Internal Server Error", "Server crashed handling the request", "Blocks indexing; widespread 500s slow crawling site-wide"],
+      ["503", "Service Unavailable", "Server temporarily down or overloaded", "Preserves index short-term; correct code for maintenance"]
+    ]
+  },
+  "peopleAlsoAsk": [
+    {
+      "q": "What are HTTP status codes in SEO?",
+      "a": "In SEO, HTTP status codes are the three-digit numbers a server returns that tell search engines how to treat a URL. A 200 marks a page as indexable, a 301 passes ranking equity to a moved URL, a 404 or 410 signals a page is gone, and a 5xx blocks crawling. Sending the correct code on each URL is what keeps pages crawled, indexed, and ranking as intended."
+    },
+    {
+      "q": "What is a 200 status code?",
+      "a": "A 200 status code, or 200 OK, means the server found the requested URL and returned the page content successfully. It is the response every page that should rank must send, because search engines only render and index pages that resolve to a 200. If an important URL returns anything other than 200, its ability to appear in search results is at risk."
+    },
+    {
+      "q": "What is the difference between a 404 and 410?",
+      "a": "Both a 404 and a 410 tell crawlers a page is missing, but a 410 is stronger and more deliberate. A 404 (Not Found) simply says the URL does not exist and Google eventually deindexes it. A 410 (Gone) says the page was intentionally and permanently removed, which can prompt faster deindexing. Use 410 for content you have deliberately retired with no replacement."
+    },
+    {
+      "q": "What is a 500 error?",
+      "a": "A 500 error, or 500 Internal Server Error, means the server failed or crashed while trying to handle the request. Crawlers cannot read the page, so a 500 blocks indexing entirely, and widespread 500s signal to Google that the site is unhealthy — which can slow crawling across the whole domain. A 500 on a live page needs immediate attention."
+    },
+    {
+      "q": "Which HTTP status codes matter for SEO?",
+      "a": "The status codes that matter most for SEO are 200 (OK, the code indexable pages should return), 301 (permanent redirect that passes ranking equity), 302 (temporary redirect), 404 and 410 (missing or removed pages), and 500 and 503 (server errors that block crawling). Getting these right on every URL prevents lost rankings, wasted crawl budget, and pages dropping out of the index."
+    }
+  ],
+  "faqs": [
+    {
+      "q": "How do I check the HTTP status code of a page?",
+      "a": "Open your browser's developer tools, go to the Network tab, and reload the page — the status appears next to each request. On the command line, run curl -I on the URL to print the response headers, or crawl the whole site with an audit tool to group every URL by its status code."
+    },
+    {
+      "q": "Do HTTP status codes affect AI search and answer engines?",
+      "a": "Yes. AI crawlers like GPTBot and PerplexityBot obey the same status codes as Googlebot, so a page returning a 404 or 5xx error is never fetched and cannot be cited in an AI answer. Serving clean 200 responses and correct redirects keeps a page eligible for both classic search results and AI citations."
+    },
+    {
+      "q": "What status code should I use during site maintenance?",
+      "a": "Return a 503 Service Unavailable during planned maintenance, never a 200. A short-lived 503 tells search engines the outage is temporary and to retry later, which preserves your existing index. A 200 on a broken maintenance page risks Google indexing empty content instead."
+    }
+  ],
+  "relatedKeywords": [
+    "http status codes",
+    "200 status code",
+    "301 redirect",
+    "404 error",
+    "5xx errors"
+  ],
+  "internalLinks": [
+    {
+      "href": "/",
+      "anchor": "run a free SEO + GEO audit"
+    },
+    {
+      "href": "/blog/what-is-a-404-error",
+      "anchor": "What is a 404 error"
+    },
+    {
+      "href": "/blog/301-vs-302-redirects",
+      "anchor": "301 vs 302 redirects"
+    },
+    {
+      "href": "/blog/what-is-a-redirect-chain",
+      "anchor": "What is a redirect chain"
+    },
+    {
+      "href": "/blog/why-is-my-page-not-indexed",
+      "anchor": "Why is my page not indexed"
+    },
+    {
+      "href": "/blog/what-is-technical-seo",
+      "anchor": "What is technical SEO"
+    }
+  ],
+  "images": []
+}

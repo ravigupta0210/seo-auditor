@@ -1,0 +1,156 @@
+{
+  "slug": "what-is-link-equity",
+  "title": "What Is Link Equity? (Link Juice Explained)",
+  "date": "2026-07-17",
+  "updatedAt": "2026-07-17",
+  "tag": "SEO",
+  "cluster": "content-links",
+  "keyword": "what is link equity",
+  "secondaryKeywords": ["link juice", "pagerank", "internal link equity", "passing link equity", "dofollow links"],
+  "readTime": 9,
+  "excerpt": "Link equity, or link juice, is the ranking value one page passes to another through a link. Here is how it flows, what splits it, and how to preserve it.",
+  "description": "What is link equity? Learn how ranking value (link juice) flows between pages through links, what splits or blocks it, and how to preserve it with smart linking.",
+  "tldr": "Link equity — often called link juice — is the ranking value a page passes to other pages through its links. It flows through dofollow links, is split across all the links on a page, and is weakened by redirects, 404s, and nofollow. You preserve and grow it with strong internal linking, fixed redirect chains, and no orphan pages.",
+  "status": "published",
+  "sections": [
+    {
+      "heading": "What is link equity?",
+      "body": [
+        "Link equity — the concept behind the old nickname \"link juice\" — is the ranking value that one page passes to another through a hyperlink. When someone asks **what is link equity**, the short answer is: it is a search-ranking signal that flows along links, carrying a share of a page's authority and relevance to whatever it points at. A link from a strong, relevant page hands the target page some of that strength; a link from a weak or irrelevant page passes very little.",
+        "The idea comes directly from Google's original **PageRank** algorithm, which treated every link as a vote and every page as holding a pool of voting power it distributes across its outbound links. Google has evolved far beyond raw PageRank, but the core intuition still holds: links move value around the web, and pages that receive more value from more trusted sources tend to rank higher. This is why [backlinks](/blog/what-is-a-backlink) and internal links both matter for SEO.",
+        "Two things determine how much equity a link passes. First, the **authority of the linking page** — a link from a high-[domain-authority](/blog/what-is-domain-authority) page is worth more than one from a brand-new page. Second, **relevance** — a link between two topically related pages passes more useful signal than a random off-topic one. Link equity is not a single number you can read in a tool; it is a directional concept for reasoning about where ranking value in your site and profile is concentrated."
+      ]
+    },
+    {
+      "heading": "How link equity flows between pages",
+      "body": [
+        "Link equity flows in the direction of the link, from the linking page to the linked page, but only through links that are eligible to pass it. The classic mental model is a set of connected buckets: a page holds a pool of equity, and each outbound link acts as a pipe draining a share of that pool into the page it points to. The receiving page adds that equity to its own and passes some onward through its links. Value keeps moving through the graph of the web.",
+        "Whether a link passes equity depends mainly on its link type:",
+        "- **Dofollow links** pass equity. This is the default for a normal link, and it is how authority flows through your site and from external backlinks.",
+        "- **Nofollow links** generally do not pass equity. The `rel=\"nofollow\"` attribute tells Google not to count the link as an endorsement, so it typically passes no ranking value. The related `sponsored` and `ugc` attributes behave similarly. See [nofollow vs dofollow links](/blog/nofollow-vs-dofollow-links) for the full breakdown.",
+        "The second rule is that **equity is split across every link on a page**. A page does not hand its full value to each link; it divides that value among all its outbound links. A page with 5 links passes far more equity per link than a page with 100 links. This is the practical reason to be intentional about how many links a page carries and where they point.",
+        "> Every extra link on a page thins the equity each link passes. That does not mean linking less — it means linking with purpose, so your most important pages receive the biggest share.",
+        "Here is how the main link types and page situations compare on whether they pass equity and how much:",
+        "[[table]]"
+      ]
+    },
+    {
+      "heading": "Internal vs. external link equity",
+      "body": [
+        "Link equity comes from two sources — external backlinks and internal links — and the smartest sites use both together. **External link equity** enters your site when other domains link to you. You control this only indirectly, by earning links through good content and outreach, as covered in [how to get backlinks for free](/blog/how-to-get-backlinks-for-free). External links are how authority first arrives on your domain.",
+        "**Internal link equity** is the value you route between your own pages, and it is the lever you fully control. Once a link brings authority to a page, [internal linking](/blog/what-is-internal-linking) lets you channel that authority to the other pages that need it. A blog post that earns dozens of backlinks becomes a reservoir of equity; linking from it to your product or pillar pages passes some of that value where it converts.",
+        "This is why internal linking is one of the highest-return SEO tasks. You are not creating new equity, but you are deciding where the equity you already have flows. Two habits do most of the work:",
+        "- **Link from strong pages to important pages.** Identify the pages with the most backlinks and add contextual links from them to the pages you want to rank.",
+        "- **Use descriptive anchor text.** The [anchor text](/blog/what-is-anchor-text) tells Google what the target page is about, so equity arrives with a relevance signal attached rather than a vague \"click here.\""
+      ]
+    },
+    {
+      "heading": "How to preserve and maximize link equity",
+      "body": [
+        "You maximize link equity by making sure the value you have earned actually reaches its destination instead of leaking away through technical waste. Even sites with strong backlink profiles routinely lose equity to broken plumbing. Fix these leaks first:",
+        "- **Repair 404s and dead links.** A link pointing to a missing page passes its equity into a dead end. Redirect broken URLs to relevant live pages so the value is recovered.",
+        "- **Fix redirect chains.** Every hop in a redirect chain (A → B → C) risks diluting equity and slows crawling. Point redirects straight to the final URL, and use permanent `301` redirects rather than temporary `302`s when a move is permanent.",
+        "- **Eliminate orphan pages.** An [orphan page](/blog/what-are-orphan-pages) has no internal links pointing to it, so it receives no internal equity and is hard for Google to find. Link every important page from somewhere in your site.",
+        "- **Consolidate competing pages.** Two thin pages targeting the same query split their equity. Merging them concentrates the value into one stronger page.",
+        "Once the leaks are sealed, focus on distribution: link strategically from your highest-authority pages to your priority pages, keep your most important pages a few clicks from the homepage, and avoid burying equity behind excessive low-value links. The goal is a site where authority flows deliberately toward the pages that earn revenue or rankings.",
+        "The fastest way to spot leaks is to audit your pages. [Run a free SEO + GEO audit](/) to surface broken links, redirect issues, and thin internal linking, then fix what it flags so your link equity reaches the pages that matter — and your content stays citable for AI search at the same time. The full flow from earning equity to routing it looks like this:",
+        "[[flowchart]]"
+      ]
+    }
+  ],
+  "flowchart": {
+    "title": "How link equity flows through your site",
+    "steps": [
+      { "title": "External sites link to you", "detail": "Backlinks bring authority (link equity) onto your domain through dofollow links." },
+      { "title": "Equity lands on the linked page", "detail": "The page that earned the link becomes a reservoir of ranking value." },
+      { "title": "Internal links route it onward", "detail": "Contextual links pass a share of that equity to your other pages." },
+      { "title": "Each page splits equity across its links", "detail": "Fewer, more purposeful links mean more value per link." },
+      { "title": "Seal the leaks", "detail": "Fix 404s, redirect chains, and orphan pages so value is not wasted." },
+      { "title": "Priority pages rank higher", "detail": "Deliberate flow concentrates authority where it drives rankings and revenue." }
+    ]
+  },
+  "comparisonTable": {
+    "caption": "Which links pass link equity — and how much",
+    "headers": ["Link or page situation", "Passes link equity?", "Notes"],
+    "rows": [
+      ["Dofollow link", "Yes", "Default link type; the main way authority flows"],
+      ["Nofollow link", "Generally no", "rel=nofollow signals no endorsement; typically no value passed"],
+      ["Sponsored / UGC link", "Generally no", "Attributes for paid and user-generated links; treated like nofollow"],
+      ["301 redirect", "Yes (permanent)", "Passes equity to the target; use for permanent moves"],
+      ["302 redirect", "Partial / uncertain", "Temporary redirect; use 301 when the move is permanent"],
+      ["Link to a 404 page", "No", "Equity hits a dead end; redirect the broken URL"],
+      ["Orphan page (no internal links)", "Receives none internally", "Gets no internal equity and is hard for Google to find"]
+    ]
+  },
+  "peopleAlsoAsk": [
+    {
+      "q": "What is link equity?",
+      "a": "Link equity is the ranking value that one page passes to another through a hyperlink. Sometimes called \"link juice,\" it descends from Google's PageRank concept, where each link acts as a vote that transfers a share of a page's authority and relevance to the page it points at. A link from a strong, relevant page passes more equity than one from a weak or unrelated page."
+    },
+    {
+      "q": "What is link juice?",
+      "a": "Link juice is the informal, older name for link equity — the ranking value a page passes along its links. The term pictures authority as a fluid draining from one page into another through hyperlinks. SEOs now mostly say \"link equity,\" but the two mean the same thing: the transferable ranking power that flows through dofollow links between pages."
+    },
+    {
+      "q": "How does link equity flow?",
+      "a": "Link equity flows in the direction of a link, from the linking page to the page it points at, through dofollow links. A page holds a pool of equity and splits it across all its outbound links, so fewer links mean more value per link. Nofollow links usually pass none, and broken links or redirect chains waste equity before it arrives."
+    },
+    {
+      "q": "Do nofollow links pass link equity?",
+      "a": "Generally no. The rel=\"nofollow\" attribute tells Google not to treat the link as an endorsement, so it typically passes no ranking value. The related sponsored and ugc attributes behave the same way. Nofollow links can still send referral traffic and build brand awareness, but for the purpose of passing link equity they are usually treated as passing nothing."
+    },
+    {
+      "q": "How do I maximize link equity?",
+      "a": "Maximize link equity by earning quality backlinks, then routing that value with strong internal linking from your highest-authority pages to your priority pages using descriptive anchor text. Seal the leaks that waste equity: fix 404s and broken links, shorten redirect chains, use 301s for permanent moves, and eliminate orphan pages so every important page receives internal value."
+    }
+  ],
+  "faqs": [
+    {
+      "q": "Is link equity the same as domain authority?",
+      "a": "No. Link equity is the ranking value passed through an individual link, while domain authority is a third-party score estimating a whole domain's overall strength. Domain authority is influenced by the total link equity a site has earned, but it is a tool's aggregate metric, not the per-link value that flows between pages."
+    },
+    {
+      "q": "Does removing a link take equity back?",
+      "a": "Removing an internal link stops it from passing equity to that target page, so the value it was routing simply flows elsewhere or stays on the source page. For external backlinks you rarely control removal. The practical takeaway is to keep contextual links to important pages in place rather than pruning them."
+    },
+    {
+      "q": "Do internal links really pass link equity?",
+      "a": "Yes. Internal links pass link equity between your own pages just as external links do, and they are the part of the flow you fully control. Strategic internal linking lets you channel authority earned by one page toward the pages you most want to rank, which is why it is one of the highest-return SEO tasks."
+    }
+  ],
+  "relatedKeywords": [
+    "link equity",
+    "link juice",
+    "pagerank",
+    "internal linking",
+    "dofollow links",
+    "passing link equity"
+  ],
+  "internalLinks": [
+    {
+      "href": "/",
+      "anchor": "run a free SEO + GEO audit"
+    },
+    {
+      "href": "/blog/what-is-internal-linking",
+      "anchor": "What is internal linking"
+    },
+    {
+      "href": "/blog/nofollow-vs-dofollow-links",
+      "anchor": "Nofollow vs dofollow links"
+    },
+    {
+      "href": "/blog/what-is-a-backlink",
+      "anchor": "What is a backlink"
+    },
+    {
+      "href": "/blog/what-is-anchor-text",
+      "anchor": "What is anchor text"
+    },
+    {
+      "href": "/blog/what-is-domain-authority",
+      "anchor": "What is domain authority"
+    }
+  ],
+  "images": []
+}

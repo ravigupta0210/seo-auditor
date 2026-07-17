@@ -1,0 +1,136 @@
+{
+  "slug": "what-is-a-web-crawler",
+  "title": "What Is a Web Crawler? (How Search Bots Work)",
+  "date": "2026-07-17",
+  "updatedAt": "2026-07-17",
+  "tag": "Technical SEO",
+  "cluster": "technical-seo",
+  "keyword": "what is a web crawler",
+  "secondaryKeywords": ["how crawlers work", "crawler vs scraper", "search engine spider", "control crawlers with robots.txt"],
+  "readTime": 9,
+  "excerpt": "A plain-English guide to what a web crawler is, how spiders like Googlebot discover pages, and how to control them with robots.txt and sitemaps.",
+  "description": "What is a web crawler? A guide to how search bots like Googlebot and GPTBot discover and index pages, crawler vs scraper, and how to control them.",
+  "tldr": "A web crawler, also called a spider or bot, is an automated program that systematically fetches web pages and follows their links to discover and index the web. Search engines like Google use crawlers such as Googlebot to build their index; AI engines use crawlers like GPTBot. You control which crawlers reach your pages with robots.txt, meta robots tags, and sitemaps.",
+  "status": "published",
+  "sections": [
+    {
+      "heading": "What is a web crawler and what does it do",
+      "body": [
+        "What is a web crawler? A web crawler is an automated program — also called a spider or bot — that systematically fetches web pages and follows the links on them to discover and catalog content across the internet. Search engines run crawlers to build the index they search when someone types a query, and AI engines run them to gather the pages they cite in answers. Every page that appears in Google was first found and fetched by a crawler.",
+        "The name \"spider\" captures the idea: the bot moves across the web the way a spider moves along a web, hopping from link to link. It starts with a list of known URLs, downloads each page's HTML, extracts the links it finds, adds new ones to a queue, and repeats — potentially across billions of pages. This process is why the web is searchable at all, and why crawling is a foundation of [technical SEO](/blog/what-is-technical-seo).",
+        "Crawlers do two jobs. First, **discovery**: finding which URLs exist by following links and reading sitemaps. Second, **fetching**: downloading each page so its content can be processed. For a search engine, a separate indexing step then analyzes the fetched content and stores it — crawling finds and downloads the page, indexing decides what it is about and whether to rank it.",
+        "> Crawling is not the same as indexing or ranking. A crawler can fetch a page that is never indexed, and a page can be indexed but rank poorly. Getting crawled is only the first step of three."
+      ]
+    },
+    {
+      "heading": "How a web crawler works, step by step",
+      "body": [
+        "A web crawler works as a loop that keeps discovering and fetching until it runs out of new, allowed URLs. It begins with a set of **seed URLs** — known pages plus any URLs listed in your XML sitemap — then fetches each one, extracts its links, filters out anything disallowed, and queues the rest to crawl next. The cycle repeats continuously, which is how a crawler can work through an entire site from a single starting page.",
+        "Here is the discovery loop a crawler runs for each page:",
+        "[[flowchart]]",
+        "Before fetching any page, a well-behaved crawler checks the site's [robots.txt](/blog/what-is-robots-txt) file to see whether that URL is allowed. If it is, the crawler downloads the HTML, and for JavaScript-heavy pages it may render the page in a headless browser to see the final content. It then parses out the links and repeats the loop with the newly found URLs.",
+        "Crawlers do not fetch everything at once. They budget their requests so they do not overload a server, spreading fetches over time — the amount a search engine is willing to crawl on your site is its [crawl budget](/blog/what-is-crawl-budget). For large sites, spending that budget on the right pages (and not on duplicate or low-value URLs) is a real optimization lever.",
+        "Crawlers also revisit. Because content changes, a crawler returns to pages it has already seen to pick up updates, re-fetching important or frequently-updated URLs more often than static ones."
+      ]
+    },
+    {
+      "heading": "Crawler vs scraper, and the main crawlers to know",
+      "body": [
+        "A web crawler and a web scraper are related but not the same thing. A **crawler** discovers and fetches pages broadly, following links to map and index large parts of the web, and it generally identifies itself and respects robots.txt. A **scraper** targets specific pages to extract particular data — prices, emails, listings — often ignoring crawling rules. Put simply: crawling is about *finding and fetching* pages; scraping is about *extracting specific data* from them. Many tools do both, but the intent differs.",
+        "The crawlers that matter most for SEO belong to search engines. **Googlebot** is Google's crawler and the one that builds the index behind Google Search — see [what is Googlebot](/blog/what-is-googlebot) for how it renders and fetches pages. **Bingbot** does the same for Microsoft Bing, which also powers a share of AI answers.",
+        "A newer and fast-growing category is **AI crawlers** — bots that gather content to train and ground large language models. **GPTBot** (OpenAI), **ClaudeBot** (Anthropic), and **PerplexityBot** (Perplexity) fetch pages so their engines can cite your content in AI answers. Because these bots decide whether your pages can appear in AI search, treating them as first-class is central to modern GEO — see [what is an AI crawler](/blog/what-is-an-ai-crawler).",
+        "Not every crawler is friendly. Some bots scrape aggressively, ignore robots.txt, or fake their identity. Legitimate crawlers publish their user-agent strings and IP ranges so you can verify them; if a bot claims to be Googlebot but comes from an unlisted IP, it is not the real thing."
+      ]
+    },
+    {
+      "heading": "How to control which pages crawlers can reach",
+      "body": [
+        "You control crawlers with three tools, each doing a different job. **`robots.txt`**, a file at your domain root, tells crawlers which paths they may or may not request before they fetch anything — the first thing a compliant crawler reads. **Meta robots tags** (`<meta name=\"robots\" content=\"noindex\">`) sit in a page's HTML and tell engines whether to *index* a page they have already fetched. **XML sitemaps** do the opposite of blocking: they hand crawlers a list of the URLs you most want discovered.",
+        "The key distinction trips up many site owners: **robots.txt controls crawling, meta robots controls indexing**. Blocking a URL in robots.txt stops the fetch but can still leave the URL in the index without content; to reliably keep a page out of results, allow the crawl and use a `noindex` tag instead. Mixing these up is a common reason a page you meant to hide keeps showing up — or a page you wanted indexed never does.",
+        "To welcome the crawlers you want: keep an accurate XML sitemap, make sure your important pages are reachable through internal links, avoid accidentally disallowing key paths in robots.txt, and do not block the AI crawlers (GPTBot, ClaudeBot, PerplexityBot) if you want to appear in AI answers. Blocking them is a quiet way to disappear from a growing slice of search.",
+        "To check what crawlers actually see on your site, audit the URL. The [free SEO + GEO audit on the homepage](/) fetches your page the way a crawler does, reports whether robots.txt or a noindex tag is blocking it, and even tests whether AI crawlers like GPTBot are allowed — so you can confirm the right bots can reach your content and the wrong pages stay hidden."
+      ]
+    }
+  ],
+  "flowchart": {
+    "title": "How a web crawler discovers and fetches pages",
+    "steps": [
+      { "title": "Start with seed URLs", "detail": "Begin from known pages plus the URLs listed in your XML sitemap." },
+      { "title": "Check robots.txt", "detail": "Before fetching a URL, confirm the crawler is allowed to request that path." },
+      { "title": "Fetch the page", "detail": "Download the HTML, rendering JavaScript in a headless browser if needed." },
+      { "title": "Extract the links", "detail": "Parse the page and collect every link it points to." },
+      { "title": "Queue new URLs", "detail": "Add unseen, allowed links to the crawl queue and repeat the loop." },
+      { "title": "Revisit and update", "detail": "Return to known pages over time to pick up changes and new content." }
+    ]
+  },
+  "peopleAlsoAsk": [
+    {
+      "q": "What is a web crawler?",
+      "a": "A web crawler is an automated program — also called a spider or bot — that systematically fetches web pages and follows their links to discover and catalog content across the internet. Search engines use crawlers like Googlebot to build the index behind their search results, and AI engines use crawlers like GPTBot to gather pages they cite in answers. Every page in Google was first found by a crawler."
+    },
+    {
+      "q": "How do web crawlers work?",
+      "a": "Web crawlers work as a loop: they start with a set of seed URLs, check robots.txt for permission, fetch each page's HTML, extract the links on it, and add any new allowed URLs to a queue to crawl next. The cycle repeats across many pages, and crawlers revisit known URLs over time to pick up changes. This is how a crawler can map an entire site from a single starting page."
+    },
+    {
+      "q": "What is the difference between a crawler and a scraper?",
+      "a": "A crawler discovers and fetches pages broadly by following links to map and index the web, and it usually identifies itself and respects robots.txt. A scraper targets specific pages to extract particular data, such as prices or emails, often ignoring crawling rules. In short, crawling is about finding and fetching pages, while scraping is about extracting specific data from them."
+    },
+    {
+      "q": "What are examples of web crawlers?",
+      "a": "The best-known web crawler is Googlebot, which builds the index behind Google Search. Bingbot does the same for Microsoft Bing. A newer category is AI crawlers — GPTBot from OpenAI, ClaudeBot from Anthropic, and PerplexityBot from Perplexity — which fetch pages so their AI engines can cite your content in answers. Controlling which of these can reach your site is central to modern SEO and GEO."
+    },
+    {
+      "q": "How do I control web crawlers?",
+      "a": "You control web crawlers with three tools: robots.txt tells them which paths they may request before fetching, meta robots tags tell engines whether to index a page they have already fetched, and XML sitemaps list the URLs you most want discovered. The key distinction is that robots.txt controls crawling while a noindex meta tag controls indexing — use the right one for the outcome you want."
+    }
+  ],
+  "faqs": [
+    {
+      "q": "Why is my page not being crawled?",
+      "a": "A page usually goes uncrawled because robots.txt blocks its path, no internal or external links point to it, or it is missing from your XML sitemap. Crawlers only find pages they can reach, so check that the URL is linked from other pages, listed in your sitemap, and not disallowed in robots.txt."
+    },
+    {
+      "q": "Does crawling mean my page will be indexed?",
+      "a": "No. Crawling only means a bot fetched your page; indexing is a separate step where the search engine decides whether to store and rank it. A page can be crawled and still not indexed if it carries a noindex tag, duplicates other content, or is judged too thin to include in results."
+    },
+    {
+      "q": "Should I block AI crawlers like GPTBot?",
+      "a": "Only if you do not want your content appearing in AI answers. Blocking GPTBot, ClaudeBot, or PerplexityBot in robots.txt keeps those engines from fetching and citing your pages, which removes you from a fast-growing share of AI search. Most sites that want visibility should allow them."
+    }
+  ],
+  "relatedKeywords": [
+    "web crawler",
+    "spider",
+    "googlebot",
+    "crawler bot",
+    "search engine crawler"
+  ],
+  "internalLinks": [
+    {
+      "href": "/",
+      "anchor": "run a free SEO + GEO audit"
+    },
+    {
+      "href": "/blog/what-is-googlebot",
+      "anchor": "What is Googlebot"
+    },
+    {
+      "href": "/blog/what-is-an-ai-crawler",
+      "anchor": "What is an AI crawler"
+    },
+    {
+      "href": "/blog/what-is-crawl-budget",
+      "anchor": "What is crawl budget"
+    },
+    {
+      "href": "/blog/what-is-robots-txt",
+      "anchor": "What is robots.txt"
+    },
+    {
+      "href": "/blog/what-is-technical-seo",
+      "anchor": "What is technical SEO"
+    }
+  ],
+  "images": []
+}

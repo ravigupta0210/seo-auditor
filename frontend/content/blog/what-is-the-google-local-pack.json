@@ -1,0 +1,131 @@
+{
+  "slug": "what-is-the-google-local-pack",
+  "title": "What Is the Google Local Pack? (Map Pack)",
+  "date": "2026-07-17",
+  "updatedAt": "2026-07-17",
+  "tag": "SEO",
+  "cluster": "local-seo",
+  "keyword": "what is the Google local pack",
+  "secondaryKeywords": ["map pack", "local 3-pack", "local pack ranking factors", "Google Business Profile"],
+  "readTime": 9,
+  "excerpt": "The Google local pack is the map plus three business listings that shows for local searches. Here is what it is and how to rank in it.",
+  "description": "What is the Google local pack? The map plus three local business listings that shows for 'near me' searches — and exactly how Google ranks it.",
+  "tldr": "The Google local pack is the block of roughly three local business listings shown alongside a map for searches with local intent, like 'plumber near me.' Also called the map pack or local 3-pack, it is ranked on relevance, distance, and prominence, and is powered by each business's Google Business Profile rather than its website alone.",
+  "status": "published",
+  "sections": [
+    {
+      "heading": "What is the Google local pack?",
+      "body": [
+        "The Google local pack is the block of roughly three local business listings displayed with a map at the top of the search results when a query has local intent. When you know **what is the Google local pack** in practice, you recognize it instantly: search \"coffee shop near me\" or \"dentist in Austin\" and the map with three clickable businesses — name, star rating, hours, phone, and directions — is the local pack. It sits above the classic blue-link organic results and is the single most valuable piece of real estate for any business that serves a physical area.",
+        "It goes by several names that all mean the same feature: the **map pack**, the **local 3-pack**, or simply local results. Google trimmed it from up to seven listings years ago down to three on desktop (often just two or three on mobile), which makes the competition for those slots fierce. Each listing is pulled from a business's **Google Business Profile**, not directly from its website, which is the detail that trips up most people trying to rank.",
+        "The local pack appears only when Google detects local intent — either explicit (\"near me\", \"in [city]\") or implicit (searching \"emergency electrician\" from a phone with location on). For a query with no local intent, like \"what is photosynthesis,\" no local pack shows. It is one of many [SERP features](/blog/what-are-serp-features) Google layers on top of the standard [SERP](/blog/what-is-a-serp), and for local businesses it is the one that matters most.",
+        "> If your customers come from a specific town, neighborhood, or service radius, the local pack — not page-one organic — is usually the highest-converting place you can appear."
+      ]
+    },
+    {
+      "heading": "How Google ranks the local pack: relevance, distance, prominence",
+      "body": [
+        "Google ranks the local pack on three public factors: **relevance**, **distance**, and **prominence**. Google states these plainly in its own local ranking documentation, and every optimization tactic below maps back to one of them. Understanding the three is the difference between guessing and working the actual levers.",
+        "- **Relevance** — how well your Business Profile matches what the searcher wants. Choosing the right primary category, listing your real services, and describing them in your profile and website all feed relevance. A \"pizza restaurant\" category will not surface for \"sushi near me,\" no matter how good the restaurant is.",
+        "- **Distance** — how far your business is from the searcher (or from the location named in the query). You cannot move your storefront, but you can define an accurate service area and make sure your address is verified so Google places you correctly on the map.",
+        "- **Prominence** — how well-known and trusted your business is. This is the factor you can most influence over time: the **quantity, quality, and recency of Google reviews**, links and mentions from other local sites, directory citations, and overall web presence all raise prominence.",
+        "Distance and relevance set the pool of eligible businesses; prominence usually decides the order within it. That is why two shops the same distance from a searcher can rank very differently — the one with more strong, recent reviews and a more complete profile wins the prominence tiebreak. It is also why chasing reviews works: [Google reviews help SEO](/blog/do-google-reviews-help-seo) primarily by feeding this prominence signal for local results."
+      ]
+    },
+    {
+      "heading": "How to rank in the local pack",
+      "body": [
+        "Ranking in the local pack comes down to a repeatable checklist built around a fully optimized Google Business Profile. There is no single trick — it is the accumulation of relevance, distance, and prominence signals done consistently. Run these in order:",
+        "[[flowchart]]",
+        "Start with the profile itself. A **complete, verified Google Business Profile** is the foundation — claim and verify the listing, pick the most specific primary category, add every relevant secondary category, fill in hours, services, attributes, and photos, and keep it current. Google favors profiles that are complete and actively maintained; the full walkthrough is in [how to optimize your Google Business Profile](/blog/how-to-optimize-google-business-profile).",
+        "Next, get **NAP consistency** right. NAP stands for Name, Address, Phone — and these must be identical everywhere they appear online: your website, your Business Profile, Yelp, Facebook, and local directories. Inconsistent addresses or phone numbers make Google less confident about which business is real, which suppresses ranking. Then build **citations** (listings in reputable local and industry directories) using that same NAP.",
+        "Then work the two biggest prominence levers: **reviews** and **local content**. Steadily earn genuine Google reviews and respond to them, and publish location-specific pages on your site — service-area pages, local guides, and content that mentions the neighborhoods you serve. This ties your website to your geography and reinforces relevance. Finally, audit the technical health of that website so nothing blocks it from supporting your profile — you can [run a free SEO + GEO audit](/) to catch missing metadata, broken pages, and crawl issues in one pass."
+      ]
+    },
+    {
+      "heading": "Local pack vs. organic results: what is the difference?",
+      "body": [
+        "The difference between the local pack and organic results is what powers them and what they rank on. The local pack is driven by your **Google Business Profile** and ranks on relevance, distance, and prominence; organic results are driven by your **website** and rank on classic signals like content, backlinks, and on-page SEO. They are two separate systems that a local business should optimize in parallel, not one instead of the other.",
+        "[[table]]",
+        "In practice, appearing in both at once is the goal. A user searching \"emergency plumber near me\" might tap a local pack listing to call immediately, while a user searching \"how to fix a leaking pipe\" reads your organic blog post first. The local pack captures high-intent, ready-to-buy local searches; organic captures research and informational queries that build trust earlier in the journey.",
+        "The two also reinforce each other. A strong website with local content and clean [E-E-A-T signals](/blog/what-is-eeat-in-seo) raises the prominence that feeds your local pack ranking, and a well-reviewed Business Profile sends traffic and trust signals that help your site. Treat them as one local SEO strategy with two front doors — and if organic is where you are weak, the fundamentals in [how to improve website ranking](/blog/how-to-improve-website-ranking-on-google) close that gap."
+      ]
+    }
+  ],
+  "flowchart": {
+    "title": "How to rank in the Google local pack",
+    "steps": [
+      { "title": "Claim & verify your Business Profile", "detail": "Own the listing so Google trusts it as the real business." },
+      { "title": "Complete every profile field", "detail": "Primary category, services, hours, attributes, and photos — filled in and current." },
+      { "title": "Fix NAP consistency", "detail": "Identical Name, Address, Phone on your site, profile, and every directory." },
+      { "title": "Build local citations", "detail": "List the business in reputable local and industry directories using the same NAP." },
+      { "title": "Earn and answer reviews", "detail": "Steady, recent, genuine Google reviews with owner responses raise prominence." },
+      { "title": "Publish local content", "detail": "Service-area and neighborhood pages tie your website to your geography." }
+    ]
+  },
+  "comparisonTable": {
+    "caption": "Google local pack vs. organic results",
+    "headers": ["Aspect", "Local pack (map pack)", "Organic results"],
+    "rows": [
+      ["Powered by", "Google Business Profile", "Your website"],
+      ["Ranking factors", "Relevance, distance, prominence", "Content, backlinks, on-page SEO"],
+      ["Number of listings", "About 3 businesses + map", "10 blue links per page"],
+      ["When it shows", "Local intent (near me, in [city])", "Almost every query"],
+      ["Key lever", "Reviews & profile completeness", "Content quality & authority"],
+      ["Best for", "Ready-to-buy local searches", "Research & informational queries"]
+    ]
+  },
+  "peopleAlsoAsk": [
+    {
+      "q": "What is the Google local pack?",
+      "a": "The Google local pack is the block of about three local business listings shown with a map at the top of the results when a search has local intent, such as \"plumber near me.\" Also called the map pack or local 3-pack, each listing is pulled from a business's Google Business Profile and shows its rating, hours, and directions. It sits above the organic blue-link results."
+    },
+    {
+      "q": "How do I rank in the local pack?",
+      "a": "Rank in the local pack by fully optimizing your Google Business Profile, then feeding Google's three local ranking factors. Claim and verify the profile, pick the most specific category, keep NAP (name, address, phone) identical everywhere, build directory citations, and earn steady genuine reviews. Add location-specific content to your website. Together these raise relevance, distance accuracy, and prominence — the three factors that decide the ranking."
+    },
+    {
+      "q": "What is the map pack?",
+      "a": "The map pack is another name for the Google local pack — the map plus roughly three business listings that appears for local searches. \"Map pack,\" \"local pack,\" and \"local 3-pack\" all describe the same SERP feature. It earned the nickname because the defining element is the interactive Google Map shown above the three ranked local listings."
+    },
+    {
+      "q": "How many businesses show in the local pack?",
+      "a": "The Google local pack typically shows three businesses on desktop, and often two or three on mobile. Google reduced it from an earlier seven-listing format, which is why competition for the remaining slots is intense. Users can tap \"More places\" to open the full local finder with a longer ranked list, but only the top few appear in the pack itself."
+    },
+    {
+      "q": "What is the difference between the local pack and organic results?",
+      "a": "The local pack is powered by your Google Business Profile and ranks on relevance, distance, and prominence, while organic results are powered by your website and rank on content, backlinks, and on-page SEO. The local pack appears only for local-intent queries and shows about three businesses with a map; organic results appear for nearly every query as ten blue links. A local business should optimize both in parallel."
+    }
+  ],
+  "faqs": [
+    {
+      "q": "Do I need a physical address to appear in the local pack?",
+      "a": "Not always. Service-area businesses like plumbers or cleaners can rank in the local pack without a public storefront by defining a service area in their Google Business Profile instead of showing an address. You still must verify the business with Google to be eligible for the local pack."
+    },
+    {
+      "q": "Why is my business not showing in the local pack?",
+      "a": "Common causes are an unverified or incomplete Google Business Profile, the wrong or overly broad primary category, inconsistent NAP across directories, being too far from the searcher, or too few recent reviews. Fixing profile completeness and NAP consistency usually resolves most missing-listing problems over a few weeks."
+    },
+    {
+      "q": "Does my website still matter if I rank in the local pack?",
+      "a": "Yes. Your website feeds the prominence signal behind your local pack ranking and captures organic informational searches the pack does not. A strong, well-linked site with local content and clear E-E-A-T reinforces your Business Profile, so the two work as one local SEO strategy rather than as substitutes."
+    }
+  ],
+  "relatedKeywords": [
+    "google local pack",
+    "map pack",
+    "local 3-pack",
+    "local seo",
+    "google business profile"
+  ],
+  "internalLinks": [
+    { "href": "/", "anchor": "run a free SEO + GEO audit" },
+    { "href": "/blog/how-to-optimize-google-business-profile", "anchor": "How to optimize your Google Business Profile" },
+    { "href": "/blog/do-google-reviews-help-seo", "anchor": "Do Google reviews help SEO" },
+    { "href": "/blog/what-are-serp-features", "anchor": "What are SERP features" },
+    { "href": "/blog/what-is-a-serp", "anchor": "What is a SERP" },
+    { "href": "/blog/what-is-eeat-in-seo", "anchor": "What is E-E-A-T in SEO" },
+    { "href": "/blog/how-to-improve-website-ranking-on-google", "anchor": "How to improve website ranking" }
+  ],
+  "images": []
+}

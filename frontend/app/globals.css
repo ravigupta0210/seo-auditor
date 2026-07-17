@@ -1476,3 +1476,48 @@ textarea.field-input { resize: vertical; min-height: 128px; line-height: 1.55; }
   margin-bottom: 18px;
 }
 .fb-hero-icon svg { width: 27px; height: 27px; color: var(--accent); }
+
+/* ---------- White-label PDF / print ---------- */
+.print-only { display: none; }
+
+@media print {
+  /* Strip all interactive site chrome from the printed report */
+  .no-print,
+  .site-header,
+  .site-footer,
+  .modal-backdrop { display: none !important; }
+
+  .print-only { display: block !important; }
+
+  html, body { background: #fff !important; }
+  body * { color: #111 !important; }
+
+  main { max-width: 100% !important; margin: 0 !important; padding: 0 !important; }
+
+  .glass-card, .check-card, details, li { break-inside: avoid; page-break-inside: avoid; }
+  .glass-card, .check-card {
+    border: 1px solid #e3e3e3 !important;
+    background: #fff !important;
+    box-shadow: none !important;
+  }
+  a { color: #111 !important; text-decoration: none !important; }
+  pre { white-space: pre-wrap !important; word-break: break-word !important; }
+
+  /* Expand every finding <details> so the whole report prints, not just errors */
+  details > *:not(summary) { display: block !important; }
+  summary { list-style: none; }
+
+  /* Branded PDF header */
+  .pdf-brand-header {
+    border-bottom: 2px solid #111;
+    padding-bottom: 14px;
+    margin-bottom: 22px;
+  }
+  .pdf-brand-top { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-bottom: 12px; }
+  .pdf-brand-logo { max-height: 48px; max-width: 220px; object-fit: contain; }
+  .pdf-brand-fallback { font-weight: 700; font-size: 18px; }
+  .pdf-brand-by { font-size: 12px; color: #555 !important; }
+  .pdf-brand-title { font-size: 24px; margin: 6px 0; }
+  .pdf-brand-meta { display: flex; flex-wrap: wrap; gap: 14px; font-size: 12px; color: #444 !important; }
+  .pdf-brand-score { margin-top: 8px; font-size: 15px; }
+}

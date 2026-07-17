@@ -7,6 +7,7 @@ import { SiteHeader } from '@/app/_components/SiteHeader';
 import { SiteFooter } from '@/app/_components/SiteFooter';
 import { ShareButton } from '@/app/_components/ShareButton';
 import { CopyLinkButton } from '@/app/_components/CopyLinkButton';
+import { PdfExport } from './_PdfExport';
 import { SITE_URL } from '@/lib/seo';
 
 interface PageProps {
@@ -70,10 +71,12 @@ export default async function ReportPage({ params }: PageProps) {
       <SiteHeader />
       <main style={{ maxWidth: 980, margin: '0 auto', padding: '32px 24px 60px' }}>
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
-        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', gap: 12 }}>
+        <div className="no-print" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', gap: 12 }}>
           <Link href="/" style={{ fontSize: 13, color: 'var(--text-muted)' }}>← New audit</Link>
           <CopyLinkButton url={`${SITE_URL}/audit/${report.id}`} />
         </div>
+
+        <PdfExport host={host} url={report.url} score={report.summary.overall} createdAt={report.createdAt} />
 
         <header style={{ margin: '20px 0 28px' }}>
           <span className="tag" style={{ marginBottom: 12 }}>
@@ -105,13 +108,13 @@ export default async function ReportPage({ params }: PageProps) {
           </div>
         </div>
 
-        <div style={{ marginBottom: 22 }}>
+        <div className="no-print" style={{ marginBottom: 22 }}>
           <ShareButton reportId={report.id} host={host} score={report.summary.overall} variant="primary" />
         </div>
 
         <CategoryBreakdown summary={report.summary} />
 
-        <div style={{ marginBottom: 24 }}>
+        <div className="no-print" style={{ marginBottom: 24 }}>
           <BadgeEmbed reportId={report.id} host={host} score={report.summary.overall} />
         </div>
 
@@ -138,7 +141,9 @@ export default async function ReportPage({ params }: PageProps) {
           </>
         )}
 
-        <RecommendedTools />
+        <div className="no-print">
+          <RecommendedTools />
+        </div>
       </main>
       <SiteFooter />
     </>

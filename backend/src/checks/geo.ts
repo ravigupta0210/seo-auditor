@@ -90,7 +90,20 @@ export async function runAICloakingCheck(page: PageContext): Promise<CheckResult
       whyItMatters:
         'If you want AI search citations (ChatGPT, Claude, Perplexity), these bots must be able to fetch your content. Blocking them removes you from their answers.',
       fix: {
-        summary: 'Check robots.txt and your CDN/WAF rules for AI-crawler User-Agent blocks.',
+        summary:
+          'Allow these crawlers in robots.txt, and remove any CDN/WAF/firewall rule that blocks their User-Agent (Cloudflare "Bot Fight Mode" and similar often block them). Then re-test.',
+        snippet: `# robots.txt — allow the AI crawlers you want to be cited by
+User-agent: GPTBot
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /`,
         docLink: 'https://platform.openai.com/docs/gptbot',
       },
       priority: 60,
@@ -107,7 +120,14 @@ export async function runAICloakingCheck(page: PageContext): Promise<CheckResult
       evidence: { cloaked, defaultBytes: page.html.length },
       whyItMatters:
         'Different content per User-Agent is "cloaking" — Google penalizes it for regular search and AI engines may distrust your citations.',
-      fix: { summary: 'Serve identical content to all User-Agents. Use server-side rendering if your CDN is variant-caching.', docLink: 'https://developers.google.com/search/docs/essentials/spam-policies#cloaking' },
+      fix: {
+        summary:
+          'Serve the SAME HTML to AI crawlers as to real browsers: (1) render content server-side (SSR/SSG) instead of only in client-side JS, and (2) remove any User-Agent-based variant caching or bot-specific rules in your CDN/WAF. Confirm the byte counts roughly match:',
+        snippet: `# The main content should match between a browser and an AI crawler
+curl -A "Mozilla/5.0" -s https://example.com/page | wc -c
+curl -A "GPTBot"      -s https://example.com/page | wc -c`,
+        docLink: 'https://developers.google.com/search/docs/essentials/spam-policies#cloaking',
+      },
       priority: 75,
       ruleVersion: RULE_VERSION,
     });
@@ -169,7 +189,18 @@ function checkLlmsTxt(ctx: GeoContext): CheckResult {
       evidence: { hasH1, hasSummary },
       whyItMatters:
         'The spec asks for an H1 site name and a blockquote summary. Conformant files are more reliably parsed by AI consumers.',
-      fix: { summary: 'Add an H1 (# Site Name) and a > blockquote summary at the top.', docLink: 'https://llmstxt.org/' },
+      fix: {
+        summary: 'Start the file with an H1 site name and a one-line > blockquote summary, then list key pages. Minimal valid structure:',
+        snippet: `# Your Site Name
+
+> One-sentence description of what your site does.
+
+## Pages
+
+- [Home](https://example.com/): Overview.
+- [Docs](https://example.com/docs): Documentation.`,
+        docLink: 'https://llmstxt.org/',
+      },
       priority: 15,
       ruleVersion: RULE_VERSION,
     };
@@ -200,7 +231,14 @@ function checkAIBotsInRobots(robots: RobotsTxt): CheckResult[] {
         title: `robots.txt blocks ${bot.label} from entire site`,
         whyItMatters: 'If this is intentional (privacy, training opt-out) that\'s fine. If you want AI citations, this prevents them.',
         fix: {
-          summary: `If you want AI citations, remove the Disallow: / for ${bot.label} or scope the block to specific paths.`,
+          summary: `If you want ${bot.label} to cite you, replace its "Disallow: /" with "Allow: /" — or scope the block to only private paths instead of the whole site.`,
+          snippet: `# robots.txt — let ${bot.label} crawl the site
+User-agent: ${bot.ua}
+Allow: /
+
+# ...or block only specific sections instead of everything:
+# User-agent: ${bot.ua}
+# Disallow: /admin/`,
           docLink: 'https://platform.openai.com/docs/gptbot',
         },
         priority: 40,
@@ -286,7 +324,14 @@ function checkContentSignals(page: PageContext): CheckResult[] {
         whyItMatters:
           'AI engines lift individual paragraphs as citations. Paragraphs that rely on previous context ("this", "it", "as mentioned") are less likely to be extracted.',
         fix: {
-          summary: 'Rewrite paragraphs to name their subject explicitly, keep them ≤80 words, and avoid back-references.',
+          summary:
+            'Rewrite paragraphs so each names its subject explicitly, stays ≤80 words, and avoids back-references ("this", "it", "as mentioned above"). Each paragraph should still make sense if an AI quotes it on its own:',
+          snippet: `Weak (relies on earlier context):
+  "It also supports this, which makes it faster than the alternatives."
+
+Island-ready (self-contained):
+  "Redis supports in-memory caching, which makes it faster than disk-based
+   databases like PostgreSQL for read-heavy workloads."`,
           docLink: 'https://www.semrush.com/blog/geo-generative-engine-optimization/',
         },
         priority: 45,
@@ -322,7 +367,19 @@ function checkContentSignals(page: PageContext): CheckResult[] {
       title: 'No comparison-style tables detected',
       whyItMatters:
         'LLMs cite tables heavily because they\'re structured data that\'s easy to extract and present. Comparison tables on review/listicle pages are especially powerful.',
-      fix: { summary: 'Where the content compares options, use a real <table> with <th> headers instead of prose.', docLink: 'https://developer.mozilla.org/en-US/docs/Web/HTML/Element/table' },
+      fix: {
+        summary: 'Where the content compares options, use a real <table> with <th> headers instead of prose — AI engines lift tables straight into answers:',
+        snippet: `<table>
+  <thead>
+    <tr><th>Option</th><th>Price</th><th>Best for</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>Plan A</td><td>$0</td><td>Solo / testing</td></tr>
+    <tr><td>Plan B</td><td>$29/mo</td><td>Small teams</td></tr>
+  </tbody>
+</table>`,
+        docLink: 'https://developer.mozilla.org/en-US/docs/Web/HTML/Element/table',
+      },
       priority: 25,
       ruleVersion: RULE_VERSION,
     });
@@ -351,7 +408,17 @@ function checkContentSignals(page: PageContext): CheckResult[] {
       evidence: { ratio: ratio.toFixed(3), htmlBytes: page.html.length, textChars: text.length },
       whyItMatters:
         'Pages where content is buried under heavy JS/CSS framework markup are harder for AI engines (and old-school crawlers) to extract.',
-      fix: { summary: 'Use semantic HTML, reduce inline scripts, server-render content where possible.', docLink: 'https://web.dev/articles/semantics-builtin' },
+      fix: {
+        summary:
+          'Put the real text in the initial HTML (not only in client-side JS): server-render or pre-render the page (SSR/SSG), wrap content in semantic tags, and move large inline <script>/<style> blocks to external files so crawlers and AI engines see content, not an empty shell.',
+        snippet: `<main>
+  <article>
+    <h1>Page title</h1>
+    <p>Your actual content — present in the server HTML, not injected later by JS.</p>
+  </article>
+</main>`,
+        docLink: 'https://web.dev/articles/semantics-builtin',
+      },
       priority: 30,
       ruleVersion: RULE_VERSION,
     });
@@ -427,7 +494,15 @@ function checkEEAT(page: PageContext): CheckResult[] {
       evidence: { externalLinks: externalLinks.length, authCount },
       whyItMatters:
         'LLMs trust content that cites primary sources. Linking to .gov/.edu/peer-reviewed sources signals research-backed content.',
-      fix: { summary: 'Where you make factual claims, link to the original source.', docLink: 'https://developers.google.com/search/docs/fundamentals/creating-helpful-content' },
+      fix: {
+        summary:
+          'For each statistic or factual claim, link to the primary source (a .gov/.edu page, official docs, or a peer-reviewed study) using descriptive anchor text. AI engines cite content that cites its sources:',
+        snippet: `<!-- Link the claim to its original source -->
+<p>Zero-click searches reached
+  <a href="https://www.example-study.gov/report">68% of Google queries in 2026</a>.
+</p>`,
+        docLink: 'https://developers.google.com/search/docs/fundamentals/creating-helpful-content',
+      },
       priority: 20,
       ruleVersion: RULE_VERSION,
     });

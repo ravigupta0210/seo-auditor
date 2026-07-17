@@ -126,7 +126,7 @@ export function AuditView() {
             <SummaryBar summary={phase.summary} />
             <div style={{ display: 'flex', alignItems: 'center', gap: 12, flexWrap: 'wrap', marginBottom: 18 }}>
               <ShareButton reportId={phase.auditId} host={host} score={phase.summary.overall} variant="primary" />
-              <Link href={`/audit/${phase.auditId}`} className="btn btn-secondary" style={{ display: 'inline-flex', alignItems: 'center', gap: 8 }}>
+              <Link href={`/audit/${phase.auditId}`} className="btn btn-secondary" style={{ display: 'inline-flex', alignItems: 'center', gap: 8, textDecoration: 'none' }}>
                 <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
                   <path d="M12 3v12" /><path d="m7 11 5 5 5-5" /><path d="M5 21h14" />
                 </svg>

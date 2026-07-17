@@ -2,6 +2,14 @@ import Link from 'next/link';
 import { AuditForm } from './_components/AuditForm';
 import { SiteFooter } from './_components/SiteFooter';
 import { SiteHeader } from './_components/SiteHeader';
+import { pageMetadata } from '@/lib/seo';
+
+export const metadata = pageMetadata({
+  title: 'Free SEO + AI-Search (GEO) Audit — Is Your Site Cited by ChatGPT & Google?',
+  description:
+    'Instantly check if ChatGPT, Perplexity & Google AI can find and cite your site — plus a full SEO + JSON-LD + metadata audit with a copy-paste fix for every issue. Free, no signup, no paywall.',
+  path: '/',
+});
 
 const FAQS: Array<{ q: string; a: string }> = [
   {
@@ -46,22 +54,22 @@ export default function HomePage() {
         <section style={{ maxWidth: 760, margin: '0 auto', textAlign: 'center' }}>
           <span className="tag" style={{ marginBottom: 18 }}>
             <span style={{ width: 6, height: 6, borderRadius: '50%', background: 'var(--pass)', boxShadow: '0 0 8px var(--pass-glow)' }} />
-            Free · No signup · Built for AI search
+            Free · No signup · SEO + AI-search (GEO)
           </span>
           <h1
             className="hero-gradient-text"
             style={{
-              fontSize: 'clamp(36px, 6vw, 60px)',
-              lineHeight: 1.05,
+              fontSize: 'clamp(34px, 5.6vw, 58px)',
+              lineHeight: 1.06,
               margin: '0 0 18px',
               letterSpacing: '-0.03em',
               fontWeight: 700,
             }}
           >
-            Free SEO + JSON-LD + GEO audit<br />for every public page
+            Is your site visible to<br />ChatGPT, Perplexity &amp; Google AI?
           </h1>
-          <p style={{ fontSize: 17, color: 'var(--text-dim)', maxWidth: 560, margin: '0 auto 36px', lineHeight: 1.6 }}>
-            One full-site report covering classic SEO, JSON-LD validation, metadata, llms.txt, AI-crawler accessibility, and the Island Test. No signup. No paywall. No crawl cap. Built for both Google search and the new AI search engines (ChatGPT, Claude, Perplexity).
+          <p style={{ fontSize: 17, color: 'var(--text-dim)', maxWidth: 580, margin: '0 auto 36px', lineHeight: 1.6 }}>
+            Run a free, instant audit of your <strong style={{ color: 'var(--text)' }}>SEO and AI-search readiness (GEO)</strong>. See whether AI answer engines can find and cite your pages — plus JSON-LD, metadata, and llms.txt — with a copy-paste fix for every issue. No signup. No paywall. No crawl cap.
           </p>
 
           <div style={{ maxWidth: 620, margin: '0 auto' }}>

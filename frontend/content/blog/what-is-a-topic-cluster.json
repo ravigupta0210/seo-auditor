@@ -1,0 +1,149 @@
+{
+  "slug": "what-is-a-topic-cluster",
+  "title": "What Is a Topic Cluster? (Pillar & Cluster SEO)",
+  "date": "2026-07-27",
+  "updatedAt": "2026-07-27",
+  "tag": "SEO",
+  "cluster": "content-links",
+  "keyword": "what is a topic cluster",
+  "secondaryKeywords": ["pillar page", "cluster content", "internal linking", "topical authority"],
+  "readTime": 9,
+  "excerpt": "A topic cluster is one broad pillar page linked to many focused cluster pages on subtopics. Here is why the structure builds authority and how to build one.",
+  "description": "What is a topic cluster? It is one broad pillar page interlinked with focused cluster pages on subtopics. Learn how the structure builds topical authority.",
+  "tldr": "A topic cluster is a content structure built around one broad pillar page linked to many focused cluster pages that each cover a subtopic, with all pages interlinked. The structure builds topical authority, spreads internal link equity, and matches how semantic and AI search understand a subject, helping the whole group rank.",
+  "status": "published",
+  "sections": [
+    {
+      "heading": "What is a topic cluster?",
+      "body": [
+        "What is a topic cluster? A topic cluster is a way of organizing content around a single subject: one broad **pillar page** that covers the topic at a high level, linked to a set of focused **cluster pages** that each go deep on one subtopic, with every page linking back to the pillar and out to its siblings. Instead of publishing scattered, unrelated articles, you build a connected group of pages that together own a topic.",
+        "Picture a hub and spokes. The pillar is the hub — it answers the big question (\"content marketing,\" say) in overview form. The clusters are the spokes — narrower pages like \"content marketing metrics,\" \"content calendars,\" or \"repurposing content\" — and each one links up to the pillar. The internal links are what turn a pile of posts into a *cluster*: they tell search engines these pages belong together and that your site covers the subject in depth.",
+        "This structure exists because of how search has evolved. Modern search engines — and the AI answer engines built on top of them — do not rank a single keyword in isolation; they assess whether a site demonstrates genuine, connected expertise on a subject. A topic cluster is the on-page architecture that makes that expertise legible. Here is the shape at a glance:",
+        "[[flowchart]]",
+        "Read that top to bottom: a pillar in the center, clusters around it, and links running both ways. The rest of this guide breaks down the two page types, why the model works, and how to build your first cluster."
+      ]
+    },
+    {
+      "heading": "Pillar pages vs. cluster pages: the key distinction",
+      "body": [
+        "The whole model rests on one distinction: a **pillar page is broad and shallow, while a cluster page is narrow and deep.** They are not competing formats — they play different positions on the same team, and confusing the two is the most common reason clusters fail.",
+        "A **pillar page** targets a broad, high-volume topic and covers it comprehensively but at a summary level. It answers \"what is X and everything around it\" in a way that gives readers the lay of the land, then links out to cluster pages for the detail. Pillar pages tend to be long, evergreen, and built to rank for competitive head terms — the full anatomy is covered in [what is a pillar page](/blog/what-is-a-pillar-page).",
+        "A **cluster page** targets one specific, usually longer-tail subtopic and answers it completely. If the pillar is \"email marketing,\" a cluster page is \"email subject line best practices\" or \"how to reduce unsubscribe rate.\" Each cluster page goes deeper than the pillar could on that single question, and it exists partly to rank on its own and partly to reinforce the pillar.",
+        "The link between them is directional and deliberate:",
+        "- Every **cluster page links up to the pillar** with descriptive anchor text — this passes authority to the pillar and tells Google the cluster belongs to that topic.",
+        "- The **pillar links down to each cluster page**, so it acts as a table of contents and distributes link equity across the group.",
+        "- **Cluster pages link to relevant siblings** where it genuinely helps the reader, weaving the group together.",
+        "> A pillar without clusters is just a long article. Clusters without a pillar are just loose posts. The interlinking is the product — it is what makes the whole greater than its parts."
+      ]
+    },
+    {
+      "heading": "Why topic clusters work for SEO and AI search",
+      "body": [
+        "Topic clusters work because they align your content with how search engines actually judge quality: not page by page, but topic by topic. Three mechanisms do the heavy lifting, and each one has become *more* important as search has grown semantic and AI-driven.",
+        "First, **topical authority.** Search engines reward sites that comprehensively cover a subject, treating them as more trustworthy sources on it. A single article on \"keyword research\" competes on its own merits; twelve interlinked articles covering every angle of keyword research signal genuine expertise, which lifts the ranking of every page in the group. This is the core idea behind [topical authority](/blog/what-is-topical-authority) — depth across a subject beats one-off posts.",
+        "Second, **internal linking and link equity.** The dense interlinking inside a cluster spreads authority from your strongest pages to your weakest and gives crawlers a clear map of your site's structure. It also keeps readers moving between related pages, which improves engagement. If internal links are new to you, [internal linking](/blog/what-is-internal-linking) explains how that equity flows.",
+        "Third — and this is the 2026 reason — **clusters match how semantic and AI search understand topics.** Modern engines and answer engines like ChatGPT, Perplexity, and Google AI Overviews map content to concepts and entities, not just keyword strings. A tightly interlinked cluster reads to these systems as a coherent knowledge structure on a subject, making your pages far likelier to be retrieved and cited. This is the heart of [semantic SEO](/blog/what-is-semantic-seo): you are describing a topic the way a machine models it. You can check how legibly your pages express a topic by running a [free SEO + GEO audit](/), which flags weak internal linking and thin answers that undercut a cluster."
+      ]
+    },
+    {
+      "heading": "How to build a topic cluster (step by step)",
+      "body": [
+        "Building a topic cluster is a four-step process: pick a pillar topic, map the subtopics, create the pages, then interlink them. The order matters — the planning up front is what prevents a random pile of posts that never connect.",
+        "**1. Pick one pillar topic.** Choose a subject broad enough to support ten-plus subtopics but specific enough that your site can realistically own it. \"Marketing\" is too broad; \"email marketing for e-commerce\" is a topic you can dominate. The best pillar topics sit at the intersection of what your audience searches and what your business is expert in.",
+        "**2. Map the subtopics.** Brainstorm every question and subtopic your pillar audience cares about — each becomes a cluster page. Use the People Also Ask box, related searches, forum questions, and a [content gap analysis](/blog/what-is-a-content-gap-analysis) to find the subtopics competitors rank for that you are missing. Aim for a list of questions, because question-shaped pages rank and get cited more easily.",
+        "**3. Create the pillar and cluster pages.** Write the pillar as a comprehensive overview that summarizes each subtopic and links out to it. Write each cluster page to fully answer its one question — opening with a direct, standalone answer so both readers and AI engines can lift it.",
+        "**4. Interlink deliberately.** This step *is* the cluster. Link every cluster page up to the pillar, link the pillar down to every cluster, and connect sibling clusters where it helps the reader — always with descriptive anchor text, never \"click here.\" Do this and the group starts to behave as a unit in search."
+      ]
+    },
+    {
+      "heading": "How many articles does a topic cluster need?",
+      "body": [
+        "There is no magic number, but a workable topic cluster is usually **one pillar page plus roughly 5 to 15 cluster pages** — enough to cover the subtopics that matter without padding out thin pages nobody searches for. Start with the pillar and the five or six highest-value subtopics, then expand as you find more questions worth answering.",
+        "Let the topic set the size, not a target. A narrow topic might be fully covered by a pillar and four clusters; a broad one might grow to thirty over time. The right test is completeness: **have you answered every meaningful question a searcher has on this topic?** If yes, the cluster is done for now. If a new subtopic keeps coming up in People Also Ask or customer questions, add a cluster page and link it in.",
+        "Resist the temptation to inflate the count with weak pages. Ten strong, genuinely useful cluster pages build more topical authority than thirty thin ones — and thin, overlapping pages risk keyword cannibalization, where two of your own pages compete for the same query. Quality and clear subtopic separation beat volume every time.",
+        "Once your first cluster is live and interlinked, treat it as a living structure: refresh the pillar as clusters change, add pages as new subtopics emerge, and audit the group periodically. A quick way to confirm the pieces connect and each page expresses its topic clearly is to [run a free SEO + GEO audit](/) on the pillar and a few clusters — it surfaces missing internal links, thin content, and weak answer-first openings before they hold the whole cluster back."
+      ]
+    }
+  ],
+  "flowchart": {
+    "title": "How a topic cluster is structured",
+    "steps": [
+      { "title": "Choose a pillar topic", "detail": "One broad subject your site can realistically own — the hub of the cluster." },
+      { "title": "Publish the pillar page", "detail": "A comprehensive overview that covers the topic at a high level and links out to each subtopic." },
+      { "title": "Map and write cluster pages", "detail": "Focused pages that each answer one subtopic in depth, opening with a standalone answer." },
+      { "title": "Link clusters up to the pillar", "detail": "Every cluster page links to the pillar with descriptive anchor text, passing authority and signaling the topic." },
+      { "title": "Link the pillar down to clusters", "detail": "The pillar links to each cluster, acting as a hub and distributing link equity." },
+      { "title": "Interlink related siblings", "detail": "Connect cluster pages to each other where it helps the reader, weaving the group into one unit." }
+    ]
+  },
+  "peopleAlsoAsk": [
+    {
+      "q": "What is a topic cluster?",
+      "a": "A topic cluster is a content structure built around one broad pillar page linked to several focused cluster pages, each covering a subtopic, with all pages interlinked. Instead of scattered, unrelated articles, you build a connected group that together owns a subject. The internal links between the pillar and clusters tell search engines the pages belong together and that your site covers the topic in depth."
+    },
+    {
+      "q": "How do topic clusters help SEO?",
+      "a": "Topic clusters help SEO by building topical authority, spreading internal link equity, and matching how semantic and AI search understand subjects. Search engines reward sites that comprehensively cover a topic, so an interlinked group lifts the ranking of every page in it. The dense internal linking also passes authority between pages and gives both crawlers and AI answer engines a clear map of your expertise."
+    },
+    {
+      "q": "What is the difference between a topic cluster and a pillar page?",
+      "a": "A pillar page is one component; a topic cluster is the whole structure. The pillar is a single broad, comprehensive page that covers a topic at a high level. The topic cluster is the pillar plus all the focused cluster pages that link to it and to each other. Put simply, the pillar is the hub, the clusters are the spokes, and the cluster is the entire hub-and-spoke system."
+    },
+    {
+      "q": "How do I create a topic cluster?",
+      "a": "Create a topic cluster in four steps: pick one pillar topic broad enough to support many subtopics, map those subtopics using People Also Ask and a content gap analysis, write a comprehensive pillar page plus a deep page for each subtopic, then interlink them. Link every cluster up to the pillar, the pillar down to each cluster, and related siblings to each other with descriptive anchor text."
+    },
+    {
+      "q": "How many articles are in a topic cluster?",
+      "a": "A typical topic cluster has one pillar page plus roughly 5 to 15 cluster pages, though the right number depends on the topic, not a target. Start with the pillar and five or six high-value subtopics, then expand as you find more questions worth answering. Ten strong pages build more topical authority than thirty thin ones, so let completeness rather than volume decide the size."
+    }
+  ],
+  "faqs": [
+    {
+      "q": "Should the pillar page or the cluster pages be published first?",
+      "a": "Either order works, but many teams publish the pillar first as an anchor, then add cluster pages over time and link them in. What matters is that once both exist, the links connect them in both directions. A pillar with no clusters is just a long article until the cluster pages arrive."
+    },
+    {
+      "q": "Can one cluster page belong to two different topic clusters?",
+      "a": "It can, but keep it rare and intentional. A page that genuinely bridges two topics may link to two pillars, but overlapping clusters risk keyword cannibalization and muddy your topical signals. In most cases each cluster page should have one clear home pillar to keep the structure legible to search engines."
+    },
+    {
+      "q": "Do topic clusters help content get cited by AI answer engines?",
+      "a": "Yes. AI answer engines map content to concepts and entities, so a tightly interlinked cluster reads as a coherent knowledge structure on a subject, making its pages likelier to be retrieved and cited. Opening each page with a direct, standalone answer further improves the odds an engine can lift and quote it."
+    }
+  ],
+  "relatedKeywords": [
+    "topic cluster",
+    "content cluster",
+    "pillar page",
+    "internal linking",
+    "topical authority"
+  ],
+  "internalLinks": [
+    {
+      "href": "/",
+      "anchor": "run a free SEO + GEO audit"
+    },
+    {
+      "href": "/blog/what-is-a-pillar-page",
+      "anchor": "What is a pillar page"
+    },
+    {
+      "href": "/blog/what-is-topical-authority",
+      "anchor": "What is topical authority"
+    },
+    {
+      "href": "/blog/what-is-internal-linking",
+      "anchor": "What is internal linking"
+    },
+    {
+      "href": "/blog/what-is-semantic-seo",
+      "anchor": "What is semantic SEO"
+    },
+    {
+      "href": "/blog/what-is-a-content-gap-analysis",
+      "anchor": "What is a content gap analysis"
+    }
+  ],
+  "images": []
+}

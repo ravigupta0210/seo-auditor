@@ -8,8 +8,6 @@ build/
 out/
 
 # Env
-.env
-.env.local
 .env.*.local
 
 # Logs
@@ -33,3 +31,4 @@ coverage/
 .playwright-browsers/
 test-results/
 playwright-report/
+config.bat

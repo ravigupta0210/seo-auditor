@@ -1,0 +1,154 @@
+{
+  "slug": "what-is-a-seed-keyword",
+  "title": "What Is a Seed Keyword? (And How to Find Them)",
+  "date": "2026-07-27",
+  "updatedAt": "2026-07-27",
+  "tag": "SEO",
+  "cluster": "content-links",
+  "keyword": "what is a seed keyword",
+  "secondaryKeywords": ["seed keyword examples", "how to find seed keywords", "seed vs long-tail keyword", "keyword research starting point"],
+  "readTime": 9,
+  "excerpt": "A seed keyword is the broad 1-2 word term you start keyword research from, then expand into dozens of long-tail variations. Here is how to find and grow one.",
+  "description": "What is a seed keyword? It is the broad 1-2 word term you start keyword research from and expand into long-tail phrases. Learn how to find and grow seed keywords.",
+  "tldr": "A seed keyword is a broad, foundational one- or two-word term — like \"coffee\" or \"running shoes\" — that you start keyword research from. You do not try to rank for it directly; you feed it into tools, autocomplete, and forums to expand it into dozens of specific, lower-competition long-tail keywords you can actually win.",
+  "status": "published",
+  "sections": [
+    {
+      "heading": "What is a seed keyword, in plain terms",
+      "body": [
+        "The simplest way to answer **what is a seed keyword** is this: a seed keyword is a broad, foundational one- or two-word term that describes your topic or product and acts as the starting point for keyword research. Think **\"coffee\"**, **\"running shoes\"**, or **\"project management\"**. You almost never try to rank a page for the seed itself — it is too broad and too competitive. Instead, you plant the seed and grow it into dozens of specific long-tail phrases like \"best coffee for cold brew\" or \"running shoes for flat feet\" that are far easier to win.",
+        "The word \"seed\" is literal: it is the smallest unit you begin with, and everything else grows out of it. One seed keyword can branch into hundreds of related questions, comparisons, and long-tail variations — which is exactly why research always starts here rather than with a random list of phrases.",
+        "Here is how a single seed expands into a usable keyword list:",
+        "[[flowchart]]",
+        "So a seed keyword is not a target you optimize a page for — it is an input. Its whole job is to unlock the specific, lower-competition phrases underneath it. Get the seeds right and the rest of your [keyword research](/blog/how-to-do-keyword-research-for-free) becomes a matter of expansion rather than guesswork."
+      ]
+    },
+    {
+      "heading": "Seed keyword vs long-tail keyword",
+      "body": [
+        "The difference between a seed keyword and a long-tail keyword is breadth and intent. A seed is short, broad, high-volume, and brutally competitive; a long-tail keyword is longer, specific, lower-volume, and much easier to rank for. You use the first to discover the second. Confusing the two is the most common keyword-research mistake — people try to rank a brand-new blog for \"coffee\" and wonder why nothing happens.",
+        "This table makes the distinction concrete:",
+        "[[table]]",
+        "Notice the pattern: as a keyword gets longer and more specific, its search volume drops but its **intent gets clearer** and its competition falls. That trade is almost always worth it for a growing site. A page targeting \"how to descale a coffee machine with vinegar\" will convert and rank far faster than one aimed at \"coffee\", even though fewer people search it. Learn to lean into this in [how to target long-tail keywords](/blog/how-to-target-long-tail-keywords).",
+        "> Rule of thumb: seed keywords are for research, long-tail keywords are for ranking. Never build a page around a bare seed.",
+        "The two are partners, not competitors. Every long-tail phrase you eventually target traces back to a seed, and organizing your content around a seed and its long-tail children is what builds topical authority — the same principle behind [semantic SEO](/blog/what-is-semantic-seo)."
+      ]
+    },
+    {
+      "heading": "How to find seed keywords for your site",
+      "body": [
+        "You find seed keywords by naming the core topics your audience already cares about — the products you sell, the problems you solve, and the words your customers use. You do not need a paid tool for this step; the best seeds come from sources you already have access to. Work through these five in order:",
+        "- **Your own products and services.** List what you actually offer in the plainest words possible. A running-shoe store's seeds are \"running shoes\", \"trail shoes\", \"marathon\", \"insoles\". A SaaS tool's seeds are its core features and the job it does.",
+        "- **How customers describe you.** Read support tickets, sales calls, and reviews. Customers rarely use your internal jargon — they type what is in their head, and those phrases make excellent seeds.",
+        "- **Competitor navigation and categories.** Open two or three competitors and look at their top nav, category pages, and blog sections. Those labels are seeds they have already validated as worth targeting.",
+        "- **Google Autocomplete and \"People also search for\".** Type a broad term into Google and read the dropdown suggestions — each is a real query pulled from live search data. The [People Also Ask](/blog/what-is-people-also-ask) box on the results page is a second free source of seed-adjacent questions.",
+        "- **Reddit, forums, and communities.** Search subreddits, Quora, and niche forums where your audience hangs out. The recurring words in thread titles are unfiltered seeds straight from the people you want to reach.",
+        "A good starting set is roughly **5 to 15 seed keywords** that together cover the main pillars of your site. You are not trying to be exhaustive here — you are trying to capture the handful of broad topics that everything else will branch from."
+      ]
+    },
+    {
+      "heading": "How to expand a seed into a full keyword list",
+      "body": [
+        "You expand a seed keyword by feeding it into free expansion sources and collecting the specific, long-tail phrases they return. This is where one seed becomes fifty usable keywords. The mechanics are simple and repeatable — run each seed through the same set of sources:",
+        "- **Autocomplete scraping.** Type your seed plus each letter of the alphabet (\"coffee a\", \"coffee b\"…) and record the suggestions. Free tools automate this and can surface hundreds of variations per seed.",
+        "- **\"Searches related to\" and PAA.** Scroll to the bottom of the SERP for the related-search block, and expand the People Also Ask questions — each click loads more. These are Google telling you what else the same searchers want.",
+        "- **Modifiers.** Bolt intent words onto the seed: \"best\", \"cheap\", \"how to\", \"vs\", \"for beginners\", \"near me\", \"2026\". Each modifier turns a broad seed into a specific query with clearer [search intent](/blog/what-is-search-intent).",
+        "- **Free keyword tools.** Google Keyword Planner and free-tier research tools take one seed and return hundreds of ideas with rough [search volume](/blog/what-is-search-volume) and [keyword difficulty](/blog/what-is-keyword-difficulty) so you can prioritize.",
+        "Once you have the raw list, group the phrases by intent and by sub-topic, then map each cluster to a page. High-volume informational seeds usually become pillar pages; the long-tail children become the supporting posts that link back to them. Before you publish any of it, paste the live URL into the [free SEO + GEO audit](/) on the homepage — it checks that your target keyword actually appears in the title, first paragraph, and headings, and flags GEO issues that keep the page out of AI answers.",
+        "The payoff of starting from seeds is structure. Instead of a flat spreadsheet of random phrases, you end up with a tidy tree — a few seeds at the top, clusters of long-tail keywords beneath each — which doubles as your content calendar and your internal-linking map."
+      ]
+    }
+  ],
+  "flowchart": {
+    "title": "From one seed keyword to a full keyword list",
+    "steps": [
+      { "title": "Start with a broad seed", "detail": "Pick a 1-2 word term for your topic or product, e.g. \"coffee\" or \"running shoes\"." },
+      { "title": "Run it through expansion sources", "detail": "Feed the seed into autocomplete, People Also Ask, forums, and free keyword tools." },
+      { "title": "Add intent modifiers", "detail": "Attach words like best, how to, vs, cheap, for beginners, and 2026 to sharpen intent." },
+      { "title": "Collect long-tail variations", "detail": "Gather the specific, lower-competition phrases each source returns." },
+      { "title": "Cluster and map to pages", "detail": "Group phrases by sub-topic and intent, then assign each cluster to a page to target." }
+    ]
+  },
+  "comparisonTable": {
+    "caption": "Seed keyword vs long-tail keyword: how they differ and what each is for",
+    "headers": ["Attribute", "Seed keyword", "Long-tail keyword"],
+    "rows": [
+      ["Length", "1-2 words", "4+ words"],
+      ["Example", "\"coffee\"", "\"best coffee for cold brew at home\""],
+      ["Search volume", "High", "Low to moderate"],
+      ["Competition", "Very high", "Low"],
+      ["Search intent", "Broad / unclear", "Specific / clear"],
+      ["Best use", "Research starting point", "Actual page you rank"]
+    ]
+  },
+  "peopleAlsoAsk": [
+    {
+      "q": "What is a seed keyword?",
+      "a": "A seed keyword is a broad, foundational one- or two-word term — like \"coffee\" or \"running shoes\" — that you use as the starting point for keyword research. You do not usually try to rank a page for the seed itself because it is too broad and competitive. Instead, you expand it into dozens of specific, lower-competition long-tail keywords that you can realistically win."
+    },
+    {
+      "q": "How do I find seed keywords?",
+      "a": "Find seed keywords from sources you already have: your own products and services, the words customers use in reviews and support tickets, competitor navigation and category labels, Google Autocomplete suggestions, and recurring terms in Reddit threads and niche forums. Aim for 5 to 15 seeds that cover the main pillars of your site — you are capturing broad topics, not final target phrases."
+    },
+    {
+      "q": "What is the difference between a seed keyword and a long-tail keyword?",
+      "a": "A seed keyword is short (1-2 words), broad, high-volume, and highly competitive — you use it for research, not ranking. A long-tail keyword is longer (4+ words), specific, lower-volume, and far easier to rank for. You feed a seed into tools and autocomplete to discover the long-tail phrases underneath it, then build pages around those long-tail terms."
+    },
+    {
+      "q": "How many seed keywords do I need?",
+      "a": "Most sites need only 5 to 15 seed keywords to start. Each seed should represent one core pillar of your business or content, and each can expand into dozens or hundreds of long-tail variations. You are not trying to be exhaustive at the seed stage — a small, well-chosen set of broad topics gives you more usable keywords than a long, unfocused list ever will."
+    },
+    {
+      "q": "How do I use seed keywords for research?",
+      "a": "Use a seed keyword as an input, not a target. Feed each seed into Google Autocomplete, the \"searches related to\" block, People Also Ask, forums, and free keyword tools to generate long-tail ideas. Add intent modifiers like \"best\", \"how to\", and \"vs\", then cluster the results by sub-topic and map each cluster to a page you will actually create and optimize."
+    }
+  ],
+  "faqs": [
+    {
+      "q": "Can a seed keyword ever be the keyword I target on a page?",
+      "a": "Rarely, and only if your site has strong authority. Seed keywords are broad and highly competitive, so new and mid-size sites should treat them as research inputs and target the long-tail phrases underneath instead, where ranking is realistic and intent is clearer."
+    },
+    {
+      "q": "Do I need a paid tool to find seed keywords?",
+      "a": "No. The best seeds come from free sources you already have: your products, customer language, competitor categories, Google Autocomplete, and forums like Reddit. Paid tools help most at the expansion stage, when you turn one seed into hundreds of long-tail ideas with volume and difficulty data."
+    },
+    {
+      "q": "How is a seed keyword different from a focus keyword?",
+      "a": "A seed keyword is the broad starting point for research, while a focus keyword is the single specific phrase you optimize one page around. You discover many focus keywords by expanding a seed. The seed is upstream research; the focus keyword is the downstream target that goes in your title and first paragraph."
+    }
+  ],
+  "relatedKeywords": [
+    "seed keyword",
+    "keyword research",
+    "keyword ideas",
+    "long-tail keywords",
+    "keyword seed list"
+  ],
+  "internalLinks": [
+    {
+      "href": "/",
+      "anchor": "run a free SEO + GEO audit"
+    },
+    {
+      "href": "/blog/how-to-do-keyword-research-for-free",
+      "anchor": "How to do keyword research for free"
+    },
+    {
+      "href": "/blog/how-to-target-long-tail-keywords",
+      "anchor": "How to target long-tail keywords"
+    },
+    {
+      "href": "/blog/what-is-search-intent",
+      "anchor": "What is search intent"
+    },
+    {
+      "href": "/blog/what-is-search-volume",
+      "anchor": "What is search volume"
+    },
+    {
+      "href": "/blog/what-is-keyword-difficulty",
+      "anchor": "What is keyword difficulty"
+    }
+  ],
+  "images": []
+}

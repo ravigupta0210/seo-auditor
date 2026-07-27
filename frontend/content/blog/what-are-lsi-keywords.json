@@ -1,0 +1,140 @@
+{
+  "slug": "what-are-lsi-keywords",
+  "title": "What Are LSI Keywords? (Myth vs Reality)",
+  "date": "2026-07-27",
+  "updatedAt": "2026-07-27",
+  "tag": "SEO",
+  "cluster": "content-links",
+  "keyword": "what are LSI keywords",
+  "secondaryKeywords": ["LSI keywords myth", "semantic keywords", "related keywords SEO", "do LSI keywords help SEO"],
+  "readTime": 9,
+  "excerpt": "\"LSI keywords\" is a popular but technically wrong term. Here is the myth, the useful reality of semantically related terms, and how to find and use them.",
+  "description": "What are LSI keywords? The term is an SEO myth — Google says LSI keywords do not exist. But using semantically related terms genuinely helps. Here is the truth.",
+  "tldr": "So what are LSI keywords? The name is an SEO myth — true Latent Semantic Indexing is 1980s tech Google does not use, and Google has said \"there is no such thing as LSI keywords.\" But the underlying idea is real and valuable: using semantically related terms and entities so your content covers a topic fully, which modern semantic SEO rewards.",
+  "status": "published",
+  "sections": [
+    {
+      "heading": "What are LSI keywords? The short, honest answer",
+      "body": [
+        "What are LSI keywords supposed to be? In common SEO usage, \"LSI keywords\" means terms that are semantically related to your main keyword — for an article about \"apple\" the phone, related terms like \"iPhone\", \"iOS\", and \"App Store\"; for \"apple\" the fruit, terms like \"orchard\", \"cider\", and \"pie\". The idea is that sprinkling these related words helps Google understand your topic. The problem is the name: **LSI keywords, as the industry uses the term, are not a real Google ranking feature.**",
+        "LSI stands for Latent Semantic Indexing, a document-retrieval technique patented in 1988 — designed for small, static collections of text, long before the modern web existed. Google's own Search Advocate John Mueller has been blunt about it: **\"there is no such thing as LSI keywords — anyone who's telling you otherwise is mistaken.\"** Google does not run 1980s LSI on the trillions of pages it indexes; it uses far more advanced systems like BERT and MUM to understand language and entities.",
+        "So there are really two questions tangled together, and the honest answer splits them apart:",
+        "[[table]]",
+        "In short: the label is wrong, but the instinct behind it is right. Writing about a topic using the related terms and entities a knowledgeable person would naturally use does help — not because of \"LSI\", but because it is exactly what [semantic SEO](/blog/what-is-semantic-seo) is built on."
+      ]
+    },
+    {
+      "heading": "Why the LSI keyword myth won't die",
+      "body": [
+        "The LSI keyword myth persists because the advice attached to it happens to work, even though the explanation is wrong. Tell someone to \"add LSI keywords\" and they end up writing more thoroughly about their topic — covering subtopics, using synonyms and related entities — which genuinely improves the page. The good outcome gets credited to a mechanism that does not exist, so the myth survives.",
+        "It also survives because it is **sellable**. A whole category of tools markets \"LSI keyword generators\", and it is easier to sell a checklist of magic words than to teach the fuzzier skill of covering a topic completely. Most of these tools simply scrape terms that co-occur on the top-ranking pages — which is useful, but has nothing to do with Latent Semantic Indexing.",
+        "> The danger of the myth is not the word list — it is the mindset. If you treat related terms as a checklist of tokens to sprinkle in, you drift toward keyword stuffing, which hurts you.",
+        "Old-school \"add your LSI keywords\" advice can slide into cramming synonyms into a page at an unnatural rate. That is a [keyword density](/blog/what-is-keyword-density) problem, and Google's systems are built to catch it. The fix is to stop thinking about a list of words to insert and start thinking about a topic to cover — which is what the next section is about."
+      ]
+    },
+    {
+      "heading": "The useful reality: semantically related terms and entities",
+      "body": [
+        "Here is the part worth keeping. Modern search engines understand a page by the **entities and related concepts** it discusses, not by matching an exact string. A page about \"running a marathon\" that never mentions training plans, pace, hydration, tapering, or recovery looks thin to Google's language models, regardless of how many times it repeats \"marathon\". Covering those related concepts is how you signal genuine depth.",
+        "This is the legitimate core that the \"LSI\" label was clumsily pointing at. When you naturally include the terms, questions, and entities a real expert would use, you do three things Google actually rewards:",
+        "- **You match more queries.** Related terms let one page rank for many long-tail variations, not just the exact keyword. It also clarifies [search intent](/blog/what-is-search-intent) by showing which meaning of an ambiguous word you mean.",
+        "- **You demonstrate topical completeness.** Covering the sub-topics a searcher expects signals that the page fully answers the query — a major factor in modern ranking.",
+        "- **You feed AI answer engines.** Tools like ChatGPT, Perplexity, and Google AI Overviews extract and cite passages that comprehensively address a topic. Rich, entity-dense content is easier for them to trust and quote — the heart of [entity SEO](/blog/what-is-entity-seo).",
+        "So the reframe is simple: stop hunting for \"LSI keywords\" and start asking, \"what does someone who fully understands this topic talk about?\" That question, not a generator tool, is what produces content that ranks and gets cited."
+      ]
+    },
+    {
+      "heading": "How to find and use related terms the right way",
+      "body": [
+        "You find semantically related terms directly from the search results themselves — Google will show you the exact vocabulary it associates with your topic, for free. Skip the \"LSI generator\" tools and mine these four sources instead:",
+        "- **People Also Ask.** The expandable questions on the SERP reveal the sub-questions searchers expect you to answer. Each one is a subtopic to cover — see [what is People Also Ask](/blog/what-is-people-also-ask).",
+        "- **Autocomplete.** Type your keyword into Google and read the dropdown; each suggestion is a real related query pulled from live search data.",
+        "- **\"Searches related to\".** Scroll to the bottom of the results page for a block of related searches — Google literally listing terms it connects to yours.",
+        "- **The top-ranking pages themselves.** Read the pages already ranking and note the recurring entities, subheadings, and terms they all cover. That overlap is your topic's real vocabulary.",
+        "Then use those terms the way a writer would, not a robot. Group them into subtopics, give the important ones their own section or H2, and let the rest appear naturally as you explain the topic in depth. Do not force a term in where it does not belong, and never chase a target count — that is the [keyword stuffing](/blog/how-to-write-seo-friendly-content) trap the myth leads to. Cover the topic completely and the related terms show up on their own.",
+        "When the draft is done, verify it instead of guessing. Paste the URL into the [free SEO + GEO audit](/) on the homepage — it checks whether your content reads as a complete, topically rich answer, whether your primary keyword sits in the right places, and whether AI crawlers can reach and cite the page. That is a far better signal than any LSI keyword score."
+      ]
+    }
+  ],
+  "comparisonTable": {
+    "caption": "LSI keywords: the myth vs the semantic reality",
+    "headers": ["Question", "The \"LSI keyword\" myth", "The semantic reality"],
+    "rows": [
+      ["Does Google use LSI?", "Yes, it runs LSI on your page", "No — Google's Mueller says LSI keywords do not exist"],
+      ["What is the tech?", "Latent Semantic Indexing (1988)", "BERT, MUM, and entity-based understanding"],
+      ["What to add", "A list of \"magic\" synonym tokens", "Related concepts, entities, and subtopics"],
+      ["The risk", "Stuffing a word list into the page", "Natural depth; no forced density"],
+      ["Does the idea help?", "The name is wrong…", "…but covering a topic fully genuinely ranks better"]
+    ]
+  },
+  "peopleAlsoAsk": [
+    {
+      "q": "What are LSI keywords?",
+      "a": "In common SEO usage, LSI keywords are terms semantically related to your main keyword — like \"orchard\" and \"cider\" for an article about apples. The name is technically wrong: LSI (Latent Semantic Indexing) is 1980s document-retrieval tech that Google does not use, and Google has said there is no such thing as LSI keywords. But the underlying idea — using related terms so content covers a topic fully — is genuinely valuable."
+    },
+    {
+      "q": "Do LSI keywords help SEO?",
+      "a": "\"LSI keywords\" as a specific ranking feature do not exist, so nothing labeled LSI directly helps. However, the practice people call adding LSI keywords — including semantically related terms, entities, and subtopics — does help, because it signals topical completeness to Google's modern language models. The benefit comes from covering the topic fully, not from a magic list of words."
+    },
+    {
+      "q": "Are LSI keywords real?",
+      "a": "LSI is a real 1988 information-retrieval technique, but \"LSI keywords\" as an SEO ranking factor are not real. Google's John Mueller has stated plainly that there is no such thing as LSI keywords and that Google does not use Latent Semantic Indexing to rank pages. The useful concept people mean — semantically related terms — is real; the name attached to it is a myth."
+    },
+    {
+      "q": "How do I find LSI keywords?",
+      "a": "Skip \"LSI generator\" tools and mine the search results directly. Use People Also Ask for subtopics, Google Autocomplete for related queries, the \"searches related to\" block at the bottom of the SERP, and the recurring entities and headings on the pages already ranking. Together these reveal the real vocabulary Google associates with your topic — far more accurately than any LSI tool."
+    },
+    {
+      "q": "What is the difference between LSI and semantic keywords?",
+      "a": "There is effectively no functional difference in what people mean — both refer to terms related to your main keyword. The difference is accuracy of naming. \"LSI keywords\" invokes an outdated 1980s technique Google does not use, while \"semantic keywords\" or \"related terms\" correctly describes the entity- and concept-based understanding modern search actually relies on. Use the accurate term and the accurate mental model."
+    }
+  ],
+  "faqs": [
+    {
+      "q": "Did Google ever confirm it uses LSI keywords?",
+      "a": "No. Google has repeatedly denied it. Search Advocate John Mueller stated there is no such thing as LSI keywords and that anyone claiming otherwise is mistaken. Google ranks pages with systems like BERT and MUM, not 1988-era Latent Semantic Indexing, so no page needs \"LSI keywords\" specifically."
+    },
+    {
+      "q": "Should I stop using LSI keyword tools?",
+      "a": "You can, but they are not useless — they mostly surface terms that co-occur on top-ranking pages, which is helpful data. Just understand it has nothing to do with LSI. Free sources like People Also Ask, autocomplete, and the SERP itself usually reveal the same related vocabulary without the misleading label."
+    },
+    {
+      "q": "How many related terms should I include in an article?",
+      "a": "There is no target number, and chasing one leads to keyword stuffing. Cover the subtopics and entities a knowledgeable reader would expect, giving important ones their own section. If you have genuinely explained the topic in depth, the right related terms appear naturally without you counting them."
+    }
+  ],
+  "relatedKeywords": [
+    "lsi keywords",
+    "related keywords",
+    "semantic keywords",
+    "latent semantic indexing",
+    "entity seo"
+  ],
+  "internalLinks": [
+    {
+      "href": "/",
+      "anchor": "run a free SEO + GEO audit"
+    },
+    {
+      "href": "/blog/what-is-semantic-seo",
+      "anchor": "What is semantic SEO"
+    },
+    {
+      "href": "/blog/what-is-search-intent",
+      "anchor": "What is search intent"
+    },
+    {
+      "href": "/blog/how-to-write-seo-friendly-content",
+      "anchor": "How to write SEO-friendly content"
+    },
+    {
+      "href": "/blog/what-is-keyword-density",
+      "anchor": "What is keyword density"
+    },
+    {
+      "href": "/blog/how-to-do-keyword-research-for-free",
+      "anchor": "How to do keyword research for free"
+    }
+  ],
+  "images": []
+}

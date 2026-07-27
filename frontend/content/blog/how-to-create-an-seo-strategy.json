@@ -1,0 +1,145 @@
+{
+  "slug": "how-to-create-an-seo-strategy",
+  "title": "How to Create an SEO Strategy (Step by Step)",
+  "date": "2026-07-27",
+  "updatedAt": "2026-07-27",
+  "tag": "SEO",
+  "cluster": "seo-basics",
+  "keyword": "how to create an SEO strategy",
+  "secondaryKeywords": ["seo strategy plan", "keyword research", "topic clusters", "technical seo", "generative engine optimization"],
+  "readTime": 10,
+  "excerpt": "A nine-step plan to create an SEO strategy in 2026 that ranks in Google and gets cited by AI search.",
+  "description": "Learn how to create an SEO strategy step by step: set KPIs, research keywords and intent, fix the technical foundation, build topic clusters, and add GEO for AI search.",
+  "tldr": "To create an SEO strategy, work through nine steps in order: set measurable goals and KPIs, research keywords and intent, run a competitor and content-gap analysis, fix your technical foundation, plan content in topic clusters, optimize on-page and internal links, build off-page authority, add GEO for AI search, then measure and iterate. Strategy sets the direction; the individual tactics come after.",
+  "status": "published",
+  "sections": [
+    {
+      "heading": "How to create an SEO strategy in nine steps",
+      "body": [
+        "Learning how to create an SEO strategy means building a documented plan that connects business goals to the keywords, content, technical fixes, and authority signals that will earn organic traffic — and in 2026 that plan must also cover AI search. A strategy is not a to-do list of tactics; it is the order and reasoning that decides which tactics to run and when. The nine steps below take you from a blank page to a plan you can execute and measure.",
+        "The reason to work in this order is that each step depends on the ones before it. You cannot choose keywords without goals, cannot plan content without keyword and gap research, and cannot rank that content if the technical foundation is broken. Skipping ahead is the most common way teams waste months producing content that never ranks because the strategy underneath it was never built.",
+        "Here is the full strategy process at a glance:",
+        "[[flowchart]]",
+        "Run the flowchart top to bottom. The early steps set direction, the middle steps build and optimize content, and the final steps grow authority and adapt to AI search. The rest of this guide walks through each step with the decisions that actually matter."
+      ]
+    },
+    {
+      "heading": "Steps 1-2: Set goals and research keywords with intent",
+      "body": [
+        "An SEO strategy starts with a measurable goal, not a keyword list. Decide what organic search should deliver for the business — qualified leads, product signups, ad revenue, or booked demos — then translate it into KPIs you can track: organic sessions, keyword rankings, conversions from organic, and assisted revenue. Vague goals like \"more traffic\" produce vague strategies; a target like \"double organic demo requests in two quarters\" tells you which keywords are worth chasing.",
+        "With goals set, move to **keyword and intent research**. Build a list of the phrases your audience actually searches, grouped by the four intent types — informational, commercial, navigational, and transactional — because each demands a different page. The fastest filter is to search a keyword and study the top results: if page one is all guides, that query wants a guide, not a product page. Prioritize keywords where intent matches a page you can realistically win, not just high-volume head terms. Start with the free method in [how to do keyword research for free](/blog/how-to-do-keyword-research-for-free).",
+        "> A keyword you can rank for beats a keyword with ten times the volume that you cannot. Winnable intent is the real currency of an SEO strategy.",
+        "Document each target keyword with its intent, rough difficulty, and the page type it maps to. That mapping becomes the backbone of your content plan in step 5."
+      ]
+    },
+    {
+      "heading": "Steps 3-4: Competitor gap analysis and technical foundation",
+      "body": [
+        "Before writing anything, run a **competitor and content-gap analysis** to see what is already ranking and what is missing. Identify the two or three sites that dominate your target keywords, then find the queries they rank for that you do not — those gaps are your fastest opportunities because demand is already proven. Just as important, find topics nobody covers well; an unanswered question with real search volume is an opening you can own. The full method is in [what is a content gap analysis](/blog/what-is-a-content-gap-analysis).",
+        "Next comes the **technical foundation**, and it comes before content for a reason: Google and AI crawlers cannot rank pages they cannot reach, read, or load quickly. Confirm three things are solid before you scale content:",
+        "- **Crawlability** — a clean `robots.txt`, a submitted XML sitemap, no accidental `noindex` tags, and no orphaned pages.",
+        "- **Speed** — Core Web Vitals in the green, especially Largest Contentful Paint and interaction latency on mobile.",
+        "- **Mobile and structure** — a responsive layout, a logical URL structure, and HTTPS everywhere.",
+        "You do not need to be a developer to find these issues. Paste your URL into the [free SEO + GEO audit on the homepage](/) and it flags broken crawlability, slow pages, missing metadata, and structured-data problems in one pass. Fix what it surfaces first, then read [what is technical SEO](/blog/what-is-technical-seo) for the deeper checklist."
+      ]
+    },
+    {
+      "heading": "Steps 5-7: Content clusters, on-page, and off-page authority",
+      "body": [
+        "With research done and the foundation solid, plan content as **topic clusters**, not scattered one-off posts. A cluster is one broad pillar page linked to several focused articles that each answer a sub-question. This structure is how you build [topical authority](/blog/what-is-topical-authority) — the signal that tells Google your site is a credible source on a subject — and it is far stronger than publishing unrelated articles. Map every target keyword from step 2 into a cluster before you write, so each post has a clear parent and clear siblings.",
+        "**On-page and internal linking** turn that plan into rankable pages. For each post, place the primary keyword in the title, H1, and first 100 words; write a real meta description; use question-style H2 headers; and link contextually to the other posts in its cluster with descriptive anchor text. Internal links spread authority and prove the relationships between your pages — a cluster with no internal links is just a folder of articles.",
+        "**Off-page authority** is the third pillar. Rankings still depend heavily on other sites vouching for yours through links and mentions, so plan how you will earn them: original data, expert commentary, digital PR, and genuinely useful free tools attract links far better than cold outreach for its own sake. Authority takes the longest to build, which is why the plan starts now rather than later. Learn the landscape in [what is off-page SEO](/blog/what-is-off-page-seo)."
+      ]
+    },
+    {
+      "heading": "Steps 8-9: Add GEO for AI search, then measure and iterate",
+      "body": [
+        "The step most 2026 strategies still miss is **GEO — generative engine optimization** — making your content extractable and citable by AI answer engines like ChatGPT, Perplexity, and Google AI Overviews. A growing share of searches now end inside an AI answer instead of a blue link, so a strategy that only targets classic search leaves that traffic on the table. GEO comes down to three checks per page: does each section open with a standalone answer that survives being read in isolation (the island test), are author and expertise visible for E-E-A-T, and can AI crawlers like GPTBot and ClaudeBot actually reach the page.",
+        "Here is how the classic-SEO layers of your strategy compare with the GEO layer, and why you need both:",
+        "[[table]]",
+        "Finally, **measure and iterate** — this is what turns a plan into a compounding system. Track your KPIs from step 1 in Google Search Console and analytics, review them monthly, and let the data redirect effort: double down on clusters that gain traction, refresh posts stuck in positions 11-20, and prune pages that never earned rankings. SEO is slow, so watch the trend over weeks and months rather than day-to-day noise — see [how long does SEO take](/blog/how-long-does-seo-take) for realistic timelines.",
+        "Treat the nine steps as a loop, not a line. Set goals, research, fix, build, optimize, earn authority, add GEO, measure, and start again — each cycle makes the site stronger and every new page ranks a little faster."
+      ]
+    }
+  ],
+  "flowchart": {
+    "title": "The 9-step SEO strategy process",
+    "steps": [
+      { "title": "Set goals and KPIs", "detail": "Turn a business objective into measurable targets like organic conversions and rankings." },
+      { "title": "Research keywords and intent", "detail": "List target phrases, group by the four intent types, and prioritize winnable queries." },
+      { "title": "Competitor and content-gap analysis", "detail": "Find keywords rivals rank for that you don't, plus questions nobody answers well." },
+      { "title": "Fix the technical foundation", "detail": "Ensure crawlability, fast Core Web Vitals, mobile, and HTTPS before scaling content." },
+      { "title": "Plan content in topic clusters", "detail": "Map each keyword into a pillar-and-cluster structure that builds topical authority." },
+      { "title": "Optimize on-page and internal links", "detail": "Place keywords in title, H1, and intro; link contextually within each cluster." },
+      { "title": "Build off-page authority", "detail": "Earn links and mentions through data, PR, and useful free assets." },
+      { "title": "Add GEO for AI search", "detail": "Answer-first openers, visible E-E-A-T, and open AI-crawler access on every page." },
+      { "title": "Measure and iterate", "detail": "Track KPIs monthly, refresh page-two posts, and redirect effort to what works." }
+    ]
+  },
+  "comparisonTable": {
+    "caption": "Classic SEO vs. GEO: the two layers every 2026 strategy needs",
+    "headers": ["Layer", "Goal", "Key signals", "Where it shows up"],
+    "rows": [
+      ["Technical SEO", "Let engines crawl and load pages", "Crawlability, Core Web Vitals, HTTPS", "Indexed in Google + reachable by AI"],
+      ["On-page SEO", "Match a page to a query", "Keyword in title/H1/intro, meta description", "Blue-link rankings"],
+      ["Content clusters", "Prove topical authority", "Pillar + supporting posts, internal links", "Rankings across a whole topic"],
+      ["Off-page SEO", "Earn trust and authority", "Backlinks, brand mentions, digital PR", "Higher rankings on competitive terms"],
+      ["GEO", "Get extracted and cited by AI", "Island-test answers, E-E-A-T, open AI bots", "ChatGPT, Perplexity, AI Overviews"]
+    ]
+  },
+  "peopleAlsoAsk": [
+    {
+      "q": "How do I create an SEO strategy?",
+      "a": "Create an SEO strategy by working through nine steps in order: set measurable goals and KPIs, research keywords and their intent, run a competitor and content-gap analysis, fix your technical foundation, plan content in topic clusters, optimize on-page and internal links, build off-page authority, add GEO for AI search, then measure and iterate. Each step feeds the next, so the sequence matters as much as the tasks themselves."
+    },
+    {
+      "q": "What are the steps of an SEO strategy?",
+      "a": "The core steps of an SEO strategy are: (1) set goals and KPIs, (2) research keywords and intent, (3) analyze competitors and content gaps, (4) fix the technical foundation, (5) plan content in topic clusters, (6) optimize on-page and internal linking, (7) build off-page authority, (8) add GEO for AI search, and (9) measure and iterate. Direction-setting steps come first; content and authority steps follow."
+    },
+    {
+      "q": "What should an SEO strategy include?",
+      "a": "An SEO strategy should include measurable goals tied to business outcomes, a prioritized keyword list mapped to search intent, a competitor and content-gap analysis, a technical checklist for crawlability and speed, a topic-cluster content plan, an internal-linking and on-page framework, an off-page authority plan, a GEO layer for AI search, and a measurement cadence. Documenting each part is what makes it a strategy rather than a list of tasks."
+    },
+    {
+      "q": "How long does an SEO strategy take?",
+      "a": "Building the strategy takes days to a few weeks, but seeing results takes months. Most sites need three to six months to see meaningful movement and six to twelve for competitive terms, because content must be indexed, earn trust, and accumulate authority. Newer sites take longer. Treat the strategy as a compounding loop and judge it on trend lines over quarters, not weekly rankings."
+    },
+    {
+      "q": "What is the difference between SEO strategy and tactics?",
+      "a": "SEO strategy is the overall plan — the goals, priorities, and reasoning that decide where to focus. Tactics are the individual actions that execute it, like writing a title tag, building a backlink, or fixing a slow page. Strategy answers why and in what order; tactics answer how. Running tactics without a strategy produces effort without direction, which is why the plan comes first."
+    }
+  ],
+  "faqs": [
+    {
+      "q": "Do I need paid tools to create an SEO strategy?",
+      "a": "No. You can build a complete SEO strategy with free tools: Google Search Console for performance data, Google's autocomplete and \"People also ask\" for keywords, and a free SEO and GEO audit for technical and content checks. Paid tools speed up research at scale but are not required to start."
+    },
+    {
+      "q": "Should a small website have a different SEO strategy?",
+      "a": "Yes. A small or new site should target low-competition, long-tail keywords and build depth in one tight topic cluster before expanding. Competing head-on for broad terms wastes effort when you lack authority. Focus, win a niche, then widen the strategy as your topical authority and backlinks grow."
+    },
+    {
+      "q": "How often should I update my SEO strategy?",
+      "a": "Review your SEO strategy monthly against its KPIs and revisit the whole plan each quarter. Search behavior, competitors, and AI-search features change fast, so a strategy is a living document. Refresh keyword targets, prune underperforming content, and adjust priorities based on what the data shows is actually working."
+    }
+  ],
+  "relatedKeywords": [
+    "seo strategy",
+    "seo plan",
+    "seo roadmap",
+    "keyword strategy",
+    "content strategy",
+    "seo strategy for AI search"
+  ],
+  "internalLinks": [
+    { "href": "/", "anchor": "run a free SEO + GEO audit" },
+    { "href": "/blog/how-to-do-keyword-research-for-free", "anchor": "How to do keyword research for free" },
+    { "href": "/blog/what-is-topical-authority", "anchor": "What is topical authority" },
+    { "href": "/blog/how-to-do-an-seo-audit", "anchor": "How to do an SEO audit" },
+    { "href": "/blog/how-long-does-seo-take", "anchor": "How long does SEO take" },
+    { "href": "/blog/what-is-a-content-gap-analysis", "anchor": "What is a content gap analysis" },
+    { "href": "/blog/what-is-technical-seo", "anchor": "What is technical SEO" },
+    { "href": "/blog/what-is-off-page-seo", "anchor": "What is off-page SEO" }
+  ],
+  "images": []
+}

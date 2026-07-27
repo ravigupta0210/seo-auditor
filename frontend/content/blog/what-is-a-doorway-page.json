@@ -1,0 +1,151 @@
+{
+  "slug": "what-is-a-doorway-page",
+  "title": "What Is a Doorway Page? (And Why to Avoid Them)",
+  "date": "2026-07-27",
+  "updatedAt": "2026-07-27",
+  "tag": "Technical SEO",
+  "cluster": "technical-seo",
+  "keyword": "what is a doorway page",
+  "secondaryKeywords": ["doorway pages", "gateway pages", "google spam policies", "programmatic SEO"],
+  "readTime": 9,
+  "excerpt": "A doorway page is a low-value page built only to rank for a search then funnel users elsewhere. Here is how to spot them and stay compliant.",
+  "description": "What is a doorway page? A low-value page built only to rank then funnel users elsewhere, and a Google spam-policy violation. Learn the signs and how to avoid it.",
+  "tldr": "A doorway page is a low-value page created only to rank for a specific search or location, then funnel visitors to a different destination. Google's spam policies explicitly ban them because they add no unique value. The fix is to make every page genuinely useful and distinct rather than a near-duplicate built to game the SERP.",
+  "status": "published",
+  "sections": [
+    {
+      "heading": "What is a doorway page, exactly?",
+      "body": [
+        "What is a doorway page? It is a page created **only to rank for a specific search query** — often a keyword or a location — that then funnels the visitor somewhere else instead of serving them. Because it exists to capture search traffic rather than to help the person who lands on it, Google classifies doorway pages as a **spam-policy violation** and can demote or deindex sites that use them. The defining trait is intent: the page is built for the search engine, not the reader.",
+        "The term \"doorway\" describes exactly how these pages behave. The visitor arrives from a search result, but the page is not the real destination — it is a thin gateway that pushes them onward to a sales page, a phone number, or a single generic offer. Google's own guidance calls out \"multiple pages, subdomains, or domains with substantially similar content\" and \"pages generated to funnel visitors into the actual usable or relevant portion of your site\" as the classic patterns.",
+        "Doorway pages usually travel with other spam signals, which is why they rarely get a pass. They tend to be [thin content](/blog/what-is-thin-content) with little original information, they lean on [keyword stuffing](/blog/what-is-keyword-stuffing) to target their one query, and in aggressive cases they overlap with [cloaking](/blog/what-is-cloaking-in-seo) — showing search engines one thing and users another. On their own they are a black-hat tactic; the full white-hat vs. black-hat picture is covered in [what is white hat SEO](/blog/what-is-white-hat-seo).",
+        "> A doorway page's job is to win the click, not to answer the query. That inversion — search engine first, human second — is what makes it spam."
+      ]
+    },
+    {
+      "heading": "Examples of doorway pages",
+      "body": [
+        "The most common example is the **mass-produced location page**. A national plumbing company spins up hundreds of near-identical pages — \"plumber in Austin,\" \"plumber in Dallas,\" \"plumber in Houston\" — where only the city name changes and every page routes the visitor to the same central contact form. There is no local phone number, no local team, no local photos, no genuinely different information: just a template with a swapped variable, built to appear for \"plumber in [city]\" across a hundred cities.",
+        "Other recurring patterns include:",
+        "- **Gateway pages** — keyword-dense landing pages with no real content that immediately redirect or link the visitor to the \"real\" page they wanted to rank for.",
+        "- **Near-duplicate keyword variants** — separate pages for \"cheap running shoes,\" \"affordable running shoes,\" and \"budget running shoes\" that say the same thing three times to capture each phrase.",
+        "- **Bridge pages in affiliate setups** — thin pages that exist only to grab search traffic and forward it to a merchant or offer, adding nothing of their own.",
+        "This is also where **programmatic SEO done wrong** crosses the line. Generating pages at scale from a template or database is not inherently spam — it becomes a doorway problem the moment the pages stop carrying unique, useful information and become copies with a keyword swapped in. The technique itself is legitimate; the abuse is the issue, as [what is programmatic SEO](/blog/what-is-programmatic-seo) explains in more depth.",
+        "Google folds this behavior into its broader guidance the same way it treats other manipulative tactics that surface during [a Google algorithm update](/blog/what-is-a-google-algorithm-update) — the target is always low-value pages built to manipulate rankings rather than to serve people."
+      ]
+    },
+    {
+      "heading": "Why Google penalizes doorway pages",
+      "body": [
+        "Google penalizes doorway pages because they **degrade the search result and waste the searcher's click**. When someone searches for a plumber and lands on a hollow template that just shuttles them to a generic form, the result failed them — and Google's entire product depends on results not failing. Doorway pages also clog the index with substantially similar URLs, forcing crawlers to spend budget on duplicates instead of unique pages.",
+        "Enforcement comes in two forms. An **algorithmic system** — most notably the spam-fighting and \"helpful content\" signals baked into core ranking — can quietly suppress doorway-style pages sitewide without any human involved. Separately, a **human reviewer can issue a manual action**, and \"Sneaky redirects\" or a pure-spam action can land in Search Console when doorway pages are flagged; recovering from that path is covered in [how to recover from a Google penalty](/blog/how-to-recover-from-google-penalty).",
+        "The consequences scale with severity. A few borderline pages might simply fail to rank. A sitewide pattern of hundreds of near-duplicate location pages can drag down the whole domain's quality signals, so pages that had nothing to do with the scheme also lose visibility. In the worst cases the affected URLs are removed from the index entirely.",
+        "There is a GEO dimension too. AI answer engines — ChatGPT, Perplexity, Google AI Overviews — extract and cite the passage that best answers a question. A doorway page has no substantive passage to lift, so it earns neither a classic ranking nor an AI citation. Building thin gateway pages fails in both search worlds at once."
+      ]
+    },
+    {
+      "heading": "Doorway page vs. a legitimate landing page",
+      "body": [
+        "The distinction that trips people up: **a legitimate landing page and a doorway page can look similar, but they differ in value and destination.** A real landing page or local page serves the visitor who arrives — it answers their query, offers unique information, and *is* the destination. A doorway page pretends to be a destination and instead funnels the visitor elsewhere, offering nothing of its own.",
+        "A genuine local page for a business with an Austin branch is not a doorway page. It has the branch's real address, its own phone number, staff, hours, photos, reviews, and service details specific to that location. Every one of those pages carries information a searcher genuinely wants. The test is simple: **would this page still be worth publishing if search engines did not exist?** If yes, it is a real page; if it only makes sense as bait for a query, it is a doorway.",
+        "Here is how the two compare side by side across the signals Google actually weighs:",
+        "[[table]]",
+        "Notice that scale is not the deciding factor — value is. You can have one doorway page or a thousand legitimate local pages. What matters is whether each URL delivers unique, useful content to the person who lands on it, or merely exists to catch a search and pass the visitor along."
+      ]
+    },
+    {
+      "heading": "How to avoid creating doorway pages",
+      "body": [
+        "Avoid doorway pages by making **every page genuinely useful and distinct** — write for the person who lands on it, not for the query you want to rank for. Before publishing any page in a set (locations, service variants, product categories), apply four checks:",
+        "- **Unique value test** — does this page contain information found nowhere else on your site? A real local page has a real address, phone, team, and locally specific detail. If two pages differ only by a swapped keyword, consolidate them into one strong page.",
+        "- **Destination test** — is this page the answer, or does it just push the visitor elsewhere? If its only purpose is to forward traffic to another page, it is a doorway.",
+        "- **Standalone test** — could this page be published on its own merit if search did not exist? If not, rethink it.",
+        "- **Consolidation test** — if you have ten thin variants targeting near-identical phrases, one comprehensive page usually ranks better and carries no spam risk. When you merge, use a [301 redirect](/blog/301-vs-302-redirects) so the old URLs pass their signals to the survivor.",
+        "For businesses that legitimately serve many locations, the rule is depth over duplication: publish a location page only where you have real, differentiated information to offer, and skip the ones where you would just be filling a template. A smaller set of substantive pages beats a hundred hollow ones every time.",
+        "The fastest way to catch doorway-style problems before Google does is to audit your pages. Paste any URL into the [free SEO + GEO audit on the homepage](/) and it flags thin content, weak or missing unique value, keyword-stuffing signals, and other patterns that put a page on the wrong side of Google's spam policies — so you can fix them before they cost you rankings."
+      ]
+    }
+  ],
+  "comparisonTable": {
+    "caption": "Doorway page vs. legitimate landing page: the signals Google weighs",
+    "headers": ["Signal", "Doorway page", "Legitimate landing page"],
+    "rows": [
+      ["Primary purpose", "Rank for a query, then funnel the visitor away", "Serve the visitor who arrives"],
+      ["Unique value", "Near-duplicate; only a keyword or city changes", "Original, page-specific information"],
+      ["Destination", "A gateway that pushes users elsewhere", "The page is the destination"],
+      ["Local page example", "Same template x100 cities, one central form", "Real address, phone, team, and hours per branch"],
+      ["Passes 'worth it without search?' test", "No — exists only as bait for a query", "Yes — useful even if search didn't exist"],
+      ["Google's view", "Spam-policy violation; may be demoted or deindexed", "Compliant; ranks on merit"]
+    ]
+  },
+  "peopleAlsoAsk": [
+    {
+      "q": "What is a doorway page?",
+      "a": "A doorway page is a low-value page created only to rank for a specific search query or location and then funnel the visitor somewhere else, rather than to serve them. Because it exists for the search engine instead of the reader, Google classifies doorway pages as a spam-policy violation and can demote or deindex sites that rely on them."
+    },
+    {
+      "q": "Are doorway pages against Google guidelines?",
+      "a": "Yes. Doorway pages explicitly violate Google's spam policies. Google names \"multiple pages, subdomains, or domains with substantially similar content\" and pages \"generated to funnel visitors into the usable portion of your site\" as banned patterns. Sites that deploy them risk algorithmic suppression or a manual action, and in severe cases the pages are removed from Google's index entirely."
+    },
+    {
+      "q": "What is an example of a doorway page?",
+      "a": "The classic example is a national company mass-producing near-identical location pages — \"plumber in Austin,\" \"plumber in Dallas,\" \"plumber in Houston\" — where only the city name changes and every page routes visitors to one central contact form. There is no local phone, team, or genuinely different information. Gateway pages and thin affiliate bridge pages are other common examples."
+    },
+    {
+      "q": "How do I avoid doorway pages?",
+      "a": "Avoid doorway pages by giving every page unique value and writing for the visitor, not the query. Apply four checks: does the page contain information found nowhere else, is it the destination rather than a funnel, could it stand alone without search, and should near-duplicate variants be consolidated into one strong page. Publish location pages only where you have real, differentiated detail."
+    },
+    {
+      "q": "What is the difference between a doorway page and a landing page?",
+      "a": "A legitimate landing page serves the visitor who arrives — it answers their query and is the destination. A doorway page only pretends to be a destination and instead funnels the visitor elsewhere, offering no unique value of its own. The test: would the page still be worth publishing if search engines did not exist? If yes it is a real landing page; if not, it is a doorway."
+    }
+  ],
+  "faqs": [
+    {
+      "q": "Are location pages always doorway pages?",
+      "a": "No. Location pages are legitimate when each one carries real, differentiated information — a genuine address, local phone number, staff, hours, and area-specific detail. They only become doorway pages when they are near-duplicate templates with just the city name swapped, built to catch \"[service] in [city]\" searches while adding nothing unique."
+    },
+    {
+      "q": "Is programmatic SEO the same as building doorway pages?",
+      "a": "No. Generating pages at scale from a template or database is a legitimate technique. It only crosses into doorway-page territory when the pages stop carrying unique, useful information and become near-duplicates built solely to rank. The abuse is the problem, not the automation — programmatic pages that each deliver real value are fully compliant."
+    },
+    {
+      "q": "How do I fix doorway pages already on my site?",
+      "a": "Consolidate near-duplicate pages into one comprehensive, useful page and 301-redirect the thin URLs to it, or add genuine unique value to any page worth keeping. If a manual action was issued, fix every offending page first, then file a reconsideration request in Search Console explaining exactly what you changed."
+    }
+  ],
+  "relatedKeywords": [
+    "doorway page",
+    "gateway page",
+    "black hat seo",
+    "google spam policies",
+    "thin content"
+  ],
+  "internalLinks": [
+    {
+      "href": "/",
+      "anchor": "run a free SEO + GEO audit"
+    },
+    {
+      "href": "/blog/what-is-white-hat-seo",
+      "anchor": "White hat vs black hat SEO"
+    },
+    {
+      "href": "/blog/what-is-cloaking-in-seo",
+      "anchor": "What is cloaking in SEO"
+    },
+    {
+      "href": "/blog/what-is-thin-content",
+      "anchor": "What is thin content"
+    },
+    {
+      "href": "/blog/what-is-keyword-stuffing",
+      "anchor": "What is keyword stuffing"
+    },
+    {
+      "href": "/blog/what-is-a-google-algorithm-update",
+      "anchor": "What is a Google algorithm update"
+    }
+  ],
+  "images": []
+}

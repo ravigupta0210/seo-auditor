@@ -1,0 +1,153 @@
+{
+  "slug": "what-is-negative-seo",
+  "title": "What Is Negative SEO? (And How to Protect Your Site)",
+  "date": "2026-07-27",
+  "updatedAt": "2026-07-27",
+  "tag": "SEO",
+  "cluster": "content-links",
+  "keyword": "what is negative SEO",
+  "secondaryKeywords": ["negative SEO attack", "spammy backlinks", "disavow tool", "content scraping"],
+  "readTime": 9,
+  "excerpt": "Negative SEO is a rival's attempt to hurt your rankings with spam links, scraped content, or hacks. Here is what is real, what to ignore, and how to respond.",
+  "description": "What is negative SEO? It is a competitor's attempt to sabotage your rankings with spam links, scraped content, or hacks. Learn the real risks and how to defend.",
+  "tldr": "Negative SEO is a malicious attempt to damage a competitor's search rankings, usually through spammy backlinks, scraped or duplicated content, fake reviews, or hacking. It is rare, and Google's systems automatically ignore most spam links. Monitor your backlinks, uptime, and Search Console, and only disavow if you get a manual action.",
+  "status": "published",
+  "sections": [
+    {
+      "heading": "What is negative SEO, and should you worry?",
+      "body": [
+        "What is negative SEO? Negative SEO is a deliberate, malicious attempt to lower a competitor's search rankings or get their site penalized. Instead of improving their own site, the attacker tries to damage yours — usually by pointing spammy backlinks at your domain, scraping and republishing your content, posting fake reviews, or hacking the site outright. The label covers any off-site tactic done *to* you rather than *by* you.",
+        "Here is the reassuring part, and it is worth stating up front: **for the vast majority of sites, negative SEO is not something you need to lose sleep over.** Google has repeatedly said that successful negative SEO is rare and that its systems are built to ignore the low-quality links attackers rely on. In its own [documentation on link spam](https://developers.google.com/search/docs/essentials/spam-policies), Google notes it discounts spammy backlinks automatically rather than penalizing the target site for them.",
+        "> Google's public guidance: \"There's almost nothing a competitor can do to harm your ranking or have your site removed from the index.\" Most spam links are simply ignored, not counted against you.",
+        "So why cover it at all? Because \"rare\" is not \"never,\" and a handful of tactics — a hacked site, a swarm of fake 1-star reviews, or scraped content that outranks your original — can cause real damage if you never notice them. The goal of this guide is not fear. It is awareness: know the forms a negative SEO attack can take, set up cheap monitoring so you would spot one, and know the correct (and often minimal) response if you ever do."
+      ]
+    },
+    {
+      "heading": "The real forms of a negative SEO attack",
+      "body": [
+        "A negative SEO attack is not one thing — it is a category of tactics, and they vary wildly in how much they actually threaten you. Some are mostly noise that Google filters out on its own; others exploit a genuine vulnerability on your side. Understanding which is which is the whole game, because it tells you where to spend attention and where to relax.",
+        "The most common tactic is **spammy or toxic backlinks**: an attacker uses cheap link networks to point thousands of low-quality links at your domain, often with spammy or foreign-language anchor text, hoping to make your link profile look manipulative. In practice this is also the *least* effective tactic today, because Google's link-spam systems discount these links rather than punishing you for them. If you want to understand the raw material here, see [what are toxic backlinks](/blog/what-are-toxic-backlinks).",
+        "Beyond links, the tactics get more hands-on:",
+        "- **Content scraping and duplication** — copying your articles and republishing them elsewhere, sometimes faster than you publish, to create duplicate-content confusion or steal the ranking.",
+        "- **Fake reviews** — flooding your Google Business Profile with fake 1-star reviews to damage local rankings and click-through, or fake 5-star reviews to trip a spam filter.",
+        "- **Hacking and injected content** — the most serious form: breaking into the site to inject spammy links, redirect pages, or plant malware, which can trigger a real security penalty.",
+        "- **Fake or aggressive crawling / cloaking probes** — hammering your server to slow it down, or manipulating how your pages appear to bots. If you are unsure how disguised content works, [what is cloaking in SEO](/blog/what-is-cloaking-in-seo) explains the mechanic attackers sometimes exploit.",
+        "Here is how those tactics compare on real risk and the right defense for each:",
+        "[[table]]",
+        "Notice the pattern in that table: the tactics people fear most (spam links) are the ones Google already handles, while the ones that actually hurt (hacks, scraped content that outranks you, review floods) are the ones worth your monitoring time."
+      ]
+    },
+    {
+      "heading": "How to monitor for negative SEO",
+      "body": [
+        "You cannot respond to a negative SEO attack you never noticed, so the practical defense is cheap, boring monitoring — not paranoia. The goal is simply to be the first to know if something changes, so you can act before it compounds. Four free or low-cost habits cover almost everything.",
+        "**Watch Google Search Console.** It is your early-warning system and it is free. Two areas matter most: the **Manual actions** report (this is the *only* place a genuine penalty shows up — if it is empty, you have not been penalized) and the **Links** report, where a sudden spike in referring domains or bizarre anchor text can flag a link attack. Set up email alerts and check monthly. The full workflow lives in [how to recover from a Google penalty](/blog/how-to-recover-from-google-penalty).",
+        "**Track your backlink profile.** Use a backlink checker (Google Search Console's Links report, or a free tier of a tool like Ahrefs or Semrush) to watch for unnatural spikes. A steady trickle of new links is healthy; ten thousand links from gambling and adult sites appearing over a weekend is a signal worth investigating. Understanding [what a backlink is](/blog/what-is-a-backlink) helps you tell normal growth from an attack.",
+        "**Monitor uptime and content integrity.** Free uptime monitors ping your site and email you if it goes down (a possible sign of an attack on your server). To catch scraping, occasionally search a distinctive sentence from a recent post in quotes — if a copy outranks your original, you have a duplication problem to fix.",
+        "**Watch your reviews and site security.** Check your Google Business Profile for sudden review swings, and keep your CMS, plugins, and passwords current so hacking never becomes the easy door in. A quick way to catch on-site problems early is to [run a free SEO + GEO audit](/) on your key pages — it surfaces duplicate content, broken metadata, and crawl issues that a scrape or hack often leaves behind."
+      ]
+    },
+    {
+      "heading": "How to respond if you are actually hit",
+      "body": [
+        "If monitoring turns up a genuine problem, the correct response is targeted and calm — and for most negative SEO signals, the correct response is to **do nothing at all.** Match the response to the tactic; over-reacting (especially with the disavow tool) can do more harm than the attack.",
+        "For **spammy backlinks**, resist the urge to disavow. Google's own guidance is that most site owners never need the disavow tool because its systems already ignore spam links. **Only disavow if you have received a manual action** in Search Console *and* you cannot get the bad links removed any other way. Disavowing healthy links by mistake is a common self-inflicted wound, so treat the tool as a last resort, not a routine cleanup.",
+        "For the tactics that genuinely bite, act directly on the cause:",
+        "- **Hacking** — this is the emergency. Take the site offline if needed, restore from a clean backup, patch the vulnerability, rotate all passwords, and use Search Console's Security Issues report to request a review once clean.",
+        "- **Scraped / duplicated content** — file a DMCA takedown with the host or with Google, and make sure your original is properly indexed and internally linked so it stays the canonical version.",
+        "- **Fake reviews** — report them through your Google Business Profile; Google removes reviews that violate its policies. Do not retaliate with fake reviews of your own.",
+        "- **Fake spammy activity / crawling** — usually self-resolving; focus on server hardening and rate-limiting rather than chasing the attacker.",
+        "The through-line: [off-page SEO](/blog/what-is-off-page-seo) signals like links and reviews are mostly outside your control, and Google knows that — which is exactly why it is designed to discount manipulation rather than punish the victim. Fix what is on *your* server, monitor what is off it, and disavow only under a manual action."
+      ]
+    },
+    {
+      "heading": "The bottom line on negative SEO",
+      "body": [
+        "Negative SEO is real as a category but overblown as a daily threat. The tactics attackers use — spam links, scraping, fake reviews, hacking — exist, but the one people obsess over (spammy backlinks) is precisely the one Google's systems neutralize automatically. The tactics that can actually hurt you are the ones you control the defense against: a hacked site, a stolen article, or a review flood you never checked for.",
+        "That reframes the whole topic. The best protection is not a special anti-negative-SEO product; it is ordinary good hygiene done consistently: keep your software patched, watch Search Console and your backlink profile, monitor uptime and reviews, and keep your best content well-indexed so a scraper cannot outrank you. Do those, and you have removed almost every avenue an attacker has.",
+        "If you want a single recurring habit, make it this: audit your important pages on a schedule. A [free SEO + GEO audit](/) flags duplicate content, missing or altered metadata, broken links, and crawl-access changes — the exact footprints a scrape, injection, or hack tends to leave behind. Catch those early and the difference between a negative SEO attack and a non-event is simply that you noticed."
+      ]
+    }
+  ],
+  "comparisonTable": {
+    "caption": "Types of negative SEO: real risk and the right defense",
+    "headers": ["Tactic", "How it works", "Real risk level", "Your best defense"],
+    "rows": [
+      ["Spammy backlinks", "Cheap link networks point spam links at your domain", "Low — Google ignores most", "Monitor links; disavow only on manual action"],
+      ["Content scraping", "Your articles copied and republished elsewhere", "Medium — can steal rankings", "DMCA takedown; keep original well-indexed"],
+      ["Fake reviews", "Flood of fake 1-star (or 5-star) reviews", "Medium — hits local + CTR", "Report via Google Business Profile"],
+      ["Hacking / injection", "Break-in adds spam links, redirects, or malware", "High — can cause real penalty", "Patch, restore, rotate passwords, request review"],
+      ["Fake crawling / cloaking", "Server hammering or manipulated bot views", "Low to medium", "Rate-limit and harden the server"]
+    ]
+  },
+  "peopleAlsoAsk": [
+    {
+      "q": "What is negative SEO?",
+      "a": "Negative SEO is a malicious attempt to damage a competitor's search rankings or get their site penalized, rather than improving one's own site. Common tactics include pointing spammy backlinks at the target, scraping and republishing its content, posting fake reviews, or hacking the site. Google considers successful negative SEO rare because its systems automatically ignore most of the spam links attackers rely on."
+    },
+    {
+      "q": "Is negative SEO real?",
+      "a": "Yes, negative SEO is real as a category, but successful attacks are rare. Google has stated there is almost nothing a competitor can do to harm your ranking through spam links, because its systems discount those links automatically. The forms that can genuinely cause damage — hacking, content scraping, and fake reviews — are ones you defend against with good security and monitoring rather than link tools."
+    },
+    {
+      "q": "How do I protect against negative SEO?",
+      "a": "Protect against negative SEO with cheap, consistent monitoring rather than special tools. Watch Google Search Console for manual actions and link spikes, track your backlink profile for unnatural growth, monitor uptime and reviews, and keep your CMS and passwords patched so hacking is not an easy door. Search a distinctive sentence from recent posts to catch scrapers who outrank your original content."
+    },
+    {
+      "q": "What are examples of negative SEO?",
+      "a": "Examples of negative SEO include blasting thousands of spammy backlinks at your domain with manipulative anchor text, scraping and republishing your articles to create duplicate content, flooding your Google Business Profile with fake 1-star reviews, and hacking the site to inject spam links or malware. Some attackers also hammer servers or manipulate how pages appear to bots to trip spam filters."
+    },
+    {
+      "q": "How do I recover from negative SEO?",
+      "a": "Recover from negative SEO by matching the response to the tactic. For a hack, restore from a clean backup, patch the vulnerability, and request a security review. For scraped content, file a DMCA takedown and keep your original well-indexed. For fake reviews, report them to Google. Only use the disavow tool if you have received a manual action for spam links."
+    }
+  ],
+  "faqs": [
+    {
+      "q": "Should I use Google's disavow tool to fight spam links?",
+      "a": "Usually no. Google says most site owners never need the disavow tool because its systems already ignore spammy links. Use it only if you have a manual action in Search Console and cannot get the bad links removed otherwise. Disavowing good links by mistake causes more harm than the spam."
+    },
+    {
+      "q": "Can negative SEO get my site removed from Google?",
+      "a": "It is extremely unlikely through links alone — Google says a competitor can do almost nothing to remove your site that way. The realistic route to removal is a successful hack that injects malware or spam, which triggers a security penalty. Keeping your software and passwords current closes that door."
+    },
+    {
+      "q": "How can I tell if a link spike is an attack or normal growth?",
+      "a": "Look at quality and pattern, not just volume. Steady links from relevant sites are healthy growth. A sudden flood of links from unrelated gambling, adult, or foreign-language domains with spammy anchor text over a day or two is the signature of an attack — though Google typically ignores them anyway."
+    }
+  ],
+  "relatedKeywords": [
+    "negative seo",
+    "negative seo attack",
+    "toxic backlinks",
+    "disavow",
+    "seo sabotage"
+  ],
+  "internalLinks": [
+    {
+      "href": "/",
+      "anchor": "run a free SEO + GEO audit"
+    },
+    {
+      "href": "/blog/what-are-toxic-backlinks",
+      "anchor": "What are toxic backlinks"
+    },
+    {
+      "href": "/blog/how-to-recover-from-google-penalty",
+      "anchor": "How to recover from a Google penalty"
+    },
+    {
+      "href": "/blog/what-is-off-page-seo",
+      "anchor": "What is off-page SEO"
+    },
+    {
+      "href": "/blog/what-is-a-backlink",
+      "anchor": "What is a backlink"
+    },
+    {
+      "href": "/blog/what-is-cloaking-in-seo",
+      "anchor": "What is cloaking in SEO"
+    }
+  ],
+  "images": []
+}

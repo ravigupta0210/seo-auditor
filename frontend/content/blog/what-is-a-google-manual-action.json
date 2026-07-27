@@ -1,0 +1,162 @@
+{
+  "slug": "what-is-a-google-manual-action",
+  "title": "What Is a Google Manual Action? (And How to Fix It)",
+  "date": "2026-07-27",
+  "updatedAt": "2026-07-27",
+  "tag": "Technical SEO",
+  "cluster": "technical-seo",
+  "keyword": "what is a Google manual action",
+  "secondaryKeywords": ["manual penalty", "reconsideration request", "search console penalty", "algorithmic penalty"],
+  "readTime": 9,
+  "excerpt": "A Google manual action is a penalty applied by a human reviewer, not an algorithm. Here is how to check for one, fix it, and file a reconsideration request.",
+  "description": "What is a Google manual action? A penalty applied by a human reviewer, not an algorithm, shown in Search Console. Learn how to check, fix it, and recover.",
+  "tldr": "A Google manual action is a penalty applied by a human reviewer, not an algorithm, when your site violates Google's guidelines. It appears in Search Console under Manual Actions and can demote or deindex affected pages. To recover, fix every offending issue, then file a reconsideration request explaining exactly what you changed.",
+  "status": "published",
+  "sections": [
+    {
+      "heading": "What is a Google manual action?",
+      "body": [
+        "What is a Google manual action? It is a **penalty applied by a human reviewer at Google — not by an algorithm** — when a site is found to violate Google's spam policies or webmaster guidelines. A member of Google's search-quality team manually reviews the site, confirms the violation, and applies the action, which then appears in **Google Search Console under the \"Manual Actions\" report**. The affected pages, or the whole site, can be demoted in rankings or removed from the index entirely.",
+        "The word \"manual\" is the whole point. Unlike an algorithmic adjustment that happens automatically as ranking systems run, a manual action means a person looked at your site and decided it broke the rules. That human involvement changes how you recover: you cannot just wait for an algorithm to re-evaluate you — you have to fix the problem and then **ask a human to review it again** through a reconsideration request.",
+        "Manual actions can be **sitewide** (affecting your entire domain) or **partial** (affecting only specific pages or URL patterns). Search Console tells you which, and lists the exact reason. If the Manual Actions report says \"No issues detected,\" you do not have one — any ranking drop you are seeing is coming from somewhere else, most likely an algorithmic change. You can confirm what a clean report looks like in [what is Google Search Console](/blog/what-is-google-search-console)."
+      ]
+    },
+    {
+      "heading": "Common triggers for a manual action",
+      "body": [
+        "Manual actions map directly to Google's spam policies. The most common triggers are:",
+        "- **Unnatural links to your site** — a link scheme, paid links that pass PageRank, or a spammy backlink profile. This is one of the most frequent manual actions; [toxic backlinks](/blog/what-are-toxic-backlinks) are usually the cause.",
+        "- **Unnatural links from your site** — selling links or embedding manipulative outbound links.",
+        "- **Thin content with little or no added value** — auto-generated pages, scraped content, thin affiliate pages, or [doorway pages](/blog/what-is-a-doorway-page) built only to rank.",
+        "- **Cloaking and sneaky redirects** — showing Google one thing and users another, which overlaps with [cloaking in SEO](/blog/what-is-cloaking-in-seo).",
+        "- **Pure spam** — aggressive, automated spam techniques and scraped or nonsensical content.",
+        "- **User-generated spam** — spammy comments, forum posts, or profile pages you let accumulate.",
+        "- **Hidden text and keyword stuffing** — text hidden from users or pages overloaded with repeated terms.",
+        "Almost every trigger is a **black-hat tactic** — a shortcut that manipulates rankings instead of earning them. The reliable way to avoid manual actions entirely is to stay on the white-hat side of the line, as covered in [what is white hat SEO](/blog/what-is-white-hat-seo). Note that legitimate ranking swings from [a Google algorithm update](/blog/what-is-a-google-algorithm-update) are a different thing — those are automated and never show up in the Manual Actions report."
+      ]
+    },
+    {
+      "heading": "How to check for a manual action",
+      "body": [
+        "Check for a manual action in **Google Search Console**: open the property, then go to **Security & Manual Actions → Manual Actions** in the left sidebar. This is the only authoritative place to confirm one exists — no third-party tool can see it, because the action lives inside Google's own systems.",
+        "The report shows one of two states. **\"No issues detected\"** means your site has no manual action; if traffic dropped anyway, the cause is algorithmic or technical, not a penalty. If an action *is* present, the report lists **each violation, whether it is sitewide or partial, and which URLs or patterns are affected** — giving you the exact scope you need to fix.",
+        "Google also sends a **message to the Search Console account** when it issues a manual action, so check the Messages/notifications area too. If you own a site and have never set up Search Console, you would have no way of knowing a manual action was applied — which is why verifying your property there is the first step for any site that has lost significant traffic.",
+        "> If you suspect a penalty, check the Manual Actions report before anything else. It instantly tells you whether you are dealing with a human penalty (which needs a reconsideration request) or an algorithmic drop (which does not)."
+      ]
+    },
+    {
+      "heading": "Manual action vs. algorithmic penalty",
+      "body": [
+        "The key distinction: **a manual action is applied by a human and requires a reconsideration request to lift; an algorithmic penalty is automated and lifts on its own once you fix the issue and the system re-evaluates you.** They feel similar — both cause ranking or traffic drops — but they are diagnosed and recovered from in completely different ways.",
+        "A manual action is visible in Search Console, comes with a named reason, and stays in place until a Google reviewer approves your reconsideration request. An algorithmic \"penalty\" is really just your site being ranked lower by a ranking system (like the spam or helpful-content signals); it never appears in the Manual Actions report, there is nothing to \"appeal,\" and recovery happens automatically the next time Google recrawls and reassesses the fixed pages — often after a subsequent update.",
+        "Here is the side-by-side breakdown:",
+        "[[table]]",
+        "Getting the diagnosis right matters because the recovery paths do not overlap. Filing a reconsideration request for an algorithmic drop does nothing — there is no human to review it. And simply fixing and waiting will not lift a manual action, because a person has to approve the change. The [broader recovery playbook](/blog/how-to-recover-from-google-penalty) covers both cases."
+      ]
+    },
+    {
+      "heading": "How to recover from a manual action",
+      "body": [
+        "Recovering from a manual action is a fix-then-appeal process: **completely resolve every issue the report names, document what you did, then file a reconsideration request** asking Google to review the site again. Half-measures fail — reviewers reject requests where the violation is only partly addressed, and each rejection makes the next review slower.",
+        "Follow the sequence below:",
+        "[[flowchart]]",
+        "A few specifics that decide whether the request is approved. For an **unnatural links** action, actually remove or disavow the bad links — do not just claim you did; reviewers check. For **thin content**, delete, consolidate, or genuinely improve the pages rather than lightly editing them. For **cloaking or sneaky redirects**, make sure Googlebot and users now see identical content. When you write the reconsideration request, **be specific and honest**: name what was wrong, describe exactly what you changed, and show the work. Vague requests get rejected.",
+        "Timelines vary. Google typically responds to a reconsideration request within **a few days to a few weeks**, and the harder the violation is to verify as fixed (like link removals), the longer it takes. Once approved, the manual action is lifted, though full ranking recovery can lag as pages are recrawled.",
+        "Before you submit, verify the fixes hold up. Run the affected URLs through the [free SEO + GEO audit on the homepage](/) — it flags thin content, cloaking-style mismatches, keyword stuffing, and other spam signals a reviewer would catch, so you can confirm the problems are genuinely gone before you spend a reconsideration attempt."
+      ]
+    }
+  ],
+  "comparisonTable": {
+    "caption": "Manual action vs. algorithmic penalty: how they differ",
+    "headers": ["Aspect", "Manual action", "Algorithmic penalty"],
+    "rows": [
+      ["Applied by", "A human reviewer at Google", "An automated ranking system"],
+      ["Visible in Search Console", "Yes — in the Manual Actions report", "No — never appears there"],
+      ["Notification", "Message sent to the Search Console account", "No notification"],
+      ["How to recover", "Fix the issue, then file a reconsideration request", "Fix the issue and wait for re-evaluation"],
+      ["Recovery trigger", "Human approval of your request", "Recrawl and automatic reassessment"],
+      ["Typical timeline", "Days to weeks after a valid request", "Often until the next relevant update"]
+    ]
+  },
+  "flowchart": {
+    "title": "Manual action recovery, step by step",
+    "steps": [
+      { "title": "Confirm the manual action", "detail": "Open Search Console → Security & Manual Actions and read the exact violation and scope." },
+      { "title": "Fix every named issue", "detail": "Remove/disavow bad links, delete or improve thin pages, end cloaking — fully, not partially." },
+      { "title": "Document what you changed", "detail": "Record the specific actions taken so you can describe them clearly and honestly." },
+      { "title": "File a reconsideration request", "detail": "In Search Console, explain what was wrong and exactly how you fixed it." },
+      { "title": "Wait for human review", "detail": "Google responds in days to weeks; if rejected, fix the gaps and resubmit." },
+      { "title": "Confirm recovery", "detail": "Once approved the action lifts; rankings return as pages are recrawled." }
+    ]
+  },
+  "peopleAlsoAsk": [
+    {
+      "q": "What is a Google manual action?",
+      "a": "A Google manual action is a penalty applied by a human reviewer at Google, not an algorithm, when a site violates Google's spam policies. A search-quality team member reviews the site, confirms the violation, and applies the action, which then appears in Search Console under the Manual Actions report. It can demote or deindex the affected pages until you fix the issue and get approval."
+    },
+    {
+      "q": "How do I check for a manual action?",
+      "a": "Check in Google Search Console: open your property, then go to Security & Manual Actions → Manual Actions. This is the only authoritative place to confirm one, because the action lives in Google's own systems and no third-party tool can see it. \"No issues detected\" means you have no manual action; any traffic drop is algorithmic or technical instead."
+    },
+    {
+      "q": "How do I fix a manual action?",
+      "a": "Fix a manual action by completely resolving every issue the report names — remove or disavow bad links, delete or genuinely improve thin pages, stop any cloaking — then file a reconsideration request in Search Console. Be specific and honest about what was wrong and exactly what you changed. Partial fixes get rejected, so address the violation fully before you submit."
+    },
+    {
+      "q": "What is the difference between a manual action and an algorithmic penalty?",
+      "a": "A manual action is applied by a human, appears in Search Console, and requires a reconsideration request to lift. An algorithmic penalty is automated, never shows in the Manual Actions report, and lifts on its own once you fix the issue and Google recrawls. Filing a reconsideration request does nothing for an algorithmic drop, and waiting alone never lifts a manual action."
+    },
+    {
+      "q": "How long does it take to recover from a manual action?",
+      "a": "Google usually responds to a reconsideration request within a few days to a few weeks. Actions that are harder to verify as fixed, like unnatural-link removals, take longer to review. Once the request is approved, the manual action is lifted, though full ranking recovery can lag as Google recrawls and reassesses the corrected pages."
+    }
+  ],
+  "faqs": [
+    {
+      "q": "Can a manual action affect only part of my site?",
+      "a": "Yes. Manual actions can be sitewide, affecting your entire domain, or partial, affecting only specific pages or URL patterns. The Search Console Manual Actions report tells you which, along with the exact violation and the affected URLs, so you know precisely what to fix before filing a reconsideration request."
+    },
+    {
+      "q": "Will fixing the problem lift a manual action automatically?",
+      "a": "No. Because a human applied a manual action, a human must approve its removal. Fixing the issue is necessary but not sufficient — you also have to file a reconsideration request in Search Console. This is the opposite of an algorithmic drop, which does lift automatically once you fix the problem and Google recrawls the pages."
+    },
+    {
+      "q": "What happens if my reconsideration request is rejected?",
+      "a": "A rejection means Google's reviewer decided the violation was not fully resolved. Identify what still fails, fix it completely, document the additional changes, and submit a new request. Repeated rejections slow future reviews, so it is worth resolving everything thoroughly before resubmitting rather than appealing prematurely."
+    }
+  ],
+  "relatedKeywords": [
+    "google manual action",
+    "manual penalty",
+    "search console penalty",
+    "reconsideration request",
+    "algorithmic penalty"
+  ],
+  "internalLinks": [
+    {
+      "href": "/",
+      "anchor": "run a free SEO + GEO audit"
+    },
+    {
+      "href": "/blog/how-to-recover-from-google-penalty",
+      "anchor": "How to recover from a Google penalty"
+    },
+    {
+      "href": "/blog/what-are-toxic-backlinks",
+      "anchor": "What are toxic backlinks"
+    },
+    {
+      "href": "/blog/what-is-google-search-console",
+      "anchor": "What is Google Search Console"
+    },
+    {
+      "href": "/blog/what-is-white-hat-seo",
+      "anchor": "White hat vs black hat SEO"
+    },
+    {
+      "href": "/blog/what-is-a-google-algorithm-update",
+      "anchor": "What is a Google algorithm update"
+    }
+  ],
+  "images": []
+}

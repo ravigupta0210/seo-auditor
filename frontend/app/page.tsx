@@ -66,10 +66,10 @@ export default function HomePage() {
               fontWeight: 700,
             }}
           >
-            Is your site visible to<br />ChatGPT, Perplexity &amp; Google AI?
+            Everything Google checks.<br />Plus everything ChatGPT does.
           </h1>
           <p style={{ fontSize: 17, color: 'var(--text-dim)', maxWidth: 580, margin: '0 auto 36px', lineHeight: 1.6 }}>
-            Run a free, instant audit of your <strong style={{ color: 'var(--text)' }}>SEO and AI-search readiness (GEO)</strong>. See whether AI answer engines can find and cite your pages — plus JSON-LD, metadata, and llms.txt — with a copy-paste fix for every issue. No signup. No paywall. No crawl cap.
+            A full <strong style={{ color: 'var(--text)' }}>technical SEO, structured-data and metadata audit</strong> — plus whether AI answer engines can actually read and cite you. Google, Bing, ChatGPT, Perplexity and Claude, with a copy-paste fix for every issue. No signup. No paywall. No crawl cap.
           </p>
 
           <div style={{ maxWidth: 620, margin: '0 auto' }}>
@@ -83,7 +83,7 @@ export default function HomePage() {
 
         <Section
           eyebrow="What we check"
-          heading="40+ checks across 8 categories"
+          heading="90+ checks across 7 categories"
           subheading="Everything Google's starter guide names — plus the AI-search angle most tools haven't caught up with."
         >
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))', gap: 14 }}>

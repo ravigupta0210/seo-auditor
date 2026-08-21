@@ -31,3 +31,30 @@ export function rateLimit(req: Request, bucket: string, max: number, windowMs: n
   }
   return true;
 }
+
+/**
+ * Global in-flight cap.
+ *
+ * Rate limiting is per-IP, so it does nothing against many clients arriving at
+ * once — and a single site crawl can fetch up to 100 pages sequentially. On a
+ * free-tier instance a handful of concurrent crawls is enough to exhaust RAM
+ * and take the whole service down. This bounds total concurrent work
+ * regardless of how it is distributed across callers.
+ */
+const inFlight = new Map<string, number>();
+
+export function acquireSlot(bucket: string, max: number): boolean {
+  const n = inFlight.get(bucket) ?? 0;
+  if (n >= max) return false;
+  inFlight.set(bucket, n + 1);
+  return true;
+}
+
+export function releaseSlot(bucket: string): void {
+  const n = inFlight.get(bucket) ?? 0;
+  inFlight.set(bucket, Math.max(0, n - 1));
+}
+
+export function slotsInUse(bucket: string): number {
+  return inFlight.get(bucket) ?? 0;
+}

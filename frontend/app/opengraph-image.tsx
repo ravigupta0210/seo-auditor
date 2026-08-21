@@ -95,7 +95,7 @@ export default function OpenGraphImage() {
           }}
         >
           <div style={{ display: 'flex', gap: 28, fontSize: 22, color: '#7a8493' }}>
-            <span>40+ checks</span>
+            <span>90+ checks</span>
             <span style={{ color: '#3a4252' }}>·</span>
             <span>8 categories</span>
             <span style={{ color: '#3a4252' }}>·</span>

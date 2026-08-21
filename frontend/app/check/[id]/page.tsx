@@ -83,7 +83,7 @@ export default async function CheckPage({ params }: PageProps) {
         }}>
           <h2 style={{ margin: '0 0 6px', fontSize: 17, color: 'var(--text)', letterSpacing: '-0.01em' }}>Run a full audit of your site</h2>
           <p style={{ margin: '0 0 14px', fontSize: 13, color: 'var(--text-dim)' }}>
-            Free, no signup, no crawl cap. Check this and 40+ other factors across every public page.
+            Free, no signup, no crawl cap. Check this and 90+ other factors across every public page.
           </p>
           <Link href="/" className="btn-primary" style={{ textDecoration: 'none' }}>
             Audit my site →

@@ -145,7 +145,7 @@ export default async function BlogPostPage({ params }: PageProps) {
         <section className="cmp-cta">
           <h2 className="cmp-cta__title">Run a free audit on your site</h2>
           <p className="cmp-cta__sub">
-            See how your site scores across 40+ SEO, JSON-LD, and GEO/AI-search checks — including
+            See how your site scores across 90+ SEO, JSON-LD, and GEO/AI-search checks — including
             everything covered in this guide. Free forever, no signup, no crawl cap.
           </p>
           <Link href="/" className="btn-primary">Audit my site →</Link>

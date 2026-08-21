@@ -6,7 +6,7 @@ import { SiteFooter } from '@/app/_components/SiteFooter';
 import { pageMetadata } from '@/lib/seo';
 
 export const metadata: Metadata = pageMetadata({
-  title: 'All 40+ SEO + JSON-LD + GEO checks — reference catalog',
+  title: 'All 90+ SEO + JSON-LD + GEO checks — reference catalog',
   description:
     'Browse every check our auditor performs on your website: metadata, JSON-LD structured data, content quality, ' +
     'crawl & indexing, performance, GEO/AEO (llms.txt, Island Test), and security. Click any check for a deep-dive.',
@@ -61,17 +61,21 @@ export default function CheckIndex() {
   const categoriesInOrder = ['metadata', 'jsonld', 'content', 'security', 'performance', 'crawl', 'geo']
     .filter((c) => grouped[c]);
 
-  const totalChecks = CHECKS_CATALOG.length;
+  // The engine runs ~92 distinct checks; the catalog documents a growing
+  // subset of them with full explainers. Show both honestly rather than
+  // implying the catalog is the whole engine.
+  const documented = CHECKS_CATALOG.length;
 
   return (
     <>
       <SiteHeader />
       <main className="page-shell">
         <p className="page-eyebrow">Reference</p>
-        <h1 className="page-title">All {totalChecks}+ checks we run</h1>
+        <h1 className="page-title">The 90+ checks we run</h1>
         <p className="page-lede">
-          Every factor we analyse on your website, grouped by category. Each check links to a
-          deep-dive explainer with why it matters, how to fix it, and a copy-paste snippet.
+          Every factor we analyse on your website, grouped by category. {documented} of them have a
+          deep-dive explainer with why it matters, how to fix it, and a copy-paste snippet — and
+          we&apos;re writing the rest.
         </p>
 
         {/* Category overview cards */}

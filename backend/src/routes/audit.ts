@@ -3,6 +3,7 @@ import { Router } from 'express';
 import { z } from 'zod';
 import { randomUUID } from 'node:crypto';
 import { logger } from '../lib/logger.js';
+import { rateLimit, acquireSlot, releaseSlot } from '../lib/ratelimit.js';
 import { fetchPage } from '../crawler/fetcher.js';
 import { renderPage } from '../crawler/renderer.js';
 import { crawlSite } from '../crawler/crawl.js';
@@ -124,6 +125,12 @@ auditRouter.get('/stream', async (req: Request, res: Response) => {
     res.status(400).json({ error: 'Invalid input', details: parsed.error.format() });
     return;
   }
+  // After validation, and before any SSE headers go out, so a limited client
+  // gets a real 429 rather than an event stream that immediately errors.
+  if (!rateLimit(req, 'audit-single', 10, 60_000)) {
+    res.status(429).json({ error: 'Too many audits from this IP. Please wait a minute and try again.' });
+    return;
+  }
   const { url } = parsed.data;
   const cloaking = parsed.data.cloaking === '1';
   const perf = parsed.data.perf === '1';
@@ -228,6 +235,29 @@ auditRouter.get('/site/stream', async (req: Request, res: Response) => {
     res.status(400).json({ error: 'Invalid input', details: parsed.error.format() });
     return;
   }
+  // Rate limit AFTER validation. The limit exists to bound expensive crawls,
+  // not cheap parse failures — counting rejected input against the budget
+  // would lock a user out for ten minutes over three typo'd URLs.
+  if (!rateLimit(req, 'audit-site', 3, 10 * 60_000)) {
+    res.status(429).json({ error: 'Site crawls are limited to 3 per 10 minutes. Try a single-page audit instead.' });
+    return;
+  }
+  // Acquire only after validation — a rejected request must never consume a
+  // slot. Slots are a hard availability resource: leak two and site crawls
+  // stop working until the process restarts.
+  if (!acquireSlot('site-crawl', 2)) {
+    res.status(503).json({ error: 'Too many site crawls running right now. Please retry in a minute.' });
+    return;
+  }
+  let slotReleased = false;
+  const releaseCrawlSlot = () => {
+    if (slotReleased) return;
+    slotReleased = true;
+    releaseSlot('site-crawl');
+  };
+  // Belt and braces: the finally block below covers normal completion and
+  // thrown errors; this covers a client that disconnects mid-stream.
+  req.on('close', releaseCrawlSlot);
   const { url, maxPages = 25, maxDepth = 2 } = parsed.data;
   const auditId = randomUUID();
   const log = logger.child({ auditId, url });
@@ -330,11 +360,17 @@ auditRouter.get('/site/stream', async (req: Request, res: Response) => {
     log.error({ err }, 'site audit failed');
     send('error', { message });
     res.end();
+  } finally {
+    releaseCrawlSlot();
   }
 });
 
 // One-shot JSON
 auditRouter.get('/', async (req: Request, res: Response) => {
+  if (!rateLimit(req, 'audit-single', 10, 60_000)) {
+    res.status(429).json({ error: 'Too many audits from this IP. Please wait a minute and try again.' });
+    return;
+  }
   const parsed = SingleQuery.safeParse(req.query);
   if (!parsed.success) {
     res.status(400).json({ error: 'Invalid input', details: parsed.error.format() });

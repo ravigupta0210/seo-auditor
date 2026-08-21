@@ -28,7 +28,7 @@ export function SiteFooter() {
           <h3 className="site-footer__heading">Product</h3>
           <ul className="site-footer__list">
             <li><Link href="/">Audit a site</Link></li>
-            <li><Link href="/check">All 40+ checks</Link></li>
+            <li><Link href="/check">All 90+ checks</Link></li>
             <li><Link href="/compare">Tool comparisons</Link></li>
             <li><Link href="/blog">Blog &amp; guides</Link></li>
             <li><Link href="/services">Pricing &amp; services</Link></li>

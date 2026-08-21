@@ -6,6 +6,7 @@ import Link from 'next/link';
 import { CheckCard, type Check } from './_CheckCard';
 import { ScoreRing } from '../_components/ScoreRing';
 import { SiteHeader } from '../_components/SiteHeader';
+import { SiteFooter } from '../_components/SiteFooter';
 import { EmailReportModal } from './_EmailReportModal';
 import { ConversionCTA } from './_ConversionCTA';
 import { ShareButton } from '../_components/ShareButton';
@@ -133,7 +134,7 @@ export function AuditView() {
                 Download PDF / white-label report →
               </Link>
             </div>
-            <ConversionCTA summary={phase.summary} url={url} />
+            <ConversionCTA summary={phase.summary} url={url} auditId={phase.auditId} />
           </>
         )}
 
@@ -180,7 +181,13 @@ export function AuditView() {
 
         <section style={{ display: 'flex', flexDirection: 'column', gap: 10 }}>
           {sortedChecks.map((c, i) => (
-            <CheckCard key={`${c.id}-${i}`} check={c} index={i} />
+            <CheckCard
+              key={`${c.id}-${i}`}
+              check={c}
+              index={i}
+              auditId={phase.kind === 'done' ? phase.auditId : undefined}
+              siteUrl={url}
+            />
           ))}
         </section>
 
@@ -191,6 +198,8 @@ export function AuditView() {
           </div>
         )}
       </main>
+
+      <SiteFooter />
 
       {phase.kind === 'done' && <EmailReportModal auditId={phase.auditId} url={url} />}
     </>

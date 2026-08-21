@@ -240,6 +240,8 @@ export function runJsonLdChecks(page: PageContext): CheckResult[] {
     }
   }
 
+  results.push(...checkQAPageMisuse(flatItems, page, $));
+
   return results;
 }
 
@@ -287,4 +289,83 @@ function isAbsoluteUrl(s: string): boolean {
   } catch {
     return false;
   }
+}
+
+/**
+ * QAPage misuse — an explicit, quotable Google structured-data violation.
+ *
+ * Google deprecated FAQ rich results entirely on 2026-05-07, and a lot of
+ * recovery advice since then has been "just switch FAQPage to QAPage". That is
+ * a spam violation. Google's QAPage documentation says verbatim: "Don't use
+ * QAPage markup for FAQ pages or pages where there are multiple questions per
+ * page", and explicitly disqualifies self-authored FAQs, blog posts, essays and
+ * how-to guides. QAPage is only for forum-style pages with ONE question that
+ * users can submit alternative answers to.
+ *
+ * Evidence strength: google-confirmed. This is quoted policy, not inference.
+ */
+function checkQAPageMisuse(items: JsonObj[], page: PageContext, $: cheerio.CheerioAPI): CheckResult[] {
+  const qaPages = items.filter((it) => normalizeType(it['@type']) === 'QAPage');
+  if (qaPages.length === 0) return [];
+
+  const reasons: string[] = [];
+
+  // Multiple questions on one page — the single most common misuse.
+  const questionCount = items.filter((it) => normalizeType(it['@type']) === 'Question').length;
+  if (questionCount > 1) {
+    reasons.push(`${questionCount} Question entities on one page (QAPage allows exactly one)`);
+  }
+
+  // Article-shaped page — blog posts and guides are explicitly disqualified.
+  const ARTICLE_TYPES = new Set(['Article', 'BlogPosting', 'NewsArticle', 'TechArticle']);
+  if (items.some((it) => ARTICLE_TYPES.has(normalizeType(it['@type']) ?? ''))) {
+    reasons.push('the page also declares Article/BlogPosting schema, which Google disqualifies from QAPage');
+  }
+
+  // No way for users to submit an answer — i.e. it is really an FAQ.
+  const hasSuggested = qaPages.some((qp) => {
+    const me = qp.mainEntity as JsonObj | undefined;
+    return Boolean(me && me.suggestedAnswer);
+  });
+  const hasForm = $('form').length > 0;
+  if (!hasSuggested && !hasForm) {
+    reasons.push('no user-submitted answers and no answer submission form — this is a self-authored FAQ, not a Q&A page');
+  }
+
+  if (reasons.length === 0) return [];
+
+  return [
+    {
+      id: 'jsonld.qaPage.misuse',
+      category: 'jsonld',
+      severity: 'error',
+      title: 'QAPage schema used on a page that does not qualify',
+      evidence: { reasons, questionCount, url: page.finalUrl ?? page.url },
+      whyItMatters:
+        'Google\'s QAPage documentation states: "Don\'t use QAPage markup for FAQ pages or pages where there are ' +
+        'multiple questions per page." QAPage is only for forum-style pages with a single question that users can ' +
+        'answer. Misapplying it is a structured-data spam violation that can cost you rich-result eligibility ' +
+        'site-wide, not just on this page. This pattern spread after Google removed FAQ rich results in May 2026 ' +
+        'and people swapped FAQPage for QAPage as a workaround.',
+      fix: {
+        summary:
+          'Remove the QAPage markup. If this is a self-authored FAQ, there is no supported replacement — FAQ rich results were retired in May 2026 — so keep the questions as visible content and drop the markup.',
+        snippet: `<!-- Remove QAPage from self-authored FAQ pages. -->
+<!-- QAPage is ONLY valid for forum-style pages: ONE question, user-submitted answers. -->
+<!-- For a normal FAQ section, no structured data is needed. Keep the Q&A as -->
+<!-- real headings and paragraphs so search engines and AI crawlers can read it: -->
+<h2>How long does an SEO audit take?</h2>
+<p>Most single-page audits finish in under ten seconds...</p>`,
+        steps: [
+          'Delete the QAPage JSON-LD block from this page.',
+          'Keep every question and answer as visible HTML — a question as the heading, the answer in the paragraph directly beneath it.',
+          'Do not substitute FAQPage: its rich results were deprecated on 2026-05-07, so it gains you nothing.',
+          'Reserve QAPage for genuine forum or community pages with one question and user-submitted answers.',
+        ],
+        docLink: 'https://developers.google.com/search/docs/appearance/structured-data/qapage',
+      },
+      priority: 80,
+      ruleVersion: RULE_VERSION,
+    },
+  ];
 }

@@ -232,3 +232,134 @@ export async function sendFeedbackEmail(fb: {
     kind: 'feedback',
   });
 }
+
+// --- Paid-service quote requests -------------------------------------------
+
+export interface QuoteRequestPayload {
+  name?: string;
+  email: string;
+  company?: string;
+  siteUrl: string;
+  auditId?: string;
+  auditScore?: number;
+  tier?: string;
+  stack?: string;
+  requirements: string;
+  timeline?: string;
+  budget?: string;
+  repoAccess?: string;
+  userAgent?: string;
+  referrer?: string;
+}
+
+const TIER_LABELS: Record<string, string> = {
+  report: 'AI Visibility Report',
+  implementation: 'GEO + SEO Fix Implementation',
+  analytics: 'Analytics Foundation',
+  monitoring: 'Monthly Monitoring',
+  custom: 'Custom / not sure yet',
+};
+
+/** Notify the owner of a new paid-work enquiry. This is the revenue alert. */
+export async function sendQuoteRequestEmail(q: QuoteRequestPayload): Promise<boolean> {
+  if (!FEEDBACK_TO) {
+    logger.warn('sendQuoteRequestEmail: no FEEDBACK_TO/MAIL_FROM configured');
+    return false;
+  }
+  const reportUrl = q.auditId ? `${APP_URL}/audit/${q.auditId}` : null;
+  const tierLabel = q.tier ? (TIER_LABELS[q.tier] ?? q.tier) : '-';
+
+  const row = (label: string, value: string) =>
+    `<tr><td style="padding:5px 12px 5px 0;color:#888;white-space:nowrap;vertical-align:top">${esc(label)}</td>` +
+    `<td style="padding:5px 0">${value}</td></tr>`;
+
+  const html = `<div style="font-family:-apple-system,Segoe UI,Roboto,Arial,sans-serif;max-width:600px;color:#1a1a1a">
+    <h2 style="margin:0 0 4px">New quote request${q.company ? ` - ${esc(q.company)}` : ''}</h2>
+    <p style="margin:0 0 16px;color:#555;font-size:14px">${esc(q.siteUrl)}${
+      typeof q.auditScore === 'number' ? ` &middot; audit score <strong>${q.auditScore}/100</strong>` : ''
+    }</p>
+    <table style="border-collapse:collapse;font-size:14px;width:100%">
+      ${row('Name', esc(q.name || '-'))}
+      ${row('Email', `<a href="mailto:${esc(q.email)}">${esc(q.email)}</a>`)}
+      ${row('Company', esc(q.company || '-'))}
+      ${row('Site', `<a href="${esc(q.siteUrl)}">${esc(q.siteUrl)}</a>`)}
+      ${row('Wants', esc(tierLabel))}
+      ${row('Stack', esc(q.stack || '-'))}
+      ${row('Timeline', esc(q.timeline || '-'))}
+      ${row('Budget', esc(q.budget || '-'))}
+      ${row('Repo access', esc(q.repoAccess || '-'))}
+      ${reportUrl ? row('Audit report', `<a href="${reportUrl}">${reportUrl}</a>`) : ''}
+    </table>
+    <h3 style="font-size:14px;margin:18px 0 6px">What they want</h3>
+    <p style="white-space:pre-wrap;font-size:15px;background:#f6f6f6;padding:12px 14px;border-radius:8px;margin:0">${esc(q.requirements)}</p>
+    <p style="margin:20px 0 0;font-size:13px;color:#555">Reply directly to this email to quote them.</p>
+    <p style="color:#aaa;font-size:11px;margin-top:14px">${esc(q.referrer || '')} ${esc(q.userAgent || '')}</p>
+  </div>`;
+
+  const text =
+    `New quote request${q.company ? ` - ${q.company}` : ''}\n\n` +
+    `Site: ${q.siteUrl}\n` +
+    (typeof q.auditScore === 'number' ? `Audit score: ${q.auditScore}/100\n` : '') +
+    `Name: ${q.name || '-'}\nEmail: ${q.email}\nCompany: ${q.company || '-'}\n` +
+    `Wants: ${tierLabel}\nStack: ${q.stack || '-'}\nTimeline: ${q.timeline || '-'}\n` +
+    `Budget: ${q.budget || '-'}\nRepo access: ${q.repoAccess || '-'}\n` +
+    (reportUrl ? `Audit report: ${reportUrl}\n` : '') +
+    `\nWhat they want:\n${q.requirements}\n`;
+
+  return send({
+    to: FEEDBACK_TO,
+    subject: `Quote request: ${q.siteUrl}${q.company ? ` (${q.company})` : ''}`,
+    html,
+    text,
+    replyTo: q.email,
+    kind: 'quote_request',
+    auditId: q.auditId,
+  });
+}
+
+/**
+ * Acknowledge the prospect. Sets the 1-business-day expectation and restates the
+ * no-guarantee positioning up front — it is the pitch, not a disclaimer.
+ */
+export async function sendQuoteAckEmail(q: QuoteRequestPayload): Promise<boolean> {
+  const reportUrl = q.auditId ? `${APP_URL}/audit/${q.auditId}` : null;
+  const html = `<div style="font-family:-apple-system,Segoe UI,Roboto,Arial,sans-serif;max-width:560px;color:#1a1a1a">
+    <h2 style="margin:0 0 10px">Got it - we'll send you a price within 1 business day</h2>
+    <p style="margin:0 0 14px;font-size:15px;line-height:1.55">Thanks${
+      q.name ? ` ${esc(q.name)}` : ''
+    }. We've received your request for <strong>${esc(q.siteUrl)}</strong> and we're reviewing it now.</p>
+    ${reportUrl ? `<p style="margin:0 0 14px;font-size:15px">Your audit report stays live here: <a href="${reportUrl}">${reportUrl}</a></p>` : ''}
+    <h3 style="font-size:15px;margin:22px 0 8px">How we work</h3>
+    <ul style="font-size:14px;line-height:1.7;padding-left:18px;margin:0 0 14px">
+      <li>Fixed price, agreed before any work starts. No retainer traps.</li>
+      <li>We implement the fixes and send them as a pull request you review and merge.</li>
+      <li>We re-audit afterwards and show you the before/after diff.</li>
+    </ul>
+    <p style="margin:0 0 14px;font-size:14px;line-height:1.6;background:#f6f6f6;padding:12px 14px;border-radius:8px">
+      <strong>We don't promise traffic or rankings.</strong> Nobody honestly can - that depends on your market and your content.
+      What we guarantee is a technically correct, AI-citable site, and proof of exactly what changed.
+    </p>
+    <p style="margin:18px 0 0;font-size:14px">Just reply to this email if you want to add anything.</p>
+  </div>`;
+
+  const text =
+    `Got it - we'll send you a price within 1 business day.\n\n` +
+    `Thanks${q.name ? ` ${q.name}` : ''}. We've received your request for ${q.siteUrl} and we're reviewing it now.\n` +
+    (reportUrl ? `\nYour audit report stays live here: ${reportUrl}\n` : '') +
+    `\nHow we work:\n` +
+    `- Fixed price, agreed before any work starts. No retainer traps.\n` +
+    `- We implement the fixes and send them as a pull request you review and merge.\n` +
+    `- We re-audit afterwards and show you the before/after diff.\n\n` +
+    `We don't promise traffic or rankings. Nobody honestly can - that depends on your market and your content. ` +
+    `What we guarantee is a technically correct, AI-citable site, and proof of exactly what changed.\n\n` +
+    `Just reply to this email if you want to add anything.\n`;
+
+  return send({
+    to: q.email,
+    subject: `We got your request for ${q.siteUrl}`,
+    html,
+    text,
+    kind: 'quote_ack',
+    auditId: q.auditId,
+  });
+}

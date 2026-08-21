@@ -4,6 +4,7 @@ import { auditRouter } from './routes/audit.js';
 import { badgeRouter } from './routes/badge.js';
 import { feedbackRouter } from './routes/feedback.js';
 import { leadsRouter } from './routes/leads.js';
+import { quotesRouter } from './routes/quotes.js';
 import { statsRouter } from './routes/stats.js';
 import { insightsRouter } from './routes/insights.js';
 import { ensureSchema, dbEnabled } from './lib/db.js';
@@ -24,6 +25,7 @@ app.use('/api/audit', auditRouter);
 app.use('/api/badge', badgeRouter);
 app.use('/api/feedback', feedbackRouter);
 app.use('/api/leads', leadsRouter);
+app.use('/api/quotes', quotesRouter);
 app.use('/api/stats', statsRouter);
 app.use('/api/insights', insightsRouter);
 

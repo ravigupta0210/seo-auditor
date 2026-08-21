@@ -1,6 +1,8 @@
 'use client';
 
 import { useState } from 'react';
+import Link from 'next/link';
+import { findCheck } from '@/lib/checks-catalog';
 
 export interface Check {
   id: string;
@@ -21,7 +23,18 @@ export interface Check {
   affectedPages?: string[];
 }
 
-export function CheckCard({ check, index = 0 }: { check: Check; index?: number }) {
+export function CheckCard({
+  check,
+  index = 0,
+  auditId,
+  siteUrl,
+}: {
+  check: Check;
+  index?: number;
+  /** Passed through so the "fix this for me" CTA can attach the audit context. */
+  auditId?: string;
+  siteUrl?: string;
+}) {
   const [open, setOpen] = useState(check.severity === 'error');
   const [copied, setCopied] = useState(false);
 
@@ -37,6 +50,14 @@ export function CheckCard({ check, index = 0 }: { check: Check; index?: number }
   };
 
   const animationDelay = `${Math.min(index, 12) * 30}ms`;
+
+  // Only link to an explainer page that actually exists in the catalog.
+  const explainer = findCheck(check.id);
+  const needsHelp = check.severity === 'error' || check.severity === 'warning';
+  const quoteParams = new URLSearchParams({ tier: 'implementation' });
+  if (siteUrl) quoteParams.set('url', siteUrl);
+  if (auditId) quoteParams.set('auditId', auditId);
+  const quoteHref = `/quote?${quoteParams.toString()}`;
 
   return (
     <article
@@ -109,9 +130,19 @@ export function CheckCard({ check, index = 0 }: { check: Check; index?: number }
               </ol>
             )}
 
-            <p style={{ margin: '12px 0 0', fontSize: 12 }}>
+            <p style={{ margin: '12px 0 0', fontSize: 12, display: 'flex', gap: 14, flexWrap: 'wrap' }}>
+              {/* Internal explainer first — it keeps the reader on-site. The
+                  external doc link is the fallback, not the primary path. */}
+              {explainer && <Link href={`/check/${check.id}`}>What this check means →</Link>}
               <a href={check.fix.docLink} target="_blank" rel="noopener">Read the docs →</a>
             </p>
+
+            {needsHelp && (
+              <p style={{ margin: '12px 0 0', fontSize: 12.5, color: 'var(--text-muted)' }}>
+                Don&apos;t want to do this yourself?{' '}
+                <Link href={quoteHref} style={{ fontWeight: 600 }}>Get it fixed for you →</Link>
+              </p>
+            )}
           </div>
 
           {check.evidence !== undefined && check.evidence !== null && (

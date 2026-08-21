@@ -40,9 +40,24 @@ const TTL_MS = 7 * 24 * 60 * 60 * 1000; // 7 days
 const MAX_REPORTS = 500;
 const memory = new Map<string, StoredReport>();
 
+/** Just the fields the score badge needs. See `getScore`. */
+export interface ReportScore {
+  score: number;
+  url: string;
+}
+
 export interface ReportStore {
   save(report: AuditReport): Promise<string>;
   get(id: string): Promise<AuditReport | null>;
+  /**
+   * Score + URL only.
+   *
+   * The badge endpoint is embedded on other people's sites, so it can be hit
+   * far more often than anything else we serve. `get()` would pull the entire
+   * report jsonb — every page, check and evidence blob — to read one integer.
+   * `overall_score` and `url` are already extracted columns, so read those.
+   */
+  getScore(id: string): Promise<ReportScore | null>;
   list(limit?: number): Promise<AuditReport[]>;
 }
 
@@ -69,6 +84,11 @@ class InMemoryStore implements ReportStore {
     }
     const { expiresAt: _e, ...rest } = r;
     return rest;
+  }
+
+  async getScore(id: string): Promise<ReportScore | null> {
+    const r = await this.get(id);
+    return r ? { score: r.summary?.overall ?? 0, url: r.url } : null;
   }
 
   async list(limit = 20): Promise<AuditReport[]> {
@@ -133,6 +153,25 @@ class PostgresStore implements ReportStore {
     if (cached && cached.expiresAt > Date.now()) {
       const { expiresAt: _e, ...rest } = cached;
       return rest;
+    }
+    return null;
+  }
+
+  async getScore(id: string): Promise<ReportScore | null> {
+    try {
+      // Narrow projection on purpose — never SELECT the report jsonb here.
+      const res = await pool!.query<{ overall_score: number | null; url: string }>(
+        'SELECT overall_score, url FROM audits WHERE id = $1',
+        [id],
+      );
+      const row = res.rows[0];
+      if (row) return { score: row.overall_score ?? 0, url: row.url };
+    } catch (err) {
+      logger.error({ err, id }, 'PostgresStore.getScore failed');
+    }
+    const cached = memory.get(id);
+    if (cached && cached.expiresAt > Date.now()) {
+      return { score: cached.summary?.overall ?? 0, url: cached.url };
     }
     return null;
   }

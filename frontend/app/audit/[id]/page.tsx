@@ -223,15 +223,21 @@ function StaticCheckCard({ check }: { check: Check & { affectedPages?: string[] 
 }
 
 function BadgeEmbed({ reportId, host, score }: { reportId: string; host: string; score: number }) {
-  const badgeUrl = `${process.env.NEXT_PUBLIC_BACKEND_URL || ''}/api/badge?score=${score}&host=${encodeURIComponent(host)}`;
-  const embed = `<a href="${SITE_URL}/audit/${reportId}"><img src="${badgeUrl}" alt="SEO score for ${host}" /></a>`;
+  // Reference the report by id rather than passing the score in the URL. The
+  // server reads the number from the stored report, so an embedder cannot
+  // inflate their own badge — which is the only thing that makes it worth
+  // trusting when you see it on someone else's site.
+  const badgeUrl = `${process.env.NEXT_PUBLIC_BACKEND_URL || ''}/api/badge?report=${reportId}`;
+  const embed = `<a href="${SITE_URL}/audit/${reportId}"><img src="${badgeUrl}" alt="SEO score ${score}/100 for ${host}" /></a>`;
   return (
     <details className="glass-card" style={{ padding: '14px 18px' }}>
       <summary style={{ cursor: 'pointer', fontSize: 13, color: 'var(--text-dim)' }}>
         ◆ Embed this score on your site
       </summary>
       <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', gap: 10, margin: '10px 0 8px' }}>
-        <p style={{ margin: 0, fontSize: 12, color: 'var(--text-muted)' }}>Paste this into any blog post or README:</p>
+        <p style={{ margin: 0, fontSize: 12, color: 'var(--text-muted)' }}>
+          Paste into any blog post or README. The score is read from this saved report, so it stays verifiable.
+        </p>
         <CopyLinkButton url={embed} iconOnly ariaLabel="Copy embed code" label="Copy code" trackMethod="copy_embed" />
       </div>
       <pre

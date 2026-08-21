@@ -104,6 +104,33 @@ export async function ensureSchema(): Promise<void> {
         captured_at timestamptz NOT NULL DEFAULT now()
       );
       CREATE INDEX IF NOT EXISTS gsc_snapshots_kind_idx ON gsc_snapshots (kind, captured_at DESC);
+
+      -- Paid-service lead capture. This is the revenue funnel: a prospect runs a
+      -- free audit, then asks us to quote for fixing what it found. audit_id
+      -- links back to the report so a quote is written with their real failures
+      -- in front of us rather than a generic pitch.
+      CREATE TABLE IF NOT EXISTS quote_requests (
+        id           uuid PRIMARY KEY DEFAULT gen_random_uuid(),
+        name         text,
+        email        text NOT NULL,
+        company      text,
+        site_url     text NOT NULL,
+        audit_id     uuid,
+        audit_score  int,
+        tier         text,
+        stack        text,
+        requirements text NOT NULL,
+        timeline     text,
+        budget       text,
+        repo_access  text,
+        status       text NOT NULL DEFAULT 'new',
+        user_agent   text,
+        referrer     text,
+        created_at   timestamptz NOT NULL DEFAULT now()
+      );
+      CREATE INDEX IF NOT EXISTS quote_requests_created_at_idx ON quote_requests (created_at DESC);
+      CREATE INDEX IF NOT EXISTS quote_requests_status_idx ON quote_requests (status, created_at DESC);
+      CREATE INDEX IF NOT EXISTS quote_requests_email_idx ON quote_requests (email);
     `);
     schemaReady = true;
     logger.info('postgres schema ready');

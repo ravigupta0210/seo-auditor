@@ -111,6 +111,42 @@ export async function submitFeedback(input: { name?: string; email?: string; mes
   }
 }
 
+export type QuoteTier = 'report' | 'implementation' | 'analytics' | 'monitoring' | 'custom';
+
+export interface QuoteInput {
+  name?: string;
+  email: string;
+  company?: string;
+  siteUrl: string;
+  auditId?: string;
+  tier?: QuoteTier;
+  stack?: string;
+  requirements: string;
+  timeline?: string;
+  budget?: string;
+  repoAccess?: 'yes' | 'no' | 'maybe';
+  website?: string;
+}
+
+/**
+ * Submit a paid-work enquiry. This is the revenue funnel — it notifies the owner
+ * and sends the prospect an acknowledgement.
+ */
+export async function submitQuote(input: QuoteInput): Promise<{ ok: boolean; error?: string }> {
+  try {
+    const res = await fetch(`${BACKEND_URL}/api/quotes`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(input),
+    });
+    const data = (await res.json().catch(() => ({}))) as { error?: string };
+    if (!res.ok) return { ok: false, error: data.error || 'Something went wrong. Please try again.' };
+    return { ok: true };
+  } catch {
+    return { ok: false, error: 'Network error. Please try again.' };
+  }
+}
+
 export function grade(score: number): { letter: string; color: string } {
   if (score >= 90) return { letter: 'A', color: '#34d399' };
   if (score >= 75) return { letter: 'B', color: '#6ee7b7' };

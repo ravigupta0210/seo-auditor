@@ -16,6 +16,30 @@ export interface CheckCatalogEntry {
 
 export const CHECKS_CATALOG: CheckCatalogEntry[] = [
   {
+    id: 'geo.jsRequired.blocking',
+    category: 'geo',
+    title: 'Page content requires JavaScript to appear',
+    summary:
+      'The raw HTML contains almost no text — the content only exists after the JavaScript bundle runs. AI crawlers do not run JavaScript, so they receive an empty page.',
+    whyItMatters:
+      'GPTBot, ClaudeBot, PerplexityBot and OAI-SearchBot do not execute JavaScript. If your content only appears after hydration, those engines see nothing and cannot cite you, no matter how good the writing is. Googlebot does render, but only on a slower second pass, so indexing is delayed too. This is the single highest-impact AI-visibility problem a page can have — and unlike most GEO advice, it is mechanically verifiable rather than speculative: we are reporting exactly what a non-rendering client receives.',
+    exampleFix:
+      '// Next.js: fetch on the server, not in a client useEffect\nexport default async function Page() {\n  const data = await getData();       // runs server-side\n  return <article>{data.body}</article>;  // ships in the HTML\n}',
+    docLink: 'https://developers.google.com/search/docs/crawling-indexing/javascript/javascript-seo-basics',
+  },
+  {
+    id: 'jsonld.qaPage.misuse',
+    category: 'jsonld',
+    title: 'QAPage schema used on a page that does not qualify',
+    summary:
+      'QAPage markup is only valid for forum-style pages with a single question that users can submit answers to. Using it on a self-authored FAQ, a blog post, or any page with multiple questions is a structured-data spam violation.',
+    whyItMatters:
+      'Google removed FAQ rich results entirely on 7 May 2026, and a lot of recovery advice since then has been "just switch FAQPage to QAPage". That advice is wrong. Google\'s documentation states verbatim: "Don\'t use QAPage markup for FAQ pages or pages where there are multiple questions per page." Misapplying it is a spam violation that can cost rich-result eligibility across your whole site, not just this page. There is no supported replacement for FAQ rich results — the right move is to keep the questions as visible content and drop the markup.',
+    exampleFix:
+      '<!-- Remove QAPage from self-authored FAQs. Keep the Q&A as real HTML: -->\n<h2>How long does an SEO audit take?</h2>\n<p>Most single-page audits finish in under ten seconds.</p>',
+    docLink: 'https://developers.google.com/search/docs/appearance/structured-data/qapage',
+  },
+  {
     id: 'metadata.title.missing',
     category: 'metadata',
     title: 'Page is missing a <title> tag',

@@ -43,6 +43,13 @@ const nextConfig = {
   // readers, social preview crawlers, old Google cache entries) might still
   // probe to its Next.js file-convention equivalent. Keeps the network panel
   // clean and ensures shares with old URLs still render a proper preview.
+  // /help was a soft "how we can help" page. It is now a real, priced services
+  // page — permanent redirect so any existing link or index entry follows.
+  async redirects() {
+    return [
+      { source: '/help', destination: '/services', permanent: true },
+    ];
+  },
   async rewrites() {
     return [
       { source: '/favicon.ico',          destination: '/icon' },

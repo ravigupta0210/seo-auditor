@@ -43,6 +43,7 @@ export async function runGeoChecks(ctx: GeoContext): Promise<CheckResult[]> {
   results.push(...checkAIBotsInRobots(ctx.robots));
   results.push(...checkContentSignals(ctx.page));
   results.push(...checkEEAT(ctx.page));
+  results.push(checkClientSideRendering(ctx.page));
   return results;
 }
 
@@ -535,4 +536,119 @@ function bodyTextHash(html: string): string {
   $('script, style, noscript').remove();
   const text = $('body').text().replace(/\s+/g, ' ').trim().toLowerCase();
   return createHash('sha256').update(text).digest('hex');
+}
+
+/**
+ * Client-side rendering check — the highest-value AI-visibility signal we can
+ * produce from a raw fetch.
+ *
+ * Most AI crawlers (GPTBot, ClaudeBot, PerplexityBot, OAI-SearchBot) do NOT
+ * execute JavaScript. Googlebot does render, but its render queue is a separate,
+ * slower pass. So a page whose text only exists after hydration is effectively
+ * invisible to AI answer engines no matter how good its content is.
+ *
+ * We deliberately gate on the raw word count rather than on framework markers:
+ * a statically-generated Next.js page also ships `__NEXT_DATA__`, and it is
+ * perfectly readable. The failure mode is an empty mount point plus scripts.
+ *
+ * Evidence strength: this one is mechanically verifiable rather than folklore —
+ * we are reporting what a non-rendering client literally receives.
+ */
+function checkClientSideRendering(page: PageContext): CheckResult {
+  const $ = cheerio.load(page.html);
+
+  // Body text as a non-rendering crawler would see it.
+  $('script, style, noscript, template, svg').remove();
+  const bodyText = $('body').text().replace(/\s+/g, ' ').trim();
+  const wordCount = bodyText ? bodyText.split(' ').filter(Boolean).length : 0;
+
+  // Re-parse for structural signals (the first pass stripped the scripts).
+  const $full = cheerio.load(page.html);
+  const scriptCount = $full('script[src], script:not([type="application/ld+json"])').length;
+
+  // Common single-page-app mount points. Presence alone proves nothing — a
+  // statically-generated Next.js page also has #__next, fully populated. What
+  // distinguishes an unhydrated shell is a mount holding almost no text.
+  const MOUNTS = ['#root', '#app', '#__next', '#__nuxt', '#___gatsby', '#svelte', '[data-reactroot]'];
+  let emptyMount: string | null = null;
+  for (const sel of MOUNTS) {
+    const el = $full(sel).first();
+    if (!el.length) continue;
+    const mountWords = el.text().replace(/\s+/g, ' ').trim().split(' ').filter(Boolean).length;
+    if (mountWords < 30) {
+      emptyMount = sel;
+      break;
+    }
+  }
+
+  // Hydration markers corroborate "this is a JS app" when there is no mount we
+  // recognise (e.g. a custom mount id).
+  const hydrationMarker = /__NEXT_DATA__|window\.__NUXT__|__remixContext|ng-version=|data-reactroot|__sveltekit/.test(page.html);
+  const spaShaped = emptyMount !== null || hydrationMarker;
+
+  const evidence = { rawWordCount: wordCount, scriptCount, emptyMount, hydrationMarker, htmlBytes: page.html.length };
+
+  const fix = {
+    summary:
+      'Serve the page content in the initial HTML — via server-side rendering, static generation, or prerendering — so crawlers that do not execute JavaScript can read it.',
+    steps: [
+      'Confirm the problem: curl the URL and check whether the article text is in the response body.',
+      'Next.js: use a Server Component or getStaticProps/generateStaticParams instead of fetching in a client useEffect.',
+      'Nuxt/Vue: enable SSR or `nuxt generate`. Angular: enable Angular Universal.',
+      'Pure SPA with no SSR option: add a prerender step for crawlers, or emit the key content as static HTML alongside the app.',
+      'Re-run this audit and confirm the raw word count rises.',
+    ],
+    docLink: 'https://developers.google.com/search/docs/crawling-indexing/javascript/javascript-seo-basics',
+  };
+
+  if (wordCount < 50 && scriptCount > 0 && spaShaped) {
+    return {
+      id: 'geo.jsRequired.blocking',
+      category: 'geo',
+      severity: 'error',
+      title: `Page content requires JavaScript — only ${wordCount} words in the raw HTML`,
+      evidence,
+      whyItMatters:
+        'GPTBot, ClaudeBot, PerplexityBot and OAI-SearchBot do not execute JavaScript. This page ships an empty ' +
+        `${emptyMount ? `mount point (${emptyMount})` : 'shell'} and ${scriptCount} scripts, so those crawlers receive essentially no text. ` +
+        'The page cannot be cited in an AI answer regardless of how good the content is, and Googlebot must wait ' +
+        'for a slower second render pass to see it at all.',
+      fix,
+      priority: 95,
+      ruleVersion: RULE_VERSION,
+    };
+  }
+
+  if (wordCount < 200 && scriptCount > 0 && emptyMount) {
+    return {
+      id: 'geo.jsRequired.partial',
+      category: 'geo',
+      severity: 'warning',
+      title: `Only ${wordCount} words available without JavaScript`,
+      evidence,
+      whyItMatters:
+        'Most of this page appears to be rendered client-side. Crawlers that do not run JavaScript — which includes ' +
+        'every major AI answer engine — see only a fraction of the content, so there is very little for them to quote.',
+      fix,
+      priority: 70,
+      ruleVersion: RULE_VERSION,
+    };
+  }
+
+  return {
+    id: 'geo.jsRequired.ok',
+    category: 'geo',
+    severity: 'pass',
+    title: `Content readable without JavaScript (${wordCount} words in raw HTML)`,
+    evidence,
+    whyItMatters:
+      'AI crawlers do not execute JavaScript. This page serves its content in the initial HTML, so they can read ' +
+      'and cite it directly.',
+    fix: {
+      summary: 'No action needed — keep serving content in the initial HTML response.',
+      docLink: fix.docLink,
+    },
+    priority: 10,
+    ruleVersion: RULE_VERSION,
+  };
 }

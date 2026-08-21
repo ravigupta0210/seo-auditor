@@ -1534,3 +1534,24 @@ textarea.field-input { resize: vertical; min-height: 128px; line-height: 1.55; }
 .btn,
 .btn:hover,
 .btn:focus { text-decoration: none; }
+
+/* ---------- Quote / services ---------- */
+select.field-input {
+  cursor: pointer;
+  appearance: none;
+  background-image: linear-gradient(45deg, transparent 50%, var(--text-muted) 50%),
+                    linear-gradient(135deg, var(--text-muted) 50%, transparent 50%);
+  background-position: calc(100% - 19px) calc(50% + 2px), calc(100% - 14px) calc(50% + 2px);
+  background-size: 5px 5px, 5px 5px;
+  background-repeat: no-repeat;
+  padding-right: 38px;
+}
+@media (max-width: 860px) {
+  .quote-grid { grid-template-columns: 1fr !important; }
+}
+
+/* Four tiers: one row on desktop, 2x2 on tablet, stacked on mobile. auto-fit
+   orphaned the 4th card onto a row of its own at common laptop widths. */
+.services-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+@media (max-width: 1000px) { .services-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 560px)  { .services-grid { grid-template-columns: 1fr; } }

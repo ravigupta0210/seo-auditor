@@ -2,6 +2,7 @@ import type { MetadataRoute } from 'next';
 import { CHECKS_CATALOG } from '@/lib/checks-catalog';
 import { getAllPosts } from '@/lib/blog';
 import { COMPARE_SLUGS } from '@/lib/compares';
+import { SERVICES } from '@/lib/services';
 import { SITE_URL } from '@/lib/seo';
 
 // Fully static: generated at build time (when the content/blog/*.json files are
@@ -21,7 +22,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${SITE_URL}/blog`, lastModified: now, changeFrequency: 'daily', priority: 0.8 },
     { url: `${SITE_URL}/compare`, lastModified: now, changeFrequency: 'monthly', priority: 0.7 },
     { url: `${SITE_URL}/feedback`, lastModified: now, changeFrequency: 'yearly', priority: 0.3 },
-    { url: `${SITE_URL}/help`, lastModified: now, changeFrequency: 'monthly', priority: 0.6 },
+    { url: `${SITE_URL}/services`, lastModified: now, changeFrequency: 'monthly', priority: 0.9 },
+    { url: `${SITE_URL}/quote`, lastModified: now, changeFrequency: 'monthly', priority: 0.8 },
   ];
 
   const checkEntries: MetadataRoute.Sitemap = CHECKS_CATALOG.map((c) => ({
@@ -29,6 +31,15 @@ export default function sitemap(): MetadataRoute.Sitemap {
     lastModified: now,
     changeFrequency: 'monthly',
     priority: 0.6,
+  }));
+
+  // Commercial pages carry the highest priority on the site: unlike the blog,
+  // there is a real business behind them.
+  const serviceEntries: MetadataRoute.Sitemap = SERVICES.map((s) => ({
+    url: `${SITE_URL}/services/${s.slug}`,
+    lastModified: now,
+    changeFrequency: 'monthly',
+    priority: 0.8,
   }));
 
   const compareEntries: MetadataRoute.Sitemap = COMPARE_SLUGS.map((slug) => ({
@@ -49,5 +60,5 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   // Saved audit reports are deliberately omitted: they auto-expire after 7 days
   // (indexing them would create soft-404s once expired).
-  return [...staticEntries, ...checkEntries, ...compareEntries, ...blogEntries];
+  return [...staticEntries, ...serviceEntries, ...checkEntries, ...compareEntries, ...blogEntries];
 }

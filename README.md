@@ -1,172 +1,153 @@
-# SEO Auditor
+# SEO Auditor — free SEO + AI-search (GEO) audit for any URL
 
-Free, comprehensive SEO + JSON-LD + metadata + GEO/AEO auditor for any website. No signup, no paywall, no crawl cap. Built for the AI-search era.
+**Is your site visible to ChatGPT, Claude, Perplexity and Google's AI answers?** Most SEO tools can't tell you. This one can.
 
-**🔗 Live: [freeseoaudit.vercel.app](https://freeseoaudit.vercel.app)** — run a free audit, or read the [GEO/SEO guides](https://freeseoaudit.vercel.app/blog) and browse [all 40+ checks](https://freeseoaudit.vercel.app/check).
+Paste a URL, get a full technical SEO + JSON-LD + **GEO/AEO** audit in about ten seconds. Every finding comes with a copy-paste fix. No signup, no paywall, no crawl cap, no account. MIT licensed.
+
+### ▶︎ **[Run a free audit →](https://freeseoaudit.vercel.app)**
+
+[![Live](https://img.shields.io/badge/live-freeseoaudit.vercel.app-6366f1)](https://freeseoaudit.vercel.app)
+[![License: MIT](https://img.shields.io/badge/license-MIT-green)](LICENSE)
+[![Next.js 15](https://img.shields.io/badge/Next.js-15-black)](https://nextjs.org/)
+[![Node 20](https://img.shields.io/badge/Node-20-339933)](https://nodejs.org/)
+
+---
+
+## Why this exists
+
+Classic SEO tools were built for a web where Google's ten blue links were the only destination. That's no longer true — a growing share of queries are answered by an LLM that reads your page, decides whether it's quotable, and cites you or doesn't.
+
+Optimising for that is a different job, and it has a name: **Generative Engine Optimization (GEO)**, sometimes **Answer Engine Optimization (AEO)**. It's the pillar this tool is built around, and it's the part the big tools don't cover.
+
+Concretely, we check things like:
+
+- Can [AI crawlers](https://freeseoaudit.vercel.app/blog/what-is-an-ai-crawler) — GPTBot, ClaudeBot, PerplexityBot, OAI-SearchBot — actually reach your pages? ([why this matters](https://freeseoaudit.vercel.app/check/geo.aibots.blocked))
+- **Does your content even exist without JavaScript?** Most AI crawlers don't execute JS, so a client-rendered page is invisible to them no matter how good it is. ([check](https://freeseoaudit.vercel.app/check/geo.jsRequired.blocking))
+- Are your paragraphs *self-contained* enough to be quoted out of context — the ["Island Test"](https://freeseoaudit.vercel.app/check/geo.islandTest.weak)?
+- Do you answer the question in the opening paragraph, or bury it? ([check](https://freeseoaudit.vercel.app/check/geo.directAnswer.missing))
+- Are your [E-E-A-T signals](https://freeseoaudit.vercel.app/check/geo.eeat.author.missing) present — real author, real dates, real citations?
+- Is your `/llms.txt` present and well-formed? ([what llms.txt actually is](https://freeseoaudit.vercel.app/blog/what-is-llmstxt))
+- Do you serve AI crawlers different content than you serve Google? (**cloaking detection** — we fetch as five different AI user-agents and diff the results.)
+
+Plus the whole classic surface: metadata, structured data, content, crawl/indexing, performance and security.
+
+**[Browse every check we perform →](https://freeseoaudit.vercel.app/check)**
+
+## What makes it different
+
+| | Typical SEO tool | This |
+|---|---|---|
+| Signup | Required | **None** |
+| Free tier | Crawl-capped | **Uncapped** |
+| AI-search / GEO checks | Rarely | **Core pillar** |
+| Cloaking detection for AI bots | No | **Yes — 5 user-agents** |
+| Fix for each finding | Generic advice | **Copy-paste snippet** |
+| Source | Closed | **[MIT, open](https://github.com/ravigupta0210/seo-auditor)** |
+
+See the detailed breakdowns: [vs Screaming Frog](https://freeseoaudit.vercel.app/compare/vs-screaming-frog) · [vs Semrush](https://freeseoaudit.vercel.app/compare/vs-semrush) · [vs Ahrefs](https://freeseoaudit.vercel.app/compare/vs-ahrefs) · [vs Sitebulb](https://freeseoaudit.vercel.app/compare/vs-sitebulb)
+
+## Guides
+
+Long-form explainers on getting cited by AI answer engines:
+
+- [What Is Generative Engine Optimization (GEO)?](https://freeseoaudit.vercel.app/blog/what-is-generative-engine-optimization)
+- [How to Rank in ChatGPT: Get Cited in AI Answers](https://freeseoaudit.vercel.app/blog/how-to-rank-in-chatgpt)
+- [How to Get Cited by Perplexity](https://freeseoaudit.vercel.app/blog/how-to-get-cited-by-perplexity)
+- [How to Get Cited by Claude](https://freeseoaudit.vercel.app/blog/how-to-get-cited-by-claude)
+- [How to Block AI Crawlers (and When You Shouldn't)](https://freeseoaudit.vercel.app/blog/how-to-block-ai-crawlers)
+- [What Is an AI Crawler?](https://freeseoaudit.vercel.app/blog/what-is-an-ai-crawler)
+- [GEO vs SEO: Do You Need Both?](https://freeseoaudit.vercel.app/blog/geo-vs-seo)
+- [How to Do a GEO Audit](https://freeseoaudit.vercel.app/blog/how-to-do-a-geo-audit)
+
+**[All guides →](https://freeseoaudit.vercel.app/blog)**
 
 ## What it checks
 
-### Classic SEO (Google starter guide coverage)
-- **Metadata** — title, meta description, canonical, Open Graph, Twitter Cards, viewport, charset, lang, favicon, robots meta
-- **Content** — H1 presence + multiplicity, heading hierarchy skips, H1/title alignment, image alt text quality, generic anchor text, thin content, internal link count
-- **Crawl & indexing** — robots.txt validity, sitemap.xml freshness, hreflang annotations, duplicate titles/descriptions across pages
-- **Performance** — optional PageSpeed Insights integration for Core Web Vitals (LCP, INP, CLS) — set `PAGESPEED_API_KEY`
-- **Security** — HTTPS, HSTS, CSP, X-Frame-Options, Referrer-Policy, compression
+**Metadata** — title, meta description, canonical, Open Graph, Twitter Cards, viewport, charset, `lang`, favicon, robots meta
 
-### Structured data
-- Parses every `<script type="application/ld+json">` block
-- Validates schema.org `@type` against 16+ rich-result types (Article, Product, Recipe, Event, etc.)
-- Checks required + recommended fields per type (Google rich-result spec)
-- ISO 8601 date format validation
-- Absolute URL validation for `image`, `url`, `sameAs`, `logo`
-- Catches the 78% of structured-data errors that are JSON syntax
+**Structured data** — parses every `application/ld+json` block, validates `@type` against 17 rich-result types, checks required + recommended fields, ISO-8601 dates, absolute URLs. Flags [`QAPage` misuse](https://freeseoaudit.vercel.app/check/jsonld.qaPage.misuse) — a Google policy violation that spread after FAQ rich results were retired in May 2026.
 
-### GEO / AEO (the differentiator)
-- `/llms.txt` presence + spec conformance ([llmstxt.org](https://llmstxt.org/))
-- AI-crawler accessibility — fetches the page as GPTBot, ClaudeBot, PerplexityBot, OAI-SearchBot, Google-Extended and compares content hashes for cloaking
-- AI-crawler directives in robots.txt
-- Island Test paragraph scoring (subject explicit, no anaphora, ≤80 words, factual tone)
-- Direct-answer detection in opening 200 words
-- Comparison-table detection (LLMs cite tables heavily)
-- E-E-A-T signals — author byline + Person schema
-- Citation outbound to authoritative TLDs
-- Text-to-HTML extractability ratio
+**Content** — H1 presence/multiplicity, heading-hierarchy skips, H1↔title alignment, image alt quality, generic anchor text, thin content, internal link count
 
-### Multi-page (full-site crawl)
-- BFS from homepage seeded by sitemap.xml
-- Configurable max pages + depth
-- Respects robots.txt
-- Cross-page duplicate detection (titles, descriptions)
-- All single-page checks run per crawled URL
+**Crawl & indexing** — robots.txt validity, sitemap freshness, hreflang, cross-page duplicate titles/descriptions
 
-## Architecture
+**GEO / AEO** — llms.txt conformance, AI-crawler access, cloaking detection, JS-dependency, Island Test, direct-answer detection, comparison tables, E-E-A-T, extractability ratio
 
-```
-frontend/   Next.js 15 + TypeScript + App Router
-            - Landing, /audit (live SSE view), /audit/[id] (shareable report)
-            - /check (all-checks index), /check/[id] (per-check explainer)
-            - /compare (tool comparisons), /blog (long-form posts)
-            - Dynamic /sitemap.xml, /llms.txt, /robots.txt
+**Performance** — Core Web Vitals via PageSpeed Insights (optional key)
 
-backend/    Node 20 + Express + TypeScript
-            - SSRF-hardened fetcher, optional Playwright JS renderer
-            - sitemap/robots parsers, BFS crawler
-            - 40+ check rules across 8 categories
-            - SSE streaming + JSON endpoints
-            - In-memory report store (7-day TTL; Postgres swap-in ready)
-            - SVG badge endpoint for distribution
-```
+**Security** — HTTPS, HSTS, CSP, X-Frame-Options, Referrer-Policy, compression
 
 ## Quick start
 
 ```bash
+git clone https://github.com/ravigupta0210/seo-auditor.git
 cd seo-auditor
-npm install
+npm run install:all
 npm run dev
-# → http://localhost:3000  (frontend)
-# → http://localhost:4000  (backend API)
+# frontend → http://localhost:3000
+# backend  → http://localhost:4000
 ```
 
-Try it:
-- Open http://localhost:3000
-- Enter a URL (e.g. `example.com`)
-- Choose "Single page" or "Full site"
-- Watch results stream in live
+Open http://localhost:3000, paste a URL, pick *single page* or *full site*, and watch results stream in over SSE.
+
+## Architecture
+
+```
+frontend/   Next.js 15 · React 19 · App Router · TypeScript
+            Landing · /audit (live SSE) · /audit/[id] (shareable report)
+            /check + /check/[id] · /compare · /blog · /services
+            Dynamic sitemap.xml, robots.txt, llms.txt, OG images
+
+backend/    Node 20 · Express · TypeScript (ESM)
+            SSRF-hardened fetcher · optional Playwright renderer
+            robots/sitemap parsers · BFS crawler
+            ~60 check rules across 7 categories
+            SSE streaming + JSON API · SVG score badge
+            Postgres persistence (falls back to in-memory)
+```
+
+Pipeline: `fetcher` → `renderer` → `checks/*` → `summarize` → `store`.
+
+Every audit is scored `100 − (errors×12 + warnings×4 + info×1)`, floored at 0. Site audits blend per-page scores (70%) with site-wide checks (30%).
 
 ## Environment variables
 
-All optional — sensible defaults for local dev:
+All optional — the app degrades gracefully with none of them set.
 
 | Var | Default | Purpose |
 |---|---|---|
-| `PORT` | 4000 | Backend port |
+| `PORT` | `4000` | Backend port |
 | `CORS_ORIGIN` | `*` | Frontend origin allowlist |
-| `LOG_LEVEL` | `info` | pino log level |
-| `RENDER_JS` | unset | Set to `1` to enable Playwright JS rendering (requires `npm i playwright && npx playwright install chromium`) |
-| `PAGESPEED_API_KEY` | unset | Enables Core Web Vitals checks via PageSpeed Insights ([free key](https://developers.google.com/speed/docs/insights/v5/get-started)) |
-| `NEXT_PUBLIC_BACKEND_URL` | `http://localhost:4000` | Frontend → backend URL |
-| `NEXT_PUBLIC_SITE_URL` | `https://example.com` | Used in sitemap, OG tags |
-| `NEXT_PUBLIC_ADS_ENABLED` | unset | Set to `1` once Carbon/EthicalAds is approved |
+| `LOG_LEVEL` | `info` | pino level |
+| `RENDER_JS` | unset | `1` enables Playwright JS rendering |
+| `PAGESPEED_API_KEY` | unset | Enables Core Web Vitals ([free key](https://developers.google.com/speed/docs/insights/v5/get-started)) |
+| `DATABASE_URL` | unset | Postgres for persistent reports; unset → in-memory, 7-day TTL |
+| `NEXT_PUBLIC_BACKEND_URL` | `http://localhost:4000` | Frontend → backend |
+| `NEXT_PUBLIC_SITE_URL` | production URL | Canonicals, sitemap, OG |
 
 ## API
 
-### Single-page audit (JSON)
 ```bash
+# Single-page audit (JSON)
 curl "http://localhost:4000/api/audit?url=https://example.com"
+
+# With cloaking probe + PageSpeed
 curl "http://localhost:4000/api/audit?url=https://example.com&cloaking=1&perf=1"
-```
 
-### Single-page audit (live SSE stream)
-```bash
+# Live SSE stream
 curl -N "http://localhost:4000/api/audit/stream?url=https://example.com"
-```
 
-### Full-site crawl (SSE stream)
-```bash
+# Full-site crawl
 curl -N "http://localhost:4000/api/audit/site/stream?url=https://example.com&maxPages=25&maxDepth=2"
-```
 
-### Retrieve a saved report
-```bash
+# Saved report
 curl "http://localhost:4000/api/audit/{id}"
 ```
 
-### SVG badge (for users to embed on their sites)
-```bash
-http://localhost:4000/api/badge?score=92&host=example.com
-```
+## Contributing
 
-## Deployment
-
-### Frontend (Vercel — free tier)
-```bash
-cd frontend
-vercel
-```
-Set `NEXT_PUBLIC_BACKEND_URL` in Vercel project settings.
-
-### Backend (Render.com — free worker tier)
-1. Push this repo to GitHub
-2. Create a new Web Service on Render pointing to `backend/`
-3. Build command: `npm install && npm run build`
-4. Start command: `npm start`
-5. Environment: Node 20
-
-For Playwright on Render free tier, you will need a Docker setup:
-
-```dockerfile
-FROM mcr.microsoft.com/playwright:v1.48.0-jammy
-WORKDIR /app
-COPY package*.json ./
-RUN npm ci --workspaces --include-workspace-root --workspace=backend
-COPY backend ./backend
-RUN npm --workspace backend run build
-EXPOSE 4000
-CMD ["npm", "--workspace", "backend", "start"]
-```
-
-## Monetization (planned)
-
-Per the project plan, this stays 100% free forever. Revenue comes from:
-1. **Affiliate** — Ahrefs, SEMrush, Surfer, Cloudflare etc. linked from "what we cannot show" footer and `/compare` pages
-2. **Display ads** — Carbon Ads or EthicalAds (set `NEXT_PUBLIC_ADS_ENABLED=1`)
-3. **Sponsored placements** — once traffic crosses ~50k monthly visitors
-4. **GitHub Sponsors** — wired into the footer
-5. **Lead generation** — referrals to vetted SEO agencies (later)
-
-## Roadmap
-
-- [x] Phase 1 — backbone (metadata + JSON-LD)
-- [x] Phase 2 — crawl + persistence (sitemap/robots/BFS, optional Playwright)
-- [x] Phase 3 — content, crawl, performance, security checks
-- [x] Phase 4 — GEO/AEO pillar (llms.txt, cloaking, Island Test, E-E-A-T)
-- [x] Phase 5 — programmatic SEO pages (per-check, comparisons, blog, badges, sitemap)
-- [x] Phase 6 — monetization hooks (affiliate, ads slot, footer, GitHub Sponsors)
-- [ ] Phase 7 — production deploy (Vercel + Render)
-- [ ] Phase 8 — launch (Product Hunt, Show HN, dev.to)
-- [ ] Phase 9 — Supabase persistence + email signup for crawl history
-- [ ] Phase 10 — quarterly "State of GEO" data report
+Adding a check is two files: a `CheckResult` in the relevant `backend/src/checks/*.ts`, and a matching entry in `frontend/lib/checks-catalog.ts` so its explainer page exists. Issues and PRs welcome — especially new GEO/AEO rules.
 
 ## License
 
-MIT.
+MIT — see [LICENSE](LICENSE).

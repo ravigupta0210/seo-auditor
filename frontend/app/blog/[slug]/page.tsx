@@ -8,7 +8,7 @@ import { Faq } from '@/app/_components/Faq';
 import { ComparisonTable } from '@/app/_components/ComparisonTable';
 import { JsonLd } from '@/app/_components/JsonLd';
 import { getAllPosts, getPost, type BlogImage, type BlogPost } from '@/lib/blog';
-import { relatedPosts, peopleAlsoSearchFor } from '@/lib/internal-links';
+import { relatedPosts, peopleAlsoSearchFor, resolvedInternalLinks } from '@/lib/internal-links';
 import { pageMetadata } from '@/lib/seo';
 import { blogPosting, breadcrumbList, faqPage } from '@/lib/schema';
 
@@ -45,6 +45,7 @@ export default async function BlogPostPage({ params }: PageProps) {
 
   const related = relatedPosts(post.slug, 3);
   const pasf = peopleAlsoSearchFor(post, 6);
+  const authored = resolvedInternalLinks(post, 6);
   const allFaqs = [...(post.peopleAlsoAsk ?? []), ...(post.faqs ?? [])];
 
   // If the body positions a visual via a token, render it there; otherwise fall
@@ -120,6 +121,25 @@ export default async function BlogPostPage({ params }: PageProps) {
           {post.flowchart && !usedFlowchartToken && <Flowchart data={post.flowchart} />}
           {post.comparisonTable && !usedTableToken && <ComparisonTable data={post.comparisonTable} />}
         </article>
+
+        {/* Hand-authored contextual links carried on each post. These were
+            written per-post and previously rendered nowhere; targets are
+            validated in resolvedInternalLinks so a missing slug can't 404. */}
+        {authored.length > 0 && (
+          <section className="post-links">
+            <h2 className="post-links__title">More on this topic</h2>
+            <ul className="post-links__list">
+              {authored.map((l) => (
+                <li key={l.href}>
+                  <Link href={l.href} className="post-links__item">
+                    <span>{l.label}</span>
+                    <span className="post-links__arrow" aria-hidden="true">→</span>
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </section>
+        )}
 
         {/* CTA — funnels every post into the actual tool */}
         <section className="cmp-cta">

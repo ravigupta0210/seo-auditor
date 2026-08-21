@@ -48,6 +48,11 @@ const nextConfig = {
   async redirects() {
     return [
       { source: '/help', destination: '/services', permanent: true },
+      // Two internal links were authored against slugs that were never
+      // published. Redirecting rather than editing 8 post bodies also fixes
+      // any external link or index entry pointing at them.
+      { source: '/blog/how-to-recover-from-google-penalty', destination: '/blog/what-is-a-google-manual-action', permanent: true },
+      { source: '/check/structured-data.jsonld.missing', destination: '/check/jsonld.missing', permanent: true },
     ];
   },
   async rewrites() {

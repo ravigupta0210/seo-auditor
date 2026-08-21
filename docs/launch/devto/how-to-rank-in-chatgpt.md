@@ -66,8 +66,6 @@ The honest part: you cannot pay to appear in ChatGPT, and you cannot fake author
 
 Optimizing for ChatGPT and optimizing for Google search overlap a lot, but the priority order differs. The table below shows where to focus depending on which surface you are chasing — and why Bing keeps showing up as the hidden requirement for ChatGPT.
 
-If your goal is broad AI visibility rather than ChatGPT alone, treat this as one part of a larger [generative engine optimization](https://freeseoaudit.vercel.app/blog/what-is-generative-engine-optimization) strategy — the same answer-first, schema-rich foundation also feeds Perplexity and Google's AI Overviews.
-
 **Where to focus for ChatGPT vs Google search**
 
 | Factor | Rank in ChatGPT | Rank in Google search |
@@ -78,6 +76,8 @@ If your goal is broad AI visibility rather than ChatGPT alone, treat this as one
 | Structured data payoff | High — models parse FAQ/Article schema | Medium — rich results eligibility |
 | Can you pay to appear? | No paid placement in answers | Yes (Google Ads, separate from organic) |
 | Brand mentions | Strong signal for trust/recall | Indirect via links and authority |
+
+If your goal is broad AI visibility rather than ChatGPT alone, treat this as one part of a larger [generative engine optimization](https://freeseoaudit.vercel.app/blog/what-is-generative-engine-optimization) strategy — the same answer-first, schema-rich foundation also feeds Perplexity and Google's AI Overviews.
 
 ## FAQ
 

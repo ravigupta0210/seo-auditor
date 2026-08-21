@@ -55,6 +55,18 @@ So the strategy most sites land on is not "block everything" or "allow everythin
 
 Below is the lookup table for the crawlers worth caring about in 2026, what each one does, and the default recommendation. "Block" means it mostly takes for training with no citation upside. "Allow" means it can send you traffic. "Your call" means it depends on whether you want your content used for AI features at all.
 
+**Major AI crawlers in 2026: what each does and whether to block it**
+
+| Bot (User-agent) | Owner | What it does | Default call |
+| --- | --- | --- | --- |
+| GPTBot | OpenAI | Crawls the web to train future GPT models | Block (training only) |
+| OAI-SearchBot | OpenAI | Fetches pages live for ChatGPT search + citations | Allow (sends traffic) |
+| ClaudeBot | Anthropic | Crawls for training and live answer fetches | Your call |
+| PerplexityBot | Perplexity | Live retrieval for cited Perplexity answers | Allow (sends traffic) |
+| Google-Extended | Google | Opt-out token for Gemini training + AI features | Your call (no SEO impact) |
+| CCBot | Common Crawl | Bulk archive many AI labs train on indirectly | Block (training only) |
+| Bytespider | ByteDance | Aggressive scraping for training | Block |
+
 A few notes the table can't hold: **Google-Extended** is not a crawler — it's a token Googlebot reads to decide whether your content trains Gemini and feeds AI features. Blocking it does NOT remove you from Google Search or AI Overviews; it only opts you out of model training. **CCBot** belongs to Common Crawl, a nonprofit archive that many AI labs train on indirectly, so blocking it quietly cuts off several downstream models at once.
 
 ## Step-by-step: deciding what to block
@@ -72,18 +84,6 @@ Blocking AI crawlers does not hurt traditional SEO, because the user-agents you 
 Where it gets nuanced is **AI search visibility**, which is a newer, separate channel from blue-link SEO. Blocking the live-search bots — OAI-SearchBot, PerplexityBot, ClaudeBot's user-facing fetches — means you won't appear as a cited source in ChatGPT, Perplexity, or Claude answers. That doesn't dent your Google rank, but in 2026 a meaningful slice of discovery happens inside AI answers, and a blocked site simply isn't eligible to be cited.
 
 So frame the decision honestly: blocking AI crawlers protects your content from uncredited training use at the cost of AI-answer visibility. If your business depends on being the source AI tools quote, block training bots only. If your content is your product (paywalled news, courses, proprietary research), blocking broadly is the rational defensive move. There's no universally correct answer — only the right answer for your model.
-
-**Major AI crawlers in 2026: what each does and whether to block it**
-
-| Bot (User-agent) | Owner | What it does | Default call |
-| --- | --- | --- | --- |
-| GPTBot | OpenAI | Crawls the web to train future GPT models | Block (training only) |
-| OAI-SearchBot | OpenAI | Fetches pages live for ChatGPT search + citations | Allow (sends traffic) |
-| ClaudeBot | Anthropic | Crawls for training and live answer fetches | Your call |
-| PerplexityBot | Perplexity | Live retrieval for cited Perplexity answers | Allow (sends traffic) |
-| Google-Extended | Google | Opt-out token for Gemini training + AI features | Your call (no SEO impact) |
-| CCBot | Common Crawl | Bulk archive many AI labs train on indirectly | Block (training only) |
-| Bytespider | ByteDance | Aggressive scraping for training | Block |
 
 ## FAQ
 

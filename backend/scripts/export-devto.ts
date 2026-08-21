@@ -42,11 +42,23 @@ const DEVTO_TAGS: Record<string, string> = {
   'technical-seo': 'webdev, seo, programming, performance',
 };
 
+function renderTable(t: Post['comparisonTable']): string[] {
+  if (!t?.headers?.length) return [];
+  const out: string[] = [];
+  if (t.caption) { out.push(`**${t.caption}**`); out.push(''); }
+  out.push(`| ${t.headers.join(' | ')} |`);
+  out.push(`| ${t.headers.map(() => '---').join(' | ')} |`);
+  for (const row of t.rows ?? []) out.push(`| ${row.map((c) => absolutize(String(c))).join(' | ')} |`);
+  out.push('');
+  return out;
+}
+
 function toMarkdown(p: Post): string {
   const canonical = `${SITE}/blog/${p.slug}`;
   const tags = DEVTO_TAGS[p.cluster ?? ''] ?? 'seo, webdev, ai, programming';
 
   const out: string[] = [];
+  let tableRendered = false;
   // Dev.to front matter. published:false so you review before it goes live.
   out.push('---');
   out.push(`title: ${p.title}`);
@@ -66,21 +78,24 @@ function toMarkdown(p: Post): string {
     out.push(`## ${s.heading}`);
     out.push('');
     for (const para of s.body ?? []) {
-      // Drop the renderer's custom tokens — they mean nothing outside our site.
-      if (/^\[\[(flowchart|table|image:\d+)\]\]$/.test(para.trim())) continue;
+      const token = para.trim();
+      // The body references the table in place ("Here are the ones worth
+      // knowing"), so render it where the token sits rather than appending it
+      // at the end where the surrounding prose no longer makes sense.
+      if (token === '[[table]]') {
+        out.push(...renderTable(p.comparisonTable));
+        tableRendered = true;
+        continue;
+      }
+      // Other custom tokens mean nothing outside our own renderer.
+      if (/^\[\[(flowchart|image:\d+)\]\]$/.test(token)) continue;
       out.push(absolutize(para));
       out.push('');
     }
   }
 
-  if (p.comparisonTable?.headers?.length) {
-    const t = p.comparisonTable;
-    if (t.caption) { out.push(`**${t.caption}**`); out.push(''); }
-    out.push(`| ${t.headers.join(' | ')} |`);
-    out.push(`| ${t.headers.map(() => '---').join(' | ')} |`);
-    for (const row of t.rows ?? []) out.push(`| ${row.map((c) => absolutize(String(c))).join(' | ')} |`);
-    out.push('');
-  }
+  // Fallback: only if the body had no [[table]] token to anchor it.
+  if (!tableRendered) out.push(...renderTable(p.comparisonTable));
 
   if (p.faqs?.length) {
     out.push('## FAQ');

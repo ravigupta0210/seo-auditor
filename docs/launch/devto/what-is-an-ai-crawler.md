@@ -26,6 +26,19 @@ This distinction is the heart of [generative engine optimization](https://freese
 
 You identify an AI crawler the same way you identify Googlebot: by its **user-agent string** in your server logs. Each operator publishes the exact strings and, usually, the IP ranges they crawl from, so you can allow or block them precisely. Here are the ones worth knowing in 2026:
 
+**The major AI crawlers in 2026: user-agent, operator, and what they do**
+
+| Crawler (user-agent) | Operator | Purpose | Type |
+| --- | --- | --- | --- |
+| GPTBot | OpenAI | Collects text to train and improve GPT models | Training |
+| OAI-SearchBot | OpenAI | Indexes pages to cite in ChatGPT search results | Retrieval |
+| ChatGPT-User | OpenAI | Fetches a page when a user asks ChatGPT about it | Retrieval (user-triggered) |
+| ClaudeBot | Anthropic | Collects text to train Claude models | Training |
+| PerplexityBot | Perplexity | Indexes pages to cite in Perplexity answers | Retrieval |
+| Google-Extended | Google | Opt-out token for Gemini training and grounding | Control token |
+| Bytespider | ByteDance (TikTok) | Collects data for ByteDance AI products | Training |
+| CCBot | Common Crawl | Builds the open dataset many models train on | Training (dataset) |
+
 A few things this table makes clear. First, one company can run several crawlers — OpenAI alone operates `GPTBot` (training), `OAI-SearchBot` (search retrieval), and `ChatGPT-User` (fetched when a user pastes or asks about a URL). Blocking one does not block the others. Second, `Google-Extended` is not a crawler at all in the normal sense — it is a control token you place in robots.txt to opt out of Gemini training and grounding, while regular Googlebot keeps crawling for classic search. Third, `CCBot` belongs to Common Crawl, a nonprofit whose open dataset is a training source for many models, so it is often the most consequential single bot to think about.
 
 If you want the full copy-paste list of strings and how to act on each one, see [how to block AI crawlers](https://freeseoaudit.vercel.app/blog/how-to-block-ai-crawlers).
@@ -71,19 +84,6 @@ You control AI crawlers primarily through `robots.txt`, the plain-text file at t
 To *allow* AI crawlers, the safest move is to do nothing that blocks them — no catch-all `Disallow`, no firewall rule that trips on AI user-agents — and to publish a [well-formed llms.txt file](https://freeseoaudit.vercel.app/blog/how-to-write-an-llms-txt-file) pointing to your best content. Remember that robots.txt is a request, not a wall: reputable crawlers (GPTBot, ClaudeBot, PerplexityBot) honor it, but honoring it is voluntary.
 
 The hard part is verifying that your intended policy is actually what crawlers experience. This is where our tool helps: the [free SEO + GEO audit on the homepage](https://freeseoaudit.vercel.app/) probes your site with real AI user-agents, so it catches when a page is accidentally blocked or **cloaked** — served differently to `GPTBot` and `PerplexityBot` than to a normal browser. Paste any URL and it reports which AI crawlers can reach you, whether your robots.txt does what you think, and where your content falls short of being citable. Fix what it flags and your allow/block policy matches reality instead of your assumptions.
-
-**The major AI crawlers in 2026: user-agent, operator, and what they do**
-
-| Crawler (user-agent) | Operator | Purpose | Type |
-| --- | --- | --- | --- |
-| GPTBot | OpenAI | Collects text to train and improve GPT models | Training |
-| OAI-SearchBot | OpenAI | Indexes pages to cite in ChatGPT search results | Retrieval |
-| ChatGPT-User | OpenAI | Fetches a page when a user asks ChatGPT about it | Retrieval (user-triggered) |
-| ClaudeBot | Anthropic | Collects text to train Claude models | Training |
-| PerplexityBot | Perplexity | Indexes pages to cite in Perplexity answers | Retrieval |
-| Google-Extended | Google | Opt-out token for Gemini training and grounding | Control token |
-| Bytespider | ByteDance (TikTok) | Collects data for ByteDance AI products | Training |
-| CCBot | Common Crawl | Builds the open dataset many models train on | Training (dataset) |
 
 ## FAQ
 

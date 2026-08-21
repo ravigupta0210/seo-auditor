@@ -1,0 +1,24 @@
+name: Security
+
+# Runs on every push and PR. This exists because main was force-pushed with an
+# obfuscated payload injected into frontend/next.config.js on 2026-07-27, which
+# executes on every build. Branch protection now blocks force pushes; this is
+# the second layer, catching the payload itself however it arrives.
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+# Least privilege — this job only needs to read the code.
+permissions:
+  contents: read
+
+jobs:
+  injected-code:
+    name: Check for injected code
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Scan tracked files
+        run: bash scripts/check-injected-code.sh

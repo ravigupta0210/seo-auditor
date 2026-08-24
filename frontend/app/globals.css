@@ -1,3 +1,62 @@
+/*
+ * Tailwind v4, imported WITHOUT preflight.
+ *
+ * Preflight is Tailwind's CSS reset — it strips default margins, list styles
+ * and heading sizes. This file is ~1,600 hand-written lines that rely on those
+ * defaults, so pulling in preflight would visibly break every existing page.
+ * Importing only theme + utilities gives us Tailwind's utility classes (and
+ * therefore shadcn/ui compatibility) with zero effect on what already renders.
+ *
+ * If the whole codebase is ever migrated to Tailwind, add
+ * `@import "tailwindcss/preflight.css" layer(base);` and re-verify every page.
+ */
+@layer theme, base, components, utilities;
+@import "tailwindcss/theme.css" layer(theme);
+@import "tailwindcss/utilities.css" layer(utilities);
+
+/*
+ * Map shadcn/ui's expected tokens onto this project's existing design tokens,
+ * so any shadcn component dropped in inherits the site theme automatically
+ * instead of shipping its own slate palette.
+ *
+ * Deliberately done in Tailwind's `--color-*` namespace rather than by
+ * redefining the bare variables: shadcn uses `--accent` to mean "subtle hover
+ * background", while this codebase has used `--accent` for the brand purple
+ * since day one. Redefining it here would silently recolour the entire site.
+ */
+@theme inline {
+  --color-background: var(--bg);
+  --color-foreground: var(--text);
+
+  --color-card: var(--bg-card);
+  --color-card-foreground: var(--text);
+  --color-popover: var(--bg-elevated);
+  --color-popover-foreground: var(--text);
+
+  --color-primary: var(--accent);
+  --color-primary-foreground: #ffffff;
+  --color-secondary: var(--bg-elevated);
+  --color-secondary-foreground: var(--text);
+
+  --color-muted: var(--bg-elevated);
+  --color-muted-foreground: var(--text-muted);
+
+  /* shadcn's "accent" = hover surface, NOT the brand colour. */
+  --color-accent: var(--bg-card-hover);
+  --color-accent-foreground: var(--text);
+
+  --color-destructive: var(--error);
+  --color-destructive-foreground: #ffffff;
+
+  --color-border: var(--border);
+  --color-input: var(--border-strong);
+  --color-ring: var(--accent);
+
+  --radius-sm: var(--radius-sm);
+  --radius-md: var(--radius);
+  --radius-lg: var(--radius-lg);
+}
+
 :root {
   /* Surfaces — refined slate-black (Linear / Vercel) */
   --bg: #0b0c0e;

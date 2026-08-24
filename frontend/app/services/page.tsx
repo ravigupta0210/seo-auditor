@@ -181,7 +181,17 @@ export default function ServicesPage() {
             Not because we cut corners. Agencies bill you for analyst hours spent manually checking things. We built
             the auditor that does that part in seconds, so you only pay for the judgement and the implementation.
           </p>
-          <div className="cmp-matrix-wrap">
+          {/*
+            `cmp-table-wrap` (not `cmp-matrix-wrap`, which is /compare's page
+            section) is the wrapper that pairs with `cmp-table` — it carries the
+            overflow-x this table needs on a phone.
+
+            The cells carry no `cmp-cell`: that class is `display: inline-block`
+            and belongs on the <span> /compare puts inside a cell. On a <td> it
+            takes the cell out of the table layout entirely, so the column stops
+            lining up with its own header.
+          */}
+          <div className="cmp-table-wrap">
             <table className="cmp-table" style={{ width: '100%' }}>
               <thead>
                 <tr>
@@ -194,8 +204,9 @@ export default function ServicesPage() {
                 {AGENCY_COMPARISON.map((r) => (
                   <tr key={r.label}>
                     <th scope="row" style={{ textAlign: 'left', fontWeight: 500 }}>{r.label}</th>
-                    <td className="cmp-cell">{r.agency}</td>
-                    <td className="cmp-cell cmp-cell--ok"><strong>{r.us}</strong></td>
+                    <td>{r.agency}</td>
+                    {/* Tint the whole winning column, not just its header. */}
+                    <td className="cmp-matrix__us cmp-cell--ok"><strong>{r.us}</strong></td>
                   </tr>
                 ))}
               </tbody>

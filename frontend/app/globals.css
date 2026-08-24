@@ -52,9 +52,11 @@
   --color-input: var(--border-strong);
   --color-ring: var(--accent);
 
-  --radius-sm: var(--radius-sm);
-  --radius-md: var(--radius);
-  --radius-lg: var(--radius-lg);
+  /* Radius tokens are deliberately NOT redefined here. Tailwind's --radius-*
+     namespace collides with this project's existing --radius-sm / --radius-lg,
+     and `--radius-sm: var(--radius-sm)` is self-referential — the browser
+     treats a circular custom property as invalid, which silently kills every
+     border-radius on the site. shadcn components fall back to their defaults. */
 }
 
 :root {
@@ -1685,4 +1687,43 @@ select.field-input {
   .hero-preview__body { flex-direction: column; align-items: stretch; }
   .hero-preview__score { flex-direction: row; justify-content: center; gap: 18px; }
   .hero-preview__text { white-space: normal; }
+}
+
+/* ---------- Homepage: lead feature (breaks the equal-card grid) ---------- */
+.feat-lead {
+  display: grid; grid-template-columns: 1.45fr 1fr; gap: 26px;
+  padding: 26px 28px; margin-bottom: 14px;
+  border-radius: var(--radius);
+  background: var(--accent-grad-soft);
+  border: 1px solid var(--border-strong);
+  box-shadow: 0 24px 60px -44px var(--accent-glow);
+}
+.feat-lead__badge {
+  display: inline-block; margin-bottom: 12px;
+  font-family: var(--mono); font-size: 10.5px; letter-spacing: 0.08em;
+  text-transform: uppercase; color: var(--accent);
+  padding: 4px 10px; border-radius: 999px;
+  background: var(--bg); border: 1px solid var(--border);
+}
+.feat-lead__title { margin: 0 0 10px; font-size: 21px; font-weight: 700; letter-spacing: -0.02em; }
+.feat-lead__body { margin: 0 0 16px; font-size: 14.5px; line-height: 1.65; color: var(--text-dim); }
+.feat-lead__links { display: flex; flex-wrap: wrap; gap: 16px; font-size: 13.5px; font-weight: 500; }
+.feat-lead__side {
+  list-style: none; margin: 0; padding: 0;
+  display: flex; flex-direction: column; gap: 8px; justify-content: center;
+}
+.feat-lead__side li {
+  display: flex; align-items: center; gap: 10px;
+  padding: 10px 13px; border-radius: var(--radius-sm);
+  background: var(--bg); border: 1px solid var(--border);
+  font-size: 12.5px; color: var(--text-dim);
+}
+.feat-lead__side span {
+  font-family: var(--mono); font-size: 9.5px; font-weight: 700;
+  letter-spacing: 0.06em; flex: 0 0 42px;
+}
+.feat-row { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; }
+@media (max-width: 860px) {
+  .feat-lead { grid-template-columns: 1fr; gap: 18px; }
+  .feat-row  { grid-template-columns: 1fr; }
 }

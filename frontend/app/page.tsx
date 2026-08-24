@@ -91,24 +91,46 @@ export default function HomePage() {
           heading="90+ checks across 7 categories"
           subheading="Everything Google's starter guide names — plus the AI-search angle most tools haven't caught up with."
         >
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))', gap: 14 }}>
+          {/* Deliberately not four equal cards: GEO is the differentiator, so it
+              leads at full width and the classic-SEO surface follows beneath.
+              Each links to a real check page rather than all four to /check. */}
+          <article className="feat-lead">
+            <div className="feat-lead__main">
+              <span className="feat-lead__badge">The differentiator</span>
+              <h3 className="feat-lead__title">GEO / AEO — can AI actually read you?</h3>
+              <p className="feat-lead__body">
+                We fetch your page as <strong>GPTBot</strong>, <strong>ClaudeBot</strong>,{' '}
+                <strong>PerplexityBot</strong> and <strong>OAI-SearchBot</strong>, then diff the
+                results against a normal browser. That catches the failures classic SEO tools
+                cannot see — pages blocked to AI crawlers, content that only exists after
+                JavaScript runs, and cloaking introduced by a CDN rule nobody remembers writing.
+              </p>
+              <div className="feat-lead__links">
+                <Link href="/check/geo.jsRequired.blocking">JavaScript-only content →</Link>
+                <Link href="/check/geo.aibots.blocked">AI crawlers blocked →</Link>
+                <Link href="/check/geo.islandTest.weak">Island Test →</Link>
+              </div>
+            </div>
+            <ul className="feat-lead__side">
+              <li><span className="sev-error">ERROR</span> Content requires JavaScript</li>
+              <li><span className="sev-warning">WARN</span> GPTBot blocked in robots.txt</li>
+              <li><span className="sev-warning">WARN</span> Cloaking detected for ClaudeBot</li>
+              <li><span className="sev-pass">PASS</span> llms.txt present and valid</li>
+            </ul>
+          </article>
+
+          <div className="feat-row">
             <FeatureCard
               icon="◆"
-              href="/check"
+              href="/check/metadata.title.missing"
               title="Classic SEO"
               body="Title, meta description, canonical, hreflang, Open Graph, Twitter Cards, headings, alt text, robots."
             />
             <FeatureCard
               icon="✦"
-              href="/check"
+              href="/check/jsonld.missing"
               title="JSON-LD validation"
               body="Parses every schema.org block, checks required + recommended fields per type, catches the 78% of errors that are syntax."
-            />
-            <FeatureCard
-              icon="✸"
-              href="/check"
-              title="GEO / AEO"
-              body="llms.txt, AI-crawler accessibility (GPTBot, ClaudeBot, Perplexity), Island Test for citation-worthy content."
             />
             <FeatureCard
               icon="✓"

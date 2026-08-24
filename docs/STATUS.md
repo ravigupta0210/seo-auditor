@@ -55,49 +55,74 @@ exfiltrated via an Ethereum-RPC-fronted C2. It also removed `.env` from
 - Rate limiting on audit endpoints + 2-slot global crawl cap
 - Checks catalog 19 → 67 (harvested from live engine runs, not hand-written)
 - Internal link graph: 48 orphans → 0, 178 distinct "Keep reading" sets
-- Tailwind v4 + shadcn wired (no preflight; tokens mapped in `--color-*`)
+- Tailwind v4 + shadcn wired **and used** on the four planned surfaces (see below)
 - Homepage: product preview, hero fixed, equal-card grid broken
 - `/services`: lead tier dominant, process section added
 - Dev.to post #1 live with 11 links back, canonical correct
 
-## The shadcn task (say "do shadcn part" after a Claude Code restart)
+## shadcn — done 2026-08-24
 
-Everything is wired and verified; nothing was migrated. Do NOT convert the
-existing 449 pages — the CSS layer was never the problem, composition was, and
-that work is already done.
+All four planned surfaces are built. `frontend` builds clean (449 pages) and
+`backend` typechecks. Nothing was migrated: the other ~449 pages still use the
+hand-written CSS, which was the right call — the CSS layer was never the
+problem.
 
-Already in place:
-- Tailwind v4 imported WITHOUT preflight (`app/globals.css` top). Preflight
-  would strip the defaults ~1,600 lines of hand-written CSS rely on.
-- `components.json`, `lib/utils.ts` (`cn`), `.mcp.json` (shadcn MCP server)
-- shadcn tokens mapped in Tailwind's `--color-*` namespace via `@theme inline`.
-  Deliberately NOT the bare vars: shadcn's `--accent` means "hover surface",
-  this project's `--accent` is the brand purple. Radius tokens are left
-  unmapped — `--radius-sm: var(--radius-sm)` is self-referential and kills
-  every border-radius on the site.
-- `components/ui/button.tsx` installed as a proof of wiring.
-- Deps that the CLI claims to install but does not: `class-variance-authority`,
-  `@radix-ui/react-slot`. Install manually if a component fails to typecheck.
+**Shipped**
 
-What to actually build with it (new interactive surfaces only):
-1. `/quote` form — replace the hand-rolled selects/inputs with shadcn Form,
-   Input, Select, Textarea. Most valuable: it is the revenue funnel and the
-   native selects are the weakest UI on the site.
-2. Audit view — Tabs for filtering findings by category, Accordion for the
-   collapsed passes, Tooltip for severity meanings.
-3. `EmailReportModal` and `ShareButton` — Dialog / DropdownMenu, for real focus
-   trapping and keyboard handling the hand-rolled versions lack.
-4. `/admin` — Table, Badge, Card.
+1. `/quote` — Label / Input / Textarea / Select. The four native `<select>`s
+   are now Radix, with keyboard nav, type-ahead and a themed popover. Also
+   removed a duplicated "Not sure yet" budget option.
+2. Audit view — Tabs filter findings by category (only appears when there is
+   more than one category present), Accordion replaces the `<details>` passes
+   block, Tooltip on each severity tile explains what it costs the score.
+   Category chips now use `categoryLabel()` instead of the raw id.
+3. `EmailReportModal` → Dialog (real focus trap, scroll lock, Esc, aria) and
+   `ShareButton` → DropdownMenu (roving focus, type-ahead, focus return). Both
+   keep their existing `.modal-*` / `.btn` skins — the look is unchanged.
+4. `/admin` — `ScrollTable` rebuilt on shadcn Table (sticky header and
+   per-column truncation preserved); status strings replaced by Badges.
+   **Card was deliberately skipped**: `.glass-card` is the site's card and
+   swapping it would make `/admin` the odd page out.
 
-Rule: every shadcn component must inherit the theme via the mapping above. If
-one arrives with its own slate palette, the mapping is wrong — fix the mapping,
-do not restyle the component.
+**Infrastructure this required** — read before adding another component:
+
+- `lucide-react` and `tw-animate-css` added as deps (shadcn components import
+  icons from the first; the `animate-in` / `accordion-down` utilities come from
+  the second and are silently no-ops without it).
+- `@custom-variant dark (html:not([data-theme="light"]) &)` in `globals.css`.
+  shadcn ships `dark:` on every surface; Tailwind's default `dark` is
+  `prefers-color-scheme`, so a visitor on a light OS got shadcn's light
+  treatment on this site's dark page. Rebound to the real theme switch.
+- A **scoped preflight substitute** in `@layer base`, keyed on `[data-slot]`:
+  resets UA chrome on `button[data-slot]` / form controls, and sets
+  `border-color: var(--border)` inside shadcn subtrees. Without it a Tooltip
+  trigger renders inside a grey browser button and every `border-b` divider
+  draws in the *text* colour. This is the piece shadcn's own `globals.css`
+  provides via `* { @apply border-border }`; we cannot use that because
+  preflight is off.
+- Components were re-scaled (not re-coloured) to the site's field metrics:
+  44px controls, 15px text, `var(--radius-sm)`. The palette already came
+  through the `@theme inline` mapping. `Badge` gained `success` / `warning` /
+  `danger` / `muted` variants on the project's severity tokens; `Table` gained
+  a `containerClassName` prop (a sticky `<th>` only sticks against the element
+  that actually scrolls); `DialogContent` gained `overlayClassName` and now
+  renders inside the overlay so a flex-centred backdrop can position it.
+
+Rule, unchanged: every shadcn component must inherit the theme via the
+`@theme inline` mapping. If one arrives with its own slate palette, the mapping
+is wrong — fix the mapping, do not restyle the component.
+
+**Known follow-up:** `/feedback` still uses the hand-written `.field-input` /
+`.field-label` classes. They currently render identically to the shadcn
+versions, but the two will drift. Convert it next time that page is touched.
 
 ## Next up
 
 **UI (in progress):**
 - `/check` — 67 pages, still equal-card pattern
-- Audit result page — highest-intent screen, visually untouched
+- Saved report page (`/audit/[id]`) — still visually untouched. The *live*
+  audit view now has category tabs / accordion / tooltips; the server-rendered
+  saved report does not, and it is the one people share.
 - Depth pass: shadows/background zones instead of flat borders
 
 **Then:**
@@ -116,7 +141,6 @@ do not restyle the component.
 2. Awesome-list PR — copy in `docs/launch/awesome-lists.md`
 3. Buy the domain (brand + a separate cold-email sending domain)
 4. GitHub security log + EC2 check (see incident above)
-5. Restart Claude Code to activate the shadcn MCP (`.mcp.json` is configured)
 
 ## Facts worth not re-deriving
 

@@ -2,7 +2,7 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
-import { findCheck } from '@/lib/checks-catalog';
+import { categoryLabel, findCheck } from '@/lib/checks-catalog';
 
 export interface Check {
   id: string;
@@ -86,7 +86,7 @@ export function CheckCard({
             {check.affectedPages.length} pages
           </span>
         )}
-        <span className="category-chip">{check.category}</span>
+        <span className="category-chip">{categoryLabel(check.category)}</span>
         <span style={{ color: 'var(--text-muted)', fontSize: 14, transition: 'transform 180ms', transform: open ? 'rotate(45deg)' : 'rotate(0)' }}>+</span>
       </button>
 

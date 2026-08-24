@@ -3,6 +3,14 @@
 import { useEffect, useState } from 'react';
 import { submitLead } from '@/lib/api';
 import { track } from '@/lib/analytics';
+import {
+  Dialog,
+  DialogClose,
+  DialogContent,
+  DialogDescription,
+  DialogTitle,
+} from '@/components/ui/dialog';
+import { Input } from '@/components/ui/input';
 
 const MailIcon = () => (
   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
@@ -15,12 +23,6 @@ const CheckIcon = () => (
     <path d="M20 6 9 17l-5-5" />
   </svg>
 );
-const CloseIcon = () => (
-  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" aria-hidden="true">
-    <path d="M18 6 6 18M6 6l12 12" />
-  </svg>
-);
-
 /**
  * Post-audit popup: nudges the visitor to get their report by email, because
  * the live results vanish when they close the tab. Fully optional — closes via
@@ -94,15 +96,6 @@ export function EmailReportModal({ auditId, url }: { auditId: string; url: strin
     }
   };
 
-  useEffect(() => {
-    if (!open) return;
-    const onKey = (e: KeyboardEvent) => e.key === 'Escape' && dismiss();
-    window.addEventListener('keydown', onKey);
-    return () => window.removeEventListener('keydown', onKey);
-  }, [open]);
-
-  if (!open) return null;
-
   async function onSubmit(e: React.FormEvent) {
     e.preventDefault();
     if (!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email)) {
@@ -132,19 +125,31 @@ export function EmailReportModal({ auditId, url }: { auditId: string; url: strin
   }
 
   return (
-    <div className="modal-backdrop" onClick={dismiss} role="dialog" aria-modal="true" aria-label="Email me this report">
-      <div className="modal-card" onClick={(e) => e.stopPropagation()}>
-        <button className="modal-close" onClick={dismiss} aria-label="Close">
-          <CloseIcon />
-        </button>
+    <Dialog open={open} onOpenChange={(next) => { if (!next) dismiss(); }}>
+      {/*
+        Radix supplies the focus trap, scroll lock, Escape handling, backdrop
+        dismissal and aria wiring that the hand-rolled version lacked. The
+        `.modal-*` classes still carry every pixel of the look; only the
+        geometry utilities shadcn injects are neutralised here.
+      */}
+      <DialogContent
+        overlayClassName="modal-backdrop"
+        className="modal-card relative block top-auto left-auto translate-x-0 translate-y-0 gap-0"
+        showCloseButton={false}
+      >
+        <DialogClose className="modal-close" aria-label="Close">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" aria-hidden="true">
+            <path d="M18 6 6 18M6 6l12 12" />
+          </svg>
+        </DialogClose>
 
         {status === 'done' ? (
           <div style={{ textAlign: 'center' }}>
             <span className="modal-badge is-success">
               <CheckIcon />
             </span>
-            <h2 style={{ margin: '0 0 8px', fontSize: 21, letterSpacing: '-0.02em' }}>You&apos;re all set</h2>
-            <p style={{ margin: '0 auto', maxWidth: 320, fontSize: 14.5, color: 'var(--text-dim)', lineHeight: 1.55 }}>{message}</p>
+            <DialogTitle style={{ margin: '0 0 8px', fontSize: 21, letterSpacing: '-0.02em' }}>You&apos;re all set</DialogTitle>
+            <DialogDescription style={{ margin: '0 auto', maxWidth: 320, fontSize: 14.5, color: 'var(--text-dim)', lineHeight: 1.55 }}>{message}</DialogDescription>
             <p
               style={{
                 margin: '14px auto 0',
@@ -169,17 +174,16 @@ export function EmailReportModal({ auditId, url }: { auditId: string; url: strin
             <span className="modal-badge">
               <MailIcon />
             </span>
-            <h2 style={{ margin: '0 0 8px', fontSize: 22, letterSpacing: '-0.02em' }}>Want this report in your inbox?</h2>
-            <p style={{ margin: '0 0 20px', fontSize: 14.5, color: 'var(--text-dim)', lineHeight: 1.6 }}>
+            <DialogTitle style={{ margin: '0 0 8px', fontSize: 22, letterSpacing: '-0.02em' }}>Want this report in your inbox?</DialogTitle>
+            <DialogDescription style={{ margin: '0 0 20px', fontSize: 14.5, color: 'var(--text-dim)', lineHeight: 1.6 }}>
               These results disappear when you close the tab. Drop your email and we&apos;ll send the full
               report — no account needed.
-            </p>
+            </DialogDescription>
             <form onSubmit={onSubmit} style={{ display: 'flex', flexDirection: 'column', gap: 12 }}>
-              <input
+              <Input
                 type="email"
                 required
                 autoFocus
-                className="field-input"
                 value={email}
                 onChange={(e) => {
                   setEmail(e.target.value);
@@ -201,7 +205,7 @@ export function EmailReportModal({ auditId, url }: { auditId: string; url: strin
             </p>
           </>
         )}
-      </div>
-    </div>
+      </DialogContent>
+    </Dialog>
   );
 }

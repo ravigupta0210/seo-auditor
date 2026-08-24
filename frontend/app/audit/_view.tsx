@@ -11,6 +11,10 @@ import { EmailReportModal } from './_EmailReportModal';
 import { ConversionCTA } from './_ConversionCTA';
 import { ShareButton } from '../_components/ShareButton';
 import { track } from '@/lib/analytics';
+import { categoryLabel } from '@/lib/checks-catalog';
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
+import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip';
 
 interface Summary {
   overall: number;
@@ -184,17 +188,15 @@ export function AuditView() {
           </details>
         )}
 
-        <section style={{ display: 'flex', flexDirection: 'column', gap: 10 }}>
-          {problems.map((c, i) => (
-            <CheckCard
-              key={`${c.id}-${i}`}
-              check={c}
-              index={i}
-              auditId={phase.kind === 'done' ? phase.auditId : undefined}
-              siteUrl={url}
-            />
-          ))}
-        </section>
+        <Findings
+          // Keyed on the audit being viewed, so starting a new audit drops the
+          // previously selected category filter instead of silently applying it
+          // to a different site's results.
+          key={`${url}|${scope}`}
+          problems={problems}
+          auditId={phase.kind === 'done' ? phase.auditId : undefined}
+          siteUrl={url}
+        />
 
         {phase.kind === 'done' && problems.length === 0 && passes.length > 0 && (
           <div className="audit-allclear">
@@ -204,24 +206,26 @@ export function AuditView() {
         )}
 
         {passes.length > 0 && (
-          <details className="audit-passes">
-            <summary>
-              <span className="audit-passes__count">{passes.length}</span>
-              checks passed
-              <span className="audit-passes__hint">— expand to review</span>
-            </summary>
-            <div className="audit-passes__list">
-              {passes.map((c, i) => (
-                <CheckCard
-                  key={`${c.id}-${i}`}
-                  check={c}
-                  index={i}
-                  auditId={phase.kind === 'done' ? phase.auditId : undefined}
-                  siteUrl={url}
-                />
-              ))}
-            </div>
-          </details>
+          <Accordion type="single" collapsible className="audit-passes">
+            <AccordionItem value="passes" className="border-b-0">
+              <AccordionTrigger className="audit-passes__summary hover:no-underline">
+                <span className="audit-passes__count">{passes.length}</span>
+                checks passed
+                <span className="audit-passes__hint">— expand to review</span>
+              </AccordionTrigger>
+              <AccordionContent className="audit-passes__list pb-0">
+                {passes.map((c, i) => (
+                  <CheckCard
+                    key={`${c.id}-${i}`}
+                    check={c}
+                    index={i}
+                    auditId={phase.kind === 'done' ? phase.auditId : undefined}
+                    siteUrl={url}
+                  />
+                ))}
+              </AccordionContent>
+            </AccordionItem>
+          </Accordion>
         )}
 
         {phase.kind === 'running' && checks.length === 0 && (
@@ -261,33 +265,112 @@ function StatusLine({ phase, crawled, checkCount }: { phase: Phase; crawled: num
   );
 }
 
+/**
+ * What each severity actually costs. Surfaced on hover/focus because the score
+ * is the first thing people question — "why 62?" is answerable from here.
+ */
+const SEVERITY_HELP: Record<'error' | 'warning' | 'info' | 'pass', string> = {
+  error: 'Something is broken or missing that search engines and AI crawlers rely on. Costs 12 points each.',
+  warning: 'Works, but below best practice — usually a quick win. Costs 4 points each.',
+  info: 'Worth knowing about. Rarely urgent. Costs 1 point each.',
+  pass: 'Already correct. No action needed, and no effect on your score.',
+};
+
 function SummaryBar({ summary }: { summary: Summary }) {
   return (
-    <div className="glass-card" style={{
-      display: 'flex',
-      alignItems: 'center',
-      gap: 28,
-      padding: '20px 24px',
-      marginBottom: 18,
-      flexWrap: 'wrap',
-    }}>
-      <ScoreRing score={summary.overall} size={110} />
-      <div style={{ display: 'flex', gap: 20, flexWrap: 'wrap' }}>
-        {(['error', 'warning', 'info', 'pass'] as const).map((s) => (
-          <Pill key={s} label={s} count={summary.totals[s]} sev={s} />
-        ))}
+    <TooltipProvider delayDuration={120}>
+      <div className="glass-card" style={{
+        display: 'flex',
+        alignItems: 'center',
+        gap: 28,
+        padding: '20px 24px',
+        marginBottom: 18,
+        flexWrap: 'wrap',
+      }}>
+        <ScoreRing score={summary.overall} size={110} />
+        <div style={{ display: 'flex', gap: 20, flexWrap: 'wrap' }}>
+          {(['error', 'warning', 'info', 'pass'] as const).map((s) => (
+            <Pill key={s} label={s} count={summary.totals[s]} sev={s} />
+          ))}
+        </div>
       </div>
-    </div>
+    </TooltipProvider>
   );
 }
 
 function Pill({ label, count, sev }: { label: string; count: number; sev: 'error' | 'warning' | 'info' | 'pass' }) {
   const color = `var(--${sev})`;
   return (
-    <div>
-      <div style={{ fontSize: 11, color: 'var(--text-muted)', textTransform: 'uppercase', letterSpacing: '0.08em', fontWeight: 600 }}>{label}</div>
-      <div style={{ fontSize: 24, fontWeight: 700, color, lineHeight: 1.2, letterSpacing: '-0.01em' }}>{count}</div>
-    </div>
+    <Tooltip>
+      {/* Spans, not divs: the trigger is a <button>, whose content model is
+          phrasing content only. `display: block` gets the same two-line stack. */}
+      <TooltipTrigger className="cursor-help text-left focus-visible:outline-none focus-visible:ring-[3px] focus-visible:ring-ring/40 rounded-[6px]">
+        <span style={{ display: 'block', fontSize: 11, color: 'var(--text-muted)', textTransform: 'uppercase', letterSpacing: '0.08em', fontWeight: 600, borderBottom: '1px dotted var(--border-strong)', paddingBottom: 1 }}>{label}</span>
+        <span style={{ display: 'block', fontSize: 24, fontWeight: 700, color, lineHeight: 1.2, letterSpacing: '-0.01em' }}>{count}</span>
+      </TooltipTrigger>
+      <TooltipContent side="bottom" sideOffset={6}>{SEVERITY_HELP[sev]}</TooltipContent>
+    </Tooltip>
+  );
+}
+
+/**
+ * The findings list, filterable by category.
+ *
+ * A single page routinely returns findings across six or seven categories at
+ * once; scanning for "just the JSON-LD problems" meant reading the whole list.
+ * The tab strip only appears once there is more than one category to choose
+ * between, so a short report is not padded with chrome it does not need.
+ */
+function Findings({
+  problems,
+  auditId,
+  siteUrl,
+}: {
+  problems: Check[];
+  auditId?: string;
+  siteUrl: string;
+}) {
+  const [cat, setCat] = useState('all');
+
+  const categories = useMemo(() => {
+    const counts = new Map<string, number>();
+    for (const c of problems) counts.set(c.category, (counts.get(c.category) ?? 0) + 1);
+    return [...counts.entries()].map(([id, count]) => ({ id, count }));
+  }, [problems]);
+
+  const list = (only: string) => (
+    <section style={{ display: 'flex', flexDirection: 'column', gap: 10 }}>
+      {problems
+        .filter((c) => only === 'all' || c.category === only)
+        .map((c, i) => (
+          <CheckCard key={`${c.id}-${i}`} check={c} index={i} auditId={auditId} siteUrl={siteUrl} />
+        ))}
+    </section>
+  );
+
+  if (problems.length === 0) return null;
+  if (categories.length < 2) return list('all');
+
+  // Defensive: never hand Radix a value with no matching trigger/content.
+  const active = cat !== 'all' && !categories.some((c) => c.id === cat) ? 'all' : cat;
+
+  return (
+    <Tabs value={active} onValueChange={setCat}>
+      <TabsList variant="line" className="w-full justify-start overflow-x-auto mb-1">
+        <TabsTrigger value="all" className="flex-none">
+          All <span className="opacity-60">{problems.length}</span>
+        </TabsTrigger>
+        {categories.map((c) => (
+          <TabsTrigger key={c.id} value={c.id} className="flex-none">
+            {categoryLabel(c.id)} <span className="opacity-60">{c.count}</span>
+          </TabsTrigger>
+        ))}
+      </TabsList>
+      <TabsContent value="all">{list('all')}</TabsContent>
+      {categories.map((c) => (
+        <TabsContent key={c.id} value={c.id}>{list(c.id)}</TabsContent>
+      ))}
+    </Tabs>
   );
 }
 

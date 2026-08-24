@@ -5,6 +5,16 @@ import Link from 'next/link';
 import { submitQuote, type QuoteTier } from '@/lib/api';
 import { QUOTE_TIER_OPTIONS, NO_GUARANTEE } from '@/lib/services';
 import { track } from '@/lib/analytics';
+import { Label } from '@/components/ui/label';
+import { Input } from '@/components/ui/input';
+import { Textarea } from '@/components/ui/textarea';
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from '@/components/ui/select';
 
 const CheckIcon = () => (
   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.6" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
@@ -13,7 +23,52 @@ const CheckIcon = () => (
 );
 
 const TIMELINES = ['As soon as possible', 'Within 2 weeks', 'This month', 'Just exploring'];
-const BUDGETS = ['Under $250', '$250 – $750', '$750 – $1,500', '$1,500 – $3,000', '$3,000+', 'Not sure yet'];
+const BUDGETS = ['Under $250', '$250 – $750', '$750 – $1,500', '$1,500 – $3,000', '$3,000+'];
+
+const REPO_ACCESS = [
+  { value: 'yes', label: 'Yes — we can arrange that' },
+  { value: 'maybe', label: 'Maybe, tell me more first' },
+  { value: 'no', label: 'No — send us the changes to apply ourselves' },
+];
+
+/**
+ * Radix's Select rejects an empty-string item value (it reserves "" for the
+ * placeholder state), so the "no answer" option needs a sentinel that never
+ * reaches the API.
+ */
+const NONE = '__none';
+
+/** Optional single-choice field. Renders the "no answer" row as a real option. */
+function OptionalSelect({
+  id, value, onChange, placeholder, noneLabel, options,
+}: {
+  id: string;
+  value: string;
+  onChange: (v: string) => void;
+  placeholder: string;
+  noneLabel: string;
+  options: { value: string; label: string }[];
+}) {
+  return (
+    <Select value={value || NONE} onValueChange={(v) => onChange(v === NONE ? '' : v)}>
+      <SelectTrigger id={id} className="mt-[7px]">
+        <SelectValue placeholder={placeholder} />
+      </SelectTrigger>
+      <SelectContent>
+        <SelectItem value={NONE}>
+          <span className="text-[var(--text-muted)]">{noneLabel}</span>
+        </SelectItem>
+        {options.map((o) => (
+          <SelectItem key={o.value} value={o.value}>{o.label}</SelectItem>
+        ))}
+      </SelectContent>
+    </Select>
+  );
+}
+
+function Optional() {
+  return <span className="field-optional">(optional)</span>;
+}
 
 export function QuoteForm() {
   const [name, setName] = useState('');
@@ -147,9 +202,9 @@ export function QuoteForm() {
       )}
 
       <div>
-        <label className="field-label" htmlFor="q-site">Which site is this for?</label>
-        <input
-          id="q-site" required className="field-input" value={siteUrl}
+        <Label htmlFor="q-site">Which site is this for?</Label>
+        <Input
+          id="q-site" required className="mt-[7px]" value={siteUrl}
           onChange={(e) => setSiteUrl(e.target.value)}
           placeholder="yourdomain.com" maxLength={2048} autoComplete="url"
         />
@@ -157,50 +212,48 @@ export function QuoteForm() {
 
       <div style={{ display: 'flex', gap: 16, flexWrap: 'wrap' }}>
         <div style={{ flex: '1 1 200px' }}>
-          <label className="field-label" htmlFor="q-email">Email</label>
-          <input
-            id="q-email" type="email" required className="field-input" value={email}
+          <Label htmlFor="q-email">Email</Label>
+          <Input
+            id="q-email" type="email" required className="mt-[7px]" value={email}
             onChange={(e) => setEmail(e.target.value)}
             placeholder="you@company.com" maxLength={254} autoComplete="email"
           />
         </div>
         <div style={{ flex: '1 1 160px' }}>
-          <label className="field-label" htmlFor="q-name">
-            Name <span className="field-optional">(optional)</span>
-          </label>
-          <input id="q-name" className="field-input" value={name} onChange={(e) => setName(e.target.value)} placeholder="Your name" maxLength={120} autoComplete="name" />
+          <Label htmlFor="q-name">Name <Optional /></Label>
+          <Input id="q-name" className="mt-[7px]" value={name} onChange={(e) => setName(e.target.value)} placeholder="Your name" maxLength={120} autoComplete="name" />
         </div>
       </div>
 
       <div style={{ display: 'flex', gap: 16, flexWrap: 'wrap' }}>
         <div style={{ flex: '1 1 180px' }}>
-          <label className="field-label" htmlFor="q-company">
-            Company <span className="field-optional">(optional)</span>
-          </label>
-          <input id="q-company" className="field-input" value={company} onChange={(e) => setCompany(e.target.value)} placeholder="Acme Inc" maxLength={160} autoComplete="organization" />
+          <Label htmlFor="q-company">Company <Optional /></Label>
+          <Input id="q-company" className="mt-[7px]" value={company} onChange={(e) => setCompany(e.target.value)} placeholder="Acme Inc" maxLength={160} autoComplete="organization" />
         </div>
         <div style={{ flex: '1 1 180px' }}>
-          <label className="field-label" htmlFor="q-stack">
-            Tech stack <span className="field-optional">(optional)</span>
-          </label>
-          <input id="q-stack" className="field-input" value={stack} onChange={(e) => setStack(e.target.value)} placeholder="Next.js, Webflow, WordPress…" maxLength={300} />
+          <Label htmlFor="q-stack">Tech stack <Optional /></Label>
+          <Input id="q-stack" className="mt-[7px]" value={stack} onChange={(e) => setStack(e.target.value)} placeholder="Next.js, Webflow, WordPress…" maxLength={300} />
         </div>
       </div>
 
       <div>
-        <label className="field-label" htmlFor="q-tier">What are you after?</label>
-        <select id="q-tier" className="field-input" value={tier} onChange={(e) => setTier(e.target.value)}>
-          <option value="">Choose one…</option>
-          {QUOTE_TIER_OPTIONS.map((o) => (
-            <option key={o.value} value={o.value}>{o.label}</option>
-          ))}
-        </select>
+        <Label htmlFor="q-tier">What are you after?</Label>
+        <Select value={tier} onValueChange={setTier}>
+          <SelectTrigger id="q-tier" className="mt-[7px]">
+            <SelectValue placeholder="Choose one…" />
+          </SelectTrigger>
+          <SelectContent>
+            {QUOTE_TIER_OPTIONS.map((o) => (
+              <SelectItem key={o.value} value={o.value}>{o.label}</SelectItem>
+            ))}
+          </SelectContent>
+        </Select>
       </div>
 
       <div>
-        <label className="field-label" htmlFor="q-req">What do you need done?</label>
-        <textarea
-          id="q-req" required className="field-input" value={requirements}
+        <Label htmlFor="q-req">What do you need done?</Label>
+        <Textarea
+          id="q-req" required className="mt-[7px]" value={requirements}
           onChange={(e) => {
             setRequirements(e.target.value);
             if (status === 'error') setStatus('idle');
@@ -211,36 +264,33 @@ export function QuoteForm() {
       </div>
 
       <div style={{ display: 'flex', gap: 16, flexWrap: 'wrap' }}>
-        <div style={{ flex: '1 1 170px' }}>
-          <label className="field-label" htmlFor="q-timeline">
-            Timeline <span className="field-optional">(optional)</span>
-          </label>
-          <select id="q-timeline" className="field-input" value={timeline} onChange={(e) => setTimeline(e.target.value)}>
-            <option value="">No preference</option>
-            {TIMELINES.map((t) => <option key={t} value={t}>{t}</option>)}
-          </select>
+        <div style={{ flex: '1 1 170px', minWidth: 0 }}>
+          <Label htmlFor="q-timeline">Timeline <Optional /></Label>
+          <OptionalSelect
+            id="q-timeline" value={timeline} onChange={setTimeline}
+            placeholder="No preference" noneLabel="No preference"
+            options={TIMELINES.map((t) => ({ value: t, label: t }))}
+          />
         </div>
-        <div style={{ flex: '1 1 170px' }}>
-          <label className="field-label" htmlFor="q-budget">
-            Budget <span className="field-optional">(optional)</span>
-          </label>
-          <select id="q-budget" className="field-input" value={budget} onChange={(e) => setBudget(e.target.value)}>
-            <option value="">Not sure yet</option>
-            {BUDGETS.map((b) => <option key={b} value={b}>{b}</option>)}
-          </select>
+        <div style={{ flex: '1 1 170px', minWidth: 0 }}>
+          <Label htmlFor="q-budget">Budget <Optional /></Label>
+          <OptionalSelect
+            id="q-budget" value={budget} onChange={setBudget}
+            placeholder="Not sure yet" noneLabel="Not sure yet"
+            options={BUDGETS.map((b) => ({ value: b, label: b }))}
+          />
         </div>
       </div>
 
       <div>
-        <label className="field-label" htmlFor="q-repo">
+        <Label htmlFor="q-repo">
           Can you give us scoped repo access so we can implement the fixes?
-        </label>
-        <select id="q-repo" className="field-input" value={repoAccess} onChange={(e) => setRepoAccess(e.target.value)}>
-          <option value="">Not sure</option>
-          <option value="yes">Yes — we can arrange that</option>
-          <option value="maybe">Maybe, tell me more first</option>
-          <option value="no">No — send us the changes to apply ourselves</option>
-        </select>
+        </Label>
+        <OptionalSelect
+          id="q-repo" value={repoAccess} onChange={setRepoAccess}
+          placeholder="Not sure" noneLabel="Not sure"
+          options={REPO_ACCESS}
+        />
         <p style={{ margin: '8px 0 0', fontSize: 12.5, color: 'var(--text-muted)', lineHeight: 1.55 }}>
           We only ever ask for scoped, revocable access and we deliver changes as a pull request you approve.
           We never ask for credentials, API keys or production secrets.

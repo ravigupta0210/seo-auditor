@@ -1,8 +1,14 @@
 'use client';
 
-import { useEffect, useRef, useState } from 'react';
+import { useState } from 'react';
 import { SITE_URL } from '@/lib/seo';
 import { track } from '@/lib/analytics';
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from '@/components/ui/dropdown-menu';
 
 const ShareIcon = () => (
   <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
@@ -18,6 +24,11 @@ const CopyIcon = () => (
     <path d="M5 15V5a2 2 0 0 1 2-2h10" />
   </svg>
 );
+const ExternalIcon = () => (
+  <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+    <path d="M7 17 17 7M9 7h8v8" />
+  </svg>
+);
 const CheckIcon = () => (
   <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
     <path d="M20 6 9 17l-5-5" />
@@ -28,6 +39,11 @@ const CheckIcon = () => (
  * Share the audit report. Uses the native share sheet where available (mobile),
  * and falls back to a small menu (Copy link + X / LinkedIn / WhatsApp) on desktop.
  * Every path fires a `report_shared` event so we can see which channels spread.
+ *
+ * The menu is Radix's DropdownMenu rather than a hand-rolled popover: it brings
+ * arrow-key roving focus, type-ahead, focus return to the trigger on close and
+ * correct `aria-expanded`/`aria-controls` wiring, none of which the previous
+ * click-outside listener had.
  */
 export function ShareButton({
   reportId,
@@ -42,7 +58,6 @@ export function ShareButton({
 }) {
   const [open, setOpen] = useState(false);
   const [copied, setCopied] = useState(false);
-  const wrapRef = useRef<HTMLDivElement>(null);
 
   // Canonical report link when we have an id; otherwise the current page.
   const shareUrl = reportId
@@ -51,39 +66,29 @@ export function ShareButton({
   const shareText = `${host} scored ${score}/100 on this free SEO + AI-search (GEO) audit. Check your site's score:`;
   const shareTitle = `SEO + AI-search audit of ${host}`;
 
-  useEffect(() => {
-    if (!open) return;
-    const onDown = (e: MouseEvent) => {
-      if (wrapRef.current && !wrapRef.current.contains(e.target as Node)) setOpen(false);
-    };
-    const onKey = (e: KeyboardEvent) => e.key === 'Escape' && setOpen(false);
-    document.addEventListener('mousedown', onDown);
-    document.addEventListener('keydown', onKey);
-    return () => {
-      document.removeEventListener('mousedown', onDown);
-      document.removeEventListener('keydown', onKey);
-    };
-  }, [open]);
-
-  async function onClick() {
-    // Use the native share sheet only on touch devices (phones/tablets), where
-    // it's the expected UX. On desktop it's unreliable/invisible, so always show
-    // our own dropdown menu instead.
-    const isTouch =
+  /**
+   * Whether to offer the OS share sheet: touch devices only. On desktop
+   * `navigator.share` is unreliable or invisible, so we always use the menu.
+   * Checked synchronously so the desktop path never touches the pointer event.
+   */
+  function prefersNativeShare() {
+    return (
       typeof window !== 'undefined' &&
       typeof navigator !== 'undefined' &&
       typeof navigator.share === 'function' &&
-      window.matchMedia('(pointer: coarse)').matches;
-    if (isTouch) {
-      try {
-        await navigator.share({ title: shareTitle, text: shareText, url: shareUrl });
-        track('report_shared', { method: 'native', host, score });
-        return;
-      } catch {
-        /* user cancelled — fall through to the menu */
-      }
+      window.matchMedia('(pointer: coarse)').matches
+    );
+  }
+
+  /** `true` means the OS sheet handled it and the menu should stay shut. */
+  async function tryNativeShare() {
+    try {
+      await navigator.share({ title: shareTitle, text: shareText, url: shareUrl });
+      track('report_shared', { method: 'native', host, score });
+      return true;
+    } catch {
+      return false; // cancelled or unsupported — show the menu instead
     }
-    setOpen((o) => !o);
   }
 
   async function copyLink() {
@@ -116,78 +121,61 @@ export function ShareButton({
   ];
 
   return (
-    <div ref={wrapRef} style={{ position: 'relative', display: 'inline-block' }}>
-      <button
-        type="button"
-        onClick={onClick}
-        className={`btn ${variant === 'primary' ? 'btn-primary' : 'btn-secondary'}`}
-        aria-haspopup="menu"
-        aria-expanded={open}
-        style={{ display: 'inline-flex', alignItems: 'center', gap: 8 }}
-      >
-        <ShareIcon />
-        Share result
-      </button>
-
-      {open && (
-        <div
-          role="menu"
-          style={{
-            position: 'absolute',
-            top: 'calc(100% + 8px)',
-            left: 0,
-            zIndex: 40,
-            minWidth: 210,
-            padding: 6,
-            background: 'var(--bg-card)',
-            border: '1px solid var(--border-strong, var(--border))',
-            borderRadius: 'var(--radius, 12px)',
-            boxShadow: '0 20px 60px -20px rgba(0,0,0,0.5)',
-            display: 'flex',
-            flexDirection: 'column',
-            gap: 2,
+    <DropdownMenu open={open} onOpenChange={setOpen}>
+      <DropdownMenuTrigger asChild>
+        <button
+          type="button"
+          className={`btn ${variant === 'primary' ? 'btn-primary' : 'btn-secondary'}`}
+          style={{ display: 'inline-flex', alignItems: 'center', gap: 8 }}
+          onPointerDown={(e) => {
+            // Desktop: leave the event completely alone so Radix's own trigger
+            // handler runs and the button keeps its native focus behaviour.
+            if (open || !prefersNativeShare()) return;
+            // Touch: Radix opens on pointerdown, so suppress its handler
+            // (composeEventHandlers skips it once defaultPrevented) and give the
+            // OS sheet the user gesture it requires. Fall back to the menu if
+            // the sheet is dismissed.
+            e.preventDefault();
+            void tryNativeShare().then((handled) => {
+              if (!handled) setOpen(true);
+            });
           }}
         >
-          <button type="button" role="menuitem" onClick={copyLink} style={menuItemStyle}>
-            <span style={{ display: 'inline-flex', color: copied ? 'var(--pass)' : 'var(--text-dim)' }}>
-              {copied ? <CheckIcon /> : <CopyIcon />}
-            </span>
-            {copied ? 'Link copied!' : 'Copy link'}
-          </button>
-          {intents.map((it) => (
+          <ShareIcon />
+          Share result
+        </button>
+      </DropdownMenuTrigger>
+
+      <DropdownMenuContent align="start" className="min-w-[210px]">
+        <DropdownMenuItem
+          onSelect={(e) => {
+            e.preventDefault(); // keep the menu open so "Link copied!" is visible
+            void copyLink();
+          }}
+        >
+          <span style={{ display: 'inline-flex', color: copied ? 'var(--pass)' : 'var(--text-dim)' }}>
+            {copied ? <CheckIcon /> : <CopyIcon />}
+          </span>
+          {copied ? 'Link copied!' : 'Copy link'}
+        </DropdownMenuItem>
+        {intents.map((it) => (
+          <DropdownMenuItem key={it.key} asChild>
             <a
-              key={it.key}
-              role="menuitem"
               href={it.href}
               target="_blank"
               rel="noopener noreferrer"
-              onClick={() => {
-                track('report_shared', { method: it.key, host, score });
-                setOpen(false);
-              }}
-              style={menuItemStyle}
+              style={{ color: 'var(--text)' }}
+              onClick={() => track('report_shared', { method: it.key, host, score })}
             >
+              {/* Icon slot on every row, so the four labels share one left edge. */}
+              <span style={{ display: 'inline-flex', color: 'var(--text-muted)' }}>
+                <ExternalIcon />
+              </span>
               {it.label}
             </a>
-          ))}
-        </div>
-      )}
-    </div>
+          </DropdownMenuItem>
+        ))}
+      </DropdownMenuContent>
+    </DropdownMenu>
   );
 }
-
-const menuItemStyle: React.CSSProperties = {
-  display: 'flex',
-  alignItems: 'center',
-  gap: 10,
-  width: '100%',
-  textAlign: 'left',
-  padding: '9px 12px',
-  fontSize: 13.5,
-  color: 'var(--text)',
-  background: 'transparent',
-  border: 'none',
-  borderRadius: 8,
-  cursor: 'pointer',
-  textDecoration: 'none',
-};

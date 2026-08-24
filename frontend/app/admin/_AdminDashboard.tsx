@@ -2,6 +2,16 @@
 
 import { useEffect, useState } from 'react';
 import { BACKEND_URL } from '@/lib/api';
+import { cn } from '@/lib/utils';
+import { Badge } from '@/components/ui/badge';
+import {
+  Table,
+  TableBody,
+  TableCell,
+  TableHead,
+  TableHeader,
+  TableRow,
+} from '@/components/ui/table';
 
 type Row = Record<string, unknown>;
 interface Stats {
@@ -199,7 +209,9 @@ export function AdminDashboard() {
         renderRow={(l) => [
           l.email as string,
           shortUrl(l.url),
-          l.report_sent ? '✅ sent' : '—',
+          l.report_sent
+            ? <Badge key="s" variant="success">Sent</Badge>
+            : <Badge key="s" variant="muted">Not sent</Badge>,
           fmt(l.created_at),
           <ResendButton key="r" email={String(l.email)} auditId={l.audit_id ? String(l.audit_id) : null} apiKey={key} />,
         ]}
@@ -219,7 +231,12 @@ export function AdminDashboard() {
         apiKey={key}
         recent={data.recentAudits}
         head={['URL', 'Scope', 'Score', 'When']}
-        renderRow={(a) => [shortUrl(a.url), String(a.scope), a.overall_score == null ? '—' : String(a.overall_score), fmt(a.created_at)]}
+        renderRow={(a) => [
+          shortUrl(a.url),
+          <Badge key="sc" variant="outline">{String(a.scope)}</Badge>,
+          <ScoreBadge key="s" score={a.overall_score == null ? null : Number(a.overall_score)} />,
+          fmt(a.created_at),
+        ]}
       />
 
       <DataSection
@@ -228,7 +245,9 @@ export function AdminDashboard() {
         apiKey={key}
         recent={data.sentEmails}
         head={['To', 'Type', 'Subject', 'Status', 'When']}
-        renderRow={(e) => [e.to_email as string, String(e.kind), (e.subject as string) || '—', e.success ? '✅ sent' : '⚠️ failed', fmt(e.created_at)]}
+        renderRow={(e) => [e.to_email as string, String(e.kind), (e.subject as string) || '—', e.success
+            ? <Badge key="s" variant="success">Sent</Badge>
+            : <Badge key="s" variant="danger">Failed</Badge>, fmt(e.created_at)]}
       />
     </div>
   );
@@ -437,36 +456,62 @@ function Panel({ title, children }: { title: string; children: React.ReactNode }
   );
 }
 
+/**
+ * Audit score, banded to match `grade()` in `lib/api.ts` — the letter grade the
+ * visitor sees on their own report. A/B is green, C is amber, D/F is red. Keep
+ * these in step with `grade()`; a score that reads green here and grades C on
+ * the public report is worse than no colour at all.
+ */
+function ScoreBadge({ score }: { score: number | null }) {
+  if (score == null || !Number.isFinite(score)) {
+    return <span style={{ color: 'var(--text-faint)' }}>—</span>;
+  }
+  const variant = score >= 75 ? 'success' : score >= 60 ? 'warning' : 'danger';
+  return <Badge variant={variant}>{score}</Badge>;
+}
+
 function Empty({ children }: { children: React.ReactNode }) {
   return <p style={{ margin: 0, fontSize: 14, color: 'var(--text-muted)' }}>{children}</p>;
 }
 
 function ScrollTable({ head, rows }: { head: string[]; rows: Array<Array<React.ReactNode>> }) {
   return (
-    <div style={{ maxHeight: 400, overflow: 'auto' }}>
-      <table style={{ width: '100%', borderCollapse: 'collapse', fontSize: 13.5 }}>
-        <thead>
-          <tr>
-            {head.map((h, i) => (
-              <th key={i} style={{ position: 'sticky', top: 0, background: 'var(--bg-card)', textAlign: 'left', padding: '6px 10px 8px 0', color: 'var(--text-muted)', fontWeight: 600, fontSize: 11.5, textTransform: 'uppercase', letterSpacing: '0.05em', whiteSpace: 'nowrap' }}>
-                {h}
-              </th>
-            ))}
-          </tr>
-        </thead>
-        <tbody>
-          {rows.map((r, i) => (
-            <tr key={i}>
-              {r.map((cell, j) => (
-                <td key={j} style={{ padding: '8px 10px 8px 0', borderTop: '1px solid var(--border)', color: j === 0 ? 'var(--text)' : 'var(--text-dim)', maxWidth: 340, overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: j === 0 ? 'normal' : 'nowrap', wordBreak: j === 0 ? 'break-all' : 'normal', verticalAlign: 'top' }}>
-                  {cell}
-                </td>
-              ))}
-            </tr>
+    <Table containerClassName="max-h-[400px] overflow-auto" className="text-[13.5px]">
+      <TableHeader>
+        <TableRow className="hover:bg-transparent">
+          {head.map((h, i) => (
+            <TableHead
+              key={i}
+              // Sticky against the container above, with an opaque background so
+              // rows scroll underneath rather than showing through.
+              className="sticky top-0 z-10 h-auto bg-[var(--bg-card)] pt-1.5 pb-2 pr-2.5 pl-0 text-[11.5px] font-semibold tracking-[0.05em] whitespace-nowrap text-muted-foreground uppercase"
+            >
+              {h}
+            </TableHead>
           ))}
-        </tbody>
-      </table>
-    </div>
+        </TableRow>
+      </TableHeader>
+      <TableBody>
+        {rows.map((r, i) => (
+          <TableRow key={i}>
+            {r.map((cell, j) => (
+              <TableCell
+                key={j}
+                // First column is the identifier (a URL or an email): let it wrap
+                // and break. Everything after is metadata — keep it on one line
+                // so the columns stay scannable.
+                className={cn(
+                  'max-w-[340px] overflow-hidden py-2 pr-2.5 pl-0 align-top text-ellipsis',
+                  j === 0 ? 'break-all whitespace-normal text-foreground' : 'whitespace-nowrap text-[var(--text-dim)]',
+                )}
+              >
+                {cell}
+              </TableCell>
+            ))}
+          </TableRow>
+        ))}
+      </TableBody>
+    </Table>
   );
 }
 

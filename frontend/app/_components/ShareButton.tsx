@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useRef, useState } from 'react';
 import { SITE_URL } from '@/lib/seo';
 import { track } from '@/lib/analytics';
 import {
@@ -58,6 +58,7 @@ export function ShareButton({
 }) {
   const [open, setOpen] = useState(false);
   const [copied, setCopied] = useState(false);
+  const triggerRef = useRef<HTMLButtonElement>(null);
 
   // Canonical report link when we have an id; otherwise the current page.
   const shareUrl = reportId
@@ -121,9 +122,16 @@ export function ShareButton({
   ];
 
   return (
-    <DropdownMenu open={open} onOpenChange={setOpen}>
+    /*
+     * Non-modal on purpose. A modal menu puts `pointer-events: none` on the
+     * body, so the click that dismisses it is swallowed and the control you
+     * actually aimed at needs a second click — which reads as a dead button.
+     * This menu guards nothing, so there is no reason to trap the pointer.
+     */
+    <DropdownMenu open={open} onOpenChange={setOpen} modal={false}>
       <DropdownMenuTrigger asChild>
         <button
+          ref={triggerRef}
           type="button"
           className={`btn ${variant === 'primary' ? 'btn-primary' : 'btn-secondary'}`}
           style={{ display: 'inline-flex', alignItems: 'center', gap: 8 }}
@@ -146,7 +154,16 @@ export function ShareButton({
         </button>
       </DropdownMenuTrigger>
 
-      <DropdownMenuContent align="start" className="min-w-[210px]">
+      <DropdownMenuContent
+        align="start"
+        className="min-w-[210px]"
+        onPointerDownOutside={(e) => {
+          // The trigger counts as "outside" the menu, so a click on it would
+          // close the layer and then immediately re-open via the trigger's own
+          // toggle. Let the toggle be the only thing that acts.
+          if (triggerRef.current?.contains(e.target as Node)) e.preventDefault();
+        }}
+      >
         <DropdownMenuItem
           onSelect={(e) => {
             e.preventDefault(); // keep the menu open so "Link copied!" is visible

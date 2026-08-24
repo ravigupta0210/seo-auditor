@@ -34,6 +34,20 @@ export function EmailReportModal({ auditId, url }: { auditId: string; url: strin
   const [status, setStatus] = useState<'idle' | 'sending' | 'done' | 'error'>('idle');
   const [message, setMessage] = useState('');
 
+  /**
+   * When to interrupt.
+   *
+   * This used to fire on a 900ms timer, which landed it on top of the score,
+   * the share buttons and the primary "get these fixed for me" CTA — before
+   * the visitor had even read their result. Capturing an email is worth less
+   * than the conversion it was covering.
+   *
+   * Now it waits for a signal that the visitor is engaged or leaving:
+   *   - they scrolled past the findings (they read the result), or
+   *   - the pointer left through the top of the viewport (exit intent), or
+   *   - 45s of dwell as a backstop.
+   * Whichever fires first, and never while the result is still landing.
+   */
   useEffect(() => {
     let seen = false;
     try {
@@ -42,8 +56,33 @@ export function EmailReportModal({ auditId, url }: { auditId: string; url: strin
       /* ignore */
     }
     if (seen) return;
-    const t = setTimeout(() => setOpen(true), 900);
-    return () => clearTimeout(t);
+
+    let done = false;
+    const show = () => {
+      if (done) return;
+      done = true;
+      setOpen(true);
+      cleanup();
+    };
+
+    const onScroll = () => {
+      // Roughly "past the summary and into the findings".
+      if (window.scrollY > window.innerHeight * 0.9) show();
+    };
+    const onLeave = (e: MouseEvent) => {
+      if (e.clientY <= 0) show();
+    };
+    const backstop = setTimeout(show, 45_000);
+
+    function cleanup() {
+      window.removeEventListener('scroll', onScroll);
+      document.removeEventListener('mouseout', onLeave);
+      clearTimeout(backstop);
+    }
+
+    window.addEventListener('scroll', onScroll, { passive: true });
+    document.addEventListener('mouseout', onLeave);
+    return cleanup;
   }, [storageKey]);
 
   const dismiss = () => {

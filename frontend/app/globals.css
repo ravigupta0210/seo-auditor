@@ -1727,3 +1727,77 @@ select.field-input {
   .feat-lead { grid-template-columns: 1fr; gap: 18px; }
   .feat-row  { grid-template-columns: 1fr; }
 }
+
+/* ---------- Services: lead tier + supporting row ---------- */
+.svc-lead {
+  display: grid; grid-template-columns: 1.05fr 1fr; gap: 28px;
+  padding: 28px 30px; margin-bottom: 16px;
+  border-radius: var(--radius);
+  background: var(--accent-grad-soft);
+  border: 1px solid var(--border-strong);
+  box-shadow: 0 28px 64px -46px var(--accent-glow);
+}
+.svc-lead__badge {
+  display: inline-block; margin-bottom: 13px;
+  font-family: var(--mono); font-size: 10.5px; letter-spacing: 0.08em;
+  text-transform: uppercase; color: var(--accent);
+  padding: 4px 10px; border-radius: 999px;
+  background: var(--bg); border: 1px solid var(--border);
+}
+.svc-lead__name { margin: 0 0 8px; font-size: 22px; font-weight: 700; letter-spacing: -0.02em; }
+.svc-lead__price { margin: 0 0 12px; display: flex; align-items: baseline; gap: 9px; flex-wrap: wrap; }
+.svc-lead__price strong { font-size: 40px; letter-spacing: -0.035em; line-height: 1; }
+.svc-lead__price span { font-size: 13px; color: var(--text-muted); }
+.svc-lead__tagline { margin: 0 0 12px; font-size: 15px; line-height: 1.6; color: var(--text-dim); }
+.svc-lead__meta { margin: 0 0 20px; font-size: 13px; color: var(--text-muted); }
+.svc-lead__meta strong { color: var(--text-dim); }
+.svc-lead__cta { display: flex; gap: 10px; flex-wrap: wrap; }
+.svc-lead__includes {
+  list-style: none; margin: 0; padding: 0;
+  display: flex; flex-direction: column; gap: 9px; justify-content: center;
+}
+.svc-lead__includes li { display: flex; gap: 10px; font-size: 13.8px; line-height: 1.5; color: var(--text-dim); }
+.svc-lead__includes li span:first-child { color: var(--pass); font-weight: 700; flex: 0 0 auto; }
+
+.svc-row { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; margin-bottom: 40px; }
+.svc-card { padding: 22px 20px; display: flex; flex-direction: column; gap: 10px; }
+.svc-card__name { margin: 0; font-size: 16px; font-weight: 600; letter-spacing: -0.01em; }
+.svc-card__price { margin: 0; display: flex; align-items: baseline; gap: 7px; flex-wrap: wrap; }
+.svc-card__price strong { font-size: 27px; letter-spacing: -0.03em; }
+.svc-card__price span { font-size: 12px; color: var(--text-muted); }
+.svc-card__tagline { margin: 0; font-size: 13.5px; line-height: 1.55; color: var(--text-dim); }
+.svc-card__meta { margin: 0; font-size: 12.5px; color: var(--text-muted); }
+.svc-card__meta strong { color: var(--text-dim); }
+.svc-card__list { list-style: none; margin: 2px 0 0; padding: 0; display: flex; flex-direction: column; gap: 6px; }
+.svc-card__list li { display: flex; gap: 8px; font-size: 12.8px; line-height: 1.45; color: var(--text-muted); }
+.svc-card__list li span:first-child { color: var(--pass); font-weight: 700; flex: 0 0 auto; }
+.svc-card__cta { margin-top: auto; padding-top: 12px; display: flex; align-items: center; gap: 12px; flex-wrap: wrap; }
+.svc-card__details { font-size: 13px; color: var(--text-muted); }
+
+/* ---------- Services: process ---------- */
+.svc-process {
+  padding: 26px 28px; margin-bottom: 40px;
+  border-radius: var(--radius); background: var(--bg-card); border: 1px solid var(--border);
+}
+.svc-process__title { margin: 0 0 20px; font-size: 21px; letter-spacing: -0.02em; }
+.svc-process__steps {
+  list-style: none; margin: 0; padding: 0;
+  display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 22px;
+}
+.svc-process__steps li { display: flex; gap: 13px; }
+.svc-process__n {
+  flex: 0 0 28px; height: 28px; border-radius: 999px;
+  background: var(--accent-grad-soft); border: 1px solid var(--border);
+  display: inline-flex; align-items: center; justify-content: center;
+  font-size: 13px; font-weight: 700; color: var(--accent);
+}
+.svc-process__steps strong { display: block; font-size: 14.5px; margin-bottom: 5px; }
+.svc-process__steps p { margin: 0; font-size: 13.2px; line-height: 1.6; color: var(--text-muted); }
+.svc-process__note {
+  margin: 22px 0 0; padding-top: 16px; border-top: 1px solid var(--border);
+  font-size: 12.8px; color: var(--text-muted);
+}
+@media (max-width: 900px) {
+  .svc-lead { grid-template-columns: 1fr; gap: 20px; }
+  .svc-row, .svc-process__steps { grid-template-columns: 1fr; }
+}

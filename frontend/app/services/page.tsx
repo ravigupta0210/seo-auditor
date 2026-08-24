@@ -54,7 +54,9 @@ export default function ServicesPage() {
       <main style={{ maxWidth: 1040, margin: '0 auto', padding: '40px 24px 64px' }}>
         <header style={{ marginBottom: 32, maxWidth: 700 }}>
           <span className="page-eyebrow">Pricing</span>
-          <h1 className="page-title" style={{ marginBottom: 12 }}>We don&apos;t send you a PDF. We fix it.</h1>
+          <h1 className="page-title" style={{ marginBottom: 12, maxWidth: 640 }}>
+            We don&apos;t send you a PDF.<br />We fix it.
+          </h1>
           <p className="page-lede" style={{ margin: '0 0 10px' }}>
             Every SEO tool on the market tells you what&apos;s broken and stops there. We audit your site, then
             implement the fixes ourselves and deliver them as a pull request you review and merge.
@@ -64,55 +66,101 @@ export default function ServicesPage() {
           </p>
         </header>
 
-        {/* Pricing cards */}
-        <section
-          className="services-grid"
-          style={{ display: 'grid', gap: 18, marginBottom: 40 }}
-        >
-          {SERVICES.map((s) => (
-            <article
-              key={s.slug}
-              className="glass-card"
-              style={{
-                padding: '24px 22px',
-                display: 'flex',
-                flexDirection: 'column',
-                gap: 12,
-                ...(s.featured
-                  ? { borderColor: 'var(--border-strong)', background: 'var(--accent-grad-soft)' }
-                  : {}),
-              }}
-            >
-              {s.featured && <span className="tag" style={{ alignSelf: 'flex-start', margin: 0 }}>Most popular</span>}
-              <div>
-                <h2 style={{ margin: '0 0 6px', fontSize: 17, letterSpacing: '-0.01em' }}>{s.name}</h2>
-                <p style={{ margin: 0, display: 'flex', alignItems: 'baseline', gap: 7 }}>
-                  <strong style={{ fontSize: 30, letterSpacing: '-0.03em' }}>{s.price}</strong>
-                  {s.priceNote && (
-                    <span style={{ fontSize: 12.5, color: 'var(--text-muted)' }}>{s.priceNote}</span>
-                  )}
-                </p>
-              </div>
-              <p style={{ margin: 0, fontSize: 14, color: 'var(--text-dim)', lineHeight: 1.6 }}>{s.tagline}</p>
-              <p style={{ margin: 0, fontSize: 12.5, color: 'var(--text-muted)' }}>
-                Turnaround: <strong style={{ color: 'var(--text-dim)' }}>{s.turnaround}</strong>
-              </p>
-              <ul style={{ margin: '4px 0 0', padding: 0, listStyle: 'none', display: 'flex', flexDirection: 'column', gap: 7 }}>
-                {s.includes.slice(0, 4).map((inc) => (
-                  <li key={inc} style={{ display: 'flex', gap: 8, fontSize: 13.2, color: 'var(--text-dim)', lineHeight: 1.5 }}>
-                    <span aria-hidden="true" style={{ color: 'var(--pass)', flex: '0 0 auto', fontWeight: 700 }}>✓</span>
-                    <span>{inc}</span>
-                  </li>
+        {/* Pricing. Deliberately not four equal columns: at this width they
+            squeeze to ~215px each and the tier that actually pays the bills is
+            no more prominent than the $99 tripwire. The implementation tier
+            leads at full width with its complete inclusion list; the rest
+            follow as a compact row. */}
+        {(() => {
+          const lead = SERVICES.find((x) => x.featured)!;
+          const rest = SERVICES.filter((x) => !x.featured);
+          return (
+            <>
+              <article className="svc-lead">
+                <div className="svc-lead__main">
+                  <span className="svc-lead__badge">Most popular</span>
+                  <h2 className="svc-lead__name">{lead.name}</h2>
+                  <p className="svc-lead__price">
+                    <strong>{lead.price}</strong>
+                    {lead.priceNote && <span>{lead.priceNote}</span>}
+                  </p>
+                  <p className="svc-lead__tagline">{lead.tagline}</p>
+                  <p className="svc-lead__meta">
+                    Turnaround: <strong>{lead.turnaround}</strong>
+                  </p>
+                  <div className="svc-lead__cta">
+                    <Link href={`/quote?tier=${lead.slug}`} className="btn btn-primary">Get a price →</Link>
+                    <Link href={`/services/${lead.slug}`} className="btn btn-secondary">Full details</Link>
+                  </div>
+                </div>
+                <ul className="svc-lead__includes">
+                  {lead.includes.map((inc) => (
+                    <li key={inc}>
+                      <span aria-hidden="true">✓</span>
+                      <span>{inc}</span>
+                    </li>
+                  ))}
+                </ul>
+              </article>
+
+              <section className="svc-row">
+                {rest.map((s2) => (
+                  <article key={s2.slug} className="glass-card svc-card">
+                    <h2 className="svc-card__name">{s2.name}</h2>
+                    <p className="svc-card__price">
+                      <strong>{s2.price}</strong>
+                      {s2.priceNote && <span>{s2.priceNote}</span>}
+                    </p>
+                    <p className="svc-card__tagline">{s2.tagline}</p>
+                    <p className="svc-card__meta">
+                      Turnaround: <strong>{s2.turnaround}</strong>
+                    </p>
+                    <ul className="svc-card__list">
+                      {s2.includes.slice(0, 3).map((inc) => (
+                        <li key={inc}><span aria-hidden="true">✓</span><span>{inc}</span></li>
+                      ))}
+                    </ul>
+                    <div className="svc-card__cta">
+                      <Link href={`/quote?tier=${s2.slug}`} className="btn btn-secondary">Get a price</Link>
+                      <Link href={`/services/${s2.slug}`} className="svc-card__details">Details →</Link>
+                    </div>
+                  </article>
                 ))}
-              </ul>
-              <div style={{ marginTop: 'auto', paddingTop: 12, display: 'flex', gap: 9, flexWrap: 'wrap' }}>
-                <Link href={`/quote?tier=${s.slug}`} className={s.featured ? 'btn btn-primary' : 'btn btn-secondary'}>
-                  Get a price
-                </Link>
-                <Link href={`/services/${s.slug}`} className="btn btn-secondary">Details</Link>
+              </section>
+            </>
+          );
+        })()}
+
+        {/* The single biggest unanswered objection on this page was "what
+            actually happens after I pay?". Answering it here, not only on /quote. */}
+        <section className="svc-process">
+          <h2 className="svc-process__title">What actually happens</h2>
+          <ol className="svc-process__steps">
+            <li>
+              <span className="svc-process__n">1</span>
+              <div>
+                <strong>You send the URL. We audit it free.</strong>
+                <p>No call, no form-filling ritual. We look at the real site before quoting anything.</p>
               </div>
-            </article>
-          ))}
+            </li>
+            <li>
+              <span className="svc-process__n">2</span>
+              <div>
+                <strong>We send one fixed price, within a business day.</strong>
+                <p>Agreed before any work starts. No hourly billing, no scope creep, no retainer.</p>
+              </div>
+            </li>
+            <li>
+              <span className="svc-process__n">3</span>
+              <div>
+                <strong>We implement, you approve.</strong>
+                <p>Changes arrive as a pull request. Nothing reaches production until you merge it — then we re-audit and show the before/after diff.</p>
+              </div>
+            </li>
+          </ol>
+          <p className="svc-process__note">
+            Scoped, revocable repo access only. We never ask for credentials, API keys or production secrets.
+          </p>
         </section>
 
         {/* The honest-positioning band. This is the pitch, not a disclaimer. */}

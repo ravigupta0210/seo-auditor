@@ -60,6 +60,39 @@ exfiltrated via an Ethereum-RPC-fronted C2. It also removed `.env` from
 - `/services`: lead tier dominant, process section added
 - Dev.to post #1 live with 11 links back, canonical correct
 
+## The shadcn task (say "do shadcn part" after a Claude Code restart)
+
+Everything is wired and verified; nothing was migrated. Do NOT convert the
+existing 449 pages — the CSS layer was never the problem, composition was, and
+that work is already done.
+
+Already in place:
+- Tailwind v4 imported WITHOUT preflight (`app/globals.css` top). Preflight
+  would strip the defaults ~1,600 lines of hand-written CSS rely on.
+- `components.json`, `lib/utils.ts` (`cn`), `.mcp.json` (shadcn MCP server)
+- shadcn tokens mapped in Tailwind's `--color-*` namespace via `@theme inline`.
+  Deliberately NOT the bare vars: shadcn's `--accent` means "hover surface",
+  this project's `--accent` is the brand purple. Radius tokens are left
+  unmapped — `--radius-sm: var(--radius-sm)` is self-referential and kills
+  every border-radius on the site.
+- `components/ui/button.tsx` installed as a proof of wiring.
+- Deps that the CLI claims to install but does not: `class-variance-authority`,
+  `@radix-ui/react-slot`. Install manually if a component fails to typecheck.
+
+What to actually build with it (new interactive surfaces only):
+1. `/quote` form — replace the hand-rolled selects/inputs with shadcn Form,
+   Input, Select, Textarea. Most valuable: it is the revenue funnel and the
+   native selects are the weakest UI on the site.
+2. Audit view — Tabs for filtering findings by category, Accordion for the
+   collapsed passes, Tooltip for severity meanings.
+3. `EmailReportModal` and `ShareButton` — Dialog / DropdownMenu, for real focus
+   trapping and keyboard handling the hand-rolled versions lack.
+4. `/admin` — Table, Badge, Card.
+
+Rule: every shadcn component must inherit the theme via the mapping above. If
+one arrives with its own slate palette, the mapping is wrong — fix the mapping,
+do not restyle the component.
+
 ## Next up
 
 **UI (in progress):**

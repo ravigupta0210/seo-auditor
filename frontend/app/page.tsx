@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import { AuditForm } from './_components/AuditForm';
+import { HeroPreview } from './_components/HeroPreview';
 import { SiteFooter } from './_components/SiteFooter';
 import { SiteHeader } from './_components/SiteHeader';
 import { pageMetadata } from '@/lib/seo';
@@ -51,25 +52,27 @@ export default function HomePage() {
     <>
       <SiteHeader />
       <main style={{ maxWidth: 1100, margin: '0 auto', padding: '56px 24px 80px' }}>
-        <section style={{ maxWidth: 760, margin: '0 auto', textAlign: 'center' }}>
+        <section style={{ maxWidth: 820, margin: '0 auto', textAlign: 'center' }}>
           <span className="tag" style={{ marginBottom: 18 }}>
             <span style={{ width: 6, height: 6, borderRadius: '50%', background: 'var(--pass)', boxShadow: '0 0 8px var(--pass-glow)' }} />
             Free · No signup · SEO + AI-search (GEO)
           </span>
           <h1
-            className="hero-gradient-text"
             style={{
-              fontSize: 'clamp(34px, 5.6vw, 58px)',
-              lineHeight: 1.06,
-              margin: '0 0 18px',
+              fontSize: 'clamp(29px, 4.2vw, 43px)',
+              lineHeight: 1.12,
+              margin: '0 auto 16px',
+              maxWidth: 760,
               letterSpacing: '-0.03em',
               fontWeight: 700,
+              color: 'var(--text)',
             }}
           >
-            Everything Google checks.<br />Plus everything ChatGPT does.
+            Everything Google checks.<br />
+            <span className="hero-gradient-text">Plus everything ChatGPT does.</span>
           </h1>
-          <p style={{ fontSize: 17, color: 'var(--text-dim)', maxWidth: 580, margin: '0 auto 36px', lineHeight: 1.6 }}>
-            A full <strong style={{ color: 'var(--text)' }}>technical SEO, structured-data and metadata audit</strong> — plus whether AI answer engines can actually read and cite you. Google, Bing, ChatGPT, Perplexity and Claude, with a copy-paste fix for every issue. No signup. No paywall. No crawl cap.
+          <p style={{ fontSize: 16.5, color: 'var(--text-dim)', maxWidth: 560, margin: '0 auto 30px', lineHeight: 1.6 }}>
+            A full <strong style={{ color: 'var(--text)' }}>technical SEO, structured-data and metadata audit</strong> — plus whether AI answer engines can actually read and cite you. Copy-paste fix for every issue. No signup, no paywall, no crawl cap.
           </p>
 
           <div style={{ maxWidth: 620, margin: '0 auto' }}>
@@ -79,6 +82,8 @@ export default function HomePage() {
           <p style={{ marginTop: 14, fontSize: 12, color: 'var(--text-faint)' }}>
             Try a domain like <code style={{ color: 'var(--text-dim)' }}>vercel.com</code> · audits finish in ~3-5 seconds
           </p>
+
+          <HeroPreview />
         </section>
 
         <Section

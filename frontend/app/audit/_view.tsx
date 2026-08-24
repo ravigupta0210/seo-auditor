@@ -92,6 +92,11 @@ export function AuditView() {
   }, [url, scope]);
 
   const sortedChecks = useMemo(() => groupChecks(checks), [checks]);
+  // Passes routinely outnumber problems 4:1 — a clean page can produce 29
+  // green cards around 4 real findings. Rendering them in one flat list buries
+  // the only part anyone came for, so they are split and the passes collapsed.
+  const problems = useMemo(() => sortedChecks.filter((c) => c.severity !== 'pass'), [sortedChecks]);
+  const passes = useMemo(() => sortedChecks.filter((c) => c.severity === 'pass'), [sortedChecks]);
   const host = useMemo(() => safeHost(url), [url]);
 
   if (!url) {
@@ -180,7 +185,7 @@ export function AuditView() {
         )}
 
         <section style={{ display: 'flex', flexDirection: 'column', gap: 10 }}>
-          {sortedChecks.map((c, i) => (
+          {problems.map((c, i) => (
             <CheckCard
               key={`${c.id}-${i}`}
               check={c}
@@ -190,6 +195,34 @@ export function AuditView() {
             />
           ))}
         </section>
+
+        {phase.kind === 'done' && problems.length === 0 && passes.length > 0 && (
+          <div className="audit-allclear">
+            <strong>Nothing to fix.</strong> All {passes.length} checks passed — no errors, warnings
+            or informational findings on this page.
+          </div>
+        )}
+
+        {passes.length > 0 && (
+          <details className="audit-passes">
+            <summary>
+              <span className="audit-passes__count">{passes.length}</span>
+              checks passed
+              <span className="audit-passes__hint">— expand to review</span>
+            </summary>
+            <div className="audit-passes__list">
+              {passes.map((c, i) => (
+                <CheckCard
+                  key={`${c.id}-${i}`}
+                  check={c}
+                  index={i}
+                  auditId={phase.kind === 'done' ? phase.auditId : undefined}
+                  siteUrl={url}
+                />
+              ))}
+            </div>
+          </details>
+        )}
 
         {phase.kind === 'running' && checks.length === 0 && (
           <div style={{ padding: '40px 20px', textAlign: 'center', color: 'var(--text-muted)' }}>

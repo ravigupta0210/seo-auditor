@@ -1801,3 +1801,26 @@ select.field-input {
   .svc-lead { grid-template-columns: 1fr; gap: 20px; }
   .svc-row, .svc-process__steps { grid-template-columns: 1fr; }
 }
+
+/* ---------- Audit view: passes collapsed away from problems ---------- */
+.audit-allclear {
+  margin-top: 12px; padding: 16px 20px; border-radius: var(--radius);
+  background: linear-gradient(180deg, rgba(52,211,153,0.09), rgba(52,211,153,0.02));
+  border: 1px solid rgba(52,211,153,0.32);
+  font-size: 14.5px; color: var(--text-dim); line-height: 1.6;
+}
+.audit-allclear strong { color: var(--pass); }
+.audit-passes { margin-top: 14px; }
+.audit-passes > summary {
+  cursor: pointer; list-style: none;
+  display: flex; align-items: center; gap: 8px;
+  padding: 13px 18px; border-radius: var(--radius);
+  background: var(--bg-card); border: 1px solid var(--border);
+  font-size: 14px; color: var(--text-dim);
+  transition: background var(--transition), border-color var(--transition);
+}
+.audit-passes > summary::-webkit-details-marker { display: none; }
+.audit-passes > summary:hover { background: var(--bg-card-hover); border-color: var(--border-strong); }
+.audit-passes__count { font-weight: 700; color: var(--pass); font-size: 15px; }
+.audit-passes__hint { color: var(--text-faint); font-size: 12.5px; margin-left: auto; }
+.audit-passes__list { display: flex; flex-direction: column; gap: 10px; margin-top: 10px; }

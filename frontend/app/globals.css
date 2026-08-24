@@ -98,6 +98,14 @@
   --radius-sm: 8px;
   --shadow-card: 0 1px 0 rgba(255,255,255,0.03) inset, 0 10px 30px -18px rgba(0,0,0,0.6);
   --shadow-glow: 0 0 0 1px var(--accent-glow), 0 20px 60px -24px var(--accent-glow);
+
+  /* Elevation scale. Surfaces were separated almost entirely by 1px borders,
+     which reads flat and makes every section look like the same box. Depth
+     does that job better: a hairline for definition, real shadow for lift. */
+  --elev-1: 0 1px 0 rgba(255,255,255,0.03) inset, 0 2px 6px -3px rgba(0,0,0,0.5);
+  --elev-2: 0 1px 0 rgba(255,255,255,0.04) inset, 0 8px 22px -12px rgba(0,0,0,0.62);
+  --elev-3: 0 1px 0 rgba(255,255,255,0.05) inset, 0 18px 42px -20px rgba(0,0,0,0.72);
+  --hairline: rgba(255,255,255,0.07);
   --transition: 180ms cubic-bezier(0.4, 0, 0.2, 1);
 
   /* Fonts */
@@ -139,6 +147,11 @@
   --pass-glow: rgba(22, 163, 74, 0.16);
 
   --shadow-card: 0 1px 2px rgba(15, 23, 42, 0.05), 0 10px 28px -18px rgba(15, 23, 42, 0.16);
+
+  --elev-1: 0 1px 2px rgba(15, 23, 42, 0.05), 0 2px 5px -3px rgba(15, 23, 42, 0.08);
+  --elev-2: 0 2px 4px rgba(15, 23, 42, 0.05), 0 10px 24px -12px rgba(15, 23, 42, 0.14);
+  --elev-3: 0 4px 8px rgba(15, 23, 42, 0.06), 0 22px 46px -20px rgba(15, 23, 42, 0.2);
+  --hairline: rgba(15, 23, 42, 0.08);
 }
 
 /* Smooth theme transitions on color-bearing properties */
@@ -285,13 +298,29 @@ pre {
   background:
     linear-gradient(180deg, rgba(255,255,255,0.025), rgba(255,255,255,0)) ,
     var(--bg-card);
-  border: 1px solid var(--border);
+  border: 1px solid var(--hairline);
   border-radius: var(--radius);
-  box-shadow: var(--shadow-card);
-  transition: border-color var(--transition), transform var(--transition), background var(--transition);
+  box-shadow: var(--elev-1);
+  transition: box-shadow var(--transition), transform var(--transition),
+              border-color var(--transition), background var(--transition);
 }
 .glass-card:hover {
   border-color: var(--border-strong);
+  box-shadow: var(--elev-2);
+}
+/* Only cards that are themselves links should lift — a static container
+   rising under the cursor reads as broken affordance. */
+a.glass-card:hover,
+.post-links__item:hover,
+.blog-card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--elev-3);
+}
+@media (prefers-reduced-motion: reduce) {
+  .glass-card, a.glass-card:hover, .post-links__item:hover, .blog-card:hover {
+    transform: none;
+    transition: none;
+  }
 }
 
 .btn-primary {
@@ -1645,8 +1674,8 @@ select.field-input {
   margin: 40px auto 0; max-width: 720px; text-align: left;
   border-radius: var(--radius);
   background: var(--bg-card);
-  border: 1px solid var(--border);
-  box-shadow: 0 30px 70px -40px rgba(0,0,0,0.45), 0 2px 8px -4px rgba(0,0,0,0.15);
+  border: 1px solid var(--hairline);
+  box-shadow: var(--elev-3);
   overflow: hidden;
 }
 .hero-preview__chrome {
@@ -1777,7 +1806,8 @@ select.field-input {
 /* ---------- Services: process ---------- */
 .svc-process {
   padding: 26px 28px; margin-bottom: 40px;
-  border-radius: var(--radius); background: var(--bg-card); border: 1px solid var(--border);
+  border-radius: var(--radius); background: var(--bg-card);
+  border: 1px solid var(--hairline); box-shadow: var(--elev-1);
 }
 .svc-process__title { margin: 0 0 20px; font-size: 21px; letter-spacing: -0.02em; }
 .svc-process__steps {
@@ -1820,7 +1850,10 @@ select.field-input {
   transition: background var(--transition), border-color var(--transition);
 }
 .audit-passes > summary::-webkit-details-marker { display: none; }
-.audit-passes > summary:hover { background: var(--bg-card-hover); border-color: var(--border-strong); }
+.audit-passes > summary:hover {
+  background: var(--bg-card-hover); border-color: var(--border-strong);
+  box-shadow: var(--elev-2);
+}
 .audit-passes__count { font-weight: 700; color: var(--pass); font-size: 15px; }
 .audit-passes__hint { color: var(--text-faint); font-size: 12.5px; margin-left: auto; }
 .audit-passes__list { display: flex; flex-direction: column; gap: 10px; margin-top: 10px; }

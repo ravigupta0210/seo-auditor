@@ -8,6 +8,7 @@ import { SiteFooter } from '@/app/_components/SiteFooter';
 import { ShareButton } from '@/app/_components/ShareButton';
 import { CopyLinkButton } from '@/app/_components/CopyLinkButton';
 import { PdfExport } from './_PdfExport';
+import { categoryLabel } from '@/lib/checks-catalog';
 import { SITE_URL } from '@/lib/seo';
 
 interface PageProps {
@@ -169,7 +170,7 @@ function CategoryBreakdown({ summary }: { summary: { byCategory: Record<string, 
         return (
           <div key={cat} className="glass-card" style={{ padding: '14px 16px' }}>
             <div style={{ fontSize: 11, color: 'var(--text-muted)', textTransform: 'uppercase', letterSpacing: '0.06em', marginBottom: 6, fontWeight: 600 }}>
-              {cat}
+              {categoryLabel(cat)}
             </div>
             <div style={{ display: 'flex', alignItems: 'baseline', gap: 6 }}>
               <span style={{ fontSize: 22, fontWeight: 700, color, letterSpacing: '-0.01em' }}>{info.score}</span>

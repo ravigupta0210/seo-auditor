@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
-import { CHECKS_CATALOG } from '@/lib/checks-catalog';
+import { CHECKS_CATALOG , categoryLabel } from '@/lib/checks-catalog';
 import { SiteHeader } from '@/app/_components/SiteHeader';
 import { SiteFooter } from '@/app/_components/SiteFooter';
 import { pageMetadata } from '@/lib/seo';
@@ -88,7 +88,7 @@ export default function CheckIndex() {
                 <div className="chk-cat-card__icon">{meta.icon}</div>
                 <div className="chk-cat-card__body">
                   <h2 className="chk-cat-card__title">
-                    <span className="chk-cat-card__name">{capitalize(cat)}</span>
+                    <span className="chk-cat-card__name">{categoryLabel(cat)}</span>
                     <span className="chk-cat-card__count">{grouped[cat]!.length} checks</span>
                   </h2>
                   <p className="chk-cat-card__desc">{meta.description}</p>
@@ -109,7 +109,7 @@ export default function CheckIndex() {
                   {meta?.icon || '•'}
                 </span>
                 <div>
-                  <h2 className="chk-section__title">{capitalize(cat)}</h2>
+                  <h2 className="chk-section__title">{categoryLabel(cat)}</h2>
                   <p className="chk-section__sub">{meta?.description}</p>
                 </div>
                 <span className="chk-section__count">{checks.length}</span>
@@ -149,6 +149,4 @@ export default function CheckIndex() {
   );
 }
 
-function capitalize(s: string) {
-  return s.charAt(0).toUpperCase() + s.slice(1);
-}
+

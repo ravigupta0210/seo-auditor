@@ -14,6 +14,28 @@ export interface CheckCatalogEntry {
   docLink: string;
 }
 
+/**
+ * Display names for check categories.
+ *
+ * Category ids are lowercase slugs, so naive capitalisation renders "Jsonld"
+ * and "Geo" — which reads as sloppy on pages whose job is technical
+ * credibility. Anything showing a category to a user should go through this.
+ */
+export const CATEGORY_LABEL: Record<string, string> = {
+  metadata: 'Metadata',
+  jsonld: 'JSON-LD',
+  content: 'Content',
+  security: 'Security',
+  performance: 'Performance',
+  crawl: 'Crawl & indexing',
+  geo: 'GEO / AEO',
+};
+
+/** Display name for a category id, falling back to simple capitalisation. */
+export function categoryLabel(id: string): string {
+  return CATEGORY_LABEL[id] ?? id.charAt(0).toUpperCase() + id.slice(1);
+}
+
 export const CHECKS_CATALOG: CheckCatalogEntry[] = [
   {
     id: 'metadata.viewport.missing',

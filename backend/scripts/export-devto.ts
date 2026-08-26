@@ -53,6 +53,14 @@ function renderTable(t: Post['comparisonTable']): string[] {
   return out;
 }
 
+/**
+ * Quote a value for YAML front matter. Double-quoted style, so a colon,
+ * apostrophe or leading special character in a headline can't break the block.
+ */
+function yamlStr(v: string): string {
+  return `"${v.replace(/\\/g, '\\\\').replace(/"/g, '\\"')}"`;
+}
+
 function toMarkdown(p: Post): string {
   const canonical = `${SITE}/blog/${p.slug}`;
   const tags = DEVTO_TAGS[p.cluster ?? ''] ?? 'seo, webdev, ai, programming';
@@ -60,10 +68,17 @@ function toMarkdown(p: Post): string {
   const out: string[] = [];
   let tableRendered = false;
   // Dev.to front matter. published:false so you review before it goes live.
+  //
+  // Titles and descriptions are double-quoted because almost every one of ours
+  // contains a colon ("GEO vs AEO: ...", "How to Rank in ChatGPT: ..."). An
+  // unquoted YAML scalar with a ": " in it is a parse error, and a post whose
+  // front matter fails to parse arrives on Dev.to with no title, no canonical
+  // and the raw block visible in the body — which loses the backlink the
+  // cross-post exists for.
   out.push('---');
-  out.push(`title: ${p.title}`);
+  out.push(`title: ${yamlStr(p.title)}`);
   out.push(`published: false`);
-  out.push(`description: ${(p.description ?? p.excerpt ?? '').replace(/\n/g, ' ')}`);
+  out.push(`description: ${yamlStr((p.description ?? p.excerpt ?? '').replace(/\n/g, ' '))}`);
   out.push(`tags: ${tags}`);
   out.push(`canonical_url: ${canonical}`);
   out.push('---');

@@ -1,7 +1,7 @@
 ---
-title: What Is an AI Crawler? (GPTBot, ClaudeBot & More)
+title: "What Is an AI Crawler? (GPTBot, ClaudeBot & More)"
 published: false
-description: What is an AI crawler? A bot that fetches pages to train AI models or source cited AI answers. Meet GPTBot, ClaudeBot, PerplexityBot and how to control them.
+description: "What is an AI crawler? A bot that fetches pages to train AI models or source cited AI answers. Meet GPTBot, ClaudeBot, PerplexityBot and how to control them."
 tags: seo, ai, webdev, programming
 canonical_url: https://freeseoaudit.vercel.app/blog/what-is-an-ai-crawler
 ---

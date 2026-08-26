@@ -1,7 +1,7 @@
 ---
-title: How to Block AI Crawlers (and When You Shouldn't) in 2026
+title: "How to Block AI Crawlers (and When You Shouldn't) in 2026"
 published: false
-description: How to block AI crawlers like GPTBot, ClaudeBot, and CCBot in robots.txt — plus the trade-off between blocking training bots and the live-search bots that cite you.
+description: "How to block AI crawlers like GPTBot, ClaudeBot, and CCBot in robots.txt — plus the trade-off between blocking training bots and the live-search bots that cite you."
 tags: ai, seo, webdev, programming
 canonical_url: https://freeseoaudit.vercel.app/blog/how-to-block-ai-crawlers
 ---

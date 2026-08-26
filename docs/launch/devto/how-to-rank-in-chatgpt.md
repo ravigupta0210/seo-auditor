@@ -1,7 +1,7 @@
 ---
-title: How to Rank in ChatGPT: Get Cited in AI Answers (2026)
+title: "How to Rank in ChatGPT: Get Cited in AI Answers (2026)"
 published: false
-description: Learn how to rank in ChatGPT and get cited in AI answers: optimize for Bing, add FAQ schema, use IndexNow, and earn brand mentions. A concrete 2026 playbook.
+description: "Learn how to rank in ChatGPT and get cited in AI answers: optimize for Bing, add FAQ schema, use IndexNow, and earn brand mentions. A concrete 2026 playbook."
 tags: ai, seo, webdev, programming
 canonical_url: https://freeseoaudit.vercel.app/blog/how-to-rank-in-chatgpt
 ---
